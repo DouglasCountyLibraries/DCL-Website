@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- InstanceBegin template="/wwwroot/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- InstanceBeginEditable name="title" -->
+<title>DCL | How Things Work</title>
+<!-- InstanceEndEditable -->
+<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#007b83">
+<meta name="theme-color" content="#ffffff">
+<link type="text/css" rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" media="all" />
+<link type="text/css" rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../shared-assets/css/dcl.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../shared-assets/js/dcl.js"></script>
+<script src="../shared-assets/js/jquery.sticky.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="cp_header_biblio_bar">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- begin LANGUAGES (desktop only) -->
+      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
+      <!-- end LANGUAGES --> 
+      
+      <!-- begin BCNAV -->
+      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+        <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
+          <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
+            
+            <!-- Template - t_biblionav_my_account_user_info -->
+            
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="/user/login"> Log In / Register </a> </li>
+            <li data-js="divider_logged_out" class="divider" role="presentation"></li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">My Borrowing</li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/checkedout">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/holds">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/fines">Fees</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">My Collections</li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/collection/show/my/library/completed">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/lists/show/mine">Lists</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/user_profile/me">My Profile</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/account/personal_information">My Settings</a> </li>
+            <!-- Template: t_biblionav_admin_link -->
+            <li data-js="biblionav_admin_link" role="presentation"></li>
+            
+            <!-- Template: t_biblionav_account_selector -->
+            <li data-js="biblionav_account_selector" role="presentation"></li>
+            
+            <!-- Template: t_biblionav_log_in_out -->
+            <li data-js="biblionav_log_in_out" role="presentation"> </li>
+          </ul>
+        </div>
+        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="http://help.bibliocommons.com"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
+      </div>
+      <!-- end BCNAV --> 
+      
+    </div>
+  </div>
+</div>
+<div class="client_and_search">
+  <div class="container ">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="cp_header_client_area">
+          <div class="logo"> <a href="/"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
+        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+          <div class="input-group">
+            <input type="hidden" value="all" name="search_param" id="search_param">
+            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <span class="input-group-btn">
+            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </span> </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed search-collapsed" data-toggle="collapse" data-target="#bs-search"> <span class="sr-only">Toggle search</span> <i class="fa fa-search"></i> </button>
+      <button type="button" class="navbar-toggle collapsed menu-collapsed" data-toggle="collapse" data-target="#bs-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    </div>
+    
+    <!-- Collect the search form for toggling -->
+    <div class="collapse navbar-collapse" id="bs-search">
+      <ul class="nav navbar-nav hidden-md hidden-lg">
+        <h2 class="margin-left-15">Search</h2>
+        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+          <div class="input-group">
+            <input type="hidden" value="all" name="search_param" id="search_param">
+            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <span class="input-group-btn">
+            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </span> </div>
+        </form>
+      </ul>
+    </div>
+    
+    <!-- Collect the nav links for toggling -->
+    <div class="collapse navbar-collapse" id="bs-nav">
+      <ul class="nav navbar-nav">
+        <li><a href="../Locations">Home</a> </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">^ Based on Catalog Settings</a></li>
+          </ul>
+        </li>
+        <li><a href="../Locations">Locations</a> </li>
+        <li><a href="../using-the-library">Using the Library</a> </li>
+        <li><a href="../events">Events</a> </li>
+        <li><a href="../services">Services</a> </li>
+        <li><a href="../research">Research</a> </li>
+        <li><a href="../kids-and-teens">Kids & Teens</a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<div class="container-fluid content-wrapper">
+<div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row padding-top-60 padding-bottom-100 border-top">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="jumbo-text text-uppercase font-weight-400">How Things Work</h1>
+      <div class="separator-container">
+        <div class="separator line-separator"><i class="fa fa-cogs"></i></div>
+      </div>
+      <h3 class="josefin font-weight-600">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque.</h3>
+    </div>
+  </div>
+</div>
+<div class="row bg-gray-10 padding-top-60 padding-bottom-100">
+  <div class="container"> <img src="http://placehold.it/400x400?text=Pie+Chart" class="img-circle img-responsive pull-right margin-left-15">
+    <h2 class="padding-bottom-15">Where Your Money Goes</h2>
+    <div>
+      <div class="pull-left padding-right-40 padding-left-40">
+        <div class="pull-left padding-right-40 padding-left-40"><i class="moss fa fa-usd" style="font-size:80px"></i></div>
+      </div>
+      Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit.</div>
+    <div class="padding-top-15">Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
+    <div class="padding-top-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu. Integer pellentesque sem non turpis gravida mollis. Duis vel libero vel felis lacinia convallis in in justo. Phasellus est magna, porta id facilisis non, ultricies fringilla enim. Curabitur ultricies erat sit amet ipsum malesuada vitae ultricies diam pulvinar. Nunc dapibus ullamcorper nisl, ut fermentum elit vulputate vitae. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
+  </div>
+</div>
+</div>
+<div class="padding-top-100 padding-bottom-100">
+  <div class="container padding-bottom-40">
+    <div class="col-sm-3"> 
+      
+      <!-- Nav tabs -->
+      <ul role="tablist" class="nav nav-pills nav-stacked">
+        <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="two" href="#two" class="tab" aria-expanded="true">
+          <div class="text-uppercase">Fines, Fees & Borrowing</div>
+          </a></li>
+        <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="three" href="#three" class="tab">
+          <div class="text-uppercase">Interlibrary Loan</div>
+          </a></li>
+        <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="four" href="#four" class="tab">
+          <div class="text-uppercase">Materials Selection</div>
+          </a></li>
+        <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="five" href="#five" class="tab">
+          <div class="text-uppercase">Donation of Materials</div>
+          </a></li>
+        <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="six" href="#six" class="tab">
+          <div class="text-uppercase">Internet and Website Use</div>
+          </a></li>
+        <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="seven" href="#seven" class="tab">
+          <div class="text-uppercase">Privacy</div>
+          </a></li>
+      </ul>
+    </div>
+    <div class="col-sm-9"> 
+      <!-- Tab panes -->
+      <div class="tab-content"> 
+        
+        <!-- Fines, Fees & Borrowing -->
+        
+        <div id="two" class="tab-pane fade active in" role="tabpanel">
+          <div role="tabpanel"> 
+            
+            <!-- Nav tabs -->
+            <ul role="tablist" class="nav nav-tabs nav-justified">
+              <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="ten" href="#ten" class="tab">
+                <h5 class="text-uppercase">Borrowing</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="eleven" href="#eleven" class="tab">
+                <h5 class="text-uppercase">Overdue Items</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="twelve" href="#twelve" class="tab">
+                <h5 class="text-uppercase">Other Fees</h5>
+                </a></li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="ten" class="tab-pane fade in active" role="tabpanel">
+                <div class="bg-warning padding-15 margin-top-15 text-center">
+                  <h5>The Fines, Fees &amp; Borrowing Schedule may be changed without notice at the discretion of the Library Director.</h5>
+                </div>
+                <h3>Borrowing Privileges</h3>
+                <ul>
+                  <li>Most items, including books, audiobooks, music CDs, and DVD sets of 200 minutes or more, can be checked out for three weeks.</li>
+                  <li>Magazines, videos and DVDs under 200 minutes are checked out for seven days.</li>
+                  <li>Guests are limited to three "Your Lucky Day" (recent popular releases) DVDs per library account.</li>
+                  <li>Adult Book Club Express kits can be checked out for six weeks. Guests are limited to one kit at a time.</li>
+                  <li>Juvenile Book Club Express kits can be checked out for six weeks. Guests are limited to two kits at a time.</li>
+                </ul>
+                <h3>Borrowing Limits</h3>
+                <ul>
+                  <li>Each guest can have up to 99 items checked out at any one time.</li>
+                  <li>The checkout period for Overdrive and 3M materials is set by the guest at the time of checkout for seven, fourteen, or twenty-one days. Twelve titles can be checked out at a time.</li>
+                  <li>Guests can download five songs a week from Freegal. The week resets on Sundays at 10 PM.</li>
+                  <li>Guests can download ten items a month from Hoopla.</li>
+                  <li>Guests can check out unlimited magazine issues from Zinio.</li>
+                </ul>
+                <h3>Request Limit</h3>
+                <div>Guests are allowed up to 99 requests at any one time. Overdrive and 3M allow patrons to have up to 20 holds at any one time.</div>
+                <h3>Renewal Limit</h3>
+                <div>Library items may be renewed up to eight times. "Your Lucky Day" materials, magazines, Book Club Express Kits, eBooks and Inter-Library Loan items may not be renewed.</div>
+                <h3>Circulation Policy for our Smaller Branches</h3>
+                <div class="bg-info padding-15">Items from our Castle Pines, Lone Tree, Louviers and Roxborough locations do not fill holds for guests at other locations. Our smallest libraries have very limited collections intended primarily for browsing. Guests may place an item from one of those libraries on hold only for pickup at that same location.</div>
+                <h3>"Your Lucky Day" Items</h3>
+                <div>"Your Lucky Day" items are copies of very popular titles that do not fill holds, but are placed in the libraries for guests to browse. These items are labeled with a green shamrock, are available first-come, first-served and are not renewable. DCL staff will not hold these items and are unable to verify an item is on the shelf.</div>
+                <h3>"Your Lucky Day" Movies</h3>
+                <div>DCL offers many "Your Lucky Day" copies of DVDs and Blu-rays of popular films for the first two months after release. Guests may place holds on titles as soon as they are in the catalog, but typically requests are not filled during this time as all copies are in the "Your Lucky Day" collection. These requests will be fulfilled after the two month period.</div>
+              </div>
+              <div id="eleven" class="tab-pane fade" role="tabpanel">
+                <h3>Fines on Overdue Items</h3>
+                <div>Guests will be assessed a $.10 daily fine for each overdue item with the following exceptions:</div>
+                <ul>
+                  <li>The Library offers a grace period for most material. Items returned or renewed within three days of the due date will not be subject to a fine. Any item going past the grace period date will be assessed a fine from the due date.</li>
+                  <li>There is a $1.00 daily fine for reference materials.</li>
+                  <li>Overdue Interlibrary Loan items cost $1.00 per day with no grace period.</li>
+                  <li>Overdue Book Club Express Kits:
+                    <ul>
+                      <li>$1.00 per day with no grace period.</li>
+                      <li>Missing or damaged books or guides cost $10.00 each. If a guests returns a missing item within one year from the original pickup date, $5.00 will be waived or refunded.</li>
+                      <li>Lost or damaged kits will incur a $140.00 charge.</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>If a guest accumulates a total of $20.00 or more in fines and fees, the guest cannot check out any library materials until the fine is paid down. If the total exceeds $50.00, the account may be referred to a collection agency.</p>
+                <h3>Guest Overdue Notification and Debt Collection Timeline</h3>
+                <table class="table table-bordered table-striped">
+                  <tbody>
+                    <tr>
+                      <td>Number of days past due:</td>
+                      <td>Action:</td>
+                    </tr>
+                    <tr>
+                      <td>12 days past due</td>
+                      <td>DCL sends first overdue notice to guest via email or phone.</td>
+                    </tr>
+                    <tr>
+                      <td>24 days past due</td>
+                      <td>DCL sends second overdue notice to guest via email or phone.</td>
+                    </tr>
+                    <tr>
+                      <td>36 days past due</td>
+                      <td>Final notice sent by email or U.S. mail, saying guest will be charged for item(s) not returned.</td>
+                    </tr>
+                    <tr>
+                      <td>48-69 days past due</td>
+                      <td>On day 48, DCL puts replacement charge(s) on guest account.
+                        <p>If account goes over $50.00: <sup><a href="#sup-one">1</a></sup></p>
+                        <ul>
+                          <li>"Billing Notice" is placed on guest account.</li>
+                          <li>Guest will receive an email or letter indicating that balance must be paid or the account will be sent to collections <sup><a href="#sup-two">2</a></sup> for action. Guest has 21 days to respond once communication is sent out.</li>
+                          <li>"Billing Notice" is posted on the account each time an email or letter is sent.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                      <td>70-77 days past due</td>
+                      <td><ul>
+                          <li>DCL sends account to collections and adds a $10.00 collection agency fee to guest account.</li>
+                          <li>"Message to Borrower" and "See Supervisor" notes are placed on guest account, noting "Zero balance required to stop credit reporting." <sup><a href="#sup-three">3</a></sup></li>
+                          <li>Collection agency sends guest a letter as soon as they receive guest account, usually the same day. Guest has three weeks to respond.</li>
+                        </ul>
+                        Note: Collections is an intermediate step before the account is sent to a national consumer reporting agency. Local collection efforts do not affect guest credit rating.</td>
+                    </tr>
+                    <tr>
+                      <td>Three weeks later</td>
+                      <td><ul>
+                          <li>If no response, collection agency sends guest a second letter.</li>
+                          <li>If guest returns materials or makes a partial payment, agency sends another letter encouraging guest to resolve the remaining balance.</li>
+                        </ul></td>
+                    </tr>
+                    <tr>
+                      <td>Two weeks later</td>
+                      <td>If guest still owes the library money, collection agency calls the guest at home.</td>
+                    </tr>
+                    <tr>
+                      <td>Four weeks later</td>
+                      <td>Collection agency sends guest a final letter noting amount due.</td>
+                    </tr>
+                    <tr>
+                      <td>Two weeks later</td>
+                      <td>If guest fails to resolve account at this point, collection agency moves guest to Secondary Placement. This involves extensive research to find guest who may have moved. Once agency locates guest , it sends a final letter informing guest that if he does not resolve the matter, he will be credit reported.</td>
+                    </tr>
+                    <tr>
+                      <td>Two weeks after the final letter is sent</td>
+                      <td>If the account is still unresolved, collection agency calls guest at home informing him that he is scheduled to be credit reported if he does not contact DCL to work out a solution. Agency then sends another letter (agency may make up to three more calls to resolve the matter).</td>
+                    </tr>
+                    <tr>
+                      <td>69 days from first notification from DCL and 120 days after sending to collections (189 days total).</td>
+                      <td>Guest is credit reported.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <sup><a id="sup-one">1</a></sup> If guest reports an item as lost and the replacement value of the item is over $50.00, or if total account fees/fines go over $50.00, the collection process starts.<br />
+                <sup><a id="sup-two">2</a></sup> DCL's current collection agency is Unique Management Services, Inc.<br />
+                <sup><a id="sup-three">3</a></sup> Credit reported if account over $25.00 after all attempts to contact have been unsuccessful. Account must have a zero balance for 30 days to be removed from collection agency list.
+                <h3>Items Returned to Other Library Systems</h3>
+                <div>The guest is responsible for the item until it reaches a DCL library. DCL is not responsible for these items.</div>
+                <h3>Library Material Replacement</h3>
+                <div>The replacement fee for library materials shall be the full retail value of the materials, as recorded in the library database or in Books in Print. DCL does not accept replacement copies or donations in lieu of payment.</div>
+              </div>
+              <div id="twelve" class="tab-pane fade" role="tabpanel">
+                <h3>Printing and Photocopy Fees</h3>
+                <p>Letter and Legal (8 1/2" x 11" and 8 1/2" x 14")</p>
+                <ul>
+                  <li>Black &amp; white: $.10 per page and $.20 per double-sided page.</li>
+                  <li>Color: $1.00 per page and $2.00 per double-sided page.
+                    <p>&nbsp;</p>
+                  </li>
+                </ul>
+                <p>Tabloid (11" x 17" where offered)</p>
+                <ul>
+                  <li>Black &amp; white: $.20 per page and $.40 per double-sided page.</li>
+                  <li>Color: $2.00 per page and $4.00 per double-sided page.</li>
+                </ul>
+                <p>There is a $1.00 minimum credit card charge per transaction. Mastercard and Visa accepted.</p>
+                <h3>Faxing Fees</h3>
+                The library sends faxes only from the Highlands Ranch, Lone Tree, Parker, Castle Rock and Roxborough locations. The fee is $1.75 for the first page and $1.00 for each additional page. The library cannot accept incoming faxes and cannot send international faxes.</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Interlibrary Loan -->
+        
+        <div id="three" class="tab-pane fade" role="tabpanel">
+          <h3>What is Interlibrary Loan?</h3>
+          <p>Interlibrary Loan (ILL) is the process by which our library requests material from, or supplies material to, another library. Library card holders&nbsp;can request materials not owned by Douglas County Libraries free of charge through Interlibrary Loan.</p>
+          <h3>What is available through ILL?</h3>
+          <ul>
+            <li>Books, audio books, music CDs and DVDs older than six months.</li>
+            <li>Photocopies of magazine articles, some genealogy records.</li>
+          </ul>
+          <h3>What is not available through ILL?</h3>
+          <ul>
+            <li>Items we already own.</li>
+            <li>Magazines, video games, LPs, VHS, cassettes, Playaways, and ebooks.</li>
+            <li>Recently published materials (less than six months old).</li>
+            <li>Reference and rare books.</li>
+            <li>Dissertations, microfilm and genealogy materials can be difficult to obtain.</li>
+            <li>Microfilm if available is viewed at Philip S. Miller Library in Castle Rock.</li>
+          </ul>
+          <h3>What can be photocopied?</h3>
+          <ul>
+            <li>Magazine articles, subject to copyright law. Article Copy Request forms are available at any Douglas County Library.</li>
+            <li>Genealogy information. Some libraries will do limited photocopies from a book if an accurate name, date, etc. is provided.</li>
+          </ul>
+          <h3>How long does it take to receive an ILL item?</h3>
+          <ul>
+            <li>It takes two to three weeks if an item is obtained from a Colorado library.</li>
+            <li>It can take six weeks if an item is popular or only available out-of-state.</li>
+            <li>Please consider these factors if you have research deadlines or vacation plans.</li>
+            <li>Requests cannot be suspended but can be canceled by contacting the library or our department.</li>
+          </ul>
+          <h3>How do I know when an ILL item will arrive?</h3>
+          <ul>
+            <li>When your item arrives it is placed on hold for you and sent to your library branch.</li>
+            <li>You are notified in the same manner as your regular holds, by phone, email or text message, and have six days to pick it up.</li>
+            <li>Materials that are not picked up are considered no longer needed and are returned to the lending library.</li>
+          </ul>
+          <h3>How long may I keep an ILL item?</h3>
+          <ul>
+            <li>Three weeks for books and audio books</li>
+            <li>One to two weeks for music CDs and DVDs</li>
+            <li>An ILL item may not be renewed but can be requested again four months after it was first received.</li>
+          </ul>
+          <h3>What if an ILL item is returned late, damaged, or lost?</h3>
+          <ul>
+            <li>The overdue charge is $1.00 per day with no grace period.</li>
+            <li>You are responsible for the cost of a damaged or lost ILL item you check out. The cost is determined by the lending library and could be $100 or more.</li>
+            <li>Please handle an ILL item with care. Do not remove the label or blue card that insures it is checked in and returned to Interlibrary Loan Department.</li>
+          </ul>
+          <p>If you have other questions please email us at <a href="mailto:ill@dclibraries.org">ill@dclibraries.org</a> or call <a href="tel:7203489540">720-348-9540</a>.</p>
+        </div>
+        
+        <!-- Materials Selection -->
+        
+        <div id="four" class="tab-pane fade" role="tabpanel">
+          <div role="tabpanel"> 
+            
+            <!-- Nav tabs -->
+            <ul role="tablist" class="nav nav-tabs nav-justified">
+              <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="twenty" href="#twenty" class="tab">
+                <h5 class="text-uppercase">General Guidelines</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="twenty-one" href="#twenty-one" class="tab">
+                <h5 class="text-uppercase">Books</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="twenty-two" href="#twenty-two" class="tab">
+                <h5 class="text-uppercase">Movies</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="twenty-three" href="#twenty-three" class="tab">
+                <h5 class="text-uppercase">Music</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="twenty-four" href="#twenty-four" class="tab">
+                <h5 class="text-uppercase">eContent</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="twenty-five" href="#twenty-five" class="tab">
+                <h5 class="text-uppercase">Graphic Novels</h5>
+                </a></li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="twenty" class="tab-pane fade in active" role="tabpanel">
+                <h3>General Guidelines</h3>
+                <p>Materials Selection refers to the decision to add material to the collection or to retain materials already in the collection. Final responsibility for materials selection rests with the Library Director, although responsibility for recommendations may be delegated to other members of the staff. Suggestions from the public are welcome. Here are the General Principles that guide us in the Materials Selection and Retention process: The District provides a forum for gaining access to information, ideas, and promoting intellectual freedom. The following basic principles will guide its materials selections:</p>
+                <p>Books and other library resources will be provided for the education, information, and recreation of all people of the community. These materials are generally purchased from mainstream publishers and distributors.</p>
+                <p>Within reason, the District will make every effort to provide a balanced collection representing diverse viewpoints. Materials will not be excluded because of the origin, background or views of those contributing to their creation.</p>
+                <p>Textbooks or other curriculum-related materials will be acquired only when recognized as the best source for the general public in that subject area.</p>
+                <p>Each item considered for purchase or deselection will also be evaluated with respect to its:</p>
+                <ul>
+                  <li>Contemporary significance, i.e. positive attention of critics, reviews and the public.</li>
+                  <li>Popular interest, whether expressed or anticipated by patron request.</li>
+                  <li>Author reputation and/or authority in the field.</li>
+                  <li>Clarity, accuracy and organization; comprehensiveness.</li>
+                  <li>Date of publication (to maintain the most up-to-date collection while striving to preserve key works in a field).</li>
+                  <li>Relationship to existing collection.</li>
+                  <li>Insight into or perspective of human and social conditions.</li>
+                  <li>Author being from Colorado.</li>
+                  <li>Durability/Quality of the format.</li>
+                  <li>Availability elsewhere in the community.</li>
+                  <li>Price.</li>
+                </ul>
+                <p>An item need not meet all of these criteria to be selected. The following policies on material selection are available for your review. If you don't see the subject you're searching for here, please ask us!</p>
+              </div>
+              <div id="twenty-one" class="tab-pane fade" role="tabpanel">
+                <h3>Guidelines for Books</h3>
+                <p>There are several measurements we use in the selection books for the collection, including:</p>
+                <ul>
+                  <li>Does the book fit within the "general" or "public" framework of our collection? We buy books that support the GENERAL interest and informational needs of the community. Esoteric or academic works (including many foreign language books, technical manuals and research materials) are usually ruled out for purchase for this reason. Instead, we'd borrow them from other libraries or "ILL" them for you.</li>
+                  <li>Is it timely? If the work has a copyright date that's within the last 2 or 3 years, we usually consider it for purchase. If it's older, but we can identify it as a "classic," we'll probably buy it. But older books are often out-of-print, or the information they contain is dated. Under those circumstances, we would "ILL" the book.</li>
+                  <li>Is it affordable? Sometimes this is difficult to determine. A book over $50 is on the edge of being too expensive for a circulating collection. But if the reviews, content or advertising for the book lead us to believe there will be a big demand for it, we'd consider buying it.</li>
+                  <li>Does it contain verifiably accurate information? If it does, it's a credible information source, and we'd consider buying it. The reverse is also true: some books are published that have verifiably inaccurate information. In such a case, we'd be more inclined to borrow it than buy it.</li>
+                  <li>Has it received favorable reviews in professional library journals? Then library colleagues have examined the item and determined that the book has a value for public libraries. We'll probably buy it.</li>
+                  <li>Is it fiction? We'll almost always buy it if you ask for it. Even for popular titles, fiction often goes out of print rather quickly. In such cases we'll initiate an ILL for it.</li>
+                </ul>
+                <h3>Interlibrary Loan</h3>
+                <p>If you cannot find a book in our catalog that you would like, please go to our <a href="http://catalog.douglascountylibraries.org/MaterialsRequest/NewRequest">Materials Request Form</a> or ask a librarian and we'll try to get it for you. We welcome your requests for a specific book. If the title does not fit our selection criteria, we'll request it from another library. This is called "<a href="/about-us/policies/interlibrary-loan-faqs" title="Interlibrary Loan FAQ">Interlibrary Loan</a>" or "ILL". We believe that by encouraging our patrons to participate in the collection development process, we can build a collection that will more accurately reflect the interests and information needs of our Douglas County patrons.</p>
+                <h3>Purchasing a Requested Book</h3>
+                <p>Douglas County Libraries has established a Collection Development Policy that follows accepted professional practice for selecting a book. If the book you request fits our policy and is available, we'll buy a copy.</p>
+                <p><br />
+                  It takes anywhere from a couple of weeks to a couple of months depending on whether we purchase or ILL the title. If the item is published and available it takes an average of two weeks. If a title is not available, staff at our reference desks is ready to help you find suitable alternatives.</p>
+                <p>We value your ideas and opinions, your suggestions and requests. All of them will be given consideration. We will try to have the item in your hand as soon as we can, regardless of whether we buy it or Interlibrary Loan it. Feel free to speak with your branch reference staff if you have any further questions.</p>
+              </div>
+              <div id="twenty-two" class="tab-pane fade" role="tabpanel">
+                <h3>Guidelines for Movies</h3>
+                <p>Douglas County Libraries movie collection is designed to meet the needs and preferences of our diverse community. The District will make every effort to provide a balanced collection representing diverse viewpoints and interests and to create a collection that facilitates discovery and exploration and is in line with our Mission Statement and Core Values. Materials will not be excluded because of the origin, background or views of those contributing to their creation.</p>
+                <p>When considering DVDs for purchase, review journals and on-line sources are consulted. Relevance to community needs and interests is a major factor in the selection process. Consideration is given to titles with contemporary significance, attention from critics, reviewers and patrons and those deemed to be of popular interest, whether expressed or anticipated by patron request.</p>
+                <p>Blu-ray DVDs are purchased for high grossing feature films. Other popular Blu-ray titles may be purchased by Collection Development based on demand or professional judgment.</p>
+                <h3>Feature Films</h3>
+                <p>DCL's feature film collection contains a wide selection of feature films, including current high interest titles, classics, and foreign films to meet the diverse needs of the community. Critically acclaimed films will be emphasized in addition to award winners including major national, international, and Academy Awards.</p>
+                <p>The intended audience for children's films is preschool through grade six. Selections are based on current high-interest, family-friendly and educational titles that promote children's learning and engagement. The selection criteria used are essentially the same as those used for an adult audience.</p>
+                <h3>Non-Fiction Movies</h3>
+                <p>Titles will be selected from a wide variety of sources and include documentaries and popular subjects. The district does not purchase DVDs that are publicized solely through infomercials or personal websites or those that are produced specifically for instructional use in classrooms.</p>
+                <h3>Television Programs</h3>
+                <p>Priority is given to programs that have educational value such as history, biography, travel, and documentary titles or popular television series that have won or been nominated for a major award. Consideration is given to titles with contemporary significance, attention from critics, reviewers and patrons and those deemed to be of popular interest. Special consideration will be given to popular animated series for children.</p>
+                <p>Occasionally new A-V media formats are introduced into the market place. These will be studied carefully to assess their suitability for public library use and sufficient time will be allowed to determine whether they will receive widespread and lasting public acceptance before collections of such new formats are added to the library.</p>
+                <p>The District will not be responsible for any damage to patron's DVD players, computers or other playing devices that occur while using Douglas County Libraries' DVDs.</p>
+              </div>
+              <div id="twenty-three" class="tab-pane fade" role="tabpanel">
+                <h3>Guidelines for Music</h3>
+                <p>The primary purpose of the music collection is to provide a listening library of recordings for patrons of all ages who are interested in exploring the wide variety of music forms for educational and entertainment purposes.</p>
+                <p>Ours will be a collection geared toward the general listener, and not the professional musician, nor will it be intended for use by the music scholar.</p>
+                <p>The collection will have a distribution of titles from all musical styles based on the popularity of various genres, including, but not limited to blues, jazz, children's, country, religious, soundtracks, hip-hop, pop, rock, and world music. Douglas County Libraries purchases unedited versions of music CDs. Preference is given to the purchase of new titles but available older titles in high demand may be purchased or replaced. Librarians or other subject specialists will make selections through reviews, personal evaluation, and recommendations.</p>
+                <p>Consideration will be given to legitimate suggestions for purchase by library users. Selection will also be dictated by the current availability of materials and the limitations imposed by budget.</p>
+                <p>Douglas County Libraries will not be responsible for any damage to patron CD&nbsp;and&nbsp;MP3 players or computers that occur while playing DCL's music</p>
+              </div>
+              <div id="twenty-four" class="tab-pane fade" role="tabpanel">
+                <h3>Guidelines for eContent</h3>
+                <p>Douglas County Libraries sees its electronic resources as an important extension of the <a href="/AboutUs/Policy/MaterialsSelection">print materials collection</a> and criteria for selection is the same as those used by the library for all types of material. Electronic resources include online databases, eBooks, digital audiobooks and video. Many resources once available only in print are now available in electronic format. Providing our patrons access to electronic resources is an integral part of Douglas County Libraries selection policies. Selections are intended to meet the educational, recreational, cultural, and informational needs of the community and must meet high standards of quality in content, expression, and format. Electronic resources enhance and supplement reference service by providing timely and versatile access to information with 24/7 availability.</p>
+                <h3>Online Databases</h3>
+                <p>Electronic databases extend the collection and are designed to enhance print resources but can also provide more timely information with the frequent updating of material. Some former print resources now only exist in electronic format while other electronic resources have information beyond the scope of DCL's print collection. Some databases may duplicate print resources that are then evaluated for retention. Criteria considered when selecting online databases include:</p>
+                <ul>
+                  <li>Cost effectiveness.</li>
+                  <li>Currency of information.</li>
+                  <li>Ease of use.</li>
+                  <li>Speed, flexibility, and layout/appearance.</li>
+                  <li>Availability of archived content.</li>
+                  <li>Reduction of shelf space needed for print resources.</li>
+                  <li>Availability of full-text articles that can be downloaded, printed and emailed.</li>
+                  <li>Uniqueness and scope of content.</li>
+                  <li>Demonstrated need.</li>
+                  <li>Availability of usage statistics and other reporting features.</li>
+                  <li>Availability of remote access.</li>
+                  <li>Hardware and software requirements.</li>
+                </ul>
+                <h3>Digital Audiobooks, Video, and eBooks</h3>
+                <p>The criteria used for selecting digital media are the same as that used for the selection of print material. To meet the interests of the community, collection emphasis is on popular fiction and nonfiction titles in a variety of genres. Our patrons generally prefer unabridged audiobooks, thus selections are made in this format when available. Some abridged nonfiction titles may be purchased when the unabridged format is unavailable. Occasionally new electronic formats are introduced into the marketplace. These will be studied carefully to assess their suitability for public library use and sufficient time will be allowed to determine whether they will receive widespread and lasting public acceptance before these collections are added to the library.</p>
+              </div>
+              <div id="twenty-five" class="tab-pane fade" role="tabpanel">
+                <h3>Guidelines for Graphic Novels, Comics and Manga</h3>
+                <p>The purpose of the graphic novel/comic/manga collection is to provide patrons with core and popular items to enjoy. The collection is composed of both recreational reading and informational titles and spans the traditional age ranges of juvenile, young adult and adult. The collection also aims to encourage reluctant readers and those reading below level to utilize the materials for educational and entertainment purposes. When considering titles for purchase, standard review journals are consulted as well as other newspaper and magazine reviews and online sources. Items that are submitted through Materials Requests are sent directly to CD for review. The availability and cost for items will also be factors in determining whether or not to make a purchase. Preference is given to new, age appropriate, well reviewed, and/or award winning materials. Items to fill in missing volumes of a series, as well as suitable selections from other series with older pub dates, will also be considered. Materials will be purchased for the collection where their content is both age and interest appropriate. As graphic novels are chosen to serve a wide age range of audiences, it is the responsibility of the parents to determine which materials are appropriate for their children.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Donation of Materials -->
+        
+        <div id="five" class="tab-pane fade" role="tabpanel">
+          <h3>Donation Guidelines</h3>
+          <p>Douglas County Libraries is pleased to accept donations of new and used books, CDs, DVDs, and audiovisual items. These donations will be used for ongoing and special book sales. The money earned through these sales goes to the Douglas County Libraries Foundation to enhance programs and services.</p>
+          <p>We are not able to quote a value for the items you give us, but upon request a staff member will give you a receipt for the number of items donated and the date of donation.</p>
+          <p>Please do not make donations of:</p>
+          <ul>
+            <li>Items in poor condition -- yellow pages, highlighted text, mildew odor</li>
+            <li>Textbooks</li>
+            <li>Encyclopedias</li>
+            <li>Magazines</li>
+            <li>Condensed books</li>
+            <li>Computer books older than five years</li>
+          </ul>
+          <p>From experience we know that people won't buy these items at the book sales. We understand that it is difficult to throw away items that you have found useful in the past, but they have served their purpose. Please check with your local recycling agency to see if these items can be recycled.</p>
+          <p>James H. LaRue - Highlands Ranch does not accept donations of audio visual material; VHS tapes, music/audio CDs or DVDs. Goodwill and other charities accept these items.</p>
+          <p><em>Put large donations in boxes and drop the material off at the information desk during regular business hours. If you have more donations than you can easily carry from your car, please check at your branch’s Information Desk for the easiest way to deliver these.</em></p>
+          <p>Please call ahead (303-791-7323) for large donations to ensure that there is storage space.</p>
+        </div>
+        
+        <!-- Internet & Website Use -->
+        
+        <div id="six" class="tab-pane fade" role="tabpanel">
+          <div role="tabpanel"> 
+            
+            <!-- Nav tabs -->
+            <ul role="tablist" class="nav nav-tabs nav-justified">
+              <li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="thirty" href="#thirty" class="tab">
+                <h5 class="text-uppercase">Internet Use</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="thirty-one" href="#thirty-one" class="tab">
+                <h5 class="text-uppercase">Website Use</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="thirty-two" href="#thirty-two" class="tab">
+                <h5 class="text-uppercase">Wireless Access Use</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="thirty-three" href="#thirty-three" class="tab">
+                <h5 class="text-uppercase">Online Payments</h5>
+                </a></li>
+              <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="thirty-four" href="#thirty-four" class="tab">
+                <h5 class="text-uppercase">Unacceptable Use</h5>
+                </a></li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="thirty" class="tab-pane fade in active" role="tabpanel">
+                <h3>Internet Terms of Use</h3>
+                <p>Douglas County Libraries offers computer and Internet access to the public, free of charge, at all library locations. Anyone regardless of age or residency can use a library computer. Each library is also equipped for wireless Internet access.</p>
+                <h3>Background</h3>
+                <p>It is the intent of Douglas County Libraries to provide free, equitable, and organized public access to Internet resources. This access honors the fundamental library principle of intellectual freedom, an abiding respect for the dignity and privacy of individual inquiry. The Douglas County Libraries' website and catalog is committed not only to providing public access to this communication medium, but also to:</p>
+                <ul>
+                  <li>The development and/or purchase of local information resources such as the catalog of our holdings, periodical indexes and databases, and other text files and databases of local or regional interest, including information about the library.</li>
+                  <li>The identification and organization of links to resources the library believes fit its general collection policies, including selected professional concerns such as training in the use of the Internet, censorship, literacy, etc.</li>
+                  <li>Search tools that reach far beyond the efforts of Douglas County Libraries to the manifold offerings of the Internet.</li>
+                </ul>
+                <h3>Disclaimer</h3>
+                <p>In total, Douglas County Libraries has no control over information accessed through the Internet. Douglas County Libraries cannot be held responsible for its content. As with other library materials, supervision or restriction of a child's access to the Internet is the responsibility of the parent or legal guardian. It is also the responsibility of the child, whose curiosity is surely tempered by his or her judgment and upbringing. Much of the information on the Internet is timely, useful, and/or entertaining. Some of it is dated, erroneous or offensive. This is also the case with printed materials. Library users should cast a cautious and critical eye on any and all data they discover. The job of the library is access, not endorsement.</p>
+                <h3>Using a Library Computer</h3>
+                <ul>
+                  <li>A patron can use a library computer for thirty minutes at a time, using a library card. Computer Guest Passes are available to guests who are visiting our libraries.</li>
+                  <li>The thirty minute reservation will be automatically extended for ten minute increments if no one else is waiting to use the computer.</li>
+                  <li>When all computers are in use, you can make a reservation for the next available computer.</li>
+                  <li>guests are limited to two library computer use sessions per day.</li>
+                  <li>Computers are available on a first-come/first-served basis; no advance reservations are offered.</li>
+                  <li>Library computers may not be used for any illegal activity or to access information that is considered inappropriate for access in a public environment.</li>
+                  <li>A patron's activities on a library computer are not recorded nor stored on the computer hard drive.</li>
+                  <li>Library computers are rebooted at the close of each user session. This erases all of the information about activities on those computers.</li>
+                </ul>
+                <h3>Printing and Downloading From a Library Computer</h3>
+                <ul>
+                  <li>You can print pages from the library computers. Black and white copies are $.10 per page, or $.20 double-sided. Color copies are $1 per page, or $2 double-sided where offered. MasterCard and Visa accepted.</li>
+                  <li>Personal computers cannot be connected to the library printers.</li>
+                  <li>Information can be downloaded or saved from a library computer to a portable drive (USB, Flash, keychain drive, etc.). Douglas County Libraries is not responsible for loss or damage to downloaded data, files or hardware.</li>
+                </ul>
+                <h3>Filtering</h3>
+                <ul>
+                  <li>In accordance with State and Federal laws, all library Internet computers are filtered to screen out obscene and sexually explicit websites. Library computers designated for use by youth are more strictly filtered in accordance with the Federal Children's Internet Protection Act (CIPA) and Colorado's Internet Protection Act.</li>
+                  <li>No filtering system is infallible. Douglas County Libraries does not assume responsibility for the accuracy of its Internet filters. Parents have the right and responsibility to monitor their children's use of the library computers and the Internet to ensure their safety.</li>
+                </ul>
+                <p>For more information about using library computers, please contact Douglas County Libraries at <a href="tel:3037917323">303-791-7323</a> or ask a member of the library staff.</p>
+              </div>
+              <div id="thirty-one" class="tab-pane fade" role="tabpanel">
+                <h3>Website Terms of Use</h3>
+                <p>These Terms of Use may change from time to time, and we encourage you to review them periodically. Any modification is effective immediately upon posting to this page, unless otherwise stated. Your continued use of this Site following the posting of any modification signifies your acceptance of such modification.</p>
+                <h3>Privacy</h3>
+                <p>We believe the privacy of your information is important. Our Privacy Statement Guideline is incorporated into these Terms of Use.</p>
+                <h3>Use of Site Content</h3>
+                <p>The Library encourages you to use materials made available on this Site, provided that you follow the following guidelines:</p>
+                <ol>
+                  <li>Digital Content. Materials downloaded from this Site may only be used for personal, educational, or research purposes. They may not be used for commercial purposes.</li>
+                  <li>Obtaining Necessary Permissions. The Site contains a wide range of materials that are in the public domain as well as materials that are protected by copyright. In cases where materials on this Site are protected by third party rights, you are responsible for clearing the necessary rights in order to use the materials in question. It is your obligation to determine and satisfy copyright or other use restrictions when publishing or otherwise distributing materials from the Library's collections. You are solely responsible for determining whether the use of any digital object requires the permission of any other person or entity, and you are responsible for paying any associated fees. If you have questions about the legal issues surrounding the use of digital objects, you should contact an attorney.</li>
+                  <li>Crediting the Library. If you use material from this Site, we ask that you credit the Library by linking directly to the permalink provided or, if no permalink is provided, via the URL on which the material is found. If you use material from this Site offline, we ask that you credit the Library as follows: "Courtesy of The Douglas County Libraries. www.DouglasCountyLibraries.org"</li>
+                </ol>
+                <h3>Guidelines for User-Generated Content</h3>
+                <p>The Library encourages users of this Site to become involved in its interactive sections by participating in online discussions and in some cases, uploading content, book reviews, etc. Before you participate in these activities, however, we ask that you please make sure that any such content does not infringe the rights of any third party. For example, if you upload a drawing or a photo, please make sure that you are the creator of the artwork. Do not contribute content if you do not own the rights.</p>
+                <p>Additionally, please remember to exercise good judgment when contributing written material or other content. The Library reserves the right to edit or remove contributions that are offensive or objectionable to others, that use inappropriate language, or that are off-topic. We also ask that you do not insert your own or a third party's advertising, branding or other promotional content into any contribution made to this Site.</p>
+                <h3>Digital Millennium Copyright Act: Copyright Complaints</h3>
+                <p>The Library respects the intellectual property rights of others and requires those that visit this Site and use the Library's network to do the same. The Library may, in appropriate circumstances and at our discretion, remove or disable access to material on this Site or the Library's network that infringes upon the copyright rights of others. The Library also may, at our discretion, remove or disable links or references to an online location that contains infringing material or infringing activity. In the event that any visitors to this Site or users of the Library's network repeatedly infringe on others' copyrights, the Library may, in its sole discretion, terminate those individuals' rights to use this Site or the Library's network.</p>
+                <p>If you believe that your work has been used on the Library's Site or network in any manner that constitutes copyright infringement, please notify the Library's copyright agent by written notice. The notice should include the following information:</p>
+                <ol>
+                  <li>An electronic or physical signature of a person authorized to act on behalf of the owner of the copyright allegedly infringed.</li>
+                  <li>A description of the copyrighted work you claim has been infringed, including a copy of the copyrighted work or the web page address where the copyrighted work may be found.</li>
+                  <li>Identification of the location on the Site of the material you claim has been infringed, or the link or reference to another website that contains the material you claim has been infringed.</li>
+                  <li>Your name, address, telephone number and email address.</li>
+                  <li>A statement by you that you have a good faith belief that the disputed use of the material at issue is not authorized by the copyright owner, the agent of the copyright owner or the law.</li>
+                  <li>A statement by you that the information in this notification is accurate and a statement, under penalty of perjury, that you are the copyright owner of the material allegedly infringed or authorized to act on the copyright owner's behalf.</li>
+                </ol>
+                <p>The Library's copyright agent for notice of claims of copyright infringement on this Site and the Library's network is Bob Pasicznyuk whose contact information is as follows:</p>
+                <p>Douglas County Libraries<br />
+                  100 South Wilcox Street<br />
+                  Castle Rock, CO 80104<br />
+                  Phone: <a href="tel:3036887654">303-688-7654</a><br />
+                  Email: <a href="rpasicznyuk@dclibraries.org">rpasicznyuk@dclibraries.org</a></p>
+                <h3>Registration, Accounts and Passwords</h3>
+                <p>You agree to provide true, accurate, current and complete data about yourself when entering into a transaction with the Library. In the event you fail to provide such accurate personal data or otherwise comply with these Terms of Use, the Library will have the right to suspend or terminate your use of the Site and/or terminate your account (if applicable). You will receive a password (PIN) and account upon completing the registration form. You are solely responsible for maintaining the confidentiality of your password (PIN) and account, and you are solely responsible for all use of your password (PIN) or account, whether authorized by you or not. You agree to (a) immediately notify the Library of any unauthorized use of your password or account or any other breach of security and (b) ensure that you exit from your account each time you use this Site from a public or shared computer. Access and use of password protected and/or secure areas of this Site are restricted to users who have been given a valid password by the Library. Unauthorized individuals attempting to access these areas of this Site may be subject to prosecution.</p>
+                <h3>Library Points Awarded to Users (Loyalty Program)</h3>
+                <p>From time to time, the Library may implement programs that award points to its registered Library users ("Points"). Points have no cash value. As long as you remain a registered Library user, your Points never expire; however, if you cancel your Library registration, your Points will expire. The Library, in its sole discretion, may award different prizes for Points. The Library reserves the right to change the conditions for awarding prizes and does not guarantee awarding any particular or quantity of prizes or awarding any prizes at all. The Library reserves the right to change these policies or cancel these promotions at any time.</p>
+                <h3>Guideline on Spamming</h3>
+                <p>You specifically agree that you will not utilize email addresses or any electronic data obtained by using this Site to transmit the same or substantially similar unsolicited message to 10 or more recipients in a single day, or 20 or more unsolicited messages in a single week (consecutive seven day period). The Library, in its sole discretion, will identify violations of the limitations on email usage set forth in these Terms of Use. Violations may result in your removal from registered areas, denial of support or services, or other consequences.</p>
+                <h3>Other Site Links</h3>
+                <p>Some links on this Site lead to websites that are not operated by the Library. The Library does not control these websites nor do we review or control their content. These links are not an endorsement of products, services, or information, and do not imply an association between the Library and the operators of the linked website. When you select a link to an outside website, you are subject to the terms and conditions of the owner/sponsors of that outside website.</p>
+                <h3>Termination of Use</h3>
+                <p>The Library may, in its sole discretion, terminate or suspend your access to and use of this Site without notice and for any reason, including for violation of these Terms of Use or for other conduct which the Library, in its sole discretion, believes is unlawful or harmful to others. In the event of termination, you will no longer be authorized to access this Site, and the Library will use any means possible to enforce this termination.</p>
+                <h3>Disclaimers</h3>
+                <p>All materials on this Site are provided "as is" without a warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular use, and/or non-infringement. The Library assumes no responsibility for damage to your computer or other property resulting from your use of this Site. You understand and agree that any downloading or obtaining of material or data through this Site is done at your own risk. In addition, we disclaim any and all responsibility or liability for the accuracy, reliability, and legality of materials found on this Site.</p>
+                <p>IN NO EVENT SHALL THE LIBRARY OR ANY OF ITS TRUSTEES, EMPLOYEES, AGENTS, OR AFFILIATED ENTITIES BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY OR PUNITIVE DAMAGES ARISING FROM, OR DIRECTLY OR INDIRECTLY RELATED TO, THE USE OF, OR THE INABILITY TO USE, THIS SITE OR THE CONTENT, MATERIALS AND FUNCTIONS RELATED THERETO.</p>
+                <h3>Indemnity</h3>
+                <p>You agree to defend, indemnify and hold the Library and its trustees, officers, employees and agents harmless from any and all claims, liabilities, costs and expenses, including reasonable attorneys' fees, arising in any way from or relating to your use of this Site, your placement or transmission of any message, content, information, software or other materials through this Site, or your breach or violation of the law or of these Terms of Use. The Library reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, and in such case, you agree to cooperate with the Library's defense of such claim.</p>
+              </div>
+              <div id="thirty-two" class="tab-pane fade" role="tabpanel">
+                <h3>Wireless Terms of Use</h3>
+                <p>Wireless Internet access in the library is governed by the Library's Internet Use Policy except there is no time limit.</p>
+                <ul>
+                  <li>Free wireless Internet access is available at all Library District locations.</li>
+                  <li>The wireless network is not secure. Please be advised that information may be captured by anyone with a wireless device and appropriate software.</li>
+                  <li>Printing is <a href="library-services/mobile-printing" title="Wireless Printing Instructions">available through wireless access.</a></li>
+                  <li>Douglas County assumes no responsibility for the safety of user's equipment, security or data files.</li>
+                </ul>
+                <p>The following policies are in addition to the Library's computer and Internet usage policies. Actions that are detrimental or inappropriate when accessing the Library and Internet resources include but are not limited to those listed below:</p>
+                <ul>
+                  <li>The Library does not supply or loan network cards.</li>
+                  <li>Library staff can confirm that the wireless network is functioning properly and give basic assistance. Staff cannot assist in setting up personal laptops for wireless access. Consult your computer's documentation for instructions.</li>
+                  <li>Users may not extend or modify the network in any way. This includes adding access points and installing bridges, switches, hubs, or repeaters. The Library reserves the right to remove or disable any unauthorized access points.</li>
+                  <li>Any attempt to break into or gain unauthorized access to any computers or systems from a wireless connection is prohibited.</li>
+                  <li>We reserve the right to limit bandwidth on a per connection basis on the wireless network, as necessary, to ensure network reliability and fair sharing of network resources for all wireless users.</li>
+                  <li>Any effort to circumvent the security systems designed to prevent unauthorized access to the Library's wireless network may result in the suspension of all access.</li>
+                  <li>Patron Internet traffic is neither monitored nor restricted in any way. However, Internet speeds are throttled to ensure that no one individual will consume the available bandwidth.</li>
+                </ul>
+              </div>
+              <div id="thirty-three" class="tab-pane fade" role="tabpanel">
+                <h3>Online Payments</h3>
+                <p>These Terms of Payment set forth the terms of the Internet/online fines and fees payment service (ePayment System) offered to you by the Douglas County Libraries with respect to your payment via the Douglas County Libraries' website ("Site"). We will NOT accept payments through this Site from any party/individual who is not an authorized user of the credit/debit card utilized for the payment to us or is making a payment from a foreign country that does not support a minimum of 128-bit encryption. By submitting a payment through this Site, you certify that you meet these and all other requirements set forth in these Terms of Payment.</p>
+                <h3>Credit/Debit Card Payments</h3>
+                <p>Credit/debit card payments, limited to credit cards with the MasterCard, and VISA card logos are the types of payment that will be accepted through this Site.</p>
+                <p>The Library does not charge a service fee for use of the ONLINE ePAYMENT SYSTEM.</p>
+                <h3>Other Payment Methods</h3>
+                <p>Please note that, in addition to making a payment through this Site, payments to the Douglas County Libraries can also be made in person at any Douglas County Libraries facility.</p>
+                <h3>Other Acceptable Payment Types:</h3>
+                <ul>
+                  <li>Personal check</li>
+                  <li>Cash</li>
+                </ul>
+                <h3>Payment Date</h3>
+                <p>Your payment is deemed received at the time you select the "Submit Payment" button, provided we confirm the transaction and provide you with a confirmation number.</p>
+                <h3>Online Payment Cancellation and Refund Guideline</h3>
+                <p>All refunds will be processed in accordance with established Douglas County Libraries procedures. If subsequent to your online payment for fines and fees you locate your library materials and would like a refund please go to your local library for refund processing. All refund requests where the original payment was made via the Library's Online Payment System will be refunded to the originating debit/credit card.</p>
+                <p>If you believe a charge has been erroneously posted to your debit/credit card, you may request a reversal of those charges by contacting the Douglas County Libraries Finance Division at 303-791-7323 or email your request to <a href="mailto:answers@dclibraries.org">answers@dclibraries.org</a>.</p>
+              </div>
+              <div id="thirty-four" class="tab-pane fade" role="tabpanel">
+                <h3>Online Payments</h3>
+                <p>These Terms of Payment set forth the terms of the Internet/online fines and fees payment service (ePayment System) offered to you by the Douglas County Libraries with respect to your payment via the Douglas County Libraries' website ("Site"). We will NOT accept payments through this Site from any party/individual who is not an authorized user of the credit/debit card utilized for the payment to us or is making a payment from a foreign country that does not support a minimum of 128-bit encryption. By submitting a payment through this Site, you certify that you meet these and all other requirements set forth in these Terms of Payment.</p>
+                <h3>Credit/Debit Card Payments</h3>
+                <p>Credit/debit card payments, limited to credit cards with the MasterCard, and VISA card logos are the types of payment that will be accepted through this Site.</p>
+                <p>The Library does not charge a service fee for use of the ONLINE ePAYMENT SYSTEM.</p>
+                <h3>Other Payment Methods</h3>
+                <p>Please note that, in addition to making a payment through this Site, payments to the Douglas County Libraries can also be made in person at any Douglas County Libraries facility.</p>
+                <h3>Other Acceptable Payment Types:</h3>
+                <ul>
+                  <li>Personal check</li>
+                  <li>Cash</li>
+                </ul>
+                <h3>Payment Date</h3>
+                <p>Your payment is deemed received at the time you select the "Submit Payment" button, provided we confirm the transaction and provide you with a confirmation number.</p>
+                <h3>Online Payment Cancellation and Refund Guideline</h3>
+                <p>All refunds will be processed in accordance with established Douglas County Libraries procedures. If subsequent to your online payment for fines and fees you locate your library materials and would like a refund please go to your local library for refund processing. All refund requests where the original payment was made via the Library's Online Payment System will be refunded to the originating debit/credit card.</p>
+                <p>If you believe a charge has been erroneously posted to your debit/credit card, you may request a reversal of those charges by contacting the Douglas County Libraries Finance Division at 303-791-7323 or email your request to <a href="mailto:answers@dclibraries.org">answers@dclibraries.org</a>.</p>
+              </div>
+              <div id="thirty-five" class="tab-pane fade" role="tabpanel">
+                <h3>Unacceptable Use</h3>
+                <p>Any of the following actions may result in the loss of library privileges and/or criminal prosecution or other legal action. Unacceptable use of Douglas County Libraries electronic resources includes, but is not limited to, the following:</p>
+                <ul>
+                  <li>It is not acceptable to use Douglas County Libraries electronic resources for illegal or criminal use.</li>
+                  <li>It is not acceptable to violate the legal protections provided by copyright and licenses to program or data.</li>
+                  <li>It is not acceptable to use Douglas County Libraries resources to seek to infiltrate a computer or computing system and/or damage or alter the software or hardware components of a local or remote computer or computing system.</li>
+                  <li>It is not acceptable to seek information on, obtain copies of, or modify files, other data, or passwords belonging to other users. Users shall not represent themselves as another user unless explicitly authorized to do so by that user.</li>
+                  <li>It is not acceptable to falsify one's age to gain access to Internet sites.</li>
+                  <li>It is not acceptable to use our Internet workstations beyond time limits established by library staff. This time limit may change without notice.</li>
+                  <li>The library reserves the right to monitor web sessions in order to ensure system security. Library staff may review these sessions anonymously and remotely. All transactions will be considered confidential, except in those cases where illegal activity is observed, in which case Internet connections may be terminated, and information may be made available to the local law enforcement agency in accordance with the provisions of C.R.S. 24-90-119.</li>
+                  <li>Unauthorized disclosure, use, and dissemination of personal identification information regarding minors is not acceptable.</li>
+                </ul>
+                <p>In general, Douglas County Libraries expects that our guests will be both law-abiding and civil.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Privacy -->
+        
+        <div id="seven" class="tab-pane fade" role="tabpanel">
+          <div class="tab-pane" id="privacy" role="tabpanel">
+            <h3>Log Files</h3>
+            <p>When a user visits our website, his/her IP address is recorded. We use this information to analyze trends, administer the site, determine popularity of content, and gather broad demographic information for aggregate use. IP addresses are not linked to personally identifiable information.</p>
+            <h3>Sharing</h3>
+            <p>We may share aggregated information, such as traffic rates and browser types, with the public. This is not linked to any personal information that can identify any individual person.</p>
+            <h3>Links</h3>
+            <p>The Douglas County Libraries web site contains links to other sites. Please be aware that Douglas County Libraries is not responsible for the privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of each and every web site that collects personally identifiable information. This privacy statement applies solely to information collected by the Douglas County Libraries.</p>
+            <h3>Newsletter</h3>
+            <p>If a user wishes to subscribe to our newsletter, we ask for contact information such as name and email address.</p>
+            <h3>Surveys</h3>
+            <p>From time-to-time our site requests information from users via surveys or contests. Participation in these surveys or contests is completely voluntary and the user therefore has a choice whether or not to disclose this information. Information requested may include contact information (such as name and shipping address), and demographic information (such as zip code, age level). Survey information will be used for purposes of monitoring or improving the use and satisfaction of Douglas County Libraries.</p>
+            <p>The Library does not sell, rent or otherwise distribute information to outside companies or organizations unless legally required to do so. For example, library records may be subject to disclosure to law enforcement officials under provisions of the Uniting and Strengthening America by Providing Appropriate Tools Required to Intercept and Obstruct Terrorism Act (USA PATRIOT Act) and librarians may under some circumstances be forbidden from disclosing that certain records have been requested or obtained.</p>
+            <p>Members of the public may be mentioned by name on the website, for example, in public meeting agendas and minutes, library event descriptions or photos, as bidders on public projects or as contributors to Web page content.</p>
+            <h3>Cookies</h3>
+            <p>Cookies are small text files placed on user computers by a website to enable customization of individual visits. Some Library electronic services, such as the Library Catalog and remote databases, place temporary cookies for current sessions. These cookies do not capture personal information or compromise visitor privacy, and are deleted when sessions are ended.</p>
+            <h3>Notification of Changes</h3>
+            <p>If we decide to change our privacy guideline, we will post those changes on our Homepage so our users are always aware of what information we collect, how we use it, and under what circumstances, if any, we disclose it. If at any point we decide to use personally identifiable information in a manner different from that stated at the time it was collected, we will send a notice to the email addresses given to us by our users. Users will have a choice as to whether or not we use their information in this different manner. We will use information in accordance with the privacy guideline under which the information was collected.</p>
+            <h3>Interacting with the Library Online</h3>
+            <p>Library users have many opportunities to interact with the Library online. We treat our customers with respect and expect the same in return. Here are some guidelines for online conduct.</p>
+            <h3>What You Can Expect of Us</h3>
+            <p>We exercise editorial control on our social media platforms to support our aim to create online communities around the Library and its services. We will keep our library communities like our libraries: a safe and supportive environment.</p>
+            <p>Public postings do not indicate Library endorsement of the ideas, issues, hyperlinks or commentary posted. Additionally, endorsement is not implied via "following," "friending," or otherwise linking to other online entities.</p>
+            <h3>What We Expect of You</h3>
+            <p>The following will not be tolerated when interacting with the Library and/or its users online:</p>
+            <ul>
+              <li>Potentially libelous comments</li>
+              <li>Profane language or content</li>
+              <li>Content that promotes, fosters or perpetuates discrimination on the basis of race, creed, color, age, religion, gender, marital status, status with regard to public assistance, national origin, physical or mental disability or sexual orientation</li>
+              <li>Obscene or racist comments</li>
+              <li>Sexual content or links to sexual content</li>
+              <li>Conduct or encouragement of illegal activity</li>
+              <li>Personal attacks, harassment, insults or threatening language</li>
+              <li>Comments not topically related to the particular issue presented</li>
+              <li>Repetitive posts of the same material that disrupt normal operation of the forum</li>
+              <li>Hyperlinks to material not directly related to the discussion or Library</li>
+              <li>Information that may tend to compromise the safety or security of the public or public systems</li>
+              <li>Content that violates a legal ownership interest of any other party</li>
+              <li>Postings of, or request for, personal information, such as phone number, address, financial accounts, etc.</li>
+              <li>Impersonation of someone else</li>
+              <li>Commercial messages, including advertisements and solicitations and spam</li>
+              <li>Support for or opposition to political campaigns or ballot measures</li>
+            </ul>
+            <p>Posts, reviews or any public commentary containing any of the above will be deleted.</p>
+            <p>In the case of chat, text or e-mail services, if you use abusive or inappropriate language, we will terminate the session and take appropriate action. We respect the privacy of your identity; however, persons making threats or using offensive language may be reported to the appropriate authorities.</p>
+            <p>By posting a review or comment, participants agree to indemnify the Library and its officers and employees from and against all liabilities, judgments, damages and costs (including attorney fees) incurred by any of them which arise out of or are related to the content that you post. All postings are public records under the Colorado Open Records.</p>
+            <h3>Third-Party Partners</h3>
+            <p>The Library has teamed up with reputable third-party partners to provide certain online services to its guests, such as the Calendar, Events Management, Homework Help and others. The information you submit to the Library may be provided to those third parties on a confidential basis so they can assist us in providing these services. In cases where guests leave the Library's website to visit one of its partners' websites, they are encouraged to learn about the privacy policies of the websites they visit.</p>
+            <h3>Security</h3>
+            <p>The Douglas County Libraries has taken reasonable steps to safeguard the integrity of its data and prevent unauthorized access to information it maintains, including but not limited to authentication, monitoring, and auditing. Security measures have been integrated into the design, implementation and day-to-day practices of the entire operating environment as part of its continuing commitment to risk management. These measures are intended to prevent corruption of data, block unknown or unauthorized access to our systems and information, and to provide reasonable protection of private information in our possession.</p>
+            <h3 id="email-address">Email Addresses</h3>
+            <p>The Douglas County Libraries collects email addresses from those who create library user accounts, register for events, or subscribe to email newsletters. DCL may use your email address to send you marketing emails, account updates, or email newsletters. All emails include an unsubscribe link that you may use to remove your email from the list. No email addresses collected will be shared with third parties.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- InstanceEndEditable -->
+</div>
+<footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
+  <div class="container">
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">About</h5>
+      <ul>
+        <li><a href="../who-we-are">Who We Are</a></li>
+        <li><a href="../how-things-work">How Things Work</a></li>
+        <li><a href="https://www.governmentjobs.com/careers/dclibraries" target="_blank">Employment</a></li>
+        <li><a href="../press-kit/index.html">Press Kit</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">Contact</h5>
+      <ul>
+        <li><a href="http://answers.douglascountylibraries.org/" target="_blank">Ph/Text/Chat</a></li>
+        <li><a href="https://epayments.douglascountylibraries.org/eCommerceWebModule/Home">Pay Fines</a></li>
+        <li><a href="../faq/index.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">Connect</h5>
+      <ul>
+        <li>
+          <div class="social-links-wrapper"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
+        </li>
+        <li><a href="../newsletters/index.html">eNews Sign-Up</a></li>
+        <li><a href="/blog">DCL Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">Support</h5>
+      <ul>
+        <li><a href="../donate">Donate</a></li>
+        <li><a href="../foundation">Foundation</a></li>
+        <li><a href="../volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="copyright bg-gray-90">
+  <div class="container padding-top-30 padding-bottom-30">
+    <div class="text-right eee">
+      <div> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></div>
+    </div>
+  </div>
+</div>
+</body>
+<!-- InstanceEnd -->
+</html>
