@@ -1,14 +1,10 @@
 ## Synopsis
 
-Douglas County Libraries' website.
-
-## Code Example
-
-Built with Bootstrap and jQuery.
+Douglas County Libraries' website. Built with Bootstrap and jQuery.
 
 ## Motivation
 
-CMS was no longer enabling us to be flexible, responsive and agile, so we went old school.
+A CMS was more work than it was worth. We believe this approach will enable us to scale quickly, be proactive, responsive and agile.
 
 ## Installation
 
