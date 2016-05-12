@@ -1,6 +1,6 @@
 ## Synopsis
 
-Douglas County Libraries' website. Built with Bootstrap and jQuery.
+Douglas County Libraries' website, dcl.org. Built with Bootstrap and jQuery.
 
 ## Motivation
 
@@ -8,7 +8,7 @@ A CMS was more work than it was worth. We believe this approach will enable us t
 
 ## Installation
 
-Our site is hosted in an AWS S3 bucket and delivered by Cloudfront.
+dcl.org is hosted in an AWS S3 bucket and delivered by Cloudfront.
 
 ## License
 
