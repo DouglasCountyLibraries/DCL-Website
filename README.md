@@ -12,7 +12,7 @@ Our site is hosted in an AWS S3 bucket and delivered by Cloudfront.
 
 ## License
 
-Copyright 2016 Douglas County Libraries
+Copyright © 2016 Douglas County Libraries
 
 MIT License
 
