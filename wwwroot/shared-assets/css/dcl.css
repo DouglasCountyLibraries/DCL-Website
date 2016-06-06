@@ -4,7 +4,9 @@
  * comments/questions? djarrett at dclibraries dot org
 ====== */
 
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Ubuntu:300,400,500,300italic,400italic,500italic|Lobster+Two:400italic|Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Ubuntu:300,400,500,300italic,400italic,500italic|Material+Icons);
+/*====== remove for now
+
 @font-face {
 	font-family: 'icomoon';
 	src: url('fonts/icomoon.eot?ibd2ch');
@@ -20,11 +22,12 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-	/* ====== better font rendering ====== */
-
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+====== */
+
 body {
 	font-family: "Ubuntu", arial, sans-serif;
 	font-size: 16px;
@@ -118,9 +121,9 @@ button.close {
 	font-weight: 700;
 }
 blockquote, .blockquote-reverse, blockquote.pull-right {
-	color: #888;
-	font-family: 'Lobster Two', cursive;
-	font-size: 28px;
+	font-style: italic;
+	/*font-family: 'Lobster Two', cursive;*/
+	font-size: 20px;
 }
 .blockquote-reverse, blockquote.pull-right {
 	text-align: right;
@@ -696,6 +699,20 @@ a.lavender:hover, a.lavender:focus, a.lavender:active, a.lavender:visited {
 .large-text {
 	font-size: 1.2em;
 }
+/* ====== feeds2js ====== */
+
+.rss-item {
+	list-style: none;
+	padding: 0 0 15px;
+	margin: 0;
+}
+.rss-items {
+	padding: 0;
+	margin: 0;
+}
+.rss-item a {
+	font-size: 20px;
+}
 /* ====== responsive head elements ====== */
 
 h1.responsive-text {
@@ -979,16 +996,17 @@ a .icon-circle-white:hover {
 .database-dropdown {
 	width: 100%;
 	position: relative;
-	padding-bottom: 20px;
+	padding: 0;
 }
 .database-dropdown a:hover, .database-dropdown a:focus {
-	background-color: #91ae65;
+	background-color: #AA5440;
 	color: #ffffff;
 	text-decoration: none;
 }
 .database-dropdown .no-margin a {
-	padding: 10px 20px;
-	color: #666;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
 }
 .database-dropdown .no-margin a:hover {
 	color: #fff;
@@ -998,8 +1016,31 @@ a .icon-circle-white:hover {
 	padding: 8px 25px;
 }
 .btn-database {
-	font-size: 20px;
-	font-weight: 300;
+	color: #fff;
+	background-color: #4D4C4B;
+	font-size: 24px;
+	font-weight: 400;
+	border: 0 none;
+	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+.btn-database:active, .btn-database:hover, .btn-database:focus {
+	background-color: #666;
+	border: 0 none;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	opacity: 1;
+	transform: translateY(-2px);
+	transition: all 0.4s ease-out 0s;
+}
+.btn-database:active, .btn-database.active, .open > .dropdown-toggle.btn-database {
+	background-color: #4D4C4B;
+	border: 0 none;
+	color: #ffffff;
+}
+.btn-database:active:hover, .btn-database.active:hover, .open > .dropdown-toggle.btn-database:hover, .btn-database:active:focus, .btn-database.active:focus, .open > .dropdown-toggle.btn-database:focus, .btn-database.focus:active, .btn-database.active.focus, .open > .dropdown-toggle.btn-database.focus {
+	background-color: #4D4C4B;
+	border: 0 none;
+	color: #ffffff;
 }
 .bizinfobox {
 	/* ====== background: #fff url("../bizinfo/accent.gif") no-repeat scroll 50% 0; ====== */
@@ -1273,6 +1314,21 @@ a .icon-circle-white:hover {
 .margin-left-5 {
 	margin-left: 5px;
 }
+.margin-10 {
+	margin: 10px;
+}
+.margin-top-10 {
+	margin-top: 10px;
+}
+.margin-right-10 {
+	margin-right: 10px;
+}
+.margin-bottom-10 {
+	margin-bottom: 10px;
+}
+.margin-left-10 {
+	margin-left: 10px;
+}
 .margin-15 {
 	margin: 15px;
 }
@@ -1471,6 +1527,9 @@ a .icon-circle-white:hover {
 .padding-left-100 {
 	padding-left: 100px;
 }
+.padding-bottom-120 {
+	padding-bottom: 120px;
+}
 .padding-bottom-140 {
 	padding-bottom: 140px;
 }
@@ -1572,6 +1631,64 @@ a .icon-circle-white:hover {
 input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
 	box-sizing: content-box;
 	line-height: normal;
+}
+/* ====== testimonial and pics carousels ====== */
+
+#carousel-pics .carousel-control {
+	background: none;
+	color: #dedede;
+	font-size: 2.3em;
+	text-shadow: none;
+	padding-top: 140px;
+}
+.quote-row {
+	margin-top: 240px;
+}
+#quote-carousel {
+	margin: 30px 0 80px;
+}
+#quote-carousel .carousel-control {
+	background: none;
+	color: #dedede;
+	font-size: 2.3em;
+	text-shadow: none;
+	padding-top: 140px;
+}
+/* #quote-carousel .carousel-control.left {
+	left: -60px;
+}
+#quote-carousel .carousel-control.right {
+	right: -60px;
+} */
+#quote-carousel .carousel-indicators {
+	right: 50%;
+	top: 0px;
+	bottom: auto;
+	margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+	width: 80px;
+	height: 80px;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 80px;
+	opacity: 0.4;
+	overflow: hidden;
+	transition: all 1.5s;
+}
+#quote-carousel .carousel-indicators .active {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	opacity: 1;
+	overflow: hidden;
+}
+.carousel-quotes {
+	min-height: 420px;
+}
+.item blockquote {
+	border-left: none;
+	margin: 0;
 }
 /* ====== flexbox ======
 
