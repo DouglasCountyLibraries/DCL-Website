@@ -1,0 +1,1 @@
+Synchronize.bat -g --properties "C:\Users\djarrett\Documents\dcl-website\wwwroot\synchronize.properties" UP website.dcl *
