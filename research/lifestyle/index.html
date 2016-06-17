@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/wwwroot/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="title" -->
-        <title>DCL | Lifestyle Databases</title>
-        <!-- InstanceEndEditable -->
+<title>DCL | Lifestyle Databases</title>
+<!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.png">
@@ -38,12 +39,17 @@
 <script src="../../shared-assets/js/dcl.js"></script>
 <script src="../../shared-assets/js/jquery.sticky.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-        <script>
+		<script>
   $(document).ready(function(){
     $(".sticky-one").sticky({topSpacing:0});
   });
 		</script>
-        <!-- InstanceEndEditable -->
+		<style>
+.research-active {
+	background-color: #f5f5f5;
+}
+</style>
+<!-- InstanceEndEditable -->
 </head>
 <body>
 <div class="cp_header_biblio_bar">
@@ -142,7 +148,7 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li><a href="../../Locations">Home</a> </li>
+        <li class="active-nav"><a href="/">Home</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Recent Activity</a></li>
@@ -152,12 +158,24 @@
             <li><a href="#">^ Based on Catalog Settings</a></li>
           </ul>
         </li>
-        <li><a href="../../locations">Locations</a> </li>
-        <li><a href="../../using-the-library">Using the Library</a> </li>
-        <li><a href="../../events">Events</a> </li>
-        <li><a href="../../research">Research</a> </li>
-        <li><a href="../../rooms">Book a Room</a> </li>
-        <li><a href="../../kids">Kids & Teens</a> </li>
+        <li class="dropdown locations-active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="../../locations">All Locations</a></li>
+            <li><a href="../../castle-pines">Castle Pines</a></li>
+            <li><a href="../../castle-rock">Castle Rock</a></li>
+            <li><a href="../../highlands-ranch">Highlands Ranch</a></li>
+            <li><a href="../../lone-tree">Lone Tree</a></li>
+            <li><a href="../../louviers">Louviers</a></li>
+            <li><a href="../../parker">Parker</a></li>
+            <li><a href="../../roxborough">Roxborough</a></li>
+            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+          </ul>
+        </li>
+        <li class="using-the-library-active"><a href="../../using-the-library">Using the Library</a> </li>
+        <li class="events-active"><a href="../../events">Events</a> </li>
+        <li class="research-active"><a href="../../research">Research</a> </li>
+        <li class="book-a-room-active"><a href="../../rooms">Book a Room</a> </li>
+        <li class="kids-teens-active"><a href="../../kids">Kids & Teens</a> </li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -168,130 +186,133 @@
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row">
-            <div class="padding-top-60 padding-bottom-100 border-top">
+    <div class="padding-top-60 padding-bottom-100 border-top">
       <div class="container text-center">
-                <h1 class="text-uppercase jumbo-text">Lifestyle</h1>
-                <div class="separator-container">
+        <h1 class="text-uppercase jumbo-text">Lifestyle</h1>
+        <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-coffee"></i></div>
         </div>
-                <h3 class="josefin font-weight-600 margin-lg-100">If you can't find what you're looking for, <a href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text, and chat during regular library hours, or in person at any branch.</h3>
-              </div>
-    </div><!-- #BeginLibraryItem "/wwwroot/Library/database-dropdown.lbi" --><div class="sticky-one" style="z-index: 100; width: 100%;">
-  <div class="dropdown">
-    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
-    <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h3>
+        <h3 class="josefin font-weight-600 margin-lg-100">If you can't find what you're looking for, <a href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text, and chat during regular library hours, or in person at any branch.</h3>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h3>
-      </div>
-    </ul>
-  </div>
-</div>
-<!-- #EndLibraryItem --><div class="container margin-top-30 margin-bottom-60">
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=auto-repair" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Auto Repair Reference Center</h4>
-                    <div>Repair and maintenance information on thousands of vehicles from 1954 to the present. Features technical service bulletins and recalls, enhanced wiring diagrams, specifications, maintenance schedules, and a labor time guide and estimator, all created by ASE-certified technicians.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-health" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Consumer Health Complete</h4>
-                    <div>Full-text resource of more than 250 health reference books and encyclopedias, covering mainstream as well as holistic and integrated medicine. Topics range from aging and cancer to fitness and nutrition, and include men's, women's and children's health and more.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Consumer Reports</h4>
-                    <div>Noted consumer resource for researching products and services.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>EBSCOhost</h4>
-                    <div>A collection of database resources with access to comprehensive information and thousands of full-text articles on educational, business, lifestyle and historical topics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost-ebooks" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>EBSCOhost eBook Collection</h4>
-                    <div>A collection of e-books covering a wide range of categories and topics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gale-legalforms" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Gale Legal Forms</h4>
-                    <div>State-specific, professional legal documents covering hundreds of legal subjects and issues, and an attorney directory.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Lynda.com</h4>
-                    <div>Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Mango Languages</h4>
-                    <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=small-engine-repair" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Small Engine Repair Reference Center</h4>
-                    <div>Detailed, user-friendly repair guides and manuals for ATVs, marine and boat motors, motorcycles, snowmobiles and other small engines. Downloadable full-text PDFs are available.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-almanac-for-kids" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>World Almanac for Kids</h4>
-                    <div>Grade-appropriate content on various subjects and topics, as well as resources for homework help and teacher support.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=worldcat" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>WorldCat Discovery</h4>
-                    <div>Catalog of books and other materials in libraries all over the world.</div>
-                  </div>
-        </div>
-              </div>
     </div>
+    <!-- #BeginLibraryItem "/wwwroot/Library/database-dropdown.lbi" -->
+    <div class="sticky-one" style="z-index: 100; width: 100%;">
+      <div class="dropdown">
+        <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
+        <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h3>
           </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h3>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!-- #EndLibraryItem -->
+    <div class="container margin-top-30 margin-bottom-60">
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=auto-repair" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Auto Repair Reference Center</h4>
+            <div>Repair and maintenance information on thousands of vehicles from 1954 to the present. Features technical service bulletins and recalls, enhanced wiring diagrams, specifications, maintenance schedules, and a labor time guide and estimator, all created by ASE-certified technicians.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-health" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Consumer Health Complete</h4>
+            <div>Full-text resource of more than 250 health reference books and encyclopedias, covering mainstream as well as holistic and integrated medicine. Topics range from aging and cancer to fitness and nutrition, and include men's, women's and children's health and more.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Consumer Reports</h4>
+            <div>Noted consumer resource for researching products and services.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost" target="_blank"><span class="link-spanner"></span></a>
+            <h4>EBSCOhost</h4>
+            <div>A collection of database resources with access to comprehensive information and thousands of full-text articles on educational, business, lifestyle and historical topics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost-ebooks" target="_blank"><span class="link-spanner"></span></a>
+            <h4>EBSCOhost eBook Collection</h4>
+            <div>A collection of e-books covering a wide range of categories and topics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gale-legalforms" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Gale Legal Forms</h4>
+            <div>State-specific, professional legal documents covering hundreds of legal subjects and issues, and an attorney directory.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Lynda.com</h4>
+            <div>Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Mango Languages</h4>
+            <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=small-engine-repair" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Small Engine Repair Reference Center</h4>
+            <div>Detailed, user-friendly repair guides and manuals for ATVs, marine and boat motors, motorcycles, snowmobiles and other small engines. Downloadable full-text PDFs are available.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-almanac-for-kids" target="_blank"><span class="link-spanner"></span></a>
+            <h4>World Almanac for Kids</h4>
+            <div>Grade-appropriate content on various subjects and topics, as well as resources for homework help and teacher support.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=worldcat" target="_blank"><span class="link-spanner"></span></a>
+            <h4>WorldCat Discovery</h4>
+            <div>Catalog of books and other materials in libraries all over the world.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
@@ -339,4 +360,5 @@
 </div>
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>

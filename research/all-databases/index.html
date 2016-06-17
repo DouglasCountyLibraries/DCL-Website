@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/wwwroot/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- InstanceBeginEditable name="title" -->
-        <title>DCL | All Databases</title>
-        <!-- InstanceEndEditable -->
+<title>DCL | All Databases</title>
+<!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.png">
@@ -38,12 +39,17 @@
 <script src="../../shared-assets/js/dcl.js"></script>
 <script src="../../shared-assets/js/jquery.sticky.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-        <script>
+		<script>
   $(document).ready(function(){
     $(".sticky-one").sticky({topSpacing:0});
   });
 		</script>
-        <!-- InstanceEndEditable -->
+<style>
+.research-active {
+	background-color: #f5f5f5;
+}
+</style>
+<!-- InstanceEndEditable -->
 </head>
 <body>
 <div class="cp_header_biblio_bar">
@@ -142,7 +148,7 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li><a href="../../Locations">Home</a> </li>
+        <li class="active-nav"><a href="/">Home</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Recent Activity</a></li>
@@ -152,12 +158,24 @@
             <li><a href="#">^ Based on Catalog Settings</a></li>
           </ul>
         </li>
-        <li><a href="../../locations">Locations</a> </li>
-        <li><a href="../../using-the-library">Using the Library</a> </li>
-        <li><a href="../../events">Events</a> </li>
-        <li><a href="../../research">Research</a> </li>
-        <li><a href="../../rooms">Book a Room</a> </li>
-        <li><a href="../../kids">Kids & Teens</a> </li>
+        <li class="dropdown locations-active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="../../locations">All Locations</a></li>
+            <li><a href="../../castle-pines">Castle Pines</a></li>
+            <li><a href="../../castle-rock">Castle Rock</a></li>
+            <li><a href="../../highlands-ranch">Highlands Ranch</a></li>
+            <li><a href="../../lone-tree">Lone Tree</a></li>
+            <li><a href="../../louviers">Louviers</a></li>
+            <li><a href="../../parker">Parker</a></li>
+            <li><a href="../../roxborough">Roxborough</a></li>
+            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+          </ul>
+        </li>
+        <li class="using-the-library-active"><a href="../../using-the-library">Using the Library</a> </li>
+        <li class="events-active"><a href="../../events">Events</a> </li>
+        <li class="research-active"><a href="../../research">Research</a> </li>
+        <li class="book-a-room-active"><a href="../../rooms">Book a Room</a> </li>
+        <li class="kids-teens-active"><a href="../../kids">Kids & Teens</a> </li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -168,490 +186,493 @@
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row">
-            <div class="padding-top-60 padding-bottom-100 border-top">
+    <div class="padding-top-60 padding-bottom-100 border-top">
       <div class="container text-center">
-                <h1 class="text-uppercase jumbo-text">All Databases</h1>
-                <div class="separator-container">
+        <h1 class="text-uppercase jumbo-text">All Databases</h1>
+        <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-th-list"></i></div>
         </div>
-                <h3 class="josefin font-weight-600 margin-lg-100">If you can't find what you're looking for, <a href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text, and chat during regular library hours, or in person at any branch.</h3>
-              </div>
-    </div><!-- #BeginLibraryItem "/wwwroot/Library/database-dropdown.lbi" --><div class="sticky-one" style="z-index: 100; width: 100%;">
-  <div class="dropdown">
-    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
-    <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h3>
+        <h3 class="josefin font-weight-600 margin-lg-100">If you can't find what you're looking for, <a href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text, and chat during regular library hours, or in person at any branch.</h3>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h3>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h3 class="no-margin"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h3>
-      </div>
-    </ul>
-  </div>
-</div>
-<!-- #EndLibraryItem --><div class="container margin-top-30 margin-bottom-60">
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=academic-search-premier" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Academic Search Premier</h4>
-                    <div>Full-text article database of scholarly and peer-reviewed journals covering a variety of subjects, including biology, chemistry, psychology and physics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Adult Learning Center</h4>
-                    <div>Live assistance from Brainfuse on passing the GED, preparing for the U.S. citizenship test, writing a resume, and getting help with Microsoft Office.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=american-history" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>American History Online</h4>
-                    <div>More than 500 years of American political, military, social and cultural history.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>AncestryPlus - <span class="db-small">Access is available only in a library</span></h4>
-                    <div>Comprehensive genealogy and local history resource using census, vital and immigration records, and more.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancient-history" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Ancient and Medieval History Online</h4>
-                    <div>The full scope of ancient world history, from prehistory through the mid-15th century, including biographies, events and topics, primary sources, timelines, images, videos, maps and charts.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=auto-repair" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Auto Repair Reference Center</h4>
-                    <div>Repair and maintenance information on thousands of vehicles from 1954 to the present. Features technical service bulletins and recalls, enhanced wiring diagrams, specifications, maintenance schedules, and a labor time guide and estimator, all created by ASE-certified technicians.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=biography" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Biography in Context</h4>
-                    <div>Biographical entries from encyclopedias and journal articles about noteworthy world figures.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Brainfuse</h4>
-                    <div>Live homework help and tutoring, including a writing lab, skills building, test prep, and Spanish-speaking tutors, for students of all ages and learning levels.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Britannica</h4>
-                    <div>Targeted search levels for children, young adults, and an adult reference center. Current events and primary sources are included.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica-learning-zone" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Britannica Learning Zone</h4>
-                    <div>For early learners, a fun activity-centered environment that teaches letters, numbers, words, time, geography and more.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=business-insights" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Business Insights: Essentials</h4>
-                    <div>Business and industry overviews, rankings, market data, and investment and financial reports.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=business-source-premier" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Business Source Premier</h4>
-                    <div>Economic data, company profiles, industry information and market research from more than 2,200 popular and academic business publications.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=colorado-grants" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Colorado Grants Guide Online - <span class="db-small">Access is available only in a library</span></h4>
-                    <div>Comprehensive online resource with profiles of local foundations and trusts, corporations, national funders, government agencies, and religious organizations.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-health" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Consumer Health Complete</h4>
-                    <div>Full-text resource of more than 250 health reference books and encyclopedias, covering mainstream as well as holistic and integrated medicine. Topics range from aging and cancer to fitness and nutrition, and include men's, women's and children's health and more.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Consumer Reports</h4>
-                    <div>Noted consumer resource for researching products and services.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=culturegrams" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>CultureGrams</h4>
-                    <div>Illustrated resource featuring cultural and geographical information on provinces, states and world topics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=daily-life" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Daily Life Throughout History</h4>
-                    <div>Insider's perspective on daily life in worldwide civilizations, from antiquity to modern day.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=demographicsnow" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>DemographicsNow</h4>
-                    <div>Demographic data useful for opening a business, finding audiences for products/services, and analyzing the needs of a given population.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=denver-business-journal" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Denver Business Journal - <span class="db-small">Access is available only in a library</span></h4>
-                    <div>Access to the Denver Business Journal online, as well as the popular Book of Lists business resource with names and contact information for hundreds of ranked companies in the Denver area.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>EBSCOhost</h4>
-                    <div>A collection of database resources with access to comprehensive information and thousands of full-text articles on educational, business, lifestyle and historical topics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost-ebooks" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>EBSCOhost eBook Collection</h4>
-                    <div>A collection of e-books covering a wide range of categories and topics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=educators-explora" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Educator&#39;s Explora</h4>
-                    <div>Lesson plans, curriculum standards, and other professional development resources for educators.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=elementary-school-explora" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Elementary School Explora</h4>
-                    <div>Full-text articles for elementary school-age children, including categories organized by popular topics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=enciclopedia-moderna" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Enciclopedia Moderna</h4>
-                    <div>Britannica in Spanish for high school and college-level research.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=foundation-center" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Foundation Center - <span class="db-small">Access is available only at the Parker location</span></h4>
-                    <div>Databases, directories, fundraising and philanthropic publications, and training resources for finding funding opportunities, scholarships, fellowships and more, and researching philanthropic giving. </div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gale-directory-library" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Gale Directory Library</h4>
-                    <div>Multiple directories for business research on companies, publishers, associations and more.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gale-legalforms" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Gale Legal Forms</h4>
-                    <div>State-specific, professional legal documents covering hundreds of legal subjects and issues, and an attorney directory.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gvrl" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Gale Virtual Reference Library</h4>
-                    <div>A searchable database by topic or subject, including the arts, literature, business, history and medicine.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=general-research-explora" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>General Research Explora</h4>
-                    <div>A searchable database that uses various sources, including academic journals, magazines, reference books and more, to provide full-text articles on selected topics.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=global-issues" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Global Issues in Context</h4>
-                    <div>Search by issue or topic to get specific global viewpoints, reference information, statistics, articles, reports and more.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=high-school-explora" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>High School Explora</h4>
-                    <div>Full-text articles from popular magazines and reference books, including categories organized by popular topics, for high schoolers.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=fof-history-resources" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>History Resources: Facts on File</h4>
-                    <div>Portal for Facts on File of American History Online, Modern World History Online, and Ancient and Medieval History Online.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=literature-resource" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Literature Resource Center</h4>
-                    <div>Background information about writers from around the world, including essays on their work.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Lynda.com</h4>
-                    <div>Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Mango Languages</h4>
-                    <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=middle-school-explora" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Middle School Explora</h4>
-                    <div>Full-text articles from popular magazines and reference books, including categories organized by popular topics, for middle schoolers.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=modern-world-history" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Modern World History Online</h4>
-                    <div>Facts on File resource of world history, from the mid-15th century to the present.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=morningstar" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Morningstar Investments</h4>
-                    <div>Data research and investment analysis on stocks, funds and industries.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=myheritage" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>MyHeritage</h4>
-                    <div>Billions of historical documents, and millions of historical photos, for genealogical research, starting from the 16th century. Available from home.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=newspaper-source" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Newspaper Source</h4>
-                    <div>Full-text resource of 45 leading national and international newspapers, as well as 315 regional newspapers.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=novelist" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>NoveList</h4>
-                    <div>Comprehensive fiction resource with lists, recommendations and series information.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=novelist-k8" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>NoveList K-8</h4>
-                    <div>Fiction resource for readers of picture books, chapter books, and young adult titles.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=opposing-viewpoints" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Opposing Viewpoints in Context</h4>
-                    <div>Background information, arguments and statistics related to current social issues.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=plunkett-research" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Plunkett Research</h4>
-                    <div>Worldwide market research, industry statistics, trends and in-depth analysis of top companies.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=referenceusa" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>ReferenceUSA</h4>
-                    <div>A premier source of business and residential information on over 25 million businesses and more than 262 million consumers throughout the United States and Canada.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=science-reference" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Science Reference Center</h4>
-                    <div>Full-text articles on biology, chemistry, earth and space sciences, and more from hundreds of science encyclopedias, reference books and periodicals.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=small-engine-repair" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Small Engine Repair Reference Center</h4>
-                    <div>Detailed, user-friendly repair guides and manuals for ATVs, marine and boat motors, motorcycles, snowmobiles and other small engines. Downloadable full-text PDFs are available.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=srds" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>SRDS</h4>
-                    <div>Market research tool cataloging thousands of media sources, including print and digital, national and local, and direct and broadcast, categorized by media type, market and geography.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=terc" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Testing and Education Reference Center</h4>
-                    <div>Online tests and preparation tools for academic and professional exams. Includes a resume builder and information on scholarships and 4,000-plus accredited schools and colleges.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=tools-for-business" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Tools for Business</h4>
-                    <div>Resources to start and grow businesses.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=universal-class" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Universal Class</h4>
-                    <div>More than 500 online courses, from accounting to creative writing, photography to Excel.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=value-line" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Value Line</h4>
-                    <div>Investment and research tools for analyzing stocks, companies, industries, markets and economies.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=weiss-ratings" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>Weiss Ratings</h4>
-                    <div>Consumer guides to choosing insurance and financial products, including research, analysis and ratings. </div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-almanac-for-kids" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>World Almanac for Kids</h4>
-                    <div>Grade-appropriate content on various subjects and topics, as well as resources for homework help and teacher support.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-book-ebooks" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>World Book eBooks</h4>
-                    <div>Premium e-books for kids K-12, searchable by subject and grade level.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="col-lg-4 col-md-6">
-                <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=worldcat" target="_blank"><span class="link-spanner"></span></a>
-                    <h4>WorldCat Discovery</h4>
-                    <div>Catalog of books and other materials in libraries all over the world.</div>
-                  </div>
-        </div>
-              </div>
     </div>
+    <!-- #BeginLibraryItem "/wwwroot/Library/database-dropdown.lbi" -->
+    <div class="sticky-one" style="z-index: 100; width: 100%;">
+      <div class="dropdown">
+        <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
+        <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h3>
           </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h3>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h3 class="no-margin"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h3>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!-- #EndLibraryItem -->
+    <div class="container margin-top-30 margin-bottom-60">
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=academic-search-premier" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Academic Search Premier</h4>
+            <div>Full-text article database of scholarly and peer-reviewed journals covering a variety of subjects, including biology, chemistry, psychology and physics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Adult Learning Center</h4>
+            <div>Live assistance from Brainfuse on passing the GED, preparing for the U.S. citizenship test, writing a resume, and getting help with Microsoft Office.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=american-history" target="_blank"><span class="link-spanner"></span></a>
+            <h4>American History Online</h4>
+            <div>More than 500 years of American political, military, social and cultural history.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank"><span class="link-spanner"></span></a>
+            <h4>AncestryPlus - <span class="db-small">Access is available only in a library</span></h4>
+            <div>Comprehensive genealogy and local history resource using census, vital and immigration records, and more.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancient-history" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Ancient and Medieval History Online</h4>
+            <div>The full scope of ancient world history, from prehistory through the mid-15th century, including biographies, events and topics, primary sources, timelines, images, videos, maps and charts.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=auto-repair" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Auto Repair Reference Center</h4>
+            <div>Repair and maintenance information on thousands of vehicles from 1954 to the present. Features technical service bulletins and recalls, enhanced wiring diagrams, specifications, maintenance schedules, and a labor time guide and estimator, all created by ASE-certified technicians.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=biography" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Biography in Context</h4>
+            <div>Biographical entries from encyclopedias and journal articles about noteworthy world figures.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Brainfuse</h4>
+            <div>Live homework help and tutoring, including a writing lab, skills building, test prep, and Spanish-speaking tutors, for students of all ages and learning levels.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Britannica</h4>
+            <div>Targeted search levels for children, young adults, and an adult reference center. Current events and primary sources are included.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica-learning-zone" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Britannica Learning Zone</h4>
+            <div>For early learners, a fun activity-centered environment that teaches letters, numbers, words, time, geography and more.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=business-insights" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Business Insights: Essentials</h4>
+            <div>Business and industry overviews, rankings, market data, and investment and financial reports.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=business-source-premier" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Business Source Premier</h4>
+            <div>Economic data, company profiles, industry information and market research from more than 2,200 popular and academic business publications.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=colorado-grants" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Colorado Grants Guide Online - <span class="db-small">Access is available only in a library</span></h4>
+            <div>Comprehensive online resource with profiles of local foundations and trusts, corporations, national funders, government agencies, and religious organizations.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-health" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Consumer Health Complete</h4>
+            <div>Full-text resource of more than 250 health reference books and encyclopedias, covering mainstream as well as holistic and integrated medicine. Topics range from aging and cancer to fitness and nutrition, and include men's, women's and children's health and more.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Consumer Reports</h4>
+            <div>Noted consumer resource for researching products and services.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=culturegrams" target="_blank"><span class="link-spanner"></span></a>
+            <h4>CultureGrams</h4>
+            <div>Illustrated resource featuring cultural and geographical information on provinces, states and world topics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=daily-life" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Daily Life Throughout History</h4>
+            <div>Insider's perspective on daily life in worldwide civilizations, from antiquity to modern day.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=demographicsnow" target="_blank"><span class="link-spanner"></span></a>
+            <h4>DemographicsNow</h4>
+            <div>Demographic data useful for opening a business, finding audiences for products/services, and analyzing the needs of a given population.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=denver-business-journal" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Denver Business Journal - <span class="db-small">Access is available only in a library</span></h4>
+            <div>Access to the Denver Business Journal online, as well as the popular Book of Lists business resource with names and contact information for hundreds of ranked companies in the Denver area.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost" target="_blank"><span class="link-spanner"></span></a>
+            <h4>EBSCOhost</h4>
+            <div>A collection of database resources with access to comprehensive information and thousands of full-text articles on educational, business, lifestyle and historical topics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost-ebooks" target="_blank"><span class="link-spanner"></span></a>
+            <h4>EBSCOhost eBook Collection</h4>
+            <div>A collection of e-books covering a wide range of categories and topics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=educators-explora" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Educator&#39;s Explora</h4>
+            <div>Lesson plans, curriculum standards, and other professional development resources for educators.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=elementary-school-explora" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Elementary School Explora</h4>
+            <div>Full-text articles for elementary school-age children, including categories organized by popular topics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=enciclopedia-moderna" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Enciclopedia Moderna</h4>
+            <div>Britannica in Spanish for high school and college-level research.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=foundation-center" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Foundation Center - <span class="db-small">Access is available only at the Parker location</span></h4>
+            <div>Databases, directories, fundraising and philanthropic publications, and training resources for finding funding opportunities, scholarships, fellowships and more, and researching philanthropic giving. </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gale-directory-library" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Gale Directory Library</h4>
+            <div>Multiple directories for business research on companies, publishers, associations and more.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gale-legalforms" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Gale Legal Forms</h4>
+            <div>State-specific, professional legal documents covering hundreds of legal subjects and issues, and an attorney directory.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gvrl" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Gale Virtual Reference Library</h4>
+            <div>A searchable database by topic or subject, including the arts, literature, business, history and medicine.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=general-research-explora" target="_blank"><span class="link-spanner"></span></a>
+            <h4>General Research Explora</h4>
+            <div>A searchable database that uses various sources, including academic journals, magazines, reference books and more, to provide full-text articles on selected topics.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=global-issues" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Global Issues in Context</h4>
+            <div>Search by issue or topic to get specific global viewpoints, reference information, statistics, articles, reports and more.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=high-school-explora" target="_blank"><span class="link-spanner"></span></a>
+            <h4>High School Explora</h4>
+            <div>Full-text articles from popular magazines and reference books, including categories organized by popular topics, for high schoolers.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=fof-history-resources" target="_blank"><span class="link-spanner"></span></a>
+            <h4>History Resources: Facts on File</h4>
+            <div>Portal for Facts on File of American History Online, Modern World History Online, and Ancient and Medieval History Online.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=literature-resource" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Literature Resource Center</h4>
+            <div>Background information about writers from around the world, including essays on their work.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Lynda.com</h4>
+            <div>Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Mango Languages</h4>
+            <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=middle-school-explora" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Middle School Explora</h4>
+            <div>Full-text articles from popular magazines and reference books, including categories organized by popular topics, for middle schoolers.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=modern-world-history" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Modern World History Online</h4>
+            <div>Facts on File resource of world history, from the mid-15th century to the present.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=morningstar" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Morningstar Investments</h4>
+            <div>Data research and investment analysis on stocks, funds and industries.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=myheritage" target="_blank"><span class="link-spanner"></span></a>
+            <h4>MyHeritage</h4>
+            <div>Billions of historical documents, and millions of historical photos, for genealogical research, starting from the 16th century. Available from home.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=newspaper-source" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Newspaper Source</h4>
+            <div>Full-text resource of 45 leading national and international newspapers, as well as 315 regional newspapers.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=novelist" target="_blank"><span class="link-spanner"></span></a>
+            <h4>NoveList</h4>
+            <div>Comprehensive fiction resource with lists, recommendations and series information.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=novelist-k8" target="_blank"><span class="link-spanner"></span></a>
+            <h4>NoveList K-8</h4>
+            <div>Fiction resource for readers of picture books, chapter books, and young adult titles.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=opposing-viewpoints" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Opposing Viewpoints in Context</h4>
+            <div>Background information, arguments and statistics related to current social issues.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=plunkett-research" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Plunkett Research</h4>
+            <div>Worldwide market research, industry statistics, trends and in-depth analysis of top companies.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=referenceusa" target="_blank"><span class="link-spanner"></span></a>
+            <h4>ReferenceUSA</h4>
+            <div>A premier source of business and residential information on over 25 million businesses and more than 262 million consumers throughout the United States and Canada.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=science-reference" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Science Reference Center</h4>
+            <div>Full-text articles on biology, chemistry, earth and space sciences, and more from hundreds of science encyclopedias, reference books and periodicals.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=small-engine-repair" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Small Engine Repair Reference Center</h4>
+            <div>Detailed, user-friendly repair guides and manuals for ATVs, marine and boat motors, motorcycles, snowmobiles and other small engines. Downloadable full-text PDFs are available.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=srds" target="_blank"><span class="link-spanner"></span></a>
+            <h4>SRDS</h4>
+            <div>Market research tool cataloging thousands of media sources, including print and digital, national and local, and direct and broadcast, categorized by media type, market and geography.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=terc" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Testing and Education Reference Center</h4>
+            <div>Online tests and preparation tools for academic and professional exams. Includes a resume builder and information on scholarships and 4,000-plus accredited schools and colleges.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=tools-for-business" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Tools for Business</h4>
+            <div>Resources to start and grow businesses.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=universal-class" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Universal Class</h4>
+            <div>More than 500 online courses, from accounting to creative writing, photography to Excel.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=value-line" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Value Line</h4>
+            <div>Investment and research tools for analyzing stocks, companies, industries, markets and economies.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=weiss-ratings" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Weiss Ratings</h4>
+            <div>Consumer guides to choosing insurance and financial products, including research, analysis and ratings. </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-almanac-for-kids" target="_blank"><span class="link-spanner"></span></a>
+            <h4>World Almanac for Kids</h4>
+            <div>Grade-appropriate content on various subjects and topics, as well as resources for homework help and teacher support.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-book-ebooks" target="_blank"><span class="link-spanner"></span></a>
+            <h4>World Book eBooks</h4>
+            <div>Premium e-books for kids K-12, searchable by subject and grade level.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=worldcat" target="_blank"><span class="link-spanner"></span></a>
+            <h4>WorldCat Discovery</h4>
+            <div>Catalog of books and other materials in libraries all over the world.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
@@ -699,4 +720,5 @@
 </div>
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
