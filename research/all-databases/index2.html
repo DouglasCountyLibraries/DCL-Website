@@ -40,7 +40,8 @@
 <script src="../../shared-assets/js/jquery.sticky.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/6.1.0/jquery.mark.min.js"></script>
-<script>$(function() {
+<script>
+$(function() {
 
   var mark = function() {
 
@@ -68,7 +69,8 @@
   $("input[type='checkbox']").on("change", mark);
   mark();
 
-});</script>
+});
+</script>
 <script>
   $(document).ready(function(){
     $(".sticky-one").sticky({topSpacing:0});
@@ -78,30 +80,36 @@
 .research-active {
 	background-color: #f5f5f5;
 }
-div.search span, div.search input[name="keyword"] {
-	display: block;
-}
+div.search span,
 div.search input[name="keyword"] {
-	margin-top: 4px;
+  display: block;
 }
+
+div.search input[name="keyword"] {
+  margin-top: 4px;
+}
+
 div.panel {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
+
 div.panel .panel-body p:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 mark {
-	padding: 5px;
-	background: transparent;
-	background: linear-gradient(to right, #d36a50 50%, transparent 50%);
-	background-position: right bottom;
-	background-size: 200% 100%;
-	transition: all .5s ease;
-	color: #000;
+  padding: 5px;
+  background: transparent;
+  background: linear-gradient(to right, #d36a50 50%, transparent 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+  transition: all .5s ease;
+  color: #000;
 }
+
 mark.animate {
-	background-position: left bottom;
-	color: #fff;
+  background-position: left bottom;
+  color: #fff;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -247,8 +255,8 @@ mark.animate {
         <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-th-list"></i></div>
         </div>
-        <h3 class="josefin font-weight-600 line-height-tall margin-lg-200">Not sure where to start? Browse our A to Z repository of databases to find the research tool you need or <span>search the page by highlighting keywords:</span></h3>
-        <div class="margin-top-30 margin-lg-200"><input type="text" name="keyword" placeholder="Search for one or more keywords..." class="form-control input-lg"></div>
+        <h3 class="josefin font-weight-600 line-height-tall margin-lg-200">Not sure where to start? Browse our A to Z repository of databases to find the research tool you need or <span>search this page by highlighting keywords:</span></h3>
+        <div class="margin-top-30 margin-lg-200"><input type="text" name="keyword" placeholder="Search for a word or phrase within this page..." class="form-control input-lg"></div>
       </div>
     </div>
     <!-- #BeginLibraryItem "/wwwroot/Library/database-dropdown.lbi" -->
@@ -278,7 +286,7 @@ mark.animate {
       </div>
     </div>
     <!-- #EndLibraryItem -->
-    <div class="container margin-top-30 margin-bottom-30">
+    <div class="context container margin-top-30 margin-bottom-30">
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
           <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=academic-search-premier" target="_blank"><span class="link-spanner"></span></a>
