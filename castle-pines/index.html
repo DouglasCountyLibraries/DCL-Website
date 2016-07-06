@@ -222,7 +222,7 @@
         </div>
       </div>
       <div>
-        <h5 class="fff margin-lg-200">Creativity-encouraging features include vending-machine-style laptop borrowing, a furnished terrace with a fireplace, and Everbright, a Lite-Brite-inspired interactive wall in the children’s area.</h5>
+        <h5 class="fff margin-lg-200">Creativity-encouraging features include vending-machine-style <a class="fff text-underline" href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your scannable library card for use inside the library.">laptop borrowing</a>, a furnished terrace with a fireplace, and Everbright, a Lite-Brite-inspired interactive wall in the children’s area.</h5>
       </div>
     </div>
   </div>
@@ -301,6 +301,15 @@
   </div>
 </div>
 <!--<div id="help"><a href="http://answers.douglascountylibraries.org/" target="_blank"><img src="../shared-assets/images/help.jpg" alt="Help and Contact Informaiton"></a></div>-->
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="scripts" -->
+<script>
+$("a[rel=popover]")
+    .popover()
+    .click(function(e) {
+        e.preventDefault();
+     });
+ </script> 
+
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
