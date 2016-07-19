@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- InstanceBeginEditable name="title" -->
-<title>DCL | Read, Listen, Watch</title>
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="title" -->
+<title>DCL | Douglas County Libraries is a passionate advocate for literacy and lifelong learning</title>
+<!-- TemplateEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png">
@@ -37,8 +37,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <script src="../shared-assets/js/jquery.sticky.js"></script>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 </head>
 <body>
 <div class="cp_header_biblio_bar">
@@ -56,23 +56,23 @@
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
-            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="/user/login"> Log In / Register </a> </li>
             <li data-js="divider_logged_out" class="divider" role="presentation"></li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/dashboard/user_dashboard">My Library Dashboard</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/checkedout">Checked Out</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/holds">On Hold</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/checkedout">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/holds">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/fines">Fees</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Shelves</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/collection/show/my/library/completed">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/lists/show/mine">Lists</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/user_profile/me">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/account/personal_information">My Settings</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/account/personal_information">My Settings</a> </li>
             <!-- Template: t_biblionav_admin_link -->
             <li data-js="biblionav_admin_link" role="presentation"></li>
             
@@ -123,12 +123,12 @@
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
         <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="https://dcl.bibliocommons.com/search">
+        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="https://dcl.bibliocommons.com/search">
           <div class="input-group">
-            <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="hidden" value="all" name="search_param" id="search_param">
+            <input type="text" placeholder="" name="lookfor" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </ul>
@@ -137,12 +137,14 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
+        <li class="active-nav"><a href="/">Home</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
-            <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
-            <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
-            <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">^ Based on Catalog Settings</a></li>
           </ul>
         </li>
         <li class="dropdown locations-active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -171,28 +173,9 @@
 </nav>
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
-  <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-top-60 padding-bottom-100 border-top">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400">Read, Listen, Watch</h1>
-        <div class="separator-container">
-          <div class="separator line-separator"><i class="fa fa-circle-o"></i></div>
-        </div>
-      </div>
-      <h2 class="josefin text-center font-weight-600 margin-lg-200">These engaging e-books and downloadable resources make learning fun and easy. Looking for recommendations? <a href="#">Check out our staff picks</a>.</h2>
-    </div>
-  </div>
-  <div class="row bg-gray-5 padding-top-40 padding-bottom-40">
-    <div class="container">
-      <div class="col-md-6 padding-top-60 padding-bottom-60"> <img class="img-responsive" src="play-learn.png" alt="Colorado Play and Learn App"> </div>
-      <div class="col-md-6 padding-top-60 padding-bottom-60">
-        <h3>Colorado Play and Learn app</h3>
-        <div>This app’s quick-learning tips and simple games and activities help develop pre-reading skills in early learners, from babies to preschoolers. Download it from <a href="https://itunes.apple.com/us/app/co-play-and-learn/id1089628503?mt=8" target="_blank">iTunes</a> or <a href="https://play.google.com/store/apps/details?id=org.copubliclibraries.playandlearn&hl=en" target="new">Google Play</a>.</div>
-      </div>
-    </div>
-  </div>
-  <!-- InstanceEndEditable --> </div>
+  <!-- TemplateBeginEditable name="Content" -->
+  <div class="row text-center bg-gray-5 padding-top-100 padding-bottom-100">Content goes here</div>
+  <!-- TemplateEndEditable --> </div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
     <div class="col-sm-3">
@@ -239,6 +222,6 @@
   </div>
 </div>
 <!--<div id="help"><a href="http://answers.douglascountylibraries.org/" target="_blank"><img src="../shared-assets/images/help.jpg" alt="Help and Contact Informaiton"></a></div>-->
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="scripts" --> <!-- TemplateEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+</html>

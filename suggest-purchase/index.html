@@ -57,23 +57,23 @@
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
-            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="/user/login"> Log In / Register </a> </li>
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
             <li data-js="divider_logged_out" class="divider" role="presentation"></li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/checkedout">Checked Out</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/holds">On Hold</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/fines">Fees</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/checkedout">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/holds">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/collection/show/my/library/completed">Shelves</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/lists/show/mine">Lists</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/user_profile/me">My Profile</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/account/personal_information">My Settings</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/account/personal_information">My Settings</a> </li>
             <!-- Template: t_biblionav_admin_link -->
             <li data-js="biblionav_admin_link" role="presentation"></li>
             
@@ -100,12 +100,12 @@
         </div>
       </div>
       <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="https://dcl.bibliocommons.com/search">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </div>
@@ -124,12 +124,12 @@
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
         <h2 class="margin-left-15">Search</h2>
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="https://dcl.bibliocommons.com/search">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </ul>
@@ -138,14 +138,12 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="active-nav"><a href="/">Home</a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Recent Activity</a></li>
-            <li><a href="#">New Titles</a></li>
-            <li><a href="#">Awards</a></li>
-            <li><a href="#">Bestsellers</a></li>
-            <li><a href="#">^ Based on Catalog Settings</a></li>
+            <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
           </ul>
         </li>
         <li class="dropdown locations-active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations <span class="caret"></span></a>
