@@ -10,16 +10,6 @@
 // scrollme
 // stellar
 // flip
-
-// lowercase URL's
-/* ------------------------------------------------------------ */
-
-        var url = $(location).attr('href');
-       // console.log(url);
-        url = url.toLowerCase();
-      //  console.log(url);
-   
-        window.history.pushState({ "html": url.html, "pageTitle": url.pageTitle }, "", url);
 		
 
 // pull the alert into the global-alert div
