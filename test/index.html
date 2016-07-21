@@ -37,6 +37,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <script src="../shared-assets/js/jquery.sticky.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
 <script>
         var url = $(location).attr('href');
        // console.log(url);
@@ -44,10 +48,6 @@
       //  console.log(url);  
         window.history.pushState({ "html": url.html, "pageTitle": url.pageTitle }, "", url);
 </script>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-</head>
-<body>
 <div class="cp_header_biblio_bar">
   <div class="container">
     <div class="row"> 
@@ -198,17 +198,27 @@
   <div class="panel">
     <div class="panel-heading">
     
-        <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <h4 data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false">
         Collapsible Group 1</h4>
       
     </div>
-    <div id="collapse2" class="panel-collapse collapse">
+    <div id="collapse2" class="panel-collapse collapse in">
       <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
       minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.</div>
     </div>
-  </div></div>
+  </div></div><a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Link with href
+</a>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Button with data-target
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    ...
+  </div>
+</div>
 </div> </div>
   <!-- InstanceEndEditable --> </div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
