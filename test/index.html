@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- InstanceBeginEditable name="title" -->
 <title>DCL | Layout</title>
-<!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png">
@@ -37,10 +35,17 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <script src="../shared-assets/js/jquery.sticky.js"></script>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 </head>
-<body>
+<body>    <script>    
+       
+        var url = $(location).attr('href');
+       // console.log(url);
+        url = url.toLowerCase();
+      //  console.log(url);
+   
+        window.history.pushState({ "html": url.html, "pageTitle": url.pageTitle }, "", url);
+
+    </script>
 <div class="cp_header_biblio_bar">
   <div class="container">
     <div class="row"> 
@@ -171,8 +176,7 @@
 </nav>
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
-  <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-top-60 padding-bottom-100 border-top border-bottom">
+<div class="row padding-top-60 padding-bottom-100 border-top border-bottom">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400">Layout</h1>
@@ -233,7 +237,7 @@
         <a class="button btn btn-primary margin-top-40" href="#">get started</a><a class="btn btn-link margin-top-40 margin-left-15" href="#">learn more &raquo;</a></div>
     </div>
   </div>
-  <!-- InstanceEndEditable --> </div>
+  </div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
     <div class="col-sm-3">
@@ -280,6 +284,5 @@
   </div>
 </div>
 <!--<div id="help"><a href="http://answers.douglascountylibraries.org/" target="_blank"><img src="../shared-assets/images/help.jpg" alt="Help and Contact Informaiton"></a></div>-->
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+</html>
