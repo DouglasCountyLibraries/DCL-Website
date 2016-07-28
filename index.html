@@ -34,26 +34,36 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="shared-assets/js/dcl.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        var images = ['change1.png', 'change2.png'];
+
+        $('.random').css({'background-image': 'url(../random/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+
+</script>
+<style type="text/css">
+
+    .random
+    {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300px;
+    }
+
+</style>
 </head>
 <body>
-<script>    
-       
-        var url = $(location).attr('href');
-       // console.log(url);
-        url = url.toLowerCase();
-      //  console.log(url);
-   
-        window.history.pushState({ "html": url.html, "pageTitle": url.pageTitle }, "", url);
-
-    </script>
 <div class="container-fluid">
-<div class="row padding-top-60 padding-bottom-100">
-  <div class="container">
-    <div class="text-center"><img class="img-responsive center-block margin-bottom-80" src="change1.png" alt="dcl.org Coming Soon"/>
+  <div class="row padding-top-60 padding-bottom-100">
+    <div class="container">
+      <div class="random img-responsive center-block margin-bottom-80"/>
       <h1 style="margin-left:38px;">DCL.org coming soon</h1>
     </div>
     <div class="margin-top-15"><img class="center-block" src="gray-logo.gif" alt="Douglas County Libraries"/> </div>
   </div>
+</div>
 </div>
 </body>
 </html>
