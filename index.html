@@ -34,27 +34,54 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="shared-assets/js/dcl.js"></script>
-<script type="text/javascript">
+<script language="JavaScript">
+<!--
+// ==============================================
+// Copyright 2003 by jsCode.com
+// Source: jsCode.com
+// Author: etLux
+// Free for all; but please leave in the header.
+// ==============================================
 
-    $(document).ready(function() {
-        var images = ['change1.png', 'change2.png', 'change3.png', 'change4.png', 'change5.png'];
+// Set up the image files to be used.
+var theImages = new Array() // do not change this
+// To add more image files, continue with the
+// pattern below, adding to the array. Rememeber
+// to increment the theImages[x] index!
 
-        $('.random').css({'background-image': 'url(../random/' + images[Math.floor(Math.random() * images.length)] + ')'});
-    });
+theImages[0] = '../random/change1.png'
+theImages[1] = '../random/change2.png'
+theImages[2] = '../random/change3.png'
+theImages[3] = '../random/change4.png'
+theImages[4] = '../random/change5.png'
 
-</script>
-<style type="text/css">
-.random {
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 600px;
+// ======================================
+// do not change anything below this line
+// ======================================
+
+var j = 0
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+   preBuffer[i] = new Image()
+   preBuffer[i].src = theImages[i]
 }
-</style>
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+document.write('<img src="'+theImages[whichImage]+'">');
+}
+
+//-->
+</script>
 </head>
 <body>
 <div class="row">
   <div class="container">
-    <div class="random"/>
+    <div class="random"/><script language="JavaScript">
+showImage();
+</script>
   </div>
   <div class="margin-top-15 text-center">
     <h1>DCL.org coming soon</h1>
