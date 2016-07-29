@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,15 +41,12 @@
 </head>
 <body>
 <script>    
-       
-        var url = $(location).attr('href');
-       // console.log(url);
-        url = url.toLowerCase();
-      //  console.log(url);
-   
-        window.history.pushState({ "html": url.html, "pageTitle": url.pageTitle }, "", url);
 
-    </script>
+    var url = $(location).attr('href');
+
+    window.history.pushState({ "html": url.html.toLowerCase(), "pageTitle": url.pageTitle.toLowerCase() }, "", url);
+
+</script>
 <div class="cp_header_biblio_bar">
   <div class="container">
     <div class="row"> 
@@ -251,5 +247,4 @@
 <!--<div id="help"><a href="http://answers.douglascountylibraries.org/" target="_blank"><img src="../shared-assets/images/help.jpg" alt="Help and Contact Informaiton"></a></div>--> 
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
