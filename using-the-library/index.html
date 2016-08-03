@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -252,10 +253,24 @@
       </div>
     </div>
   </div>
+  <div class="row bg-salmon padding-top-40 padding-bottom-60">
+    <div class="container text-center">
+      <h1><a class="fff josefin font-weight-600text-uppercase" href="http://dcl.org/materials-request">Looking for something we don’t have?</a></h1>
+    </div>
+  </div>
   <div class="row padding-top-80 padding-bottom-30">
     <div id="enjoy-our-collection" class="container">
       <h1 class="text-center">Enjoy Our Collection</h1>
-      <div class="text-center margin-bottom-60"><a class="text-uppercase" href="http://dcl.org/materials-request">Looking for something we don’t have?</a></div>
+      <div class="col-sm-6 col-sm-push-3">
+        <form id="searchForm" class="search dcl-search" action="#">
+          <div class="input-group">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
+            <span class="input-group-btn">
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </span> </div>
+        </form>
+      </div>
     </div>
   </div>
   <div class="row padding-bottom-30 padding-top-15">
@@ -287,7 +302,8 @@
       <div class="col-md-5">
         <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
           <h2 class="josefin font-weight-600"><a href="../staff-picks">Featured Staff Picks</a></h2>
-          <div>Create your reading list using DCL’s book list. These are the select books our librarians are excited about.</div><div class="margin-top-15"> <a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks" class="text-uppercase button btn btn-primary btn-large">View All Staff Picks</a></div>
+          <div>Create your reading list using DCL’s book list. These are the select books our librarians are excited about.</div>
+          <div class="margin-top-15"> <a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks" class="text-uppercase button btn btn-primary btn-large">View All Staff Picks</a></div>
         </div>
         <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
           <h2 class="josefin font-weight-600">Just for You</h2>
@@ -318,7 +334,7 @@
         <div class="bg-gray-5 clearfix margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
           <h2 class="josefin font-weight-600"><a href="../book-clubs">Book Clubs</a></h2>
           <div>Find a book club to match your reading preferences, and join the conversation.</div>
-          <h2 class="josefin font-weight-600"><a href="https://epl.bibliocommons.com/search?custom_query=formatcode%3A(KIT%20)&suppress=true&custom_edit=false&genre=Fiction" target="_blank">Book Club Express</a></h2>
+          <h2 class="josefin font-weight-600"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h2>
           <div>Reserve materials for your next book club here! Multiple copies of the book, author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit.</div>
         </div>
       </div>
@@ -391,12 +407,10 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee">
-      <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Old Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span>
-    </div>
+    <div class="eee"> <span class="pull-left"><a class="text-uppercase wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Old Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>-->
+<!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
 $("a[rel=popover]")
@@ -417,4 +431,5 @@ $("a[rel=popover]")
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
