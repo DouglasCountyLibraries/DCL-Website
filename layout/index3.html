@@ -4,8 +4,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning."/>
+<link rel="canonical" href="http://dcl.org"/>
 <!-- InstanceBeginEditable name="title" -->
-<title>DCL | Layout</title>
+<title>DCL | Fines, Fees and Borrowing</title>
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -36,7 +38,6 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
-<script src="../shared-assets/js/jquery.sticky.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>
@@ -56,23 +57,23 @@
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
-            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="/user/login"> Log In / Register </a> </li>
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="#"> Log In / Register </a> </li>
             <li data-js="divider_logged_out" class="divider" role="presentation"></li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Library Dashboard</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/checkedout">Checked Out</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/holds">On Hold</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/fines">Fees</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Fees</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/collection/show/my/library/completed">Shelves</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/lists/show/mine">Lists</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Lists</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/user_profile/me">My Profile</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/account/personal_information">My Settings</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
             <!-- Template: t_biblionav_admin_link -->
             <li data-js="biblionav_admin_link" role="presentation"></li>
             
@@ -83,7 +84,7 @@
             <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="http://help.bibliocommons.com"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
+        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -95,16 +96,16 @@
     <div class="row">
       <div class="col-sm-5">
         <div class="cp_header_client_area">
-          <div class="logo"> <a href="/"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
+          <div class="logo"> <a href="../home"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
         </div>
       </div>
       <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="#">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </div>
@@ -123,12 +124,12 @@
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
         <h2 class="margin-left-15">Search</h2>
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="#">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </ul>
@@ -137,17 +138,16 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="active-nav"><a href="/">Home</a> </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Recent Activity</a></li>
-            <li><a href="#">New Titles</a></li>
-            <li><a href="#">Awards</a></li>
-            <li><a href="#">Bestsellers</a></li>
-            <li><a href="#">^ Based on Catalog Settings</a></li>
+            <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
+            <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
           </ul>
         </li>
-        <li class="dropdown locations-active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations <span class="caret"></span></a>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="../locations">All Locations</a></li>
             <li><a href="../castle-pines">Castle Pines</a></li>
@@ -177,24 +177,139 @@
   <div class="row padding-top-60 padding-bottom-100 border-top">
     <div class="container">
       <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400">Layout</h1>
+        <h1 class="jumbo-text text-uppercase font-weight-400">Fines, Fees and Borrowing</h1>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-circle-o"></i></div>
         </div>
       </div>
-      <h2 class="josefin text-center font-weight-600 margin-lg-200">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque.</h2>
+      <h2 class="josefin text-center margin-lg-200">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque.</h2>
     </div>
   </div>
   <div class="row bg-gray-5 padding-top-40 padding-bottom-40">
     <div class="container">
-      <div class="col-md-6 padding-top-60 padding-bottom-60 text-right">
-        <h3><a href="#">Heading</a></h3>
-        <div>Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
+      <div> </div>
+      <div class="col-md-6 padding-top-60 padding-bottom-60">
+        <p>The Fines, Fees and Borrowing Schedule may be changed without notice at the discretion of the library&rsquo;s Executive Director.<br>
+          Borrowing Privileges</p>
+        <ul type="disc">
+          <li>Most materials check out for      three weeks: books, audiobooks, music CDs and DVD sets of 200 minutes or      more.</li>
+          <li>Magazines and DVDs under 200      minutes check out for one week.</li>
+          <li>Patrons are limited to three      Your Lucky Day (recent popular releases) DVDs per library account.</li>
+          <li>Adult Book Club Express kits      check out for six weeks. Patrons are limited to one kit at a time.</li>
+          <li>Juvenile Book Club Express kits      check out for six weeks. Patrons are limited to two kits at a time.</li>
+        </ul>
+        <p>Borrowing Limits</p>
+        <ul type="disc">
+          <li>Each patron may have up to 99      physical items checked out at any one time.</li>
+          <li>Patrons may download five songs      per week from Freegal. Weeks reset on Sundays at 10 p.m.</li>
+          <li>The checkout period for OverDrive      and 3M e-books/audiobooks is set by the patron at the time of checkout,      for seven, 14 or 21 days.</li>
+          <li>Twenty e-books/audiobooks may      be checked out at any one time.</li>
+          <li>Douglas County residents may      stream 10 items per month from Hoopla.</li>
+          <li>Patrons may download unlimited      issues of magazines from Zinio.</li>
+        </ul>
+        <p>Requests <br>
+          Patrons are allowed a maximum of 99 requests at any one time. OverDrive and 3M allow patrons 20 holds at a time.<br>
+          <br>
+          Renewals <br>
+          Library items may be renewed up to eight times. Your Lucky Day materials, magazines, Book Club Express kits, e-books and Interlibrary Loan items may not be renewed.<br>
+          <br>
+          Circulation Policy for Our Smaller Branches<br>
+          Items from our Castle Pines, Lone Tree, Louviers and Roxborough locations do not fill holds for patrons at other locations. Our smallest libraries have very limited collections intended primarily for browsing. Patrons may place an item from one of those libraries on hold only for pickup at that same location.<br>
+          <br>
+          Your Lucky Day (YLD) Items<br>
+          YLD items are copies of very popular titles that do not fill holds, but are placed in the libraries for patrons to browse. These items are labeled with a green shamrock; are available first come, first served; and are not renewable. DCL staff will not hold these items and are unable to verify an item is on the shelf.<br>
+          <br>
+          YLD Movies<br>
+          DCL offers many YLD copies of DVDs and Blu-rays of popular films for the first two months after release. Patrons may place holds on titles as soon as they are in the catalog, but typically requests are not filled during this time as all copies are in the YLD collection. These requests will be fulfilled after the two-month period.<br>
+          <br>
+          Overdue and Fines<br>
+          Patrons will be assessed a 10 cent daily fine for each overdue item with the following exceptions:</p>
+        <ul type="disc">
+          <li>The library offers a grace      period for most material. Items returned or renewed within three days of      the due date will not be subject to a fine. Any item going past the grace      period date will be assessed a fine from the due date.</li>
+          <li>There is a $1 daily fine for      reference materials.</li>
+          <li>Overdue Interlibrary Loan items      cost $1 per day with no grace period.</li>
+          <li>Book Club Express kits:</li>
+          <ul type="circle">
+            <li>Fine is $1 per day with no       grace period.</li>
+            <li>Missing or damaged books or       guides cost $10 each. If you return a missing item within one year of the       original pickup date, $5 will be waived or refunded.</li>
+            <li>Lost or damaged kits incur a       $140 charge.</li>
+          </ul>
+        </ul>
+        <p>If a patron accumulates a total of $20 or more in fines and fees, the patron may not check out any library materials until the fine is paid down. If the total exceeds $50, the account may be referred to a collection agency.<br>
+          Maximum Fines<br>
+          The following are the maximum fines for material types in the library:</p>
+        <ul type="disc">
+          <li>Book Club Express - $5</li>
+          <li>Interlibrary Loan Item - $10</li>
+          <li>Reference Materials - $5</li>
+        </ul>
+        <p align="center">Patron Overdue Notification and Debt Collection Timeline</p>
+        <table border="1" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td width="21%" valign="top"><p>Number of days<br>
+                past due date:</p></td>
+            <td width="78%" valign="top"><p>Action:</p></td>
+          </tr>
+          <tr>
+            <td width="21%" valign="top"><p>12 </p></td>
+            <td width="78%" valign="top"><p>DCL sends first overdue notice to patron via email or   phone.</p></td>
+          </tr>
+          <tr>
+            <td width="21%" valign="top"><p>24 </p></td>
+            <td width="78%" valign="top"><p>DCL sends second overdue notice to patron via email or   phone.</p></td>
+          </tr>
+          <tr>
+            <td width="21%" valign="top"><p>36</p></td>
+            <td width="78%" valign="top"><p>Final notice sent by email or U.S. mail, saying patron   will be charged for item(s) not returned.</p></td>
+          </tr>
+          <tr>
+            <td width="21%" valign="top"><p>48-69</p></td>
+            <td width="78%" valign="top"><ul>
+                <li>On   day 48, DCL puts replacement charge(s) on patron&rsquo;s account.</li>
+              </ul>
+              <p>If account goes   over $50*: </p>
+              <ul>
+                <li>&ldquo;Billing Notice&rdquo; is placed on patron account.</li>
+                <li>Patron   will receive an email or letter indicating that the balance must be paid or   the account will be sent to Unique Management Services Inc. for collection.   Patron has 21 days to respond once communication is sent out.</li>
+                <li>&ldquo;Billing   Notice&rdquo; is posted on the account each time an email or letter is sent.</li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td width="21%" valign="top"><p>70-77</p></td>
+            <td width="78%" valign="top"><ul>
+                <li>DCL   sends account to Unique Management and adds a $10 collection agency fee to   patron account.</li>
+                <li>&ldquo;Message   to Borrower&rdquo; note is placed on patron account, noting &ldquo;Zero balance required   to stop collection activity.&rdquo;</li>
+                <li>Unique   Management sends patron a letter as soon as it receives patron account,   usually the same day. Patron has three weeks to respond.</li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td width="21%" valign="top"><p>Three weeks later</p></td>
+            <td width="78%" valign="top"><ul>
+                <li>If   no response, Unique Management sends patron a second letter.&nbsp; </li>
+                <li>If   patron returns only some materials or makes a partial payment, Unique   Management sends another letter encouraging patron to resolve the remaining   balance. </li>
+              </ul></td>
+          </tr>
+          <tr>
+            <td width="21%" valign="top"><p>Three weeks later and forward</p></td>
+            <td width="78%" valign="top"><p>If patron still owes the library money, Unique   Management begins calling the patron. It will continue sending mail and   making calls until the amount due is paid.</p></td>
+          </tr>
+        </table>
+        <p>* If patron reports an item as lost and the replacement value of the item is over $50, or if total account fees/fines go over $50, the collection process starts.</p>
+        <p>Items Returned to Other Library Systems<br>
+          The patron is responsible for the item until it reaches a DCL library. <br>
+          Library Material Replacement<br>
+          The replacement fee for library materials shall be the full retail value of the materials, as recorded in the library database. DCL does not accept replacement copies or donations in lieu of payment.</p>
+        
       </div>
-      <div class="col-md-6 padding-top-60 padding-bottom-60"> <img class="img-responsive" src="http://placehold.it/600x300?text=Compelling+Image"> </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
+<div class="social-footer bg-gray-10 padding-top-15 padding-bottom-40">
+  <div class="text-center">
+    <h3>Share your experience<span class="nothing margin-left-15">#DCL</span></h3>
+  </div>
+  <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
+</div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
     <div class="col-sm-3">
@@ -202,7 +317,7 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="#">Public Notices</a></li>
+        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -210,17 +325,13 @@
       <h5 class="font-weight-500 no-margin">Contact</h5>
       <ul>
         <li><a href="http://answers.douglascountylibraries.org/" target="_blank">Help</a></li>
-        <li><a href="https://epayments.douglascountylibraries.org/eCommerceWebModule/Home">Pay Fines</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Connect</h5>
       <ul>
-        <li>
-          <div class="social-links-wrapper"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
-        </li>
-        <li><a href="../newsletters/index.html">eNews Sign-Up</a></li>
-        <li><a href="/blog">DCL Blog</a></li>
+        <li><a href="../newsletters">eNews Sign-Up</a></li>
+        <li><a href="http://blogs.douglascountylibraries.org">DCL Blog</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
@@ -234,13 +345,21 @@
   </div>
 </footer>
 <div class="copyright bg-gray-90">
-  <div class="container padding-top-30 padding-bottom-30">
-    <div class="text-right eee">
-      <div> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></div>
-    </div>
+  <div class="container padding-top-15 padding-bottom-30">
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!--<div id="help"><a href="http://answers.douglascountylibraries.org/" target="_blank"><img src="../shared-assets/images/help.jpg" alt="Help and Contact Informaiton"></a></div>-->
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
+<!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81615628-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 <!-- InstanceEnd --></html>

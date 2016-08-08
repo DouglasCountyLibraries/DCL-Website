@@ -3,7 +3,7 @@
  * support your local library
  * comments/questions? djarrett at dclibraries dot org
 ====== */
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Ubuntu:300,400,500,300italic,400italic,500italic|Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Ubuntu:300,400,500,300italic,400italic,500italic|Nothing+You+Could+Do|Material+Icons);
 /*====== remove for now
 @font-face {
 	font-family: 'icomoon';
@@ -32,7 +32,15 @@ body {
 }
 .josefin {
 	font-family: "Josefin Slab", garmond, serif;
-	font-weight: 400;
+	font-weight: 600;
+	line-height: 1.2;
+	text-rendering: optimizeLegibility;
+}
+.nothing {
+	font-family: 'Nothing You Could Do', cursive;
+	font-size: 30px;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: "Ubuntu", arial, sans-serif;
@@ -48,6 +56,31 @@ h4, .h4 {
 h5, .h5 {
 	font-size: 18px;
 }
+ul, ol {
+	padding-left: 25px;
+}
+td, th {
+	padding: 10px;
+}
+.table > thead > tr > th {
+	border-top: 0px;
+}
+table a:not(.btn), .table a:not(.btn) {
+	text-decoration: initial;
+}
+table a:hover {
+	text-decoration: underline!important;
+}
+table.dataTable thead th, table.dataTable thead td {
+  background-color: #eee;
+  border-bottom: 3px solid #ccc;
+  padding: 0px 18px;
+}
+#book-clubs_length > label, #book-clubs_filter > label {
+  font-weight: normal;
+}
+
+
 /* ====== remove for now, look at some more
 a {
 background: linear-gradient(#fff, #fff) no-repeat scroll 0 95% / 0.05em 1px, linear-gradient(#fff, #fff) no-repeat scroll 100% 95% / 0.05em 1px, rgba(0, 0, 0, 0) linear-gradient(#00a7b5, #00a7b5) repeat-x scroll 0 95% / 1px 1px;
@@ -123,18 +156,22 @@ button.close {
 .text-danger, .text-danger:hover {
 	color: #ae2924;
 }
+/* remove for now
 .line-height-tall {
 	line-height: 1.4;
 }
+*/
 .font-weight-400 {
 	font-weight: 400;
 }
 .font-weight-500 {
 	font-weight: 500;
 }
+/* remove for now
 .font-weight-600 {
 	font-weight: 600;
 }
+*/
 .font-weight-700 {
 	font-weight: 700;
 }
@@ -188,6 +225,9 @@ blockquote footer, blockquote small, blockquote .small {
 	height: 3px;
 	width: 26px;
 }
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #fff;
+}
 .bottom-nav, .top-nav {
 	font-size: 16px;
 }
@@ -203,6 +243,10 @@ blockquote footer, blockquote small, blockquote .small {
 .login-wrapper {
 	background-color: #d9d7d4;
 }
+.form-control::-moz-placeholder {
+ color: #555;
+ opacity: 1;
+}
 .search-collapsed {
 	border: 0;
 	background-color: #fff;
@@ -213,18 +257,16 @@ blockquote footer, blockquote small, blockquote .small {
 #help {
 	position: fixed;
 	bottom: 40px;
-	right: -4px;
-	-webkit-box-shadow: 2px 5px 5px 2px #666;
-	-moz-box-shadow: 2px 5px 5px 2px #666;
-	box-shadow: 2px 5px 5px 2px #666;
+	right: -15px;
+	-webkit-box-shadow: -4px 5px 5px 1px #999;
+	-moz-box-shadow: -4px 5px 5px 1px #999;
+	box-shadow: -4px 5px 5px 1px #999;
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
-#help a:hover {
-	position: fixed;
-	bottom: 40px;
-	right: 0;
-	-webkit-box-shadow: 2px 5px 5px 2px #666;
-	-moz-box-shadow: 2px 5px 5px 2px #666;
-	box-shadow: 2px 5px 5px 2px #666;
+.fa-ul.board-list > li {
+	margin-bottom: 10px;
 }
 /* ====== bibliocommons nav bar styles - needs attention ====== */
 .dcl-search {
@@ -355,7 +397,7 @@ div.cp_header .cp_header_biblio_bar .my_account_toggle {
 	list-style: outside none none;
 	padding: 0;
 }
-.footer a, .footer a:active, .footer a:hover {
+.footer a, .footer a:active, .footer a:hover, .social-links-wrapper a {
 	color: #444;
 }
 .content-wrapper {
@@ -395,6 +437,20 @@ div.cp_header .cp_header_biblio_bar .my_account_toggle {
 	text-align: left;
 	width: 100%;
 	z-index: 1000;
+}
+/* ====== staff picks ====== */
+.cover-image {
+	box-shadow: 0 5px 15px -7px #000;
+	opacity: 1;
+	position: relative;
+	top: 20px;
+	transition: top 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s;
+}
+.cover-image:hover {
+	box-shadow: 0 5px 10px #838383;
+	opacity: 0.8;
+	top: 5px;
+	transition: top 0.5s ease-out 0s, opacity 0.5s ease-out 0s;
 }
 /* ====== buttons ====== */
 .btn-database {
@@ -1103,21 +1159,22 @@ a .icon-circle-white:hover {
 	min-height: 450px;
 }
 .panel {
+	border: 0;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
 .panel-group .panel-heading {
-	background: #74894e none repeat scroll 0 0;
+	background: #E6E4E2;
 	border-bottom: 0 none;
-	color: #fff;
 	-webkit-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
 	box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
 }
 .panel > .panel-heading:hover, .panel > .panel-heading:focus {
 	cursor: pointer;
-	background-color: #91ae65;
+	background-color: #4D4C4B;
+	color: #fff;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease-out;
 	-ms-transition: all .4s ease-out;
@@ -1126,6 +1183,7 @@ a .icon-circle-white:hover {
 }
 .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
 	border-top: none;
+	background-color: #fff;
 }
 /* ====== evanced feed ====== */
 #eventtitle {
@@ -1165,14 +1223,29 @@ a .icon-circle-white:hover {
 .bg-salmon {
 	background-color: #d36a50;
 }
+.bg-pink-salmon {
+	background-color: #ff9966;
+}
+.bg-dead-salmon {
+	background-color: #e29f81;
+}
 .bg-wheat {
 	background-color: #e2c23b;
+}
+.bg-light-wheat {
+	background-color: #f9d782;
 }
 .bg-moss {
 	background-color: #90ad63;
 }
+.bg-lichen {
+	background-color: #a7ba86;
+}
 .bg-loquacious {
 	background-color: #B0852E;
+}
+.bg-dead-loquacious {
+	background-color: #cca869;
 }
 .bg-moss-fade {
 	background-color: #e9efe0;
@@ -1180,23 +1253,23 @@ a .icon-circle-white:hover {
 .bg-teal {
 	background-color: #4f878c;
 }
-.bg-teal-fade {
-	background-color: #dce7e8;
+.bg-light-teal {
+	background-color: #669999;
+}
+.bg-spa {
+	background-color: #8cb5b4;
 }
 .bg-lavender {
 	background-color: #65587b;
 }
+.bg-gray-lavender {
+	background-color: #666072;
+}
+.bg-dead-lavender {
+	background-color: #7f788e;
+}
 .bg-black {
 	background-color: #000;
-}
-.de6a50, .cl-de6a50 {
-	background-color: #de6a50;
-}
-.cl-4f878c {
-	background-color: #4F878C;
-}
-.cl-f5c875 {
-	background-color: #90AD63;
 }
 .background-ddd {
 	background-color: #ddd;
@@ -1489,6 +1562,9 @@ a .icon-circle-white:hover {
 .margin-bottom-160 {
 	margin-bottom: 160px;
 }
+.margin-top-100-sm {
+	margin-top: 100px;
+}
 .no-padding {
 	padding: 0;
 }
@@ -1727,14 +1803,12 @@ a .icon-circle-white:hover {
 	text-transform: capitalize;
 	text-transform: uppercase;
 }
-.reset-box-sizing, .reset-box-sizing *, .reset-box-sizing *:before, .reset-box-sizing *:after {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-}
-input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
-	box-sizing: content-box;
-	line-height: normal;
+.cse input.gsc-input, input.gsc-input {
+	border: 1px solid #bbb;
+	font-family: inherit;
+	font-size: 30px;
+	padding: 3px 6px;
+	width: 99%;
 }
 /* ====== testimonial and pics carousels ====== */
 #carousel-pics .carousel-control {
@@ -1954,11 +2028,14 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
 .col-sm-bottom {
 	vertical-align: bottom;
 }
+.margin-top-100-sm {
+	margin-top: 0;
+}
 }
 
 @media (min-width: 992px) {
 .database-box {
-	min-height: 300px;
+	min-height: 270px;
 }
 .text-left-md {
 	text-align: left;
@@ -2044,3 +2121,4 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
 	vertical-align: bottom;
 }
 }
+

@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning."/>
+<link rel="canonical" href="http://dcl.org"/>
 <!-- InstanceBeginEditable name="title" -->
 <title>DCL | Art on Display</title>
 <!-- InstanceEndEditable -->
@@ -36,7 +38,6 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
-<script src="../shared-assets/js/jquery.sticky.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .locations-active {
@@ -61,23 +62,23 @@
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
-            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="/user/login"> Log In / Register </a> </li>
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="#"> Log In / Register </a> </li>
             <li data-js="divider_logged_out" class="divider" role="presentation"></li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Library Dashboard</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/checkedout">Checked Out</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/holds">On Hold</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/fines">Fees</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Fees</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/collection/show/my/library/completed">Shelves</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/lists/show/mine">Lists</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Lists</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/user_profile/me">My Profile</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/account/personal_information">My Settings</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
             <!-- Template: t_biblionav_admin_link -->
             <li data-js="biblionav_admin_link" role="presentation"></li>
             
@@ -88,7 +89,7 @@
             <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="http://help.bibliocommons.com"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
+        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -100,16 +101,16 @@
     <div class="row">
       <div class="col-sm-5">
         <div class="cp_header_client_area">
-          <div class="logo"> <a href="/"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
+          <div class="logo"> <a href="../home"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
         </div>
       </div>
       <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="#">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </div>
@@ -128,12 +129,12 @@
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
         <h2 class="margin-left-15">Search</h2>
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="#">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </ul>
@@ -142,17 +143,16 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="active-nav"><a href="/">Home</a> </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Recent Activity</a></li>
-            <li><a href="#">New Titles</a></li>
-            <li><a href="#">Awards</a></li>
-            <li><a href="#">Bestsellers</a></li>
-            <li><a href="#">^ Based on Catalog Settings</a></li>
+            <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
+            <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
           </ul>
         </li>
-        <li class="dropdown locations-active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations <span class="caret"></span></a>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="../locations">All Locations</a></li>
             <li><a href="../castle-pines">Castle Pines</a></li>
@@ -189,7 +189,7 @@
       </div>
       <div class="row">
         <div class="container text-center">
-          <h2 class="josefin line-height-tall font-weight-600">Douglas County Libraries supports the arts by donating display space at select branches. A different locally based artist is featured each month. </h2>
+          <h2 class="josefin ">Douglas County Libraries supports the arts by donating display space at select branches. A different locally based artist is featured each month. </h2>
           <button data-target="#myModal" data-toggle="modal" class="btn btn-primary text-uppercase margin-top-30" type="button">Exhibit Your Work</button>
           <!-- Modal -->
           <div aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
@@ -207,85 +207,67 @@
       </div>
     </div>
   </div>
-  <div id="castle-pines" class="row bg-gray-5 padding-top-80 padding-bottom-140">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="padding-bottom-40">Castle Pines</h1>
-      </div>
-      <div class="col-md-6"> <img class="img-responsive shadow-low" alt="Rogier van der Weyden" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Rogier_van_der_Weyden_-_Portrait_of_a_Woman_with_a_Winged_Bonnet_-_Google_Art_Project.jpg"> </div>
-      <div class="col-md-6">
-        <h1 class="josefin font-weight-600">Rogier van der Weyden</h1>
-        <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
-        <div class="padding-top-15">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
-      </div>
-    </div>
-  </div>
-  <div id="castle-rock" class="row padding-top-80 padding-bottom-140">
+  <div id="castle-rock" class="row bg-gray-5 padding-top-80 padding-bottom-140">
     <div class="container">
       <div class="text-center">
         <h1 class="padding-bottom-40">Castle Rock</h1>
       </div>
-      <div class="col-md-6 col-md-push-6"> <img class="img-responsive shadow-low" alt="Kerry James Marshall" src="http://www.art21.org/files/images/marshall-paint-004.jpg"> </div>
+      <div class="col-md-6 col-md-push-6"> <img class="img-responsive shadow-low" alt="Capturing the Beauty of Open Land" src="dlc.jpg"> </div>
       <div class="col-md-6 col-md-pull-6">
-        <h1 class="josefin font-weight-600">Kerry James Marshall</h1>
-        <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
-        <div class="padding-top-15">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
+        <h4>The Douglas Land Conservancy Presents:</h4><h1 class="josefin no-margin-top">Capturing the Beauty of Open Land</h1>
+        <div>Douglas Land Conservancy, a non-profit land trust dedicated to preserving open space in and around Douglas County since 1987, presents “Capturing the Beauty of Open Land."
+Through oils, watercolors and photographs, Douglas Land Conservancy will transport you to places right outside your door! Come experience this breathtaking exhibit and immerse yourself in the beauty that is Douglas County.</div>
       </div>
     </div>
   </div>
-  <div id="highlands-ranch" class="row bg-gray-5 padding-top-80 padding-bottom-140">
+ <!-- no display this month <div id="highlands-ranch" class="row bg-gray-5 padding-top-80 padding-bottom-140">
     <div class="container">
       <div class="text-center">
         <h1 class="padding-bottom-40">Highlands Ranch</h1>
       </div>
       <div class="col-md-6"> <img class="img-responsive shadow-low" alt="Pablo Picasso" src="https://s-media-cache-ak0.pinimg.com/736x/d6/e0/35/d6e0352e93014810d04dbdb28b3d8eb1.jpg"> </div>
       <div class="col-md-6">
-        <h1 class="josefin font-weight-600">Pablo Picasso</h1>
+        <h1 class="josefin">Pablo Picasso</h1>
         <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
         <div class="padding-top-15">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
       </div>
     </div>
-  </div>
+  </div>-->
   <div id="lone-tree" class="row padding-top-80 padding-bottom-140">
     <div class="container">
       <div class="text-center">
         <h1 class="padding-bottom-40">Lone Tree</h1>
       </div>
-      <div class="col-md-6 col-md-push-6"> <img class="img-responsive shadow-low" alt="Camille Claudel" src="http://www.loeildolivier.fr/wp-content/uploads/2015/01/Danseuse_Camille_Claudel_@loeildoliv.jpg"> </div>
-      <div class="col-md-6 col-md-pull-6">
-        <h1 class="josefin font-weight-600">Camille Claudel</h1>
-        <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
-        <div class="padding-top-15">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
-      </div>
-    </div>
-  </div>
-  <div id="louviers" class="row bg-gray-5 padding-top-80 padding-bottom-140">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="padding-bottom-40">Louviers</h1>
-      </div>
-      <div class="col-md-6"> <img class="img-responsive shadow-low" alt="John Baldessari" src="http://178.62.9.54/wp-content/uploads/2012/10/img_8047rid.jpg?w=1024"> </div>
+      <div class="col-md-6"> <img class="img-responsive shadow-low" alt="Allen Thornton, Photographer" src="thornton.jpg"> </div>
       <div class="col-md-6">
-        <h1 class="josefin font-weight-600">John Baldessari</h1>
-        <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
-        <div class="padding-top-15">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
+        <h1 class="josefin">Allen Thornton, Photographer</h1>
+        <div>Among artists, collectors and critics, the debate continues about whether photography is indeed fine art. Photography becomes fine art when the photographer stops simply capturing images and starts creating them.
+
+Almost anyone can capture, refine and print a technically high quality image, but that alone is rarely fine art. The artful image contains imagination, foresight, forceful composition and originality.</div>
       </div>
     </div>
   </div>
-  <div id="roxborough" class="row padding-top-80 padding-bottom-140">
+  <div id="roxborough" class="row bg-gray-5 padding-top-80 padding-bottom-140">
     <div class="container">
       <div class="text-center">
         <h1 class="padding-bottom-40">Roxborough</h1>
       </div>
-      <div class="col-md-6">
-        <h1 class="josefin font-weight-600">Titian</h1>
-        <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
-        <div class="padding-top-15">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
+            <div class="col-md-6 col-md-push-6"> <img class="img-responsive shadow-low" alt="Phyllis Vandehaar" src="vandehaar.jpg"> </div>
+      <div class="col-md-6 col-md-pull-6">
+        <h1 class="josefin">Phyllis Vandehaar</h1>
+        <div>Phyllis was a high school art teacher for 30 years, the bulk of which she spent at Arapahoe High School in Littleton, Colorado. Her mantra is, "If art isn't challenging, enlightening and enjoyable, there is something wrong." Her goal in teaching, as well as in her own art, is problem-solving—to arrive at visual solutions through thinking.</div>
+        <div class="padding-top-15">Phyllis is a working artist in watercolor, mixed media, collage and pastels. While capable of realistic imagery, she prefers to abstract her subject matter, sometimes going beyond to the whimsical and even tongue-in-cheek humor. Her subjects include buildings, animals, birds, flowers and landscapes, which are often rendered in vibrant colors. In producing her work, Phyllis allows the painting to direct where she goes, allowing the art to simply evolve. To her, that process is the road to success in creating visual statements.</div>
       </div>
-      <div class="col-md-6"> <img class="img-responsive shadow-low" alt="Titian" src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Titian_-_The_Flaying_of_Marsyas.jpg"> </div>
+
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
+<div class="social-footer bg-gray-10 padding-top-15 padding-bottom-40">
+  <div class="text-center">
+    <h3>Share your experience<span class="nothing margin-left-15">#DCL</span></h3>
+  </div>
+  <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
+</div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
     <div class="col-sm-3">
@@ -293,7 +275,7 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="#">Public Notices</a></li>
+        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -301,17 +283,13 @@
       <h5 class="font-weight-500 no-margin">Contact</h5>
       <ul>
         <li><a href="http://answers.douglascountylibraries.org/" target="_blank">Help</a></li>
-        <li><a href="https://epayments.douglascountylibraries.org/eCommerceWebModule/Home">Pay Fines</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Connect</h5>
       <ul>
-        <li>
-          <div class="social-links-wrapper"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
-        </li>
-        <li><a href="../newsletters/index.html">eNews Sign-Up</a></li>
-        <li><a href="/blog">DCL Blog</a></li>
+        <li><a href="../newsletters">eNews Sign-Up</a></li>
+        <li><a href="http://blogs.douglascountylibraries.org">DCL Blog</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
@@ -325,13 +303,21 @@
   </div>
 </footer>
 <div class="copyright bg-gray-90">
-  <div class="container padding-top-30 padding-bottom-30">
-    <div class="text-right eee">
-      <div> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></div>
-    </div>
+  <div class="container padding-top-15 padding-bottom-30">
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!--<div id="help"><a href="http://answers.douglascountylibraries.org/" target="_blank"><img src="../shared-assets/images/help.jpg" alt="Help and Contact Informaiton"></a></div>-->
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
+<!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81615628-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 <!-- InstanceEnd --></html>

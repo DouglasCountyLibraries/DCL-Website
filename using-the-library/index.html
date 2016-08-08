@@ -1,9 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning."/>
+<link rel="canonical" href="http://dcl.org"/>
 <!-- InstanceBeginEditable name="title" -->
 <title>DCL | Using the Library</title>
 <!-- InstanceEndEditable -->
@@ -36,7 +39,6 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
-<script src="../shared-assets/js/jquery.sticky.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .using-the-library-active {
@@ -61,23 +63,23 @@
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
-            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="/user/login"> Log In / Register </a> </li>
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="#"> Log In / Register </a> </li>
             <li data-js="divider_logged_out" class="divider" role="presentation"></li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Library Dashboard</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/checkedout">Checked Out</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/holds">On Hold</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/fines">Fees</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Fees</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/collection/show/my/library/completed">Shelves</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="/lists/show/mine">Lists</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Lists</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/user_profile/me">My Profile</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="/account/personal_information">My Settings</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
             <!-- Template: t_biblionav_admin_link -->
             <li data-js="biblionav_admin_link" role="presentation"></li>
             
@@ -88,7 +90,7 @@
             <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="http://help.bibliocommons.com"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
+        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -100,16 +102,16 @@
     <div class="row">
       <div class="col-sm-5">
         <div class="cp_header_client_area">
-          <div class="logo"> <a href="/"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
+          <div class="logo"> <a href="../home"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
         </div>
       </div>
       <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="#">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </div>
@@ -128,12 +130,12 @@
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
         <h2 class="margin-left-15">Search</h2>
-        <form onsubmit="startSearch();" method="get" id="searchForm" class="search dcl-search" action="http://catalog.douglascountylibraries.org/Union/Search">
+        <form id="searchForm" class="search dcl-search" action="#">
           <div class="input-group">
-            <input type="hidden" value="all" name="search_param" id="search_param">
-            <input type="text" placeholder="" name="lookfor" class="form-control">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
             <span class="input-group-btn">
-            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
         </form>
       </ul>
@@ -142,17 +144,16 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="active-nav"><a href="/">Home</a> </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Explore <span class="caret"></span></a>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Recent Activity</a></li>
-            <li><a href="#">New Titles</a></li>
-            <li><a href="#">Awards</a></li>
-            <li><a href="#">Bestsellers</a></li>
-            <li><a href="#">^ Based on Catalog Settings</a></li>
+            <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
+            <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
           </ul>
         </li>
-        <li class="dropdown locations-active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations <span class="caret"></span></a>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="../locations">All Locations</a></li>
             <li><a href="../castle-pines">Castle Pines</a></li>
@@ -186,27 +187,127 @@
         <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-search-plus"></i></div>
         </div>
+        <div class="text-center margin-top-30 margin-bottom-60"> <a class="text-uppercase btn btn-primary btn-lg margin-right-10" href="http://getacard.org/">Get a Library Card</a> <a target="_blank" href="#fines-fees-borrowing" class="margin-left-10 text-uppercase">Fines, Fees & Borrowing &raquo;</a></div>
       </div>
       <div class="row">
         <div class="col-sm-3 text-center">
-          <h2 class="josefin font-weight-600"><i class="fa fa-cog" style="margin-right:10px"></i> <a href="#library-basics">Library Basics</a></h2>
+          <h2 class="josefin"><i class="fa fa-cog" style="margin-right:10px"></i> <a href="#library-basics">Print, Copy, Fax</a></h2>
         </div>
         <div class="col-sm-4 text-center">
-          <h2 class="josefin font-weight-600"><em class="fa fa-check" style="margin-right:10px"></em> <a href="#enjoy-our-collection">Enjoy Our Collection</a></h2>
+          <h2 class="josefin"><em class="fa fa-check" style="margin-right:10px"></em> <a href="#enjoy-our-collection">Enjoy Our Collection</a></h2>
         </div>
         <div class="col-sm-5 text-center">
-          <h2 class="josefin font-weight-600"><i class="fa fa-umbrella" style="margin-right:10px"></i> <a href="../our-expertise">Benefit From Our Expertise</a></h2>
+          <h2 class="josefin"><i class="fa fa-umbrella" style="margin-right:10px"></i> <a href="../our-expertise">Benefit From Our Expertise</a></h2>
         </div>
       </div>
     </div>
   </div>
+  <div class="row bg-dead-loquacious padding-top-40 padding-bottom-100">
+    <div id="enjoy-our-collection" class="container">
+      <h1 class="fff text-center">Enjoy Our Collection</h1>
+      <div class="col-sm-6 col-sm-push-3">
+        <form id="searchForm" class="search dcl-search" action="#">
+          <div class="input-group">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
+            <span class="input-group-btn">
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </span> </div>
+        </form>
+      </div>
+    </div>
+    <div class="text-center margin-top-15"><a class="text-uppercase btn btn-primary" href="http://dcl.org/materials-request">Looking for something we don't have?</a> </div>
+  </div>
+  <div class="row padding-top-80 padding-bottom-100">
+    <div class="text-center"> 
+      
+      <!--<h2 class="text-center padding-bottom-30">Digital Collections</h2>-->
+      <div class="col-md-3 padding-bottom-30"><img class="img-circle" src="http://placehold.it/200">
+        <h2 class="josefin"><a href="https://www.hoopladigital.com/home" target="_blank">Streaming</a></h2>
+        <div>Instantly stream digital movies, TV, music, e&#8209;books and audiobooks from Hoopla (Douglas County residents only). There’s no waiting, and items are returned automatically &mdash; so no late fees either!</div>
+      </div>
+      <div class="col-md-3 padding-bottom-30"><img src="magazines.gif">
+        <h2 class="josefin"><a href="http://www.rbdigital.com/douglascountylibraries/zinio" target="_blank">Magazines</a></h2>
+        <div>Download digital magazines from Zinio to read on your computer, tablet or mobile device.</div>
+      </div>
+      <div class="col-md-3 padding-bottom-30"><img class="img-circle" src="http://placehold.it/200">
+        <h2 class="josefin"><a href="http://douglascountylibraries.freegalmusic.com/homes/index" target="_blank">Music on Demand</a></h2>
+        <div>Download up to five songs a week for free using your library card number and PIN. This Freegal service offers access to the Sony Music Entertainment catalog &mdash; no special software needed.</div>
+      </div>
+      <div class="col-md-3 padding-bottom-30"><img class="img-circle" src="http://placehold.it/200">
+        <h2 class="josefin"><a href="http://www.emedia2go.org/" target="_blank">E-Books & Audiobooks</a></h2>
+        <div>Access a collection of OverDrive e&#8209;books and audiobooks to enjoy on your PC, smartphone or e&#8209;book reader.</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- remove for now<h2 class="text-center padding-bottom-30">Reading Suggestions</h2>-->
+  <div class="row bg-gray-5 padding-bottom-100">
+    <div class="container">
+      <div class="col-md-5">
+        <div class="bg-white margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
+          <h2 class="josefin"><a href="../staff-picks">Featured Staff Picks</a></h2>
+          <div>Create your reading list using DCL’s book list. These are the select books our librarians are excited about.</div>
+          <div class="margin-top-15"> <a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks" class="text-uppercase button btn btn-primary btn-large">View All Staff Picks</a></div>
+        </div>
+        <div class="bg-white margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
+          <h2 class="josefin">Just for You</h2>
+          <div>Looking for a good read, but fresh out of ideas? We can help! Tell us what you’re interested in — even what you’re not interested in — and our Reader’s Advisory staff will provide personalized reading suggestions just for you.</div>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-large text-uppercase margin-top-15" data-toggle="modal" data-target="#myModal">Get Started</button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="text-center modal-title">Reading Suggestions Just For You</h3>
+                </div>
+                <div class="modal-body padding-30"> 
+                  <script type="text/javascript" src="https://form.jotform.com/jsform/52116765656966"></script> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="bg-white margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
+          <h2 class="josefin"><a href="http://blogs.douglascountylibraries.org/dclreading/">Book Chat Blog</a></h2>
+          <div>Ever wonder what the staffers at Douglas County Libraries are reading? Find out here, as we talk about our favorite books and genres.</div>
+        </div>
+        <div class="bg-white clearfix margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
+          <h2 class="josefin"><a href="../book-clubs">Book Clubs</a></h2>
+          <div>Find a book club to match your reading preferences, and join the conversation.</div>
+          <h2 class="josefin"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h2>
+          <div>Reserve materials for your next book club here! Multiple copies of the book, author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-moss padding-top-60 padding-bottom-60">
+    <div id="homebound-delivery" class="col-md-4 padding-top-30 padding-bottom-40">
+      <div class="icon-circle-moss padding-bottom-15"><i class="fa fa-home"></i> </div>
+      <h2 class="josefin text-center"><a class="fff text-underline" href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="To find out if you qualify, or to volunteer as a Homebound Delivery driver, call us at 303-791-7323 and ask for the Branch Volunteer Coordinator at your home library.">Homebound Delivery</a></h2>
+      <div class="fff text-center margin-lg-100">Qualified card holders can have library materials delivered right to their doors if they are unable to come to the library due to illness or disability.</div>
+    </div>
+    <div id="check-out-colorado" class="col-md-4 padding-top-30 padding-bottom-40">
+      <div style="padding-top:4px" class="icon-circle-moss padding-bottom-15"><i class="fa fa-map"></i> </div>
+      <h2 class="josefin text-center"><a class="fff text-underline" href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Backpacks and passes are part of our Your Lucky Day program for new and popular materials; check out is first come, first served, and packs may not be put on hold. Each pack may be kept out for up to seven days. Stop in today and see if it’s Your Lucky Day!">Check Out Colorado</a></h2>
+      <div class="fff text-center margin-lg-100">A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our Welcome desks.</div>
+    </div>
+    <div id="adventure-pass" class="col-md-4 padding-top-30 padding-bottom-40">
+      <div style="padding-top:4px;" class="icon-circle-moss padding-bottom-15"><i class="fa fa-compass"></i> </div>
+      <h2 class="josefin text-center"><a class="fff text-underline" href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&amp;curapp=passes" target="_blank" >Adventure Pass</a></h2>
+      <div class="fff text-center margin-lg-100">Our partnerships with area cultural institutions let you reserve free passes up to 30 days in advance.</div>
+    </div>
+  </div>
   <div class="row bg-gray-5 padding-top-80 padding-bottom-100">
     <div class="container" id="library-basics">
-      <h1 class="text-center padding-bottom-30">Library Basics</h1>
-      <div class="text-center margin-top-30 margin-bottom-80"> <a class="text-uppercase button btn btn-primary btn-lg margin-right-10" href="http://getacard.org/">Get a Library Card</a> <a target="_blank" href="#fines-fees-borrowing" class="margin-left-10 text-uppercase">Fines, Fees & Borrowing Policies &raquo;</a></div>
+      <h1 class="text-center padding-bottom-30">Print, Copy, Fax</h1>
       <div class="col-md-4">
         <div class="bg-white margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600">Wireless Printing</h2>
+          <h2 class="josefin">Wireless Printing</h2>
           <div>Print on the library's public printers during library hours regardless of device, network or location. Please note, large documents and PDFs may take a few minutes to print.</div>
           <div class="dropdown"> <a data-toggle="dropdown" class="btn btn-large btn-primary text-uppercase margin-top-15 dropdown-toggle">Get Started <span class="caret"></span></a>
             <div class="dropdown-menu">
@@ -228,109 +329,44 @@
       </div>
       <div class="col-md-4">
         <div class="bg-white margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600">Printing &amp; Copying</h2>
-          <div>Letter and legal size black and white copies are $.10 per page, or $.20 double-sided. Letter and legal size color copies are $.25 per page, or $.50 double-sided. 11” X 17” black and white copies are $.20 per page, or $.40 double-sided. 11” X 17” color copies are $.50 per page, or $1 double-sided. Mastercard and Visa accepted with a $1 minimum charge per transaction.</div>
+          <h2 class="josefin">Printing &amp; Copying</h2>
+          <div>Letter and legal-size copies
+            <ul>
+              <li>Black and white: 10 cents per page; 20 cents per double-sided page</li>
+              <li>Color: 25 cents per page; 50 cents per double-sided page</li>
+            </ul>
+          </div>
+          <div>11-inch by 17-inch copies
+            <ul>
+              <li>Black and white: 20 cents per page; 40 cents per double-sided page</li>
+              <li>Color: 50 cents per page; $1 per double-sided page</li>
+            </ul>
+            <div class="small">MasterCard and Visa are accepted, with a $1 minimum charge per transaction.</div>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="bg-white margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600">Faxing</h2>
+          <h2 class="josefin">Faxing</h2>
           <div>The library sends faxes from the <a href="../highlands-ranch">Highlands Ranch</a>, <a href="../lone-tree">Lone Tree</a>, <a href="../parker">Parker</a>, <a href="../castle-rock">Castle Rock</a> and <a href="../roxborough">Roxborough</a> locations. The fee is $1.75 for the first page and $1 for each additional page. The library cannot accept incoming faxes and cannot send international faxes.</div>
         </div>
       </div>
     </div>
   </div>
   <div class="row padding-top-80 padding-bottom-100">
-    <div id="enjoy-our-collection" class="container">
-      <h1 class="text-center">Enjoy Our Collection</h1>
-      <div class="text-center margin-bottom-60">Looking for something we don’t have? <a href="http://catalog.douglascountylibraries.org/MaterialsRequest/NewRequest">Request an item &raquo;</a></div>
-      <div class="col-md-7">
-        <h2 class="text-center padding-bottom-30">Reading Suggestions</h2>
-        <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600">Just for You</h2>
-          <div>Looking for a good read, but fresh out of ideas? We can help! Tell us what you’re interested in — even what you’re not interested in — and our Reader’s Advisory staff will provide personalized reading suggestions just for you.</div>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary btn-large text-uppercase margin-top-15" data-toggle="modal" data-target="#myModal">Get Started</button>
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="text-center modal-title">Reading Suggestions Just For You</h3>
-                </div>
-                <div class="modal-body padding-30"> 
-                  <script type="text/javascript" src="https://form.jotform.com/jsform/52116765656966"></script> 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600"><a href="#">Staff Picks</a></h2>
-          <div>Create your reading list using DCL’s book list. These are the select books our librarians are excited about.</div>
-        </div>
-        <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600"><a href="http://blogs.douglascountylibraries.org/dclreading/">Book Chat Blog</a></h2>
-          <div>Ever wonder what the staffers at Douglas County Libraries are reading? Find out here, as we talk about our favorite books and genres.</div>
-        </div>
-        <div class="bg-gray-5 clearfix margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <div class="col-md-6">
-            <h2 class="josefin font-weight-600"><a href="http://dcl.bibliocommons.com">Book Clubs</a></h2>
-            <div>Find a book club to match your reading preferences, and join the conversation.</div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="josefin font-weight-600"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h2>
-            <div>Reserve materials for your next book club here! Multiple copies of the book, author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <h2 class="text-center padding-bottom-30">Digital Collections</h2>
-        <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600"><a href="https://www.hoopladigital.com/home" target="_blank">Hoopla</a></h2>
-          <div>Instantly stream digital movies, TV, music, e-books and audiobooks. There’s no waiting, and items are returned automatically (so no late fees either)!</div>
-        </div>
-        <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600"><a href="http://www.rbdigital.com/douglascountylibraries/zinio" target="_blank">Zinio Magazines</a></h2>
-          <div>Download digital magazines to read on your computer, tablet or mobile device. </div>
-        </div>
-        <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600"><a href="http://douglascountylibraries.freegalmusic.com/homes/index" target="_blank">Freegal Music</a></h2>
-          <div>Download up to five songs a week for free using your library card number and PIN. This service offers access to the Sony Music Entertainment catalog &mdash; no special software needed.</div>
-        </div>
-        <div class="bg-gray-5 margin-bottom-30 padding-top-15 padding-right-15 padding-bottom-60 padding-left-15 shadow-low radius-block">
-          <h2 class="josefin font-weight-600"><a href="http://www.emedia2go.org/" target="_blank">OverDrive</a></h2>
-          <div>Access a collection of e-books and audiobooks to enjoy on your PC, smartphone or e-book reader.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row fff bg-moss padding-top-60 padding-bottom-60">
-      <div class="col-md-4 padding-top-30 padding-bottom-40">
-        <div class="icon-circle-moss padding-bottom-15"><i class="fa fa-home"></i> </div>
-        <h2 class="josefin font-weight-600 text-center"><a class="fff text-underline" href="#">Homebound Delivery</a></h2>
-        <div class="text-center margin-lg-100">Qualified card holders can have library materials delivered right to their doors if they are unable to come to the library due to illness or disability.</div>
-      </div>
-      <div class="col-md-4 padding-top-30 padding-bottom-40">
-        <div style="padding-top:4px" class="icon-circle-moss padding-bottom-15"><i class="fa fa-map"></i> </div>
-        <h2 class="josefin font-weight-600 text-center"><a class="fff text-underline" href="#">Check Out Colorado</a></h2>
-        <div class="text-center margin-lg-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra.</div>
-      </div>
-      <div class="col-md-4 padding-top-30 padding-bottom-40">
-        <div style="padding-top:4px;" class="icon-circle-moss padding-bottom-15"><i class="fa fa-compass"></i> </div>
-        <h2 class="josefin font-weight-600 text-center"><a class="fff text-underline" href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&amp;curapp=passes" target="_blank" >Adventure Pass</a></h2>
-        <div class="text-center margin-lg-100">Our partnerships with area cultural institutions let you reserve free passes up to 30 days in advance.</div>
-      </div>
-  </div>
-  <div class="row padding-top-80 padding-bottom-100">
     <div id="fines-fees-borrowing" class="container">
-      <h1 class="josefin font-weight-600 text-center padding-bottom-30">Fines, Fees & Borrowing</h1>
-      <div class="text-center margin-lg-100">Most materials must be returned or renewed with three weeks. Magazines and DVDs under 200 minutes can be checked out for one week. Each patron may have up to 99 physical items checked out at any one time.</div>
-      <div class="text-center margin-top-30"> <a href="http://answers.douglascountylibraries.org/browse.php?tid=5920" target="_blank" class="text-uppercase button btn btn-primary btn-large">Learn More</a> <a target="_blank" href="https://epayments.douglascountylibraries.org/eCommerceWebModule/Home" class="margin-left-10 text-uppercase">Pay Your Fines &raquo;</a></div>
+      <h1 class="josefin text-center padding-bottom-30">Fines, Fees & Borrowing</h1>
+      <div class="text-center margin-lg-200">Most materials check out for three weeks. Magazines and DVDs under 200 minutes check out for one week, and each patron may have up to 99 physical items checked out at any one time. The late fee for most materials is 10 cents per day, with a three&#8209;day grace period.</div>
+      <div class="text-center margin-top-30"> <a href="../fines-fees-borrowing" class="text-uppercase button btn btn-primary btn-large">Learn More</a> <a target="_blank" href="https://epayments.douglascountylibraries.org/eCommerceWebModule/Home" class="margin-left-10 text-uppercase">Pay Your Fines &raquo;</a></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
+<div class="social-footer bg-gray-10 padding-top-15 padding-bottom-40">
+  <div class="text-center">
+    <h3>Share your experience<span class="nothing margin-left-15">#DCL</span></h3>
+  </div>
+  <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
+</div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
     <div class="col-sm-3">
@@ -338,7 +374,7 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="#">Public Notices</a></li>
+        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -346,17 +382,13 @@
       <h5 class="font-weight-500 no-margin">Contact</h5>
       <ul>
         <li><a href="http://answers.douglascountylibraries.org/" target="_blank">Help</a></li>
-        <li><a href="https://epayments.douglascountylibraries.org/eCommerceWebModule/Home">Pay Fines</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Connect</h5>
       <ul>
-        <li>
-          <div class="social-links-wrapper"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
-        </li>
-        <li><a href="../newsletters/index.html">eNews Sign-Up</a></li>
-        <li><a href="/blog">DCL Blog</a></li>
+        <li><a href="../newsletters">eNews Sign-Up</a></li>
+        <li><a href="http://blogs.douglascountylibraries.org">DCL Blog</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
@@ -370,14 +402,12 @@
   </div>
 </footer>
 <div class="copyright bg-gray-90">
-  <div class="container padding-top-30 padding-bottom-30">
-    <div class="text-right eee">
-      <div> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></div>
-    </div>
+  <div class="container padding-top-15 padding-bottom-30">
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!--<div id="help"><a href="http://answers.douglascountylibraries.org/" target="_blank"><img src="../shared-assets/images/help.jpg" alt="Help and Contact Informaiton"></a></div>-->
-<!-- InstanceBeginEditable name="scripts" -->
+<!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
+<!-- InstanceBeginEditable name="scripts" --> 
 <script>
 $("a[rel=popover]")
     .popover()
@@ -385,6 +415,17 @@ $("a[rel=popover]")
         e.preventDefault();
      });
  </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81615628-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
