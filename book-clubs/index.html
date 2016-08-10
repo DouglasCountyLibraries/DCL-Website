@@ -51,6 +51,26 @@ $(document).ready(function() {
     } );
 } );
 	</script>
+    <style>
+    table.dataTable thead .sorting_asc {
+    background-image: url("sort_asc.png");
+}
+table.dataTable thead .sorting {
+    background-image: url("sort_both.png");
+}
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 5px solid #eee;
+    padding: 5px 18px 0 10px;
+}
+.table-heading {
+			-webkit-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #ddd;
+}
+    </style>
     <!-- InstanceEndEditable -->
 	</head>
 	<body>
@@ -186,7 +206,7 @@ $(document).ready(function() {
 <div class="container-fluid">
       <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
       <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-top-60 padding-bottom-60 border-top">
+  <div class="row padding-top-60 padding-bottom-15 border-top">
         <div class="container">
       <div class="text-center">
             <h1 class="jumbo-text text-uppercase font-weight-400">Book Clubs</h1>
@@ -201,7 +221,7 @@ $(document).ready(function() {
         <div class="container">
       <table id="book-clubs" class="table table-responsive table-striped margin-bottom-30">
             <thead>
-          <tr>
+          <tr class="table-heading">
                 <th><h5>Book Club</h5></th>
                 <th><h5>Location</h5></th>
                 <th><h5>Audience</h5></th>
@@ -213,7 +233,7 @@ $(document).ready(function() {
         </thead>
             <tbody>
           <tr>
-                <td><a class="text-uppercase" href="#">Book Banter</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=book+banter&df=list&cn=0&lib=ALL&nd=365">Book Banter</a></td>
                 <td>Lone Tree</td>
                 <td>Adult</td>
                 <td>First Wednesday, 7pm</td>
@@ -222,7 +242,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Christian Literature Book Club</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=christian+literature&df=list&cn=0&lib=ALL&nd=365">Christian Literature Book Club</a></td>
                 <td>Castle Rock</td>
                 <td>Adults</td>
                 <td>Fourth Tuesday, 7pm</td>
@@ -231,7 +251,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Crime and Beyond</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=crime+and+beyond&df=list&cn=0&lib=ALL&nd=365">Crime and Beyond</a></td>
                 <td>Lone Tree</td>
                 <td>Adult</td>
                 <td>Fourth Monday, 6:30pm</td>
@@ -240,7 +260,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Daytime Book Group</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=daytime+book+group&df=list&cn=0&lib=ALL&nd=365">Daytime Book Group</a></td>
                 <td>Highlands Ranch</td>
                 <td>Adult</td>
                 <td>First Tuesday, 10am</td>
@@ -248,7 +268,7 @@ $(document).ready(function() {
                 <td>Meet monthly to discuss fiction and nonfiction titles.</td>
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
-          <tr>
+          <!-- removed unil added to evanced<tr>
                 <td><a class="text-uppercase" href="#">Fika Bookshare</a></td>
                 <td>Parker</td>
                 <td>Adult</td>
@@ -256,9 +276,9 @@ $(document).ready(function() {
                 <td>General Adult</td>
                 <td>Learn about new and interesting titles.</td>
                 <td><a class="text-uppercase" href="#">View List</a></td>
-              </tr>
+              </tr>-->
           <tr>
-                <td><a class="text-uppercase" href="#">Great Books</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=great+books+-+evening&df=list&cn=0&lib=0&nd=365">Great Books</a></td>
                 <td>Highlands Ranch</td>
                 <td>Adult</td>
                 <td>First &amp; Third Thursday, 7pm</td>
@@ -268,7 +288,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Great Books</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=great+books&df=list&cn=0&lib=4&nd=365">Great Books</a></td>
                 <td>Castle Rock</td>
                 <td>Adult</td>
                 <td>First Monday, 7pm</td>
@@ -278,7 +298,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Great Books</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=great+books+-+afternoon&df=list&cn=0&lib=0&nd=365">Great Books</a></td>
                 <td>Highlands Ranch</td>
                 <td>Adult</td>
                 <td>Second &amp; Fourth Thursday, 2pm</td>
@@ -288,7 +308,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Great Books</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=great+books&df=list&cn=0&lib=1&nd=365">Great Books</a></td>
                 <td>Lone Tree</td>
                 <td>Adult</td>
                 <td>First Thursday, 7pm</td>
@@ -298,7 +318,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Highlands Ranch Book Group</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=highlands+ranch+book+group&df=list&cn=0&lib=ALL&nd=365">Highlands Ranch Book Group</a></td>
                 <td>Highlands Ranch</td>
                 <td>Adult</td>
                 <td>Second Monday, 7pm</td>
@@ -307,7 +327,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Junior PageTurners Group 1</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=junior+page+turners+1&df=list&cn=0&lib=ALL&nd=365">Junior PageTurners Group 1</a></td>
                 <td>Castle Rock</td>
                 <td>Children</td>
                 <td>Second Wednesday, 4:30pm</td>
@@ -317,7 +337,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Junior PageTurners Group 2</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=junior+page+turners+2&df=list&cn=0&lib=ALL&nd=365">Junior PageTurners Group 2</a></td>
                 <td>Castle Rock</td>
                 <td>Children</td>
                 <td>Fourth Thursday, 4:30pm</td>
@@ -327,7 +347,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Mother-Daughter Book Club</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=mother-daughter+book+club&df=list&cn=0&lib=ALL&nd=365">Mother-Daughter Book Club</a></td>
                 <td>Highlands Ranch</td>
                 <td>Children</td>
                 <td>Fourth Monday (Even Months), 6:30pm</td>
@@ -336,7 +356,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Mystery Loves Company</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=mystery+loves+company&df=list&cn=0&lib=ALL&nd=365">Mystery Loves Company</a></td>
                 <td>Highlands Ranch</td>
                 <td>Adult</td>
                 <td>First Thursday, 7pm</td>
@@ -345,7 +365,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Night Readers</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=night+readers&df=list&cn=0&lib=ALL&nd=365">Night Readers</a></td>
                 <td>Castle Rock</td>
                 <td>Adults</td>
                 <td>Second Tuesday, 7pm</td>
@@ -354,7 +374,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Page Twisters</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=page+twisters&df=list&cn=0&lib=ALL&nd=365">Page Twisters</a></td>
                 <td>Castle Rock</td>
                 <td>Children</td>
                 <td>Second Tuesday, 4:30pm</td>
@@ -363,7 +383,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Reader's Roost</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=reader's+roost&df=list&cn=0&lib=ALL&nd=365">Reader's Roost</a></td>
                 <td>Lone Tree</td>
                 <td>Adult</td>
                 <td>First Thursday, Noon</td>
@@ -372,7 +392,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Teen Book Club</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=teen+book+club&df=list&cn=0&lib=ALL&nd=365">Teen Book Club</a></td>
                 <td>Castle Rock</td>
                 <td>Teens</td>
                 <td>Second Thursday, 5pm</td>
@@ -380,7 +400,7 @@ $(document).ready(function() {
                 <td>Meet monthly for games, snacks and talk about books.</td>
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
-          <tr>
+          <!-- removed unil added to evanced<tr><tr>
                 <td><a class="text-uppercase" href="#">Teen Reads for Adults</a></td>
                 <td>Parker</td>
                 <td>Adult</td>
@@ -388,9 +408,9 @@ $(document).ready(function() {
                 <td>Young Adult</td>
                 <td>Meet monthly to discuss Young Adult titles.</td>
                 <td><a class="text-uppercase" href="#">View List</a></td>
-              </tr>
+              </tr>-->
           <tr>
-                <td><a class="text-uppercase" href="#">Teen Reads for Grown-Ups</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=teen+reads+for+grown+ups&df=list&cn=0&lib=ALL&nd=365">Teen Reads for Grown-Ups</a></td>
                 <td>Castle Rock</td>
                 <td>Adults</td>
                 <td>Second Wednesday, 6:30pm</td>
@@ -400,7 +420,7 @@ $(document).ready(function() {
                 <td><a class="text-uppercase" href="#">View List</a></td>
               </tr>
           <tr>
-                <td><a class="text-uppercase" href="#">Thursday Evening Book Club</a></td>
+                <td><a class="text-uppercase" href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=&kw=thursday+evening+book+club&df=list&cn=0&lib=ALL&nd=365">Thursday Evening Book Club</a></td>
                 <td>Castle Rock</td>
                 <td>Adults</td>
                 <td>Third Thursday, 7pm</td>
