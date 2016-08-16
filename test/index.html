@@ -39,6 +39,159 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+<script>
+var Booklist = function (count, div) {
+ 
+    // Add default values for count and div. Keeps consistent with previous iterations
+    var count = typeof (count) != 'undefined' ? count : 3; // ? is ternary operator. x?a:b if x is true a else b
+    var div = typeof (div) != 'undefined' ? div : 'holder';
+ 
+ 
+    $(document).ready(function(){
+        $.getJSON("https://api.bibliocommons.com/v1/lists/159583601?library=nypl&date_format=iso8601&locale=en-US&api_key=6ux5avesyf7acz95qa3anve5&callback=?", function(data){
+ 
+            var holder = $("#"+div);
+ 
+            // Replace generic URLs with the URLs of Johnson County Library
+ 
+ 
+            //Make an array containing title objects    
+ 
+            var results = [];
+            i = 0
+            while (i<count){
+                if(data.user_content[i].title!=undefined){
+                    results.push(data.user_content[i]);
+                }
+                i += 1;
+            }
+ 
+ 
+ 
+            //Loop through results list and inject json data into the page
+ 
+            $.each(results, function(index, item){
+                var el = $('<div id="book' + index + '" class="book"></div>');
+                var link = jQuery('<a/>',{
+                    href: item.title.details_url.replace('any.bibliocommons', 'nypl.bibliocommons')
+                });
+ 
+ 
+                // Check to see if the item is a book (check for isbn) if so grab the book jacket. Otherwise grab the jacket for the UPC code
+                if  (item.title.isbns !== undefined){
+                    var isbn = 'http://www.syndetics.com/index.aspx?isbn=' + item.title.isbns[0] + '/MC.GIF&client=913-495-2400&type=xw12&oclc=ocn641997517&upc=%22';
+                }
+                else if (item.title.upcs !== undefined){
+                    var isbn = 'http://www.syndetics.com/index.aspx?isbn=/MC.GIF&client=913-495-2400&type=xw12&oclc=ocn641997517&upc='+ item.title.upcs[0];
+                }
+ 
+                else {
+                    var isbn = 'http://opl.bibliocommons.com/images/default_covers/icon-book-largeprint.png';
+                };
+ 
+            // Make image
+ 
+                var img = jQuery('<img>',{
+                    'class': 'bookjacket',
+                    'id' : div + 'bookjacket' + index,
+                    'src' : isbn
+                });
+ 
+ 
+ 
+ 
+                var title = $('<p class="booktitle">' + item.title.title + '</p>');
+ 
+                link.append(img, title);
+                el.append(link);
+ 
+                holder.append(el);
+            }); // end injecting json from each of the members of the array
+ 
+            var more = $("<p class='more'><a href='http://nypl.bibliocommons.com/dashboard'>More&nbsp;&gt;&nbsp;&gt;</a></p>");
+            holder.append(more);
+ 
+            // If browser is internet explorer, check for blank images and replace  
+            if($.browser.msie){
+                $(document).ready(function(){
+                    $('img.bookjacket').each(function(index){
+                        var mywid = $(this).width();
+                        if(mywid <= 30){
+                        $(this).attr('src', 'http://opl.bibliocommons.com/images/default_covers/icon-book-largeprint.png'),
+                            $(this).removeAttr('width'),
+                            $(this).removeAttr('height');
+                        };
+                    })
+                });
+            };
+ 
+            //If browser is not IE check for blank images and replace with generic image
+            if(!$.browser.msie){
+                $(window).load(function(){
+                    $('img.bookjacket').each(function(index){
+                        var mywid = $(this).width();
+                        if(mywid <= 30){
+                            $(this).attr('src', 'http://opl.bibliocommons.com/images/default_covers/icon-book-largeprint.png'),
+                            $(this).removeAttr('width'),
+                            $(this).removeAttr('height');
+                        };
+                    })
+                });
+            };
+ 
+ 
+        });//End getJSON
+    }); // End document ready
+}; // End Booklist function
+ 
+ 
+ 
+ 
+ 
+                var title = $('<p class="booktitle">' + item.title.title + '</p>');
+ 
+                link.append(img, title);
+                el.append(link);
+ 
+                holder.append(el);
+            }); // end injecting json from each of the members of the array
+ 
+        var more = $("<p class='more'><a href=" + listUrlClean + ">More</a></p>");
+        holder.append(more);
+ 
+            // If browser is internet explorer, check for blank images and replace  
+            if($.browser.msie){
+                $(document).ready(function(){
+                    $('img.bookjacket').each(function(index){
+                        var mywid = $(this).width();
+                        if(mywid <= 30){
+                        $(this).attr('src', 'http://opl.bibliocommons.com/images/default_covers/icon-book-largeprint.png'),
+                            $(this).removeAttr('width'),
+                            $(this).removeAttr('height');
+                        };
+                    })
+                });
+            };
+ 
+            //If browser is not IE check for blank images and replace with generic image
+            if(!$.browser.msie){
+                $(window).load(function(){
+                    $('img.bookjacket').each(function(index){
+                        var mywid = $(this).width();
+                        if(mywid <= 30){
+                            $(this).attr('src', 'http://opl.bibliocommons.com/images/default_covers/icon-book-largeprint.png'),
+                            $(this).removeAttr('width'),
+                            $(this).removeAttr('height');
+                        };
+                    })
+                });
+            };
+ 
+ 
+        });//End getJSON
+    }); // End document ready
+}; // End Booklist function
+</script>
 <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -197,11 +350,12 @@
   </div>
   <div class="row bg-gray-10 padding-top-40 padding-bottom-40">
     <div class="container">
-      <div class="col-md-6 padding-top-60 padding-bottom-60 text-right">
-        <h3><a href="#">Heading</a></h3>
-        <div>Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt. Duis adipiscing, diam a tincidunt molestie, lorem purus pretium lectus, bibendum sagittis quam sem varius justo.</div>
-      </div>
-      <div class="col-md-6 padding-top-60 padding-bottom-60"> <img class="img-responsive" src="http://placehold.it/600x300?text=Compelling+Image"> </div>
+<div id="holder"> <script type="text/javascript">
+
+BookList(159583601, 5);
+</script>
+
+</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
