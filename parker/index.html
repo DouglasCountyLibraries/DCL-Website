@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,6 +47,16 @@
 }
 .locations-active {
 	background-color: #f5f5f5;
+}
+#video-background {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -191,11 +202,16 @@
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background"></div>
+  <div id="video-background" class="row">
+    <video autoplay loop class="fillWidth fadeIn animated" id="video-background">
+      <source src="lone-tree.mp4" type="video/mp4">
+      Your browser does not support the video tag. I suggest you upgrade your browser. </video>
+  </div>
   <div class="row padding-top-40 padding-bottom-60">
     <div class="container">
       <div class="text-center">
-        <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">Parker</h1><div class="text-uppercase small opacity-6 margin-bottom-10">Manager: Amy Long <a href="tel:303-791-7323" class="black opacity-8 margin-left-30">(303) 791-7323</a></div>
+        <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">Parker</h1>
+        <div class="text-uppercase small opacity-6 margin-bottom-10">Manager: Amy Long <a href="tel:303-791-7323" class="black opacity-8 margin-left-30">(303) 791-7323</a></div>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-map-marker"></i></div>
         </div>
@@ -317,4 +333,5 @@
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
