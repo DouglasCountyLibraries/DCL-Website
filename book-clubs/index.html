@@ -41,23 +41,22 @@
 <!-- InstanceBeginEditable name="head" -->
 <link type="text/css" rel="stylesheet prefetch" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" media="all" />
 <script src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script>
-	
+<script>	
 $(document).ready(function() {
     $('#book-clubs').DataTable( {
         "pagingType": "simple",
-		"paging": false
+		"paging": false,
+		        "order": [ 0, 'asc' ],
+        "aoColumnDefs": [
+          { "bSortable": false, "aTargets": [ 0,5,6 ] } 
+          ]
     } );
 } );
 	</script>
-    <script>
-  $(document).ready(function(){
-    $(".sticky-one").sticky({topSpacing:0});
-  });
-		</script>
 <style>
 label {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+	color: #666;
 }
 table.dataTable thead .sorting_asc {
 	background-image: url("sort_asc.png");
@@ -76,6 +75,9 @@ table.dataTable thead th, table.dataTable thead td {
 }
 table.dataTable.no-footer {
 	border-bottom: 1px solid #ddd;
+}
+.dataTables_wrapper .dataTables_info {
+    display: none;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -229,19 +231,19 @@ table.dataTable.no-footer {
           <div class="separator line-separator"><i class="fa fa-book"></i></div>
         </div>
       </div>
-      <h2 class="josefin text-center">Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl.</h2>
+      <h2 class="josefin text-center">If you love to talk about books, then we’ve got a book club for you! Search or browse the list below and filter by location, audience, day or genre to find the perfect fit.</h2>
     </div>
   </div>
-  <div class="row padding-bottom-100">
+  <div class="row padding-bottom-160">
     <div class="container">
       <table id="book-clubs" class="table table-responsive table-striped margin-bottom-30">
         <thead>
           <tr class="table-heading">
             <th><h5>Book Club</h5></th>
-            <th><h5>Location</h5></th>
-            <th><h5>Audience</h5></th>
-            <th><h5>Day and Time</h5></th>
-            <th><h5>Genre</h5></th>
+            <th><h5><a href="#">Location</a></h5></th>
+            <th><h5><a href="#">Audience</a></h5></th>
+            <th><h5><a href="#">Day and Time</a></h5></th>
+            <th><h5><a href="#">Genre</a></h5></th>
             <th><h5>Description</h5></th>
             <th><h5>Reading&nbsp;List</h5></th>
           </tr>
