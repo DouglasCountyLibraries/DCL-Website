@@ -58,9 +58,30 @@
     <div class="row"> 
       
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
-        <div class="pull-right biblio_bar_link biblio_bar_my_account">
-          <div class="bc-widget bc-my-account-nav"></div>
+      <div data-js="bc_my_account_nav" class="col-xs-12">
+        <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
+          <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
+            
+            <!-- Template - t_biblionav_my_account_user_info -->
+            
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="#"> Log In / Register </a> </li>
+            <li data-js="divider_logged_out" class="divider" role="presentation"></li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Library Dashboard</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">My Borrowing</li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Fees</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">My Collections</li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Lists</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
+          </ul>
         </div>
       </div>
       <!-- end BCNAV --> 
@@ -168,35 +189,32 @@
         </div>
         <h3 class="josefin margin-lg-200">Not sure where to start? Browse our A to Z repository of databases to find the research tool you need.</h3>
       </div>
-    </div>
-    <!-- #BeginLibraryItem "/Library/database-dropdown.lbi" -->
-    <div class="sticky-one" style="z-index: 100; width: 100%;">
-      <div class="dropdown">
-        <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
-        <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
-          <div class="col-sm-6 col-md-4 col-lg-2">
-            <h5 class="no-margin text-uppercase"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h5>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-2">
-            <h5 class="no-margin text-uppercase"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h5>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-2">
-            <h5 class="no-margin text-uppercase"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h5>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-2">
-            <h5 class="no-margin text-uppercase"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h5>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-2">
-            <h5 class="no-margin text-uppercase"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h5>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-2">
-            <h5 class="no-margin text-uppercase"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h5>
-          </div>
-        </ul>
+    </div><!-- #BeginLibraryItem "/Library/database-dropdown.lbi" --><div class="sticky-one" style="z-index: 100; width: 100%;">
+  <div class="dropdown">
+    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
+    <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h5>
       </div>
-    </div>
-    <!-- #EndLibraryItem -->
-    <div class="container margin-top-30 margin-bottom-30">
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h5>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h5>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h5>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h5>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h5>
+      </div>
+    </ul>
+  </div>
+</div>
+<!-- #EndLibraryItem --><div class="container margin-top-30 margin-bottom-30">
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
           <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=academic-search-premier" target="_blank"><span class="link-spanner"></span></a>
