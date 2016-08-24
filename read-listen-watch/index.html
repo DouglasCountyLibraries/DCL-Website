@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,6 +44,31 @@
 .kids-teens-active {
 	background-color: #f5f5f5;
 }
+
+@media (min-width: 992px) {
+.shelf {
+	border-bottom: 25px solid transparent;
+	border-image: url("shelf.jpg") 30 30 30 30 round round;
+	border-top: 0 none;
+	margin-bottom: 1.5em;
+	padding-bottom: 0;
+}
+.shelf-shadow {
+	background: #fff url("shelf-shadow.jpg");
+	background-repeat: repeat-x;
+}
+}
+
+/* remove for now   @media (min-width: 480px) {
+	.shelf {
+	border-bottom: 0px solid transparent;
+	border-image: none;
+	border-top: 0 none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+	
+	}*/
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -174,7 +200,8 @@
 </nav>
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
-  <!-- InstanceBeginEditable name="Content" --><!-- #BeginLibraryItem "/Library/kids-nav.lbi" -->  <div class="row no-gutter margin-bottom-15 shadow-low">
+  <!-- InstanceBeginEditable name="Content" --><!-- #BeginLibraryItem "/Library/kids-nav.lbi" -->
+  <div class="row no-gutter margin-bottom-15 shadow-low">
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-lavender hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Teens</h5>
@@ -205,7 +232,9 @@
         <h5 class="fff font-weight-500 text-uppercase no-margin">Parents & Teachers</h5>
         <a href="../parents-teachers"><span class="link-spanner"></span></a> </div>
     </div>
-  </div><!-- #EndLibraryItem --><div class="row padding-top-60 padding-bottom-100">
+  </div>
+  <!-- #EndLibraryItem -->
+  <div class="row padding-top-60 padding-bottom-100">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400">Read, Listen, Watch</h1>
@@ -216,7 +245,8 @@
       <h2 class="josefin text-center margin-lg-100">These engaging e-books and downloadable resources make learning fun and easy. Looking for recommendations? <a href="#">Check out our staff picks</a>.</h2>
     </div>
   </div>
-  <div class="row fff bg-teal padding-top-60 padding-bottom-100"><h1 class="fff text-center"><a class="fff text-underline" href="../storytime">Storytime</a></h1>
+  <div class="row fff bg-teal padding-top-60 padding-bottom-100 margin-bottom-160">
+    <h1 class="fff text-center"><a class="fff text-underline" href="../storytime">Storytime</a></h1>
     <div class="container">
       <div class="col-md-15 padding-top-60 padding-bottom-60"> <img class="img-responsive center-block" src="play.png" alt="">
         <div class="text-center padding-top-15">Play builds imagination and helps children learn abstract concepts.</div>
@@ -235,7 +265,51 @@
       </div>
     </div>
   </div>
-  <div class="row padding-top-40 padding-bottom-40">
+  <div style="margin-bottom: 0px" class="row shelf">
+    <div id="now-featuring" class="container">
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15">
+        <h3 class="josefin text-left margin-left-15 padding-top-15"> <a href="#"> View the complete list in the catalog <i style="color: #b0852e;" class="small fa fa-angle-double-right"></i></a></h3>
+      </div>
+    </div>
+  </div>
+  <div class="row shelf-shadow padding-bottom-160">
+    <div class="container">
+      <div class="col-md-7 col-md-push-1">
+        <h1 class="margin-top-40">Book List</h1>
+        <div class="margin-bottom-15">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl.</div>
+        <div><a class="text-uppercase" href="#">View the complete list in the catalog &raquo;</a></div>
+      </div>
+      <div class="col-md-3 col-md-push-1 text-center padding-top-40"><img class="img-circle" src="http://placehold.it/200"></div>
+    </div>
+  </div>
+  <div style="margin-bottom: 0px" class="row shelf">
+    <div id="now-featuring" class="container">
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-3 col-md-2 text-center padding-bottom-15">
+        <h3 class="josefin text-left margin-left-15 padding-top-15"> <a href="#"> View the complete list in the catalog <i style="color: #b0852e;" class="small fa fa-angle-double-right"></i></a></h3>
+      </div>
+    </div>
+  </div>
+  <div class="row shelf-shadow padding-bottom-160">
+    <div class="container">
+      <div class="col-md-7 col-md-push-4">
+        <h1 class="margin-top-40">Book List</h1>
+        <div class="margin-bottom-15">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl.</div>
+        <div><a class="text-uppercase" href="#">View the complete list in the catalog &raquo;</a></div>
+      </div>
+      <div class="col-md-3 col-md-pull-6 text-center padding-top-40"><img class="img-circle" src="http://placehold.it/200"></div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-40 padding-bottom-40">
     <div class="container margin-lg-200">
       <div class="col-md-6 padding-top-60 padding-bottom-60"> <img class="img-responsive" src="play-learn.png" alt="Colorado Play and Learn App"> </div>
       <div class="col-md-6 padding-top-60 padding-bottom-60">
@@ -305,4 +379,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
