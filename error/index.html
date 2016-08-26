@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <script>
+<script>
         var url = $(location).attr('href');
         url = url.toLowerCase();
         $.ajax({
@@ -17,8 +17,8 @@
             window.location = url;
         })
         .fail (function() {
-            window.location = 'http://www.dcl.org/page-not-found';
+            $('#404error').show();
         });
-    </script>
+</script>
 </body>
 </html>
