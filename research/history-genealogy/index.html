@@ -57,12 +57,8 @@
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -85,17 +81,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -118,6 +105,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -134,14 +122,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -149,13 +137,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -168,11 +163,12 @@
             <li><a href="../../louviers">Louviers</a></li>
             <li><a href="../../parker">Parker</a></li>
             <li><a href="../../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../../kids">Kids & Teens</a> </li>
@@ -193,37 +189,40 @@
           <div class="separator line-separator"><i class="fa fa-history"></i></div>
         </div>
         <h3 class="josefin line-height-tall">Start your history search here. Find biographical details, historical facts, and even info about your own ancestry. You can also explore various collections of historical information housed with <a href="http://douglascountyhistory.org">Douglas County History Research Center (DCHRC)</a> &mdash; a free resource for researching people, places and events with ties to Douglas County. </h3>
-        <div class="margin-top-30"><a class="button btn btn-primary text-uppercase" href="http://douglascountyhistory.org/">Visit DCHRC</a></div>
+        <div class="margin-top-30"><a class="button btn btn-primary btn-lg text-uppercase" href="http://douglascountyhistory.org/">Visit DCHRC</a></div>
       </div>
-    </div><!-- #BeginLibraryItem "/Library/database-dropdown.lbi" --><div class="sticky-one" style="z-index: 100; width: 100%;">
-  <div class="dropdown">
-    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
-    <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h5>
+    </div>
+    <!-- #BeginLibraryItem "/Library/database-dropdown.lbi" -->
+    <div class="sticky-one" style="z-index: 100; width: 100%;">
+      <div class="dropdown">
+        <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
+        <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h5 class="no-margin text-uppercase"><a class="show" href="../all-databases"><i class="fa fa-th-list"></i> All Databases</a></h5>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h5 class="no-margin text-uppercase"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h5>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h5 class="no-margin text-uppercase"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h5>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h5 class="no-margin text-uppercase"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h5>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h5 class="no-margin text-uppercase"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h5>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-2">
+            <h5 class="no-margin text-uppercase"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h5>
+          </div>
+        </ul>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../students"><i class="fa fa-graduation-cap"></i> Students</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../business-finance"><i class="fa fa-building"></i> Business & Finance</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h5>
-      </div>
-    </ul>
-  </div>
-</div>
-<!-- #EndLibraryItem --><div class="container margin-top-30 margin-bottom-30">
+    </div>
+    <!-- #EndLibraryItem -->
+    <div class="container margin-top-30 margin-bottom-30">
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=academic-search-premier" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=academic-search-premier" target="_blank"><span class="link-spanner"></span></a>
             <h4>Academic Search Premier</h4>
             <div>Full-text article database of scholarly and peer-reviewed journals covering a variety of subjects, including biology, chemistry, psychology and physics.</div>
           </div>
@@ -231,7 +230,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=american-history" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=american-history" target="_blank"><span class="link-spanner"></span></a>
             <h4>American History Online</h4>
             <div>More than 500 years of American political, military, social and cultural history.</div>
           </div>
@@ -239,7 +238,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank"><span class="link-spanner"></span></a>
             <h4>AncestryPlus - <span class="db-small">Access is available only in a library</span></h4>
             <div>Comprehensive genealogy and local history resource using census, vital and immigration records, and more.</div>
           </div>
@@ -247,15 +246,15 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancient-history" target="_blank"><span class="link-spanner"></span></a>
-            <h4>Ancient and Medieval History Online</h4>
-            <div>The full scope of ancient world history, from prehistory through the mid-15th century, including biographies, events and topics, primary sources, time-lines, images, videos, maps and charts.</div>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancient-history" target="_blank"><span class="link-spanner"></span></a>
+            <h4>Ancient &amp; Medieval History Online</h4>
+            <div>The full scope of ancient world history, from prehistory through mid-15th century, including images and maps. </div>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=biography" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=biography" target="_blank"><span class="link-spanner"></span></a>
             <h4>Biography in Context</h4>
             <div>Biographical entries from encyclopedias and journal articles about noteworthy world figures.</div>
           </div>
@@ -263,7 +262,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica" target="_blank"><span class="link-spanner"></span></a>
             <h4>Britannica</h4>
             <div>Targeted search levels for children, young adults, and an adult reference center. Current events and primary sources are included.</div>
           </div>
@@ -271,7 +270,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=culturegrams" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=culturegrams" target="_blank"><span class="link-spanner"></span></a>
             <h4>CultureGrams</h4>
             <div>Illustrated resource featuring cultural and geographical information on provinces, states and world topics.</div>
           </div>
@@ -279,33 +278,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost" target="_blank"><span class="link-spanner"></span></a>
-            <h4 class="no-margin-bottom">Database Collection</h4>
-            <p class="text-uppercase small">EBSCOhost</p>
-            <div>A collection of database resources with access to comprehensive information and thousands of full-text articles on educational, business, lifestyle and historical topics.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost-ebooks" target="_blank"><span class="link-spanner"></span></a>
-            <h4 class="no-margin-bottom">eBook Collection</h4>
-            <p class="text-uppercase small">EBSCOhost eBook Collection</p>
-            <div>A collection of e-books covering a wide range of categories and topics.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-book-ebooks" target="_blank"><span class="link-spanner"></span></a>
-            <h4>World Book eBooks</h4>
-            <div>Premium e-books for kids K-12, searchable by subject and grade level.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=educators-explora" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=educators-explora" target="_blank"><span class="link-spanner"></span></a>
             <h4 class="no-margin-bottom">Educator Resources</h4>
             <p class="text-uppercase small">Educator's Explora</p>
             <div>Lesson plans, curriculum standards, and other professional development resources for educators.</div>
@@ -314,7 +287,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=high-school-explora" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=high-school-explora" target="_blank"><span class="link-spanner"></span></a>
             <h4>High School Explora</h4>
             <div>Full-text articles from popular magazines and reference books, including categories organized by popular topics, for high schoolers.</div>
           </div>
@@ -322,7 +295,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=fof-history-resources" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=fof-history-resources" target="_blank"><span class="link-spanner"></span></a>
             <h4>History Resources: Facts on File</h4>
             <div>Portal for Facts on File of American History Online, Modern World History Online, and Ancient and Medieval History Online.</div>
           </div>
@@ -330,16 +303,16 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=worldcat" target="_blank"><span class="link-spanner"></span></a>
-            <h4 class="no-margin-bottom">Library Catalog Network</h4>
-            <p class="text-uppercase small">WorldCat Discovery Services</p>
-            <div>Catalog of books and other materials in libraries all over the world.</div>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ebscohost" target="_blank"><span class="link-spanner"></span></a>
+            <h4 class="no-margin-bottom">Journals, Magazines &amp; Newspapers</h4>
+            <p class="text-uppercase small">EBSCOhost</p>
+            <div>A collection of database resources with access to comprehensive information and thousands of full-text articles on educational, business, lifestyle and historical topics.</div>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=middle-school-explora" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=middle-school-explora" target="_blank"><span class="link-spanner"></span></a>
             <h4>Middle School Explora</h4>
             <div>Full-text articles from popular magazines and reference books, including categories organized by popular topics, for middle schoolers.</div>
           </div>
@@ -347,7 +320,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=modern-world-history" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=modern-world-history" target="_blank"><span class="link-spanner"></span></a>
             <h4>Modern World History Online</h4>
             <div>Facts on File resource of world history, from the mid-15th century to the present.</div>
           </div>
@@ -355,7 +328,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=myheritage" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=myheritage" target="_blank"><span class="link-spanner"></span></a>
             <h4>MyHeritage</h4>
             <div>Billions of historical documents, and millions of historical photos, for genealogical research, starting from the 16th century. Available from home.</div>
           </div>
@@ -363,7 +336,7 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gvrl" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=gvrl" target="_blank"><span class="link-spanner"></span></a>
             <h4 class="no-margin-bottom">Virtual Reference Library</h4>
             <p class="text-uppercase small">Gale Virtual Reference Library</p>
             <div>A searchable database by topic or subject, including the arts, literature, business, history and medicine.</div>
@@ -372,9 +345,18 @@
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-almanac-for-kids" target="_blank"><span class="link-spanner"></span></a>
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=world-almanac-for-kids" target="_blank"><span class="link-spanner"></span></a>
             <h4>World Almanac for Kids</h4>
             <div>Grade-appropriate content on various subjects and topics, as well as resources for homework help and teacher support.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="bg-gray-5 shadow-low hover-shadow default-block-container gutter-five">
+          <div class="database-box padding-top-15 padding-right-15 padding-bottom-30 padding-left-15 margin-bottom-15"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=worldcat" target="_blank"><span class="link-spanner"></span></a>
+            <h4 class="no-margin-bottom">Worldwide Library Catalog</h4>
+            <p class="text-uppercase small">WorldCat Discovery Services</p>
+            <div>Catalog of books and other materials in libraries all over the world.</div>
           </div>
         </div>
       </div>
@@ -382,7 +364,7 @@
   </div>
   <div class="row bg-moss">
     <div class="container padding-top-40 padding-bottom-60">
-      <h3 class="fff josefin text-center margin-lg-100">If you can't find what you're looking for, <a class="fff text-underline" href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text, and chat during regular library hours, or in person at any branch.</h3>
+      <h3 class="fff josefin text-center margin-lg-100">If you can't find what you're looking for, <a class="fff text-underline" href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text and chat during regular library hours, or in person at any branch.</h3>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -399,7 +381,6 @@
       <ul>
         <li><a href="../../who-we-are">Who We Are</a></li>
         <li><a href="../../join-our-team">Join Our Team</a></li>
-        <li><a href="../../public-notices">Public Notices</a></li>
         <li><a href="../../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -419,7 +400,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../../foundation">Foundation</a></li>
         <li><a href="../../volunteer">Volunteer</a></li>
       </ul>
@@ -428,11 +409,14 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -51,12 +51,8 @@
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -79,17 +75,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -112,6 +99,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -128,14 +116,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -143,13 +131,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -162,11 +157,12 @@
             <li><a href="../louviers">Louviers</a></li>
             <li><a href="../parker">Parker</a></li>
             <li><a href="../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../kids">Kids & Teens</a> </li>
@@ -188,7 +184,7 @@
           <div class="margin-lg-100">When you volunteer at Douglas County Libraries, you become an invaluable part of our team, helping us provide resources for learning and leisure to improve the lives of the people in our communities. You also gain valuable skills, give back to your community, and meet people from diverse backgrounds in a pleasant environment. We value our volunteers’ contributions! Join us!</div>
         </div>
         <h2 class="josefin">For more information on current availability, visit:</h2>
-        <a class="text-uppercase button btn btn-primary btn-lg margin-top-10" target="_blank" href="https://volunteerconnectdc.org/">Volunteer Connect Douglas County</a></div>
+        <a class="text-uppercase btn btn-primary btn-lg margin-top-10" target="_blank" href="https://volunteerconnectdc.civicore.com/index.php?section=volOpportunities&action=opportunitiesList2&fwID=2">Volunteer Connect Douglas County</a></div>
     </div>
   </div>
   <div class="row bg-gray-5 padding-top-80 padding-bottom-120">
@@ -244,7 +240,7 @@
               </div>
             </div>
             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel">
-              <div class="panel-body">Help with event set-up and tear-down, plus act as a greeter/usher or man an activity station.</div>
+              <div class="panel-body">Help with event setup and tear-down, plus act as a greeter/usher or man an activity station.</div>
             </div>
           </div>
         </div>
@@ -286,14 +282,14 @@
               </div>
             </div>
             <div id="collapseTwenty" class="panel-collapse collapse in" role="tabpanel">
-              <div class="panel-body">Douglas County residents ages 16 and up can perform court-ordered restitution for minor offenses with us. Tasks usually include shelving and cleaning. Some restrictions apply. For information, call 303-791-7323 and ask for the Branch Volunteer Coordinator at your preferred library location.</div>
+              <div class="panel-body">Douglas County residents ages 16 and up can perform court-ordered restitution for minor offenses with us. Tasks usually include shelving and cleaning. Some restrictions apply. For information, call <a href="tel:303-791-7323">(303) 791-7323</a> and ask for the Branch Volunteer Coordinator at your preferred library location.</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row bg-salmon padding-top-40 padding-bottom-60">
+  <div class="row bg-teal padding-top-40 padding-bottom-60">
     <div class="container">
       <div class="text-center padding-bottom-15">
         <h1 class="josefin fff">Volunteer News</h1>
@@ -301,64 +297,55 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div id="staff" class="text-center padding-top-80">
-      <h1 class="josefin">Title Goes Here</h1>
-    </div>
-    <div class="col-md-12" data-wow-delay="0.3s">
-      <div class="carousel slide" data-ride="carousel" data-interval="10000" id="quote-carousel"> 
-        <!-- Carousel Slides / Quotes -->
-        <div class="carousel-inner carousel-quotes text-center"> 
-          <!-- Quote 1 -->
-          <div class="item active">
-            <blockquote>
-              <div class="row quote-row">
-                <div class="col-sm-6 col-sm-offset-3">
-                  <p>"Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus."</p>
-                  <small>May, Super-librarian</small> </div>
-              </div>
-            </blockquote>
+  <div class="row padding-bottom-160 bg-teal">
+    <div id="carousel-pics" class="carousel slide"> 
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-pics" data-slide-to="0" class="active"></li>
+        <li class="" data-target="#carousel-pics" data-slide-to="1"></li>
+        <li class="" data-target="#carousel-pics" data-slide-to="2"></li>
+        <li class="" data-target="#carousel-pics" data-slide-to="3"></li>
+      </ol>
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row no-gutter">
+            <div class="col-md-4"><img src="group.jpg" alt="Volunteer Group" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="elyse.jpg" alt="Elyse Volunteering at the Library" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="fair.jpg" alt="At the Fair" class="img-responsive center-block"> </div>
           </div>
-          <!-- Quote 2 -->
-          <div class="item">
-            <blockquote>
-              <div class="row quote-row">
-                <div class="col-sm-8 col-sm-offset-2">
-                  <p>"Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan."</p>
-                  <small>Yelena, knows her datases</small> </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 3 -->
-          <div class="item">
-            <blockquote>
-              <div class="row quote-row">
-                <div class="col-sm-6 col-sm-offset-3">
-                  <p>"Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit.."</p>
-                  <small>Eustache, owes me $20</small> </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 3 -->
-          <div class="item">
-            <blockquote>
-              <div class="row quote-row">
-                <div class="col-sm-6 col-sm-offset-3">
-                  <p>"Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed aliquam, urna eget tincidunt volutpat.."</p>
-                  <small>The famous Mr. Cliff</small> </div>
-              </div>
-            </blockquote>
-          </div>
+          <!--/row--> 
         </div>
-        <!-- Bottom Carousel Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="http://placehold.it/200" alt=""> </li>
-          <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="http://placehold.it/200" alt=""> </li>
-          <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="http://placehold.it/200" alt=""> </li>
-          <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="http://placehold.it/200" alt=""> </li>
-        </ol>
-        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a> <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a> </div>
-    </div>
+        <!--/item-->
+        <div class="item">
+          <div class="row no-gutter">
+            <div class="col-md-4"><img src="nikki.jpg" alt="Nikki Shelving Books" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="parade.jpg" alt="On Parade" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="http://placehold.it/800x400/999/ddd" alt="Event Space" class="img-responsive center-block"> </div>
+          </div>
+          <!--/row--> 
+        </div>
+        <!--/item-->
+        <div class="item">
+          <div class="row no-gutter">
+            <div class="col-md-4"><img src="http://placehold.it/800x400/fff/bbb" alt="Event Space" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="http://placehold.it/800x400" alt="Event Space" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="http://placehold.it/800x400/999/ddd" alt="Event Space" class="img-responsive center-block"> </div>
+          </div>
+          <!--/row--> 
+        </div>
+        <div class="item">
+          <div class="row no-gutter">
+            <div class="col-md-4"><img src="http://placehold.it/800x400/999/ddd" alt="Event Space" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="http://placehold.it/800x400/fff/bbb" alt="Event Space" class="img-responsive center-block"> </div>
+            <div class="col-md-4"><img src="http://placehold.it/800x400" alt="Event Space" class="img-responsive center-block"> </div>
+          </div>
+          <!--/row--> 
+        </div>
+        <!--/item--> 
+      </div>
+      <!--/carousel-inner--><!-- remove for now
+      <a data-slide="prev" href="#carousel-pics" class="left carousel-control"><i class="fa fa-chevron-left"></i></a> <a data-slide="next" href="#carousel-pics" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>--> </div>
   </div>
   <div class="row bg-gray-5">
     <div class="container">
@@ -366,7 +353,7 @@
         <h2 class="josefin">Questions or comments?<br>
           We want to hear from you.</h2>
         <div class="text-center padding-top-15"> <!-- Button trigger modal -->
-          <button type="button" class="btn text-uppercase btn-lg btn-primary" data-toggle="modal" data-target="#myModal">Contact a Volunteer Team Member</button>
+          <button type="button" class="btn text-uppercase btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Contact The Volunteer Team</button>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -374,7 +361,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="text-center modal-title">Contact a Volunteer Team Member</h3>
+                <h3 class="text-center modal-title">Contact the Volunteer Team</h3>
               </div>
               <script type="text/javascript" src="https://form.jotform.com/jsform/53344510293147"></script> 
             </div>
@@ -397,7 +384,6 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -417,7 +403,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../foundation">Foundation</a></li>
         <li><a href="../volunteer">Volunteer</a></li>
       </ul>
@@ -426,11 +412,24 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>$(document).ready(function() {
+	$('#carousel-pics').carousel({
+	interval: 10000
+	})
+    $('#carousel-pics').on('slid.bs.carousel', function() {
+    	//alert("slid");
+	});   
+});
+</script> 
+<!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

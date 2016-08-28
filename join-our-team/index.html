@@ -59,12 +59,8 @@
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -87,17 +83,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -120,6 +107,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -136,14 +124,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -151,13 +139,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -170,11 +165,12 @@
             <li><a href="../louviers">Louviers</a></li>
             <li><a href="../parker">Parker</a></li>
             <li><a href="../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../kids">Kids & Teens</a> </li>
@@ -280,7 +276,7 @@
               <div class="row quote-row">
                 <div class="col-sm-6 col-sm-offset-3">
                   <p class="margin-top-100-sm">“DCL is a respectful workplace. It encourages creativity and embraces diversity of cultures, ideas and opinions. I’m proud to be a part of it every day!”</p>
-                  <small>May, Librarian</small> </div>
+                  <small>Kyra, Librarian</small> </div>
               </div>
             </blockquote>
           </div>
@@ -289,38 +285,38 @@
             <blockquote>
               <div class="row quote-row">
                 <div class="col-sm-8 col-sm-offset-2">
+                  <p class="margin-top-100-sm">“I love working at DCL because every day is different, and I always leave work feeling like I learned something and helped someone. I am fortunate to have found this place!”</p>
+                  <small>Aspen, Branch Manager</small> </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row quote-row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <p class="margin-top-100-sm">“Every book ever written is a whole new world waiting to be explored. Working for Douglas County Libraries makes me feel like I’m in the center of the universe!”</p>
+                  <small>Roddy, Materials Handler Technician</small> </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row quote-row">
+                <div class="col-sm-6 col-sm-offset-3">
                   <p class="margin-top-100-sm">“I’m always amazed by the creative, helpful and interesting professionals that I encounter at my library and also around the district. This is an amazing place to work!”</p>
-                  <small>Yelena, ILS Administrator</small> </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 3 -->
-          <div class="item">
-            <blockquote>
-              <div class="row quote-row">
-                <div class="col-sm-6 col-sm-offset-3">
-                  <p class="margin-top-100-sm">“Libraries bring people together from all walks of life and give them a wonderful place to be. I never dreamed I would end up in one of the best libraries in the U.S. I love it here!”</p>
-                  <small>Eustache, Infrastructure Engineer</small> </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 3 -->
-          <div class="item">
-            <blockquote>
-              <div class="row quote-row">
-                <div class="col-sm-6 col-sm-offset-3">
-                  <p class="margin-top-100-sm">“You know you have great co-workers and managers when you’re looking forward to going back to work even on your days off!”</p>
-                  <small>Cliff, Librarian</small> </div>
+                  <small>Melissa, Patron Service Technician</small> </div>
               </div>
             </blockquote>
           </div>
         </div>
         <!-- Bottom Carousel Indicators -->
         <ol class="carousel-indicators">
-          <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="may.jpg" alt=""> </li>
-          <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="yelena.jpg" alt=""> </li>
-          <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="eustache.jpg" alt=""> </li>
-          <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="cliff.jpg" alt=""> </li>
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="kyra.jpg" alt=""> </li>
+          <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="aspen.jpg" alt=""> </li>
+          <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="roddy.jpg" alt=""> </li>
+          <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="melissa.jpg" alt=""> </li>
         </ol>
         <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a> <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a> </div>
     </div>
@@ -333,7 +329,7 @@
           <div class="icon-circle-teal" style="padding-left:4px"><i class="fa fa-balance-scale"></i></div>
         </div>
         <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Work-life Balance</h4>
+          <h4>Work-Life Balance</h4>
           <div>We love our work, and we work hard. But we also have generous paid time off and floating holidays, so it’s possible to enjoy everything else in life too.</div>
         </div>
       </div>
@@ -342,7 +338,7 @@
           <div class="icon-circle-teal" style="line-height:95px"><i class="fa fa-money"></i></div>
         </div>
         <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Compensation and Security</h4>
+          <h4>Compensation &amp; Security</h4>
           <div>Earning now while saving for later makes for a happy ending when you close the book on your career. Douglas County Libraries offers competitive salaries, a pension plan through <a href="https://www.copera.org/" target="_blank">Colorado Public Employees’ Retirement Association (PERA)</a>, and an optional 401(k).</div>
         </div>
       </div>
@@ -351,7 +347,7 @@
           <div class="icon-circle-teal" style="line-height:103px"><i class="fa fa-heart"></i></div>
         </div>
         <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Health and Well-being</h4>
+          <h4>Health &amp; Well-Being</h4>
           <div>Our comprehensive, competitive benefits package includes health, dental, vision, disability and life insurance; extended illness pay; and an employee assistance program.</div>
         </div>
       </div>
@@ -360,7 +356,7 @@
           <div class="icon-circle-teal" style="line-height:100px"><i class="fa fa-line-chart"></i></div>
         </div>
         <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Growth and Development</h4>
+          <h4>Growth &amp; Development</h4>
           <div>There’s room for professional growth and promotion through organizational development, training programs, and tuition assistance. Come grow with us!</div>
         </div>
       </div>
@@ -380,7 +376,6 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -400,7 +395,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../foundation">Foundation</a></li>
         <li><a href="../volunteer">Volunteer</a></li>
       </ul>
@@ -409,7 +404,7 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
@@ -423,7 +418,7 @@ $("a[rel=popover]")
  </script> 
  <script>$(document).ready(function() {
 	$('#carousel-pics').carousel({
-	interval: 15000
+	interval: 10000
 	})
     $('#carousel-pics').on('slid.bs.carousel', function() {
     	//alert("slid");
@@ -431,6 +426,9 @@ $("a[rel=popover]")
 });
 </script> 
  <!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

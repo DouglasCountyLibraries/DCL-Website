@@ -7,8 +7,8 @@
 <meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning."/>
 <link rel="canonical" href="http://dcl.org"/>
 <!-- InstanceBeginEditable name="title" -->
-        <title>DCL | Foundation</title>
-        <!-- InstanceEndEditable -->
+<title>DCL | Foundation</title>
+<!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png">
@@ -39,24 +39,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-        <script>
-  $(document).ready(function(){
-    $(".sticky-one").sticky({topSpacing:0});
-  });
-		</script>
-        <!-- InstanceEndEditable -->
+<!-- InstanceEndEditable -->
 </head>
 <body>
 <div class="cp_header_biblio_bar">
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -79,17 +70,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -112,6 +94,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -128,14 +111,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -143,13 +126,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -162,11 +152,12 @@
             <li><a href="../louviers">Louviers</a></li>
             <li><a href="../parker">Parker</a></li>
             <li><a href="../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../kids">Kids & Teens</a> </li>
@@ -179,105 +170,147 @@
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row events-background padding-top-60 padding-bottom-80">
-  <div class="container">
-  <div class="text-center">
-            <h1 class="000 jumbo-text text-uppercase font-wnine-400">Foundation</h1>
-            <div class="separator-container">
-      <div class="000 separator line-separator"><i class="000 fa fa-bookmark-o"></i></div>
+  <div class="row padding-top-60 padding-bottom-100 border-top">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase font-weight-400">Foundation</h1>
+        <div class="separator-container">
+          <div class="separator line-separator"><i class="fa fa-bookmark"></i></div>
+        </div>
+        <div class="margin-lg-100">Your support of the Douglas County Libraries Foundation helps fund programs that reach youth, adults and families in Douglas County and across Colorado, and helps ensure the long-term success of our outstanding libraries. Our libraries are critical to education, neighborhood development, workforce development, and economic development. </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <h2 class="josefin"><i class="fa fa-clock-o" style="margin-right:10px"></i> <a href="../volunteer">Give Time</a></h2>
+        </div>
+        <div class="col-sm-4 text-center">
+          <h2 class="josefin"><i class="fa fa-money" style="margin-right:10px"></i> <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788">Give Money</a></h2>
+        </div>
+        <div class="col-sm-4 text-center">
+          <h2 class="josefin"><i class="fa fa-edit" style="margin-right:10px"></i> <a href="#other-ways">Other Ways to Give</a></h2>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="row no-gutter fff bg-lavender padding-top-30 padding-bottom-40">
+    <h1 class="fff text-center">What We Do</h1>
+    <div class="col-md-3 col-sm-6 padding-top-40 padding-bottom-60"> <img alt="7Readers Are Leaders" class="img-responsive center-block" src="http://placehold.it/800x500" />
+      <h3 class="fff text-center">7Readers Are Leaders</h3>
+      <div class="margin-left-30 margin-right-30">7Readers Are Leaders encourages and facilitates reading among early elementary school children, to help guide their academic success. Each month, Denver7 awards one local first-grade class a Storytime with on-air talent and $1,000 for their school’s library. Each student in the winning class receives a book from Douglas County Libraries.</div>
+    </div>
+    <div class="col-md-3 col-sm-6 padding-top-40 padding-bottom-60"> <img alt="Cuddle Up & Read" class="img-responsive center-block" src="http://placehold.it/800x500" />
+      <h3 class="fff text-center">Cuddle Up & Read</h3>
+      <div class="margin-left-30 margin-right-30">Through partnerships with area hospitals, Cuddle Up & Read provides new parents with a fun and meaningful introduction to the library and to early literacy. The program includes small gifts for mom and baby, and an invitation to get baby a library card. We also distribute DCL growth charts, complete with reading suggestions and library service information, to parents through participating pediatricians’ offices across the county.</div>
+    </div>
+    <div class="col-md-3 col-sm-6 padding-top-40 padding-bottom-60"> <img alt="Summer Reading" class="img-responsive center-block" src="http://placehold.it/800x500" />
+      <h3 class="fff text-center">Summer Reading</h3>
+      <div class="margin-left-30 margin-right-30">Each year, Douglas County Libraries’ summer reading program encourages kids to begin reading from a young age, and keeps them reading during school breaks, so they grow up with a strong foundation in literacy. Readers of all ages are encouraged to complete the reading program each year.</div>
+    </div>
+    <div class="col-md-3 col-sm-6 padding-top-40 padding-bottom-60"> <img alt="Fête des Fables Gala" class="img-responsive center-block" src="highlands-ranch-mansion.jpg" />
+      <h3 class="fff text-center">Fête des Fables Gala</h3>
+      <div class="margin-left-30 margin-right-30">Our annual Fête des Fables Gala, in addition to traditional cash donations, is a primary way that we fund our support of ECL programs. Each year, Fête des Fables invites guests to enjoy cocktails and a sumptuous meal, shop a fantastic silent auction, and mingle with friends old and new, while celebrating a classic story in a charming venue.</div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="staff" class="text-center padding-top-80">
+      <h1>What Your Gift Means</h1>
+    </div>
+    <div class="col-md-12" data-wow-delay="0.3s">
+      <div class="carousel slide" data-ride="carousel" data-interval="10000" id="quote-carousel"> 
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner carousel-quotes text-center"> 
+          <!-- Quote 1 -->
+          <div class="item active">
+            <blockquote>
+              <div class="row quote-row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <p class="margin-top-100-sm">“A library is so important to the growth of our children, and to us, as individuals.”</p>
+                  <small>Joe Henry</small> </div>
+              </div>
+            </blockquote>
           </div>
-  <div class="row clearfix text-center bg-white padding-top-0 padding-bottom-0">
-            <div class="container">
-      <h1 class="text-capitalize padding-bottom-30">Make an impact</h1>
-    </div>
-            <div class="container">
-      <div class="row padding-top-30 margin-bottom-15 padding-bottom-15">
-                <div class="container">
-          <div class="col-sm-4 text-center padding-bottom-15"> <a href="/aboutus/volunteer/ongoing-opportunities">
-            <div class="circ-wrap" style="border-color:#90AD63;"><i class="moss glyphicon glyphicon-time padding-top-15"></i></div>
-            </a>
-                    <h4 class="fff "><a href="http://douglascountylibraries.org/aboutus/volunteer/ongoing-opportunities" class="moss">Give Time</a></h4>
-                  </div>
-          <div class="col-sm-4 text-center padding-bottom-15"> <a href="/foundation/how-to-help">
-            <div class="circ-wrap" style="border-color:#90AD63;"><i class="moss fa fa-usd"></i></div>
-            </a>
-                    <h4 class="fff"><a href="http://douglascountylibraries.org/foundation/how-to-help" class="moss">Give Money</a></h4>
-                  </div>
-          <div class="col-sm-4 text-center padding-bottom-15"> <a href="/AboutUs/Policies/Donations">
-            <div class="circ-wrap" style="border-color:#90AD63;line-height:125px;"><i class="moss fa fa-book"></i></div>
-            </a>
-                    <h4 class="fff"><a href="http://douglascountylibraries.org/AboutUs/Policies/Donations" class="moss">Other Ways to Give</a></h4>
-                  </div>
-        </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <blockquote>
+              <div class="row quote-row">
+                <div class="col-sm-8 col-sm-offset-2">
+                  <p class="margin-top-100-sm">“The library’s literacy program helped me interact with people and, more importantly, gave me the opportunity to teach. When I came to this country, I didn’t speak English. Someone took the time to teach me. That’s how the library adds magic to my life.”</p>
+                  <small>Opp Slawson</small> </div>
               </div>
-    </div>
-            <div class="container">
-      <div class="row bg-lavender no-gutter">
-                <h1 class="text-capitalize fff padding-bottom-0">What We Do</h1>
-                <div class="col-md-3 col-sm-6 margin-top-10">
-          <div class="padding-top-30 padding-left-0 padding-right-0"> <img alt="Cuddle Up &amp; Read" src="7readers298.jpg">
-                    <h4 class="fff padding-top-15 text-center">7Readers Are Leaders</h4>
-                    <div class="fff text-left margin-30">7Readers are Leaders encourages and facilitates reading among early elementary school children, to help guide their academic success. Each month, Denver7 awards one local first grade class a Storytime with on-air talent and $1,000 for their school’s library. Each student in the winning class receives a book from Douglas County Libraries.</div>
-                  </div>
-        </div>
-                <div class="col-md-3 col-sm-6 margin-top-10">
-          <div class="padding-top-30 padding-left-0 padding-right-0"> <img alt="Cuddle Up &amp; Read" class="center-block" src="cuddle-up298.jpg">
-                    <h4 class="fff padding-top-15 text-center">Cuddle Up &amp; Read</h4>
-                    <div class="fff text-left margin-30">Through partnerships with area hospitals, Cuddle Up &amp; Read provides new parents with a fun and meaningful introduction to the library and to early literacy. The program includes small gifts for mom and baby, and an invitation to get baby a library card. We also distribute DCL growth charts, complete with reading suggestions and library service information, to parents through participating pediatricians’ offices across the county.</div>
-                  </div>
-        </div>
-                <div class="col-md-3 col-sm-6 margin-top-10">
-          <div class="padding-top-30 padding-left-0 padding-right-0"> <img alt="Cuddle Up &amp; Read" src="srp_kickoff298.jpg">
-                    <h4 class="fff padding-top-15 text-center">Summer Reading</h4>
-                    <div class="fff text-left margin-30">Each year, Douglas County Libraries’ summer reading program encourages kids to begin reading from a young age, and keep them reading during school breaks, so they grow up with a strong foundation in literacy. Readers of all ages are encouraged to complete the reading program each year.</div>
-                  </div>
-        </div>
-                <div class="col-md-3 col-sm-6 margin-top-10">
-          <div class="padding-top-30 padding-left-0 padding-right-0"> <img alt="Cuddle Up &amp; Read" src="hrmansion298.jpg">
-                    <h4 class="fff padding-top-15 text-center">Fête des Fables Gala</h4>
-                    <div class="fff text-left margin-30">Our annual Fête des Fables Gala, in addition to traditional cash donations, is a primary way that we fund our support of ECL programs. Each year, Fête des Fables invites guests to enjoy cocktails and a sumptuous meal, shop a fantastic silent auction, and mingle with friends old and new, while celebrating a classic story in a charming venue.</div>
-                  </div>
-        </div>
-              </div>
-      <div class="row bg-lavender padding-bottom-15 margin-bottom-15">
-                <h5 class="fff padding-left-80 padding-right-40">In addition, other programs such as Battle of the Books, BizInfo, the Douglas County History Research Center, Page to Stage, and Project: LIVE! events, also benefit from Foundation support.</h5>
-              </div>
-    </div>
+            </blockquote>
           </div>
-  <div class="row clearfix text-center bg-white padding-top-0 padding-bottom-30">
-            <div class="container">
-      <h1 class="text-capitalize padding-bottom-30">What Your Gift Means</h1>
-      <div class="col-md-3">
-                <div> <img src="joe255.jpg" class="circ-wrap "></div>
-                <div class="front margin-15 "> <img class="img-circle center-block">
-          <div class="talk-bubble margin-top-40 "><i>"A library is so important to the growth of our children, and to us, as individuals."<br>
-            – Joe Henry</i></div>
-        </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row quote-row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <p class="margin-top-100-sm">“People, whether they are young or old, can all get involved in libraries. The library is not something that’s only limited to certain age groups.”</p>
+                  <small>Suresh Damle</small> </div>
               </div>
-      <div class="col-md-3">
-                <div> <img src="opp-edited255-03.jpg" class="circ-wrap "></div>
-                <div class="front margin-15"> <img class="img-circle center-block">
-          <div class="talk-bubble margin-top-40"><i>"The library’s literacy program helped me interact with people, and more importantly, gave me the opportunity to teach. When I came to this country, I didn’t speak English. Someone took the time to teach me. That’s how the library adds magic to my life."<br>
-            – Opp Slawson</i></div>
-        </div>
-              </div>
-      <div class="col-md-3">
-                <div> <img src="suresh255.jpg" class="circ-wrap "></div>
-                <div class="front margin-15"> <img class="img-circle center-block">
-          <div class="talk-bubble margin-top-40 "><i>"People, whether they are young or old, can all get involved in libraries. The library is not something that’s only limited to certain age groups."<br>
-            – Suresh Damle</i></div>
-        </div>
-              </div>
-      <div class="col-md-3">
-                <div> <img src="niki255-3.jpg" class="circ-wrap "></div>
-                <div class="front margin-15"> <img class="img-circle center-block">
-          <div class="talk-bubble margin-top-40"><i>"Some children came out of a classroom, and they were so full of joy! The library so inspired these kids! If we could capture that magic and take it into our workplace, or home, or community, how different would this world be?<br>
-            – Niki Weninger</i></div>
-        </div>
-              </div>
-    </div>
+            </blockquote>
           </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row quote-row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <p class="margin-top-100-sm">“Some children came out of a classroom, and they were so full of joy! The library so inspired these kids! If we could capture that magic and take it into our workplace, or home, or community, how different would this world be?”</p>
+                  <small>Niki Weninger</small> </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="joe.jpg" alt=""> </li>
+          <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="opp.jpg" alt=""> </li>
+          <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="suresh.jpg" alt=""> </li>
+          <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="niki.jpg" alt=""> </li>
+        </ol>
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a> <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a> </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-60 padding-bottom-100">
+    <div id="other-ways" class="container">
+      <h1 class="text-center">Other Ways to Give</h1>
+      <div class="col-md-6">
+        <h2 class="josefin">Donate by Mail</h2>
+        <div>Mail a check, payable to Douglas County Libraries Foundation, to:<br>
+          Douglas County Libraries Foundation<br>
+          100 S. Wilcox St.<br>
+          Castle Rock, CO 80104<br>
+          (Include a note on the check to designate your donation for a specific program or branch) </div>
+        <h2 class="josefin">Make an Impact</h2>
+        <ul>
+          <li>Attend Fête des Fables Gala</li>
+          <li>Workplace Giving/Matching Gifts</li>
+          <li>Naming Rights</li>
+          <li>Tribute Gifts</li>
+          <li>King Soopers Rewards</li>
+          <li>Planned Giving</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2 class="josefin">Donate Materials</h2>
+        <div>Douglas County Libraries accepts donations of new and used books, music CDs and DVDs for ongoing and special book sales, or for further donation to organizations that distribute materials to underserved populations. Book sales benefit the Douglas County Libraries Foundation. Donations will be accepted at library welcome desks during regular business hours. We appreciate your call at <a href="tel:303-791-7323">(303) 791-7323</a> in advance of large donations (more than you can carry from your vehicle). We are not able to quote a value for donated items, but dated receipts for the number of items donated are available upon request. Please do not donate:</div>
+        <ul>
+          <li>Items in poor condition</li>
+          <li>Textbooks</li>
+          <li>Encyclopedias</li>
+          <li>Magazines</li>
+          <li>Condensed books</li>
+          <li>Computer books older than five years</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-salmon">
+    <div class="container">
+      <div class="text-center padding-top-40 padding-bottom-80">
+        <h2 class="josefin fff">Questions? Please contact the Foundation directly at <a class="fff" href="tel:720-348-9509">(720) 348-9509</a>.</h2>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-40">
   <div class="text-center">
@@ -292,7 +325,6 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -312,7 +344,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../foundation">Foundation</a></li>
         <li><a href="../volunteer">Volunteer</a></li>
       </ul>
@@ -321,11 +353,14 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -51,12 +51,8 @@
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -79,17 +75,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -112,6 +99,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -128,14 +116,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -143,13 +131,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -162,11 +157,12 @@
             <li><a href="../louviers">Louviers</a></li>
             <li><a href="../parker">Parker</a></li>
             <li><a href="../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../kids">Kids & Teens</a> </li>
@@ -292,7 +288,6 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -312,7 +307,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../foundation">Foundation</a></li>
         <li><a href="../volunteer">Volunteer</a></li>
       </ul>
@@ -321,11 +316,14 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

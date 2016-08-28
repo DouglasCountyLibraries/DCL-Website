@@ -56,12 +56,8 @@
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -84,17 +80,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -117,6 +104,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -133,14 +121,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -148,13 +136,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -167,11 +162,12 @@
             <li><a href="../louviers">Louviers</a></li>
             <li><a href="../parker">Parker</a></li>
             <li><a href="../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../kids">Kids & Teens</a> </li>
@@ -201,101 +197,77 @@
         </div>
       </div>
       <div class="container text-center">
-        <h3 class="josefin margin-lg-100">Access a wealth of information online from magazines, journals, and educational materials, as well as popular resources like <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports">Consumer Reports</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda">Lynda.com</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse">Brainfuse</a> and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages">Mango Languages</a>.</h3>
+        <h3 class="josefin margin-lg-100">Access a wealth of information online from magazines, journals and educational materials, as well as popular resources like <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports">Consumer Reports</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda">Lynda.com</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse">Brainfuse</a> and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages">Mango Languages</a>.</h3>
       </div>
     </div>
-    <!-- remove for now
-    <div class="sticky-one" style="z-index: 100; width: 100%;">
-              <div class="dropdown">
-        <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-primary btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
-        <ul class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
-                  <div class="col-sm-6 col-md-4 col-lg-2">
-            <h3 class="no-margin"><a class="show" href="../research"><i class="fa fa-th-list"></i> All Databases</a></h3>
-          </div>
-                  <div class="col-sm-6 col-md-4 col-lg-2">
-            <h3 class="no-margin"><a class="show" href="students"><i class="fa fa-graduation-cap"></i> Students</a></h3>
-          </div>
-                  <div class="col-sm-6 col-md-4 col-lg-2">
-            <h3 class="no-margin"><a class="show" href="business-finance"><i class="fa fa-building"></i> Business & Finance</a></h3>
-          </div>
-                  <div class="col-sm-6 col-md-4 col-lg-2">
-            <h3 class="no-margin"><a class="show" href="lifestyle"><i class="fa fa-coffee"></i> Lifestyle</a></h3>
-          </div>
-                  <div class="col-sm-6 col-md-4 col-lg-2">
-            <h3 class="no-margin"><a class="show" href="online-learning"><i class="fa fa-laptop"></i> Online Learning</a></h3>
-          </div>
-                  <div class="col-sm-6 col-md-4 col-lg-2">
-            <h3 class="no-margin"><a class="show" href="history-genealogy"><i class="fa fa-history"></i> History & Genealogy</a></h3>
-          </div>
-                </ul>
-      </div>
-            </div>
-    -->
     <div class="bg-gray-5 padding-top-80 padding-bottom-100">
       <div class="container">
         <h1 class="josefin text-center padding-bottom-30">Choose a Category to Get Started</h1>
         <div class="row">
-        <div class="col-md-6 padding-bottom-40">
-          <div class="col-xs-3 padding-top-30">
-            <div style="line-height:100px;" class="icon-circle-teal"><i class="fa fa-th-list"></i></div>
+          <div class="col-md-6">
+            <div class="padding-top-30 col-xs-3">
+              <div class="icon-circle-teal" style="padding-left:4px"><i class="fa fa-th-list"></i></div>
+            </div>
+            <div class="col-xs-9">
+              <h2><a href="../research/all-databases">All Databases</a></h2>
+              <div>Access more than 50 databases for free either at the library or online using your library card. Get help with school work, personal finances, business research, learning, genealogy and more using resources like <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica" target="_blank">Britannica</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=morningstar" target="_blank">Morningstar Investments</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a>, and many others.</div>
+            </div>
           </div>
-          <div class="col-xs-9">
-            <h2><a href="../research/all-databases">All Databases</a></h2>
-            <div>Access more than 50 databases for free either at the library or online using your library card. Get help with school work, personal finances, business research, learning, genealogy and more using resources like <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=britannica" target="_blank">Britannica</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=morningstar" target="_blank">Morningstar Investments</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a>, and many others.</div>
+          <div class="col-md-6">
+            <div class="padding-top-30 col-xs-3">
+              <div style="line-height:102px;" class="icon-circle-teal"><i class="fa fa-graduation-cap"></i></div>
+            </div>
+            <div class="col-xs-9">
+              <h2><a href="../research/students">Students</a></h2>
+              <div>Research and studying can be easy and convenient. Whether it’s history, literature, science, geography or culture, there’s a research tool for you. Need to bone up for that exam? <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank">Brainfuse</a> provides live online tutoring and homework help.</div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 padding-bottom-40">
-          <div class="col-xs-3 padding-top-30">
-            <div style="line-height:102px;" class="icon-circle-teal"><i class="fa fa-graduation-cap"></i></div>
-          </div>
-          <div class="col-xs-9">
-            <h2><a href="../research/students">Students</a></h2>
-            <div>Research and studying can be easy and convenient. Whether it’s history, literature, science, geography or culture, there’s a research tool for you. Need to bone up for that exam? <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank">Brainfuse</a> provides live online tutoring and homework help.</div>
-          </div>
-        </div></div>
         <div class="row">
-        <div class="col-md-6 padding-bottom-40">
-          <div class="col-xs-3 padding-top-30">
-            <div style="line-height:100px;padding-left:4px;" class="icon-circle-teal"><i class="fa fa-building"></i></div>
+          <div class="col-md-6">
+            <div class="padding-top-30 col-xs-3">
+              <div style="line-height:100px;padding-left:4px;" class="icon-circle-teal"><i class="fa fa-building"></i></div>
+            </div>
+            <div class="col-xs-9">
+              <h2><a href="../research/business-finance">Business & Finance</a></h2>
+              <div>Research markets, investments, businesses, economies and nonprofit resources using a variety of databases, such as <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=demographicsnow">DemographicsNow</a>, <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=value-line">Value Line Investing Research</a>, <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=colorado-grants">Colorado Grants Guide</a>, and <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=foundation-center">Funding Network</a>. You can also learn new skills using <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda">Lynda.com</a>.</div>
+            </div>
           </div>
-          <div class="col-xs-9">
-            <h2><a href="../research/business-finance">Business & Finance</a></h2>
-            <div>Research markets, investments, businesses, economies and nonprofit resources using a variety of databases, such as <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=demographicsnow">DemographicsNow</a>, <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=value-line">Investing and Market Research</a>, <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=colorado-grants">Colorado Grants Guide</a>, and <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=foundation-center">Funding Network</a>. You can also learn new skills using <a target="_blank" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda">Lynda.com</a>.</div>
+          <div class="col-md-6">
+            <div class="padding-top-30 col-xs-3">
+              <div style="line-height:95px;padding-left:3px;" class="icon-circle-teal"><i class="fa fa-coffee"></i></div>
+            </div>
+            <div class="col-xs-9">
+              <h2><a href="../research/lifestyle">Lifestyle</a></h2>
+              <div>Maybe you want to master a software program or access maintenance info for your car. Or maybe you just need a new dishwasher. Our lifestyle resources provide convenient access to the information that can help you learn, repair and buy. Try <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank">Lynda.com</a>, the <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=auto-repair" target="_blank">Auto Repair Reference Center</a> and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank">Consumer Reports</a> &mdash; among many others.</div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 padding-bottom-40">
-          <div class="col-xs-3 padding-top-30">
-            <div style="line-height:95px;padding-left:3px;" class="icon-circle-teal"><i class="fa fa-coffee"></i></div>
-          </div>
-          <div class="col-xs-9">
-            <h2><a href="../research/lifestyle">Lifestyle</a></h2>
-            <div>Maybe you want to master a software program or access maintenance info for your car. Or maybe you just need a new dishwasher. Our lifestyle resources provide convenient access to the information that can help you learn, repair and buy. Try <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank">Lynda.com</a>, the <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=auto-repair" target="_blank">Auto Repair Reference Center</a> and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank">Consumer Reports</a> &mdash; among many others.</div>
-          </div>
-        </div></div>
         <div class="row">
-        <div class="col-md-6 padding-bottom-40">
-          <div class="col-xs-3 padding-top-30">
-            <div style="line-height:95px;" class="icon-circle-teal"><i class="fa fa-laptop"></i></div>
+          <div class="col-md-6">
+            <div class="padding-top-30 col-xs-3">
+              <div style="line-height:95px;" class="icon-circle-teal"><i class="fa fa-laptop"></i></div>
+            </div>
+            <div class="col-xs-9">
+              <h2><a href="../research/online-learning">Online Learning</a></h2>
+              <div>These resources make learning simple and convenient, whether it’s a new language, technology skills, or resume and career prep. Learn from the privacy of your own home — or your local library or coffee shop. Try <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank">Adult Learning Center</a> for live help and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=universal-class" target="_blank">Universal Class</a> for online courses. Even pick up a foreign language using <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a>.</div>
+            </div>
           </div>
-          <div class="col-xs-9">
-            <h2><a href="../research/online-learning">Online Learning</a></h2>
-            <div>These resources make learning simple and convenient, whether it’s a new language, technology skills, or resume and career prep. Learn from the privacy of your own home — or your local library or coffee shop. Try <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank">Adult Learning Center</a> for live help and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=universal-class" target="_blank">Universal Class</a> for online courses. Even pick up a foreign language using <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a>.</div>
+          <div class="col-md-6">
+            <div class="padding-top-30 col-xs-3">
+              <div style="line-height:97px;padding-left:2px;" class="icon-circle-teal"><i class="fa fa-history"></i></div>
+            </div>
+            <div class="col-xs-9">
+              <h2><a href="../research/history-genealogy">History & Genealogy</a></h2>
+              <div>If you’ve ever wondered where you came from, here’s where you can start the search — for free, using your library card. Or maybe you just need to research John Adams, or the French Revolution, or the tango. History comes to life using <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=myheritage" target="_blank">MyHeritage</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=american-history" target="_blank">American History Online</a> and several other databases for examining history, cultures and people.</div>
+            </div>
           </div>
         </div>
-        <div class="col-md-6 padding-bottom-40">
-          <div class="col-xs-3 padding-top-30">
-            <div style="line-height:97px;padding-left:2px;" class="icon-circle-teal"><i class="fa fa-history"></i></div>
-          </div>
-          <div class="col-xs-9">
-            <h2><a href="../research/history-genealogy">History & Genealogy</a></h2>
-            <div>If you’ve ever wondered where you came from, here’s where you can start the search — for free, using your library card. Or maybe you just need to research John Adams, or the French Revolution, or the tango. History comes to life using <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=myheritage" target="_blank">MyHeritage</a>, <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=american-history" target="_blank">American History Online</a> and several other databases for examining history, cultures and people.</div>
-          </div>
-        </div></div>
       </div>
     </div>
     <div class="bg-moss padding-top-60 padding-bottom-100">
       <div class="container text-center">
-        <h3 class="fff josefin margin-lg-100">If you can't find what you're looking for, <a class="fff text-underline" href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text, and chat during regular library hours, or in person at any branch.</h3>
+        <h3 class="fff josefin margin-lg-100">If you can't find what you're looking for, <a class="fff text-underline" href="http://answers.douglascountylibraries.org/">ask a librarian.</a> We're available by phone, text and chat during regular library hours, or in person at any branch.</h3>
       </div>
     </div>
   </div>
@@ -313,7 +285,6 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -333,7 +304,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../foundation">Foundation</a></li>
         <li><a href="../volunteer">Volunteer</a></li>
       </ul>
@@ -342,11 +313,14 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

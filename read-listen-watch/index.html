@@ -43,6 +43,31 @@
 .kids-teens-active {
 	background-color: #f5f5f5;
 }
+
+@media (min-width: 992px) {
+.shelf {
+	border-bottom: 25px solid transparent;
+	border-image: url("shelf.jpg") 30 30 30 30 round round;
+	border-top: 0 none;
+	margin-bottom: 1.5em;
+	padding-bottom: 0;
+}
+.shelf-shadow {
+	background: #fff url("shelf-shadow.jpg");
+	background-repeat: repeat-x;
+}
+}
+
+/* remove for now   @media (min-width: 480px) {
+	.shelf {
+	border-bottom: 0px solid transparent;
+	border-image: none;
+	border-top: 0 none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+	
+	}*/
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -51,12 +76,8 @@
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -79,17 +100,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -112,6 +124,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -128,14 +141,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -143,13 +156,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -162,11 +182,12 @@
             <li><a href="../louviers">Louviers</a></li>
             <li><a href="../parker">Parker</a></li>
             <li><a href="../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../kids">Kids & Teens</a> </li>
@@ -178,42 +199,38 @@
 </nav>
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
-  <!-- InstanceBeginEditable name="Content" -->
-  <!-- #BeginLibraryItem "/Library/kids-nav.lbi" -->
-  <div class="row no-gutter margin-bottom-15 shadow-low">
+  <!-- InstanceBeginEditable name="Content" --><!-- #BeginLibraryItem "/Library/kids-nav.lbi" -->  <div class="row no-gutter shadow-low">
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-lavender hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Teens</h5>
-        <a href="http://blogs.douglascountylibraries.org/teens/"><span class="link-spanner"></span></a></div>
+        <a href="http://blogs.douglascountylibraries.org/teens/"><span class="link-spanner"></span></a> </div>
     </div>
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-teal hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Read, Listen, Watch</h5>
-        <a href="../read-listen-watch"><span class="link-spanner"></span></a></div>
+        <a href="../read-listen-watch"><span class="link-spanner"></span></a> </div>
     </div>
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-wheat hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Storytime</h5>
-        <a href="../storytime"><span class="link-spanner"></span></a></div>
+        <a href="../storytime"><span class="link-spanner"></span></a> </div>
     </div>
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-salmon hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Events</h5>
-        <a href="#"><span class="link-spanner"></span></a></div>
+        <a href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=Early+Talkers+(Birth+-++2years)%2C+Talkers+(2+to+3+years)%2C+Pre-Readers+(3+to+5+years)%2C+Children&et=Authors%2C+Book+Club%2FDiscussion+Group%2C+Branch+Program%2C+Business%2C+Children%2C+Closure%2C+District+Program%2C+Educational+Class%2C+Entertainment-Focused%2C+Literacy%2C+On-Site+Community+Partnership&lib=7,%200,%201,%202,%203,%204,%205"><span class="link-spanner"></span></a> </div>
     </div>
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-moss hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Homework Help</h5>
-        <a href="../research/students"><span class="link-spanner"></span></a></div>
+        <a href="../research/students"><span class="link-spanner"></span></a> </div>
     </div>
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-loquacious hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Parents & Teachers</h5>
-        <a href="../parents-teachers"><span class="link-spanner"></span></a></div>
+        <a href="../parents-teachers"><span class="link-spanner"></span></a> </div>
     </div>
-  </div>
-  <!-- #EndLibraryItem -->
-<div class="row padding-top-60 padding-bottom-100">
+  </div><!-- #EndLibraryItem --><div class="row padding-top-60 padding-bottom-100">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400">Read, Listen, Watch</h1>
@@ -221,14 +238,78 @@
           <div class="separator line-separator"><i class="fa fa-circle-o"></i></div>
         </div>
       </div>
-      <h2 class="josefin text-center margin-lg-100">These engaging e-books and downloadable resources make learning fun and easy. Looking for recommendations? <a href="#">Check out our staff picks</a>.</h2>
+      <h2 class="josefin text-center">These engaging e-books and downloadable resources make learning fun and easy.<br>Looking for recommendations? <a href="#staff-picks">Check out our featured staff picks</a>.</h2>
+    </div>
+  </div>
+  <div class="row fff bg-teal padding-top-60 padding-bottom-80">
+    <h1 class="fff text-center"><a class="fff text-underline" href="../storytime">Storytime</a></h1>
+    <div class="container">
+      <div class="col-md-15 padding-top-60 padding-bottom-60"> <img class="img-responsive center-block" src="play.png" alt="">
+        <div class="text-center padding-top-15">Play builds imagination and helps children learn abstract concepts.</div>
+      </div>
+      <div class="col-md-15 padding-top-60 padding-bottom-60"> <img class="img-responsive center-block" src="read.png" alt="">
+        <div class="text-center padding-top-15">Sharing books unlocks the magic of language.</div>
+      </div>
+      <div class="col-md-15 padding-top-60 padding-bottom-60"> <img class="img-responsive center-block" src="sing.png" alt="C">
+        <div class="text-center padding-top-15">Singing helps children learn to differentiate sounds.</div>
+      </div>
+      <div class="col-md-15 padding-top-60 padding-bottom-60"> <img class="img-responsive center-block" src="talk.png" alt="">
+        <div class="text-center padding-top-15">Conversation helps children make sense of the world around them.</div>
+      </div>
+      <div class="col-md-15 padding-top-60 padding-bottom-60"> <img class="img-responsive center-block" src="write.png" alt="">
+        <div class="text-center padding-top-15">Writing, even scribbling, helps develop fine motor skills.</div>
+      </div>
+    </div>
+  </div>
+  <div id="staff-picks" style="margin-bottom: 0px" class="row shelf padding-top-120">
+    <div class="container">
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1322547114_the_hatching"><img class="cover-image" src="http://placehold.it/135x200" alt="The Hatching"> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1336800114_all_is_not_forgotten"><img src="http://placehold.it/135x200" alt="All is not Forgotten" class="cover-image"> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1312624114_the_unseen_world"><img class="cover-image" src="http://placehold.it/135x200" alt="The Unseen World"> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1350555114_the_orphan_mother"><img class="cover-image" src="http://placehold.it/135x200" alt="The Orphan Mother"> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1330913114_dark_matter"><img class="cover-image" src="http://placehold.it/135x200" alt="Dark Matter"> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15">
+        <h3 class="josefin text-left margin-left-15 padding-top-15"> <a href="#">View the complete list in the catalog <i style="color: #b0852e;" class="small fa fa-angle-double-right"></i></a> </h3>
+      </div>
+    </div>
+  </div>
+  <div class="row shelf-shadow padding-bottom-160">
+    <div class="container margin-lg-200">
+      <div class="col-sm-9">
+        <h1 class="margin-top-40">List One</h1>
+        <div class="margin-bottom-15">Enjoy a select list of books from the librarians who pick the fiction for DCL. These are the books that are getting talked about long before they are published. Put some, or all, on hold and discover something a little different. We hope that you enjoy our choices.</div>
+        <div><a class="text-uppercase" href="#">Follow DCL Staff One &raquo;</a></div>
+      </div>
+      <div class="col-sm-3 text-center padding-top-40"><img class="img-circle" src="librarian.png" alt="List One"></div>
+    </div>
+  </div>
+  <div style="margin-bottom: 0px" class="row shelf">
+    <div class="container">
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"><a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
+      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15">
+        <h3 class="josefin text-left margin-left-15 padding-top-15"> <a href="#"> View the complete list in the catalog <i style="color: #b0852e;" class="small fa fa-angle-double-right"></i></a></h3>
+      </div>
+    </div>
+  </div>
+  <div class="row shelf-shadow padding-bottom-160">
+    <div class="container margin-lg-200">
+      <div class="col-sm-9 col-sm-push-4">
+        <h1 class="margin-top-40">List Two</h1>
+        <div class="margin-bottom-15">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl.</div>
+        <div><a class="text-uppercase" href="#">Follow DCL Staff Two &raquo;</a></div>
+      </div>
+      <div class="col-sm-3 col-sm-pull-9 text-center padding-top-40"><img class="img-circle" src="librarian.png" alt="List Two"></div>
     </div>
   </div>
   <div class="row bg-gray-5 padding-top-40 padding-bottom-40">
-    <div class="container">
+    <div class="container margin-lg-200">
       <div class="col-md-6 padding-top-60 padding-bottom-60"> <img class="img-responsive" src="play-learn.png" alt="Colorado Play and Learn App"> </div>
       <div class="col-md-6 padding-top-60 padding-bottom-60">
-        <h3>Colorado Play and Learn app</h3>
+        <h3>Colorado Play &amp; Learn App</h3>
         <div>This app’s quick-learning tips and simple games and activities help develop pre-reading skills in early learners, from babies to preschoolers. Download it from <a href="https://itunes.apple.com/us/app/co-play-and-learn/id1089628503?mt=8" target="_blank">iTunes</a> or <a href="https://play.google.com/store/apps/details?id=org.copubliclibraries.playandlearn&hl=en" target="new">Google Play</a>.</div>
       </div>
     </div>
@@ -247,7 +328,6 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -267,7 +347,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../foundation">Foundation</a></li>
         <li><a href="../volunteer">Volunteer</a></li>
       </ul>
@@ -276,11 +356,14 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

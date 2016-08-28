@@ -3,27 +3,8 @@
  * support your local library
  * comments/questions? djarrett at dclibraries dot org
 ====== */
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Ubuntu:300,400,500,300italic,400italic,500italic|Nothing+You+Could+Do|Material+Icons);
-/*====== remove for now
-@font-face {
-	font-family: 'icomoon';
-	src: url('fonts/icomoon.eot?ibd2ch');
-	src: url('fonts/icomoon.eot?ibd2ch#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?ibd2ch') format('truetype'), url('fonts/icomoon.woff?ibd2ch') format('woff'), url('fonts/icomoon.svg?ibd2ch#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-====== */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons);
+
 body {
 	font-family: "Ubuntu", arial, sans-serif;
 	font-size: 16px;
@@ -56,6 +37,9 @@ h4, .h4 {
 h5, .h5 {
 	font-size: 18px;
 }
+h2.josefin {
+	font-size: 30px;
+}
 ul, ol {
 	padding-left: 25px;
 }
@@ -72,32 +56,30 @@ table a:hover {
 	text-decoration: underline!important;
 }
 table.dataTable thead th, table.dataTable thead td {
-  background-color: #eee;
-  border-bottom: 3px solid #ccc;
-  padding: 0px 18px;
+	background-color: #eee;
+	border-bottom: 3px solid #ccc;
+	padding: 0px 18px;
 }
 #book-clubs_length > label, #book-clubs_filter > label {
-  font-weight: normal;
+	font-weight: normal;
 }
-
-
-/* ====== remove for now, look at some more
+/* remove for now
 a {
-background: linear-gradient(#fff, #fff) no-repeat scroll 0 95% / 0.05em 1px, linear-gradient(#fff, #fff) no-repeat scroll 100% 95% / 0.05em 1px, rgba(0, 0, 0, 0) linear-gradient(#00a7b5, #00a7b5) repeat-x scroll 0 95% / 1px 1px;
+background: linear-gradient(#fff, #fff) no-repeat scroll 0 95% / 0.05em 1px, linear-gradient(#fff, #fff) no-repeat scroll 100% 95% / 0.05em 1px, rgba(0, 0, 0, 0) linear-gradient(#B0852E, #B0852E) repeat-x scroll 0 95% / 1px 1px;
     color: #B0852E;
     text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
 }
+*/
 a:visited, a:hover, a:focus {
 	outline: 0;
 }
 a:hover, a:focus {
-text-decoration:none;
-		   -webkit-transition-duration: 0.4s;
-   -moz-transition-duration: 0.4s;
-   -o-transition-duration: 0.4s;
-   transition-duration: 0.4s;
+	text-decoration: underline;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
-*/
 a {
 	color: #B0852E;
 	outline: 0;
@@ -133,13 +115,14 @@ a:active {
 .pointer {
 	cursor: pointer;
 }
-/* ====== remove for now
-button.close {
-	padding: 10px;
-} ====== */
+
 /* ====== typography ====== */
 .text-underline {
 	text-decoration: underline;
+}
+.text-underline:hover {
+	text-decoration: underline;
+	opacity: .8;
 }
 .text-primary, .text-primary:hover {
 	color: #4e3b59;
@@ -156,22 +139,14 @@ button.close {
 .text-danger, .text-danger:hover {
 	color: #ae2924;
 }
-/* remove for now
-.line-height-tall {
-	line-height: 1.4;
-}
-*/
+
 .font-weight-400 {
 	font-weight: 400;
 }
 .font-weight-500 {
 	font-weight: 500;
 }
-/* remove for now
-.font-weight-600 {
-	font-weight: 600;
-}
-*/
+
 .font-weight-700 {
 	font-weight: 700;
 }
@@ -187,13 +162,20 @@ blockquote footer, blockquote small, blockquote .small {
 	font-family: "Ubuntu", arial, sans-serif;
 	font-size: 16px;
 }
-.btn {
+.btn-lg {
 	white-space: normal;
+	font-size: 16px;
+	padding: 15px 18px;
 }
 .col-centered {
 	float: none;
 	margin: 0 auto;
 }
+.collapse.navbar-collapse {
+    font-family: "Open Sans",arial,sans-serif;
+    font-size: 14px;
+}
+
 .navbar {
 	margin-bottom: 0;
 }
@@ -247,6 +229,11 @@ blockquote footer, blockquote small, blockquote .small {
  color: #555;
  opacity: 1;
 }
+.form-control:focus {
+	border-color: none;
+	box-shadow: none;
+	outline: 0 none;
+}
 .search-collapsed {
 	border: 0;
 	background-color: #fff;
@@ -297,11 +284,10 @@ blockquote footer, blockquote small, blockquote .small {
 	min-width: 150px;
 }
 .cp_header_biblio_bar a.my_account_toggle.dropdown-toggle {
+	background: #006066;
 	color: #fff;
-	font-weight: 500;
 	margin-left: 20px;
 	padding: 11px 12px;
-	background: #4d4c4b none repeat scroll 0 0;
 }
 div.cp_header .cp_header_biblio_bar .my_account_toggle {
 	background: #4d4c4b none repeat scroll 0 0;
@@ -520,6 +506,18 @@ div.cp_header .cp_header_biblio_bar .my_account_toggle {
 	background-color: #4e3b59;
 	border: 0;
 	color: #ffffff;
+}
+.bibliocommons_embed_block .dropdown-menu {
+    left: -123px !important;
+}
+.bc-widget.bc-my-account-nav {
+    text-align: right;
+}
+.btn.btn-primary.btn-flat {
+    padding: 10px;
+}
+.btn.btn-primary.btn-flat:active, .btn.btn-primary.btn-flat:hover, .btn.btn-primary.btn-flat:focus {
+	transform: translateY(0px);
 }
 .btn-link {
 	color: #4e3b59;
@@ -756,6 +754,9 @@ a.hover-shadow {
 .loquacious {
 	color: #B0852E;
 }
+.text-dark {
+	color: #333;
+}
 a.fff:hover, a.fff:focus, a.fff:active, a.fff:visited {
 	color: #fff;
 }
@@ -779,6 +780,9 @@ a.teal:hover, a.teal:focus, a.teal:active, a.teal:visited {
 }
 a.lavender:hover, a.lavender:focus, a.lavender:active, a.lavender:visited {
 	color: #65587b;
+}
+a.text-dark:hover, a.text-dark:focus, a.text-dark:active, a.text-dark:visited {
+	color: #333;
 }
 /* ====== text size ====== */
 .jumbo-text {
@@ -823,7 +827,7 @@ h6.responsive-text {
 	font-size: 1.6vmax;
 }
 .icon-circle {
-	border: 1px solid #999;
+	border: 3px solid #999;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #dddddd;
@@ -861,7 +865,7 @@ a .icon-circle-white:hover {
 	transform: translateY(-2px);
 } */
 .icon-circle-white {
-	border: 1px solid #fff;
+	border: 3px solid #fff;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #fff;
@@ -875,7 +879,7 @@ a .icon-circle-white:hover {
 	width: 100px;
 }
 .icon-circle-salmon {
-	border: 1px solid #d36a50;
+	border: 3px solid #d36a50;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #d36a50;
@@ -889,7 +893,7 @@ a .icon-circle-white:hover {
 	width: 100px;
 }
 .icon-circle-wheat {
-	border: 1px solid #f5c875;
+	border: 3px solid #f5c875;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #f5c875;
@@ -903,7 +907,7 @@ a .icon-circle-white:hover {
 	width: 100px;
 }
 .icon-circle-moss {
-	border: 1px solid #90ad63;
+	border: 3px solid #90ad63;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #90ad63;
@@ -917,7 +921,7 @@ a .icon-circle-white:hover {
 	width: 100px;
 }
 .icon-circle-teal {
-	border: 1px solid #4f878c;
+	border: 3px solid #4f878c;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #4f878c;
@@ -931,7 +935,7 @@ a .icon-circle-white:hover {
 	width: 100px;
 }
 .icon-circle-lavender {
-	border: 1px solid #65587b;
+	border: 3px solid #65587b;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #65587b;
@@ -945,7 +949,7 @@ a .icon-circle-white:hover {
 	width: 100px;
 }
 .icon-circle-loquacious {
-	border: 1px solid #B0852E;
+	border: 3px solid #B0852E;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #B0852E;
@@ -1173,7 +1177,7 @@ a .icon-circle-white:hover {
 }
 .panel > .panel-heading:hover, .panel > .panel-heading:focus {
 	cursor: pointer;
-	background-color: #4D4C4B;
+	background-color: #4f878c;
 	color: #fff;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease-out;
@@ -1670,6 +1674,15 @@ a .icon-circle-white:hover {
 .padding-left-100 {
 	padding-left: 100px;
 }
+.padding-top-120 {
+	padding-top: 120px;
+}
+.padding-top-140 {
+	padding-top: 140px;
+}
+.padding-top-160 {
+	padding-top: 160px;
+}
 .padding-bottom-120 {
 	padding-bottom: 120px;
 }
@@ -1784,8 +1797,7 @@ a .icon-circle-white:hover {
 	margin-left: -20px;
 }
 .admin-card {
-	/*height: 450px;*/
-	height: 510px;
+	height: 500px;
 	font-size: 14px;
 }
 .popover {
@@ -1987,7 +1999,7 @@ a .icon-circle-white:hover {
 
 @media (min-width: 768px) {
 .admin-card {
-	height: 525px;
+	height: 560px;
 }
 .talk-bubble {
 	min-height: 115px;
@@ -2035,7 +2047,7 @@ a .icon-circle-white:hover {
 
 @media (min-width: 992px) {
 .database-box {
-	min-height: 270px;
+	min-height: 235px;
 }
 .text-left-md {
 	text-align: left;
@@ -2076,6 +2088,17 @@ a .icon-circle-white:hover {
 }
 
 @media (min-width: 1200px) {
+	
+.margin-lg-30 {
+	padding-left: 30px;
+	padding-right: 30px;
+	
+	}	
+	
+.margin-lg-50 {
+	padding-left: 50px;
+	padding-right: 50px;
+}
 .margin-lg-100 {
 	padding-left: 100px;
 	padding-right: 100px;
@@ -2122,3 +2145,44 @@ a .icon-circle-white:hover {
 }
 }
 
+/* changing out navbar collaspe - work on this: http://www.bootply.com/120604
+
+
+/*@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
+
+end */

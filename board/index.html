@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,12 +51,8 @@
   <div class="container">
     <div class="row"> 
       
-      <!-- begin LANGUAGES (desktop only) -->
-      <div class="col-md-2 col-sm-4 hidden-xs"> </div>
-      <!-- end LANGUAGES --> 
-      
       <!-- begin BCNAV -->
-      <div data-js="bc_my_account_nav" class="col-md-10 col-sm-8 col-xs-12">
+      <div data-js="bc_my_account_nav" class="col-xs-12">
         <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
           <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
             
@@ -80,17 +75,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
-            <!-- Template: t_biblionav_admin_link -->
-            <li data-js="biblionav_admin_link" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_account_selector -->
-            <li data-js="biblionav_account_selector" role="presentation"></li>
-            
-            <!-- Template: t_biblionav_log_in_out -->
-            <li data-js="biblionav_log_in_out" role="presentation"> </li>
           </ul>
         </div>
-        <div class="pull-right biblio_bar_link header_help_link"> <a testid="link_help" id="header_help" href="#"> <i style="margin:0 0.2em" class="fa fa-question-circle"></i> <span class="hidden-xs">Help</span> </a> </div>
       </div>
       <!-- end BCNAV --> 
       
@@ -113,6 +99,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -129,14 +116,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <h2 class="margin-left-15">Search</h2>
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-md-search" action="#">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
-            <input type="text" placeholder="Search the Catalog" name="q" class="form-control">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -144,13 +131,20 @@
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a>
-          <ul class="dropdown-menu" role="menu">
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Explore <span class="caret"></span> </a> 
+          <!-- <ul class="dropdown-menu" role="menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/index/best_sellers">Bestsellers</a></li>
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul> -->
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Recent Activity</a></li>
+            <li><a href="#">New Titles</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Bestsellers</a></li>
+            <li><a href="#">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -163,11 +157,12 @@
             <li><a href="../louviers">Louviers</a></li>
             <li><a href="../parker">Parker</a></li>
             <li><a href="../roxborough">Roxborough</a></li>
-            <li><a href="http://douglascountyhistory.org">Douglas County History</a></li>
+            <li><a href="../history">Douglas County History</a></li>
           </ul>
         </li>
         <li class="using-the-library-active"><a href="../using-the-library">Using the Library</a> </li>
-        <li class="book-a-room-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="../library-events">Library Events</a> </li>
         <li class="research-active"><a href="../research">Research</a> </li>
         <li class="kids-teens-active"><a href="../kids">Kids & Teens</a> </li>
@@ -188,20 +183,23 @@
           <div class="separator line-separator"><i class="fa fa-institution"></i></div>
         </div>
       </div>
-      <div class="col-sm-4 text-center">
+      <div class="col-sm-3 text-center">
         <h2 class="josefin"><i class="fa fa-comment-o" style="margin-right:10px"></i> <a href="#meetings">Meetings</a></h2>
       </div>
-      <div class="col-sm-4 text-center">
+      <div class="col-sm-3 text-center">
         <h2 class="josefin"><i class="fa fa-file-text" style="margin-right:10px"></i> <a href="dcl-board-policies.pdf" target="_blank">Bylaws & Policies</a></h2>
       </div>
-      <div class="col-sm-4 text-center">
+      <div class="col-sm-3 text-center">
+        <h2 class="josefin"><i class="fa fa-file-o" style="margin-right:10px"></i> <a href="#public-notices">Public Notices</a></h2>
+      </div>
+      <div class="col-sm-3 text-center">
         <h2 class="josefin"><i class="fa fa-thumbs-o-up" style="margin-right:10px"></i> <a href="#join">Get on Board</a></h2>
       </div>
     </div>
   </div>
   <div class="row bg-salmon text-center padding-top-40 padding-bottom-60">
     <div class="container">
-      <h2 class="fff josefin">Trustees are volunteers, appointed by the Douglas County Commissioners. The board adopts and oversees the budget, bylaws and policies. The board conducts long range planning and hires and evaluates the library director.</h2>
+      <h2 class="fff josefin">Trustees are volunteers, appointed by the Douglas County Commissioners. The board adopts and oversees the budget, bylaws and policies. The board conducts long-range planning and hires and evaluates the library director.</h2>
     </div>
   </div>
   <div class="row">
@@ -209,17 +207,17 @@
       <div class="text-center col-md-4 col-sm-6 padding-top-80 padding-bottom-80"> <img alt="Bob Morris, President/Treasurer" class="img-circle center-block" src="bmorris.jpg" />
         <h3 class="no-margin-bottom">Bob Morris</h3>
         <h6 class="text-capitalize no-margin-top">President/Treasurer</h6>
-        <p>District I, Term expires 1/17</p>
+        <p>District I, Term Expires 1/17</p>
       </div>
       <div class="text-center col-md-4 col-sm-6 padding-top-80 padding-bottom-80"> <img alt="Janiece Murphy, Vice-President" class="img-circle center-block" src="jmurphy.jpg" />
         <h3 class="no-margin-bottom">Janiece Murphy</h3>
         <h6 class="text-capitalize no-margin-top">Vice President</h6>
-        <p>District II, Term expires 1/17</p>
+        <p>District II, Term Expires 1/17</p>
       </div>
       <div class="text-center col-md-4 col-sm-6 padding-top-80 padding-bottom-80"> <img alt="David Williams, Secretary" class="img-circle center-block" src="dwilliams.jpg" />
         <h3 class="no-margin-bottom">David Williams</h3>
         <h6 class="text-capitalize no-margin-top">Secretary</h6>
-        <p>District I, Term expires 1/18</p>
+        <p>District I, Term Expires 1/18</p>
       </div>
     </div>
   </div>
@@ -227,33 +225,33 @@
     <div class="container">
       <div class="text-center col-md-3 col-sm-6 padding-top-80 padding-bottom-80"> <img alt="John Beckwith, At Large" class="img-circle center-block" src="jbeckwith.jpg" />
         <h3>John Beckwith</h3>
-        <p>At Large, Term expires 1/17</p>
+        <p>At Large, Term Expires 1/17</p>
       </div>
       <div class="text-center col-md-3 col-sm-6 padding-top-80 padding-bottom-80"> <img alt="Ron Cole" class="img-circle center-block" src="rcole.jpg" />
         <h3>Ron Cole</h3>
-        <p>District II, Term expires 1/19</p>
+        <p>District II, Term Expires 1/19</p>
       </div>
       <div class="text-center col-md-3 col-sm-6 padding-top-80 padding-bottom-80"> <img alt="John Howe" class="img-circle center-block" src="jhowe.jpg" />
         <h3>John Howe</h3>
-        <p>District I, Term expires 1/19</p>
+        <p>District I, Term Expires 1/19</p>
       </div>
       <div class="text-center col-md-3 col-sm-6 padding-top-80 padding-bottom-80"> <img alt="Eleanor Brown" class="img-circle center-block" src="ebrown.jpg" />
         <h3>Eleanor Brown</h3>
-        <p>District III, Term expires 1/19</p>
+        <p>District III, Term Expires 1/19</p>
       </div>
     </div>
   </div>
   <div class="row fff bg-moss padding-top-60 padding-bottom-120">
     <div id="meetings" class="container">
       <h1 class="fff text-center">2016 Board Meeting Schedule</h1>
-      <div class="fff">DCL Board meetings are held the last Wednesday of each month at 7 pm, except November and December. Monthly Board study session meetings are held at 11:30 am on the Thursday before the Board meeting. These meetings are for discussion only and no formal action is taken. Foundation and committee meetings are typically scheduled -as needed- from 5:30-6:30 p.m. on the same dates as the Board meetings. Foundation Board updates are also provided at the regular DCL Board meetings.</div>
+      <div class="fff">DCL board meetings are held the last Wednesday of each month at 7 p.m., except in November and December*. Monthly board study session meetings are held at 11:30 a.m. on the Thursday before the board meeting. These meetings are for discussion only and no formal action is taken. Foundation and committee meetings are typically scheduled, as needed, from 5:30-6:30 p.m. on the same dates as the board meetings. Foundation board updates are also provided at the regular DCL Board of Trustees meetings.</div>
       <div class="">
         <table class="table">
           <tbody>
           <thead>
           <th><h3 class="fff">Date & Agenda</h3></th>
             <th><h3 class="fff">Location & Minutes</h3></th>
-            </thead>
+              </thead>
           <tr>
             <td><a class="fff" href="agenda/1-27-16-agenda.pdf" target="_blank"><i class="fa fa-file-pdf-o margin-right-10"></i>January 27, 2016</a></td>
             <td><a class="fff" href="minutes/1-27-16-minutes.pdf" target="_blank"><i class="fa fa-file-pdf-o margin-right-10"></i>Lone Tree</a></td>
@@ -302,20 +300,25 @@
             <td class="opacity-6">December 14, 2016 *</td>
             <td class="opacity-6">Castle Rock</td>
           </tr>
-          </tbody>
+            </tbody>
           
         </table>
       </div>
-      <h5 class="fff">* November and December Board meetings will be held the second Wednesday of the month.</h5>
+      <h5 class="fff">* November and December board meetings will be held the second Wednesday of the month.</h5>
+    </div>
+  </div>
+  <div class="row bg-loquacious text-center padding-top-40 padding-bottom-60">
+    <div id="public-notices" class="container">
+      <h2 class="fff josefin">There are no public notices at this time.</h2>
     </div>
   </div>
   <div class="row bg-gray-5">
     <div id="join" class="container">
       <div class="text-center padding-top-80 padding-bottom-100">
         <h2 class="josefin">Get on Board!</h2>
-        <div>We are seeking talented and qualified people to join our Board of Trustees. This is a great opportunity for anyone with a passion for DCL's mission and vision, and a genuine desire to serve the community. People with backgrounds in communications, technology, finance, law, or strategic business planning are especially encouraged to apply by contacting the board liaison.</div>
+        <div>We are seeking talented and qualified people to join our Board of Trustees. This is a great opportunity for anyone with a passion for DCL's mission and vision and a genuine desire to serve the community. People with backgrounds in communications, technology, finance, law or strategic business planning are especially encouraged to apply by contacting the board liaison.</div>
         <div class="text-center padding-top-30"> <!-- Button trigger modal -->
-          <button type="button" class="btn btn-lg text-uppercase btn-primary" data-toggle="modal" data-target="#modalone">Contact the Board Liaison</button>
+          <button type="button" class="btn text-uppercase btn-primary btn-lg" data-toggle="modal" data-target="#modalone">Contact the Board Liaison</button>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -325,7 +328,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h3 class="text-center modal-title">Contact the Board Liaison</h3>
               </div>
-              <script type="text/javascript" src="https://form.jotform.com/jsform/61805944927163"></script>
+              <script type="text/javascript" src="https://form.jotform.com/jsform/61805944927163"></script> 
             </div>
           </div>
         </div>
@@ -346,7 +349,6 @@
       <ul>
         <li><a href="../who-we-are">Who We Are</a></li>
         <li><a href="../join-our-team">Join Our Team</a></li>
-        <li><a href="../public-notices">Public Notices</a></li>
         <li><a href="../press-kit">Press Kit</a></li>
       </ul>
     </div>
@@ -366,7 +368,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Support</h5>
       <ul>
-        <li><a href="../donate">Donate</a></li>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
         <li><a href="../foundation">Foundation</a></li>
         <li><a href="../volunteer">Volunteer</a></li>
       </ul>
@@ -375,13 +377,14 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the old catalog &raquo;</a></span><span class="pull-right"> &copy;
-      <script>document.write(new Date().getFullYear())</script>
-      Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a class="wheat" href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:303-791-7323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -393,5 +396,4 @@
 
 </script>
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
