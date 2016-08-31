@@ -1,8 +1,7 @@
-/*
- * awesome scripts for DCL
+/* ====================================================
  * support your local library
  * comments/questions? djarrett at dclibraries dot org
-*/
+======================================================= */
 
 // josh's script to pull in the alert
 // slide all dropdowns
