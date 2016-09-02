@@ -1,20 +1,19 @@
-/* ======
- * awesome styles for DCL
+/* ====================================================
  * support your local library
  * comments/questions? djarrett at dclibraries dot org
-====== */
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons);
-
+   ==================================================== */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons);
 body {
 	font-family: "Ubuntu", arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
 }
-.josefin {
-	font-family: "Josefin Slab", garmond, serif;
-	font-weight: 600;
-	line-height: 1.2;
+.roboto {
+	font-family: "Roboto Slab", palantino, serif;
+	font-weight: 300;
+	line-height: 1.3;
+	letter-spacing: -0.4px;
 	text-rendering: optimizeLegibility;
 }
 .nothing {
@@ -27,6 +26,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: "Ubuntu", arial, sans-serif;
 	font-weight: 300;
 	color: #666;
+	text-rendering: optimizeLegibility;
+	letter-spacing: -0.8px;
 }
 h4, h5, h6, .h1, .h4, .h5, .h6 {
 	line-height: 1.6em;
@@ -37,8 +38,11 @@ h4, .h4 {
 h5, .h5 {
 	font-size: 18px;
 }
-h2.josefin {
-	font-size: 30px;
+h1.roboto {
+	font-size: 32px;
+}
+h2.roboto {
+	font-size: 26px;
 }
 ul, ol {
 	padding-left: 25px;
@@ -115,7 +119,6 @@ a:active {
 .pointer {
 	cursor: pointer;
 }
-
 /* ====== typography ====== */
 .text-underline {
 	text-decoration: underline;
@@ -139,14 +142,12 @@ a:active {
 .text-danger, .text-danger:hover {
 	color: #ae2924;
 }
-
 .font-weight-400 {
 	font-weight: 400;
 }
 .font-weight-500 {
 	font-weight: 500;
 }
-
 .font-weight-700 {
 	font-weight: 700;
 }
@@ -172,10 +173,9 @@ blockquote footer, blockquote small, blockquote .small {
 	margin: 0 auto;
 }
 .collapse.navbar-collapse {
-    font-family: "Open Sans",arial,sans-serif;
-    font-size: 14px;
+	font-family: "Open Sans", arial, sans-serif;
+	font-size: 14px;
 }
-
 .navbar {
 	margin-bottom: 0;
 }
@@ -427,6 +427,8 @@ div.cp_header .cp_header_biblio_bar .my_account_toggle {
 /* ====== staff picks ====== */
 .cover-image {
 	box-shadow: 0 5px 15px -7px #000;
+	max-height: 200px;
+	max-width: 180px;
 	opacity: 1;
 	position: relative;
 	top: 20px;
@@ -508,13 +510,13 @@ div.cp_header .cp_header_biblio_bar .my_account_toggle {
 	color: #ffffff;
 }
 .bibliocommons_embed_block .dropdown-menu {
-    left: -123px !important;
+	left: -123px !important;
 }
 .bc-widget.bc-my-account-nav {
-    text-align: right;
+	text-align: right;
 }
 .btn.btn-primary.btn-flat {
-    padding: 10px;
+	padding: 10px;
 }
 .btn.btn-primary.btn-flat:active, .btn.btn-primary.btn-flat:hover, .btn.btn-primary.btn-flat:focus {
 	transform: translateY(0px);
@@ -934,12 +936,39 @@ a .icon-circle-white:hover {
 	text-align: center;
 	width: 100px;
 }
+.icon-circle-teal-reversed {
+	background-color: #4f878c;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 60px;
+	height: 100px;
+	line-height: 90px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+}
 .icon-circle-lavender {
 	border: 3px solid #65587b;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #65587b;
 	background-color: #fff;
+	font-size: 60px;
+	height: 100px;
+	line-height: 90px;
+	margin: 0 auto;
+	pading-left: 4px;
+	text-align: center;
+	width: 100px;
+}
+.icon-circle-lavender-reversed {
+	border: 3px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #fff;
+	background-color: #65587b;
 	font-size: 60px;
 	height: 100px;
 	line-height: 90px;
@@ -1211,14 +1240,15 @@ a .icon-circle-white:hover {
 	margin-right: 20px;
 }
 /* ====== alert color classes ====== */
+.alert-warning {
+	background-color: #d36a50;
+	text-align: center;
+}
 .alert-success {
 	background-color: #74894e;
 }
 .alert-info {
 	background-color: #3975AF;
-}
-.alert-warning {
-	background-color: #d36a50;
 }
 .alert-danger {
 	background-color: #ae2924;
@@ -2088,13 +2118,10 @@ a .icon-circle-white:hover {
 }
 
 @media (min-width: 1200px) {
-	
 .margin-lg-30 {
 	padding-left: 30px;
 	padding-right: 30px;
-	
-	}	
-	
+}
 .margin-lg-50 {
 	padding-left: 50px;
 	padding-right: 50px;

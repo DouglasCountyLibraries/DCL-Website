@@ -43,13 +43,16 @@
 .kids-teens-active {
 	background-color: #f5f5f5;
 }
+.shelf-container img {
+	margin: 15px 15px 17px 15px;
+	vertical-align: bottom;
+}
 
 @media (min-width: 992px) {
 .shelf {
 	border-bottom: 25px solid transparent;
 	border-image: url("shelf.jpg") 30 30 30 30 round round;
 	border-top: 0 none;
-	margin-bottom: 1.5em;
 	padding-bottom: 0;
 }
 .shelf-shadow {
@@ -57,17 +60,6 @@
 	background-repeat: repeat-x;
 }
 }
-
-/* remove for now   @media (min-width: 480px) {
-	.shelf {
-	border-bottom: 0px solid transparent;
-	border-image: none;
-	border-top: 0 none;
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-	
-	}*/
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -83,23 +75,23 @@
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
-            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="#"> Log In / Register </a> </li>
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
             <li data-js="divider_logged_out" class="divider" role="presentation"></li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Library Dashboard</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Checked Out</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">On Hold</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Fees</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/checkedout">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/holds">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Shelves</a> </li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="#">Lists</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Profile</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="#">My Settings</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/account/personal_information">My Settings</a> </li>
           </ul>
         </div>
       </div>
@@ -117,14 +109,14 @@
         </div>
       </div>
       <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
-        <form id="searchForm" class="search dcl-search" action="#">
+        <form id="searchForm" class="search dcl-search" action="https://dcl.bibliocommons.com/search">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
             <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
-          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
+          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -141,14 +133,14 @@
     <!-- Collect the search form for toggling -->
     <div class="collapse navbar-collapse" id="bs-search">
       <ul class="nav navbar-nav hidden-md hidden-lg">
-        <form id="searchForm" class="search dcl-md-search" action="#">
-          <div class="input-group">
+        <form id="searchForm" class="search dcl-md-search" action="https://dcl.bibliocommons.com/search">
+          <div class="input-group margin-left-15 margin-right-15">
             <input type="hidden" value="smart" name="t" id="search_param">
             <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
-          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="#">Advanced Search</a></span></div>
+          <div class="text-right margin-right-15"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -165,11 +157,11 @@
             <li><a href="https://tscpl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
           </ul> -->
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Recent Activity</a></li>
-            <li><a href="#">New Titles</a></li>
-            <li><a href="#">Awards</a></li>
-            <li><a href="#">Bestsellers</a></li>
-            <li><a href="#">Staff Picks</a></li>
+            <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/bestsellers">Bestsellers</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
           </ul>
         </li>
         <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
@@ -199,7 +191,8 @@
 </nav>
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
-  <!-- InstanceBeginEditable name="Content" --><!-- #BeginLibraryItem "/Library/kids-nav.lbi" -->  <div class="row no-gutter shadow-low">
+  <!-- InstanceBeginEditable name="Content" --><!-- #BeginLibraryItem "/Library/kids-nav.lbi" -->
+  <div class="row no-gutter shadow-low">
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-lavender hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Teens</h5>
@@ -216,9 +209,9 @@
         <a href="../storytime"><span class="link-spanner"></span></a> </div>
     </div>
     <div class="col-md-2">
-      <div class="padding-top-5 padding-bottom-5 text-center bg-salmon hover-shadow">
+      <div class="padding-top-5 padding-bottom-5 text-center bg-dead-lavender hover-shadow">
         <h5 class="fff font-weight-500 text-uppercase no-margin">Events</h5>
-        <a href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=Early+Talkers+(Birth+-++2years)%2C+Talkers+(2+to+3+years)%2C+Pre-Readers+(3+to+5+years)%2C+Children&et=Authors%2C+Book+Club%2FDiscussion+Group%2C+Branch+Program%2C+Business%2C+Children%2C+Closure%2C+District+Program%2C+Educational+Class%2C+Entertainment-Focused%2C+Literacy%2C+On-Site+Community+Partnership&lib=7,%200,%201,%202,%203,%204,%205"><span class="link-spanner"></span></a> </div>
+        <a href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=Early+Talkers+(Birth+-++2years)%2C+Talkers+(2+to+3+years)%2C+Pre-Readers+(3+to+5+years)%2C+Children&et=Authors%2C+Book+Club%2FDiscussion+Group%2C+Branch+Program%2C+Business%2C+Children%2C+Closure%2C+District+Program%2C+Educational+Class%2C+Entertainment-Focused%2C+Literacy%2C+On-Site+Community+Partnership&lib=7,%200,%201,%202,%203,%204,%205" target="_blank"><span class="link-spanner"></span></a> </div>
     </div>
     <div class="col-md-2">
       <div class="padding-top-5 padding-bottom-5 text-center bg-moss hover-shadow">
@@ -230,7 +223,9 @@
         <h5 class="fff font-weight-500 text-uppercase no-margin">Parents & Teachers</h5>
         <a href="../parents-teachers"><span class="link-spanner"></span></a> </div>
     </div>
-  </div><!-- #EndLibraryItem --><div class="row padding-top-60 padding-bottom-100">
+  </div>
+  <!-- #EndLibraryItem -->
+  <div class="row padding-top-60 padding-bottom-100">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400">Read, Listen, Watch</h1>
@@ -238,10 +233,11 @@
           <div class="separator line-separator"><i class="fa fa-circle-o"></i></div>
         </div>
       </div>
-      <h2 class="josefin text-center">These engaging e-books and downloadable resources make learning fun and easy.<br>Looking for recommendations? <a href="#staff-picks">Check out our featured staff picks</a>.</h2>
+      <h2 class="roboto text-center">These engaging e-books and downloadable resources make learning fun and easy.<br>
+        Looking for recommendations? <a href="#staff-picks">Check out our featured staff picks</a>.</h2>
     </div>
   </div>
-  <div class="row fff bg-teal padding-top-60 padding-bottom-80">
+  <div class="row fff bg-teal padding-top-60 padding-bottom-80 margin-bottom-160">
     <h1 class="fff text-center"><a class="fff text-underline" href="../storytime">Storytime</a></h1>
     <div class="container">
       <div class="col-md-15 padding-top-60 padding-bottom-60"> <img class="img-responsive center-block" src="play.png" alt="">
@@ -261,56 +257,52 @@
       </div>
     </div>
   </div>
-  <div id="staff-picks" style="margin-bottom: 0px" class="row shelf padding-top-120">
-    <div class="container">
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1322547114_the_hatching"><img class="cover-image" src="http://placehold.it/135x200" alt="The Hatching"> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1336800114_all_is_not_forgotten"><img src="http://placehold.it/135x200" alt="All is not Forgotten" class="cover-image"> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1312624114_the_unseen_world"><img class="cover-image" src="http://placehold.it/135x200" alt="The Unseen World"> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1350555114_the_orphan_mother"><img class="cover-image" src="http://placehold.it/135x200" alt="The Orphan Mother"> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href="https://dcl.bibliocommons.com/item/show/1330913114_dark_matter"><img class="cover-image" src="http://placehold.it/135x200" alt="Dark Matter"> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15">
-        <h3 class="josefin text-left margin-left-15 padding-top-15"> <a href="#">View the complete list in the catalog <i style="color: #b0852e;" class="small fa fa-angle-double-right"></i></a> </h3>
-      </div>
-    </div>
+  <div id="epic-reads" class="row shelf">
+    <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1275780114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781619636002/MC.GIF&client=dougp&type=xw12&oclc=" alt="A Curious Tale of the In-Between"></a> <a href="https://dcl.bibliocommons.com/item/show/1245837114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781423180852/MC.GIF&client=dougp&type=xw12&oclc=" alt="Zodiac" class="cover-image"></a> <a href="https://dcl.bibliocommons.com/item/show/1223214114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780375970641/MC.GIF&client=dougp&type=xw12&oclc=" alt="The Fourteenth Goldfish"></a> <a href="https://dcl.bibliocommons.com/item/show/1233277114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781419712173/MC.GIF&client=dougp&type=xw12&oclc=" alt="El Deafo"></a> <a href="https://dcl.bibliocommons.com/item/show/1275778114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781250050878/MC.GIF&client=dougp&type=xw12&oclc=" alt="The Book of Dares" class="cover-image"></a> </div>
   </div>
   <div class="row shelf-shadow padding-bottom-160">
     <div class="container margin-lg-200">
       <div class="col-sm-9">
-        <h1 class="margin-top-40">List One</h1>
-        <div class="margin-bottom-15">Enjoy a select list of books from the librarians who pick the fiction for DCL. These are the books that are getting talked about long before they are published. Put some, or all, on hold and discover something a little different. We hope that you enjoy our choices.</div>
-        <div><a class="text-uppercase" href="#">Follow DCL Staff One &raquo;</a></div>
+        <h1 class="margin-top-40"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/694320317_latest_review_crew_picks">Epic Reads</a></h1>
+        <div class="margin-bottom-15">These are the books that will keep kids reading all year long! From adventurous, to suspenseful, to downright hilarious — and just about everything in between — these specially chosen, kid-friendly reads offer something for everyone. </div>
+        <div><a class="text-uppercase" href="https://dcl.bibliocommons.com/user_profile/692283576">Follow DCLKids &raquo;</a></div>
       </div>
-      <div class="col-sm-3 text-center padding-top-40"><img class="img-circle" src="librarian.png" alt="List One"></div>
+      <div class="col-sm-3 text-center padding-top-40"><img class="img-circle" src="epic-reads.png" alt="List One"></div>
     </div>
   </div>
-  <div style="margin-bottom: 0px" class="row shelf">
-    <div class="container">
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"><a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15"> <a href=""><img class="cover-image" src="http://placehold.it/135x200" alt=""> </a></div>
-      <div class="col-xs-6 col-sm-4 col-md-2 text-center padding-bottom-15">
-        <h3 class="josefin text-left margin-left-15 padding-top-15"> <a href="#"> View the complete list in the catalog <i style="color: #b0852e;" class="small fa fa-angle-double-right"></i></a></h3>
-      </div>
+  <div id="storytime-favorites" class="row shelf">
+    <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1330503114"><img src="https://secure.syndetics.com/index.aspx?isbn=9780545865043/MC.GIF&client=dougp&type=xw12&oclc=" alt="Barnacle is Bored" class="cover-image"></a> <a href="https://dcl.bibliocommons.com/item/show/1323297114"><img class="cover-image" src="http://www.netread.com/jcusers/1369/3132116/image/lgcover.6653456.jpg" alt="Grumpy Pants"></a> <a href="https://dcl.bibliocommons.com/item/show/1318641114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781481456159/MC.GIF&client=dougp&type=xw12&oclc=" alt="Bare &amp; Hare" class="cover-image"> </a> <a href="https://dcl.bibliocommons.com/item/show/1308937114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780062377005/MC.GIF&client=dougp&type=xw12&oclc=" alt="Oops Pounce Quick Run"></a> <a href="https://dcl.bibliocommons.com/item/show/1279383114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780763680060/MC.GIF&client=dougp&type=xw12&oclc=" alt="Get out of my Bath"></a> 
+      
+      <!--<h3 class="roboto text-left margin-left-15 padding-top-15"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537_growing_readers_favorites"> View the complete list in the catalog <i style="color: #b0852e;" class="small fa fa-angle-double-right"></i></a></h3>--> 
     </div>
   </div>
   <div class="row shelf-shadow padding-bottom-160">
     <div class="container margin-lg-200">
       <div class="col-sm-9 col-sm-push-4">
-        <h1 class="margin-top-40">List Two</h1>
-        <div class="margin-bottom-15">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl.</div>
-        <div><a class="text-uppercase" href="#">Follow DCL Staff Two &raquo;</a></div>
+        <h1 class="margin-top-40"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537_growing_readers_favorites">Storytime Favorites</a></h1>
+        <div class="margin-bottom-15">These are the hand-picked favorites of our childhood literacy specialist. These books incorporate fun, play and learning in a way that encourages literacy growth. Enjoy some or all of these with your growing reader!</div>
+        <div><a class="text-uppercase" href="https://dcl.bibliocommons.com/user_profile/692283576">Follow DCLkids &raquo;</a></div>
       </div>
-      <div class="col-sm-3 col-sm-pull-9 text-center padding-top-40"><img class="img-circle" src="librarian.png" alt="List Two"></div>
+      <div class="col-sm-3 col-sm-pull-9 text-center padding-top-40"><img class="img-circle" src="otter.png" alt="List Two"></div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-40 padding-bottom-40">
-    <div class="container margin-lg-200">
-      <div class="col-md-6 padding-top-60 padding-bottom-60"> <img class="img-responsive" src="play-learn.png" alt="Colorado Play and Learn App"> </div>
-      <div class="col-md-6 padding-top-60 padding-bottom-60">
-        <h3>Colorado Play &amp; Learn App</h3>
-        <div>This app’s quick-learning tips and simple games and activities help develop pre-reading skills in early learners, from babies to preschoolers. Download it from <a href="https://itunes.apple.com/us/app/co-play-and-learn/id1089628503?mt=8" target="_blank">iTunes</a> or <a href="https://play.google.com/store/apps/details?id=org.copubliclibraries.playandlearn&hl=en" target="new">Google Play</a>.</div>
+  <div class="row bg-gray-5 padding-top-60 padding-bottom-80">
+    <div class="container">
+      <div class="col-md-4 padding-top-30 padding-bottom-40" id="check-out-colorado">
+        <div class="icon-circle-salmon padding-bottom-15"><i class="fa fa-child"></i> </div>
+        <h2 class="roboto text-center"><a href="http://www.emedia2go.org/5B069C7A-696B-45CB-9F69-6E6EA1882EF5/10/45/en/Default.htm" target="_blank">OverDrive Kids</a></h2>
+        <div class="text-center">Safe e-book search for readers 12 and younger. Filter by format, subject, device or reading level. Includes read-alongs for preschoolers!</div>
+      </div>
+      <div class="col-md-4 padding-top-30 padding-bottom-40" id="tumble-books">
+        <div class="icon-circle-lavender padding-bottom-15"><i class="fa fa-rocket"></i> </div>
+        <h2 class="roboto text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=tumblebooks" target="_blank">TumbleBooks</a></h2>
+        <div class="text-center">Access animated, talking picture books, read-along chapter books, and National Geographic kids’ videos for your mobile device.</div>
+      </div>
+      <div class="col-md-4 padding-top-30 padding-bottom-40" id="colorado-play-learn">
+        <div class="icon-circle-moss padding-bottom-15"><i class="fa fa-paw"></i> </div>
+        <h2 class="roboto text-center">Colorado Play<br>
+          &amp; Learn App</h2>
+        <div class="text-center">This app’s quick-learning tips and simple games and activities help develop pre-reading skills in early learners, from babies to preschoolers. Download it from <a href="https://itunes.apple.com/us/app/co-play-and-learn/id1089628503?mt=8" target="_blank">iTunes</a> or <a href="https://play.google.com/store/apps/details?id=org.copubliclibraries.playandlearn&hl=en" target="_blank">Google Play</a>.</div>
       </div>
     </div>
   </div>
@@ -319,7 +311,7 @@
   <div class="text-center">
     <h3>Share your experience<span class="nothing margin-left-15">#DCL</span></h3>
   </div>
-  <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://douglascountylibraries.org/files/images/youtube.png" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
+  <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
 </div>
 <footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
   <div class="container">
