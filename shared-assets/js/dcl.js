@@ -4,7 +4,6 @@
    ==================================================== */
 
 // josh's script to pull in the alert
-// slide all dropdowns
 // smooth page scroll for page anchors
 // scrollme
 // stellar
@@ -20,16 +19,6 @@ jQuery.get("https://s3.amazonaws.com/website.alert/alert.txt")
 	if ( data !=null ){	jQuery("#global-alert").show().append( data );}
   });
   
-  
-// slide transition for dropdowns
-/* ------------------------------------------------------------ */
-
-  $(function(){
-    $('.dropdown-toggle').click(function() {
-      $(this).next('.dropdown-menu').slideToggle(400);
-  });
-});
-
 // smooth page scroll for page anchors
 /* ------------------------------------------------------------ */
 
