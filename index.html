@@ -62,23 +62,6 @@ document.write('<img class="img-responsive center-block" src="'+theImages[whichI
 
 //-->
 </script>
-<script type="text/javascript">
-window.onload=function() {
-function countdown() {
-if ( typeof countdown.counter == 'undefined' ) {
-    countdown.counter = 15; // initial count
-    }
-if(countdown.counter > 0) {
-	document.getElementById('count').innerHTML = countdown.counter--;
-    setTimeout(countdown, 1000);
-    }
-else {
-    location.href = 'http://douglascountylibraries.org';
-    }
-}
-countdown();
-};
-</script>
 </head>
 <body>
 <div class="container margin-bottom-160">
@@ -98,8 +81,6 @@ showImage();
       &bull; Better graphics
     </div>
   </div>
-  
-  <div class="text-center"><h4 class="no-margin-bottom">You will be redirected to <a href="http://douglascountylibraries.org">douglascountylibraries.org</a> in</h4><h1 class="roboto no-margin no-padding"><span id="count"></span></h1><h4 class="no-margin-top">seconds.</h4></div>
 
   <a href="http://douglascountylibraries.org"><img class="center-block margin-top-30" src="gray-logo.gif" alt="Douglas County Libraries"/></a>
 </div>
