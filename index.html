@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning."/>
 <link rel="canonical" href="http://dcl.org"/>
-<title>DCL | Home</title>
+<!-- InstanceBeginEditable name="title" -->
+<title>DCL | Douglas County Libraries is a passionate advocate for literacy and lifelong learning</title>
+<!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png">
@@ -25,8 +28,8 @@
 <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#007b83">
 <meta name="theme-color" content="#ffffff">
 <link type="text/css" rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" media="all" />
-<link type="text/css" rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" media="all" />
-<link type="text/css" rel="stylesheet" href="shared-assets/css/dcl.css">
+<link type="text/css" rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../shared-assets/css/dcl.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -35,54 +38,367 @@
     <![endif]-->
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="shared-assets/js/dcl.js"></script>
-<script>
-
-var theImages = new Array()
-
-theImages[0] = '../random/change1.png'
-theImages[1] = '../random/change2.png'
-theImages[2] = '../random/change3.png'
-theImages[3] = '../random/change4.png'
-theImages[4] = '../random/change5.png'
-
-var j = 0
-var p = theImages.length;
-
-var preBuffer = new Array()
-for (i = 0; i < p; i++){
-   preBuffer[i] = new Image()
-   preBuffer[i].src = theImages[i]
+<script src="../shared-assets/js/dcl.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<style>
+.btn.btn-sm.btn-default {
+	background-color: #fff;
+	box-shadow: none;
+	color: #666;
+	padding: 10px;
+	text-transform: uppercase;
 }
-
-var whichImage = Math.round(Math.random()*(p-1));
-function showImage(){
-document.write('<img class="img-responsive center-block" src="'+theImages[whichImage]+'">');
+.popover-content {
+	font-size: 1.2em;
+	padding: 30px;
 }
-
-//-->
-</script>
+</style>
+<!-- InstanceEndEditable -->
 </head>
 <body>
-<div class="container margin-bottom-160">
-  <div class="random margin-top-60 margin-bottom-40"><script language="JavaScript">
-showImage();
-</script> 
-  </div>
-  <div class="margin-top-30 text-center">
-    <h4>Watch this space for a new and improved Douglas County Libraries website!</br>DCL.org (shorter URL!) will feature:</h4>
-  </div>
-  <div class="text-center">
-    <div>
-      &bull; Friendlier address</br>
-      &bull; Improved search functionality</br>
-      &bull; Mobile-friendly format (use us on your phone!)</br>
-      &bull; More intuitive navigation</br>
-      &bull; Better graphics
+<div class="cp_header_biblio_bar">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- begin BCNAV -->
+      <div data-js="bc_my_account_nav" class="col-xs-12">
+        <div id="step5" class="pull-right biblio_bar_link biblio_bar_my_account"> <a data-target="#" href="#" data-toggle="dropdown" role="button" class="dropdown-toggle my_account_toggle" aria-haspopup="true" aria-expanded="false"> Login / My DCL <span class="caret margin-left-15 margin-right-5"></span> </a>
+          <ul aria-labelledby="biblionav_trigger" role="menu" class="dropdown-menu biblionav_my_account">
+            
+            <!-- Template - t_biblionav_my_account_user_info -->
+            
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
+            <li data-js="divider_logged_out" class="divider" role="presentation"></li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">My Borrowing</li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/checkedout">Checked Out</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/holds">On Hold</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">My Collections</li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/for_later">For Later Shelf</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Completed Shelf</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/account/personal_information">My Settings</a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- end BCNAV --> 
+      
     </div>
   </div>
-
-  <a href="http://douglascountylibraries.org"><img class="center-block margin-top-30" src="gray-logo.gif" alt="Douglas County Libraries"/></a>
 </div>
+<div class="client_and_search">
+  <div class="container ">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="cp_header_client_area">
+          <div class="logo"> <a href="../home"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
+        <form id="searchForm" class="search dcl-search" action="https://dcl.bibliocommons.com/search">
+          <div class="input-group">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
+            <span class="input-group-btn">
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </span> </div>
+          <div class="text-right"><span class="small margin-right-80"><a href="../search">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed search-collapsed" data-toggle="collapse" data-target="#bs-search"> <span class="sr-only">Toggle search</span> <i class="fa fa-search"></i> </button>
+      <button type="button" class="navbar-toggle collapsed menu-collapsed" data-toggle="collapse" data-target="#bs-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    </div>
+    
+    <!-- Collect the search form for toggling -->
+    <div class="collapse navbar-collapse" id="bs-search">
+      <ul class="nav navbar-nav hidden-md hidden-lg">
+        <form id="searchForm" class="search dcl-md-search" action="https://dcl.bibliocommons.com/search">
+          <div class="input-group margin-left-15 margin-right-15">
+            <input type="hidden" value="smart" name="t" id="search_param">
+            <input type="text" placeholder="Find Books, Movies, Music & More &raquo;" name="q" class="form-control">
+            <span class="input-group-btn">
+            <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
+            </span> </div>
+          <div class="text-right margin-right-15"><a href="../search">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
+        </form>
+      </ul>
+    </div>
+    
+    <!-- Collect the nav links for toggling -->
+    <div class="collapse navbar-collapse" id="bs-nav">
+      <ul class="nav navbar-nav">
+        <li class="dropdown" id="appSettings2"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <b class="caret"></b> </a>
+          <ul class="dropdown-menu">
+            <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
+            <li><a id="test3" href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/bestsellers">Bestsellers</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="../locations">All Locations</a></li>
+            <li><a href="../castle-pines">Castle Pines</a></li>
+            <li><a href="../castle-rock">Castle Rock</a></li>
+            <li><a href="../highlands-ranch">Highlands Ranch</a></li>
+            <li><a href="../lone-tree">Lone Tree</a></li>
+            <li><a href="../louviers">Louviers</a></li>
+            <li><a href="../parker">Parker</a></li>
+            <li><a href="../roxborough">Roxborough</a></li>
+            <li><a href="../history">Douglas County History</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" id="appSettings"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Using the Library <b class="caret"></b> </a>
+          <ul class="dropdown-menu">
+            <li><a href="../library-basics">Library Basics</a></li>
+            <li> <a id="test2" href="http://getacard.org/v2/index.html" target="_blank">Get a Library Card</a> </li>
+            <li><a href="../book-clubs">Book Clubs</a></li>
+            <li><a href="../staff-recommendations">Staff Recommendations</a></li>
+            <li><a href="../bizinfo">Business Resources</a></li>
+            <li><a href="../research/online-learning">Online Learning</a></li>
+            <li><a href="../adult-literacy">HSE, ESL, US Citizenship, Proctoring</a></li>
+          </ul>
+        </li>
+        <li class="dropdown kids-teens-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kids & Teens <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="../storytime">Storytime</a></li>
+            <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
+            <li><a href="http://douglascountylibraries.evanced.info/signup/calendar?ag=724,729,731,730&et=18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+            <li><a href="../parents-teachers">Parents & Teachers</a></li>
+            <li><a href="../research/students">Homework Help</a></li>
+            <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
+          </ul>
+        </li>
+        <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
+        <li id="step3" class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
+        <li class="events-active"><a href="../library-events">Library Events</a> </li>
+        <li class="research-active"><a href="../research">Research</a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<div class="container-fluid">
+  <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
+  <!-- InstanceBeginEditable name="Content" -->
+  <div id="starttour" class="pointer hidden-xs">
+    <div class="row text-uppercase alert alert-warning">Welcome to DCL.org. Get started with a quick tour!</div>
+  </div>
+  <div class="row border-top padding-top-30">
+    <div class="container margin-lg-100">
+      <div class="col-md-7"><img class="img-responsive center-block" src="boo.jpg" alt="Boo!"/></div>
+      <div class="col-md-5 padding-top-md-120">
+        <h2 class="roboto"><a href="http://blogs.douglascountylibraries.org/blog/2016/10/17/spooky-movies-for-a-thrilling-night/">Horror Movies to Check Out for a Thrilling Night</a></h2>
+        <h2 class="roboto"><a href="http://blogs.douglascountylibraries.org/blog/2016/10/17/tunes-for-your-ghoulish-get-together/">Tunes for Your Ghoulish Get-Together</a></h2>
+        <h2 class="roboto"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/718790338_terrifying_books_that_are_worth_the_nightmares">Terrifying Books That Are Worth the Nightmares</a></h2>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator center-block"><i class="fa fa-chevron-down"></i></div>
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="col-md-4 padding-top-30 padding-bottom-40 radius-block">
+        <div class="bg-white shadow-low hover-shadow text-center radius-block">
+          <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 radius-block" style="background:transparent url(lynda.jpg) top center/cover;">
+            <h2 class="roboto fff">Lynda.com</h2>
+            <div class="text-uppercase fff font-weight-400">Log in and learn new skills</div>
+            <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank"><span class="link-spanner"></span></a> </div>
+        </div>
+      </div>
+      <div class="col-md-4 padding-top-30 padding-bottom-40 radius-block">
+        <div class="bg-white shadow-low hover-shadow text-center radius-block">
+          <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 radius-block" style="background:transparent url(halloween.jpg) top center/cover;">
+            <h2 class="roboto fff">Halloween Costumes</h2>
+            <div class="text-uppercase fff font-weight-400">For Book Lovers!</div>
+            <a href="http://blogs.douglascountylibraries.org/blog/2016/10/04/halloween-costumes-for-book-lovers/"><span class="link-spanner"></span></a> </div>
+        </div>
+      </div>
+      <div class="col-md-4 padding-top-30 padding-bottom-40 radius-block">
+        <div class="bg-white shadow-low hover-shadow text-center radius-block">
+          <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15 radius-block" style="background:transparent url(parenting.jpg) top center/cover;">
+            <h2 class="roboto fff">Science of Parenthood</h2>
+            <div class="text-uppercase fff font-weight-400">Because raising kids defies logic</div>
+            <a href="http://douglascountylibraries.evanced.info/signup/eventdetails?EventID=109023" target="_blank"><span class="link-spanner"></span></a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
+  <div class="bg-gray-10 clearfix padding-bottom-20">
+    <div class="col-sm-6">
+      <div class="text-center padding-top-20">
+        <h3>Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h3>
+      </div>
+      <!--need a decision<div class="text-center">
+      <h4><a href="../request-materials">Looking for something we don't have?</a></h4>
+    </div>--> 
+    </div>
+    <div class="col-sm-6">
+      <div class="text-center">
+        <h3><span class="text-nowrap">Share your experience</span> <span class="nothing margin-left-15">#DCLNewDigs</span></h3>
+      </div>
+      <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
+    </div>
+  </div>
+</div>
+<footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
+  <div class="container">
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">About</h5>
+      <ul>
+        <li><a href="../who-we-are">Who We Are</a></li>
+        <li><a href="../join-our-team">Join Our Team</a></li>
+        <li><a href="../press-kit">Press Kit</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">Contact</h5>
+      <ul>
+        <li id="step4"><a href="http://answers.douglascountylibraries.org/" target="_blank">Help</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">Connect</h5>
+      <ul>
+        <li><a href="../newsletters">eNews Sign-Up</a></li>
+        <li><a href="http://blogs.douglascountylibraries.org">DCL Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h5 class="font-weight-500 no-margin">Support</h5>
+      <ul>
+        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
+        <li><a href="../foundation">Foundation</a></li>
+        <li><a href="../volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="copyright bg-gray-90">
+  <div class="container padding-top-15 padding-bottom-30">
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO&nbsp;&nbsp;80104</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+  </div>
+</div>
+<!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
+<!-- InstanceBeginEditable name="scripts" -->
+<link rel="stylesheet" type="text/css" href="bootstrap-tour.css">
+<script src="bootstrap-tour.js"></script> 
+<script>
+// Instance the tour
+var tour = new Tour({
+  debug: true,
+  storage: false,
+  steps: [
+  {
+    element: "#appSettings",
+    content: "Need a library card?",
+    placement: "bottom",
+	backdrop: true,
+  },
+  {
+    element: "#test2",
+    content: "Sign up here! You won't regret it.",
+    placement: "right",
+	backdrop: true,
+    onShow: function() {
+      return $("#appSettings").addClass("open");
+    },      
+    onHide: function() {
+      $("#appSettings").removeClass("open"); 
+    } 
+  } ,
+   {
+    element: "#step3",
+    content: "Need a meeting or study room? Making a reservation is easy following the links on this page.",
+    placement: "bottom",
+	backdrop: true,
+  }, 
+    {
+    element: "#step4",
+    content: "Want to talk to a real person? No robots here! Call or chat with your questions.",
+    placement: "top",
+	backdrop: true,
+  },   
+   {
+    element: "#appSettings2",
+    content: "Looking for new books and movies?",
+    placement: "bottom",
+	backdrop: true,
+  },
+  {
+    element: "#test3",
+    content: "Click New Titles to discover what’s &#34;Just Arrived&#34; and what’s &#34;On Order.&#34;",
+    placement: "right",
+	backdrop: true,
+    onShow: function() {
+      return $("#appSettings2").addClass("open");
+    },      
+    onHide: function() {
+      $("#appSettings2").removeClass("open"); 
+    } 
+  } ,  
+    {
+    element: "#step5",
+    content: "You must register before using the new catalog, using your full 14-digit barcode. After that, you can create a user name for easy access on future visits! Your PIN is most likely the last four digits of your phone number. Happy searching! We hope you discover a great new read!",
+    placement: "bottom",
+	backdrop: true,
+  }
+]});
+
+tour.init();
+
+$("#starttour").click(function(){
+    tour.start();
+    });
+$(document).on('click', '.popover-navigation [data-role=next],.popover-navigation [data-role=prev]', function (e) {
+        e.stopPropagation();
+    });
+
+</script> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81615628-1', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+<!-- InstanceEndEditable --> 
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81615628-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
+<!-- InstanceEnd -->
 </html>
