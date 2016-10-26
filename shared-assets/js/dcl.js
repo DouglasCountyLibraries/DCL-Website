@@ -502,6 +502,10 @@ var scrollme = ( function( $ )
 // License: MIT
 // --------------------------------------------------------------------------------------------------------
 
+$(function() {
+    $('.equal-height').matchHeight();
+});
+
 ;(function(factory) { // eslint-disable-line no-extra-semi
     'use strict';
     if (typeof define === 'function' && define.amd) {
