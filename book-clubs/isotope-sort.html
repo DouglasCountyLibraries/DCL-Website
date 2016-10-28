@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning."/>
 <link rel="canonical" href="http://dcl.org"/>
-<!-- TemplateBeginEditable name="title" -->
-<title></title>
-<!-- TemplateEndEditable -->
+<!-- InstanceBeginEditable name="title" -->
+<title>Book Clubs | Douglas County Libraries</title>
+<!-- InstanceEndEditable -->
+<meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning">
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png">
@@ -38,8 +38,154 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
-<!-- TemplateBeginEditable name="head" -->
-<!-- TemplateEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style>
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+}
+
+/* ---- button ---- */
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  margin-bottom: 10px;
+  background: #EEE;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #8CF;
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #28F;
+}
+
+.button.is-checked {
+  color: white;
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+}
+
+.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+
+/* ---- grid ---- */
+
+.grid {
+  border: 1px solid #333;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 10px;
+  background: #888;
+  color: #262524;
+}
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.element-item .name {
+  position: absolute;
+
+  left: 10px;
+  top: 60px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.element-item .symbol {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+}
+
+.element-item .number {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+}
+
+.element-item .weight {
+  position: absolute;
+  left: 10px;
+  top: 76px;
+  font-size: 12px;
+}
+
+.element-item.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
+.element-item.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
+.element-item.lanthanoid      { background: #FF0; background: hsl(  72, 100%, 50%); }
+.element-item.actinoid        { background: #0F0; background: hsl( 108, 100%, 50%); }
+.element-item.transition      { background: #0F8; background: hsl( 144, 100%, 50%); }
+.element-item.post-transition { background: #0FF; background: hsl( 180, 100%, 50%); }
+.element-item.metalloid       { background: #08F; background: hsl( 216, 100%, 50%); }
+.element-item.diatomic        { background: #00F; background: hsl( 252, 100%, 50%); }
+.element-item.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
+.element-item.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
+
+  
+  
+/* responsive media queries */
+
+@media (max-width: 768px) {
+ 
+}
+
+
+
+</style>
+<!-- InstanceEndEditable -->
 </head>
 <body>
 <div class="cp_header_biblio_bar">
@@ -48,8 +194,8 @@
       
       <!-- begin BCNAV -->
       <div data-js="bc_my_account_nav" class="col-xs-12">
-        <div id="step5" class="pull-right biblio_bar_link biblio_bar_my_account"> <a aria-expanded="true" data-toggle="dropdown" data-js="biblionav_account_trigger" id="biblionav_account_trigger" type="button" class="dropdown-toggle my_account_toggle" href="#"> Login / My DCL <span class="caret margin-left-15"></span> </a>
-          <ul aria-labelledby="biblionav_trigger" data-js="biblionav_my_account" role="menu" class="dropdown-menu biblionav_my_account">
+        <div id="step5" class="pull-right biblio_bar_link biblio_bar_my_account"> <a data-target="#" href="#" data-toggle="dropdown" role="button" class="dropdown-toggle my_account_toggle" aria-haspopup="true" aria-expanded="false"> Login / My DCL <span class="caret margin-left-15 margin-right-5"></span> </a>
+          <ul aria-labelledby="biblionav_trigger" role="menu" class="dropdown-menu biblionav_my_account">
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
@@ -64,7 +210,8 @@
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Shelves</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/for_later">For Later Shelf</a> </li>
+            <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Completed Shelf</a> </li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
@@ -83,7 +230,7 @@
     <div class="row">
       <div class="col-sm-5">
         <div class="cp_header_client_area">
-          <div class="logo"> <a href="../home"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
+          <div class="logo"> <a href="/"><img class="img-responsive" src="../dcl-logo.png" alt="Douglas County Libraries"></a> </div>
         </div>
       </div>
       <div class="col-sm-6 col-sm-push-1 hidden-sm hidden-xs">
@@ -94,7 +241,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
-          <div class="text-right"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
+          <div class="text-right"><span class="small margin-right-80"><a href="../search">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -118,7 +265,7 @@
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fa fa-search"></i></button>
             </span> </div>
-          <div class="text-right margin-right-15"><!--remove until launch <span class="small margin-right-80"><a href="../search">Website Search</a></span>--><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
+          <div class="container text-right"><span class="margin-right-80"><a href="../search">Website Search</a></span><span><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         </form>
       </ul>
     </div>
@@ -156,14 +303,14 @@
             <li><a href="../staff-recommendations">Staff Recommendations</a></li>
             <li><a href="../bizinfo">Business Resources</a></li>
             <li><a href="../research/online-learning">Online Learning</a></li>
-            <li><a href="../adult-education/index.html">HSE, ESL, US Citizenship, Proctoring</a></li>
+            <li><a href="../adult-education">HSE, ESL, US Citizenship, Proctoring</a></li>
           </ul>
         </li>
         <li class="dropdown kids-teens-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kids & Teens <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="../storytime">Storytime</a></li>
             <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
-            <li><a href="http://host.evanced.info/douglas/evanced/eventcalendar.asp?ag=Early+Talkers+(Birth+-++2years)%2C+Talkers+(2+to+3+years)%2C+Pre-Readers+(3+to+5+years)%2C+Children&et=Authors%2C+Book+Club%2FDiscussion+Group%2C+Branch+Program%2C+Business%2C+Children%2C+Closure%2C+District+Program%2C+Educational+Class%2C+Entertainment-Focused%2C+Literacy%2C+On-Site+Community+Partnership&lib=7,%200,%201,%202,%203,%204,%205" target="_blank">Kids Events</a></li>
+            <li><a href="http://douglascountylibraries.evanced.info/signup/calendar?ag=724,729,731,730&et=18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
             <li><a href="../parents-teachers">Parents & Teachers</a></li>
             <li><a href="../research/students">Homework Help</a></li>
             <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
@@ -181,9 +328,208 @@
 </nav>
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
-  <!-- TemplateBeginEditable name="Content" -->
-  <div class="row text-center bg-gray-5 padding-top-100 padding-bottom-100">Content goes here</div>
-  <!-- TemplateEndEditable --> </div>
+  <!-- InstanceBeginEditable name="Content" -->
+  <div class="row padding-top-60 padding-bottom-15 border-top">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase font-weight-400">Book Clubs</h1>
+        <div class="separator-container">
+          <div class="separator line-separator"><i class="fa fa-book"></i></div>
+        </div>
+      </div>
+      <h2 class="roboto text-center">If you love to talk about books, then we’ve got a book club for you! Browse the list below and sort by location, audience or genre to find the perfect fit.</h2>
+    </div>
+  </div>
+  <!--#########  ISOTOPE   ###########-->
+  
+<h1>Isotope - sorting</h1>
+
+<div class="button-group sort-by-button-group">
+  <button class="button is-checked" data-sort-value="original-order">original order</button>
+  <button class="button" data-sort-value="name">name</button>
+  <button class="button" data-sort-value="symbol">symbol</button>
+  <button class="button" data-sort-value="number">number</button>
+  <button class="button" data-sort-value="weight">weight</button>
+  <button class="button" data-sort-value="category">category</button>
+</div>
+
+<div class="grid">
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">Mercury</h3>
+    <p class="symbol">Hg</p>
+    <p class="number">80</p>
+    <p class="weight">200.59</p>
+  </div>
+  <div class="element-item metalloid " data-category="metalloid">
+    <h3 class="name">Tellurium</h3>
+    <p class="symbol">Te</p>
+    <p class="number">52</p>
+    <p class="weight">127.6</p>
+  </div>
+  <div class="element-item post-transition metal " data-category="post-transition">
+    <h3 class="name">Bismuth</h3>
+    <p class="symbol">Bi</p>
+    <p class="number">83</p>
+    <p class="weight">208.980</p>
+  </div>
+  <div class="element-item post-transition metal " data-category="post-transition">
+    <h3 class="name">Lead</h3>
+    <p class="symbol">Pb</p>
+    <p class="number">82</p>
+    <p class="weight">207.2</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">Gold</h3>
+    <p class="symbol">Au</p>
+    <p class="number">79</p>
+    <p class="weight">196.967</p>
+  </div>
+  <div class="element-item alkali metal " data-category="alkali">
+    <h3 class="name">Potassium</h3>
+    <p class="symbol">K</p>
+    <p class="number">19</p>
+    <p class="weight">39.0983</p>
+  </div>
+  <div class="element-item alkali metal " data-category="alkali">
+    <h3 class="name">Sodium</h3>
+    <p class="symbol">Na</p>
+    <p class="number">11</p>
+    <p class="weight">22.99</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">Cadmium</h3>
+    <p class="symbol">Cd</p>
+    <p class="number">48</p>
+    <p class="weight">112.411</p>
+  </div>
+  <div class="element-item alkaline-earth metal " data-category="alkaline-earth">
+    <h3 class="name">Calcium</h3>
+    <p class="symbol">Ca</p>
+    <p class="number">20</p>
+    <p class="weight">40.078</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">Rhenium</h3>
+    <p class="symbol">Re</p>
+    <p class="number">75</p>
+    <p class="weight">186.207</p>
+  </div>
+  <div class="element-item post-transition metal " data-category="post-transition">
+    <h3 class="name">Thallium</h3>
+    <p class="symbol">Tl</p>
+    <p class="number">81</p>
+    <p class="weight">204.383</p>
+  </div>
+  <div class="element-item metalloid " data-category="metalloid">
+    <h3 class="name">Antimony</h3>
+    <p class="symbol">Sb</p>
+    <p class="number">51</p>
+    <p class="weight">121.76</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">Cobalt</h3>
+    <p class="symbol">Co</p>
+    <p class="number">27</p>
+    <p class="weight">58.933</p>
+  </div>
+  <div class="element-item lanthanoid metal inner-transition " data-category="lanthanoid">
+    <h3 class="name">Ytterbium</h3>
+    <p class="symbol">Yb</p>
+    <p class="number">70</p>
+    <p class="weight">173.054</p>
+  </div>
+  <div class="element-item noble-gas nonmetal " data-category="noble-gas">
+    <h3 class="name">Argon</h3>
+    <p class="symbol">Ar</p>
+    <p class="number">18</p>
+    <p class="weight">39.948</p>
+  </div>
+  <div class="element-item diatomic nonmetal " data-category="diatomic">
+    <h3 class="name">Nitrogen</h3>
+    <p class="symbol">N</p>
+    <p class="number">7</p>
+    <p class="weight">14.007</p>
+  </div>
+  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+    <h3 class="name">Uranium</h3>
+    <p class="symbol">U</p>
+    <p class="number">92</p>
+    <p class="weight">238.029</p>
+  </div>
+  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+    <h3 class="name">Plutonium</h3>
+    <p class="symbol">Pu</p>
+    <p class="number">94</p>
+    <p class="weight">(244)</p>
+  </div>
+</div>
+
+
+  
+  
+  <script>
+$(function()
+// init Isotope
+var $grid = $('.grid').isotope({
+  itemSelector: '.element-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    name: '.name',
+    symbol: '.symbol',
+    number: '.number parseInt',
+    category: '[data-category]',
+    weight: function( itemElem ) {
+      var weight = $( itemElem ).find('.weight').text();
+      return parseFloat( weight.replace( /[\(\)]/g, '') );
+    }
+  }
+});
+
+// bind sort button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $grid.isotope({ sortBy: sortValue });
+});
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
+
+
+  </script>
+  
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>   
+ <!-- <script>
+$( document ).ready(function() {
+  /* activate jquery isotope */
+  var $container = $('#posts').isotope({
+    itemSelector : '.item',
+    isFitWidth: true
+  });
+
+  $(window).smartresize(function(){
+    $container.isotope({
+      columnWidth: '.col-sm-12'
+    });
+  });
+  
+  $container.isotope({ filter: '*' });
+
+    // filter items on button click
+  $('#filters').on( 'click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $container.isotope({ filter: filterValue });
+  });
+});
+
+</script> -->
+  <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
     <div class="col-sm-6">
@@ -196,9 +542,9 @@
     </div>
     <div class="col-sm-6">
       <div class="text-center">
-        <h3><span class="text-nowrap">Share your experience</span><span class="nothing margin-left-15">#DCLNewDigs</span></h3>
+        <h3><span class="text-nowrap">Share your experience</span> <span class="nothing margin-left-15">#DCLNewDigs</span></h3>
       </div>
-      <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="http://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="http://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="http://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
+      <div class="social-links-wrapper text-center"> <a class="margin-right-5" alt="Friend us on Facebook" href="http://www.facebook.com/DouglasCountyLibrariesColorado" target="_blank"><i class="fa fa-facebook fa-2x"></i></a> <a class="margin-right-5" alt="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fa fa-twitter fa-2x"></i></a> <a class="margin-right-5" alt="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a> <a class="margin-right-5" alt="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa fa-youtube-play fa-2x"></i></a> <a alt="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fa fa-flickr fa-2x"></i></a> </div>
     </div>
   </div>
 </div>
@@ -215,7 +561,7 @@
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Contact</h5>
       <ul>
-        <li id="step4"><a href="http://answers.douglascountylibraries.org/" target="_blank">Help</a></li>
+        <li id="step4"><a href="http://answers.douglascountylibraries.org/">Help</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
@@ -237,11 +583,11 @@
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO&nbsp;&nbsp;80104</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- remove for now <a id="help" class="btn btn-primary text-uppercase" href="http://answers.douglascountylibraries.org/" target="_blank">Help</a>--> 
-<!-- TemplateBeginEditable name="scripts" --> <!-- TemplateEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -256,4 +602,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-</html>
+<!-- InstanceEnd --></html>
