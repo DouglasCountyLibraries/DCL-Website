@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,150 +41,32 @@
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <style>
-* { box-sizing: border-box; }
-
-body {
-  font-family: sans-serif;
-}
-
-/* ---- button ---- */
-
-.button {
-  display: inline-block;
-  padding: 0.5em 1.0em;
-  margin-bottom: 10px;
-  background: #EEE;
-  border: none;
-  border-radius: 7px;
-  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
-  color: #222;
-  font-family: sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #8CF;
-  color: #222;
-}
-
-.button:active,
-.button.is-checked {
-  background-color: #28F;
-}
-
-.button.is-checked {
-  color: white;
-}
-
-.button:active {
-  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
-}
-
-/* ---- button-group ---- */
-
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.button-group .button {
-  float: left;
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 1px;
-}
-
-.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
-
-/* ---- grid ---- */
-
-.grid {
-  border: 1px solid #333;
-  max-width: 1200px;
-}
-
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* ---- .element-item ---- */
-
 .element-item {
-  position: relative;
-  float: left;
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  padding: 10px;
-  background: #888;
-  color: #262524;
+	margin: 15px 0;
+	border: 1px solid #ccc;
+	padding: 20px;
+	background-color: #fff;
+}
+#items {
 }
 
-.element-item > * {
-  margin: 0;
-  padding: 0;
+@media (min-width: 992px) and (max-width: 1199px) {
+.element-item {
+	width: 220px;
+}
 }
 
-.element-item .name {
-  position: absolute;
-
-  left: 10px;
-  top: 60px;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 12px;
-  font-weight: normal;
+@media (min-width: 768px) and (max-width: 991px) {
+.element-item {
+	width: 350px;
+}
 }
 
-.element-item .symbol {
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 42px;
-  font-weight: bold;
-  color: white;
+@media (max-width: 767px) {
+.element-item {
+	width: 100%;
 }
-
-.element-item .number {
-  position: absolute;
-  right: 8px;
-  top: 5px;
 }
-
-.element-item .weight {
-  position: absolute;
-  left: 10px;
-  top: 76px;
-  font-size: 12px;
-}
-
-.element-item.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
-.element-item.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
-.element-item.lanthanoid      { background: #FF0; background: hsl(  72, 100%, 50%); }
-.element-item.actinoid        { background: #0F0; background: hsl( 108, 100%, 50%); }
-.element-item.transition      { background: #0F8; background: hsl( 144, 100%, 50%); }
-.element-item.post-transition { background: #0FF; background: hsl( 180, 100%, 50%); }
-.element-item.metalloid       { background: #08F; background: hsl( 216, 100%, 50%); }
-.element-item.diatomic        { background: #00F; background: hsl( 252, 100%, 50%); }
-.element-item.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
-.element-item.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
-
-  
-  
-/* responsive media queries */
-
-@media (max-width: 768px) {
- 
-}
-
-
-
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -329,206 +212,92 @@ body {
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-top-60 padding-bottom-15 border-top">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400">Book Clubs</h1>
-        <div class="separator-container">
-          <div class="separator line-separator"><i class="fa fa-book"></i></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Isotope &amp; Bootstrap Demo</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Sort</h3>
+        <div id="sort" class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default" data-sort-by="location">location</button>
+          <button type="button" class="btn btn-default" data-sort-by="audience">audience</button>
         </div>
       </div>
-      <h2 class="roboto text-center">If you love to talk about books, then we’ve got a book club for you! Browse the list below and sort by location, audience or genre to find the perfect fit.</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="items">
+          <div class="element-item" data-location="lone-tree" data-audience="adult">
+            <h1 class="roboto">Book Banter</h1>
+            <h3>Lone Tree</h3><h4>Adult</h4><h4>First Wednesday, 7PM</h4><h4>General Adult</h4>
+            Meet monthly to discuss fiction and nonfiction titles.</div>
+          <div class="element-item" data-location="castle-rock" data-audience="adult">
+            <h3>2</h3>
+            <h3>castle-rock</h3>
+            Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.
+            
+            Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed aliquam, urna eget tincidunt volutpat, lorem orci eleifend elit, sit amet varius dui justo eget orci. Nam et porta magna. Donec vitae justo erat. Cras ac convallis elit.
+            
+            Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed in elit vitae quam placerat sagittis. Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec tristique porttitor arcu, sed tincidunt dolor congue et</div>
+          <div class="element-item" data-location="highlands-ranch" data-audience="adult">
+            <h3>3</h3>
+            <h3>highlands-ranch</h3>
+            Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, p</div>
+          <div class="element-item" data-location="lone-tree" data-audience="adult">
+            <h3>8</h3>
+            <h3>lone-tree</h3>
+            Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed aliquam, urna eget tincidunt volutpat, lorem orci eleifend elit, sit amet varius dui justo eget o</div>
+          <div class="element-item" data-location="parker" data-audience="adult">
+            <h3>5</h3>
+            <h3>parker</h3>
+            Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac. </div>
+          <div class="element-item" data-location="highlands-ranch" data-audience="6">
+            <h3>6</h3>
+            <h3>highlands-ranch</h3>
+            lacerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.
+            
+            Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed aliquam, urna eget tincidunt volutpat, lorem orci eleifend elit, sit amet varius dui justo eget orci. Nam et porta magna. Donec vitae justo erat. Cras ac convallis elit.
+            
+            Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque. Phasellus vestibulum purus vitae purus auctor accumsan. Aliquam porta rutrum purus, sit amet pretium diam rutrum vel. Vestibulum ante ipsu</div>
+          <div class="element-item" data-location="lone-tree" data-audience="1">
+            <h3>1</h3>
+            <h3>lone-tree</h3>
+            citudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae </div>
+          <div class="element-item" data-location="castle-rock" data-audience="4">
+            <h3>4</h3>
+            <h3>castle-rock</h3>
+            Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.
+            
+            Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed aliquam, urna eget tincidunt volutpat, lorem orci eleifend elit, sit amet varius dui justo eget orci. Nam et porta magna. Donec vitae justo erat. Cras ac convallis elit.</div>
+        </div>
+      </div>
     </div>
   </div>
-  <!--#########  ISOTOPE   ###########-->
-  
-<h1>Isotope - sorting</h1>
-
-<div class="button-group sort-by-button-group">
-  <button class="button is-checked" data-sort-value="original-order">original order</button>
-  <button class="button" data-sort-value="name">name</button>
-  <button class="button" data-sort-value="symbol">symbol</button>
-  <button class="button" data-sort-value="number">number</button>
-  <button class="button" data-sort-value="weight">weight</button>
-  <button class="button" data-sort-value="category">category</button>
-</div>
-
-<div class="grid">
-  <div class="element-item transition metal " data-category="transition">
-    <h3 class="name">Mercury</h3>
-    <p class="symbol">Hg</p>
-    <p class="number">80</p>
-    <p class="weight">200.59</p>
-  </div>
-  <div class="element-item metalloid " data-category="metalloid">
-    <h3 class="name">Tellurium</h3>
-    <p class="symbol">Te</p>
-    <p class="number">52</p>
-    <p class="weight">127.6</p>
-  </div>
-  <div class="element-item post-transition metal " data-category="post-transition">
-    <h3 class="name">Bismuth</h3>
-    <p class="symbol">Bi</p>
-    <p class="number">83</p>
-    <p class="weight">208.980</p>
-  </div>
-  <div class="element-item post-transition metal " data-category="post-transition">
-    <h3 class="name">Lead</h3>
-    <p class="symbol">Pb</p>
-    <p class="number">82</p>
-    <p class="weight">207.2</p>
-  </div>
-  <div class="element-item transition metal " data-category="transition">
-    <h3 class="name">Gold</h3>
-    <p class="symbol">Au</p>
-    <p class="number">79</p>
-    <p class="weight">196.967</p>
-  </div>
-  <div class="element-item alkali metal " data-category="alkali">
-    <h3 class="name">Potassium</h3>
-    <p class="symbol">K</p>
-    <p class="number">19</p>
-    <p class="weight">39.0983</p>
-  </div>
-  <div class="element-item alkali metal " data-category="alkali">
-    <h3 class="name">Sodium</h3>
-    <p class="symbol">Na</p>
-    <p class="number">11</p>
-    <p class="weight">22.99</p>
-  </div>
-  <div class="element-item transition metal " data-category="transition">
-    <h3 class="name">Cadmium</h3>
-    <p class="symbol">Cd</p>
-    <p class="number">48</p>
-    <p class="weight">112.411</p>
-  </div>
-  <div class="element-item alkaline-earth metal " data-category="alkaline-earth">
-    <h3 class="name">Calcium</h3>
-    <p class="symbol">Ca</p>
-    <p class="number">20</p>
-    <p class="weight">40.078</p>
-  </div>
-  <div class="element-item transition metal " data-category="transition">
-    <h3 class="name">Rhenium</h3>
-    <p class="symbol">Re</p>
-    <p class="number">75</p>
-    <p class="weight">186.207</p>
-  </div>
-  <div class="element-item post-transition metal " data-category="post-transition">
-    <h3 class="name">Thallium</h3>
-    <p class="symbol">Tl</p>
-    <p class="number">81</p>
-    <p class="weight">204.383</p>
-  </div>
-  <div class="element-item metalloid " data-category="metalloid">
-    <h3 class="name">Antimony</h3>
-    <p class="symbol">Sb</p>
-    <p class="number">51</p>
-    <p class="weight">121.76</p>
-  </div>
-  <div class="element-item transition metal " data-category="transition">
-    <h3 class="name">Cobalt</h3>
-    <p class="symbol">Co</p>
-    <p class="number">27</p>
-    <p class="weight">58.933</p>
-  </div>
-  <div class="element-item lanthanoid metal inner-transition " data-category="lanthanoid">
-    <h3 class="name">Ytterbium</h3>
-    <p class="symbol">Yb</p>
-    <p class="number">70</p>
-    <p class="weight">173.054</p>
-  </div>
-  <div class="element-item noble-gas nonmetal " data-category="noble-gas">
-    <h3 class="name">Argon</h3>
-    <p class="symbol">Ar</p>
-    <p class="number">18</p>
-    <p class="weight">39.948</p>
-  </div>
-  <div class="element-item diatomic nonmetal " data-category="diatomic">
-    <h3 class="name">Nitrogen</h3>
-    <p class="symbol">N</p>
-    <p class="number">7</p>
-    <p class="weight">14.007</p>
-  </div>
-  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
-    <h3 class="name">Uranium</h3>
-    <p class="symbol">U</p>
-    <p class="number">92</p>
-    <p class="weight">238.029</p>
-  </div>
-  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
-    <h3 class="name">Plutonium</h3>
-    <p class="symbol">Pu</p>
-    <p class="number">94</p>
-    <p class="weight">(244)</p>
-  </div>
-</div>
-
-
-  
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script> 
   <script>
-$(function()
-// init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.element-item',
-  layoutMode: 'fitRows',
-  getSortData: {
-    name: '.name',
-    symbol: '.symbol',
-    number: '.number parseInt',
-    category: '[data-category]',
-    weight: function( itemElem ) {
-      var weight = $( itemElem ).find('.weight').text();
-      return parseFloat( weight.replace( /[\(\)]/g, '') );
-    }
-  }
-});
+  $(document).ready(function() {
 
-// bind sort button click
-$('.sort-by-button-group').on( 'click', 'button', function() {
-  var sortValue = $(this).attr('data-sort-value');
-  $grid.isotope({ sortBy: sortValue });
-});
+    var $container = $('#items').isotope({
+      itemSelector: '.element-item',
+      layoutMode: 'fitRows',
+      getSortData: {
+        location: '[data-location]',
+        audience: '[data-audience]'
+      }
+    })
 
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-
-
+    // sort items on button click
+    $('#sort').on('click', 'button', function() {
+      var sortByValue = $(this).attr('data-sort-by')
+      $container.isotope({
+        sortBy: sortByValue
+      })
+    })
+  })
   </script>
-  
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/1.5.25/jquery.isotope.min.js"></script>   
- <!-- <script>
-$( document ).ready(function() {
-  /* activate jquery isotope */
-  var $container = $('#posts').isotope({
-    itemSelector : '.item',
-    isFitWidth: true
-  });
-
-  $(window).smartresize(function(){
-    $container.isotope({
-      columnWidth: '.col-sm-12'
-    });
-  });
-  
-  $container.isotope({ filter: '*' });
-
-    // filter items on button click
-  $('#filters').on( 'click', 'button', function() {
-    var filterValue = $(this).attr('data-filter');
-    $container.isotope({ filter: filterValue });
-  });
-});
-
-</script> -->
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -602,4 +371,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
