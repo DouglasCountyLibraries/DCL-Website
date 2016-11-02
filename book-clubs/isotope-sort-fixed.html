@@ -54,6 +54,9 @@
 .element-item {
 	width: 33.3333%;
 }
+.element-wrapper {
+	min-height: 345px;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -212,68 +215,85 @@
 <div class="container-fluid">
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-
-    <div class="row">
-      <div class="container">
-        <h3>Sort</h3>
-        <div id="sort" class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="location">Location</button>
-          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="audience">Audience</button>
-        </div>
+  <div class="row padding-bottom-15">
+    <div class="container">
+      <div id="sort" class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="location">Location</button>
+        <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="audience">Audience</button>
+        <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="genre">Genre</button>
       </div>
     </div>
-    <div class="row bg-gray-5">
-      <div class="container">
+  </div>
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="col-sm-12">
         <div id="items">
-          <div class="element-item" data-location="lone-tree" data-audience="adult">
+          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="general-adult">
             <div class="element-wrapper equal-height">
-              <h1 class="roboto">Book Banter</h1>
-              <h3 class="no-margin-top">Lone Tree</h3>
+              <h2 class="roboto"><a href="#" target="_blank">Book Banter</a></h2>
+              <h4 class="no-margin-top">Lone Tree</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult</div>
               <div><span class="text-uppercase small">Meets:</span> First Wednesday, 7PM</div>
               <div><span class="text-uppercase small">Genre:</span> General Adult</div>
-              <div class="text-uppercase margin-top-15">View Reading List &raquo;</div>
-              <div class="margin-top-15">Meets monthly to discuss fiction and nonfiction titles.</div>
+              <div class="margin-top-15">Meet monthly to discuss fiction and nonfiction titles.</div>
+              <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-audience="young-adult">
+          <div class="element-item" data-location="parker" data-audience="adult" data-genre="young-adult">
             <div class="element-wrapper equal-height">
-              <h1 class="roboto">Book Banter</h1>
-              <h3 class="no-margin-top">Lone Tree</h3>
+              <h2 class="roboto"><a href="#" target="_blank">Brews & Books: Teen Reads for Grown-ups</a></h2>
+              <h4 class="no-margin-top">Parker</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult</div>
-              <div><span class="text-uppercase small">Meets:</span> First Wednesday, 7PM</div>
-              <div><span class="text-uppercase small">Genre:</span> General Adult</div>
-              <div class="margin-top-15">Meets monthly to discuss fiction and nonfiction titles.</div>
+              <div><span class="text-uppercase small">Meets: </span>First Thursday, 6:30PM</div>
+              <div><span class="text-uppercase small">Genre:</span> Young Adult</div>
+              <div class="margin-top-15">Meet monthly at Barnett &amp; Son Brewing Co. in Parker to discuss Young Adult titles.</div>
+              <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div>
             </div>
           </div>
-          
-          <div class="element-item" data-location="lone-tree" data-audience="adult">
+          <div class="element-item" data-location="castle-rock" data-audience="adult" data-genre="christian-adult">
             <div class="element-wrapper equal-height">
-              <h1 class="roboto">Book Banter</h1>
-              <h3 class="no-margin-top">Lone Tree</h3>
+              <h2 class="roboto"><a href="#" target="_blank">Christian Literature Book Club</a></h2>
+              <h4 class="no-margin-top">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult</div>
-              <div><span class="text-uppercase small">Meets:</span> First Wednesday, 7PM</div>
-              <div><span class="text-uppercase small">Genre:</span> General Adult</div>
-              <div class="text-uppercase margin-top-15">View Reading List &raquo;</div>
-              <div class="margin-top-15">Meets monthly to discuss fiction and nonfiction titles.</div>
+              <div><span class="text-uppercase small">Meets:</span> Fourth Tuesday, 7PM</div>
+              <div><span class="text-uppercase small">Genre:</span> Christian Adult</div>
+              <div class="margin-top-15">Meet monthly to discuss Christian literature.</div>
+              <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-audience="adult">
+          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="adult-crime-mystery">
             <div class="element-wrapper equal-height">
-              <h1 class="roboto">Book Banter</h1>
-              <h3 class="no-margin-top">Lone Tree</h3>
+              <h2 class="roboto"><a href="#" target="_blank">Crime & Beyond</a></h2>
+              <h4 class="no-margin-top">Lone Tree</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult</div>
-              <div><span class="text-uppercase small">Meets:</span> First Wednesday, 7PM</div>
-              <div><span class="text-uppercase small">Genre:</span> General Adult</div>
-              <div class="text-uppercase margin-top-15">View Reading List &raquo;</div>
-              <div class="margin-top-15">Meets monthly to discuss fiction and nonfiction titles.</div>
+              <div><span class="text-uppercase small">Meets:</span> Fourth Monday, 6:30PM</div>
+              <div><span class="text-uppercase small">Genre:</span> Adult/Crime/Mystery</div>
+              <div class="margin-top-15">Meet monthly to discuss mysteries and crime books.</div>
+              <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div>
             </div>
           </div>
-
-         
-        
-          
-          
+          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="general-adult">
+            <div class="element-wrapper equal-height">
+              <h2 class="roboto"><a href="#" target="_blank">Daytime Book Group</a></h2>
+              <h4 class="no-margin-top">Highlands Ranch</h4>
+              <div><span class="text-uppercase small">Audience:</span> Adult</div>
+              <div><span class="text-uppercase small">Meets:</span> First Tuesday, 10AM</div>
+              <div><span class="text-uppercase small">Genre:</span> General Adult</div>
+              <div class="margin-top-15">Meet monthly to discuss fiction and nonfiction titles.</div>
+              <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div>
+            </div>
+          </div>
+          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="general-adult">
+            <div class="element-wrapper equal-height">
+              <h2 class="roboto"><a href="#" target="_blank">Daytime Book Group</a></h2>
+              <h4 class="no-margin-top">Highlands Ranch</h4>
+              <div><span class="text-uppercase small">Audience:</span> Adult</div>
+              <div><span class="text-uppercase small">Meets:</span> First Tuesday, 10AM</div>
+              <div><span class="text-uppercase small">Genre:</span> General Adult</div>
+              <div class="margin-top-15">Meet monthly to discuss fiction and nonfiction titles.</div>
+              <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -287,7 +307,8 @@
       layoutMode: 'fitRows',
       getSortData: {
         location: '[data-location]',
-        audience: '[data-audience]'
+        audience: '[data-audience]',
+		genre: '[data-genre]'
       }
     })
 
