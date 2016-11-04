@@ -63,6 +63,9 @@
 .element-item {
 	width: 50%;
 }
+.element-wrapper {
+	min-height: 315px;
+}
 }
 
 @media (max-width: 767px) {
@@ -216,11 +219,14 @@
   <div id="global-alert" class="row alert alert-warning" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row padding-bottom-15">
-    <div class="container">
-      <div id="sort" class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="location">Location</button>
-        <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="audience">Audience</button>
-        <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="genre">Genre</button>
+    <div class="container text-center">
+      <div><span class="h3 margin-right-30" style="vertical-align: middle;">Sort by:</span>
+        <div id="sort" class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="location">Location</button>
+          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="audience">Audience</button>
+          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="genre">Genre</button>
+          <button type="button" class="reset btn btn-link-unstyled margin-right-10 text-uppercase">Start Over &raquo;</button>
+        </div>
       </div>
     </div>
   </div>
@@ -288,22 +294,22 @@
               <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
-              <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?ag=&kw=great%20books%20-%20evening%20discussion%20group&cn=0&lib=1004&nd=365" target="_blank">Great Books</a></h2>
-              <h4 class="no-margin">Highlands Ranch</h4>
-              <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
-              <div><span class="text-uppercase small">Day & Time: </span> First & Third Thursday, 7PM</div>
-              <div class="margin-top-15">Read and discuss significant works of fiction, philosophy, political science, poetry and drama.</div>
-              <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
-            </div>
-          </div>
           <div class="element-item" data-location="castle-rock" data-audience="adult" data-genre="general-adult">
             <div class="element-wrapper equal-height">
               <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?ag=&kw=great%20books%20discussion%20forum&cn=0&lib=1001&nd=365" target="_blank">Great Books</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
               <div><span class="text-uppercase small">Day & Time: </span> First Monday, 7PM</div>
+              <div class="margin-top-15">Read and discuss significant works of fiction, philosophy, political science, poetry and drama.</div>
+              <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
+            </div>
+          </div>
+          <div class="element-item" data-location="highlands-ranch" data-audience="adult" data-genre="general-adult">
+            <div class="element-wrapper equal-height">
+              <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?ag=&kw=great%20books%20-%20evening%20discussion%20group&cn=0&lib=1004&nd=365" target="_blank">Great Books</a></h2>
+              <h4 class="no-margin">Highlands Ranch</h4>
+              <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
+              <div><span class="text-uppercase small">Day & Time: </span> First & Third Thursday, 7PM</div>
               <div class="margin-top-15">Read and discuss significant works of fiction, philosophy, political science, poetry and drama.</div>
               <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
             </div>
@@ -465,6 +471,11 @@
         sortBy: sortByValue
       })
     })
+	$("reset").click(function(){
+    $("#sort").isotope({
+        filter: '*'
+    });
+});
   })
   </script> 
   <!-- InstanceEndEditable --> </div>
