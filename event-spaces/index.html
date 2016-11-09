@@ -42,7 +42,7 @@
 <!-- InstanceBeginEditable name="head" -->
 <script src="../shared-assets/js/isotope.pkgd.min.js"></script>
 <script>
-  $(document).ready(function() {
+  $(window).load(function() {
 
     var $container = $('#items').isotope({
       itemSelector: '.element-item',
@@ -67,14 +67,6 @@
     });
 });
   })
-	</script>
-	<script>
-	window.onload = function () {
-    if (! localStorage.justOnce) {
-        localStorage.setItem("justOnce", "true");
-        window.location.reload();
-    }
-}
 	</script>
 	<style>
 .element-item {
