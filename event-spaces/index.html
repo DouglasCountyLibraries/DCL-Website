@@ -40,17 +40,25 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-	<style>
+<style>
 .element-item {
-	background: #fff none repeat scroll 0 0;
+	background: #fff;
 	padding: 0;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	width: 100%;
 	clear: both;
 }
-.margin-fix {
-	margin-left: -15px;
-	margin-right: -15px;
+#sort .btn {
+	margin: 5px 0 5px;
+}
+
+@media (max-width: 767px) {
+#sort .btn {
+	width: 100%;
+}
+.element-item {
+	margin-bottom: 30px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -208,20 +216,21 @@
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-bottom-30">
+  <div class="row bg-gray-5 padding-top-15 padding-bottom-30">
     <div class="container">
       <div>
-        <h2 class="roboto">Sort by:</h2>
-        <div id="sort" class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="location">Location</button>
-          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="room">Room Type</button>
-          <button type="button" class="btn btn-default margin-right-10 text-uppercase" data-sort-by="capacity">Max Capacity</button>
-          <button type="button" class="reset btn btn-link-unstyled text-uppercase text-center">Start Over &raquo;</button>
+        <div id="sort" role="group" aria-label="sort">
+          <h3><span class="roboto margin-right-15 v-align-middle">Sort by:</span>
+            <button type="button" class="btn btn-default text-uppercase" data-sort-by="location">Location</button>
+            <button type="button" class="btn btn-default text-uppercase" data-sort-by="room">Room Type</button>
+            <button type="button" class="btn btn-default text-uppercase" data-sort-by="capacity">Max Capacity</button>
+            <button type="button" class="reset btn btn-link-unstyled text-uppercase text-center">Start Over &raquo;</button>
+          </h3>
         </div>
       </div>
     </div>
   </div>
-  <div class="bg-gray-5 margin-fix">
+  <div class="row bg-gray-5">
     <div class="container">
       <div id="items">
         <div class="element-item" data-location="castle-pines" data-room="event-hall" data-capacity="70">
@@ -734,8 +743,8 @@
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO&nbsp;&nbsp;80104</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" -->
-<script src="../shared-assets/js/isotope.pkgd.min.js"></script>
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script> 
 <script>
   $(window).load(function() {
 
@@ -762,7 +771,7 @@
     });
 });
   })
-	</script>
+	</script> 
 <!-- InstanceEndEditable --> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
