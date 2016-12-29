@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,10 +58,20 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	background-color: #f5f5f5;
 }
 .concierge .fa-check {
-	color: #D36A50;
+	color: #38B44A;
 }
 .fa-ul > li {
-	margin-bottom: 15px;
+	position: inherit;
+}
+.fa-ul {
+	margin-left: 0;
+}
+.fa-li {
+	left: 0;
+	position: inherit;
+	text-align: left;
+	top: 0;
+	width: 30px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -220,44 +231,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="separator line-separator"><i class="fa fa-star"></i></div>
       </div>
       <h3 class="roboto text-center">Celebrate your child's birthday at Douglas County Libraries!</h3>
-      <div class="large-text text-center">Available Saturdays and Sundays, 2:30-4:30PM; $275 for up to 12 children; add $15 for each additional child. </div>
+      <div class="large-text text-center margin-lg-200">Available Saturdays and Sundays, 2:30-4:30PM; $250 for up to 12 children; add $15 for each additional child. <a href="#" data-toggle="modal" data-target="#modalOne">Some restrictions apply.</a></div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="modalOne" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="text-center modal-title">Birthday Parties at DCL</h4>
+            </div>
+            <div class="padding-right-30 padding-bottom-30 padding-left-30">
+              <h3>Restrictions:</h3>
+              <ul class="">
+                <li>One adult chaperone (18 or older) must be present for every four children present.</li>
+                <li>Reservations must be made at least 14 days before the requested event date. </li>
+                <li>For additional décor, food and beverage, <a href="../meeting-room-guidelines">standard room terms and conditions</a> apply.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15 padding-bottom-80">
+  <div class="row bg-gray-5 padding-top-15">
     <div class="container">
-      <div class="col-md-6 margin-lg-30 padding-top-40">
-        <h2 class="roboto">We offer three fun themes — choose your favorite!</h2>
-        <div>
-          <h4>Once Upon a Time</h4>
-          <h4>Things That Roar</h4>
-          <h4>Folklore & Fantasy</h4>
-        </div>
-        <div>We customize parties for kids in two age groups:
-          <ul>
-            <li>0-5</li>
-            <li>6-12</li>
-          </ul>
-        </div>
-        <div>Some restrictions apply:
-          <ul class="margin-bottom-30">
-            <li>One adult chaperone (18 or older) must be present for every four children present.</li>
-            <li><a href="#form" target="_blank">Reservations</a> must be made at least 14 days before the requested event date. </li>
-            <li>For additional décor, food and beverage, <a href="../meeting-room-guidelines">standard room terms and conditions</a> apply.</li>
-          </ul>
-        </div>
+      <h1 class="text-center">We offer three fun themes!</h1>
+      <div class="col-md-4 padding-top-15 padding-bottom-15">
+        <div><img class="center-block" src="once-upon-a-time.png" alt="Once Upon A Time"></div>
       </div>
-      <div class="col-md-6 margin-lg-30 padding-top-40">
-        <h2 class="roboto">Each party package includes:</h2>
-        <ul class="fa-ul concierge">
-          <li><i class="fa-li fa fa-check fa-lg"></i>Setup, cleanup and a dedicated party coordinator.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>A custom invitation that you may email to your guests.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>A 20- to 30-minute age-appropriate Storytime by a Douglas County Libraries librarian. We'll choose several books that fit your chosen theme. The birthday boy or girl may also bring one of his/her own books to include in Storytime. </li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>A free book for the birthday boy/girl.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Your choice of 12 individual cookies or one giant cookie from Eileen's Colossal Cookies. Plates and napkins provided.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Twelve (12) age-appropriate goody bags. </li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Twelve (12) thank-you notes for the birthday boy/girl's use after the party.</li>
-        </ul>
+      <div class="col-md-4 padding-top-15 padding-bottom-15">
+        <div><img class="center-block" src="things-that-roar.png" alt="Things That Roar"></div>
       </div>
+      <div class="col-md-4 padding-top-15 padding-bottom-15">
+        <div><img class="center-block" src="forklore-and-fantasy.png" alt="Forklore and Fantasy"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-bottom-60">
+    <div class="container margin-lg-200">
+      <h2 class="roboto padding-bottom-15 text-center">Our customizes parties are for kids in age groups 0-5 and 6-13. Each party package includes:</h2>
+      <img class="img-responsive pull-left padding-right-30" src="http://placehold.it/200x280">
+      <ul class="fa-ul concierge">
+        <li><i class="fa-li fa fa-check fa-lg"></i>Setup, cleanup and a dedicated party coordinator.</li>
+        <li><i class="fa-li fa fa-check fa-lg"></i>A custom invitation that you may email to your guests.</li>
+        <li><i class="fa-li fa fa-check fa-lg"></i>A 20- to 30-minute age-appropriate Storytime by a Douglas County Libraries librarian. We'll choose several books that fit your chosen theme. The birthday boy or girl may also bring one of his/her own books to include in Storytime. </li>
+        <li><i class="fa-li fa fa-check fa-lg"></i>A free book for the birthday boy/girl.</li>
+        <li><i class="fa-li fa fa-check fa-lg"></i>Your choice of 12 individual cookies or one giant cookie from Eileen's Colossal Cookies. Plates and napkins provided.</li>
+        <li><i class="fa-li fa fa-check fa-lg"></i>Twelve (12) age-appropriate goody bags. </li>
+        <li><i class="fa-li fa fa-check fa-lg"></i>Twelve (12) thank-you notes for the birthday boy/girl's use after the party.</li>
+      </ul>
     </div>
   </div>
   <div class="row bg-teal padding-top-30 padding-bottom-40">
@@ -273,12 +296,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="text-center modal-title">Birthday Parties at DCL</h4>
             </div>
-           <script type="text/javascript" src="https://form.jotform.com/jsform/63485430325151"></script> 
+            <script type="text/javascript" src="https://form.jotform.com/jsform/63485430325151"></script> 
           </div>
         </div>
       </div>
-      <div class="white text-center">Have questions? Call Talayna Akrie, Event Planner Department Head, at <span class="text-nowrap"><a class="white text-underline" href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      <h2 class="text-center"><a class="white roboto text-underline" href="../event-spaces">View Event Spaces</a></h2>
+      <div class="white text-center">Have questions? Call Talayna Akrie, Event Planner Department Head, at <span class="text-nowrap"><a class="white" href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+      <h2 class="text-center"><a class="white text-underline" href="../event-spaces">View Event Spaces</a></h2>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -353,4 +376,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
