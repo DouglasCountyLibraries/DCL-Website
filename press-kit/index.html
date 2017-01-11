@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,9 +53,31 @@ a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0057/0811.
 a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
 <style>
-#carousel-pics .carousel-control {
-	padding-top: 0;
+.carousel-cell {
+	text-align: center;
+	height: 220px;
+	width: 100%;
+}
+.carousel-cell:before {
+	display: block;
+	text-align: center;
+}
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #fff;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+ @media (min-width: 768px) {
+.carousel-cell {
+	height: 160px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -243,32 +266,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div id="news" class="row bg-salmon white padding-bottom-30">
+  <div id="news" class="row bg-salmon white">
     <div class="container text-center">
       <h1 class="white">DCL in the News</h1>
-    </div>
-    <div id="carousel-pics" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item">
-          <div class="row">
-            <div class="container text-center margin-lg-100 padding-left-30 padding-right-30">
-              <div class="large-text">&quot;The effort [to bolster its Castle Rock Star collection] is part of Douglas County Libraries&rsquo; larger &lsquo;creating connections&rsquo; initiative, through which the district seeks to support local traditions and celebrations.&quot;
-                <blockquote><span class="small white">The Denver Post – YourHub, November 29, 2016</span></blockquote>
-              </div>
-            </div>
+      <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 6000 }'>
+        <div class="carousel-cell">
+          <div class="large-text">&quot;The effort [to bolster its Castle Rock Star collection] is part of Douglas County Libraries&rsquo; larger &lsquo;creating connections&rsquo; initiative, through which the district seeks to support local traditions and celebrations.&quot;
+            <blockquote><span class="small white">The Denver Post – YourHub, November 29, 2016</span></blockquote>
           </div>
         </div>
-        <div class="item active">
-          <div class="row">
-            <div class="container text-center margin-lg-100 padding-left-30 padding-right-30">
-              <div class="large-text">"The Douglas County Libraries (DCL) system has always played a vital part in its communities and has been fortunate to have strong leaders with innovative ideas that have allowed DCL to thrive and become a nationally recognized district."
-                <blockquote><span class="small white"> The Castle Pines Connection, January 1, 2017</span></blockquote>
-              </div>
-            </div>
+        <div class="carousel-cell">
+          <div class="large-text">"The Douglas County Libraries (DCL) system has always played a vital part in its communities and has been fortunate to have strong leaders with innovative ideas that have allowed DCL to thrive and become a nationally recognized district."
+            <blockquote><span class="small white"> The Castle Pines Connection, January 1, 2017</span></blockquote>
           </div>
         </div>
       </div>
-      <a class="left carousel-control" href="#carousel-pics" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-pics" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a></div>
+    </div>
   </div>
   <div class="row padding-top-15 padding-bottom-60">
     <div id="press-releases" class="container">
@@ -443,4 +456,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
