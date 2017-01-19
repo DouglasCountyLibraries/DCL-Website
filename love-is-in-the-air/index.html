@@ -90,11 +90,49 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 .feature-image {
 	position: relative;
 	top: 20px;
-	animation: balloon 25s ease infinite;
+	animation: balloon 40s ease 1;
+	animation-delay: 3s;
+	z-index: 1000;
 }
-	@keyframes balloon {
-	50% { transform: translateY(-400px); }
-	100% { transform: translateY(0); }
+ @keyframes balloon {
+ 0% {
+top: 20px;
+}
+ 10% {
+top: -200px;
+}
+ 20% {
+top: -180px;
+}
+ 30% {
+top: -300px;
+}
+ 70% {
+top: -1000px;
+}
+ 100% {
+top: 20px;
+}
+}
+@-webkit-keyframes balloon {
+ 0% {
+top: 20px;
+}
+ 10% {
+top: -200px;
+}
+ 20% {
+top: -180px;
+}
+ 30% {
+top: -300px;
+}
+ 70% {
+top: -1000px;
+}
+ 100% {
+top: 20px;
+}
 }
 
 @media (min-width: 992px) {
@@ -315,7 +353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row padding-top-60">
-    <div class="col-xs-12"><a href="http://blogs.douglascountylibraries.org/blog/2017/01/18/love-is-in-the-air-at-dcl"><img src="love-is-in-the-air-more.png" alt="Love is in the Air" class="img-responsive center-block"></a></div>
+    <div class="col-xs-12"><a href="http://blogs.douglascountylibraries.org/blog/category/love/"><img src="love-is-in-the-air-more.png" alt="Love is in the Air" class="img-responsive center-block"></a></div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
