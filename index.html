@@ -60,6 +60,9 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	font-size: 18px;
 	padding: 20px;
 }
+.popover-navigation {
+	border-top: 1px solid #e5e5e5;
+}
 .popover-navigation .btn.btn-sm.btn-default {
 	background-color: #fff;
 	box-shadow: none;
@@ -68,6 +71,10 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	text-transform: uppercase;
 }
 .popover-navigation .btn-default:active, .popover-navigation .btn-default:hover, .popover-navigation .btn-default:focus {
+	transform: translateY(0);
+	transition: none;
+}
+.popover-navigation .btn-default.disabled:active, .popover-navigation .btn-default.disabled:hover, .popover-navigation .btn-default.disabled:focus {
 	transform: translateY(0);
 	transition: none;
 }
@@ -94,15 +101,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       
       <!-- begin BCNAV -->
       <div data-js="bc_my_account_nav" class="col-xs-12">
-        <div id="step5" class="pull-right biblio_bar_link biblio_bar_my_account"> <a data-target="#" href="#" data-toggle="dropdown" role="button" class="dropdown-toggle my_account_toggle" aria-haspopup="true" aria-expanded="false">Log In / My DCL<i class="caret margin-left-15 margin-right-15"></i></a>
+        <div id="step4" class="pull-right biblio_bar_link biblio_bar_my_account"> <a data-target="#" href="#" data-toggle="dropdown" role="button" class="dropdown-toggle my_account_toggle" aria-haspopup="true" aria-expanded="false">Log In / My DCL<i class="caret margin-left-15 margin-right-15"></i></a>
           <ul aria-labelledby="biblionav_trigger" role="menu" class="dropdown-menu biblionav_my_account">
             
             <!-- Template - t_biblionav_my_account_user_info -->
             
-            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
+            <li data-js="biblionav_my_account_user_info" class="info" role="presentation"> <a id="step5" testid="biblionav_login" role="button" data-js="header_login_button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
             <li data-js="divider_logged_out" class="divider" role="presentation"></li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
+            <li id="step6" role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation" class="dropdown-header">My Borrowing</li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/checkedout">Checked Out</a> </li>
@@ -173,10 +180,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <!-- Collect the nav links for toggling -->
     <div class="collapse navbar-collapse" id="bs-nav">
       <ul class="nav navbar-nav">
-        <li class="dropdown" id="appSettings2"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <b class="caret"></b> </a>
+        <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <b class="caret"></b> </a>
           <ul class="dropdown-menu">
             <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
-            <li><a id="test3" href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
+            <li><a href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/bestsellers">Bestsellers</a></li>
             <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
@@ -195,10 +202,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <li><a href="history">Douglas County History</a></li>
           </ul>
         </li>
-        <li class="dropdown" id="appSettings"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Using the Library <b class="caret"></b> </a>
+        <li class="dropdown" id="step1"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Using the Library <b class="caret"></b> </a>
           <ul class="dropdown-menu">
             <li><a href="library-basics">Library Basics</a></li>
-            <li> <a id="test2" href="http://getacard.org/v2/index.html" target="_blank">Get a Library Card</a> </li>
+            <li> <a id="step2" href="http://getacard.org/v2/index.html" target="_blank">Get a Library Card</a> </li>
             <li><a href="book-clubs">Book Clubs</a></li>
             <li><a href="staff-recommendations">Staff Recommendations</a></li>
             <li><a href="bizinfo">Business Resources</a></li>
@@ -216,8 +223,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
           </ul>
         </li>
-        <li class="digital-media-active"><a href="digital-media">Digital Media</a> </li>
-        <li id="step3" class="reserve-a-space-active"><a href="reserve-a-space">Reserve a Space</a> </li>
+        <li id="step3" class="digital-media-active"><a href="digital-media">Digital Media</a> </li>
+        <li class="reserve-a-space-active"><a href="reserve-a-space">Reserve a Space</a> </li>
         <li class="events-active"><a href="library-events">Library Events</a> </li>
         <li class="research-active"><a href="research">Research</a> </li>
       </ul>
@@ -320,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="col-sm-3">
       <h5 class="font-weight-500 no-margin">Contact</h5>
       <ul>
-        <li id="step4"><a href="http://answers.douglascountylibraries.org/">Help</a></li>
+        <li><a href="http://answers.douglascountylibraries.org/">Help</a></li>
       </ul>
     </div>
     <div class="col-sm-3">
@@ -355,58 +362,58 @@ var tour = new Tour({
   storage: false,
   steps: [
   {
-    element: "#appSettings",
+    element: "#step1",
     content: "Need a library card?",
     placement: "bottom",
 	backdrop: true,
   },
   {
-    element: "#test2",
-    content: "Sign up here! You won't regret it.",
+    element: "#step2",
+    content: "Get it here, then use it like crazy!",
     placement: "right",
 	backdrop: true,
     onShow: function() {
-      return $("#appSettings").addClass("open");
+      return $("#step1").addClass("open");
     },      
     onHide: function() {
-      $("#appSettings").removeClass("open"); 
+      $("#step1").removeClass("open"); 
     } 
   } ,
    {
     element: "#step3",
-    content: "Need a meeting or study room? Making a reservation is easy following the links on this page.",
+    content: "Stream and download digital movies, TV, music, magazines, e-books and audiobooks from this page. Need a digital assist with your device? Access the Digital Media Help Form here, too.",
     placement: "bottom",
 	backdrop: true,
-  }, 
-    {
-    element: "#step4",
-    content: "Want to talk to a real person? No robots here! Call or chat with your questions.",
-    placement: "top",
-	backdrop: true,
-  },   
+  },    
    {
-    element: "#appSettings2",
-    content: "Looking for new books and movies?",
+    element: "#step4",
+    content: "Create your account to start placing holds, renew checkouts, and more!",
     placement: "bottom",
 	backdrop: true,
   },
-  {
-    element: "#test3",
-    content: "Click New Titles to discover what’s &#34;Just Arrived&#34; and what’s &#34;On Order.&#34;",
-    placement: "right",
+	{
+    element: "#step5",
+    content: "It's easy! Use your full 14-digit barcode to start. Then create a username for easy access later. Hint: Your PIN is most likely the last four digits of your phone number.",
+    placement: "left",
 	backdrop: true,
     onShow: function() {
-      return $("#appSettings2").addClass("open");
+      return $("#step4").addClass("open");
     },      
     onHide: function() {
-      $("#appSettings2").removeClass("open"); 
+      $("#step4").removeClass("open"); 
     } 
-  } ,  
-    {
-    element: "#step5",
-    content: "You must register before using the new catalog, using your full 14-digit barcode. After that, you can create a user name for easy access on future visits! Your PIN is most likely the last four digits of your phone number. Happy searching! We hope you discover a great new read!",
-    placement: "bottom",
+  },
+	  	{
+    element: "#step6",
+    content: "Keep track of your account through My Library Dashboard, and create a profile, lists and personal bookshelves.",
+    placement: "left",
 	backdrop: true,
+    onShow: function() {
+      return $("#step4").addClass("open");
+    },      
+    onHide: function() {
+      $("#step4").removeClass("open"); 
+    } 
   }
 ]});
 
