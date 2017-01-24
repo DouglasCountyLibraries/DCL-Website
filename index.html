@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -119,12 +118,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/holds">On Hold</a> </li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation" class="dropdown-header">My Collections</li>
+            <li id="step8" role="presentation" class="dropdown-header">My Collections</li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/for_later">For Later Shelf</a> </li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Completed Shelf</a> </li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
             <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
+            <li id="step7" role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
             <li class="divider" role="presentation"></li>
             <li role="presentation"> <a tabindex="-1" role="menuitem" class="" href="https://dcl.bibliocommons.com/account/personal_information">My Settings</a> </li>
           </ul>
@@ -237,12 +236,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- /.container-fluid --> 
 </nav>
 <div class="container-fluid">
-  <div class="row alert-warning">
-    <div id="global-alert" class="container-md" style="display:none;"></div>
-  </div>
+	<div class="row alert-warning">
+	<div id="global-alert" class="container-md" style="display:none;"></div>
+	</div>
   <!-- InstanceBeginEditable name="Content" -->
   <div id="starttour" class="pointer hidden-xs">
-    <div class="row white text-uppercase text-center alert bg-salmon">Welcome to DCL.org. Get started with a quick tour!</div>
+    <div class="row white text-uppercase text-center alert bg-salmon">Explore what's new with a quick tour!</div>
   </div>
   <div class="row padding-top-40 padding-bottom-60">
     <div class="no-gutter center-block" style="max-width:1600px;">
@@ -265,7 +264,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">
           <div style="padding:2px 0 0 0" class="icon-circle"><i class="fa fa-lightbulb-o"></i></div>
           <h2 class="roboto white">Exercise Your Brain</h2>
-			<div><a class="white text-underline" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainhq" target="_blank">Fun brain games for relaxing and exercising<br>your most important muscle.</a></div>
+          <div><a class="white text-underline" href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainhq" target="_blank">Fun brain games for relaxing and exercising<br>
+            your most important muscle.</a></div>
         </div>
       </div>
     </div>
@@ -420,6 +420,30 @@ var tour = new Tour({
     } 
   },
 	  {
+    element: "#step7",
+    content: "You can create a profile.",
+    placement: "left",
+	backdrop: true,
+    onShow: function() {
+      return $("#step4").addClass("open");
+    },      
+    onHide: function() {
+      $("#step4").removeClass("open"); 
+    } 
+  },	  
+	  {
+    element: "#step8",
+    content: "And you can also create personal bookshelves and lists to share under My Collections.",
+    placement: "left",
+	backdrop: true,
+    onShow: function() {
+      return $("#step4").addClass("open");
+    },      
+    onHide: function() {
+      $("#step4").removeClass("open"); 
+    } 
+  },	  	  
+	  {
 	content: "<a class='btn btn-primary text-center text-uppercase' href='https://dcl.bibliocommons.com/user/login'>Log In or Register Now</a>",
 	orphan: true,
 	backdrop: true,
@@ -451,5 +475,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
