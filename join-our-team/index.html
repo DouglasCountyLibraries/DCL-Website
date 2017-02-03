@@ -16,7 +16,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="title" -->
 <title>Join Our Team | Douglas County Libraries</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
 <!-- InstanceEndEditable -->
 <meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning">
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
@@ -496,15 +495,15 @@ $("a[rel=popover]")
         e.preventDefault();
      });
  </script> 
- <script>$(document).ready(function() {
-	$('#carousel-pics').carousel({
-	interval: 10000
-	})
-    $('#carousel-pics').on('slid.bs.carousel', function() {
-    	//alert("slid");
-	});   
-});
-</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
+ <script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
  <!-- InstanceEndEditable --> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
