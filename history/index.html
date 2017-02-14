@@ -53,12 +53,57 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
 <!-- InstanceBeginEditable name="head" -->
 <style>
-.background {
-	background: transparent url("../shared-assets/images/locations/douglas-county-history.jpg") no-repeat scroll top center / cover;
-	min-height: 500px;
-}
 .locations-active {
 	background-color: #f5f5f5;
+}
+	.slideshow-background {
+	height: 225px;
+}
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 225px;
+	overflow: hidden;
+}
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 225px;
+	background: no-repeat 50% 50%;
+	background-size: cover;
+	animation-name: kenburns;
+}
+
+@media (min-width: 768px) {
+.slideshow-background {
+	height: 325px;
+}
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 325px;
+}
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 325px;
+}
+}
+
+@media (min-width: 992px) {
+.slideshow-background {
+	height: 500px;
+}
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+}
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -213,7 +258,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	<div id="global-alert" class="container-md" style="display:none;"></div>
 	</div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background"></div>
+   <div class="row slideshow-background">
+    <div class="slideshow">
+      <div class="slideshow-image" style="background-image: url('assets/images/douglas-county-history.jpg')"></div>
+    </div>
+  </div>
   <div class="row padding-bottom-30">
     <div class="container">
       <div class="text-center">
