@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,7 +55,34 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
+<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
 <style>
+.tickets {
+	font-family: "Teko", sans-serif;
+	color: #000;
+	font-size: 46px;
+}
+.tickets-lg {
+	font-family: "Teko", sans-serif;
+	color: #000;
+	font-size: 65px;
+	white-space: nowrap;
+}
+.btn.buy-button {
+	background: #000 none repeat scroll 0 0;
+	color: #fff;
+	font-size: 48px;
+	line-height: 51px;
+	padding: 7px 33px 0;
+	vertical-align: top;
+	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+.btn.buy-button:active, .btn.buy-button:hover, .btn.buy-button:focus {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	opacity: 1;
+	transition: all 0.4s ease-out 0s;
+}
 .tour-backdrop {
 	opacity: 0.3!important;
 }
@@ -93,12 +121,41 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 .featured-links {
 	position: inherit;
 }
+.shelf-container img {
+	margin: 15px 15px 17px 15px;
+	vertical-align: bottom;
+}
+.shelf-shift {
+	padding-right: 0px;
+}
 
 @media (min-width: 768px) {
 .featured-links {
 	position: relative;
 	top: -40px;
 }
+.tickets-lg {
+	font-size: 120px;
+}
+}
+
+@media (min-width: 992px) {
+.shelf {
+	border-bottom: 20px solid transparent;
+	border-image: url("new-shelf.jpg") 30 30 30 30 round round;
+	border-top: 0 none;
+	padding-bottom: 0;
+}
+.shelf-shift {
+	padding-right: 160px;
+}
+.shelf-shadow {
+	background: #fff url("shelf-shadow.jpg");
+	background-repeat: repeat-x;
+}
+}
+
+@media (max-width: 1024px) {
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -249,36 +306,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- /.container-fluid --> 
 </nav>
 <div class="container-fluid">
-	<div class="row alert-warning">
-	<div id="global-alert" class="container-md" style="display:none;"></div>
-	</div>
-  <!-- InstanceBeginEditable name="Content" --> 
-  <!-- removed for now <div id="starttour" class="pointer hidden-xs">
+  <div class="row alert-warning">
+    <div id="global-alert" class="container-md" style="display:none;"></div>
+  </div>
+  <!-- InstanceBeginEditable name="Content" -->
+  <div id="starttour" class="pointer hidden-xs">
     <div class="row white text-uppercase text-center alert bg-salmon">Explore what's new with a quick tour!</div>
-  </div>-->
-  <div class="row border-top margin-bottom-30">
-    <div class="container text-center"> <a href="../love-is-in-the-air"><img class="img-responsive" src="love-is-in-the-air.jpg" alt="Live Is in the Air"></a>
-      <div class="featured-links">
-        <h1 class="roboto no-margin-top"><a class="lavender" href="http://blogs.douglascountylibraries.org/blog/2017/02/10/love-notes-dcl/">Love Notes to DCL: Our Favorite Sweet Sentiments</a></h1>
-        <h1 class="roboto no-margin-top"><a class="lavender" href="../love-is-in-the-air/">Love Is in the Air: Events, Reads & Resources</a></h1>
-        <h1 class="roboto no-margin-top"><a class="lavender" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/843360447">Love Stinks! 14 Must Reads</a></h1>
-      </div>
+  </div>
+  <div class="row padding-top-30 shelf">
+    <div class="container-md shelf-container text-center">
+      <div style="font-size:40px;position:relative;top:20px;" class="tickets text-uppercase">DCL Presents:</div>
+      <h1 class="tickets tickets-lg text-uppercase no-margin">Lisa Scottoline</h1>
+      <div class="shelf-shift"> <img style="margin-right: -5px;" src="free-with-purchase.png" alt="Free with Purchase of Ticket"> <a href="https://dcl.bibliocommons.com/item/show/1374161114_one_perfect_lie"><img src="https://secure.syndetics.com/index.aspx?isbn=9781250099563/MC.GIF&client=dougp&type=xw12&oclc=" alt="One Perfect Lie" class="cover-image"> </a> <a href="https://dcl.bibliocommons.com/item/show/1350545114_damaged"><img src="https://secure.syndetics.com/index.aspx?isbn=9781250099624/MC.GIF&client=dougp&type=xw12&oclc=" alt="Damaged" class="cover-image"> </a> <a href="https://dcl.bibliocommons.com/item/show/1305368114_most_wanted"><img src="https://secure.syndetics.com/index.aspx?isbn=9781250010131/MC.GIF&client=dougp&type=xw12&oclc=" alt="Most Wanted" class="cover-image"> </a> <a href="https://dcl.bibliocommons.com/item/show/1248655114_every_fifteen_minutes"><img src="https://secure.syndetics.com/index.aspx?isbn=9781250010124/MC.GIF&client=dougp&type=xw12&oclc=" alt="Every Fifteen Minutes" class="cover-image"> </a> <a href="https://dcl.bibliocommons.com/item/show/246368114_legal_tender"><img src="https://secure.syndetics.com/index.aspx?isbn=9780062400130/MC.GIF&client=dougp&type=xw12&oclc=" alt="Legal Tender" class="cover-image"> </a></div>
     </div>
   </div>
-  <div class="row bg-lavender featured padding-top-30 padding-bottom-30">
+  <div class="row shelf-shadow padding-bottom-80">
+    <div class="container text-center">
+      <h1 class="tickets no-margin-bottom text-uppercase">Thursday, April 13 | 7pm | Tickets $30 | CU South Denver </h1>
+      <div>* Ticket price includes hardcover copy of <a href="https://dcl.bibliocommons.com/item/show/1374161114_one_perfect_lie"><i>One Perfect Lie</i></a>, reserved seating, dessert, and book signing.</div>
+      <h1 class="tickets text-uppercase"><a class="btn buy-button" href="https://www.eventbrite.com/e/dcl-presents-lisa-scottoline-tickets-31546501435" target="_blank">Buy Now!</a></h1>
+    </div>
+  </div>
+  <div class="row bg-salmon featured padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-6 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
-          <div style="padding-top: 4px;" class="icon-circle"><i class="fa fa-heart-o"></i></div>
-          <h2 class="roboto no-margin-bottom"><a class="white" href="https://douglascountylibraries.freegalmusic.com/search?type=album&q=love+songs&flag=1" target="_blank">Feel the (Heart)Beat:</a></h2>
-          <div class="text-uppercase no-margin-top"><a class="white text-uppercase font-weight-400" href="https://douglascountylibraries.freegalmusic.com/search?type=album&q=love+songs&flag=1">Easy-Listening Love Songs</a></div>
+          <div class="icon-circle"><i class="fa fa-user"></i></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="http://blogs.douglascountylibraries.org/blog/2017/02/20/presidential-escapism/">Presidential Escapism</a></h2>
+          <div class="text-uppercase no-margin-top"><a class="white text-uppercase font-weight-400" href="http://blogs.douglascountylibraries.org/blog/2017/02/20/presidential-escapism/">Political Fiction</a></div>
         </div>
       </div>
       <div class="col-md-6 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
           <div class="icon-circle"><i class="fa fa-credit-card"></i></div>
-          <h2 class="roboto no-margin-bottom"><a class="white" href="http://blogs.douglascountylibraries.org/blog/2017/02/10/cardholder-perks/">Cardholder Perks:</a></h2>
-          <div><a class="white text-uppercase font-weight-400" href="http://blogs.douglascountylibraries.org/blog/2017/02/10/cardholder-perks/">Explore the Benefits!</a></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="../king-soopers-rewards-card/">King Soopers Rewards</a></h2>
+          <div><a class="white text-uppercase font-weight-400" href="../king-soopers-rewards-card/">The Card That Gives</a></div>
         </div>
       </div>
     </div>
@@ -459,4 +521,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
