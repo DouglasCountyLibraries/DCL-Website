@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,6 +53,162 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 </script>
 <!-- InstanceBeginEditable name="head" -->
 <title>Camp DCL | Douglas County Libraries</title>
+<style>
+h1 .small {
+	color: #666;
+	font-weight: 300;
+}
+.content {
+	color: #666;
+	font-size: 35px;
+	font-weight: 400;
+	text-transform: capitalize;
+	height: 43px;
+	left: 50%;
+	margin-top: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 425px;
+}
+.content__container {
+	overflow: hidden;
+	height: 40px;
+}
+.content__container__text {
+	display: inline;
+	float: left;
+	margin: 0;
+}
+.content__container__list {
+	animation-duration: 12s;
+	animation-iteration-count: 1;
+	animation-name: change;
+	list-style: outside none none;
+	margin-top: 0;
+	padding-left: 50px;
+	text-align: left;
+	text-transform: uppercase;
+}
+.content__container__list__item {
+	line-height: 40px;
+	margin: 0;
+}
+ @-webkit-keyframes opacity {
+ 0%, 100% {
+ opacity: 0;
+}
+ 50% {
+ opacity: 1;
+}
+}
+@-webkit-keyframes change {
+ 0%, 12.66%, 100% {
+ transform: translate3d(0, 0, 0);
+}
+ 16.66%, 29.32% {
+ transform: translate3d(0, -25%, 0);
+}
+ 33.32%, 45.98% {
+ transform: translate3d(0, -50%, 0);
+}
+ 49.98%, 62.64% {
+ transform: translate3d(0, -75%, 0);
+}
+ 66.64%, 79.3% {
+ transform: translate3d(0, -50%, 0);
+}
+ 83.3%, 95.96% {
+ transform: translate3d(0, -25%, 0);
+}
+}
+@-o-keyframes opacity {
+ 0%, 100% {
+ opacity: 0;
+}
+ 50% {
+ opacity: 1;
+}
+}
+@-o-keyframes change {
+ 0%, 12.66%, 100% {
+ transform: translate3d(0, 0, 0);
+}
+ 16.66%, 29.32% {
+ transform: translate3d(0, -25%, 0);
+}
+ 33.32%, 45.98% {
+ transform: translate3d(0, -50%, 0);
+}
+ 49.98%, 62.64% {
+ transform: translate3d(0, -75%, 0);
+}
+ 66.64%, 79.3% {
+ transform: translate3d(0, -50%, 0);
+}
+ 83.3%, 95.96% {
+ transform: translate3d(0, -25%, 0);
+}
+}
+@-moz-keyframes opacity {
+ 0%, 100% {
+ opacity: 0;
+}
+ 50% {
+ opacity: 1;
+}
+}
+@-moz-keyframes change {
+ 0%, 12.66%, 100% {
+ transform: translate3d(0, 0, 0);
+}
+ 16.66%, 29.32% {
+ transform: translate3d(0, -25%, 0);
+}
+ 33.32%, 45.98% {
+ transform: translate3d(0, -50%, 0);
+}
+ 49.98%, 62.64% {
+ transform: translate3d(0, -75%, 0);
+}
+ 66.64%, 79.3% {
+ transform: translate3d(0, -50%, 0);
+}
+ 83.3%, 95.96% {
+ transform: translate3d(0, -25%, 0);
+}
+}
+@keyframes opacity {
+ 0%, 100% {
+ opacity: 0;
+}
+ 50% {
+ opacity: 1;
+}
+}
+@keyframes change {
+ 0%, 20%, 100% {
+ transform: translate3d(0, 0, 0);
+}
+ 40%, 10% {
+ transform: translate3d(0, -16.66%, 0);
+}
+ 60%, 20% {
+ transform: translate3d(0, -33.32%, 0);
+}
+ 80%, 30% {
+ transform: translate3d(0, -49.98%, 0);
+}
+ 40%, 40% {
+ transform: translate3d(0, -66.64%, 0);
+}
+ 50%, 50% {
+ transform: translate3d(0, -83.3%, 0);
+}
+}
+</style>
 <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -200,9 +357,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- /.container-fluid --> 
 </nav>
 <div class="container-fluid">
-	<div class="row alert-warning">
-	<div id="global-alert" class="container-md" style="display:none;"></div>
-	</div>
+  <div class="row alert-warning">
+    <div id="global-alert" class="container-md" style="display:none;"></div>
+  </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top padding-bottom-30">
     <div class="container">
@@ -210,59 +367,108 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="separator-container">
         <div class="separator line-separator"><i class="fa fa-tree"></i></div>
       </div>
-      <h3 class="roboto text-center">What will you be? Find out at a weeklong camp for kids ages 6-12!</h3>
-      <h3 class="text-center">Spring break camps: March 20-24.</h3>
+      <!--<div class="content">
+        <div class="content__container">
+          <p class="content__container__text">BE</p>
+          <ul class="content__container__list">
+            <li class="content__container__list__item">an Artist</li>
+            <li class="content__container__list__item">a Builder</li>
+            <li class="content__container__list__item">a Chef</li>
+            <li class="content__container__list__item">a Coder</li>
+            <li class="content__container__list__item">a Detective</li>
+            <li class="content__container__list__item">a Robotics Engineer</li>
+          </ul>
+        </div>
+      </div>-->
+      <h3 class="roboto text-center">What will you be? Find out at a weeklong, half-day camp for kids!<br>
+        Summer Camps: June 5-August 4</h3>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15 padding-bottom-80">
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
     <div class="container">
-      <div class="col-md-6 margin-lg-30 padding-top-40"> <img class="img-circle img-responsive center-block" src="be-a-chef.png">
-        <h1 class="roboto text-center no-margin-bottom">Be a Chef: Cooks & Books</h1>
-        <ul class="list-unstyled text-center margin-bottom-30">
-          <li>Monday, March 20-Friday, March 24, 9AM-12:30PM</li>
-          <li>DCL in Castle Pines, Lone Tree and Parker</li>
-          <li>$150 per camper</li>
+      <div class="col-sm-3 flex-center equal-height"><img class="img-circle img-responsive center-block" src="be-an-artist.png"></div>
+      <div class="col-md-9 flex-center equal-height text-center text-left-sm">
+        <h1 class="roboto no-margin-top-md">Be an Artist <span class="text-uppercase small">(Ages 6-12, $150)</span></h1>
+        <div>Does your child love the arts? Kids will try a new medium each day, bringing home painted, wearable and sculpted masterpieces for all to admire. Register now!</div>
+        <ul class="list-unstyled">
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109738" target="_blank">Monday, June 5-Friday, June 9, 1:30-5PM, Highlands Ranch, James H. LaRue</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109773" target="_blank">Monday, June 26-Friday, June 30, 1:30-5PM, Castle Rock, Philip S. Miller</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=119060" target="_blank">Monday, July 24-Friday, July 28, 9AM-12:30PM, Castle Pines</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109808" target="_blank">Monday, July 31-Friday, August 4, 9AM-12:30PM, Lone Tree</a></li>
         </ul>
-        <div>Experts from Sticky Fingers Cooking will bring favorite books to life through delicious and delectable recipes! Each day kids will create two or more full recipes based on <i><a href="https://dcl.bibliocommons.com/search?utf8=%E2%9C%93&t=title&search_category=title&q=Green+Eggs+and+Ham">Green Eggs and Ham</a>; <a href="https://dcl.bibliocommons.com/search?utf8=%E2%9C%93&t=title&search_category=title&q=Pancakes+Pancakes%21">Pancakes, Pancakes!</a>; <a href="https://dcl.bibliocommons.com/search?utf8=%E2%9C%93&t=title&search_category=title&q=Dragons+Love+Tacos">Dragons Love Tacos</a>; <a href="https://dcl.bibliocommons.com/search?utf8=✓&t=title&search_category=title&q=Cat+in+the+Hat">Cat in the Hat</a></i>; and <i><a href="https://dcl.bibliocommons.com/search?t=smart&q=Last+Stop+on+Market+Street">Last Stop on Market Street</a></i>. This camp will bring your child's imagination to life through a hands-on, magical, literary and culinary experience. </div>
-        <div class="dropdown text-center"> <a data-toggle="dropdown" class="btn btn-primary text-uppercase margin-top-15 dropdown-toggle">Register Now <span class="caret"></span></a>
-          <div class="dropdown-menu dropdown-menu-center">
-            <div style="border-bottom:1px solid #ccc;" class="padding-15">Choose a Location:</div>
-            <div class="padding-15 text-capitalize">
-              <ul class="list-unstyled">
-                <li><a target="blank" href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=119989">Castle Pines </a></li>
-                <li><a target="_blank" href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109818">Lone Tree</a></li>
-                <li><a target="_blank" href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=119984">Parker</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="col-md-6 margin-lg-30 padding-top-40"> <img class="img-circle img-responsive center-block" src="master-builder.png">
-        <h1 class="roboto text-center no-margin-bottom">Be a Master Builder: LEGOs</h1>
-        <ul class="list-unstyled text-center margin-bottom-30">
-          <li>Monday, March 20-Friday, March 24, 1:30-5PM</li>
-          <li>DCL in Castle Rock, Highlands Ranch and Roxborough</li>
-          <li>$125 per camper</li>
+    </div>
+  </div>
+  <div class="row padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="col-sm-3 flex-center equal-height"><img class="img-circle img-responsive center-block" src="be-a-builder.png"></div>
+      <div class="col-md-9 flex-center equal-height text-center text-left-sm">
+        <h1 class="roboto no-margin-top-md">Be a Builder <span class="text-uppercase small">(Ages 6-12, $150)</span></h1>
+        <div>Have a budding architect on your hands? Encourage the inclination at our camp, where kids will learn a different aspect of building and design each day. Register now!</div>
+        <ul class="list-unstyled">
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109758" target="_blank">Monday, June 19-Friday, June 23, 1:30-5PM, Lone Tree</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109793" target="_blank">Monday, July 17-Friday, July 21, 1:30-5PM, Parker</a></li>
         </ul>
-        <div>Shiver me timbers! Bricks 4 Kidz will batten down the hatches and take kids on a rollicking ride through pirate pop culture, building a motorized pirate ship, a capstan, a helm and an anchor. Campers will protect the hands on deck by building a launching trebuchet, and build a rowboat for escape if the crew threatens mutiny and they must abandon ship. Anchors aweigh! </div>
-        <div class="dropdown text-center"> <a data-toggle="dropdown" class="btn btn-primary text-uppercase margin-top-15 dropdown-toggle">Register Now <span class="caret"></span></a>
-          <div class="dropdown-menu dropdown-menu-center">
-            <div style="border-bottom:1px solid #ccc;" class="padding-15">Choose a Location:</div>
-            <div class="padding-15 text-capitalize">
-              <ul class="list-unstyled">
-                <li><a target="blank" href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109833">Castle Rock</a></li>
-                <li><a target="_blank" href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109843">Highlands Ranch</a></li>
-                <li><a target="_blank" href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109838">Roxborough</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="col-sm-3 flex-center equal-height"><img class="img-circle img-responsive center-block" src="be-a-chef.png"></div>
+      <div class="col-md-9 flex-center equal-height text-center text-left-sm">
+        <h1 class="roboto no-margin-top-md">Be a Chef <span class="text-uppercase small">(Ages 6-12, $150)</span></h1>
+        <div>If your child dreams of culinary greatness, this camp will give him or her a solid foundation on which to build a cooking empire. Register now!</div>
+        <ul class="list-unstyled">
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109730" target="_blank">Monday, June 5-Friday, June 9, 9AM-12:30PM, Roxborough</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109783" target="_blank">Monday, July 10-Friday, July 14, 1:30-5PM, Highlands Ranch, James H. LaRue</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109803" target="_blank">Monday, July 24-Friday, July 28, 1:30-5PM, Castle Rock, Philip S. Miller</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="col-sm-3 flex-center equal-height"><img class="img-circle img-responsive center-block" src="be-a-coder.png"></div>
+      <div class="col-md-9 flex-center equal-height text-center text-left-sm">
+        <h1 class="roboto no-margin-top-md">Be a Coder <span class="text-uppercase small">(Ages 9-12, $200)</span></h1>
+        <div>In our coding camp, kids will learn to create their own video games, among other coding skills. Hey, even Steve Jobs started somewhere! Register now!</div>
+        <ul class="list-unstyled">
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109743" target="_blank">Monday, June 12-Friday, June 16, 9AM-12:30PM, Highlands Ranch, James H. LaRue</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116625" target="_blank">Monday, June 26-Friday, June 30, 9AM-12:30PM, Castle Pines</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="col-sm-3 flex-center equal-height"><img class="img-circle img-responsive center-block" src="be-a-detective.png"></div>
+      <div class="col-md-9 flex-center equal-height text-center text-left-sm">
+        <h1 class="roboto no-margin-top-md">Be a Detective <span class="text-uppercase small">(Ages 8-12, $150)</span></h1>
+        <div>Is super sleuthing in your child's future? This camp will teach skills including fingerprinting, problem solving and more. Register now!</div>
+        <ul class="list-unstyled">
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109748" target="_blank">Monday, June 12-Friday, June 16, 1:30-5PM, Lone Tree</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109753" target="_blank">Monday, June 19-Friday, June 23, 9AM-12:30PM, Parker</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109778" target="_blank">Monday, July 10-Friday, July 14, 9AM-12:30PM, Roxborough</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="col-sm-3 flex-center equal-height"><img class="img-circle img-responsive center-block" src="be-a-robotics-engineer.png"></div>
+      <div class="col-md-9 flex-center equal-height text-center text-left-sm">
+        <h1 class="roboto no-margin-top-md">Be a Robotics Engineer <span class="text-uppercase small">(Ages 9-12, $200)</span></h1>
+        <div>This camp will encourage budding young engineers with fun, hands-on learning experiences, including the opportunity to build a robot! Register now!</div>
+        <ul class="list-unstyled">
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109788" target="_blank">Monday, July 17-Friday, July 21, 9AM-12:30PM, Castle Rock, Philip S. Miller</a></li>
+          <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109813" target="_blank">Monday, July 31-Friday, August 4, 1:30-5PM, Parker</a></li>
+        </ul>
       </div>
     </div>
   </div>
   <div class="row bg-salmon padding-top-30 padding-bottom-60">
     <div class="container">
-      <h3 class="white text-center margin-lg-100">Camp DCL will also be offered this summer! Watch this space or <a class="white text-underline" href="../newsletters/">sign up for our eNewsletter</a> for the most current information.</h3>
+      <h3 class="white text-center margin-lg-100"><a class="white text-underline" href="../newsletters/">Sign up for our eNewsletter</a> for the most current information.</h3>
       <div class="white text-center margin-lg-200">Limited scholarships may be available from the <a class="white text-underline" href="../foundation/">Douglas County Libraries Foundation</a> for <a class="white text-underline" href="camp-dcl-scholarship-application.pdf" target="_blank">qualified applicants</a>. For information, call Elaine McCain at <a class="white" href="tel:720-348-9509">(720) 348-9509</a>.</div>
     </div>
   </div>
@@ -338,4 +544,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
