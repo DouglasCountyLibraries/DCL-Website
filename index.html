@@ -95,7 +95,11 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	position: inherit;
 }
 .fa-spin {
-    animation: 40s linear 0s normal none infinite running fa-spin;
+	animation: 40s linear 0s normal none infinite running fa-spin;
+}
+.tax-modal.modal-header {
+	border-bottom: medium none;
+	padding-bottom: 0;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -274,25 +278,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="col-md-6 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
-          <div class="icon-circle"><i class="fa fa-map"></i></div>
-          <h2 class="roboto no-margin-bottom"><a class="white" href="" data-toggle="modal" data-target="#comodal">Check Out Colorado</a></h2>
-          <div><a class="white text-uppercase font-weight-400" href="" data-toggle="modal" data-target="#comodal">Adventure On With a State Parks Pass</a></div>
+          <div class="icon-circle"><i class="fa fa-files-o"></i></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="" data-toggle="modal" data-target="#comodal">Got Taxes?</a></h2>
+          <div><a class="white text-uppercase font-weight-400" href="" data-toggle="modal" data-target="#comodal">Get Forms & Information</a></div>
         </div>
       </div>
     </div>
   </div>
   <!-- Modal -->
   <div class="modal fade" id="comodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="tax-modal modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="text-center modal-title">Check Out Colorado</h3>
         </div>
-        <div class="modal-body padding-30">
-          <div class="icon-circle-teal"><i class="fa fa-map"></i></div>
-          <div class="padding-top-15">A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks.</div>
-          <div class="padding-top-15 padding-bottom-30">Backpacks and passes are part of our Your Lucky Day program for new and popular materials; checkout is first come, first served, and packs may not be put on hold. Each pack may be kept out for up to seven days. Stop in today and see if it's Your Lucky Day!</div>
+        <div class="modal-body no-padding-top padding-right-30 padding-left-30 padding-bottom-80">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2>Forms & Information:</h2>
+              <div>
+                <h4><a href="https://www.irs.gov/" target="_blank">FEDERAL</a> (<a href="https://www.irs.gov/spanish" target="_blank">en español</a>)</h4>
+                <ul class="list-unstyled">
+                  <li>Forms: <a href="tel:+18008293676">(800) 829-3676</a></li>
+                  <li>Help for Individual & Joint Filers: <a href="tel:+18008291040">(800) 829-1040</a></li>
+                  <li>Help for Business Filers: <a href="tel:+18008294933">(800) 829-4933</a></li>
+                  <li>TDD Help Line: <a href="tel:+18008294059">(800) 829-4059</a></li>
+                  <li>Refund Hotline: <a href="tel:+18008291954">(800) 829-1954</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-capitalize"><a href="https://www.colorado.gov/tax" target="_blank">Colorado</a></h4>
+                <ul class="list-unstyled">
+                  <li>Forms: <a href="tel:+13032387378">(303) 238-7378</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-capitalize"><a href="http://www.taxadmin.org/state-tax-agencies" target="_blank">States Other Than Colorado</a></h4>
+              </div>
+              <div>
+                <h4 class="text-capitalize">Preparation & Filing Assistance</h4>
+                <ul class="list-unstyled">
+                  <li><a href="http://www.piton.org/tax-help-colorado" target="_blank">piton.org</a> | <a href="http://www.denverabc.org/help" target="_blank">denverabc.org</a> | <a href="http://www.aarp.org/money/taxes/aarp_taxaide" target="_blank">aarp.org</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <h2>Paper Forms:</h2>
+              <div>
+                <h4 class="text-capitalize"><a href="https://www.irs.gov/uac/contact-my-local-office-in-colorado" target="_blank">IRS Taxpayer Assistance Centers</a></h4>
+                <ul class="list-unstyled">
+                  <li><a href="https://www.google.com/maps/place/IRS/@39.7476382,-104.9879958,20z/data=!4m5!3m4!1s0x0:0xaf36c86eb592fc2f!8m2!3d39.7476741!4d-104.9876153" target="_blank">1999 Broadway, Denver, CO 80202</a></li>
+                  <li>MON-FRI: 8:30AM-4:30PM | <a href="tel:+13034461675">(303) 446-1675</a></li>
+                  <li class="margin-top-15"><a href="https://www.google.com/maps/place/Internal+Revenue+Service/@38.7978049,-104.795782,17z/data=!4m5!3m4!1s0x0:0x237a927a2984e4e!8m2!3d38.7977758!4d-104.793359" target="_blank">2864 S. Circle Dr., Colorado Springs, CO 80906</a></li>
+                  <li>MON-FRI: 8:30AM-4:30PM | <a href="tel:+17195795227">(719) 579-5227</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-capitalize"><a href="https://www.colorado.gov/pacific/tax/locations-service-centers" target="_blank">Colorado Departments of Revenue</a></h4>
+                <ul class="list-unstyled">
+                  <li><a href="https://www.google.com/maps/place/Colorado+Department+of+Revenue/@39.7379679,-104.9859371,19z/data=!4m5!3m4!1s0x0:0x252c98f5ad3de010!8m2!3d39.738038!4d-104.9852718" target="_blank">1375 Sherman St., Denver, CO 80203</a></li>
+                  <li>MON-FRI: 8-5PM | <a href="tel:+13032058411">(303) 205-8411</a></li>
+                  <li class="margin-top-15"><a href="https://www.google.com/maps/place/Department+Of+Revenue/@38.8673366,-104.7936869,18z/data=!4m13!1m7!3m6!1s0x87134586d5ea590d:0x99a8a401290607bd!2s2447+N+Union+Blvd,+Colorado+Springs,+CO+80909!3b1!8m2!3d38.8673345!4d-104.7925899!3m4!1s0x87134586d54c4643:0xd69128c6c32d0a88!8m2!3d38.8673345!4d-104.7925899" target="_blank">2447 North Union Blvd., Colorado Springs, CO 80909</a></li>
+                  <li>MON-FRI: 8AM-5PM (closed 12-1PM) | <a href="tel:+17195948706">(719) 594-8706</a></li>
+                </ul>
+              </div>
+              <div class="small">Forms may also be available at 
+                local Office Depot, Office Max and Staples stores, or at Colorado 
+                Division of Motor Vehicles locations. </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
