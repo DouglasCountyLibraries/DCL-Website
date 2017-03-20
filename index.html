@@ -55,34 +55,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <style>
-.tour-backdrop {
-	opacity: 0.3!important;
-}
-.tour-step-background {
-	background-color: transparent!important;
-}
-.popover-content {
-	font-size: 18px;
-	padding: 20px;
-}
-.popover-navigation {
-	border-top: 1px solid #e5e5e5;
-}
-.popover-navigation .btn.btn-sm.btn-default {
-	background-color: #fff;
-	box-shadow: none;
-	color: #666;
-	padding: 10px;
-	text-transform: uppercase;
-}
-.popover-navigation .btn-default:active, .popover-navigation .btn-default:hover, .popover-navigation .btn-default:focus {
-	transform: translateY(0);
-	transition: none;
-}
-.popover-navigation .btn-default.disabled:active, .popover-navigation .btn-default.disabled:hover, .popover-navigation .btn-default.disabled:focus {
-	transform: translateY(0);
-	transition: none;
-}
 .featured .fa {
 	color: #fff;
 }
@@ -92,9 +64,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 }
 .featured-links {
 	position: inherit;
-}
-.fa-spin {
-	animation: 40s linear 0s normal none infinite running fa-spin;
 }
 .tax-modal.modal-header {
 	border-bottom: medium none;
@@ -258,31 +227,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	<div id="global-alert" class="container-md" style="display:none;"></div>
 	</div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div id="starttour" class="pointer hidden-xs">
-    <div class="row white text-uppercase text-center alert bg-lavender">Explore what's new with a quick tour!</div>
-  </div>
-  <div class="row padding-top-60 padding-bottom-80">
+  <div class="row border-top padding-top-60 padding-bottom-80">
     <div class="container">
-      <div id="box" class="col-md-8 no-padding equal-height"></div>
-      <script>
-    var images = ['luck-one.jpg','luck-two.jpg','luck-three.jpg','luck-four.jpg','luck-five.jpg','luck-six.jpg'];
-    $('<img alt="St Patricks Day" class="img-responsive" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box');
-	
-</script>
+      <div id="box" class="col-md-8 no-padding equal-height"><img class="img-responsive" src="lisa-scottoline.jpg" alt="Lisa Scottoline"></div>
+
       <div class="col-md-4 flex-center equal-height">
-        <h2 class="roboto text-center text-left-md"><a href="https://dcl.bibliocommons.com/list/share/694266358_jilllib/875854178_st_patricks_day">Great Books, No Blarney!</a></h2>
-        <h2 class="roboto text-center text-left-md"><a href="https://www.eventbrite.com/e/dcl-presents-lisa-scottoline-tickets-31546501435" target="_blank">Lucky Lisa Scottoline</a></h2>
-        <h2 class="roboto text-center text-left-md"><a href="../camp-dcl">Summer Camp Magic Starts Here</a></h2>
+        <h2 class="roboto text-center text-left-md"><a href="../camp-dcl">Playful Summer Camps</a></h2>
+        <h2 class="roboto text-center text-left-md"><a href="https://www.eventbrite.com/e/dcl-presents-lisa-scottoline-tickets-31546501435" target="_blank">Adventures With Lisa Scottoline</a></h2>
+        <h2 class="roboto text-center text-left-md"><a href="http://blogs.douglascountylibraries.org/blog/2017/03/20/final-4-dcl-march-book-madness/">Thrilling Book Madness: Final 4</a></h2>
       </div>
     </div>
   </div>
-  <div class="row bg-lavender featured padding-top-30 padding-bottom-40">
+  <div class="row bg-loquacious featured padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-6 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
-          <div class="icon-circle" style="padding:2px 0 0 1px"><i class="material-icons">spa</i></div>
-          <h2 class="roboto no-margin-bottom"><a class="white" href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/882464877_beauty_and_the_beast_retellings">Beauty and the Beast</a></h2>
-          <div class="text-uppercase no-margin-top"><a class="white text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/882464877_beauty_and_the_beast_retellings">Awesome Retellings for Teens</a></div>
+          <div class="icon-circle" style="padding:0 0 0 4px"><i class="fa fa-pagelines"></i></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="http://www.rbdigital.com/douglascountylibraries/service/zinio/landing?q=garden%2F%2F&p_num=1" target="_blank">Hello, Spring!</a></h2>
+          <div class="text-uppercase no-margin-top"><a class="white text-uppercase font-weight-400" href="http://www.rbdigital.com/douglascountylibraries/service/zinio/landing?q=garden%2F%2F&p_num=1" target="_blank">Garden Ideas</a></div>
         </div>
       </div>
       <div class="col-md-6 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
@@ -418,109 +380,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" -->
-<link rel="stylesheet" type="text/css" href="bootstrap-tour.css">
-<script src="bootstrap-tour.js"></script> 
-<script>
-// Instance the tour
-var tour = new Tour({
-  debug: true,
-  storage: false,
-  steps: [
-  {
-    element: "#step1",
-    content: "Need a library card?",
-    placement: "bottom",
-	backdrop: true,
-  },
-  {
-    element: "#step2",
-    content: "<a href='http://getacard.org/v2/index.html' target='_blank'>Get it here</a>, then use it like crazy!",
-    placement: "right",
-	backdrop: true,
-    onShow: function() {
-      return $("#step1").addClass("open");
-    },      
-    onHide: function() {
-      $("#step1").removeClass("open"); 
-    } 
-  } ,
-   {
-    element: "#step3",
-    content: "Stream and download digital movies, TV, music, magazines, e-books and audiobooks from this page. Need a digital assist with your device? Access the <a href='../digital-media#help' target='_blank'>Digital Media Help Form here</a>, too.",
-    placement: "bottom",
-	backdrop: true,
-  },    
-   {
-    element: "#step4",
-    content: "Create your account to start placing holds, renew checkouts, and more!",
-    placement: "bottom",
-	backdrop: true,
-  },
-	{
-    element: "#step5",
-    content: "It's easy! Use your full 14-digit barcode to start. Then create a username for easy access later. <i>Hint: Your PIN is most likely the last four digits of your phone number.</i>",
-    placement: "left",
-	backdrop: true,
-    onShow: function() {
-      return $("#step4").addClass("open");
-    },      
-    onHide: function() {
-      $("#step4").removeClass("open"); 
-    } 
-  },
-	  	{
-    element: "#step6",
-    content: "Keep track of your account through My Library Dashboard, and create a profile, lists and personal bookshelves.",
-    placement: "left",
-	backdrop: true,
-    onShow: function() {
-      return $("#step4").addClass("open");
-    },      
-    onHide: function() {
-      $("#step4").removeClass("open"); 
-    } 
-  },
-	  {
-    element: "#step7",
-    content: "You can create a profile.",
-    placement: "left",
-	backdrop: true,
-    onShow: function() {
-      return $("#step4").addClass("open");
-    },      
-    onHide: function() {
-      $("#step4").removeClass("open"); 
-    } 
-  },	  
-	  {
-    element: "#step8",
-    content: "And you can also create personal bookshelves and lists to share under My Collections.",
-    placement: "left",
-	backdrop: true,
-    onShow: function() {
-      return $("#step4").addClass("open");
-    },      
-    onHide: function() {
-      $("#step4").removeClass("open"); 
-    } 
-  },	  	  
-	  {
-	content: "<a class='btn btn-primary text-center text-uppercase' href='https://dcl.bibliocommons.com/user/login'>Log In or Register Now</a>",
-	orphan: true,
-	backdrop: true,
-	  }
-]});
-
-tour.init();
-
-$("#starttour").click(function(){
-    tour.start();
-    });
-$(document).on('click', '.popover-navigation [data-role=next],.popover-navigation [data-role=prev]', function (e) {
-        e.stopPropagation();
-    });
-
-</script> 
 <!-- InstanceEndEditable --> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
