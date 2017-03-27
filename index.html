@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,6 +58,12 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <style>
+.row-background {
+	background: #fff url(baseball-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 .featured .fa {
 	color: #fff;
 }
@@ -75,6 +82,15 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	color: #fff;
 	font-size: 70px;
 	padding-top: 9px;
+}
+.grow {
+	transition: all .2s ease-in-out;
+	opacity: .85;
+}
+.grow:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+	opacity: 1;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -225,26 +241,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-top-60 padding-bottom-80">
+  <div class="row row-background border-top" style="border-top:3px solid #78ae34;">
     <div class="container">
-      <div id="box" class="col-md-8 no-padding equal-height"><img class="img-responsive" src="lisa-scottoline.jpg" alt="Lisa Scottoline"></div>
-      <div class="col-md-4 flex-center equal-height">
-        <h2 class="roboto text-center text-left-md"><a href="https://www.eventbrite.com/e/dcl-presents-lisa-scottoline-tickets-31546501435" target="_blank">Adventures With Lisa Scottoline</a></h2>
-        <h2 class="roboto text-center text-left-md"><a href="../camp-dcl">Playful Summer Camps</a></h2>
-        <h2 class="roboto text-center text-left-md"><a href="http://blogs.douglascountylibraries.org/blog/2017/03/20/final-4-dcl-march-book-madness/">Thrilling Book Madness: Final 4</a></h2>
+      <div class="row padding-top-30 padding-bottom-30"><img class="center-block img-responsive" src="big-hitters.png" alt="Big Hitters"></div>
+      <div class="row padding-bottom-40">
+        <div class="container text-center"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/893855897_baseball_movie_greats"><img src="helmet.png" alt="Baseball Movie Greats" class="margin-10 grow"></a><a href="http://blogs.douglascountylibraries.org/blog/2017/03/27/outta-park-dogs-brats/"><img src="hotdog.png" alt="Outta the Park Dogs & Brats" class="margin-10 grow"></a><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/894080327_at_bat_baseball_books"><img src="mit-glove.png" alt="Batter Up! Reads for Young Fans" class="margin-10 grow"></a></div>
       </div>
     </div>
   </div>
-  <div class="row bg-loquacious featured padding-top-30 padding-bottom-40">
+  <div class="row featured padding-top-30 padding-bottom-40" style="background-color:#78ae34;">
     <div class="container">
-      <div class="col-md-6 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
-          <div class="icon-circle" style="padding:0 0 0 4px"><i class="fa fa-pagelines"></i></div>
-          <h2 class="roboto no-margin-bottom"><a class="white" href="http://www.rbdigital.com/douglascountylibraries/service/zinio/landing?q=garden%2F%2F&p_num=1" target="_blank">Hello, Spring!</a></h2>
-          <div class="text-uppercase no-margin-top"><a class="white text-uppercase font-weight-400" href="http://www.rbdigital.com/douglascountylibraries/service/zinio/landing?q=garden%2F%2F&p_num=1" target="_blank">Garden Ideas</a></div>
+          <div class="icon-circle"><i class="fa fa-fire"></i></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="../camp-dcl">Camp DCL</a></h2>
+          <div class="text-uppercase no-margin-top"><a class="white text-uppercase font-weight-400" href="../camp-dcl">Sign Up for Summber Fun</a></div>
         </div>
       </div>
-      <div class="col-md-6 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+        <div class="text-center">
+          <div class="icon-circle" style=""><i class="material-icons">import_contacts</i></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="https://www.eventbrite.com/e/dcl-presents-lisa-scottoline-tickets-31546501435" target="_blank">Lisa Scottoline</a></h2>
+          <div class="text-uppercase no-margin-top"><a class="white text-uppercase font-weight-400" href="https://www.eventbrite.com/e/dcl-presents-lisa-scottoline-tickets-31546501435" target="_blank">Up Close With the Crime Writer</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
           <div class="icon-circle"><i class="fa fa-files-o"></i></div>
           <h2 class="roboto no-margin-bottom"><a class="white" href="" data-toggle="modal" data-target="#comodal">Got Taxes?</a></h2>
@@ -253,6 +274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  
   <!-- Modal -->
   <div class="modal fade" id="comodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
@@ -423,4 +445,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
