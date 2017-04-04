@@ -14,13 +14,142 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="title" -->
 <title>Search the Website | Douglas County Libraries</title>
 <style>
-.sj-search-info {
-	display: none;
-}
-.sj-result-title {
-	font-size: 20px;
-}
-</style>
+    /**
+     *  Search box styles.
+     */
+    #sj-search-modal-input-holder-outer {
+        padding: .5em 0
+    }
+    #sj-search-modal-input-holder-inner {
+        position: relative;
+        left: 0
+    }
+    .sj-search-bar-input-common {
+        width: 500px;
+        font-size: 20px;
+        padding: .4em;
+        outline: none;
+        letter-spacing: .6px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        line-height: 24px;
+        text-rendering: optimizeLegibility;
+        border-radius: 0;
+        box-sizing: initial
+    }
+    #sj-search-bar-completion {
+        border: 1px solid #d9d9d9;
+        color: #bebebe
+    }
+    #sj-search-bar-input {
+        border: 1px solid transparent;
+        position: absolute;
+        background: transparent;
+        color: #666;
+        top: 0;
+        left: 0
+    }
+
+    /**
+     *  Search result styles.
+     */
+    .sj-result-summary {
+        padding-bottom: 1em;
+        font-size: 16px;
+        color: #aaa
+    }
+    .sj-result-title {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .sj-result-title a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 20px;
+        color: #333;
+        line-height: 21.6px
+    }
+    .sj-result-title a:hover {
+        text-decoration: underline
+    }
+    .sj-result-description {
+        color: #545454;
+        font-size: 15px;
+        line-height: 22px;
+        overflow-wrap: break-word;
+        margin-top: 2px;
+        margin-bottom: 4px
+    }
+    .sj-result-url {
+        color: #969696;
+        font-size: 13px;
+        line-height: 18.2px;
+        margin: 0;
+        color: #a2a2a2
+    }
+    .sj-result-url a {
+        text-decoration: none;
+        color: #a2a2a2
+    }
+    .sj-result-list>* {
+        margin-top: 1em
+    }
+    .sj-result-list>:first-child {
+        margin-top: 0
+    }
+
+    /**
+     *  Paginator styles.
+     */
+    .sj-paginator {
+        margin: 1em 0;
+        text-align: center;
+    }
+    .sj-paginator > div {
+        display: inline;
+        padding: 10px;
+        color: #777;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+    }
+    .sj-paginator > div.current {
+        color: #333;
+    }
+    .sj-paginator > div.disabled {
+        color: #aaa;
+    }
+
+    /**
+     *  Tab styles.
+     */
+    .sj-tabs-container {
+        border-bottom: 1px solid #ebebeb;
+        color: #777;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .sj-tabs {
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    .sj-tab {
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0;
+        padding: .9em;
+        user-select: none;
+    }
+
+    .sj-tab-active {
+        color: #333;
+        border-bottom: 3px solid #333;
+    }
+    </style>
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
