@@ -48,13 +48,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
 <style>
-.carousel {
-	height: 250px;
-}
+/* carousel height, as percentage of width */
+/* inherit height from parent */
+* { box-sizing: border-box; }
+
 .carousel-cell {
-	text-align: center;
-	width: 100%;
+  width: 100%;
+  padding: 0 0 50px 0;
+
 }
+
 .carousel-cell:before {
 	display: block;
 	text-align: center;
@@ -70,23 +73,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	display: none;
 }
 
-@media (min-width: 600px) {
-.carousel {
-	height: 210px;
-}
-}
-
-@media (min-width: 768px) {
-.carousel {
-	height: 180px;
-}
-}
-
-@media (min-width: 992px) {
-.carousel {
-	height: 160px;
-}
-}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -342,7 +328,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="large-text margin-lg-200">"The Douglas County Libraries (DCL) system has always played a vital part in its communities and has been fortunate to have strong leaders with innovative ideas that have allowed DCL to thrive and become a nationally recognized district."
             <blockquote><span class="small white"> The Castle Pines Connection, January 1, 2017</span></blockquote>
           </div>
-        </div>
+        </div>   
       </div>
     </div>
   </div>
