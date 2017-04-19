@@ -48,9 +48,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
 <style>
+.carousel {
+	height: 250px;
+}
 .carousel-cell {
 	text-align: center;
-	height: 220px;
 	width: 100%;
 }
 .carousel-cell:before {
@@ -67,9 +69,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .flickity-prev-next-button {
 	display: none;
 }
- @media (min-width: 768px) {
-.carousel-cell {
+
+@media (min-width: 600px) {
+.carousel {
+	height: 210px;
+}
+}
+
+@media (min-width: 768px) {
+.carousel {
+	height: 180px;
+}
+}
+
+@media (min-width: 992px) {
+.carousel {
 	height: 160px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -318,12 +334,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h1 class="white">DCL in the News</h1>
       <div class="carousel" data-flickity='{ "wrapAround": true, "selectedAttraction": 0.08, "friction": 0.30, "autoPlay": 6000 }'>
         <div class="carousel-cell">
-          <div class="large-text">&quot;The effort [to bolster its Castle Rock Star collection] is part of Douglas County Libraries&rsquo; larger &lsquo;creating connections&rsquo; initiative, through which the district seeks to support local traditions and celebrations.&quot;
+          <div class="large-text margin-lg-200">&quot;The effort [to bolster its Castle Rock Star collection] is part of Douglas County Libraries&rsquo; larger &lsquo;creating connections&rsquo; initiative, through which the district seeks to support local traditions and celebrations.&quot;
             <blockquote><span class="small white">The Denver Post – YourHub, November 29, 2016</span></blockquote>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="large-text">"The Douglas County Libraries (DCL) system has always played a vital part in its communities and has been fortunate to have strong leaders with innovative ideas that have allowed DCL to thrive and become a nationally recognized district."
+          <div class="large-text margin-lg-200">"The Douglas County Libraries (DCL) system has always played a vital part in its communities and has been fortunate to have strong leaders with innovative ideas that have allowed DCL to thrive and become a nationally recognized district."
             <blockquote><span class="small white"> The Castle Pines Connection, January 1, 2017</span></blockquote>
           </div>
         </div>
