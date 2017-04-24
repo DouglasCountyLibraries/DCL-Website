@@ -74,14 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	font-size: 70px;
 	padding-top: 9px;
 }
-.grow {
-	transition: all .2s ease-in-out;
-}
-.grow:hover {
-	transform: scale(1.05);
-	cursor: pointer;
-	opacity: 1;
-}
 .header-content {
 	margin: 60px 15px;
 }
@@ -117,6 +109,11 @@ header:before {
 	transform: translateZ(.1px);
 	position: relative;
 	z-index: 10;
+}
+.animate-fade-in {
+	animation: fade-in 2s forwards;
+	animation-delay: 8s;
+	opacity: 0;
 }
 .animate-pop-in {
 	animation: pop-in 4s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
@@ -184,6 +181,14 @@ header:before {
  100% {
  opacity: 1;
  transform: none;
+}
+}
+ @keyframes fade-in {
+ 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
 }
 }
  @keyframes rotate-up {
@@ -408,11 +413,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <header>
       <div class="header-content">
         <div class="clearfix padding-bottom-15">
-          <div class="container-lg"> <a href="camp-dcl#artist">
+          <div class="container-lg">
             <div class="col-sm-4 col-md-2"><a href="camp-dcl#artist"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-one img-circle" src="camp-dcl/be-an-artist.png"></a>
               <h3 class="text-uppercase white animate-pop-in-one"><a class="white" href="camp-dcl#artist">Be an Artist</a></h3>
             </div>
-            </a>
             <div class="col-sm-4 col-md-2"><a href="camp-dcl#builder"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-two img-circle" src="camp-dcl/be-a-builder.png"></a>
               <h3 class="text-uppercase white animate-pop-in-two"><a class="white"  href="camp-dcl#builder">Be a Builder</a></h3>
             </div>
@@ -433,7 +437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="row clearfix">
           <h1 class="jumbo-text font-weight-400 text-uppercase header-title animate-pop-in">Camp DCL: Summer Camps begin June 5</h1>
-          <h3 class="header-subtitle animate-pop-in"><a class="white text-underline" href="http://blogs.douglascountylibraries.org/blog/2017/04/24/cool-summer-camps-for-kids/">Check out these summer camps for thinkers & tinkerers</a></h3>
+          <h3 class="header-subtitle animate-fade-in"><a class="white text-underline" href="http://blogs.douglascountylibraries.org/blog/2017/04/24/cool-summer-camps-for-kids/">Check out these summer camps for thinkers & tinkerers</a></h3>
           <p class="large-text white header-button animate-pop-in"><a style="background-color:#F0503B;border: 2px solid #fff;" class="btn btn-primary" href="camp-dcl/">Register Now</a></p>
         </div>
       </div>
