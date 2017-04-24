@@ -82,7 +82,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	cursor: pointer;
 	opacity: 1;
 }
-	.header-content {width: 100%; margin: 60px 15px;}
+.header-content {
+	width: 100%;
+	margin: 60px 15px;
+}
 header {
 	align-items: center;
 	justify-content: center;
@@ -94,7 +97,7 @@ header {
 }
 header:before {
 	animation: fade-slide-down .02s .05s cubic-bezier(0, 0.5, 0, 1) forwards;
-	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)),  url(https://cssanimation.rocks/levelup/public/images/background.jpg) no-repeat bottom;
+	background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.8)), url(background.jpg) no-repeat bottom;
 	background-size: cover;
 	content: "";
 	opacity: 0;
@@ -111,8 +114,8 @@ header:after {
 	color: #fff;
 }
 .header-subtitle {
-	text-transform: uppercase;
-	margin-bottom: 5rem;
+
+	margin-bottom: 3rem;
 }
 .header-button {
 	transform: translateZ(.1px);
@@ -120,20 +123,48 @@ header:after {
 	z-index: 10;
 }
 .animate-pop-in {
-	animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+	animation: pop-in 4s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+	animation-delay: 8s;
 	opacity: 0;
 }
-.rocky-dashed {
+.animate-pop-in-one {
+	animation: pop-in .5s forwards;
 	animation-delay: .5s;
+	opacity: 0;
+}
+.animate-pop-in-two {
+	animation: pop-in .5s forwards;
+	animation-delay: 1s;
+	opacity: 0;
+}
+.animate-pop-in-three {
+	animation: pop-in .5s forwards;
+	animation-delay: 1.5s;
+	opacity: 0;
+}
+.animate-pop-in-four {
+	animation: pop-in .5s forwards;
+	animation-delay: 2s;
+	opacity: 0;
+}
+.animate-pop-in-five {
+	animation: pop-in .5s forwards;
+	animation-delay: 2.5s;
+	opacity: 0;
+}
+.animate-pop-in-six {
+	animation: pop-in .5s forwards;
+	animation-delay: 3s;
+	opacity: 0;
 }
 .header-title {
-	animation-delay: 2s;
+	animation-delay: 4s;
 }
 .header-subtitle {
-	animation-delay: 3s;
+	animation-delay: 4.5s;
 }
 .header-button {
-	animation-delay: 4s;
+	animation-delay: 5s;
 }
 
 
@@ -380,45 +411,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row bg-lavender">
     <header>
       <div class="header-content">
-        <div class="row">
-          <div class="col-sm-2 col-md-4"><img class="grow rocky-dashed center-block img-responsive animate-pop-in img-circle" src="camp-dcl/be-an-artist.png">
-            <h3 class="grow text-uppercase white rocky-dashed animate-pop-in">Be an Artist</h3>
+        <div class="clearfix padding-bottom-15">
+          <div class="container-lg"> <a href="camp-dcl#artist">
+            <div class="col-sm-4 col-md-2"><a href="camp-dcl#artist"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-one img-circle" src="camp-dcl/be-an-artist.png"></a>
+              <h3 class="text-uppercase white animate-pop-in-one"><a class="white" href="camp-dcl#artist">Be an Artist</a></h3>
+            </div>
+            </a>
+            <div class="col-sm-4 col-md-2"><a href="camp-dcl#builder"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-two img-circle" src="camp-dcl/be-a-builder.png"></a>
+              <h3 class="text-uppercase white animate-pop-in-two"><a class="white"  href="camp-dcl#builder">Be a Builder</a></h3>
+            </div>
+            <div class="col-sm-4 col-md-2"><a href="camp-dcl#chef"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-three img-circle" src="camp-dcl/be-a-chef.png"></a>
+              <h3 class="text-uppercase white animate-pop-in-three"><a class="white"  href="camp-dcl#chef">Be a Chef</a></h3>
+            </div>
+            <div class="col-sm-4 col-md-2"><a href="camp-dcl#coder"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-four img-circle" src="camp-dcl/be-a-coder.png"></a>
+              <h3 class="text-uppercase white animate-pop-in-four"><a class="white"  href="camp-dcl#coder">Be a Coder</a></h3>
+            </div>
+            <div class="col-sm-4 col-md-2"><a href="camp-dcl#detective"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-five img-circle" src="camp-dcl/be-a-detective.png"></a>
+              <h3 class="text-uppercase white animate-pop-in-five"><a class="white" href="camp-dcl#detective">Be a Detective</a></h3>
+            </div>
+            <div class="col-sm-4 col-md-2"><a href="camp-dcl#engineer"><img style="border: 3px solid #fff;" class="center-block img-responsive animate-pop-in-six img-circle" src="camp-dcl/be-a-robotics-engineer.png"></a>
+              <h3 class="text-uppercase white animate-pop-in-six"><a class="white"  href="camp-dcl#engineer c">Be a Robotics<br>Engineer</a></h3>
+            </div>
           </div>
-          <div class="col-sm-2 col-md-4"><img class="grow rocky-dashed center-block img-responsive animate-pop-in img-circle" src="camp-dcl/be-a-builder.png">
-            <h3 class="grow text-uppercase white rocky-dashed animate-pop-in">Be a Builder</h3>
-          </div>
-          
-                    <div class="col-sm-2 col-md-4"><img class="grow rocky-dashed center-block img-responsive animate-pop-in img-circle" src="camp-dcl/be-a-chef.png">
-            <h3 class="grow text-uppercase white rocky-dashed animate-pop-in">Be a Chef</h3>
-          </div>
-          
-          
-                    <div class="col-sm-2 col-md-4"><img class="grow rocky-dashed center-block img-responsive animate-pop-in img-circle" src="camp-dcl/be-a-coder.png">
-            <h3 class="grow text-uppercase white rocky-dashed animate-pop-in">Be a Coder</h3>
-          </div>
-          
-          
-                    <div class="col-sm-2 col-md-4"><img class="grow rocky-dashed center-block img-responsive animate-pop-in img-circle" src="camp-dcl/be-a-detective.png">
-            <h3 class="grow text-uppercase white rocky-dashed animate-pop-in">Be a Detective</h3>
-          </div>
-          
-          
-                    <div class="col-sm-2 col-md-4"><img class="grow rocky-dashed center-block img-responsive animate-pop-in img-circle" src="camp-dcl/be-a-robotics-engineer.png">
-            <h3 class="grow text-uppercase white rocky-dashed animate-pop-in">Be a Robotics Engineer</h3>
-          </div>
-          
-          
-          
         </div>
-        <div class="row">
-          <h1 class="jumbo-text text-uppercase header-title animate-pop-in">Summer Camps heading goes here</h1>
-          <h3 class="header-subtitle animate-pop-in">More info goes here</h3>
-          <p class="large-text white header-button animate-pop-in"><a class="white" href="#">Action Item</a></p>
+        <div class="row clearfix">
+          <h1 class="jumbo-text font-weight-400 text-uppercase header-title animate-pop-in">Camp DCL: Summer Camps begin June 5</h1>
+          <h3 class="header-subtitle animate-pop-in"><a class="white text-underline" href="http://blogs.douglascountylibraries.org/blog/2017/04/24/cool-summer-camps-for-kids/">Check out these summer camps for thinkers & tinkerers</a></h3>
+          <p class="large-text white header-button animate-pop-in"><a style="background-color:#F0503B;border: 2px solid #fff;" class="btn btn-primary" href="camp-dcl/">Register Now</a></p>
         </div>
       </div>
     </header>
   </div>
-  <div class="row bg-lavender featured padding-top-30 padding-bottom-40">
+  <div class="row bg-loquacious featured padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
