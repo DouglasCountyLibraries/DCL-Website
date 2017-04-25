@@ -111,8 +111,13 @@ header:before {
 	z-index: 10;
 }
 .animate-fade-in {
-	animation: fade-in 2s forwards;
-	animation-delay: 7.5s;
+	animation: fade-in 1s forwards;
+	animation-delay: 7s;
+	opacity: 0;
+}
+.animate-pop-in-btn {
+	animation: pop-in-btn .3s forwards;
+	animation-delay: 2s;
 	opacity: 0;
 }
 .animate-pop-in {
@@ -174,6 +179,16 @@ header:before {
  0% {
  opacity: 0;
  transform: translateY(-4rem) scale(.8);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+ @keyframes pop-in-btn {
+ 0% {
+ opacity: 0;
+ transform: scale(.9);
 }
  100% {
  opacity: 1;
@@ -433,9 +448,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
         </div>
         <div class="row clearfix">
-          <h1 class="jumbo-text font-weight-400 text-uppercase header-title animate-pop-in">Camp DCL: Summer Camps begin June 5</h1>
-          <h3 class="header-subtitle animate-fade-in"><a class="white text-underline" href="http://blogs.douglascountylibraries.org/blog/2017/04/24/cool-summer-camps-for-kids/">Check out these summer camps for thinkers & tinkerers</a></h3>
-          <p class="large-text white header-button animate-pop-in"><a style="background-color:#F0503B;border: 2px solid #fff;" class="btn btn-primary" href="camp-dcl/">Register Now</a></p>
+          <h1 class="jumbo-text font-weight-400 text-uppercase header-title animate-pop-in">Camp DCL: Summer Camps begin June&nbsp;5</h1>
+          <h4 class="header-subtitle animate-fade-in"><a class="white text-underline" href="http://blogs.douglascountylibraries.org/blog/2017/04/24/cool-summer-camps-for-kids/">Check out these summer camps for thinkers & tinkerers</a></h4>
+          <p class="large-text white header-button animate-pop-in-btn"><a style="background-color:#F0503B;border: 2px solid #fff;" class="btn btn-primary" href="camp-dcl/">Register Now</a></p>
         </div>
       </div>
     </header>
