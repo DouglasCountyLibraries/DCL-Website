@@ -57,20 +57,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	font-size: 60px;
 }
 .dchrc-card {
-	height: 340px;
+	height: 310px;
 }
 .front:hover {
 	cursor: pointer;
 }
-.unflip-btn, .flip-btn {
-	color: #333;
+.flip-btn {
+    color: #ccc;
+    cursor: pointer;
+    margin-left: 5px;
+    padding-top: 4px;
+    vertical-align: top;
+}
+.unflip-btn {
+	color: #ccc;
 	cursor: pointer;
 	position: absolute;
 	right: 15px;
 	top: 15px;
+	z-index: 1;
 }
 .flip-btn:hover, .unflip-btn:hover, .flip-btn:focus, .unflip-btn:focus {
-	color: #8a6824;
+	color: #555;
 	-webkit-transition-duration: 0.8s;
 	-moz-transition-duration: 0.8s;
 	-o-transition-duration: 0.8s;
@@ -79,13 +87,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 @media (min-width: 768px) {
 .dchrc-card {
-	height: 400px;
+	height: 350px;
 }
 }
 
 @media (max-width: 768px) {
 .listing {
-	padding-top: 40px;
+	padding-top: 5px;
 }
 }
 .vegas-container {
@@ -395,7 +403,7 @@ $(".panzoom").vegas({
       <h4 class="white font-weight-400">We collect and preserve the history of Douglas County, the High Plains, the Divide area of the Front Range, and the state of Colorado. Call or stop by to access our reference services and programs, or to donate your own pieces of Douglas County history. Visit us at <a class="white text-underline" href="http://douglascountyhistory.org" target="_blank">douglascountyhistory.org</a>.</h4>
     </div>
   </div>
-  <div class="row padding-top-30">
+  <div class="row padding-top-30 padding-bottom-15">
     <div class="container text-center">
       <div itemscope itemtype="http://schema.org/PostalAddress">
         <h1 class="roboto no-margin-top no-margin-bottom"> <a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.3676569,-104.8601784,18z/data=!4m5!3m4!1s0x0:0x3640fa4d1ddfc4e0!8m2!3d39.3680882!4d-104.8591377" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></h1>
@@ -409,9 +417,9 @@ $(".panzoom").vegas({
   <div class="row">
     <div class="container">
       <div class="card-grid dchrc-card">
-        <div class="front bg-white"> <img class="img-responsive flex-image center-block" src="archivist-is-in.png">
+        <div class="front bg-white"> <img class="img-responsive flex-image center-block" src="archivist.png">
           <div class="container">
-            <h4 class="roboto padding-left-15 padding-right-15 text-center margin-top-5 margin-lg-200">Visit with a Douglas County History Research Center archivist at a branch near you!</h4>
+            <h4 class="roboto padding-left-15 padding-right-15 text-center margin-top-5 margin-lg-200">Visit with a Douglas County History Research Center archivist at a branch near you! <i class="flip-btn material-icons">arrow_forward</i></h4>
           </div>
         </div>
         <div class="back bg-white margin-lg-200"><i class="unflip-btn material-icons">clear</i>
@@ -456,7 +464,7 @@ $(".panzoom").vegas({
         <div>Access multilevel curriculum providing beginning, intermediate and advanced genealogical studies, presented by the Castle Rock Colorado Genealogical Society.</div>
         <div>Thursday, May 4, 6-8PM, Castle Rock.</div>
         <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116176" target="_blank" class="btn btn-primary text-uppercase margin-top-15">View Calendar</a></div>
-		</div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
