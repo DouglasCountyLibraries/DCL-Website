@@ -334,7 +334,7 @@ $(".panzoom").vegas({
     <div class="container location-caption text-center">
       <h1 class="no-margin-bottom font-weight-400 white text-capitalize">Castle Pines</h1>
       <div class="white font-weight-400 small text-uppercase margin-bottom-10">Manager: Aspen Walker <a href="tel:+13037917323" class="white margin-left-5">(303) 791-7323</a></div>
-      <h4 class="white font-weight-400">This library's creativity-encouraging features include vending-machine-style <a class="white text-underline" href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, a furnished terrace with a fireplace, and Everbright, a Lite-Brite-inspired interactive wall in the children's area.</h4>
+      <h4 class="white font-weight-400">This library's creativity-encouraging features include vending-machine-style <a class="white text-underline" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, a furnished terrace with a fireplace, and Everbright, a Lite-Brite-inspired interactive wall in the children's area.</h4>
     </div>
   </div>
 <div class="row padding-bottom-30">
@@ -512,11 +512,9 @@ class="btn btn-default text-uppercase">View Calendar</a></div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-$("a[rel=popover]")
-    .popover()
-    .click(function(e) {
-        e.preventDefault();
-     });
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
  </script> 
 <!-- InstanceEndEditable --> 
 <!-- Google Analytics --> 

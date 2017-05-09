@@ -317,7 +317,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="hours-wrapper">
                 <div>
                   <h5>Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills:<br>
-                    <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Tell Me a Story">narrative skills</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Take Time to Rhyme">phonological awareness</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Look for Letters">letter knowledge</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Books Are Fun">print motivation</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Explore New Words">vocabulary</a>, and <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Words Are Everywhere">print awareness</a>.</h5>
+                    <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tell Me a Story">narrative skills</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Take Time to Rhyme">phonological awareness</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Look for Letters">letter knowledge</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Books Are Fun">print motivation</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Explore New Words">vocabulary</a>, and <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Words Are Everywhere">print awareness</a>.</h5>
                 </div>
                 <div style="height:200px;background:transparent url(storytime.png) top center no-repeat;"></div>
                 <div>
@@ -552,7 +552,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="panel-collapse collapse in" id="collapseOne" aria-expanded="false">
               <div class="panel-body">
                 <h5>Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills:<br>
-                  <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Tell Me a Story">narrative skills</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Take Time to Rhyme">phonological awareness</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Look for Letters">letter knowledge</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Books Are Fun">print motivation</a>, <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Explore New Words">vocabulary</a>, and <a href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Words Are Everywhere">print awareness</a>. Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing — that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well — maybe you already are!</h5>
+                  <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tell Me a Story">narrative skills</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Take Time to Rhyme">phonological awareness</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Look for Letters">letter knowledge</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Books Are Fun">print motivation</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Explore New Words">vocabulary</a>, and <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Words Are Everywhere">print awareness</a>. Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing — that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well — maybe you already are!</h5>
               </div>
             </div>
           </div>
@@ -832,11 +832,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-$("a[rel=popover]")
-    .popover()
-    .click(function(e) {
-        e.preventDefault();
-     });
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
  </script> 
 <!-- InstanceEndEditable --> 
 <!-- Google Analytics --> 

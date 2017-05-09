@@ -358,7 +358,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="col-lg-3 col-md-6 col-sm-6 padding-top-30 padding-bottom-30">
         <div id="box-four"></div>
         <h2 class="roboto text-center white">Fête des Fables Gala</h2>
-        <div class="margin-left-30 margin-right-30">Our annual Fête des Fables Gala, in addition to traditional cash donations, is a primary way that we fund our support of <a class="text-underline white" href="#" rel="popover" data-placement="top" data-trigger="focus" data-content="Early Childhood Literacy">ECL</a> programs. Each year, Fête des Fables invites guests to enjoy cocktails and a sumptuous meal, shop a fantastic silent auction, and mingle with friends old and new, while celebrating a classic story in a charming venue.</div>
+        <div class="margin-left-30 margin-right-30">Our annual Fête des Fables Gala, in addition to traditional cash donations, is a primary way that we fund our support of <a class="text-underline white" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Early Childhood Literacy">ECL</a> programs. Each year, Fête des Fables invites guests to enjoy cocktails and a sumptuous meal, shop a fantastic silent auction, and mingle with friends old and new, while celebrating a classic story in a charming venue.</div>
       </div>
     </div>
   </div>
@@ -547,11 +547,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-$("a[rel=popover]")
-    .popover()
-    .click(function(e) {
-        e.preventDefault();
-     });
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
  </script> 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
 <!-- InstanceEndEditable --> 
