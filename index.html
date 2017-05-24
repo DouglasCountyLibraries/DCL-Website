@@ -274,14 +274,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div style="border-bottom: 1px solid #fff;" class="row background padding-top-30">
     <div class="container">
-      <div class="featured-links col-md-5 col-md-push-7 text-center padding-bottom-15 equal-height flex-center">
+      <div class="featured-links col-md-5 col-md-push-7 text-center text-left-md padding-bottom-15 equal-height flex-center">
         <h1 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?kw=kickoff&ds=2017-6-3&de=2017-6-3&lib=ALL" target="_blank">Readers @ Play Kickoff</a></h1>
         <h1 class="roboto"><a href="../summer-reading">Summer Reading Events</a></h1>
         <h1 class="roboto"><a href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/951260697_captivating_carnivals">Carnivals for the Mind</a></h1>
       </div>
-      <div class="col-md-7 col-md-pull-5 padding-bottom-30 equal-height flex-center"><img class="img-responsive" src="summer-reading.png" alt="Summer Reading"></div>
+      <div id="box-one" class="col-md-7 col-md-pull-5 padding-bottom-30 equal-height flex-center"></div>
     </div>
   </div>
+  <script>
+    var images = ['summer-reading-one.png', 'summer-reading-two.png', 'summer-reading-three.png'];
+    $('<img alt="Summer Reading" class="img-responsive" src="home-page-images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+</script>
   <div class="row bg-teal padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
