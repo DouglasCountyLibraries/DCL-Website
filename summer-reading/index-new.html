@@ -54,6 +54,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	background: #fff url(background.png) bottom center/cover;
 	background-repeat: no-repeat;
 }
+#ticket-one {
+	-ms-transform: rotate(3deg); /* IE 9 */
+	-webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+	transform: rotate(3deg);
+}
+#ticket-two {
+	-ms-transform: rotate(-3deg); /* IE 9 */
+	-webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+	transform: rotate(-3deg);
+}
+#ticket-three {
+	-ms-transform: rotate(3deg); /* IE 9 */
+	-webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+	transform: rotate(3deg);
+}
+#ticket-one, #ticket-two, #ticket-three {
+	-webkit-transition: -webkit-transform .4s ease-in-out;
+	-ms-transition: -ms-transform .4s ease-in-out;
+	transition: transform .4s ease-in-out;
+}
+#ticket-one:hover, #ticket-two:hover, #ticket-three:hover {
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
 .number-card {
 	height: 120px;
 	text-align: center;
@@ -355,7 +380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container">
       <div class="row">
         <div style="padding:140px 0 0" class="col-md-8"><img class="img-responsive" src="readers-play.png" alt="Readers @ Play"></div>
-        <div style="padding:300px 0 0" class="col-md-4 hidden-sm hidden-xs"><img class="img-responsive" src="http://placehold.it/500x325?text=hamburgerman" alt="Summer Reading Dates"></div>
+        <div style="padding:300px 0 0" class="col-md-4 hidden-sm hidden-xs"><img class="img-responsive" src="http://placehold.it/500x325?text=hamburger man" alt="Summer Reading Dates"></div>
       </div>
       <div class="row text-center">
         <h1 class="jumbo-text white text-uppercase font-weight-400">Summer Reading Program for All Ages</h1>
@@ -363,10 +388,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div style="background-color: #869F3F;" class="row white padding-top-15 padding-bottom-40">
+  <div style="background-color: #869F3F;" class="row white padding-top-15">
     <div class="container">
       <div class="col-md-4">
-		  <div class="padding-bottom-15">Hey kids! Starting June 3, <a class="white text-underline" href="#pdf">print a reading log</a> or sign up online, then read for 720 minutes or complete fun alternative activities to complete the Summer Reading Program. When you're done, visit us in person to get a free book (while supplies last)!</div>
+        <div class="padding-bottom-15">Hey kids! Starting June 3, <a class="white text-underline" href="#pdf">print a reading log</a> or sign up online, then read for 720 minutes or complete fun alternative activities to complete the Summer Reading Program. When you're done, visit us in person to get a free book (while supplies last)!</div>
       </div>
       <div class="col-md-4">
         <div class="padding-bottom-15"> Summer Reading is for grown-ups, too! Readers ages 13 and up can read 900 minutes to finish and be entered into a gift card prize drawing. <a class="white text-underline" href="#pdf">Print a bookmark</a> or track your minutes and finish online.</div>
@@ -376,11 +401,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div style="background-color: #869F3F;" class="row white padding-top-15 padding-bottom-40">
+  <div style="background-color: #869F3F;" class="row white padding-top-15 padding-bottom-30">
     <div class="container">
-      <div id="ticket-one" class="col-md-4 padding-bottom-15"><a href="#"><img src="http://placehold.it/300x200?text=ticket" alt="ticket" class="center-block"></a></div>
-      <div id="ticket-two" class="col-md-4 padding-bottom-15"><a href="#"><img src="http://placehold.it/300x200?text=ticket" alt="ticket" class="center-block"></a></div>
-      <div id="ticket-three" class="col-md-4 padding-bottom-15"><a href="#"><img src="http://placehold.it/300x200?text=ticket" alt="ticket" class="center-block"></a></div>
+      <div class="col-md-4 padding-bottom-30"><a href="https://wandooreader.com/douglascountylibraries/readers-play-kids/users/registrations/new" target="_blank"><img id="ticket-one" src="http://placehold.it/300x200?text=kids" alt="Readers @ Play-Kids" class="center-block"></a></div>
+      <div class="col-md-4 padding-bottom-30"><a href="https://wandooreader.com/douglascountylibraries/readers-play-teens-adults/users/registrations/new" target="_blank"><img id="ticket-two" src="http://placehold.it/300x200?text=teens-adults" alt="Readers @ Play-Adults" class="center-block"></a></div>
+      <div class="col-md-4 padding-bottom-30"><a href="#"><img id="ticket-three" src="http://placehold.it/300x200?text=ticket" alt="ticket" class="center-block"></a></div>
     </div>
   </div>
   <!-- add reading goal later 
