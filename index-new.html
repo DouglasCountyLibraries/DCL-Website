@@ -13,9 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MV5DM73');</script>
 <!-- End Google Tag Manager -->
 <!-- InstanceBeginEditable name="title" -->
-
 <meta name="robots" content="noindex, nofollow">
-
 <title>Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning. Through engagement, education and entertainment, Douglas County Libraries transforms lives and builds community.">
@@ -57,6 +55,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background {
 	background: #fff url(background.png) bottom center/cover;
 	background-repeat: no-repeat;
+}
+#ticket-one {
+	-ms-transform: rotate(3deg); /* IE 9 */
+	-webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+	transform: rotate(3deg);
+}
+#ticket-two {
+	-ms-transform: rotate(-3deg); /* IE 9 */
+	-webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+	transform: rotate(-3deg);
+}
+#ticket-three {
+	-ms-transform: rotate(3deg); /* IE 9 */
+	-webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+	transform: rotate(3deg);
+}
+#ticket-one, #ticket-two, #ticket-three {
+	-webkit-transition: -webkit-transform .4s ease-in-out;
+	-ms-transition: -ms-transform .4s ease-in-out;
+	transition: transform .4s ease-in-out;
+}
+#ticket-one:hover, #ticket-two:hover, #ticket-three:hover {
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
 }
 .featured .material-icons {
 	color: #fff;
@@ -283,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row no-gutter background padding-top-15 padding-bottom-30">
     <div class="container">
-      <div>
+   <!-- remove for now
         <div class="srp-heading margin-bottom-15">
           <h1 class="no-margin-bottom jumbo-text text-capitalize font-weight-400">2017 Summer Reading Kickoff Party<br>
             June 3, 10AM-Noon, All Ages</h1>
@@ -304,23 +327,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-md-push-1 padding-bottom-15">
+     -->
+      <div class="col-md-7 padding-bottom-15">
         <div class=""><img class="img-responsive" src="readers-play-animated.gif"></div>
       </div>
-      <div class="col-md-4 delish col-md-push-1 padding-top-60 padding-bottom-30">
-        <div class="text-center"> <a href="#" data-toggle="modal" data-target="#modalone"><img class="img-responsive shadow-low shadow-low-hover center-block" src="dcl-delish.png"></a>
-          <h3 class="text-capitalize font-weight-400"><a onClick="ga('send', 'pageview', {'page': '/dcl-delish-video'});" class="white" href="#" data-toggle="modal" data-target="#modalone">Big-Top Treats</a></h3>
-          <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="modalone" style="display: none;">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe src="https://www.youtube.com/embed/3RLy3AlQBBk?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-5 padding-top-60 padding-bottom-30">
+        <div class="padding-bottom-30"><a href="https://wandooreader.com/douglascountylibraries/readers-play-kids/users/registrations/new" target="_blank"><img id="ticket-one" src="http://placehold.it/300x200?text=kids" alt="Readers @ Play-Kids" class="center-block"></a></div>
+        <div class="padding-bottom-30"><a href="https://wandooreader.com/douglascountylibraries/readers-play-teens-adults/users/registrations/new" target="_blank"><img id="ticket-two" src="http://placehold.it/300x200?text=teens-adults" alt="Readers @ Play-Adults" class="center-block"></a></div>
       </div>
     </div>
   </div>
