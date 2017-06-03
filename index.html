@@ -55,6 +55,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	background: #fff url(background.png) bottom center/cover;
 	background-repeat: no-repeat;
 }
+#ticket-one {
+	-ms-transform: rotate(3deg); /* IE 9 */
+	-webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+	transform: rotate(3deg);
+}
+#ticket-two {
+	-ms-transform: rotate(-3deg); /* IE 9 */
+	-webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+	transform: rotate(-3deg);
+}
+#ticket-three {
+	-ms-transform: rotate(3deg); /* IE 9 */
+	-webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
+	transform: rotate(3deg);
+}
+#ticket-one, #ticket-two, #ticket-three {
+	-webkit-transition: -webkit-transform .4s ease-in-out;
+	-ms-transition: -ms-transform .4s ease-in-out;
+	transition: transform .4s ease-in-out;
+}
+#ticket-one:hover, #ticket-two:hover, #ticket-three:hover {
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
 .featured .material-icons {
 	color: #fff;
 	font-size: 70px;
@@ -278,9 +303,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row no-gutter background padding-top-15 padding-bottom-30">
-    <div class="container">
-      <div>
+  <div class="row no-gutter background padding-top-15">
+    <div class="container no-padding">
+   <!-- remove for now
         <div class="srp-heading margin-bottom-15">
           <h1 class="no-margin-bottom jumbo-text text-capitalize font-weight-400">2017 Summer Reading Kickoff Party<br>
             June 3, 10AM-Noon, All Ages</h1>
@@ -301,23 +326,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
         </div>
+     -->
+      <div class="col-md-7 no-padding-left no-padding-right padding-top-15 padding-bottom-15 equal-height">
+        <div class=""><a href="summer-reading/"><img id="play" class="img-responsive center-block" src="readers-play.gif"></a></div>
       </div>
-      <div class="col-md-6 col-md-push-1 padding-bottom-15">
-        <div class=""><img class="img-responsive" src="readers-play-animated.gif"></div>
-      </div>
-      <div class="col-md-4 delish col-md-push-1 padding-top-60 padding-bottom-30">
-        <div class="text-center"> <a href="#" data-toggle="modal" data-target="#modalone"><img class="img-responsive shadow-low shadow-low-hover center-block" src="dcl-delish.png"></a>
-          <h3 class="text-capitalize font-weight-400"><a onClick="ga('send', 'pageview', {'page': '/dcl-delish-video'});" class="white" href="#" data-toggle="modal" data-target="#modalone">Big-Top Treats</a></h3>
-          <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="modalone" style="display: none;">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe src="https://www.youtube.com/embed/3RLy3AlQBBk?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-4 padding-top-15 padding-bottom-15 equal-height flex-center">
+        <div class="padding-bottom-30"><a href="https://wandooreader.com/douglascountylibraries/readers-play-kids/users/registrations/new" target="_blank"><img id="ticket-one" src="summer-reading/kids-ticket.png" alt="Readers @ Play-Kids" class="center-block"></a></div>
+        <div class="padding-bottom-30"><a href="https://wandooreader.com/douglascountylibraries/readers-play-teens-adults/users/registrations/new" target="_blank"><img id="ticket-two" src="summer-reading/adult-teen-ticket.png" alt="Readers @ Play-Adults" class="center-block"></a></div>
       </div>
     </div>
   </div>
