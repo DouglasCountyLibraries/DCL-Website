@@ -73,25 +73,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
 <style>
-.short-stack {
-	font-family: 'Short Stack', cursive;
-	line-height: 30px;
-	text-shadow: 0px 2px 3px #000000;
-}
 .background {
-	background: #fff url(sky.jpg) bottom center/cover;
+	background: #fff url(map.png) center center/cover;
+	height: 600px;
 	background-repeat: no-repeat;
 }
 .featured .material-icons {
-	color: #fff;
+	color: #387d88;
 	font-size: 70px;
 	padding-top: 9px;
 }
+.icon-circle-custom {
+	border: 3px solid #387d88;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #387d88;
+	font-size: 60px;
+	height: 100px;
+	line-height: 90px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+}
+.icon-circle-default .fa {
+	color: #387d88;
+}
 .sr-ticket {
 	position: fixed;
-	top: 300px;
+	bottom: 300px;
 	right: -130px;
 	z-index: 2000;
 	-webkit-transition-duration: 1.5s;
@@ -101,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .sr-ticket:hover {
 	position: fixed;
-	top: 300px;
+	top: 200px;
 	right: -10px;
 	z-index: 2000;
 	-webkit-transition-duration: 0.6s;
@@ -111,6 +121,217 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	-webkit-transform: rotate(20deg);
 	-o-transform: rotate(20deg);
 	transform: rotate(20deg);
+}
+.bus-image {
+	position: absolute;
+	top: 400px;
+	-webkit-animation: bus ease-in-out 40s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @-webkit-keyframes bus {
+ 0% {
+ right: 0%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 0%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+ @keyframes bus {
+ 0% {
+ right: 0%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 0%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+.sports-car-image {
+	position: absolute;
+	top: 320px;
+	-webkit-animation: sports-car ease-in-out 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @-webkit-keyframes sports-car {
+ 0% {
+ right: 0%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 0%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+ @keyframes sports-car {
+ 0% {
+ right: 0%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 0%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+.family-car-image {
+	position: absolute;
+	top: 360px;
+	-webkit-animation: family-car ease-in-out 30s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @-webkit-keyframes family-car {
+ 0% {
+ right: 10%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 90%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 90%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 90%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 10%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+ @keyframes family-car {
+ 0% {
+ right: 10%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 90%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 90%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 90%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 10%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+.transit-bus-image {
+	position: absolute;
+	top: 580px;
+	-webkit-animation: transit-bus ease-in-out 100s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @-webkit-keyframes transit-bus {
+ 0% {
+ right: 0%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 0%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+ @keyframes transit-bus {
+ 0% {
+ right: 0%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 0%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+.trip-text {
+	margin-top: 180px;
 }
 
 @media (max-width: 480px) {
@@ -124,23 +345,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .sr-ticket:hover {
 	right: -70px;
 }
+.trip-text {
+	margin-top: 80px;
 }
-
-@media (min-width: 992px) {
-.sky-row {
-	padding-top: 40px;
-}
-.sky-links {
-	margin-top: 155px;
-}
-.dad {
-	padding-top: 45px;
-}
-}
-
-@media (min-width: 1200px) {
-.sky-links {
-	margin-top: 180px;
+.bus-image, .family-car-image, .transit-bus-image, .sports-car-image {
+	display: none;
 }
 }
 </style>
@@ -349,35 +558,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row sky-row background">
-    <div class="container">
-      <div class="sky-links col-md-3 col-md-push-9 no-padding padding-top-30 text-center text-right-md">
-        <h2 class="short-stack text-uppercase"><a class="white" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/972311228_favorite_fictional_fathers">Favorite Fictional Fathers</a></h2>
-        <h2 class="short-stack text-uppercase"><a class="white" href="http://blogs.douglascountylibraries.org/blog/2017/06/09/free-and-cheap-ways-to-celebrate-dad/">Celebrate Dad on the Cheap</a></h2>
-      </div>
-      <div class="dad col-md-9 col-md-pull-3 no-padding">
-        <div><img class="img-responsive center-block" src="father-son.png" alt="Father's Day"></div>
-      </div>
+  <div class="row background">
+    <div class="container trip-text text-center">
+      <h1 class="jumbo-text font-weight-700 text-uppercase"><a class="white" href="http://blogs.douglascountylibraries.org/blog/2017/06/15/road-trippin/">Ideas for Hittin' the Road</a></h1>
+      <h1 class="jumbo-text font-weight-700 text-uppercase"><a class="white" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/976415437_lessons_from_the_road">Lessons From the Road (Trip)</a></h1>
     </div>
-  </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-40">
+    <img class="bus-image" src="bus.png" alt="Bus"> <img class="sports-car-image" src="sports-car.png" alt="Sports Car"> <img class="family-car-image" src="family-car.png" alt="Family Car"> <img class="transit-bus-image" src="transit-bus.png" alt="Transit Bus"> </div>
+  <div style="background-color: #99d4c9;" class="row padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div style="padding:5px 0 0 1px;" class="icon-circle-default featured"><i class="material-icons">wb_sunny</i></div>
-        <h2 class="roboto no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank" class="white">Consumer Reports</a></h2>
-        <div class="text-uppercase no-margin-top"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank" class="white text-uppercase font-weight-400">Find a Grill that Sizzles </a></div>
+        <div class="icon-circle-custom"><i class="fa fa-film"></i></div>
+        <h2 class="roboto no-margin-bottom"><a style="color:#387d88;" href="https://www.hoopladigital.com/genre/318351105" target="_blank">Watch on the Go!</a></h2>
+        <div class="text-uppercase no-margin-top"><a style="color:#387d88;" href="https://www.hoopladigital.com/genre/318351105" target="_blank" class="text-uppercase font-weight-400">Action & Adventure Flicks</a></div>
       </div>
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
-          <div style="padding:2px 0 0 2px;" class="icon-circle-default"><i class="fa fa-check"></i></div>
-          <h2 class="roboto no-margin-bottom"><a href="../staff-picks" class="white">Staff Picks</a></h2>
-          <div class="text-uppercase no-margin-top"><a href="../staff-picks" class="white text-uppercase font-weight-400">Recommended Reads</a></div>
+          <div style="padding:0 6px 0 0;" class="icon-circle-custom"><i class="fa fa-music"></i></div>
+          <h2 class="roboto no-margin-bottom"><a style="color:#387d88;" href="https://douglascountylibraries.freegalmusic.com/homes/us_top_10" target="_blank">Music on Demand</a></h2>
+          <div class="text-uppercase no-margin-top"><a style="color:#387d88;" href="https://douglascountylibraries.freegalmusic.com/homes/us_top_10" target="_blank" class="text-uppercase font-weight-400">Top Hits for Your Playlist</a></div>
         </div>
       </div>
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div style="padding-top:3px;" class="icon-circle-default"><i class="fa fa-tablet"></i></div>
-        <h2 class="roboto no-margin-bottom"><a href="http://www.rbdigital.com/douglascountylibraries/service/zinio/landing?q=%2FOutdoor%2F&p_num=1" target="_blank" class="white">Digital Magazines</a></h2>
-        <div class="text-uppercase no-margin-top"><a href="http://www.rbdigital.com/douglascountylibraries/service/zinio/landing?q=%2FOutdoor%2F&p_num=1" target="_blank" class="white text-uppercase font-weight-400">For Outdoorsy Dads</a></div>
+        <div style="padding-top:2px;" class="icon-circle-custom"><i class="fa fa-headphones"></i></div>
+        <h2 class="roboto no-margin-bottom"><a style="color:#387d88;" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/950402977_listen_to_this_audiobooks_for_a_family_road_trip">Listen to These</a></h2>
+        <div class="text-uppercase no-margin-top"><a style="color:#387d88;" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/950402977_listen_to_this_audiobooks_for_a_family_road_trip" class="text-uppercase font-weight-400">Staff Faves for Family Travel</a></div>
       </div>
     </div>
   </div>
