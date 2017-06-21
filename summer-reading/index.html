@@ -71,123 +71,92 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.33/jquery.colorbox-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 <style>
-/*
-    Colorbox Core Style:
-    The following CSS is consistent between example themes and should not be altered.
-*/
-#colorbox, #cboxOverlay, #cboxWrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 9999;
-	overflow: hidden;
-	-webkit-transform: translate3d(0, 0, 0);
-}
-#cboxWrapper {
-	max-width: none;
-}
-#cboxOverlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-}
-#cboxMiddleLeft, #cboxBottomLeft {
-	clear: left;
-}
-#cboxContent {
-	position: relative;
-}
-	#colorbox {
-    outline: 0 none;
-    top: 20%!important;
-}
-#cboxLoadedContent {
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-}
-#cboxTitle {
-	margin: 0;
-}
-#cboxLoadingOverlay, #cboxLoadingGraphic {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
-	cursor: pointer;
-}
-.cboxPhoto {
-	float: left;
-	margin: auto;
-	border: 0;
-	display: block;
-	max-width: none;
-	-ms-interpolation-mode: bicubic;
-}
-.cboxIframe {
-	width: 100%;
-	height: 100%;
-	display: block;
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
-#colorbox, #cboxContent, #cboxLoadedContent {
-	box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-}
-/* 
-    User Style:
-    Change the following styles to modify the appearance of Colorbox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
-#cboxOverlay {
-	background: #fff;
-	opacity: 0.7!important;
-}
-#colorbox {
-	outline: 0;
-}
-#cboxContent {
-	margin-top: 0;
-	overflow: hidden;
-	background: #000;
-}
-.cboxIframe {
-	background: #fff;
-}
-#cboxError {
-	padding: 50px;
-	border: 1px solid #ccc;
-}
-#cboxLoadedContent {
-	background: #000;
-	padding: 1px;
-}
-#cboxLoadingOverlay {
-	background: #000;
-}
-#cboxTitle {
-	position: absolute;
-	top: -22px;
-	left: 0;
-	color: #000;
-}
-#cboxCurrent {
-	position: absolute;
-	top: -22px;
-	right: 205px;
-	text-indent: -9999px;
-}
 .background {
 	background: #fff url(background.png) center center/cover;
 	background-repeat: no-repeat;
+}
+.alert-minutes {
+	font-family: 'Caveat', cursive;
+	font-size: 28px;
+	line-height: 1em;
+	position: fixed;
+	width: 300px;
+	z-index: 100;
+	background-color: #C6E8E8;
+	color: #205166;
+	-webkit-animation: tag ease-in-out 10s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+	-webkit-animation-delay: 5s; /* Safari 4.0 - 8.0 */
+	animation-delay: 5s;
+}
+.alert-minutes a {
+	color: #205166;
+}
+ @-webkit-keyframes tag {
+ 0% {
+ right: -400px;
+ bottom: 50%;
+}
+ 5% {
+ right: 5px;
+ bottom: 50%;
+ -ms-transform: rotate(4deg); /* IE 9 */
+ -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+ transform: rotate(4deg);
+}
+ 10% {
+right: 5px;
+ bottom: 50%;
+ -ms-transform: rotate(4deg); /* IE 9 */
+ -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+ transform: rotate(4deg);
+}
+ 95% {
+right: 5px;
+ bottom: 50%;
+ -ms-transform: rotate(4deg); /* IE 9 */
+ -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+ transform: rotate(4deg);
+}
+ 100% {
+right: -400px;
+ bottom: 50%;
+}
+}
+ @keyframes tag {
+ 0% {
+ right: -400px;
+ bottom: 50%;
+}
+ 5% {
+ right: 5px;
+ bottom: 50%;
+ -ms-transform: rotate(4deg); /* IE 9 */
+ -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+ transform: rotate(4deg);
+}
+ 10% {
+right: 5px;
+ bottom: 50%;
+ -ms-transform: rotate(4deg); /* IE 9 */
+ -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+ transform: rotate(4deg);
+}
+ 95% {
+right: 5px;
+ bottom: 50%;
+ -ms-transform: rotate(4deg); /* IE 9 */
+ -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+ transform: rotate(4deg);
+}
+ 100% {
+right: -400px;
+ bottom: 50%;
+}
 }
 #ticket-one {
 	-ms-transform: rotate(3deg); /* IE 9 */
@@ -569,22 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" --> 
-  <script>
-function openColorBox(){
-$.colorbox({iframe:true, width:"302px", height:"360px", href: "summer-reading-goal.html"});
-}
-
-if(!$.cookie("colorboxShown")){
-openColorBox();
-$.cookie('colorboxShown', true, { expires: 1, path: '/' });
-}
-
-window.setTimeout(function() {
-    $.colorbox.close();
-}, 9000);
-
-      </script>
+  <!-- InstanceBeginEditable name="Content" -->
   <div class="row background padding-bottom-30">
     <div class="container">
       <div class="row">
@@ -627,18 +581,6 @@ window.setTimeout(function() {
       <div class="col-md-4 padding-bottom-30"><a href="#games"><img id="ticket-three" src="play-ticket.png" alt="ticket" class="center-block"></a></div>
     </div>
   </div>
-  <!--remove for now
-  <div style="background-color: #869F3F;" class="row white padding-bottom-40">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="white no-margin-bottom">Already registered?</h1>
-        <h3 class="white no-margin-top margin-bottom-15"><a class="white text-underline" href="https://wandooreader.com/douglascountylibraries/readers-play-kids/users/sessions/new" target="_blank"> Log your Kid minutes </a> or <a class="white text-underline" href="https://wandooreader.com/douglascountylibraries/readers-play-teens-adults/users/sessions/new" target="_blank"> Teen/Adult minutes </a> now!</h3>
-      </div>
-      <div class="white margin-lg-100 large-text text-center">New this year, Summer Reading presents the <a class="white text-underline" href="https://douglascountylibraries.evanced.info/reader/family" target="_blank">Family Management Tool</a>! Step right up and try your hand at managing your family's Readers @ Play in one place with this amazing tool. <a class="white text-underline" href="http://answers.douglascountylibraries.org/summer-reading/faq/192197">Learn more</a>!</div>
-    </div>
-  </div>
-  -->
-  
   <div style="background-color: #869F3F;" class="row padding-top-15 padding-bottom-60">
     <div class="container">
       <div class="progress">
@@ -656,52 +598,6 @@ window.setTimeout(function() {
       <h2 class="white text-center margin-bottom-30">Help us meet our community goal of 4 million minutes! </h2>
     </div>
   </div>
-  <!-- reading tips removed
-  <div class="row bg-gray-5 padding-top-30 padding-bottom-60">
-    <div class="container">
-      <h2 class="text-center">Summer Reading Tips</h2>
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front bg-teal shadow-low flex-center">
-            <h1 class="text-center white number">1</h1>
-          </div>
-          <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front bg-teal shadow-low flex-center">
-            <h1 class="text-center white number">2</h1>
-          </div>
-          <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front bg-teal shadow-low flex-center">
-            <h1 class="text-center white number">3</h1>
-          </div>
-          <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front bg-teal shadow-low flex-center">
-            <h1 class="text-center white number">4</h1>
-          </div>
-          <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
   <div id="events" class="row bg-salmon padding-top-30 padding-bottom-60">
     <div class="container">
       <h2 class="white text-center">Attending a library event can make your summer as a Reader @ Play even more fun!</h2>
@@ -810,6 +706,9 @@ window.setTimeout(function() {
       </div>
     </div>
   </div>
+  <div class="alert alert-minutes shadow-high"> <a href="#" class="close black" data-dismiss="alert">&times;</a>
+    <div class="">Help us meet our community goal of 4 million minutes! Log your <a href="https://wandooreader.com/douglascountylibraries/readers-play-kids/users/sessions/new" target="_blank">Kids</a>, <a href="https://wandooreader.com/douglascountylibraries/readers-play-teens-adults/users/sessions/new" target="_blank">Teens & Adults</a>, or <a href="https://douglascountylibraries.evanced.info/reader/family" target="_blank">Family</a> minutes today.</div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -864,11 +763,7 @@ window.setTimeout(function() {
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO&nbsp;&nbsp;80104</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-	  $(".card-grid").flip();
-		</script> 
-<!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
