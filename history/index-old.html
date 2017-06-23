@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Minimize page flickering for Google Optimize -->
-<style>
-.async-hide {
-	opacity: 0 !important
-}
-</style>
+<!-- Minimize page flickering for Google Optimize --> 
+<style>.async-hide { opacity: 0 !important} </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
 h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
 })(window,document.documentElement,'async-hide','dataLayer',4000,
 {'GTM-K3MW9FB':true});</script>
-<!-- End -->
-<!-- Google Analytics with Google Optimize plugin -->
+<!-- End --> 
+<!-- Google Analytics with Google Optimize plugin --> 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,7 +22,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   ga('require', 'GTM-K3MW9FB');
   ga('send', 'pageview');
 </script>
-<!-- End -->
+<!-- End --> 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -37,8 +32,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <!-- InstanceBeginEditable name="title" -->
 <title>Douglas County History | Douglas County Libraries</title>
-<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Douglas County History, Douglas County History Research Center">
-<meta name="description" content="The Douglas County History Research Center collects and preserves the history of Douglas County, the High Plains, the Divide area of the Front Range and the State of Colorado in order to provide historical research resources to the public. We offer reference services, public programs and online resources to a diverse audience of adults and youth.">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -71,43 +64,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link type="text/css" rel="stylesheet" href="../shared-assets/css/vegas.css">
-<script src="../shared-assets/js/vegas.js"></script>
 <style>
 .locations-active {
 	background-color: #f5f5f5;
 }
-.location-caption h1 {
-	font-size: 65px;
-	line-height: 60px;
+.slideshow-background {
+	height: 225px;
 }
-.location-caption h2 {
-	font-size: 55px;
-	line-height: 50px;
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 225px;
+	overflow: hidden;
+}
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 225px;
+	background: no-repeat 50% 50%;
+	background-size: cover;
+	animation-name: kenburns;
 }
 .dchrc-card {
-	height: 310px;
+	height: 400px;
+}
+.flex-image {
+	padding-top: 60px;
 }
 .front:hover {
 	cursor: pointer;
 }
-.flip-btn {
-	color: #ccc;
-	cursor: pointer;
-	margin-left: 5px;
-	padding-top: 4px;
-	vertical-align: top;
-}
-.unflip-btn {
-	color: #ccc;
+.unflip-btn, .flip-btn {
+	color: #333;
 	cursor: pointer;
 	position: absolute;
 	right: 15px;
 	top: 15px;
-	z-index: 1;
 }
 .flip-btn:hover, .unflip-btn:hover, .flip-btn:focus, .unflip-btn:focus {
-	color: #555;
+	color: #8a6824;
 	-webkit-transition-duration: 0.8s;
 	-moz-transition-duration: 0.8s;
 	-o-transition-duration: 0.8s;
@@ -115,60 +110,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media (min-width: 768px) {
+.slideshow-background {
+	height: 325px;
+}
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 325px;
+}
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 325px;
+}
 .dchrc-card {
-	height: 350px;
+	height: 450px;
+}
+.flex-image {
+	padding-top: 30px;
 }
 }
 
-@media (max-width: 768px) {
-.listing {
-	padding-top: 5px;
+@media (min-width: 992px) {
+.slideshow-background {
+	height: 500px;
 }
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 500px;
 }
-.vegas-container {
-	height: 780px!important
-}
-
-@media (min-width: 320px) {
-.vegas-container {
-	height: 780px!important;
-}
-}
-
-@media (min-width: 450px) {
-.vegas-container {
-	height: 700px!important;
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 450px;
 }
 }
 
-@media (min-width: 525px) {
-.vegas-container {
-	height: 600px!important;
-}
-}
+	@media (max-width: 768px) {
+		.listing {padding-top: 40px;
+	}
 
-@media (min-width: 560px) {
-.vegas-container {
-	height: 600px!important;
-}
-}
-
-@media (min-width: 600px) {
-.vegas-container {
-	height: 500px!important;
-}
-}
-
-@media (min-width: 899px) {
-.vegas-container {
-	height: 460px!important;
-}
-}
-
-@media (min-width: 990px) {
-.vegas-container {
-	height: 345px!important;
-}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -375,76 +357,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" --> 
-  <script>
-	$(function(){
-$(".panzoom").vegas({
-	timer: false,
-	autoplay: true,
-	loop: true,
-	delay: 20000,
-	shuffle: true,
-	valign: 'top',
-	transition: 'fade',
-	firstTransitionDuration: .1,
-	transitionDuration: 4000,
-	animation: 'random',
-	color: '#000000',
-    slides: [
-        { src: "assets/images/history-background-one.jpg" },
-        { src: "assets/images/history-background-two.jpg" },
-        { src: "assets/images/history-background-three.jpg" },
-        { src: "assets/images/history-background-four.jpg" },
-		{ src: "assets/images/history-background-five.jpg" },
-		{ src: "assets/images/history-background-six.jpg" },
-		{ src: "assets/images/history-background-seven.jpg" },
-    ]
-});
-});
-	</script>
-  <div class="row panzoom">
-    <div class="container location-caption text-center">
-      <h1 class="no-margin-bottom font-weight-400 white text-capitalize">Douglas County History</h1>
-      <h2 class="no-margin-bottom no-margin-top font-weight-400 white text-capitalize">Research Center</h2>
-      <div class="font-weight-400 small text-uppercase margin-bottom-10"><a class="white margin-left-15 margin-right-15" href="tel:303-688-7730">(303) 688-7730</a> <a class="white text-underline margin-left-15 margin-right-15" href="#" data-toggle="modal" data-target="#myModal">Contact Us</a> 
-        
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="text-center modal-title">Contact the Douglas County History Research Center</h3>
+  <!-- InstanceBeginEditable name="Content" -->
+  <div class="row slideshow-background">
+    <div class="slideshow">
+      <div class="slideshow-image" style="background-image: url('assets/images/douglas-county-history.jpg')"></div>
+    </div>
+  </div>
+  <div class="row padding-bottom-30">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">Douglas County History Research Center</h1>
+        <div class="text-uppercase margin-bottom-10"><a class="margin-left-15 margin-right-15" href="tel:303-688-7730">(303) 688-7730</a> <a class="margin-left-15 margin-right-15" href="#" data-toggle="modal" data-target="#myModal">Contact Us</a> 
+          
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3 class="text-center modal-title">Contact the Douglas County History Research Center</h3>
+                </div>
+                <script type="text/javascript" src="https://form.jotform.com/jsform/62514846353155"></script> 
               </div>
-              <iframe id="JotFormIFrame" allowtransparency="true" src="https://form.jotform.us/62514846353155" frameborder="0"      style="width:100%;height:450px;border:none;" scrolling="no"></iframe>
             </div>
           </div>
         </div>
+        <div class="separator-container">
+          <div class="separator line-separator"><i class="fa fa-map-marker"></i></div>
+        </div>
+        <h2 class="roboto no-margin-top vcard">
+          <div class="adr"><a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.3676569,-104.8601784,18z/data=!4m5!3m4!1s0x0:0x3640fa4d1ddfc4e0!8m2!3d39.3680882!4d-104.8591377" target="_blank"><span class="street-address">100 S. Wilcox</span> Street, <span class="locality">Castle Rock</span>, <span class="region">CO</span> <span class="postal-code"> 80104</span></a></div>
+        </h2>
       </div>
-      <h4 class="white font-weight-400">We collect and preserve the history of Douglas County, the High Plains, the Divide area of the Front Range, and the state of Colorado. Call or stop by to access our reference services and programs, or to donate your own pieces of Douglas County history. Visit us at <a class="white text-underline" href="http://douglascountyhistory.org" target="_blank">douglascountyhistory.org</a>.</h4>
+      <div class="row margin-lg-100">
+        <div class="col-sm-4 text-center">
+          <h5 class="text-uppercase no-margin-top">Mon: 9AM-9PM</h5>
+        </div>
+        <div class="col-sm-4 text-center">
+          <h5 class="text-uppercase no-margin-top">Tue-Fri: 9AM-5PM</h5>
+        </div>
+        <div class="col-sm-4 text-center">
+          <h5 class="text-uppercase no-margin-top">By Appointment After Hours</h5>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row padding-top-30 padding-bottom-15">
-    <div class="container text-center">
-      <div itemscope itemtype="http://schema.org/PostalAddress">
-        <h1 class="roboto no-margin-top no-margin-bottom"> <a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.3676569,-104.8601784,18z/data=!4m5!3m4!1s0x0:0x3640fa4d1ddfc4e0!8m2!3d39.3680882!4d-104.8591377" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></h1>
-      </div>
-      <h5 class="no-margin-top">Inside our Castle Rock location and at <a href="http://douglascountyhistory.org" target="_blank">douglascountyhistory.org</a></h5>
-      <h4 class="text-uppercase no-margin-top"><span class="margin-left-10 margin-right-10">Mon:&nbsp;9AM-9PM</span><br class="insert-break">
-        <span class="margin-left-10 margin-right-10">Tue-Fri:&nbsp;9AM-5PM</span><br class="insert-break">
-        <span class="margin-left-10 margin-right-10">By Appointment After Hours</span></h4>
+  <div class="row bg-salmon text-center padding-top-30 padding-bottom-40">
+    <div class="container">
+      <div>
+        <h5 class="white">The Douglas County History Research Center collects and preserves the history of Douglas County, the High Plains, the Divide area of the Front Range, and the state of Colorado. Call or stop by to access our reference services and programs, or to donate your own pieces of Douglas County history. You can also use our online resources here.</h5>
+        <a href="http://douglascountyhistory.org" target="_blank" class="btn btn-primary text-uppercase margin-top-15 margin-bottom-15">Go To Douglas County History</a> </div>
     </div>
   </div>
   <div class="row">
     <div class="container">
       <div class="card-grid dchrc-card">
-        <div class="front bg-white"> <img class="img-responsive flex-image center-block" src="archivist.png">
+        <div class="front bg-white"> <img class="img-responsive flex-image center-block" src="archivist-is-in.png">
           <div class="container">
-            <h4 class="roboto padding-left-15 padding-right-15 text-center margin-top-5 margin-lg-200">Visit with a Douglas County History Research Center archivist at a branch near you! <i class="flip-btn material-icons">arrow_forward</i></h4>
+            <h3 class="roboto padding-left-15 padding-right-15 text-center margin-top-5 margin-lg-200">Visit with a Douglas County History Research Center archivist at a branch near you!</h3>
           </div>
         </div>
         <div class="back bg-white margin-lg-200"><i class="unflip-btn material-icons">clear</i>
-          <h4 class="roboto hidden-xs text-center padding-top-40">Archivists can help with genealogy, local and state history, school projects, preservation of family photos and memorabilia, and other topics.</h4>
+          <h2 class="roboto hidden-xs text-center padding-top-40">Archivists can help with genealogy, local and state history, school projects, preservation of family photos and memorabilia, and other topics.</h2>
           <div class="listing">
             <div class="col-sm-6">
               <h5 class="text-capitalize no-margin-bottom">Castle pines</h5>
@@ -467,42 +441,23 @@ $(".panzoom").vegas({
       </div>
     </div>
   </div>
-  <div id="events" class="row event-row"> 
-    <!-- block 1 start -->
-    <div class="col-md-6 bg-lavender equal-height">
-      <div class="two-featured-items">
-        <div class="icon-circle-default"><i class="fa fa-pagelines"></i></div>
-        <h1 class="roboto">Genealogy Share</h1>
-        <h4>Sharing help and research experience.</h4>
-        <div>Drop in and get started with family research, or get free advice on how to do it. No registration required.</div>
-        <div>Mondays, 10AM-12PM, Castle Rock.</div>
-        <div><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=genealogy+share&lib=1001&nd=365" target="_blank" class="btn btn-default">View Calendar</a></div>
+  <div class="row no-gutter">
+    <div class="col-md-6 bg-teal text-center equal-height flex-center">
+      <div class="padding-30">
+        <h1 class="white text-uppercase font-weight-400">genealogy share (sharing help and research experience)</h1>
+        <div class="white">Drop in and get started with family research, or get free advice on how to do it. NO REGISTRATION REQUIRED. </div>
+        <h2 class="roboto white">Mondays, 10AM-12PM, Castle Rock</h2>
+        <div><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=genealogy+share&lib=1001&nd=365" target="_blank" class="btn btn-primary text-uppercase margin-top-30 margin-bottom-30">View Calendar</a></div>
       </div>
     </div>
-    <!-- block 1 end --> 
-    <!-- block 2 start -->
-    <div class="col-md-6 bg-teal equal-height">
-      <div class="two-featured-items">
-        <div class="icon-circle-default"><i class="fa fa-home"></i></div>
-        <h1 class="roboto">Genealogy Workshop</h1>
-        <div>Access multilevel curriculum providing beginning, intermediate and advanced genealogical studies, presented by the Castle Rock Colorado Genealogical Society.</div>
-        <div>Thursday, June 1, 6-8PM, Castle Rock.</div>
-        <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116177" target="_blank" class="btn btn-default">View Calendar</a></div>
+    <div class="col-md-6 bg-lavender text-center equal-height flex-center">
+      <div class="padding-30">
+        <h1 class="white text-uppercase font-weight-400">genealogy workshop</h1>
+        <div class="white">Access multilevel curriculum providing beginning, intermediate and advanced genealogical studies, presented by Castle Rock Colorado Genealogical Society. </div>
+        <h2 class="roboto white">Thursday, July 6, 6-8PM, Castle Rock</h2>
+        <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116178" target="_blank" class="btn btn-default text-uppercase margin-top-30 margin-bottom-30">View Calendar</a></div>
       </div>
     </div>
-    <!-- block 2 end --> 
-    <!-- block 3 start
-    <div class="col-md-4 bg-lavender equal-height">
-      <div class="three-featured-items">
-        <div class="icon-circle-default"><i class="fa fa-question"></i></div>
-        <h1 class="roboto"><a href="#">Heading</a></h1>
-        <h4><a href="#">Subheading if needed.</a></h4>
-        <div>Lorem ipsum dolor <a href="#">sit amet</a>, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra.</div>
-        <div>Mondays, 10AM-2PM, Lone Tree. </div>
-        <div><a href="#" target="_blank" class="btn btn-default">View Calendar</a></div>
-      </div>
-    </div>
-    <!-- block 3 end --> 
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
@@ -600,5 +555,4 @@ $(".panzoom").vegas({
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
