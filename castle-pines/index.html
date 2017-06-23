@@ -1,18 +1,23 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Minimize page flickering for Google Optimize --> 
-<style>.async-hide { opacity: 0 !important} </style>
+<!-- Minimize page flickering for Google Optimize -->
+<style>
+.async-hide {
+	opacity: 0 !important
+}
+</style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
 h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
 })(window,document.documentElement,'async-hide','dataLayer',4000,
 {'GTM-K3MW9FB':true});</script>
-<!-- End --> 
-<!-- Google Analytics with Google Optimize plugin --> 
+<!-- End -->
+<!-- Google Analytics with Google Optimize plugin -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,7 +27,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   ga('require', 'GTM-K3MW9FB');
   ga('send', 'pageview');
 </script>
-<!-- End --> 
+<!-- End -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -31,7 +36,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MV5DM73');</script>
 <!-- End Google Tag Manager -->
 <!-- InstanceBeginEditable name="title" -->
+<meta name="robots" content="noindex, nofollow">
 <title>Castle Pines | Douglas County Libraries</title>
+<title>Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning. Through engagement, education and entertainment, Douglas County Libraries transforms lives and builds community.">
 <!-- InstanceEndEditable -->
@@ -66,9 +73,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link type="text/css" rel="stylesheet" href="../shared-assets/css/vegas.css">
+<script src="../shared-assets/js/vegas.js"></script>
 <style>
 .locations-active {
 	background-color: #f5f5f5;
+}
+.location-caption h1 {
+	font-size: 100px;
+	line-height: 85px;
+}
+.vegas-container {
+	height: 650px!important
+}
+
+@media (min-width: 320px) {
+.vegas-container {
+	height: 620px!important;
+}
+}
+
+@media (min-width: 450px) {
+.vegas-container {
+	height: 540px!important;
+}
+}
+
+@media (min-width: 500px) {
+.vegas-container {
+	height: 490px!important;
+}
+}
+
+@media (min-width: 550px) {
+.vegas-container {
+	height: 400px!important;
+}
+}
+
+@media (min-width: 900px) {
+.vegas-container {
+	height: 300px!important;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -275,51 +321,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" -->
-  <div class="row kb-slideshow-background">
-    <div class="kb-slideshow">
-      <div class="kb-slideshow-image" style="background-image: url('assets/images/castle-pines-one.jpg')"></div>
-      <div class="kb-slideshow-image" style="background-image: url('assets/images/castle-pines-two.jpg')"></div>
-      <div class="kb-slideshow-image" style="background-image: url('assets/images/castle-pines-three.jpg')"></div>
-      <div class="kb-slideshow-image" style="background-image: url('assets/images/castle-pines-four.jpg')"></div>
+  <!-- InstanceBeginEditable name="Content" --> 
+  <script>
+	$(function(){
+$(".panzoom").vegas({
+	timer: false,
+	autoplay: true,
+	loop: true,
+	delay: 20000,
+	shuffle: true,
+	transition: 'fade',
+	firstTransitionDuration: .01,
+	transitionDuration: 4000,
+	animation: 'random',
+	color: '#000',
+    slides: [
+        { src: "assets/images/castle-pines-background-one.jpg" },
+        { src: "assets/images/castle-pines-background-two.jpg" },
+        { src: "assets/images/castle-pines-background-three.jpg" },
+        { src: "assets/images/castle-pines-background-four.jpg" },
+    ]
+});
+});
+	</script>
+  <div class="row panzoom">
+    <div class="container location-caption text-center">
+      <h1 class="no-margin-bottom font-weight-400 white text-capitalize">Castle Pines</h1>
+      <div class="white font-weight-400 small text-uppercase margin-bottom-10">Manager: Aspen Walker <a href="tel:+13037917323" class="white margin-left-5">(303) 791-7323</a></div>
+      <h4 class="white font-weight-400">This library's creativity-encouraging features include vending-machine-style <a class="white text-underline" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, a furnished terrace with a fireplace, and Everbright, a Lite-Brite-inspired interactive wall in the children's area.</h4>
     </div>
   </div>
-<div class="row padding-bottom-30">
-  <div class="container">
-    <div class="text-center">
-      <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">Castle Pines</h1>
-      <div class="text-uppercase margin-bottom-10">Manager: Aspen Walker <a href="tel:+13037917323" class="locuacious margin-left-30">(303) 791-7323</a></div>
-      <div class="separator-container">
-        <div class="separator line-separator"><i class="fa fa-map-marker"></i></div>
+  <div class="row no-gutter sub-nav-row">
+    <div class="sub-nav">
+      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border-first equal-height">
+        <h5 class="no-margin text-uppercase"><a href="#" class="show" data-toggle="modal" data-target="#storytime-modal"><i class="fa fa-comment-o fa-flip-horizontal"></i>Storytime</a></h5>
       </div>
-      <h2 class="roboto no-margin-top vcard">
-        <div class="adr"><a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.4702829,-104.8797745,20z/data=!4m5!3m4!1s0x0:0x4ce2c792379a27ef!8m2!3d39.470283!4d-104.8795009" target="_blank"><span class="street-address">360 Village Square Lane</span>, <span class="locality">Castle Pines</span>, <span class="region">CO</span> <span class="postal-code"> 80108</span></a></div>
-      </h2>
-    </div>
-    <div class="row margin-lg-200">
-      <div class="col-sm-4 text-center">
-        <h5 class="text-uppercase no-margin-top">Mon-Thu: 9AM-7PM</h5>
-      </div>
-      <div class="col-sm-4 text-center">
-        <h5 class="text-uppercase no-margin-top">Fri-Sat: 9AM-5PM</h5>
-      </div>
-      <div class="col-sm-4 text-center">
-        <h5 class="text-uppercase no-margin-top">Sun: 12-5PM</h5>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row bg-salmon text-center padding-top-15 padding-bottom-30">
-  <div class="container">
-    <div class="row padding-bottom-15">
-      <div class="col-sm-4 text-center"> 
-        
-        <!-- Button trigger modal -->
-        <h2 class="roboto white"><i class="margin-right-10 fa fa-comment-o fa-flip-horizontal"></i><a href="#" class="white text-underline" data-toggle="modal" data-target="#storytime-modal">Storytime</a></h2>
-      </div>
-      
       <!-- Modal -->
-      <div class="modal fade" id="storytime-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade text-center" id="storytime-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content padding-bottom-60">
             <div class="modal-header">
@@ -355,53 +393,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <a class="text-uppercase" href="../storytime">View Storytime Hours at all Locations &raquo;</a> </div>
         </div>
       </div>
-      <div class="col-sm-4 text-center">
-        <h2 class="roboto white"><i class="margin-right-10 fa fa-check-square-o"></i><a href="../reserve-a-space" class="white text-underline">Reserve a Space</a></h2>
+      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border equal-height">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../reserve-a-space"><i class="fa fa-check-square-o"></i>Reserve a Space</a></h5>
       </div>
-      <div class="col-sm-4 text-center">
-        <h2 class="roboto white"><i class="margin-right-10 fa fa-book"></i><a href="../used-book-sales" class="white text-underline">Used Book Sales</a></h2>
+      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border equal-height">
+        <h5 class="no-margin text-uppercase"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=&et=18,2,22,16,20,15,3,24,25,7&lib=1000" target="_blank" class="show"><i class="fa fa-calendar-o"></i>Castle Pines Events Calendar</a></h5>
       </div>
-    </div>
-    <div>
-      <h5 class="white margin-lg-200">This library's creativity-encouraging features include vending-machine-style <a class="white text-underline" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, a furnished terrace with a fireplace, and Everbright, a Lite-Brite-inspired interactive wall in the children’s area.</h5>
+      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border equal-height">
+        <h5 class="no-margin text-uppercase"><a class="show" href="../used-book-sales"><i class="fa fa-book"></i>Used Book Sales</a></h5>
+      </div>
     </div>
   </div>
-</div>
-<div id="events" class="row text-center padding-bottom-40">
-  <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">Happenings</h1>
-  <h2 class="roboto"><em style="margin-right:10px;" class="fa fa-calendar-o"></em> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&amp;kw=&amp;et=18,2,22,16,20,15,3,24,25,7&amp;lib=1000" target="_blank">Castle Pines Events Calendar</a></h2>
-</div>
-
-  <!--<div class="row padding-bottom-40">
-    <div class="container text-center">
-     <img class="img-responsive center-block" src="art-of-writing.png" alt="Explore the Art of Writing">
-      <div class="icon-circle"><img src="gray-family.png" style="padding:0px 0 0px 0" alt="Family Game Night"></div>
-	  <h1 class="roboto">Family Game Night: Party Games</h1>
-      <h2 class="roboto margin-lg-100">It's (party) game on at the library! Bring your favorite game or learn a new one. Sunday, May 21, 3-5PM. NO REGISTRATION REQUIRED. </h2>
-      <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=114921" target="_blank" class="btn btn-primary text-uppercase margin-top-30">View Calendar</a></div>
-    </div> 
-	</div>-->
-
-  <div class="row no-gutter">
-    <div class="col-md-12 bg-lavender text-center equal-height flex-center">
-      <div class="padding-30">
-      <div class="icon-circle-default"><i class="fa fa-code"></i></div>
-               <h1 class="fff roboto">Coding Club</h1>
-        <div class="fff margin-lg-100">Explore the world of coding through online tools, high-tech toys, board games, and other interactive activities. AGES 10-15. Monday, June 26, 5:30PM.  </div>
-        <div class="margin-15"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=111887" target="_blank" class="btn btn-default text-uppercase">Register Now</a></div>
+  <div class="row bg-gray-10 padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="text-center">
+        <div itemscope itemtype="http://schema.org/PostalAddress">
+          <h1 class="roboto no-margin-top"> <a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.4702829,-104.8797745,20z/data=!4m5!3m4!1s0x0:0x4ce2c792379a27ef!8m2!3d39.470283!4d-104.8795009" target="_blank"><span itemprop="streetAddress">360&nbsp;Village&nbsp;Square&nbsp;Lane</span>, <span itemprop="addressLocality">Castle&nbsp;Pines</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80108</span></a></h1>
+        </div>
+        <h4 class="text-uppercase no-margin-top"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;9AM-7PM</span><br class="insert-break">
+          <span class="margin-left-10 margin-right-10">Fri-Sat:&nbsp;9AM-5PM</span><br class="insert-break">
+          <span class="margin-left-10 margin-right-10">Sun:&nbsp;12-5PM</span></h4>
       </div>
     </div>
-     
-     <!--<div class="col-md-6 bg-teal text-center equal-height flex-center">
-      <div class="padding-30">
-  		<div class="icon-circle-default"><img src="white-hook.png" style="padding:0 0px 10px 0px;" alt="Adventures in Neverland"></div>
-        <h1 class="fff roboto">Adventures in Neverland  </h1>
-        <div class="fff margin-lg-100">Experience a delightful ballet performance based on Peter Pan and his adventures in Neverland, presented by Dual Star Academy of Dance. Saturday, July 8, 2PM.</div>
-        <div class="margin-15"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=123098" target="_blank" class="btn btn-primary text-uppercase">Register Now</a></div>
-        
-	</div>-->
-    
-<!-- InstanceEndEditable --> </div>
+  </div>
+  <div id="events" class="row event-row bg-teal"> 
+    <!-- block 1 start -->
+    <div class="col-md-6 col-md-push-3 bg-lavender equal-height">
+      <div class="two-featured-items">
+        <div class="icon-circle-default"><i class="fa fa-code"></i></div>
+        <h1 class="roboto">Coding Club</h1>
+        <div>Explore the world of coding through online tools, high-tech toys, board games, and other interactive activities. Ages 10-15. </div>
+        <div>Monday, June 26, 5:30PM.</div>
+        <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=111887" target="_blank" class="btn btn-default">Register Now</a></div>
+      </div>
+    </div>
+    <!-- block 1 end --> 
+    <!-- block 2 start
+    <div class="col-md-4 bg-teal equal-height">
+      <div class="three-featured-items">
+        <div class="icon-circle-default"><i class="fa fa-question"></i></div>
+        <h1 class="roboto">Heading</h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra.</div>
+        <div><a href="#" target="_blank" class="btn btn-default">Register Now</a></div>
+      </div>
+    </div>
+    <!-- block 2 end --> 
+    <!-- block 3 start
+    <div class="col-md-4 bg-lavender equal-height">
+      <div class="three-featured-items">
+        <div class="icon-circle-default"><i class="fa fa-question"></i></div>
+        <h1 class="roboto"><a href="#">Heading</a></h1>
+        <h4><a href="#">Subheading if needed.</a></h4>
+        <div>Lorem ipsum dolor <a href="#">sit amet</a>, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra.</div>
+        <div>Mondays, 10AM-2PM, Lone Tree. </div>
+        <div><a href="#" target="_blank" class="btn btn-default">View Calendar</a></div>
+      </div>
+    </div>
+    <!-- block 3 end --> 
+  </div>
+  <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
     <div class="col-sm-6">
@@ -499,4 +549,5 @@ $(function () {
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
