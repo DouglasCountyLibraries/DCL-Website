@@ -1,6 +1,6 @@
 
 //var baseURI = "http:///dev.dclcollections.dcl.lan/";
-var baseURI = "http://dclcollections.douglascountylibraries.org/";
+var baseURI = "https://dclcollections.douglascountylibraries.org/";
 // <div id="covers-${title}" class ="container shelf-container text-center
 var a = window.location.toString(); 
 var allKeyName;
@@ -25,7 +25,7 @@ function createPreShelf(title, keyName, seq)
 <div class="row shelf">
  
    <div id="covers-${seq}" class ="container shelf-container text-center">
-     <h1 class="no-margin"><a href="https://www.dcl.org/list/all.html?key=${keyName}&title=${title}">${title}</a></h1>
+     <h1 class="no-margin"><a href="http://stage.dcl.org/list/all.html?key=${keyName}&title=${title}">${title}</a></h1>
       `;
     return x;
 }
@@ -82,6 +82,21 @@ $(document).ready(function () {
 }
   //  console.log('return from getCollection',collData);
 });  // end document ready
+function doBiblioList(val)
+{
+	//Noteworthy|New & Noteworthy||5|True|Biblio|975832667|10
+//ListenToThis|Listen To This||5|True|Biblio|963743517|10
+//NowFeaturing|Now Featuring||5|True|Biblio|/991669947|24
+//EpicReads|Epic Reads||5|True|Biblio|994069717|10
+ title = val.DisplayName;
+	if (val.KeyName == 'Noteworthy' )
+	{
+		 var myel = $('#Noteworthy').append(createPreShelf(title,val.KeyName,'10'));
+            console.log('val', val.KeyName)
+            getRandomCollectionList(val.KeyName,'10');
+            $('#Noteworthy').append(createPostShelves(title));
+	}
+}
 function getCollectionSet() {
 
     var uri = baseURI + 'api/collectionlist/GetCollectionSet/';
@@ -106,11 +121,16 @@ function getCollectionSet() {
             console.log('val', val.DisplayName)
             console.log('i', i)
             console.log('w', createPreShelf(title, val.KeyName, i));
-         
+         if	(val.ListType == 'WhatsNew')
+		 {
             var myel = $('#gen').append(createPreShelf(title,val.KeyName,i));
             console.log('val', val.KeyName)
             getRandomCollectionList(val.KeyName,i);
             $('#gen').append(createPostShelves(title));
+		 }
+		 else {
+			 doBiblioList(val);
+		 }
         });
 
     });
@@ -118,6 +138,7 @@ function getCollectionSet() {
        // swal("Problem With Request", data.responseText, "error");
         console.log("Problem With Request", data.responseText, "error");
     });
+}
 	
     function getRandomCollectionList(KeyName, divid) {
 
@@ -148,17 +169,21 @@ function getCollectionSet() {
 
                 console.log('divid', divid)
                 // $('#' + divid).append(createBookList(isbn));
-                if (divid == 1) {
-                    $('#covers-1').append(createBookList(val,KeyName));
-                }
+               
                 if (divid == 0) {
                     $('#covers-0').append(createBookList(val,KeyName));
+                }
+				 if (divid == 1) {
+                    $('#covers-1').append(createBookList(val,KeyName));
                 }
                 if (divid == 2) {
                     $('#covers-2').append(createBookList(val,KeyName));
                 }
                 if (divid == 3) {
                     $('#covers-3').append(createBookList(val,KeyName));
+                }
+				 if (divid == 10) {
+                    $('#covers-Noteworthy').append(createBookList(val,KeyName));
                 }
 
                
@@ -170,8 +195,6 @@ function getCollectionSet() {
             //swal("Problem With Request", data.responseText, "error");
             console.log("Problem With Request", data.responseText, "error")
         });
-
-    }
 }
 function getlargeList(KeyName,Title) {
 
