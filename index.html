@@ -73,7 +73,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 <style>
+.grow {
+	font-family: 'Permanent Marker', cursive;
+	letter-spacing: .07em
+}
+.container-fluid {
+	padding: 0;
+	background: #094458;
+	z-index: -1;
+}
+.contain-header {
+	position: relative;
+	overflow: hidden;
+}
+.main-header {
+	min-height: 50vh;
+}
+.grow .font-weight-700 {
+	font-size: 1.3em;
+	color: red
+}
+video#bgvid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background: #094458 url(shark.jpg) center center no-repeat;
+	background-size: cover;
+}
+video {
+	display: block;
+}
 .text-wrapper {
 	margin: 600px auto 30px auto;
 }
@@ -117,15 +156,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	transform: rotate(20deg);
 }
 .featured-text {
-	text-shadow: 0px 1px 9px rgba(101,183,69,1);
-	font-size: 34px;
+	font-size: 28px;
 }
 .featured-text:hover, .featured-text a:hover {
 	text-decoration: none;
 }
-.background {
-	background: #fff url(ice-cream.png) center right/cover;
-	background-repeat: no-repeat;
+.animate-pop-in {
+	animation: pop-in 0.6s cubic-bezier(0, 0, 0, 1.5) forwards;
+	animation-delay: 7.6s;
+	opacity: 0;
+}
+ @keyframes pop-in {
+ 0% {
+ opacity: 0;
+ transform: translateY(-4rem) scale(.3);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
 }
 
 @media (min-width: 720px) {
@@ -134,10 +183,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 }
 .grow {
-	transition: all .8s ease-in-out;
 }
-.grow:hover {
-	transform: scale(1.2);
+a.grow:hover {
+	color: red;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -344,37 +392,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" -->
-  <div class="row hidden-xs background">
-    <div class="container text-wrapper text-center">
-      <h1 class="grow font-weight-400 text-uppercase"><a class="white featured-text" href="../cool-off#alamo-events"><span class="font-weight-700">Kid-Friendly </span> Flicks for a Cause</a></h1>
-      <h1 class="grow font-weight-400 text-uppercase"><a class="white grow featured-text" href="../cool-off/#dcl-delish">DIY Ice Cream<span class="font-weight-700"> Treats</span></a></h1>
-    </div>
-  </div>
-  <div class="row hidden-sm hidden-md hidden-lg" style="background-color: #65b745;">
-    <div class="container no-padding text-center"><img class="center-block img-responsive" src="ice-cream-small.png" alt="Free Ice Cream">
-      <h1 class="grow font-weight-400 text-uppercase no-margin-top padding-left-15 padding-right-15"><a class="white featured-text" href="../cool-off#alamo-events"><span class="font-weight-700">Kid-Friendly </span> Flicks for a Cause</a></h1>
-      <h1 class="grow font-weight-400 text-uppercase margin-bottom-30 padding-left-15 padding-right-15"><a class="white grow featured-text" href="../cool-off/#dcl-delish">DIY Ice Cream<span class="font-weight-700"> Treats</span></a></h1>
-    </div>
-  </div>
-  <div class="row featured bg-teal padding-top-30 padding-bottom-40">
+  <!-- InstanceBeginEditable name="Content" --> 
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  
+  <div class="contain-header">
     <div class="container">
+      <div class="row main-header">
+        <video autoplay muted playsinline poster="shark.jpg" id="bgvid">
+          <source src="shark.mp4" type="video/mp4" />
+          Your browser does not support the background video tag.
+          <source src="shark.webm" type="video/webm" />
+          Your browser does not support the background video tag. </video>
+        <div style="margin-top:20vh;" class="col-xs-12 text-center">
+          <h1 class="featured-text text-capitalize animate-pop-in"><a class="white grow" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1007336187_shark_week_feeding_frenzy"><span class="font-weight-700">Fin</span>tastic Books & Movies</a></h1>
+          <h1 class="featured-text text-capitalize animate-pop-in"><a class="white grow" href="https://www.hoopladigital.com/search?q=sharks&page=1&kind=MOVIE"><span class="font-weight-700">B</span>eware of Sharks</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #094458;" class="row no-margin featured padding-top-30 padding-bottom-40">
+    <div class="container">
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+        <div style="padding:0 0 0 2px;" class="icon-circle-default"><i class="fa fa-check"></i></div>
+        <h2 class="roboto no-margin-bottom"><a href="http://www.lonetreeartscenter.org/showinfo.php?id=911&utm_source=DCL+Employee+Newsletter&utm_campaign=a4f2fbe5e6-July_eNews_2017&utm_medium=email&utm_term=0_1220695ffb-a4f2fbe5e6-319894953&goal=0_1220695ffb-a4f2fbe5e6-319894953" target="_blank" class="white">Don't Miss Louise Penny!</a></h2>
+        <div class="text-uppercase no-margin-top"><a href="http://www.lonetreeartscenter.org/showinfo.php?id=911&utm_source=DCL+Employee+Newsletter&utm_campaign=a4f2fbe5e6-July_eNews_2017&utm_medium=email&utm_term=0_1220695ffb-a4f2fbe5e6-319894953&goal=0_1220695ffb-a4f2fbe5e6-319894953" target="_blank" class="white text-uppercase font-weight-400"> Tickets Are Going Fast</a></div>
+      </div>
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+        <div style="padding:1px 0 0 1px;" class="icon-circle-default"><i class="fa fa-glass"></i></div>
+        <h2 class="roboto no-margin-bottom"><a class="white" href="../sarah-j-maas">Presenting Sarah J. Maas</a></h2>
+        <div class="text-uppercase no-margin-top"><a href="../sarah-j-maas" class="white text-uppercase font-weight-400">Wednesday, September 13</a></div>
+      </div>
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div style="padding:1px 0 0 1px;" class="icon-circle-default"><i class="material-icons">format_paint</i></div>
         <h2 class="roboto no-margin-bottom"><a class="white" href="../renovations#louviers">We're Updating Louviers!</a></h2>
-		  <div class="text-uppercase no-margin-top"><a href="../renovations#louviers" class="white text-uppercase font-weight-400">Location will be closed <span class="text-nowrap">August 2-25</span></a></div>
-      </div>
-      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div class="text-center">
-          <div style="padding:0 0 0 2px;" class="icon-circle-default"><i class="fa fa-check"></i></div>
-          <h2 class="roboto no-margin-bottom"><a href="http://www.lonetreeartscenter.org/showinfo.php?id=911&utm_source=DCL+Employee+Newsletter&utm_campaign=a4f2fbe5e6-July_eNews_2017&utm_medium=email&utm_term=0_1220695ffb-a4f2fbe5e6-319894953&goal=0_1220695ffb-a4f2fbe5e6-319894953" target="_blank" class="white">Presenting Louise Penny</a></h2>
-          <div class="text-uppercase no-margin-top"><a href="http://www.lonetreeartscenter.org/showinfo.php?id=911&utm_source=DCL+Employee+Newsletter&utm_campaign=a4f2fbe5e6-July_eNews_2017&utm_medium=email&utm_term=0_1220695ffb-a4f2fbe5e6-319894953&goal=0_1220695ffb-a4f2fbe5e6-319894953" target="_blank" class="white text-uppercase font-weight-400">Reserve Your Seat Today!</a></div>
-        </div>
-      </div>
-      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div style="padding:1px 0 0 1px;" class="icon-circle-default"><i class="fa fa-compass"></i></div>
-        <h2 class="roboto no-margin-bottom"><a class="white" href="../dcl-local">DCL Local</a></h2>
-        <div class="text-uppercase no-margin-top"><a href="../dcl-local" class="white text-uppercase font-weight-400">Cool Cardholder Discounts</a></div>
+        <div class="text-uppercase no-margin-top"><a href="../renovations#louviers" class="white text-uppercase font-weight-400">Location will be closed August 2-25</a></div>
       </div>
     </div>
   </div>
