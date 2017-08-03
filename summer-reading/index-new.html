@@ -74,13 +74,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .admin-card {
-    height: 400px;
-    margin-top: 15px;
+	height: 400px;
+	margin-top: 15px;
 }
 .flip-btn {
-    color: rgba(255, 255, 255, 0.6);
-    cursor: pointer;
-    font-size: 48px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 36px;
+	vertical-align: middle;
 }
 .unflip-btn {
 	color: #fff;
@@ -91,7 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	top: 25px;
 }
 .flip-btn:hover, .flip-btn:focus {
-	color: #fff;
+	color: rgba(255,255,255, .6);
 	-webkit-transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
 	-o-transition-duration: 0.4s;
@@ -104,9 +105,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	-o-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 }
-.bg-white-box {
-	margin: 100px 0px 40px;
-	padding: 5px 15px 20px;
+.front {
+	padding: 23% 15px 20px;
+	text-align: center;
+}
+.back {
+	padding: 20% 30px 30px;
 }
 .image-one {
 	background: #fff url("box-one.jpg") no-repeat top center / cover;
@@ -134,35 +138,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .image-one-fill {
 	background: #fff url("box-one-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
 }
 .image-two-fill {
 	background: #fff url("box-two-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
 }
 .image-three-fill {
 	background: #fff url("box-three-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
 }
 .image-four-fill {
 	background: #fff url("box-four-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
 }
 .image-five-fill {
 	background: #fff url("box-five-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
 }
 .image-six-fill {
 	background: #fff url("box-six-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
 }
 .image-seven-fill {
 	background: #fff url("box-seven-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
 }
 .image-eight-fill {
 	background: #fff url("box-eight-fill.gif") no-repeat top center / cover;
-	padding: 80px 30px 30px;
+}
+
+@media (max-width: 414px) {
+.admin-card {
+	height: 470px;
+	margin-top: 15px;
+}
+}
+
+@media (max-width: 375px) {
+.admin-card {
+	height: 540px;
+	margin-top: 15px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -370,15 +380,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-top-30 padding-bottom-30">
+  <div class="row border-top">
     <div class="container">
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase font-weight-400">Summer Reading</h1>
+        <div class="separator-container">
+          <div class="separator line-separator"><i class="fa fa-heart-o"></i></div>
+        </div>
+        <h4 class="roboto margin-lg-100">Summer Reading is gone but the memories remain. Callout for links to <a href="#">Read, Listen, Watch</a> for kids and <a href="#">Staff Picks</a> or <a href="#">Just for You</a> for adults.</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-bottom-30">
+    <div class="container">
+      <h1 class="roboto text-center padding-bottom-15">Eight reasons why we love Summer Reading:</h1>
       <div class="col-md-6">
         <div class="card-grid admin-card">
           <div class="front image-one">
-            <div class="bg-white-box text-center">
-              <h4 class="roboto white font-weight-400">For school-aged kids, a single summer without reading can lead to falling behind by one to three months in reading skill.</h4>
-              <div class="text-center margin-top-15"><i class="flip-btn material-icons">arrow_forward</i></div>
-            </div>
+            <h4 class="white font-weight-400">For school-aged kids, a single summer without reading can lead to falling behind by one to three months in reading skill <i class="flip-btn material-icons">more_horiz</i></h4>
           </div>
           <div class="back image-one-fill"><i class="unflip-btn material-icons">clear</i>
             <div class="white">The effect is cumulative, and it's not easy to catch up. A study done by Johns Hopkins Center for Summer Learning showed that by the end of fifth grade, children who didn't read over summer breaks lagged two years behind the reading levels of summer readers. Library summer reading programs play an important role in helping combat this "summer slide." Kids who read at least six books over summer breaks maintain or improve their reading skills. Summer reading programs kick-start learning in reading, boosting test scores, motivation, confidence and positive attitudes toward reading. </div>
@@ -388,10 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="col-md-6">
         <div class="card-grid admin-card">
           <div class="front image-two">
-            <div class="bg-white-box text-center">
-              <h4 class="roboto white font-weight-400">Access to books is the best way to combat the "summer slide."</h4>
-              <div class="text-center margin-top-15"><i class="flip-btn material-icons">arrow_forward</i></div>
-            </div>
+            <h4 class="white font-weight-400">Access to books is the best way to combat the "summer&nbsp;slide" <i class="flip-btn material-icons">more_horiz</i></h4>
           </div>
           <div class="back image-two-fill"><i class="unflip-btn material-icons">clear</i>
             <div class="white">Kids who have books around them find books they want to read. The more they read, the less they slide. We offer exciting reading choices for all ages, all year long. Our staff is excited to share their favorites as suggestions! </div>
@@ -401,34 +417,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="col-md-6">
         <div class="card-grid admin-card">
           <div class="front image-three">
-            <div class="bg-white-box text-center">
-              <h4 class="roboto white font-weight-400">Summer Reading gives kids a chance to choose books they'd like to read.</h4>
-              <div class="text-center margin-top-15"><i class="flip-btn material-icons">arrow_forward</i></div>
-            </div>
+            <h4 class="white font-weight-400">Summer Reading gives kids a chance to choose books they'd like to read <i class="flip-btn material-icons">more_horiz</i></h4>
           </div>
           <div class="back image-three-fill"><i class="unflip-btn material-icons">clear</i>
-            <div class="white">Though it can be practical for schools to guide students by reading level, summer offers them freedom to read outside those boundaries. When children are motivated by their interests, they can read successfully above their tested levels, growing their vocabulary and skills. When children are allowed to read books that might be considered too easy, they may develop fluency and comprehension, so they can better understand and retell what they've read. Most of all, free choice helps kids be excited about books—which motivates them to read even more!</div>
+            <div class="white">Though it can be practical for schools to guide students by reading level, summer offers them freedom to read outside those boundaries. When children are motivated by their interests, they can read successfully above their tested levels, growing their vocabulary and skills. When children are allowed to read books that might be considered too easy, they may develop fluency and comprehension, so they can better understand and retell what they've read. Most of all, free choice helps kids be excited about books &mdash; which motivates them to read even more!</div>
           </div>
         </div>
       </div>
-           
-           
-            <div class="col-md-6">
+      <div class="col-md-6">
         <div class="card-grid admin-card">
           <div class="front image-four">
-            <div class="bg-white-box text-center">
-              <h4 class="roboto white font-weight-400">Summer Reading gives reluctant readers the time and freedom to explore their own interests at their own pace. </h4>
-              <div class="text-center margin-top-15"><i class="flip-btn material-icons">arrow_forward</i></div>
-            </div>
+            <h4 class="white font-weight-400">Summer Reading gives reluctant readers the time and freedom to explore their own interests at their own pace <i class="flip-btn material-icons">more_horiz</i> </h4>
           </div>
           <div class="back image-four-fill"><i class="unflip-btn material-icons">clear</i>
             <div class="white">As J. K. Rowling said, "If you don't like to read, you haven't found the right book." For struggling readers, the library can provide not only the right book, but also extra motivation. Summer Reading helps build reading connections through fun events and activities. Summer Reading prizes reward practice and make reading less work and more fun. </div>
           </div>
         </div>
       </div>
-      
-      
-      
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-five">
+            <h4 class="white font-weight-400">Summer Reading encourages families to be creative about reading. Reading becomes a game, and families are encouraged to be playful with it <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-five-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">Summer Reading includes fun activities for children, in addition to keeping track of time spent reading. We encourage kids to make connections between what they read and their world. We encourage families to grow the fun quotient by mixing up regular reading routines. Perhaps they'd like to make a book fort for a rainy afternoon, or find a great place to read outside &mdash; or enjoy the quintessential kid favorite: stay up late, reading with a flashlight!</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-six">
+            <h4 class="white font-weight-400">We all enjoy listening to a great book, but for children, reading aloud is an important part of becoming a reader &mdash; and one that shouldn't stop as kids start reading on their own <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-six-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">Jim Trelease says that a child's reading level doesn't match his listening level until eighth grade. When parents read aloud with older children, it provides unique opportunities for understanding, empathy, discussion and bonding, in addition to myriad academic benefits.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-seven">
+            <h4 class="white font-weight-400">Summer Reading helps us educate people about early literacy <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-seven-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">With special activities for babies and toddlers, we encourage parents to begin literacy education from the very beginning. Through Storytime, library events, and a targeted approach to Summer Reading, we help prepare kids to read on their own through talking, reading, writing, singing and playing.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-eight">
+            <h4 class="white font-weight-400">Summer Reading builds community by providing a shared goal <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-eight-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">It encourages families to make reading a part of their traditions and helps parents become great role models for young readers. Kids are more apt to read when they see their parents reading, too. Summer Reading emphasizes the universal importance of reading &mdash; for all ages and stages.</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -488,6 +533,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
  $(".card-grid").flip({
+	 axis: 'x',
           trigger: 'manual'
         });
 
