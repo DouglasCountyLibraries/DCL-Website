@@ -22,7 +22,7 @@ function createAllPageTitle(title)
         <div class="separator line-separator"><i class="fa fa-star-o"></i></div>
       </div>
     </div>
-     <h1 class="text-uppercase no-margin font-weight-400">${title}</h1>
+     <h1 class="no-margin">${title}</h1>
       `;
     return x;
 }
