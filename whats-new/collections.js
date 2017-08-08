@@ -16,7 +16,7 @@ if (a.indexOf('=') > -1)
 function createAllPageTitle(title)
 {
     var x = `
-     <h1 class="jumbo-text text-uppercase font-weight-400">${title}</h1>
+     <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">${title}</h1>
       `;
     return x;
 }
