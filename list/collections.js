@@ -1,6 +1,7 @@
 
 //var baseURI = "http:///dev.dclcollections.dcl.lan/";
-var baseURI = "https://dclcollections.douglascountylibraries.org/";
+var baseURI = "https://dclcollections.douglascountylibraries.org
+var baseDCLOrgURI = "https://dcl.org/list/";
 // <div id="covers-${title}" class ="container shelf-container text-center
 var a = window.location.toString(); 
 var allKeyName;
@@ -25,7 +26,7 @@ function createPreShelf(title, keyName, seq)
 <div class="row shelf">
  
    <div id="covers-${seq}" class ="container shelf-container text-center">
-     <h1 class="no-margin"><a href="http://stage.dcl.org/list/all.html?key=${keyName}&title=${title}">${title}</a></h1>
+     <h1 class="no-margin"><a href="list/all.html?key=${keyName}&title=${title}">${title}</a></h1>
       `;
     return x;
 }
