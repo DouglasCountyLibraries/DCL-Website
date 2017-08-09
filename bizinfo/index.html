@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,6 +73,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
 <style>
+.using-the-library-active {
+	background-color: #f5f5f5;
+}
 .carousel-cell {
 	text-align: center;
 	height: 265px;
@@ -86,40 +90,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	bottom: -75px;
 	opacity: .5;
 }
-.using-the-library-active {
-	background-color: #f5f5f5;
+.front {
+	background-color: rgba(255,255,255,.85)
+}
+.front:hover {
+	background-color: rgba(255,255,255,1)
 }
 .number-card {
-	height: 120px;
+	height: 200px;
 	text-align: center;
 }
 .card-grid:hover, .card-grid:focus {
 	cursor: pointer;
 }
 .number {
-	color: #fff;
-	font-size: 80px;
+	font-size: 22px;
 	padding-bottom: 15px;
+	color: #4f878c;
+}
+.number > span {
+	border: 2px solid #4f878c;
+	padding: 5px 14px;
+	border-radius: 50%;
+	margin-right: 5px;
+	color: #4f878c;
 }
 .flickity-prev-next-button {
 	display: none;
 }
 
-@media (min-width: 991px) {
-.number-card {
-	height: 200px;
-}
-}
-
 @media (min-width: 1200px) {
 .number-card {
-	height: 300px;
-}
-}
-
-@media (min-width: 1600px) {
-.number-card {
-	height: 200px;
+	height: 275px;
 }
 }
 </style>
@@ -350,8 +352,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <button type="button" class="btn btn-primary text-uppercase" data-toggle="modal" data-target="#modal-one">Ask Us Your Business Question</button>
       </div>
       <!-- Modal -->
-      <div id="modal-one" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg">
+      <div id="modal-one" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -363,87 +365,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15">
+  <div class="row bg-gray-5 padding-top-30">
     <div class="container">
-      <h1 class="text-center padding-bottom-15">Library Services for Small Business</h1>
-      <img class="img-responsive center-block" src="gears.png" alt="Library Services"></div>
+      <h1 class="text-center no-margin-top padding-bottom-15">Library Services for Small Business</h1>
+    </div>
   </div>
-  <div class="row bg-gray-5 padding-bottom-60">
+  <div class="row bg-gray-5 padding-bottom-15">
     <div class="container">
-      <div class="col-md-4 margin-lg-30">
-        <h2 class="roboto text-center"><a href="../research/business-finance">Online Resources for Business</a></h2>
+      <div class="col-md-4 padding-bottom-30"><img class="img-responsive center-block" src="gear-one.gif" alt="Online Resources for Business">
+        <h4 class="roboto text-center"><a href="../research/business-finance">Online Resources for Business</a></h4>
         <div>Our suite of research databases includes sources for demographics, market research and market segmentation, plus comprehensive resources for nonprofit businesses and thousands of articles from leading business publications.</div>
       </div>
-      <div class="col-md-4 margin-lg-30">
-        <h2 class="roboto text-center">Services</h2>
+      <div class="col-md-4 padding-bottom-30"><img class="img-responsive center-block" src="gear-two.gif" alt="Online Resources for Business">
+        <h4 class="roboto text-center">Services</h4>
         <div><a href="#" data-toggle="modal" data-target="#modal-one">Our business librarians offer boutique-style service</a> to fit your needs — market information, competitive intelligence, data on industry trends, sample business plans, and more. In addition, our libraries offer <a href="../reserve-a-space">meeting rooms and study rooms</a> that may be reserved for uninterrupted work, meetings with clients, and group presentations, with free wireless internet access.</div>
       </div>
-      <div class="col-md-4 margin-lg-30">
-        <h2 class="roboto text-center"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=bizinfo&nd=365&lib=ALL&df=list&LangType=0" target="_blank">Upcoming Events</a></h2>
+      <div class="col-md-4 padding-bottom-30"><img class="img-responsive center-block" src="gear-three.gif" alt="Upcoming Events">
+        <h4 class="roboto text-center"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=bizinfo&nd=365&lib=ALL&df=list&LangType=0" target="_blank">Upcoming Events</a></h4>
         <div>We partner with the South Metro Small Business Development Center (SBDC) to provide free workshops on a variety of small-business topics: Startup Basics, Business Plan Basics, Cash Flow Fundamentals, and Marketing Fundamentals.</div>
       </div>
     </div>
   </div>
-  <div class="row bg-light-teal padding-top-15 padding-bottom-60">
-    <div class="container-md">
-      <h1 class="white roboto text-center">6 Tips for Hiring Seasonal Staff</h1>
-      <div class="col-lg-2 col-md-4 col-sm-6 margin-top-15 margin-bottom-15">
+  <div class="row bg-teal padding-top-15 padding-bottom-60">
+    <div class="container">
+      <h1 class="white roboto text-center font-weight-400">7 Marketing Techniques for Small Businesses </h1>
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
         <div class="card-grid number-card">
-          <div class="front bg-lichen shadow-low flex-center">
-            <h1 class="text-center white number">1</h1>
+          <div class="front shadow-low flex-center">
+            <div class="number"><span>1</span></div>
+            <div class="number">Fliers</div>
           </div>
           <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Start the hiring process early so your seasonal staff is on board before business gets brisk.</div>
+            <div>Fliers should be brief and to the point, highlighting your products/services and contact info. Offering coupons and discounts can help. <a href="#" data-toggle="modal" data-target="#modal-one">Ask our experts</a> for market research assistance. </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
         <div class="card-grid number-card">
-          <div class="front bg-lichen shadow-low flex-center">
-            <h1 class="text-center number">2</h1>
+          <div class="front shadow-low flex-center">
+            <div class="number"><span>2</span></div>
+            <div class="number">Posters</div>
           </div>
           <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Use your network of employees or trusted former employees, regular customers, and vendors to find candidates.</div>
+            <div>Take advantage of free bulletin board space in public spaces. Color code the posters for each location and use removable tabs offering discounts to track metrics.</div>
           </div>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
         <div class="card-grid number-card">
-          <div class="front bg-lichen shadow-low flex-center">
-            <h1 class="text-center number">3</h1>
+          <div class="front shadow-low flex-center">
+            <div class="number"><span>3</span></div>
+            <div class="number">Value Adds</div>
           </div>
           <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Be aware that labor laws, taxes, and certain benefits apply to seasonal staff. <a href="https://www.colorado.gov/pacific/cdle/labor" target="_blank">Check Colorado state labor laws</a>, <a href="https://www.colorado.gov/pacific/cdle/node/23241" target="_blank">youth laws</a>, and <a href="https://www.irs.gov/businesses/small-businesses-self-employed/part-time-or-seasonal-help" target="_blank">IRS regulations</a>. Learn about major <a href="http://webapps.dol.gov/elaws/elg/" target="_blank">employment laws here</a>.</div>
+            <div>Similar to coupons, these are aimed at increasing customer satisfaction. Common value additions include discounts for repeat customers, points and reward cards, and guarantees.</div>
           </div>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
         <div class="card-grid number-card">
-          <div class="front bg-lichen shadow-low flex-center">
-            <h1 class="text-center number">4</h1>
+          <div class="front bg-loquacious shadow-low flex-center">
+            <div class="number"><span>4</span></div>
+            <div class="number">Referral Network</div>
           </div>
           <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Training and orientation are important. You'll get the most out of seasonal employees when they know the ins and outs of the job.</div>
+            <div>Create a business-to-business referral network with companies whose commitment to quality aligns with yours. If you're too busy to take a project/job, your competitor may appreciate the referral, and will likely return the favor. <a href="#" data-toggle="modal" data-target="#modal-one">Ask our experts</a> for help with market research and lists.</div>
           </div>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
         <div class="card-grid number-card">
-          <div class="front bg-lichen shadow-low flex-center">
-            <h1 class="text-center number">5</h1>
+          <div class="front bg-loquacious shadow-low flex-center">
+            <div class="number"><span>5</span></div>
+            <div class="number">Follow-up</div>
           </div>
           <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Stay in touch after these employees leave, especially the superstars. You may need them again, or for permanent employment.</div>
+            <div>Follow-up questionnaires are a great source of customer feedback. Why did the customer choose your business? How did he or she hear about it? Which other companies were considered? What was the customer most and least satisfied with?</div>
           </div>
         </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
         <div class="card-grid number-card">
-          <div class="front bg-lichen shadow-low flex-center">
-            <h1 class="text-center number">6</h1>
+          <div class="front bg-loquacious shadow-low flex-center">
+            <div class="number"><span>6</span></div>
+            <div class="number">Cold Calling</div>
           </div>
           <div class="back bg-white shadow-low padding-15 flex-center">
-            <div>Learn more about seasonal staffing <a href="../research/business-finance">using our databases</a> or <a href="#" class="" data-toggle="modal" data-target="#modal-one">ask our experts.</a></div>
+            <div>It's a great way to sell yourself as well as your business. Many people are less abrupt in face-to-face conversations, and you'll develop the ability to think on your feet and get creative. <a href="#" data-toggle="modal" data-target="#modal-one">BizInfo experts can help</a> generate lists of targeted businesses.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
+        <div class="card-grid number-card">
+          <div class="front bg-loquacious shadow-low flex-center">
+            <div class="number"><span>7</span></div>
+            <div class="number">The Internet</div>
+          </div>
+          <div class="back bg-white shadow-low padding-15 flex-center">
+            <div>The internet should be part of your marketing plan. It's a point of access for customers who research buying decisions online first. Consider adding social media to the mix as well.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
+        <div class="card-grid number-card">
+          <div class="front bg-loquacious shadow-low flex-center">
+            <div class="number"><span><i class="fa fa-info"></i></span></div>
+            <div class="number">Learn More</div>
+          </div>
+          <div class="back bg-white shadow-low padding-15 flex-center">
+            <div><a href="../research/">Use our databases</a> or <a href="#" data-toggle="modal" data-target="#modal-one">ask our experts</a>!</div>
           </div>
         </div>
       </div>
@@ -451,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row padding-top-30">
     <div class="container text-center padding-bottom-15 margin-lg-200">
-      <h1 class="roboto">Our specially trained business librarians are here to help you with your research.</h1>
+      <h2 class="roboto">Our specially trained business librarians are here to help you with your research.</h2>
     </div>
   </div>
   <div class="row">
@@ -611,4 +641,5 @@ var TMTrack = ['bf9cf0b78685', null, null, '//jss.trumeasure.com', null, window.
 </script> 
 <!-- TM tracking snippet end -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
