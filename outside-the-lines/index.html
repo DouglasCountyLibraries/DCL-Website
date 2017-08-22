@@ -186,9 +186,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  transform: translateY(-6px) rotate(1.2deg);
 }
 }
-.vibrate-1 {
-	-webkit-animation: vibrate-1 0.3s linear infinite both;
-	animation: vibrate-1 0.3s linear infinite both;
+.puff {
+	-webkit-animation: puff 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) .5s both;
+ animation: puff 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) .s both;
+}
+ @-webkit-keyframes puff {
+ 0% {
+ -webkit-transform: scale(2);
+ transform: scale(2);
+ -webkit-filter: blur(2px);
+ filter: blur(2px);
+ opacity: 0;
+}
+ 100% {
+ -webkit-transform: scale(1);
+ transform: scale(1);
+ -webkit-filter: blur(0px);
+ filter: blur(0px);
+ opacity: 1;
+}
+}
+@keyframes puff {
+ 0% {
+ -webkit-transform: scale(2);
+ transform: scale(2);
+ -webkit-filter: blur(2px);
+ filter: blur(2px);
+ opacity: 0;
+}
+ 100% {
+ -webkit-transform: scale(1);
+ transform: scale(1);
+ -webkit-filter: blur(0px);
+ filter: blur(0px);
+ opacity: 1;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -399,7 +431,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row intro padding-top-30">
     <div class="container">
       <div class="row">
-        <div class="col-md-4"><img class="center-block img-responsive padding-bottom-15" src="brew-tour-logo.png" alt="Great Douglas County Brew Tour"></div>
+        <div class="col-md-4"><img class="puff center-block img-responsive padding-bottom-15" src="brew-tour-logo.png" alt="Great Douglas County Brew Tour"></div>
         <div class="col-md-8 text-center text-left-md">
           <h2 class="no-margin-top">Welcome to the 4th Annual Great Douglas County Brew Tour!</h2>
           <h4>Thursday, August 31-Saturday, September 30</h4>
