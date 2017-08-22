@@ -79,6 +79,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .intro {
 	background-color: #b7e3ef;
 }
+.finger-point {
+	position: relative;
+	top: 45px;
+}
 .popover {
 	min-width: 350px;
 	max-width: 500px;
@@ -212,6 +216,112 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  -webkit-transform: translateX(0) rotate(0deg);
  transform: translateX(0) rotate(0deg);
  opacity: 1;
+}
+}
+.bounce-in-top {
+	-webkit-animation: bounce-in-top .5s 1.5s both;
+	animation: bounce-in-top .5s 1.5s both;
+}
+ @-webkit-keyframes bounce-in-top {
+ 0% {
+ -webkit-transform: translateY(-500px);
+ transform: translateY(-500px);
+ -webkit-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+ opacity: 0;
+}
+ 38% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+ opacity: 1;
+}
+ 55% {
+ -webkit-transform: translateY(-65px);
+ transform: translateY(-65px);
+ -webkit-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+}
+ 72% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+}
+ 81% {
+ -webkit-transform: translateY(-28px);
+ transform: translateY(-28px);
+ -webkit-animation-timing-function: ease-in;
+}
+ 90% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+}
+ 95% {
+ -webkit-transform: translateY(-8px);
+ transform: translateY(-8px);
+ -webkit-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+}
+ 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+}
+}
+@keyframes bounce-in-top {
+ 0% {
+ -webkit-transform: translateY(-500px);
+ transform: translateY(-500px);
+ -webkit-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+ opacity: 0;
+}
+ 38% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+ opacity: 1;
+}
+ 55% {
+ -webkit-transform: translateY(-65px);
+ transform: translateY(-65px);
+ -webkit-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+}
+ 72% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+}
+ 81% {
+ -webkit-transform: translateY(-28px);
+ transform: translateY(-28px);
+ -webkit-animation-timing-function: ease-in;
+}
+ 90% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+}
+ 95% {
+ -webkit-transform: translateY(-8px);
+ transform: translateY(-8px);
+ -webkit-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+}
+ 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+ -webkit-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
 }
 }
 </style>
@@ -432,7 +542,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row background"></div>
+  <div class="row background">
+    <div class="container">
+      <div class="col-sm-3"><img class="finger-point bounce-in-top center-block" src="pointer.png"></div>
+    </div>
+  </div>
   <div style="background-color:#74c043;" class="row text-center padding-bottom-15">
     <div class="container">
       <div class="col-sm-3 margin-top-30 margin-bottom-30"> <a tabindex="0" data-html="true" data-toggle="popover" data-trigger="focus" data-placement="auto" data-content="<div class='text-center'><h3>105 West Brewing Company</h3> <a href='https://www.google.com/maps/place/105+West+Brewing+Company/@39.3811365,-104.8677044,15z/data=!4m5!3m4!1s0x0:0x2d5501ba35999ee5!8m2!3d39.3811365!4d-104.8677044' target='_blank'>1043 Park St., Castle Rock</a><div class='text-center'><h4>Beer & Chocolate Pairings</h4>Thursday, September 21, 6-8PM<div class='margin-top-5'>Enjoy wisdom and samples from The Chocolate Therapist.<div><a href='https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=131762' class='btn btn-primary text-uppercase margin-15' target='_blank'>Please Register</a></div></div></div>
