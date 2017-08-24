@@ -252,30 +252,36 @@ function createBookList(val,KeyName) {
     var x;
     var bib = val.Bib + 114;
 	
-    if (val.FoundImage == true)
+    if (val.ImageSource == 'Syndetics')
     {
 		if (KeyName == 'ComingSoonMovies')
 		{
 			//https://secure.syndetics.com/index.aspx?isbn=/MC.GIF&client=dougp&type=xw12&oclc=&upc=025192184178
 			// https://secure.syndetics.com/index.aspx?isbn=/MC.GIF&client=dougp&type=xw12&oclc=&upc=025192396540
 			 x = `
-			   <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=/MC.GIF&client=dougp&type=xw12&oclc=&upc=${val.Isbn}">
+			    <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=/MC.GIF&client=dougp&type=xw12&oclc=&upc=${val.Isbn}"></a>
 			    `;
 		}
 		else
 		{
         x = `
-          <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=${val.Isbn}/LC.GIF" alt="${val.Title}">
+          <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=${val.Isbn}/LC.GIF" alt="${val.Title}"></a>
       `;
 		}
     }
-    else
+    else if (val.ImageSource == 'URL')
     {
 
         x = `
-       <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="${baseURI}/api/images/${val.Isbn}" alt="${val.Title}">
+		 <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="${val.ImageURL}" alt="${val.Title}"></a>
+        <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="${baseURI}/api/images/${val.Isbn}" alt="${val.Title}"></a>
       `;
     }
+	else{
+		x = `
+		  <a href="https://dcl.bibliocommons.com/item/show/${bib}"><img class ="cover-image" src="${baseURI}/api/images/${val.Isbn}" alt="${val.Title}"></a>
+      `;
+	}
        
   
     return x;
