@@ -36,7 +36,7 @@ function createAllPageTitle(title)
 }
 function createPreShelf(title, keyName, seq)
 {
-	var decodedTitle = decodeURI(title);
+	var decodedTitle = title.replace(/%26/g, "&");;
     var x = `
 <div class="row shelf">
  
