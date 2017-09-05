@@ -7,11 +7,19 @@ var a = window.location.toString();
 var allKeyName;
 if (a.indexOf('=') > -1)
 {
-   allKeyName = a.substring(a.indexOf("=") + 1,a.lastIndexOf("&"));
-   title = a.substring(a.indexOf("&") + 7).replace(/%20/g, " ");
+  // allKeyName = a.substring(a.indexOf("=") + 1,a.lastIndexOf("&"));
+  // title = a.substring(a.indexOf("&") + 7).replace(/%20/g, " ");
+   allKeyName  = getUrlParameter("key");
+   title = getUrlParameter("title");
    console.log("allKeyName name  is ", allKeyName,"title name  is ", title, "a ", a);
 }
 
+function getUrlParameter(name) { 
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
 
 function createAllPageTitle(title)
 {
