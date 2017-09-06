@@ -232,7 +232,7 @@ function createBookList(val,KeyName) {
 		if (KeyName == 'ComingSoonMovies')
 		{
 			 x = 
-			   ' <a href="https://dcl.bibliocommons.com/item/show/' + bib + '"><img class ="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=/MC.GIF&client=dougp&type=xw12&oclc=&upc=' + val.Isbn + 'alt="' + val.Title +  '"></a>';
+			   ' <a href="https://dcl.bibliocommons.com/item/show/' + bib + '"><img class ="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=/MC.GIF&client=dougp&type=xw12&oclc=&upc=' + val.Isbn + '"alt="' + val.Title +  '"></a>';
 		}
 		else
 		{
