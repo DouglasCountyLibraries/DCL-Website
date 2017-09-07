@@ -5,6 +5,29 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Minimize page flickering for Google Optimize -->
+<style>
+.async-hide {
+	opacity: 0 !important
+}
+</style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-K3MW9FB':true});</script>
+<!-- End -->
+<!-- Google Analytics with Google Optimize plugin -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-81615628-1', 'auto');
+  ga('require', 'GTM-K3MW9FB');
+  ga('send', 'pageview');
+</script>
+<!-- End -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -50,26 +73,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <style>
 .background {
-	background: #fff url(background.png) bottom center/cover;
-	background-repeat: no-repeat;
+	background: #fff url("school-supplies.jpg") no-repeat top center / cover;
+	min-height: 580px;
+}
+.resources {
+	margin-top: 220px
+}
+.modal-dialog {
+	margin: 20% auto;
 }
 .featured .material-icons {
-	color: #fff;
 	font-size: 70px;
-	padding-top: 9px;
+	padding-top: 14px;
 }
-.srp-heading h1, .srp-heading a {
-	color: #1F5066;
+.sun {
+	position: fixed;
+	bottom: 5%;
+	right: 10px;
+	z-index: 2000;
+	-webkit-transition-duration: 4.5s;
+	-moz-transition-duration: 4.5s;
+	-o-transition-duration: 4.5s;
+	transition-duration: 4.5s;
+}
+.sun:hover {
+	position: fixed;
+	bottom: 5%;
+	right: 10px;
+	z-index: 2000;
+	-webkit-transition-duration: .8s;
+	-moz-transition-duration: .8s;
+	-o-transition-duration: .8s;
+	transition-duration: .8s;
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+.sun img {
+	height: 80px;
+	width: 80px;
+}
+h1.pacifico {
+	font-family: 'Pacifico', cursive;
+	text-shadow: -5px -1px 7px rgb(0, 0, 0);
+	font-size: 60px;
+	transition: all .5s ease-in-out;
+}
+.grow {
+	text-shadow: -5px -1px 7px rgb(0, 0, 0);
+	font-size: 40px;
+	line-height: .95em;
+	transition: all .5s ease-in-out;
+}
+.grow:hover, .grow a:hover {
+	text-decoration: none;
+	transform: scale(1.05);
 }
 
-@media (min-width: 992px) {
-.delish {
-	padding-top: 300px;
+@media (min-width: 700px) {
+.background {
+	min-height: 500px;
 }
-.srp-heading {
-	margin-left: 140px;
+.resources {
+	margin-top: 60px
+}
+.sun img {
+	height: 100%;
+	width: 100%;
+}
+.sun {
+	bottom: 20%;
+}
+.sun:hover {
+	bottom: 20%;
 }
 }
 </style>
@@ -278,67 +357,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row no-gutter background padding-top-15 padding-bottom-30">
+  <div class="row background padding-top-15">
     <div class="container">
-      <div>
-        <div class="srp-heading margin-bottom-15">
-          <h1 class="no-margin-bottom jumbo-text text-capitalize font-weight-400">2017 Summer Reading Kickoff Party<br>
-            June 3, 10AM-Noon, All Ages</h1>
-          <div class="dropdown"> <a style="font-size: 24px;" class="text-uppercase font-weight-400" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Select your local branch and RSVP today!</a>
-            <div class="dropdown-menu text-center">
-              <div class="padding-left-60 padding-right-60 text-capitalize">
-                <ul class="list-unstyled">
-                  <li></li>
-                  <li class="margin-top-10"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124748" target="_blank" class="font-weight-400 text-uppercase">Castle Pines</a></li>
-                  <li class="margin-top-5"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124749" target="_blank" class="font-weight-400 text-uppercase">Castle Rock</a></li>
-                  <li class="margin-top-5"><a href=" http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124751" target="_blank" class="font-weight-400 text-uppercase">Highlands Ranch</a></li>
-                  <li class="margin-top-5"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=119277" target="_blank" class="font-weight-400 text-uppercase">Lone Tree</a></li>
-                  <li class="margin-top-5"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124752" target="_blank" class="font-weight-400 text-uppercase">Louviers</a></li>
-                  <li class="margin-top-5"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124753" target="_blank" class="font-weight-400 text-uppercase">Parker</a></li>
-                  <li class="margin-top-5"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124754" target="_blank" class="font-weight-400 text-uppercase">Roxborough</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-6 text-center padding-top-30">
+        <h1 class="pacifico white">Back to School</h1>
       </div>
-      <div class="col-md-6 col-md-push-1 padding-bottom-15">
-        <div class=""><img class="img-responsive" src="readers-play-animated.gif"></div>
-      </div>
-      <div class="col-md-4 delish col-md-push-1 padding-top-60 padding-bottom-30">
-        <div class="text-center"> <a href="#" data-toggle="modal" data-target="#modalone"><img class="img-responsive shadow-low shadow-low-hover center-block" src="dcl-delish.png"></a>
-          <h3 class="text-capitalize font-weight-400"><a onClick="ga('send', 'pageview', {'page': '/dcl-delish-video'});" class="white" href="#" data-toggle="modal" data-target="#modalone">Big-Top Treats</a></h3>
-          <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="modalone" style="display: none;">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe src="https://www.youtube.com/embed/3RLy3AlQBBk?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="resources col-md-4 col-md-push-2 text-left-md text-center padding-bottom-30">
+        <h1 class="grow roboto font-weight-700"><a class="grow white" href="http://blogs.douglascountylibraries.org/blog/2017/08/07/learning-resources-support-at-dcl/">K-12 Resources & Support</a></h1>
+        <h1 class="grow roboto font-weight-700"><a class="grow white" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1027980217">Here Comes Kindergarten!</a></h1>
       </div>
     </div>
   </div>
-  <div class="row bg-lavender padding-top-30 padding-bottom-40">
+  <div class="row bg-teal featured padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div style="padding:2px 0 0 0;" class="icon-circle-default"><i class="fa fa-language"></i></div>
-        <h2 class="roboto no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank" class="white">Mango Languages</a></h2>
-        <div class="text-uppercase no-margin-top"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank" class="white text-uppercase font-weight-400">Master a New Lingo</a></div>
+        <div style="padding:1px 0 0 1px;" class="icon-circle-default"><i class="material-icons">format_paint</i></div>
+        <h2 class="roboto no-margin-bottom"><a class="white" href="../renovations#louviers">We're Updating Louviers!</a></h2>
+        <div class="text-uppercase no-margin-top"><a href="../renovations#louviers" class="white text-uppercase font-weight-400">Location Closed Through August 25</a></div>
       </div>
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div class="text-center">
-          <div style="padding:2px 0 0 2px;" class="icon-circle-default"><i class="fa fa-compass"></i></div>
-          <h2 class="roboto no-margin-bottom"><a href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank" class="white">Adventure Pass</a></h2>
-          <div class="text-uppercase no-margin-top"><a href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank" class="white text-uppercase font-weight-400">Play & Explore</a></div>
+        <div style="padding:1px 0 0 1px;" class="icon-circle-default"><i class="fa fa-star-o"></i></div>
+        <h2 class="roboto no-margin-bottom"><a class="white" href="../sarah-j-maas">Presenting Sarah J. Maas</a></h2>
+        <div class="text-uppercase no-margin-top"><a href="../sarah-j-maas" class="white text-uppercase font-weight-400">Get your tickets today!</a></div>
+      </div>
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+        <div style="padding:1px 0 0 2px;" class="icon-circle-default"><i class="fa fa-codepen"></i></div>
+        <h2 class="roboto no-margin-bottom"><a href="../dan-brown" class="white">Don't Miss Dan Brown!</a></h2>
+        <div class="text-uppercase no-margin-top"><a href="../dan-brown" class="white text-uppercase font-weight-400">Wednesday, November 15</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="sun"><a href="#" data-toggle="modal" data-target="#sunmodal"><img class="ticket" src="sunny.png" alt="Experience the Solar Eclipse at DCL!"></a></div>
+  <!-- Modal -->
+  <div class="modal fade" id="sunmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close margin-15" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="padding-top-30 padding-right-60 padding-bottom-60 padding-left-60">
+          <h4 class="roboto">Experience the solar eclipse at DCL!</h4>
+          <div class="large-text">Enjoy activities for the whole family at all library locations (except Louviers), Monday, August 21, 10AM-12PM.</div>
+          <div class="margin-top-10">Special viewing glasses available on August 21 at the library while supplies last. No registration required. </div>
         </div>
-      </div>
-      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div class="icon-circle-default"><i class="fa fa-fire"></i></div>
-        <h2 class="roboto no-margin-bottom"><a href="../camp-dcl" class="white">Summer Camps</a></h2>
-        <div class="text-uppercase no-margin-top"><a href="../camp-dcl" class="white text-uppercase font-weight-400">Openings in July: Register Today!</a></div>
       </div>
     </div>
   </div>
@@ -397,18 +456,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
-<!-- Google Analytics --> 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-81615628-1', 'auto');
-  ga('send', 'pageview');
-
-</script> 
-<!-- End Google Analytics --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
@@ -444,7 +491,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data -->
+<!-- End Structured Data --> 
+<!-- TM tracking snippet start --> 
+<script>
+var TMTrack = ['bf9cf0b78685', null, null, '//jss.trumeasure.com', null, window.location.protocol];
+(function () {
+	var pe = document.currentScript; if (!pe) { pe = document.getElementsByTagName('head')[0]; } else {
+			while (pe.tagName.toLowerCase() != 'body' && pe.tagName.toLowerCase() != 'head') { pe = pe.parentElement; } }
+		TMTrack[2] = document.getElementsByTagName(pe.tagName)[0];
+	var ns = document.createElement('script'); ns.async = 1; ns.src = TMTrack[5] + TMTrack[3] + '/Scripts/TMLoader.js'; TMTrack[2].appendChild(ns);
+})();
+</script> 
+<!-- TM tracking snippet end -->
 </body>
 <!-- InstanceEnd -->
 </html>
