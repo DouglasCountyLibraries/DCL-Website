@@ -41,7 +41,8 @@ function createPreShelf(title, keyName, seq)
     '<div class="row shelf">',
  
   ' <div id="covers-' + seq + '" class ="container shelf-container text-center"> ',
-    ' <h1 class="no-margin"><a href="all.html?key=' + keyName + '&title=' + title + '">' +decodedTitle+ '</a></h1> '
+    ' <h1 class="no-margin"><a href="all.html?key=' + keyName + '&title=' + title + '">' +decodedTitle+ '</a></h1> ',
+		' <div><a class="text-uppercase" href="all.html?key=' + keyName + '&title=' + title + '">See Entire List &raquo;</a></div></div> '
 	].join('\n');
     return x;
 }
@@ -52,7 +53,6 @@ function createPostShelves(title, keyName)
  '</div>',
  '<div class ="row shelf-shadow padding-bottom-80">',
  '<div style="text-align:center; padding-top:0.1cm">',
-          ' <div><a class="text-uppercase" href="all.html?key=' + keyName + '&title=' + title + '">See Entire List &raquo;</a></div></div> ',
 ' </div>',
  ].join('\n');
 
