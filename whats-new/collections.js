@@ -85,7 +85,7 @@ function doBiblioList(val)
 
 function getCollectionSet() {
 
-    var uri = baseURI + 'api/collectionlist/GetCollectionSet/';
+    var uri = baseURI + 'api/collectionlist/GetCollectionSet/WhatsNew';
     var promise =
        $.ajax({
            url: uri,
