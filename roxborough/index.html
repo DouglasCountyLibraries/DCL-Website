@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,57 +71,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link type="text/css" rel="stylesheet" href="../shared-assets/css/vegas.css">
-<script src="../shared-assets/js/vegas.js"></script>
-<style>
+  <script type="text/javascript">
+   $(function() {
+    var images = ['roxborough-one.jpg', 'roxborough-two.jpg', 'roxborough-three.jpg', 'roxborough-four.jpg'];
+    $('.location-background').css({'background-image': 'url(assets/images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+   });
+  </script>
+  <style>
 .locations-active {
 	background-color: #f5f5f5;
 }
-.location-caption h1 {
+.location {
+	text-shadow: 0px 1px 4px rgb(0, 0, 0);
+}
+.location h1 {
+	font-size: 60px;
+	line-height: 55px;
+}
+.location h2 {
 	font-size: 40px;
+	line-height: 35px;
 }
-.vegas-container {
-	height: 360px!important
-}
-}
-
-@media (min-width: 400px) {
-.vegas-container {
-	height: 350px!important;
-}
+.location-background {
+	background-color: #555;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-@media (min-width: 425px) {
-.vegas-container {
-	height: 340px!important;
-}
-.location-caption h1 {
-	font-size: 50px;
-}
-}
-
-@media (min-width: 560px) {
-.vegas-container {
-	height: 320px!important;
-}
-.location-caption h1 {
-	font-size: 80px;
-}
-}
-
-@media (min-width: 740px) {
-.vegas-container {
-	height: 320px!important;
-}
-.location-caption h1 {
+@media (min-width: 575px) {
+.location h1 {
 	font-size: 100px;
 	line-height: 85px;
 }
-}
-
-@media (min-width: 750px) {
-.vegas-container {
-	height: 285px!important;
+.location h2 {
+	font-size: 60px;
+	line-height: 55px;
 }
 }
 </style>
@@ -316,34 +302,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" --> 
-  <script>
-	$(function(){
-$(".panzoom").vegas({
-	timer: false,
-	autoplay: true,
-	loop: true,
-	delay: 20000,
-	shuffle: true,
-	transition: 'fade',
-	firstTransitionDuration: .01,
-	transitionDuration: 4000,
-	animation: 'random',
-	color: '#000',
-    slides: [
-        { src: "assets/images/roxborough-background-one.jpg" },
-        { src: "assets/images/roxborough-background-two.jpg" },
-        { src: "assets/images/roxborough-background-three.jpg" },
-        { src: "assets/images/roxborough-background-four.jpg" },
-    ]
-});
-});
-	</script>
-  <div class="row panzoom">
-    <div class="container location-caption text-center">
+  <!-- InstanceBeginEditable name="Content" -->
+  <div class="row location-background padding-top-15 padding-bottom-40">
+    <div class="container location text-center">
       <h1 class="no-margin-bottom font-weight-400 white text-capitalize">Roxborough</h1>
       <div class="white font-weight-400 small text-uppercase margin-bottom-10">Manager: Aspen Walker <a href="tel:+13037917323" class="white margin-left-5">(303) 791-7323</a></div>
-      <h4 class="white font-weight-400">Located in the heart of Roxborough, this intimate storefront library boasts a light-filled space with a fantastic view of Colorado's Front Range.</h4>
+      <h4 class="white font-weight-400 margin-lg-100">Located in the heart of Roxborough, this intimate storefront library boasts a light-filled space with a fantastic view of Colorado's Front Range.</h4>
     </div>
   </div>
   <div class="row no-gutter sub-nav-row">
@@ -404,8 +368,7 @@ $(".panzoom").vegas({
       </div>
     </div>
   </div>
-  <div id="events" class="row event-row bg-teal"> 
-
+  <div id="events" class="row event-row bg-teal">
     <div class="col-md-6 bg-lavender equal-height">
       <div class="two-featured-items">
         <div style="padding:2px 0px 0px 3px;" class="icon-circle-default"><em class="fa fa-user-secret"></em></div>
@@ -415,7 +378,6 @@ $(".panzoom").vegas({
         <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=114916" target="_blank" class="btn btn-default">Register Now</a></div>
       </div>
     </div>
-  
     <div class="col-md-6 bg-teal equal-height">
       <div class="two-featured-items">
         <div style="padding:3px 0px 0px 0px;" class="icon-circle-default"><i class="fa fa-paint-brush"></i></div>
@@ -425,6 +387,7 @@ $(".panzoom").vegas({
         <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109881" target="_blank" class="btn btn-default">Register Now</a></div>
       </div>
     </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -528,4 +491,5 @@ var TMTrack = ['bf9cf0b78685', null, null, '//jss.trumeasure.com', null, window.
 </script> 
 <!-- TM tracking snippet end -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
