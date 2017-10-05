@@ -70,51 +70,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link type="text/css" rel="stylesheet" href="../shared-assets/css/vegas.css">
-<script src="../shared-assets/js/vegas.js"></script>
-<style>
+  <script type="text/javascript">
+   $(function() {
+    var images = ['parker-one.jpg', 'parker-two.jpg', 'parker-three.jpg', 'parker-four.jpg', 'parker-five.jpg'];
+    $('.location-background').css({'background-image': 'url(assets/images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+   });
+  </script>
+  <style>
 .locations-active {
 	background-color: #f5f5f5;
 }
-.location-caption h1 {
-	font-size: 65px;
-	line-height: 60px;
+.location {
+	text-shadow: 0px 1px 4px rgb(0, 0, 0);
 }
-.vegas-container {
-	height: 650px!important
+.location h1 {
+	font-size: 60px;
+	line-height: 55px;
 }
-
-@media (min-width: 320px) {
-.vegas-container {
-	height: 430px!important;
+.location h2 {
+	font-size: 40px;
+	line-height: 35px;
 }
-}
-
-@media (min-width: 375px) {
-.vegas-container {
-	height: 375px!important;
-}
+.location-background {
+	background-color: #555;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-@media (min-width: 675px) {
-.vegas-container {
-	height: 350px!important;
-}
-}
-
-@media (min-width: 870px) {
-.vegas-container {
-	height: 300px!important;
-}
-.location-caption h1 {
+@media (min-width: 575px) {
+.location h1 {
 	font-size: 100px;
 	line-height: 85px;
 }
-}
-
-@media (min-width: 900px) {
-.vegas-container {
-	height: 285px!important;
+.location h2 {
+	font-size: 60px;
+	line-height: 55px;
 }
 }
 </style>
@@ -310,35 +301,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" --> 
-  <script>
-	$(function(){
-$(".panzoom").vegas({
-	timer: false,
-	autoplay: true,
-	loop: true,
-	delay: 20000,
-	shuffle: true,
-	transition: 'fade',
-	firstTransitionDuration: .01,
-	transitionDuration: 4000,
-	animation: 'random',
-	color: '#000',
-    slides: [
-        { src: "assets/images/parker-background-one.jpg" },
-        { src: "assets/images/parker-background-two.jpg" },
-        { src: "assets/images/parker-background-three.jpg" },
-        { src: "assets/images/parker-background-four.jpg" },
-		{ src: "assets/images/parker-background-five.jpg" },
-    ]
-});
-});
-	</script>
-  <div class="row panzoom">
-    <div class="container location-caption text-center">
+  <!-- InstanceBeginEditable name="Content" -->
+  <div class="row location-background padding-top-15 padding-bottom-40">
+    <div class="container location text-center">
       <h1 class="no-margin-bottom font-weight-400 white text-capitalize">Parker</h1>
       <div class="white font-weight-400 small text-uppercase margin-bottom-10">Manager: Amy Long <a href="tel:+13037917323" class="white margin-left-5">(303) 791-7323</a></div>
-      <h4 class="white font-weight-400">This library is home to <a class="white text-underline" href="../reserve-a-space#recording-studio">The Recording Studio</a>, where patrons can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</h4>
+      <h4 class="white font-weight-400 margin-lg-100">This library is home to <a class="white text-underline" href="../reserve-a-space#recording-studio">The Recording Studio</a>, where patrons can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</h4>
     </div>
   </div>
   <div class="row no-gutter sub-nav-row">
@@ -410,9 +378,7 @@ $(".panzoom").vegas({
       </div>
     </div>
   </div>
-  
-  <div id="events" class="row event-row bg-teal"> 
-
+  <div id="events" class="row event-row bg-teal">
     <div class="col-md-6 bg-lavender equal-height">
       <div class="two-featured-items">
         <div style="padding:2px 0px 0px 0px;" class="icon-circle-default"><em class="fa fa-users"></em></div>
@@ -422,7 +388,6 @@ $(".panzoom").vegas({
         <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=112022" target="_blank" class="btn btn-default">View Calendar</a></div>
       </div>
     </div>
-  
     <div class="col-md-6 bg-teal equal-height">
       <div class="two-featured-items">
         <div style="padding:0px 0px 0px 0px;" class="icon-circle-default"><i class="fa fa-paint-brush"></i></div>
@@ -431,20 +396,19 @@ $(".panzoom").vegas({
         <div>Thursday, October 26, 6PM & 6:30PM. </div>
         <!--<div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116223" target="_blank" class="btn btn-default">Register Now</a></div>-->
         
-          <div class="dropdown text-center"> <a class="btn btn-default text-uppercase 0" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Register Now <span class="caret"></span></a>
-    			<div class="dropdown-menu dropdown-menu-center">
-					<div class="padding-15 text-capitalize">
-						<ul class="list-unstyled">
-							<li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=134687" target="_blank">6PM</a></li>
-							<li class="margin-top-5"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=134689" target="_blank">6:30PM</a></li>
-            			</ul>
-        			</div>
-    			</div>
-		   </div>        
-        
+        <div class="dropdown text-center"> <a class="btn btn-default text-uppercase 0" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Register Now <span class="caret"></span></a>
+          <div class="dropdown-menu dropdown-menu-center">
+            <div class="padding-15 text-capitalize">
+              <ul class="list-unstyled">
+                <li><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=134687" target="_blank">6PM</a></li>
+                <li class="margin-top-5"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=134689" target="_blank">6:30PM</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-      
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
