@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,19 +71,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link type="text/css" rel="stylesheet" href="../shared-assets/css/vegas.css">
-<script src="../shared-assets/js/vegas.js"></script>
-<style>
+  <script type="text/javascript">
+   $(function() {
+    var images = ['history-one.jpg', 'history-two.jpg', 'history-three.jpg', 'history-four.jpg', 'history-five.jpg', 'history-six.jpg', 'history-seven.jpg'];
+    $('.location-background').css({'background-image': 'url(assets/images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+   });
+  </script>
+  <style>
 .locations-active {
 	background-color: #f5f5f5;
 }
-.location-caption h1 {
-	font-size: 65px;
-	line-height: 60px;
+.location {
+	text-shadow: 0px 1px 4px rgb(0, 0, 0);
 }
-.location-caption h2 {
-	font-size: 55px;
-	line-height: 50px;
+.location h1 {
+	font-size: 60px;
+	line-height: 55px;
+}
+.location h2 {
+	font-size: 40px;
+	line-height: 35px;
+}
+.location-background {
+	background-color: #555;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .dchrc-card {
 	height: 310px;
@@ -113,6 +127,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	transition-duration: 0.8s;
 }
 
+@media (min-width: 575px) {
+.location h1 {
+	font-size: 75px;
+	line-height: 65px;
+}
+.location h2 {
+	font-size: 50px;
+	line-height: 50px;
+}
+}
+
 @media (min-width: 768px) {
 .dchrc-card {
 	height: 350px;
@@ -122,51 +147,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @media (max-width: 768px) {
 .listing {
 	padding-top: 5px;
-}
-}
-.vegas-container {
-	height: 780px!important
-}
-
-@media (min-width: 320px) {
-.vegas-container {
-	height: 780px!important;
-}
-}
-
-@media (min-width: 450px) {
-.vegas-container {
-	height: 700px!important;
-}
-}
-
-@media (min-width: 525px) {
-.vegas-container {
-	height: 600px!important;
-}
-}
-
-@media (min-width: 560px) {
-.vegas-container {
-	height: 600px!important;
-}
-}
-
-@media (min-width: 600px) {
-.vegas-container {
-	height: 500px!important;
-}
-}
-
-@media (min-width: 899px) {
-.vegas-container {
-	height: 460px!important;
-}
-}
-
-@media (min-width: 990px) {
-.vegas-container {
-	height: 345px!important;
 }
 }
 </style>
@@ -359,131 +339,105 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-  <div class="row alert-warning">
-    <div id="global-alert" class="container-md" style="display:none;"></div>
-  </div>
-  <!-- InstanceBeginEditable name="Content" --> 
-  <script>
-	$(function(){
-$(".panzoom").vegas({
-	timer: false,
-	autoplay: true,
-	loop: true,
-	delay: 20000,
-	shuffle: true,
-	valign: 'top',
-	transition: 'fade',
-	firstTransitionDuration: .1,
-	transitionDuration: 4000,
-	animation: 'random',
-	color: '#000000',
-    slides: [
-        { src: "assets/images/history-background-one.jpg" },
-        { src: "assets/images/history-background-two.jpg" },
-        { src: "assets/images/history-background-three.jpg" },
-        { src: "assets/images/history-background-four.jpg" },
-		{ src: "assets/images/history-background-five.jpg" },
-		{ src: "assets/images/history-background-six.jpg" },
-		{ src: "assets/images/history-background-seven.jpg" },
-    ]
-});
-});
-	</script>
-  <div class="row panzoom">
-    <div class="container location-caption text-center">
-      <h1 class="no-margin-bottom font-weight-400 white text-capitalize">Douglas County History</h1>
-      <h2 class="no-margin-bottom no-margin-top font-weight-400 white text-capitalize">Research Center</h2>
-      <div class="font-weight-400 small text-uppercase margin-bottom-10"><a class="white margin-left-15 margin-right-15" href="tel:303-688-7730">(303) 688-7730</a> <a class="white text-underline margin-left-15 margin-right-15" href="#" data-toggle="modal" data-target="#myModal">Contact Us</a> 
-        
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="text-center modal-title">Contact the Douglas County History Research Center</h3>
-              </div>
-              <iframe id="JotFormIFrame" allowtransparency="true" src="https://form.jotform.us/62514846353155" frameborder="0"      style="width:100%;height:450px;border:none;" scrolling="no"></iframe>
+<div class="row alert-warning">
+  <div id="global-alert" class="container-md" style="display:none;"></div>
+</div>
+<!-- InstanceBeginEditable name="Content" -->
+<div class="row location-background padding-top-15 padding-bottom-40">
+  <div class="container location text-center">
+    <h1 class="no-margin-bottom font-weight-400 white text-capitalize">Douglas County History</h1>
+    <h2 class="no-margin-bottom no-margin-top font-weight-400 white text-capitalize">Research Center</h2>
+    <div class="font-weight-400 small text-uppercase margin-bottom-10"><a class="white margin-left-15 margin-right-15" href="tel:303-688-7730">(303) 688-7730</a> <a class="white text-underline margin-left-15 margin-right-15" href="#" data-toggle="modal" data-target="#myModal">Contact Us</a> 
+      
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h3 class="text-center modal-title">Contact the Douglas County History Research Center</h3>
             </div>
+            <iframe id="JotFormIFrame" allowtransparency="true" src="https://form.jotform.us/62514846353155" frameborder="0"      style="width:100%;height:450px;border:none;" scrolling="no"></iframe>
           </div>
         </div>
       </div>
-      <h4 class="white font-weight-400">We collect and preserve the history of Douglas County, the High Plains, the Divide area of the Front Range, and the state of Colorado. Call or stop by to access our reference services and programs, or to donate your own pieces of Douglas County history. Visit us at <a class="white text-underline" href="http://douglascountyhistory.org" target="_blank">douglascountyhistory.org</a>.</h4>
     </div>
+    <h4 class="white font-weight-400">We collect and preserve the history of Douglas County, the High Plains, the Divide area of the Front Range, and the state of Colorado. Call or stop by to access our reference services and programs, or to donate your own pieces of Douglas County history. Visit us at <a class="white text-underline" href="http://douglascountyhistory.org" target="_blank">douglascountyhistory.org</a>.</h4>
   </div>
-  <div class="row padding-top-30 padding-bottom-15">
-    <div class="container text-center">
-      <div itemscope itemtype="http://schema.org/PostalAddress">
-        <h1 class="roboto no-margin-top no-margin-bottom"> <a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.3676569,-104.8601784,18z/data=!4m5!3m4!1s0x0:0x3640fa4d1ddfc4e0!8m2!3d39.3680882!4d-104.8591377" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></h1>
-      </div>
-      <h5 class="no-margin-top">Inside our Castle Rock location and at <a href="http://douglascountyhistory.org" target="_blank">douglascountyhistory.org</a></h5>
-      <h4 class="text-uppercase no-margin-top"><span class="margin-left-10 margin-right-10">Mon:&nbsp;9AM-9PM</span><br class="insert-break">
-        <span class="margin-left-10 margin-right-10">Tue-Fri:&nbsp;9AM-5PM</span><br class="insert-break">
-        <span class="margin-left-10 margin-right-10">By Appointment After Hours</span></h4>
+</div>
+<div class="row padding-top-30 padding-bottom-15">
+  <div class="container text-center">
+    <div itemscope itemtype="http://schema.org/PostalAddress">
+      <h1 class="roboto no-margin-top no-margin-bottom"> <a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.3676569,-104.8601784,18z/data=!4m5!3m4!1s0x0:0x3640fa4d1ddfc4e0!8m2!3d39.3680882!4d-104.8591377" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></h1>
     </div>
+    <h5 class="no-margin-top">Inside our Castle Rock location and at <a href="http://douglascountyhistory.org" target="_blank">douglascountyhistory.org</a></h5>
+    <h4 class="text-uppercase no-margin-top"><span class="margin-left-10 margin-right-10">Mon:&nbsp;9AM-9PM</span><br class="insert-break">
+      <span class="margin-left-10 margin-right-10">Tue-Fri:&nbsp;9AM-5PM</span><br class="insert-break">
+      <span class="margin-left-10 margin-right-10">By Appointment After Hours</span></h4>
   </div>
-  <div class="row">
-    <div class="container">
-      <div class="card-grid dchrc-card">
-        <div class="front bg-white"> <img class="img-responsive flex-image center-block" src="archivist.png" alt="The Archivist Is In">
-          <div class="container">
-            <h4 class="roboto padding-left-15 padding-right-15 text-center margin-top-5 margin-lg-200">Visit with a Douglas County History Research Center archivist at a branch near you! <i class="flip-btn material-icons">arrow_forward</i></h4>
-          </div>
+</div>
+<div class="row">
+  <div class="container">
+    <div class="card-grid dchrc-card">
+      <div class="front bg-white"> <img class="img-responsive flex-image center-block" src="archivist.png" alt="The Archivist Is In">
+        <div class="container">
+          <h4 class="roboto padding-left-15 padding-right-15 text-center margin-top-5 margin-lg-200">Visit with a Douglas County History Research Center archivist at a branch near you! <i class="flip-btn material-icons">arrow_forward</i></h4>
         </div>
-        <div class="back bg-white margin-lg-200"><i class="unflip-btn material-icons">clear</i>
-          <h4 class="roboto hidden-xs text-center padding-top-40">Archivists can help with genealogy, local and state history, school projects, preservation of family photos and memorabilia, and other topics.</h4>
-          <div class="listing">
-            <div class="col-sm-6">
-              <h5 class="text-capitalize no-margin-bottom">Castle pines</h5>
-              <div>Second Thursday of each month: 9-11:30AM</div>
-            </div>
-            <div class="col-sm-6">
-              <h5 class="text-capitalize no-margin-bottom">Highlands Ranch</h5>
-              <div>Second & Fourth Tuesday of each month: 9-11:30AM</div>
-            </div>
-            <div class="col-sm-6">
-              <h5 class="text-capitalize no-margin-bottom">Lone Tree</h5>
-              <div>Third Thursday of each month: 9-11:30AM</div>
-            </div>
-            <div class="col-sm-6">
-              <h5 class="text-capitalize no-margin-bottom">Parker</h5>
-              <div>First & Third Tuesday of each month: 9-11:30AM</div>
-            </div>
+      </div>
+      <div class="back bg-white margin-lg-200"><i class="unflip-btn material-icons">clear</i>
+        <h4 class="roboto hidden-xs text-center padding-top-40">Archivists can help with genealogy, local and state history, school projects, preservation of family photos and memorabilia, and other topics.</h4>
+        <div class="listing">
+          <div class="col-sm-6">
+            <h5 class="text-capitalize no-margin-bottom">Castle pines</h5>
+            <div>Second Thursday of each month: 9-11:30AM</div>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="text-capitalize no-margin-bottom">Highlands Ranch</h5>
+            <div>Second & Fourth Tuesday of each month: 9-11:30AM</div>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="text-capitalize no-margin-bottom">Lone Tree</h5>
+            <div>Third Thursday of each month: 9-11:30AM</div>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="text-capitalize no-margin-bottom">Parker</h5>
+            <div>First & Third Tuesday of each month: 9-11:30AM</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--
+</div>
+<!--
   ###############################
   ##### Two Featured Items ######
   ###############################
        --> 
-  <!-- two featured items event row start -->
-  <div id="events" class="row event-row bg-teal"> 
-    <!-- block 1 start -->
-    <div class="col-md-6 bg-lavender equal-height">
-      <div class="one-featured-item">
-        <div style="padding:0px 0px 0px 0px;" class="icon-circle-default"><i class="fa fa-globe"></i></div>
-        <h1 class="roboto">Genealogy SHARE</h1>
-        <h4 class="roboto">Sharing Help and Research Experience</h4>
-        <div>Drop in and get started with family research, or get free advice on how to do it. <span class="text-uppercase">No Registration Required.</span> </div>
-        <div>Mondays, 10AM-12PM, Castle Rock</div>
-        <div><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=genealogy+share&lib=1001&nd=30" target="_blank" class="btn btn-default">View Calendar</a></div>
-      </div>
+<!-- two featured items event row start -->
+<div id="events" class="row event-row bg-teal"> 
+  <!-- block 1 start -->
+  <div class="col-md-6 bg-lavender equal-height">
+    <div class="one-featured-item">
+      <div style="padding:0px 0px 0px 0px;" class="icon-circle-default"><i class="fa fa-globe"></i></div>
+      <h1 class="roboto">Genealogy SHARE</h1>
+      <h4 class="roboto">Sharing Help and Research Experience</h4>
+      <div>Drop in and get started with family research, or get free advice on how to do it. <span class="text-uppercase">No Registration Required.</span> </div>
+      <div>Mondays, 10AM-12PM, Castle Rock</div>
+      <div><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=genealogy+share&lib=1001&nd=30" target="_blank" class="btn btn-default">View Calendar</a></div>
     </div>
-    <!-- block 1 end --> 
-    <!-- block 2 start -->
-    <div class="col-md-6 bg-teal equal-height">
-      <div class="one-featured-item">
-        <div style="padding:0px 0px 0px 0px;" class="icon-circle-default"><i class="fa fa-users"></i></div>
-        <h1 class="roboto">Genealogy Open House</h1>
-        <div>Meet skilled genealogists who can help provide resources for exploring your family origins and history. <span class="text-uppercase">No Registration Required.</span> </div>
-        <div>Saturday, October 21, 12:05-4PM, Castle Rock</div>
-        <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116611" target="_blank" class="btn btn-default">View Calendar</a></div> 
-      </div> 
-    </div> 
-    <!-- <div class="dropdown text-center"> <a class="btn btn-default text-uppercase 0" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Register Now <span class="caret"></span></a>
+  </div>
+  <!-- block 1 end --> 
+  <!-- block 2 start -->
+  <div class="col-md-6 bg-teal equal-height">
+    <div class="one-featured-item">
+      <div style="padding:0px 0px 0px 0px;" class="icon-circle-default"><i class="fa fa-users"></i></div>
+      <h1 class="roboto">Genealogy Open House</h1>
+      <div>Meet skilled genealogists who can help provide resources for exploring your family origins and history. <span class="text-uppercase">No Registration Required.</span> </div>
+      <div>Saturday, October 21, 12:05-4PM, Castle Rock</div>
+      <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116611" target="_blank" class="btn btn-default">View Calendar</a></div>
+    </div>
+  </div>
+  <!-- <div class="dropdown text-center"> <a class="btn btn-default text-uppercase 0" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Register Now <span class="caret"></span></a>
     		<div class="dropdown-menu dropdown-menu-center">
 				<div class="padding-15 text-capitalize">
 					<ul class="list-unstyled">
@@ -492,18 +446,19 @@ $(".panzoom").vegas({
             		</ul>
         		</div>
     		</div>
-		</div> -->
-    <!-- block 2 end --> 
-  </div>
-	  </div>
-	</div>
-  <!-- two featured items event row end --> 
-  <!--
+		</div> --> 
+  <!-- block 2 end --> 
+</div>
+</div>
+</div>
+<!-- two featured items event row end --> 
+<!--
   ###############################
   ###############################
   ###############################
-       -->
-  <!-- InstanceEndEditable --> </div>
+       --> 
+<!-- InstanceEndEditable -->
+</div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
     <div class="col-sm-6">
@@ -610,4 +565,5 @@ var TMTrack = ['bf9cf0b78685', null, null, '//jss.trumeasure.com', null, window.
 </script> 
 <!-- TM tracking snippet end -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
