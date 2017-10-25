@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,6 +79,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	height: 400px;
 	margin-top: 15px;
 }
+.card-grid:hover, .card-grid:focus {
+	cursor: pointer;
+}
 .flip-btn {
 	color: #fff;
 	cursor: pointer;
@@ -116,10 +120,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .hamburger {
 	margin-top: 125px;
 }
-	.background{
-		padding-bottom: 40px;
-		margin-bottom: 15px;
-	background: #fff url("bg.png") repeat-x bottom;}
+.background {
+	padding-bottom: 40px;
+	margin-bottom: 15px;
+	background: #fff url("bg.png") repeat-x bottom;
+}
 .image-one {
 	background: #fff url("assets/images/box-one.jpg") no-repeat top center / cover;
 }
@@ -531,18 +536,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
- $(".card-grid").flip({
-	 axis: 'x',
-          trigger: 'manual'
-        });
-
-        $(".flip-btn").click(function(){
-          $(this).closest(".card-grid").flip(true);
-        });
-
-        $(".unflip-btn").click(function(){
-          $(this).closest(".card-grid").flip(false);
-        });
+	  $(".card-grid").flip({
+		  axis: 'x'
+	  });
 		</script> 
 <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
@@ -580,6 +576,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
