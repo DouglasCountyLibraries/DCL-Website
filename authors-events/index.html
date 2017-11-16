@@ -74,6 +74,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link href="https://fonts.googleapis.com/css?family=Hind|Ribeye" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
+<style>
+/* carousel height, as percentage of width */
+/* inherit height from parent */
 <style>
 .events-active {
 	background-color: #f5f5f5;
@@ -116,6 +122,56 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 @media screen and (max-width: 2200px) and (min-width: 1195px) {
 .text-fix {
 	font-size: 35px;
+}
+}
+	* {
+	box-sizing: border-box;
+}
+.carousel-cell {
+	width: 100%;
+}
+.carousel-cell:before {
+	display: block;
+	text-align: center;
+}
+.btn-default {
+	background-color: #d91b5c;
+}
+.btn-default:hover, .btn-default:focus {
+	background-color: #ef519e;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+h1.storybook-heading {
+	font-family: 'Hind', sans-serif;
+	color: #fafae6;
+	font-size: 50px;
+}
+div.storybook-subheading {
+	font-family: 'Ribeye', sans-serif;
+	color: #da1c5c;
+	font-size: 110px;
+	line-height: 100px;
+	padding-bottom: 15px;
+	letter-spacing: -3px;
+	text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83333px 0.983333px 0px, rgb(255, 255, 255) 2.35px 1.85px 0px, rgb(255, 255, 255) 1.61667px 2.51667px 0px, rgb(255, 255, 255) 0.7px 2.91667px 0px, rgb(255, 255, 255) -0.283333px 2.98333px 0px, rgb(255, 255, 255) -1.25px 2.73333px 0px, rgb(255, 255, 255) -2.06667px 2.16667px 0px, rgb(255, 255, 255) -2.66667px 1.36667px 0px, rgb(255, 255, 255) -2.96667px 0.416667px 0px, rgb(255, 255, 255) -2.95px -0.566667px 0px, rgb(255, 255, 255) -2.6px -1.5px 0px, rgb(255, 255, 255) -1.96667px -2.26667px 0px, rgb(255, 255, 255) -1.11667px -2.78333px 0px, rgb(255, 255, 255) -0.133333px -3px 0px, rgb(255, 255, 255) 0.85px -2.88333px 0px, rgb(255, 255, 255) 1.75px -2.43333px 0px, rgb(255, 255, 255) 2.45px -1.73333px 0px, rgb(255, 255, 255) 2.88333px -0.833333px 0px;
+}
+.peach {
+	color: #fafae6
+}
+div.tk-peachy-keen-jf {
+	font-family: 'Ribeye', sans-serif;
+	color: #EF492F;
+	font-size: 40px;
+}
+.grinch-background {
+	background: #1b75bc url(guess-who.png) no-repeat center left/cover;
+}
+
+@media (max-width: 475px) {
+div.storybook-subheading {
+	font-size: 85px;
 }
 }
 </style>
@@ -331,35 +387,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-20 padding-top-30 padding-bottom-15">
-    <div class="container">
-      <div class="col-lg-6 margin-bottom-30 text-center equal-height">
-        <div class="event-card shadow-low">
-          <h1 class="text-fix text-uppercase font-weight-400 padding-bottom-15">Dan Brown</h1>
-          <img class="img-responsive center-block" src="dan-brown.jpg" alt="Dan Brown">
-          <div class="padding-left-15 padding-right-15">
-            <h4>Wednesday, November 15, 2017, 7:30PM</h4>
-            <div class="text-center"> <a class="text-uppercase btn btn-primary" href="../dan-brown/">Learn More</a></div>
-            <div class="row bookrow">
-              <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1410264114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780385514231/MC.GIF" alt="Origin"> </a> </div>
-              <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1358424114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781524715823/MC.GIF" alt="The Da Vinci Code"> </a> </div>
-              <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1112156114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781101974117/MC.GIF" alt="Inferno"> </a></div>
-            </div>
-          </div>
+  <div class="row bg-black no-gutter no-padding padding-top-60 padding-bottom-20">
+    <div class="col-sm-8 col-sm-push-2 padding-bottom-60 text-center">
+      <h1 class="storybook-heading text-uppercase no-margin">A Storybook Holiday</h1>
+      <div class="storybook-subheading no-margin text-uppercase">Party</div>
+      <h4 class="peach font-weight-400 padding-left-15 padding-right-15 roboto no-margin-top">Saturday, December 2, 2017, 6PM & 7:30PM</h4>
+      <div class="carousel" data-flickity='{ "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "selectedAttraction": 0.15, "friction": 0.35, "autoPlay": 3000 }'>
+        <div class="carousel-cell">
+          <div style="color:#FEF200;" class="tk-peachy-keen-jf">A New Family Tradition</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#e52437;" class="tk-peachy-keen-jf">Roast Beast Bites</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F37EB5;" class="tk-peachy-keen-jf">Live Entertainment</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F67635;" class="tk-peachy-keen-jf">Visit With Santa</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#8CC63F;" class="tk-peachy-keen-jf">Whoville Chicken & Waffles</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#EF519E;" class="tk-peachy-keen-jf">Live Reindeer</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F9CB0F;" class="tk-peachy-keen-jf">Naughty or Nice Hot Cocoa Bar</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#e52437;" class="tk-peachy-keen-jf">Grinch Cheese Sandwiches</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#FEF200;" class="tk-peachy-keen-jf">A Whimsical Family Event</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F67635;" class="tk-peachy-keen-jf">Cindy's House</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#8CC63F;" class="tk-peachy-keen-jf">Who Hash Arancini</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#EF519E;" class="tk-peachy-keen-jf">Make & Take Gifts</div>
         </div>
       </div>
-      <div class="col-lg-6 margin-bottom-30 text-center equal-height">
-        <div class="event-card shadow-low">
-          <h1 class="text-fix text-uppercase font-weight-400 padding-bottom-15">A Storybook Holiday Party</h1>
-          <img class="img-responsive center-block" src="storybook-holiday.png" alt="A Storybook Holiday">
-          <div class="padding-left-15 padding-right-15">
-            <h4>Saturday, December 2, 2017, 6PM & 7:30PM</h4>
-            <div class="text-center"> <a class="text-uppercase btn btn-primary" href="https://www.eventbrite.com/e/a-storybook-holiday-guess-who-tickets-38499576269?aff=authorsevents" target="_blank">Buy Now!</a></div>
-            <div class="large-text padding-top-30">Celebrate the season at our inaugural holiday extravaganza! Step into Whoville for whimsical family fun with live performances, music, entertainment, and reindeer on the lawn, along with a visit from Santa. Enjoy a delectable dinner of Roast Beast Bites, Grinch Cheese Sandwiches, Who Hash Arancini, Gingerbread Whoopie Pies, and more. Stop by the Naughty or Nice Hot Cocoa Bar to create your own concoction, or sip other beverages. Join us! </div>
-          </div>
-        </div>
-      </div>
+      <h4 class="roboto peach font-weight-400 padding-left-15 padding-right-15 margin-lg-200">Don't be a Grinch! Join the festivities at our inaugural holiday extravaganza, complete with a visit from Santa!</h4>
+      <div class="margin-top-15"><a class="btn btn-default btn-lg" href="https://www.eventbrite.com/e/a-storybook-holiday-guess-who-tickets-38499576269?aff=storybookholiday" target="_blank">Buy Now!</a></div>
     </div>
+    <div class="col-sm-3 col-sm-push-1 hidden-sm hidden-xs"><img src="grinch.png?420" class="pull-right img-responsive" alt="Guess Who!"></div>
   </div>
   <div id="featured-events" class="row">
     <div class="container">
@@ -375,7 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="padding-left-30 padding-right-30"> <img class="img-responsive img-circle center-block" src="game-on.jpg" alt="Game On!">
           <h2 class="roboto text-center">Game On!</h2>
           <div class="text-center">Get the whole family playing during our month-long game-fest, with life-size games, teen trivia, bingo, board games, and more!
-            <div class="text-center"><a href="game-on/" class="btn btn-default text-uppercase margin-15" target="_blank">Learn More</a></div>
+            <div class="text-center"><a href="game-on/" class="btn btn-primary text-uppercase margin-15" target="_blank">Learn More</a></div>
           </div>
         </div>
       </div>
@@ -384,7 +458,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h2 class="roboto text-center">Art Stop on the Go</h2>
           <div class="text-center">Calling all budding artists! Cultivate your inner Picasso with hands-on, literature based art fun. Ages 6-12.<br>
             Roxborough, Thursday, December 7, 4:30PM.<br>
-            <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109883" class="btn btn-default text-uppercase margin-15" target="_blank">Register Now</a></div>
+            <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109883" class="btn btn-primary text-uppercase margin-15" target="_blank">Register Now</a></div>
           </div>
         </div>
       </div>
@@ -393,7 +467,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h2 class="roboto text-center">Craft Lab</h2>
           <div class="text-center">Have crafty fun creating your own inspired works of art at this open lab session. All ages.<br>
             Lone Tree, Sunday, December 17, 2-4PM. NO REGISTRATION REQUIRED.
-            <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=127243" class="btn btn-default text-uppercase margin-15" target="_blank">Learn More</a></div>
+            <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=127243" class="btn btn-primary text-uppercase margin-15" target="_blank">Learn More</a></div>
           </div>
         </div>
       </div>
