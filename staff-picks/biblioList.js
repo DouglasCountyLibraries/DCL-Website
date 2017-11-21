@@ -210,6 +210,9 @@ function getRandomCollectionList(KeyName, divid) {
                 if (KeyName == "NowFeaturing") {
                     $('#covers-NowFeaturing').append(createBookList(val, KeyName));
                 }
+				if (KeyName == "YoungAdult") {
+                    $('#covers-YoungAdult').append(createBookList(val, KeyName));
+                }
                 if (KeyName == "StorytimeFavorites") {
                     $('#covers-StorytimeFavorites').append(createBookList(val, KeyName));
                 }
