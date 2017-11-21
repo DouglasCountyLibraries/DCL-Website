@@ -38,7 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="title" -->
 <title>Authors and Events | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
-<meta name="description" content="Douglas County Libraries is a passionate advocate for literacy and lifelong learning. Through engagement, education and entertainment, Douglas County Libraries transforms lives and builds community.">
+<meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -67,34 +67,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <!--<script src="https://use.fortawesome.com/e61d5dd7.js"></script>-->
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link href="https://fonts.googleapis.com/css?family=Hind|Ribeye" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
 <style>
-.events-active {
-	background-color: #f5f5f5;
+/* carousel height, as percentage of width */
+/* inherit height from parent */
+<style> .events-active {
+ background-color: #f5f5f5;
 }
-#tabone, #tabtwo, #tabthree, #tabone:hover, #tabtwo:hover, #tabthree:hover, #tabone:focus, #tabtwo:focus, #tabthree:focus {
-	font-family: "Roboto Slab", palantino, serif;
-	font-size: 24px;
-	border: none;
-	color: #666!important;
-}
-.active #tabone, a .active #tabone {
-	background-color: #e6e4e2;
-	color: #666!important;
-}
-.active #tabtwo, a .active #tabtwo {
-	background-color: #e6e4e2;
-	color: #666!important;
-}
-.active #tabthree, a .active #tabthree {
-	background-color: #4d4c4b;
-	color: #fff!important;
-}
-.nav-tabs > li > a::after {
-	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+.event-card {
+	height: 100%;
+	background-color: #fff;
+	padding: 1px 0 40px;
 }
 .dropdown-menu.dropdown-event-menu a {
 	color: #b0852e;
@@ -116,14 +108,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	margin-top: 10px;
 	display: inline;
 }
-.tabbed-bookrow {
-	margin: 15px 0 20px;
-	max-width: 500px;
-}
-.tabbed-bookrow img {
-	margin-top: 10px;
-	display: inline;
-}
 .book-cover {
 	position: relative;
 	top: 0px;
@@ -132,6 +116,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .book-cover:hover, .book-cover:focus {
 	top: -10px;
 	transition: all 0.5s ease-in-out 0s;
+}
+
+@media screen and (max-width: 2200px) and (min-width: 1195px) {
+.text-fix {
+	font-size: 35px;
+}
+}
+* {
+	box-sizing: border-box;
+}
+.carousel-cell {
+	width: 100%;
+}
+.carousel-cell:before {
+	display: block;
+	text-align: center;
+}
+.btn-default {
+	background-color: #d91b5c;
+}
+.btn-default:hover, .btn-default:focus {
+	background-color: #ef519e;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+h1.storybook-heading {
+	font-family: 'Hind', sans-serif;
+	color: #fafae6;
+	font-size: 50px;
+}
+div.storybook-subheading {
+	font-family: 'Ribeye', sans-serif;
+	color: #da1c5c;
+	font-size: 110px;
+	line-height: 100px;
+	padding-bottom: 15px;
+	letter-spacing: -3px;
+	text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83333px 0.983333px 0px, rgb(255, 255, 255) 2.35px 1.85px 0px, rgb(255, 255, 255) 1.61667px 2.51667px 0px, rgb(255, 255, 255) 0.7px 2.91667px 0px, rgb(255, 255, 255) -0.283333px 2.98333px 0px, rgb(255, 255, 255) -1.25px 2.73333px 0px, rgb(255, 255, 255) -2.06667px 2.16667px 0px, rgb(255, 255, 255) -2.66667px 1.36667px 0px, rgb(255, 255, 255) -2.96667px 0.416667px 0px, rgb(255, 255, 255) -2.95px -0.566667px 0px, rgb(255, 255, 255) -2.6px -1.5px 0px, rgb(255, 255, 255) -1.96667px -2.26667px 0px, rgb(255, 255, 255) -1.11667px -2.78333px 0px, rgb(255, 255, 255) -0.133333px -3px 0px, rgb(255, 255, 255) 0.85px -2.88333px 0px, rgb(255, 255, 255) 1.75px -2.43333px 0px, rgb(255, 255, 255) 2.45px -1.73333px 0px, rgb(255, 255, 255) 2.88333px -0.833333px 0px;
+}
+.peach {
+	color: #fafae6
+}
+div.tk-peachy-keen-jf {
+	font-family: 'Ribeye', sans-serif;
+	color: #EF492F;
+	font-size: 40px;
+}
+.grinch-background {
+	background: #1b75bc url(guess-who.png) no-repeat center left/cover;
+}
+
+@media (max-width: 475px) {
+div.storybook-subheading {
+	font-size: 85px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -144,32 +184,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) --> 
 <!-- BC Log In Bar -->
-<div class="cp_header_biblio_bar">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a data-target="#" href="#" data-toggle="dropdown" role="button" class="dropdown-toggle my_account_toggle" aria-haspopup="true" aria-expanded="false">Log In / My DCL<span class="glyphicon glyphicon-menu-down white margin-left-15 margin-right-15" aria-hidden="true"></span></a>
-          <ul aria-labelledby="biblionav_trigger" role="menu" class="dropdown-menu biblionav_my_account">
-            <li class="info" role="presentation"> <a role="button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a role="menuitem" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/checkedout">Checked Out</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/holds">On Hold</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/for_later">For Later Shelf</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Completed Shelf</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/in_progress">In Progress Shelf</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a role="menuitem" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a role="menuitem" href="https://dcl.bibliocommons.com/account/personal_information">My Settings</a> </li>
-          </ul>
-        </div>
+<div class="login-row">
+  <div class="container login-container">
+    <div id="login-bar">
+      <div class="biblio_bar_link biblio_bar_my_account">
+        <div class="bc-widget bc-my-account-nav"></div>
       </div>
     </div>
   </div>
@@ -212,8 +231,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
         </ul>
       </li>
-      <li id="step1" class="whats-new-active"><a href="../whats-new">What's New</a> </li>
-      <li id="step2" class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+      <li class="whats-new-active"><a href="../whats-new">What's New</a> </li>
+      <li class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
         <ul class="dropdown-menu">
           <li><a href="../locations">Hours & Locations</a></li>
           <li><a href="../library-basics">Library Basics</a></li>
@@ -229,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../storytime">Storytime</a></li>
           <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
           <li><a href="../parents-teachers">Parents & Teachers</a></li>
           <li><a href="../research/students">Homework Help</a></li>
           <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
@@ -237,10 +256,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </li>
       <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
       <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
-      <li id="step3" class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+      <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../authors-events">Authors & Events</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research">Research</a> </li>
@@ -286,7 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <ul id="kids-teens" class="nav mobile-nav-list collapse">
                   <li><a href="../storytime">Storytime</a></li>
                   <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
                   <li><a href="../parents-teachers">Parents & Teachers</a></li>
                   <li><a href="../research/students">Homework Help</a></li>
                   <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
@@ -297,7 +316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../authors-events">Authors & Events</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research">Research</a> </li>
@@ -367,102 +386,93 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="container">
-      <h1 class="jumbo-text text-uppercase text-center text-nowrap font-weight-400">Dan Brown</h1>
-      <div class="col-lg-6 bg-gray-5 padding-top-15 text-center"> <img class="img-responsive center-block" src="dan-brown.jpg" alt="Dan Brown"> </div>
-      <div class="col-lg-6 bg-gray-5 padding-top-15 padding-bottom-60 text-center">
-        <div class="row bookrow">
-          <div class="col-xs-4 margin-bottom-15"><a href="https://dcl.bibliocommons.com/item/show/1410264114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780385514231/MC.GIF" alt="Origin"> </a> </div>
-          <div class="col-xs-4 margin-bottom-15"><a href="https://dcl.bibliocommons.com/item/show/1358424114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781524715823/MC.GIF" alt="The Da Vinci Code"> </a> </div>
-          <div class="col-xs-4 margin-bottom-15"><a href="https://dcl.bibliocommons.com/item/show/1112156114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781101974117/MC.GIF" alt="Inferno"> </a></div>
-          <div>
-            <h4>Wednesday, November 15, 2017, 7:30PM</h4>
-            <div class="text-center"> <a class="text-uppercase btn btn-primary" href="https://www.dcl.org/dan-brown/">Learn More</a></div>
-          </div>
+  <div class="row bg-black no-gutter no-padding padding-top-60 padding-bottom-20">
+    <div class="col-sm-8 col-sm-push-2 padding-bottom-60 text-center">
+      <h1 class="storybook-heading text-uppercase no-margin">A Storybook Holiday</h1>
+      <div class="storybook-subheading no-margin text-uppercase">Party</div>
+      <h4 class="peach font-weight-400 padding-left-15 padding-right-15 roboto no-margin-top">Saturday, December 2, 2017, <span style="text-decoration: line-through">6PM</span> <span style="font-size: 75%" class="text-uppercase">(Sold Out)</span> & 7PM</h4>
+      <div class="carousel" data-flickity='{ "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "selectedAttraction": 0.15, "friction": 0.35, "autoPlay": 3000 }'>
+        <div class="carousel-cell">
+          <div style="color:#FEF200;" class="tk-peachy-keen-jf">A New Family Tradition</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#e52437;" class="tk-peachy-keen-jf">Roast Beast Bites</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F37EB5;" class="tk-peachy-keen-jf">Live Entertainment</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F67635;" class="tk-peachy-keen-jf">Visit With Santa</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#8CC63F;" class="tk-peachy-keen-jf">Whoville Chicken & Waffles</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#EF519E;" class="tk-peachy-keen-jf">Live Reindeer</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F9CB0F;" class="tk-peachy-keen-jf">Naughty or Nice Hot Cocoa Bar</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#e52437;" class="tk-peachy-keen-jf">Grinch Cheese Sandwiches</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#FEF200;" class="tk-peachy-keen-jf">A Whimsical Family Event</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#F67635;" class="tk-peachy-keen-jf">Cindy's House</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#8CC63F;" class="tk-peachy-keen-jf">Who Hash Arancini</div>
+        </div>
+        <div class="carousel-cell">
+          <div style="color:#EF519E;" class="tk-peachy-keen-jf">Make & Take Gifts</div>
         </div>
       </div>
+      <h4 class="roboto peach font-weight-400 padding-left-15 padding-right-15 margin-lg-200">Don't be a Grinch! Join the festivities at our inaugural holiday extravaganza, complete with a visit from Santa!</h4>
+      <div class="margin-top-15"><a class="btn btn-default btn-lg" href="https://www.eventbrite.com/e/a-storybook-holiday-party-guess-who-tickets-38499576269?aff=authorsevents" target="_blank">Buy Now!</a></div>
     </div>
+    <div class="col-sm-3 col-sm-push-1 hidden-sm hidden-xs"><img src="grinch.png?420" class="pull-right img-responsive" alt="Guess Who!"></div>
   </div>
-  
-  <!-- three authors
-  <div class="row bg-gray-10">
-    <div class="container-md">
-      <div class="col-lg-4 col-lg-push-2 bg-gray-20 padding-top-15 padding-bottom-60 text-center">
-        <h1 class="jumbo-text text-uppercase text-nowrap font-weight-400">Sarah J. Maas</h1>
-        <img class="img-responsive center-block" src="sarah-j-mass.jpg" alt="Sarah J. Maas">
-        <h4>Wednesday, September 13, 2017, 6:30PM</h4>
-        <div class="text-center"> <a class="text-uppercase btn btn-warning" href="https://www.dcl.org/sarah-j-maas/">Sold Out</a></div>
-        <div class="row bookrow">
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1420929114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781681195773/MC.GIF" alt="Tower of Dawn"> </a> </div>
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1283629114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781619636040/MC.GIF" alt="Queen of Shadows"> </a> </div>
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1213536114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781619633612/MC.GIF" alt="Assassin's Blade"> </a></div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-lg-push-2 bg-gray-5 padding-top-15 padding-bottom-60 text-center">
-        <h1 class="jumbo-text text-uppercase text-nowrap font-weight-400">Dan Brown</h1>
-        <img class="img-responsive center-block" src="dan-brown.jpg" alt="Dan Brown">
-        <h4>Wednesday, November 15, 2017, 7:30PM</h4>
-        <div class="text-center"> <a class="text-uppercase btn btn-primary" href="https://www.dcl.org/dan-brown/">Learn More</a></div>
-        <div class="row bookrow">
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1410264114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780385514231/MC.GIF" alt="Origin"> </a> </div>
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1358424114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781524715823/MC.GIF" alt="The Da Vinci Code"> </a> </div>
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1112156114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781101974117/MC.GIF" alt="Inferno"> </a></div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 bg-gray-20 padding-top-15 padding-bottom-60 text-center">
-        <h1 class="jumbo-text text-uppercase text-nowrap font-weight-400">Jason Segel</h1>
-        <img class="img-responsive center-block" src="jason-segel.jpg" alt="Jason Segel">
-        <h4 class="text-uppercase no-margin-bottom">Coming Soon!</h4>
-        <div style="margin-bottom:44px;"><i>(Yes, that Jason Segel)</i></div>
-        <div class="row bookrow">
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1426191114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780385744317/MC.GIF" alt="Everything You Need to Know About Nightmares! and How to Defeat Them "> </a> </div>
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1426025114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781101939321/MC.GIF" alt="Otherworld" class="img-responsive book-cover shadow-low shadow-low-hover"> </a></div>
-          <div class="col-xs-4"><a href="https://dcl.bibliocommons.com/item/show/1331021114"><img class="img-responsive book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780375991592/MC.GIF&client=dougp&type=xw12&oclc=" alt="Nightmares! The Lost Lullaby"> </a> </div>
-        </div>
-      </div>
-  
-      
-    </div>
-  </div>-->
   <div id="featured-events" class="row">
     <div class="container">
       <div class="text-center padding-top-15 padding-bottom-15">
         <h1>Featured Events</h1>
-        <h4 class="roboto margin-lg-100 text-center">Don't miss these special library events! Check out our <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=726,728,724,729,731,727,730,725&et=18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Events Calendar</a> for more fun happenings at all DCL locations.</h4>
+        <h4 class="roboto margin-lg-200 text-center">Don't miss these special library events! Check out our <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=726,728,724,729,731,727,730,725&et=18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Events Calendar</a> for more fun happenings at all DCL locations.</h4>
       </div>
     </div>
   </div>
   <div class="row padding-bottom-30">
-    <div class="container-md">
+    <div class="container">
       <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div class="padding-left-30 padding-right-30"> <img class="img-responsive img-circle center-block" src="brew-tour.jpg" alt="Great Douglas County Brew Tour">
-          <h2 class="roboto text-center">Great Douglas County Brew Tour</h2>
-          <div class="text-center">Visit some great Douglas County establishments for special events and delicious brews. Get a passport stamp at each location and collect a commemorative pint glass. Ages 21+.
-            <div class="text-center"><a href="https://www.dcl.org/outside-the-lines/" class="btn btn-default text-uppercase margin-15" target="_blank">Learn More</a></div>
+        <div class="padding-left-30 padding-right-30"> <img class="img-responsive img-circle center-block" src="game-on.jpg" alt="Game On!">
+          <h2 class="roboto text-center">Game On!</h2>
+          <div class="text-center">Get the whole family playing during our month-long game-fest, with life-size games, teen trivia, bingo, board games, and more!
+            <div class="text-center"><a href="../game-on/" class="btn btn-primary text-uppercase margin-15" target="_blank">Learn More</a></div>
           </div>
         </div>
       </div>
       <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div class="padding-left-30 padding-right-30"> <img class="img-responsive img-circle center-block" src="renew-embroidery.jpg" alt="Renew & Rejuvenate">
-          <h2 class="roboto text-center">Renew &amp; Rejuvenate</h2>
-          <div class="text-center">DCL is celebrating sustainability during September with a variety of events that focus on refreshing your mind, body, spirit, home and garden. All ages.
-            <div class="text-center"><a href="https://www.dcl.org/renew/" class="btn btn-default text-uppercase margin-15" target="_blank">Learn More</a></div>
+        <div class="padding-left-30 padding-right-30"> <img class="img-responsive img-circle center-block" src="art-stop.jpg" alt="Art Stop on the Go">
+          <h2 class="roboto text-center">Art Stop on the Go</h2>
+          <div class="text-center">Calling all budding artists! Cultivate your inner Picasso with hands-on, literature based art fun. Ages 6-12.<br>
+            Roxborough, Thursday, December 7, 4:30PM.<br>
+            <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=109883" class="btn btn-primary text-uppercase margin-15" target="_blank">Register Now</a></div>
           </div>
         </div>
       </div>
       <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div class="padding-left-30 padding-right-30"> <img class="img-responsive img-circle center-block" src="fall-fun-night.jpg" alt="Fall Fun Night">
-          <h2 class="roboto text-center">Fall Fun Night</h2>
-          <div class="text-center">Drop in for family fun with life-size games, a kids’ carnival, dance party, and more! Costumes are welcome. All ages. Thursday, October 5, 6-8PM, Lone Tree. NO REGISTRATION REQUIRED. 
-            <div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=116090" class="btn btn-default text-uppercase margin-15" target="_blank">View Calendar</a></div>
+        <div class="padding-left-30 padding-right-30"> <img class="img-responsive img-circle center-block" src="craft-lab.jpg" alt="Craft Lab">
+          <h2 class="roboto text-center">Craft Lab</h2>
+          <div class="text-center">Have crafty fun creating your own inspired works of art at this open lab session. All ages.<br>
+            Lone Tree, Sunday, December 17, 2-4PM. NO REGISTRATION REQUIRED.
+            <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=127243" class="btn btn-primary text-uppercase margin-15" target="_blank">Learn More</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div id="other-author-events" class="row bg-gray-20 padding-bottom-30">
+  <div id="other-author-events" class="row bg-gray-5 padding-bottom-30">
     <div class="container">
       <div class="text-center padding-top-15">
         <h1>Other Author Events</h1>
@@ -470,43 +480,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-20">
+  <div class="row bg-gray-5 padding-bottom-60">
     <div class="container">
       <div class="col-md-8 col-md-push-2 padding-bottom-15">
         <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low">
-          <h1 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Ausma Zehanat Khan</h1>
-          <h4 class="no-margin-top text-center">Lone Tree, Friday, October 27, 6:30PM</h4>
-          <div class="row padding-top-10">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1410257114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780062459190/MC.GIF&client=dougp&type=xw12&oclc=" alt="The Bloodprint"> </a> Award-winning author of <i><a href="https://dcl.bibliocommons.com/item/show/1248749114among">The Unquiet Dead</a></i> (Khattak and Getty Mysteries) will talk about her new fantasy book, <i><a href="https://dcl.bibliocommons.com/item/show/1410257114">The Bloodprint</a></i>, the first in the Khorasan Archives series. A book sale and signing will follow her presentation. Adults.</div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124693" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row bg-gray-20">
-    <div class="container">
-      <div class="col-md-8 col-md-push-2 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low">
-          <h1 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Dan Hampton</h1>
-          <h4 class="no-margin-top text-center">Castle Rock, Saturday, October 28, 6:30PM</h4>
-          <div class="row padding-top-10">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1410597114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780062464392/MC.GIF&client=dougp&type=xw12&oclc=" alt="The Flight"></a> The bestselling author and decorated Air Force pilot will talk about his new book, <i><a href="https://dcl.bibliocommons.com/item/show/1410597114">The Flight</a></i>, which chronicles Charles Lindbergh's daring 1927 trans-Atlantic flight. Books will be sold at the event.</div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=124982" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row bg-gray-20 padding-bottom-80">
-    <div class="container">
-      <div class="col-md-8 col-md-push-2 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low">
-          <h1 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Michael Connelly</h1>
-          <h4 class="no-margin-top text-center">Highlands Ranch, Friday, November 3, 7PM</h4>
-          <div class="row padding-top-10">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1412693114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780316225908/MC.GIF" alt="Two Kinds of Truth"></a>The NYT bestselling author of <i><a href="https://dcl.bibliocommons.com/item/show/714986114">The Lincoln Lawyer</a></i> will introduce his newest Harry Bosch novel, <i><a href="https://dcl.bibliocommons.com/item/show/1412693114">Two Kinds of Truth</a></i>. Books will be on sale via Tattered Cover Book Store, and a book signing will follow the presentation. Adults.</div>
-            <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=134671" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
+          <h2 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Stel Pavlou</h2>
+          <h4 class="no-margin-top text-center">Castle Rock, Friday, December 1, 6:30PM</h4>
+          <div class="row padding-top-15">
+            <div> <a href="https://dcl.bibliocommons.com/item/show/1418264114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780062126054/MC.GIF&client=dougp&type=xw12&oclc=" alt="Daniel Coldstar the Relic War"></a>The acclaimed science fiction author and screenwriter will talk about <i><a href="https://dcl.bibliocommons.com/item/show/1418264114">Daniel Coldstar: The Relic War</a></i>, his new middle grade outer space adventure story. Books will be on sale at the event.</div>
+            <div><a href="http://douglascountylibraries.evanced.info/signup/EventDetails?EventId=126177" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
           </div>
         </div>
       </div>
@@ -583,7 +565,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     "url": "https://www.dcl.org/",
     "name": "Douglas County Libraries",
 	"image": "https://www.dcl.org/locations/castle-rock.jpg",
-	"description": "Douglas County Libraries is a passionate advocate for literacy and lifelong learning. Through engagement, education and entertainment, Douglas County Libraries transforms lives and builds community.",
+	"description": "Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.",
     "logo": "https://www.dcl.org/dcl-logo.png",
 	"potentialAction": {
     	"@type": "SearchAction",
@@ -602,18 +584,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
-<!-- TM tracking snippet start --> 
-<script>
-var TMTrack = ['bf9cf0b78685', null, null, '//jss.trumeasure.com', null, window.location.protocol];
-(function () {
-	var pe = document.currentScript; if (!pe) { pe = document.getElementsByTagName('head')[0]; } else {
-			while (pe.tagName.toLowerCase() != 'body' && pe.tagName.toLowerCase() != 'head') { pe = pe.parentElement; } }
-		TMTrack[2] = document.getElementsByTagName(pe.tagName)[0];
-	var ns = document.createElement('script'); ns.async = 1; ns.src = TMTrack[5] + TMTrack[3] + '/Scripts/TMLoader.js'; TMTrack[2].appendChild(ns);
-})();
-</script> 
-<!-- TM tracking snippet end -->
+<!-- End Structured Data -->
 </body>
 <!-- InstanceEnd -->
 </html>

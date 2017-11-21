@@ -66,6 +66,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <!--<script src="https://use.fortawesome.com/e61d5dd7.js"></script>-->
+<script async="async" type="text/javascript">(function(){var e=document.createElement("script");
+e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
@@ -73,6 +76,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 .reserve-a-space-active {
 	background-color: #f5f5f5;
+}
+.info-icon {
+	border: 3px solid #ccc;
+	background: #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #ccc;
+	font-size: 30px;
+	height: 60px;
+	line-height: 54px;
+	margin: 0 auto;
+	text-align: center;
+	width: 60px;
 }
 .room-row, .room-row h4 {
 	color: #222;
@@ -90,6 +106,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	vertical-align: middle;
 	padding-bottom: 3px;
 }
+.lbl {
+	position: relative;
+	top: 9px;
+	height: 20px;
+	width: 44px;
+	background: #ccc;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.lbl:after {
+	position: absolute;
+	left: -2px;
+	top: -3px;
+	display: block;
+	width: 26px;
+	height: 26px;
+	border-radius: 100px;
+	background: #fff;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+	content: '';
+	transition: all 0.2s ease;
+	border: 1px solid #999;
+}
+.cbx:checked ~ label::after {
+	background: #5f953d;
+	left: 20px;
+	border: 1px solid #5f953d;
+}
+.cntr {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.hidden {
+	display: none;
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -101,32 +155,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) --> 
 <!-- BC Log In Bar -->
-<div class="cp_header_biblio_bar">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="pull-right biblio_bar_link biblio_bar_my_account"> <a data-target="#" href="#" data-toggle="dropdown" role="button" class="dropdown-toggle my_account_toggle" aria-haspopup="true" aria-expanded="false">Log In / My DCL<span class="glyphicon glyphicon-menu-down white margin-left-15 margin-right-15" aria-hidden="true"></span></a>
-          <ul aria-labelledby="biblionav_trigger" role="menu" class="dropdown-menu biblionav_my_account">
-            <li class="info" role="presentation"> <a role="button" class="btn btn-transactional btn-block log_in_btn" href="https://dcl.bibliocommons.com/user/login"> Log In / Register </a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a role="menuitem" href="https://dcl.bibliocommons.com/dashboard/user_dashboard">My Library Dashboard</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation" class="dropdown-header">My Borrowing</li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/checkedout">Checked Out</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/holds">On Hold</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/fines">Fees</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation" class="dropdown-header">My Collections</li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/for_later">For Later Shelf</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/completed">Completed Shelf</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/collection/show/my/library/in_progress">In Progress Shelf</a> </li>
-            <li role="presentation"> <a role="menuitem" class="indented" href="https://dcl.bibliocommons.com/lists/show/mine">Lists</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a role="menuitem" href="https://dcl.bibliocommons.com/user_profile/me">My Profile</a> </li>
-            <li class="divider" role="presentation"></li>
-            <li role="presentation"> <a role="menuitem" href="https://dcl.bibliocommons.com/account/personal_information">My Settings</a> </li>
-          </ul>
-        </div>
+<div class="login-row">
+  <div class="container login-container">
+    <div id="login-bar">
+      <div class="biblio_bar_link biblio_bar_my_account">
+        <div class="bc-widget bc-my-account-nav"></div>
       </div>
     </div>
   </div>
@@ -169,8 +202,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
         </ul>
       </li>
-      <li id="step1" class="whats-new-active"><a href="../whats-new">What's New</a> </li>
-      <li id="step2" class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+      <li class="whats-new-active"><a href="../whats-new">What's New</a> </li>
+      <li class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
         <ul class="dropdown-menu">
           <li><a href="../locations">Hours & Locations</a></li>
           <li><a href="../library-basics">Library Basics</a></li>
@@ -186,7 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../storytime">Storytime</a></li>
           <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
           <li><a href="../parents-teachers">Parents & Teachers</a></li>
           <li><a href="../research/students">Homework Help</a></li>
           <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
@@ -194,10 +227,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </li>
       <li class="digital-media-active"><a href="../digital-media">Digital Media</a> </li>
       <li class="reserve-a-space-active"><a href="../reserve-a-space">Reserve a Space</a> </li>
-      <li id="step3" class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+      <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../authors-events">Authors & Events</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research">Research</a> </li>
@@ -243,7 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <ul id="kids-teens" class="nav mobile-nav-list collapse">
                   <li><a href="../storytime">Storytime</a></li>
                   <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
                   <li><a href="../parents-teachers">Parents & Teachers</a></li>
                   <li><a href="../research/students">Homework Help</a></li>
                   <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
@@ -254,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../authors-events">Authors & Events</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=37,35,36,38,39,18,2,22,16,20,15,3,24,25&lib=ALL" target="_blank">Kids Events</a></li>
+                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research">Research</a> </li>
@@ -284,31 +317,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div id="top" class="row border-top">
+  <div id="top" class="row border-top padding-bottom-15">
     <div class="container text-center">
       <h1 class="jumbo-text text-uppercase font-weight-400">Event Venues</h1>
       <div class="separator-container">
         <div class="separator line-separator"><i class="fa fa-th"></i></div>
       </div>
-		<h4 class="roboto margin-lg-200">Our state-of-the-art meeting rooms and event venues are perfect for business meetings, holiday parties, seminars and corporate events. Explore our unique spaces to find the one that’s right for you, then call Event + Hospitality Services at <a href="tel:303-688-7605">(303) 688-7605</a> with questions or to reserve the space. </h4>
+      <h4 class="roboto">Our state-of-the-art meeting rooms and event venues are perfect for business meetings, holiday parties, seminars and corporate events. Explore our unique spaces to find the one that's right for you, then call Event + Hospitality Services at <a href="tel:303-688-7605">(303) 688-7605</a> with questions or to reserve the space. We're here to help!</h4>
     </div>
   </div>
-  <div class="row">
+  <div class="row padding-bottom-30">
     <div class="container">
-      <div class="col-md-4">
-        <h5>When you host a meeting or party with us, you can work with our professional, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Full library buy-out, room setup and teardown, drop-off and full-service/staffed catering, vendor recommendations, alcohol service.">full-service</a> planners to help make it memorable. We can also recommend affordable caterers, rental companies, and other vendors. </h5>
+      <div class="col-md-3 col-xs-6 text-center padding-bottom-15">
+        <div class="margin-bottom-5"><i class="material-icons info-icon">supervisor_account</i></div>
+        <div>When you host a meeting or party with us, you can work with our professional, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Full library buy-out, room setup and teardown, drop-off and full-service/staffed catering, vendor recommendations, alcohol service.">full-service</a> planners to help make it memorable.</div>
       </div>
-      <div class="col-md-4">
-        <h5>Our modern venues are available at all hours, and with <a class="" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Complimentary Wi-Fi, AV amenities, projection screens, LED televisions, Blu-ray players, HDMI connectivity, hearing loops.">audiovisual (AV) amenities</a> for presentations and conferencing. Be sure to consider our outdoor spaces, as well. They’re ideal for catered parties, and the spectacular views are free!</h5>
+      <div class="col-md-3 col-xs-6 text-center padding-bottom-15">
+        <div class="margin-bottom-5"><i class="material-icons info-icon">share</i></div>
+        <div>We can also recommend affordable caterers, rental companies, and other vendors.</div>
       </div>
-      <div class="col-md-4">
-        <h5>Want more information? Call Event + Hospitality Services at <a href="tel:303-688-7605">(303) 688-7605</a>. We're here to help!</h5>
+      <div class="clearfix visible-xs-block visible-sm-block"></div>
+      <div class="col-md-3 col-xs-6 text-center padding-bottom-15">
+        <div class="margin-bottom-5"><i class="material-icons info-icon">business</i></div>
+        <div>Our modern venues are available at all hours, and with <a class="" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Complimentary Wi-Fi, AV amenities, projection screens, LED televisions, Blu-ray players, HDMI connectivity, hearing loops.">audiovisual (AV) amenities</a> for presentations and conferencing. </div>
+      </div>
+      <div class="col-md-3 col-xs-6 text-center padding-bottom-15">
+        <div class="margin-bottom-5"><i class="material-icons info-icon">brightness_4</i></div>
+        <div>Be sure to consider our outdoor spaces, as well. They're ideal for catered parties, and the spectacular views are free!</div>
       </div>
     </div>
   </div>
-  <div class="row margin-top-15 padding-bottom-30">
+  <div class="row bg-gray-10 padding-top-15 padding-bottom-15">
     <div class="container text-center">
-      <button type="button" class="btn text-uppercase btn-primary" data-toggle="modal" data-target="#modalone">Get Started</button>
+      <button type="button" class="btn text-uppercase btn-primary margin-right-30" data-toggle="modal" data-target="#modalone">Get Started</button>
+      <span class="text-uppercase font-weight-400 margin-right-5">Floorplans</span>
+      <input type="checkbox" id="unchecked" class="cbx hidden switcheroo"/>
+      <label for="unchecked" class="lbl"></label>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="modalone" style="display: none;">
@@ -326,9 +370,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-teal padding-top-15 padding-bottom-60">
     <div class="container">
-      <h1 id="parker" class="jumbo-text font-weight-400 text-center white text-uppercase padding-bottom-15">Parker</h1>
-      <div class="text-center white roboto margin-lg-200 padding-bottom-15">Located on Mainstreet in the heart of Parker, our modern event spaces can be reserved for everything from business meetings, seminars and conferences to weddings and other public ceremonies.</div>
-       <div class="row room-row">
+      <h1 id="parker" class="jumbo-text font-weight-400 text-center white text-uppercase">Parker</h1>
+      <h4 class="text-center white roboto padding-bottom-20">Located on Mainstreet in the heart of Parker, our modern event spaces can be reserved for everything from business meetings, seminars and conferences to weddings and other public ceremonies.</h4>
+      <div class="row room-row">
         <div class="col-md-4 no-padding"><img class="img-responsive center-block" src="pa-event-hall-a-b.jpg" alt="Event Hall A & B + Terrace"></div>
         <div class="col-md-8 no-gutter padding-top-15 padding-bottom-30">
           <h4 class="roboto no-margin-top">Event Halls A & B + Terrace</h4>
@@ -446,9 +490,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-moss padding-top-15 padding-bottom-60">
     <div class="container">
-      <h1 id="lone-tree" class="jumbo-text font-weight-400 text-center white text-uppercase padding-bottom-15">Lone Tree</h1>
-      <div class="text-center white roboto margin-lg-200 padding-bottom-15">The flexible spaces in Lone Tree easily accommodate large celebrations, workshops, and corporate meetings and events. Our Terrace is the ideal outdoor setting for your intimate party.</div>
-       <div class="row room-row">
+      <h1 id="lone-tree" class="jumbo-text font-weight-400 text-center white text-uppercase">Lone Tree</h1>
+      <h4 class="text-center white roboto padding-bottom-20">The flexible spaces in Lone Tree easily accommodate large celebrations, workshops, and corporate meetings and events. Our Terrace is the ideal outdoor setting for your intimate party.</h4>
+      <div class="row room-row">
         <div class="col-md-4 no-padding"><img class="img-responsive center-block" src="lt-event-hall-library.jpg" alt="Event Hall + Adjoining Library Space"></div>
         <div class="col-md-8 no-gutter padding-top-15 padding-bottom-30">
           <h4 class="roboto no-margin-top">Event Hall + Adjoining Library Space</h4>
@@ -533,9 +577,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-loquacious padding-top-15 padding-bottom-60">
     <div class="container">
-      <h1 id="castle-pines" class="jumbo-text font-weight-400 text-center white text-uppercase padding-bottom-15">Castle Pines</h1>
-      <div class="text-center white roboto margin-lg-200 padding-bottom-15">This jewel in Castle Pines offers so many creative event options. Book a corporate meeting in one of our flexible conference room spaces, or a private, catered party on the Terrace with stunning views of the Front Range.</div>
-       <div class="row room-row">
+      <h1 id="castle-pines" class="jumbo-text font-weight-400 text-center white text-uppercase">Castle Pines</h1>
+      <h4 class="text-center white roboto padding-bottom-20">This jewel in Castle Pines offers so many creative event options. Book a corporate meeting in one of our flexible conference room spaces, or a private, catered party on the Terrace with stunning views of the Front Range.</h4>
+      <div class="row room-row">
         <div class="col-md-4 no-padding"><img class="img-responsive center-block" src="cap-ma-event-hall-library.jpg" alt="CPN Masters Association Event Hall"></div>
         <div class="col-md-8 no-gutter padding-top-15 padding-bottom-30">
           <h4 class="roboto no-margin-top">Castle Pines North "Master" Assoc. Event Hall + Adjoining Library Space</h4>
@@ -620,9 +664,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-lavender padding-top-15 padding-bottom-60">
     <div class="container">
-      <h1 id="highlands-ranch" class="jumbo-text font-weight-400 text-center white text-uppercase padding-bottom-15">Highlands Ranch</h1>
-      <div class="text-center white roboto margin-lg-200 padding-bottom-15">If you need an event space that can expand and transform with your group’s needs, these meeting rooms fit the bill. And the Terrace overlooking Civic Green Park is spacious enough for holding your event outside.</div>
-       <div class="row room-row">
+      <h1 id="highlands-ranch" class="jumbo-text font-weight-400 text-center white text-uppercase">Highlands Ranch</h1>
+      <h4 class="text-center white roboto padding-bottom-20">If you need an event space that can expand and transform with your group's needs, these meeting rooms fit the bill. And the Terrace overlooking Civic Green Park is spacious enough for holding your event outside.</h4>
+      <div class="row room-row">
         <div class="col-md-4 no-padding"><img class="img-responsive center-block" src="hr-terrace.jpg" alt="The Terrace"></div>
         <div class="col-md-8 no-gutter padding-top-15 padding-bottom-30">
           <h4 class="roboto no-margin-top">The Terrace</h4>
@@ -707,9 +751,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-teal padding-top-15 padding-bottom-60">
     <div class="container">
-      <h1 id="castle-rock" class="jumbo-text font-weight-400 text-center white text-uppercase padding-bottom-15">Castle Rock</h1>
-      <div class="text-center white roboto margin-lg-200 padding-bottom-15">Our meeting rooms include state-of-the-art technology to accommodate business events of all sizes and styles &mdash; even weddings! Talk to one of our full-service planners for help reserving the right space.</div>
-       <div class="row room-row">
+      <h1 id="castle-rock" class="jumbo-text font-weight-400 text-center white text-uppercase">Castle Rock</h1>
+      <h4 class="text-center white roboto padding-bottom-20">Our meeting rooms include state-of-the-art technology to accommodate business events of all sizes and styles &mdash; even weddings! Talk to one of our full-service planners for help reserving the right space.</h4>
+      <div class="row room-row">
         <div class="col-md-4 no-padding"><img class="img-responsive center-block" src="cr-bank-east-west.jpg" alt="Castle Rock Bank Meeting Room East & West"></div>
         <div class="col-md-8 no-gutter padding-top-15 padding-bottom-30">
           <h4 class="roboto no-margin-top">Castle Rock Bank Meeting Room East & West</h4>
@@ -810,9 +854,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-moss padding-top-15 padding-bottom-60">
     <div class="container">
-      <h1 id="roxborough" class="jumbo-text font-weight-400 text-center white text-uppercase padding-bottom-15">Roxborough</h1>
-      <div class="text-center white roboto margin-lg-200 padding-bottom-15">Located in the heart of Roxborough, our meeting room is ideal for getting straight to the business at hand and includes the AV capabilities needed for your important presentations.</div>
-       <div class="row room-row">
+      <h1 id="roxborough" class="jumbo-text font-weight-400 text-center white text-uppercase">Roxborough</h1>
+      <h4 class="text-center white roboto padding-bottom-20">Located in the heart of Roxborough, our meeting room is ideal for getting straight to the business at hand and includes the AV capabilities needed for your important presentations.</h4>
+      <div class="row room-row">
         <div class="col-md-4 no-padding"><img class="img-responsive center-block" src="rox-lockheed-martin.jpg" alt="Lockheed Martin Community Meeting Room"></div>
         <div class="col-md-8 no-gutter padding-top-15 padding-bottom-30">
           <h4 class="roboto no-margin-top">Lockheed Martin Community Meeting Room </h4>
@@ -886,12 +930,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script>
+	<script>
+  $(document).ready(function () {
+    $(function () {
+        $('.switcheroo').change(function () {
+            $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+           // console.log("what");
+            $(".room-row").each(function (index) {
+                console.log("src val = " + $(this).find('img').attr('src'));
+                var src = $(this).find('img').attr('src');
+                var alt = $(this).find('img').attr('alt');
+               
+                if (src.startsWith("fp")) {
+                    src =  src.substring(3);
+                }
+                else {
+                    src = "fp-" + src;
+                }
+               
+                $(this).find('img').attr('src',src);
+                console.log("alt val = " + $(this).find('img').attr('alt'));
+                //var id = $(this).attr("id");
+                //  $(this).css(/* apply styles */);
+            });
+        })
+    })
+	});  // end document ready
+	</script> 
+	<script>
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
  </script> 
-<!-- InstanceEndEditable --> 
+	<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
@@ -908,7 +979,7 @@ $(function () {
     "url": "https://www.dcl.org/",
     "name": "Douglas County Libraries",
 	"image": "https://www.dcl.org/locations/castle-rock.jpg",
-	"description": "Douglas County Libraries is a passionate advocate for literacy and lifelong learning. Through engagement, education and entertainment, Douglas County Libraries transforms lives and builds community.",
+	"description": "Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.",
     "logo": "https://www.dcl.org/dcl-logo.png",
 	"potentialAction": {
     	"@type": "SearchAction",
@@ -928,16 +999,5 @@ $(function () {
   }
 </script> 
 <!-- End Structured Data --> 
-<!-- TM tracking snippet start --> 
-<script>
-var TMTrack = ['bf9cf0b78685', null, null, '//jss.trumeasure.com', null, window.location.protocol];
-(function () {
-	var pe = document.currentScript; if (!pe) { pe = document.getElementsByTagName('head')[0]; } else {
-			while (pe.tagName.toLowerCase() != 'body' && pe.tagName.toLowerCase() != 'head') { pe = pe.parentElement; } }
-		TMTrack[2] = document.getElementsByTagName(pe.tagName)[0];
-	var ns = document.createElement('script'); ns.async = 1; ns.src = TMTrack[5] + TMTrack[3] + '/Scripts/TMLoader.js'; TMTrack[2].appendChild(ns);
-})();
-</script> 
-<!-- TM tracking snippet end -->
 </body>
 <!-- InstanceEnd --></html>

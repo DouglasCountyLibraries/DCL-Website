@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	letter-spacing: -0.8px;
 }
 h4, h5, h6, .h1, .h4, .h5, .h6 {
-	line-height: 1.6em;
+	line-height: 1.3em;
 }
 h4, .h4 {
 	font-size: 22px;
@@ -191,6 +191,9 @@ blockquote footer, blockquote small, blockquote .small {
 	float: none;
 	margin: 0 auto;
 }
+.image-center {
+	margin: 0 auto;
+}
 .collapse.navbar-collapse {
 	font-family: "Open Sans", arial, sans-serif;
 	font-size: 14px;
@@ -274,11 +277,11 @@ blockquote footer, blockquote small, blockquote .small {
 }
 .login-container {
 	position: relative;
-	padding-bottom: 43px;
+	padding-bottom: 45px;
 }
 #login-bar {
 	position: absolute;
-	right: 0;
+	right: 10px;
 	top: 0;
 	z-index: 400;
 }
@@ -293,7 +296,7 @@ blockquote footer, blockquote small, blockquote .small {
 	min-height: 43px;
 }
 #bibliocommons_user_nav_trigger {
-	line-height: 30px;
+	line-height: 31px;
 	text-transform: inherit;
 	font-weight: 600;
 }
@@ -505,6 +508,24 @@ blockquote footer, blockquote small, blockquote .small {
 	box-shadow: 0 5px 10px #838383;
 	top: 5px;
 	transition: all 0.5s ease-in-out;
+}
+/* ====== locations ====== */
+.location-background {
+	text-shadow: 0px 1px 4px rgb(0, 0, 0);
+}
+.location-background h1 {
+	font-size: 60px;
+	line-height: 55px;
+}
+.location-background h2 {
+	font-size: 40px;
+	line-height: 35px;
+}
+.location-background {
+	background-color: #555;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 /* ====== buttons ====== */
 .btn-database {
@@ -950,12 +971,18 @@ h6.responsive-text {
 .responsive-text {
 	font-size: 1.6vmax;
 }
+.icon-circle-default .material-icons {
+	padding-top: 10px;
+	vertical-align: bottom;
+	padding: 0 0 20px 2px;
+	font-size: 50px;
+}
 .icon-circle {
 	border: 3px solid #666;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #666;
-	font-size: 60px;
+	font-size: 45px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -967,7 +994,7 @@ h6.responsive-text {
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #fff;
-	font-size: 60px;
+	font-size: 45px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -983,7 +1010,7 @@ h6.responsive-text {
 	box-sizing: border-box;
 	color: #fff;
 	background-color: #fff;
-	font-size: 60px;
+	font-size: 45px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -996,7 +1023,7 @@ h6.responsive-text {
 	box-sizing: border-box;
 	color: #d36a50;
 	background-color: #fff;
-	font-size: 60px;
+	font-size: 45px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -1009,7 +1036,7 @@ h6.responsive-text {
 	box-sizing: border-box;
 	color: #f5c875;
 	background-color: #fff;
-	font-size: 60px;
+	font-size: 45px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -1048,7 +1075,7 @@ h6.responsive-text {
 	box-sizing: border-box;
 	color: #4f878c;
 	background-color: #fff;
-	font-size: 60px;
+	font-size: 45px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -1061,7 +1088,7 @@ h6.responsive-text {
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #fff;
-	font-size: 60px;
+	font-size: 50px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -1074,7 +1101,7 @@ h6.responsive-text {
 	box-sizing: border-box;
 	color: #65587b;
 	background-color: #fff;
-	font-size: 60px;
+	font-size: 45px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -1100,7 +1127,7 @@ h6.responsive-text {
 	box-sizing: border-box;
 	color: #B0852E;
 	background-color: #fff;
-	font-size: 60px;
+	font-size: 50px;
 	height: 100px;
 	line-height: 90px;
 	margin: 0 auto;
@@ -1233,7 +1260,7 @@ h6.responsive-text {
 .database-dropdown .no-margin a {
 	color: #fff;
 	line-height: 20px;
-	padding: 10px 40px;
+	padding: 15px 40px;
 	text-align: left;
 }
 .database-dropdown .no-margin a:hover {
@@ -1872,161 +1899,7 @@ h6.responsive-text {
 	padding: 3px 6px;
 	width: 99%;
 }
-/* ====== Ken Burns effect ====== */
 
-.kb-slideshow-background {
-	height: 225px;
-}
-.kb-slideshow {
-	position: absolute;
-	width: 100%;
-	height: 225px;
-	overflow: hidden;
-}
-.kb-slideshow-image {
-	position: absolute;
-	width: 100%;
-	height: 225px;
-	background: no-repeat 50% 50%;
-	background-size: cover;
-	animation-name: kenburns;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-duration: 30s;
-	opacity: 1;
-	transform: scale(1.05);
-}
-.kb-slideshow-image:nth-child(1) {
-	animation-name: kenburns-1;
-	z-index: 3;
-}
-.kb-slideshow-image:nth-child(2) {
-	animation-name: kenburns-2;
-	z-index: 2;
-}
-.kb-slideshow-image:nth-child(3) {
-	animation-name: kenburns-3;
-	z-index: 1;
-}
-.kb-slideshow-image:nth-child(4) {
-	animation-name: kenburns-4;
-	z-index: 0;
-}
- @keyframes kenburns-1 {
- 0% {
- opacity: 1;
- transform: scale(1.05);
-}
- 3% {
- opacity: 1;
-}
- 24% {
- opacity: 1;
-}
- 26.5% {
- opacity: 0;
- transform: scale(1);
-}
- 100% {
- opacity: 0;
- transform: scale(1.05);
-}
- 98% {
- opacity: 0;
- transform: scale(1.05);
-}
- 100% {
- opacity: 1;
-}
-}
-@keyframes kenburns-2 {
- 24% {
- opacity: 1;
- transform: scale(1);
-}
- 26% {
- opacity: 1;
-}
- 48% {
- opacity: 1;
-}
- 52% {
- opacity: 0;
- transform: scale(1.05);
-}
- 100% {
- opacity: 0;
- transform: scale(1);
-}
-}
-@keyframes kenburns-3 {
- 48% {
- opacity: 1;
- transform: scale(1.05);
-}
- 52% {
- opacity: 1;
-}
- 74% {
- opacity: 1;
-}
- 76% {
- opacity: 0;
- transform: scale(1);
-}
- 100% {
- opacity: 0;
- transform: scale(1.05);
-}
-}
-@keyframes kenburns-4 {
- 74% {
- opacity: 1;
- transform: scale(1);
-}
- 76% {
- opacity: 1;
-}
- 98% {
- opacity: 1;
-}
- 100% {
- opacity: 0;
- transform: scale(1.05);
-}
-}
-
-@media (min-width: 768px) {
-.kb-slideshow-background {
-	height: 325px;
-}
-.kb-slideshow {
-	position: absolute;
-	width: 100%;
-	height: 325px;
-}
-.kb-slideshow-image {
-	position: absolute;
-	width: 100%;
-	height: 325px;
-}
-}
-
-@media (min-width: 992px) {
-.kb-slideshow-background {
-	height: 500px;
-}
-.kb-slideshow {
-	position: absolute;
-	width: 100%;
-	height: 500px;
-}
-.kb-slideshow-image {
-	position: absolute;
-	width: 100%;
-	height: 500px;
-}
-}
 .item blockquote {
 	border-left: none;
 	margin: 0;
@@ -2316,6 +2189,18 @@ img.size-full, img.size-large, img.header-image, img.wp-post-image {
 }
 }
 
+@media (min-width: 575px) {
+.location-background h1 {
+	font-size: 100px;
+	line-height: 85px;
+}
+.location-background h2 {
+	font-size: 60px;
+	line-height: 55px;
+}
+}
+
+
 /* required for jquery match-height */
 
 @media only screen and (max-width : 767px) {
@@ -2433,11 +2318,8 @@ img.size-full, img.size-large, img.header-image, img.wp-post-image {
 	display: none !important;
 }
 }
-/* ====== sub-nav and location pan and zoom ====== */
+/* ====== sub-nav ====== */
 
-.location-caption {
-	padding: 20px 15px 60px;/* apply if needed text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); */
-}
 .sub-nav {
 	margin: 0 auto;
 	max-width: 1920px;
@@ -2445,7 +2327,7 @@ img.size-full, img.size-large, img.header-image, img.wp-post-image {
 .sub-nav-row {
 	background-color: #d36a50;
 }
-.sub-nav-item {
+.sub-nav-item, .database-nav, .database-nav-first {
 	background-color: #d36a50;
 	border-bottom: 1px solid #e79682;
 }
@@ -2462,10 +2344,10 @@ img.size-full, img.size-large, img.header-image, img.wp-post-image {
 	line-height: 20px;
 	padding: 15px;
 }
-.sub-nav-border {
+.sub-nav-border, .database-nav {
 	border-right: 1px solid #e79682;
 }
-.sub-nav-border-first {
+.sub-nav-border-first, .database-nav-first {
 	border-right: 1px solid #e79682;
 	border-left: 1px solid #e79682;
 }
@@ -2594,38 +2476,4 @@ img.size-full, img.size-large, img.header-image, img.wp-post-image {
 	width: 50%;
 }
 }
-/* animations for locations - remove for now
-.animate-pop-in-location {
-	animation: pop-in 1s forwards;
-	animation-delay: .5s;
-	opacity: 0;
-}
-.animate-fade-in-manager {
-	animation: fade-in 3s forwards;
-	animation-delay: 2s;
-	opacity: 0;
-}
-.animate-fade-in-description {
-	animation: fade-in 2s forwards;
-	animation-delay: 1s;
-	opacity: 0;
-}
- @keyframes pop-in {
- 0% {
- opacity: 0;
- transform: scale(.5);
-}
- 100% {
- opacity: 1;
- transform: none;
-}
-}
- @keyframes fade-in {
- 0% {
- opacity: 0;
-}
- 100% {
- opacity: 1;
-}
-}
-*/
+
