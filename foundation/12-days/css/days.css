@@ -3,7 +3,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Caveat);
 .backdrop {
-	background: url("../images/background.png") no-repeat 0 0;
+	background: url("../images/background.png") no-repeat center top;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -16,20 +16,42 @@ h1.caveat {
 	font-size: 3.5em;
 }
 .black-box {
-	background-color: #000;
+	background-color: rgba(0,0,0,.6);
 	padding: 10px 30px 50px;
 }
 .wish-wrapper {
-	background-color: #ffc107;
+	background-color: #fec144;
 	color: #000;
 	padding: 20px 20px 30px
 }
+.giveaway-wrapper {
+	background-color: rgba(0,0,0,.6);
+	color: #fff;
+	padding: 30px 0 15px;
+}
 .days-wrapper {
-	background-color: rgba(0,0,0,.4);
+	background-color: rgba(0,0,0,.6);
 	padding: 30px;
 }
-.days-wrapper img {
-	margin: 15px;
+.days-active {
+	font-family: 'Caveat', cursive;
+	color: #fff;
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+.days {
+	font-family: 'Caveat', cursive;
+	color: #bbb;
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+.grow {
+	transition: all .4s ease-in-out;
+}
+.grow:hover {
+	transform: scale(1.1)
 }
 .btn-orange {
 	background-color: #B62309;
@@ -56,4 +78,28 @@ a.btn.btn-orange {
 	opacity: 1;
 	cursor: pointer;
 }
-
+.btn-white {
+	background-color: #fff;
+	border: 0;
+	-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
+}
+a.btn.btn-white {
+	color: #333;
+	text-transform: uppercase;
+}
+.btn-white:active, .btn-white:hover, .btn-white:focus {
+	background-color: #ccc;
+	border: 0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 8px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 8px 0;
+	box-shadow: rgba(0, 0, 0, 0.3) 0 4px 8px 0;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease-out;
+	-ms-transition: all .4s ease-out;
+	-o-transition: all .4s ease-out;
+	transition: all .4s ease-out;
+	opacity: 1;
+	cursor: pointer;
+}
