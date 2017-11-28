@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,13 +38,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="title" -->
 <title>Notification Test | Douglas County Libraries</title>
 <meta name="robots" content="noindex, nofollow">
-  <link rel="manifest" href="/manifest.json">
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-  <script>
+<link rel="manifest" href="/manifest.json">
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script>
     var OneSignal = window.OneSignal || [];
     OneSignal.push(["init", {
       appId: "39124fd4-c082-4c81-b009-95f47620ab0e",
       autoRegister: true,
+    welcomeNotification: {
+        "title": "Welcome",
+        "message": "Thanks for subscribing to get DCL event news first.",
+    },
       notifyButton: {
         enable: false
       }
@@ -347,6 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
