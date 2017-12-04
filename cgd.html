@@ -79,7 +79,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <link href="https://fonts.googleapis.com/css?family=Hind|Caveat" rel="stylesheet">
 
-
+<!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
 </script>
 <script type="text/javascript">
@@ -92,12 +92,16 @@ $(document).ready(function () {
             var timer = window.setTimeout(show,0);
         });
     }
-    document.cookie = "shown=true; expires=Sun, 3 Dec 2017 23:59:59 GMT; path=/";
+    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
 });
 </script>
+
+
+-->
+
 <style>
 .modal-backdrop {
-	background-color: #0F75BC;
+	background-color: #fff;
 }
 .modal-backdrop.in {
 	opacity: 0.6;
@@ -367,25 +371,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content padding-left-15 padding-right-15">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div class="bg-black padding-top-80 padding-bottom-80 text-center"> <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img src="make-wish.png" class="img-responsive center-block" alt="Make a Wish Come True"></a>
-          <h3>Today is <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Colorado Gives Day!</a> Make Wishes Come True.</h3>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content white bg-teal padding-15">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="white" aria-hidden="true">&times;</span></button>
+        <div class="text-center"> <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img src="make-wish.png" class="img-responsive center-block" alt="Make Wishes Come True"></a>
+          <h2 class="white">Today is <a class="white text-underline" href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Colorado Gives Day!</a> <br>Make Wishes Come True.</h2>
           <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank" class="btn btn-primary margin-top-15 margin-bottom-60 text-uppercase white">Please Donate Now!</a> </div>
       </div>
     </div>
   </div>
   <div class="row bg-lavender bg-sky padding-top-60">
     <div class="container text-center">
-      
       <div class="col-md-8 padding-bottom-30 equal-height flex-center">
-       
-          <h2 class="text-uppercase no-margin-top grow jumbo-text font-weight-400"><a class="grow" href="foundation/">Make Wishes Come True</a></h2>
-         
-            <div class="padding-top-15"><a href="foundation/"><img class="image-center img-responsive opacity-7" src="cgd-logos.png" alt="Colorado Gives Day"></a></div>
-      
-      </div><div class="col-md-3 equal-height"><img class="img-responsive image-center" src="https://placehold.it/300x400"></div>
+        <h2 class="text-uppercase no-margin-top grow jumbo-text font-weight-400"><a class="grow" href="foundation/">Make Wishes Come True</a></h2>
+        <div class="padding-top-15"><a href="foundation/"><img class="image-center img-responsive opacity-7" src="cgd-logos.png" alt="Colorado Gives Day"></a></div>
+      </div>
+      <div class="col-md-3 equal-height"><img class="img-responsive image-center" src="https://placehold.it/300x400"></div>
     </div>
   </div>
   <div class="row bg-teal featured padding-top-30 padding-bottom-40">
@@ -407,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <!-- InstanceEndEditable --> </div>
+  <a class="text-uppercase" data-toggle="modal" data-target="#myModal" href="#">trigger</a> <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
     <div class="col-sm-6">
