@@ -78,7 +78,37 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <link href="https://fonts.googleapis.com/css?family=Hind|Caveat" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    if (document.cookie.indexOf("shown=true")<0) {
+        var show = function(){
+                $('#myModal').modal('show');
+        };
+        $(window).load(function(){
+            var timer = window.setTimeout(show,0);
+        });
+    }
+    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+});
+</script>
 <style>
+.modal-backdrop {
+	background-color: #000;
+}
+.modal-backdrop.in {
+	opacity: 0.8;
+}
+.bg-modal {
+	background: #78A974 url(modal-wishes.png)no-repeat top left;
+}
+.wish-box {
+	margin: 190px 0 0 220px;
+}
+.bg-sky {
+	background: #78b7e4 url(wishes-background.png)repeat-x bottom left;
+}
 .featured {
 	border-top: 2px solid #fff
 }
@@ -92,19 +122,27 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .btn-default:hover, .btn-default:focus {
 	background-color: #ef519e;
 }
-h1.storybook-heading {
-	font-family: 'Hind', sans-serif;
-	color: #fafae6;
-	font-size: 40px;
+h1.caveat {
+	font-family: 'Caveat', cursive;
+	color: #056839;
+	font-size: 58px;
+	line-height: 1;
+	margin: 0;
+	text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.5);
+}
+h2.caveat {
+	font-family: 'Caveat', cursive;
+	color: #fff;
+	font-size: 36px;
+	line-height: 1;
 }
 h3.caveat {
 	font-family: 'Caveat', cursive;
-	font-size: 34px;
+	color: #056839;
+	font-size: 38px;
 	line-height: 1;
-}
-.cgd-links {
-	position: relative;
-	top: -60px;
+	margin: 0;
+	text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.5);
 }
 .grow {
 	color: #fec144;
@@ -116,56 +154,14 @@ h3.caveat {
 	transform: scale(1.05);
 	text-decoration: none;
 }
-.hind {
-	font-family: 'Hind', sans-serif;
-}
-.peach {
-	color: #fafae6;
-}
-.bg-gradient {
-	background: linear-gradient(33deg, #341611, #254754, #124933, #123417);
-	background-size: 400% 800%;
-	-webkit-animation: bg-gradient 12s ease infinite;
-	-moz-animation: bg-gradient 12s ease infinite;
-	animation: bg-gradient 12s ease infinite;
-}
-@-webkit-keyframes bg-gradient {
- 0% {
-background-position:75% 0%
-}
- 50% {
-background-position:25% 100%
-}
- 100% {
-background-position:75% 0%
-}
-}
-@-moz-keyframes bg-gradient {
- 0% {
-background-position:75% 0%
-}
- 50% {
-background-position:25% 100%
-}
- 100% {
-background-position:75% 0%
-}
-}
-@keyframes bg-gradient {
- 0% {
-background-position:75% 0%
-}
- 50% {
-background-position:25% 100%
-}
- 100% {
-background-position:75% 0%
-}
-}
 
-@media (max-width: 475px) {
-div.storybook-subheading {
-	font-size: 85px;
+@media (max-width: 560px) {
+.wish-box {
+	margin: 200px 15px 0px;
+	text-align: center;
+}
+h2.caveat {
+	color: #000;
 }
 }
 </style>
@@ -340,23 +336,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" -->
-  <div class="row bg-gradient">
-    <div class="container margin-lg-100">
-      <div class="col-md-3 hidden-sm hidden-xs padding-top-15"><img class="img-responsive" src="make-wish.png" alt="Make A Wish"></div>
-      <div class="col-md-8 text-center"><img class="img-responsive" src="wishes.png" alt="Make A Wish">
-        <div class="cgd-links">
-          <h2 class="hind text-uppercase no-margin-top grow jumbo-text font-weight-700"><a class="grow" href="foundation/">Make Wishes Come True</a></h2>
-          <div class="padding-bottom-15">
-            <h3 class="text-center no-margin-top white caveat">12 Days of Making Wishes Come True:<br>
-              <a class="white text-underline" href="foundation/12-days/11/">Enter to Win!</a></h3>
-            <div class="padding-top-15"><a href="foundation/"><img class="image-center img-responsive opacity-7" src="cgd-logos.png" alt="Colorado Gives Day"></a></div>
-          </div>
-        </div>
+  <!-- InstanceBeginEditable name="Content" --> 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content white bg-modal padding-15">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="white" aria-hidden="true">&times;</span></button>
+        <div class="wish-box">
+          <h2 class="caveat white">Today is Colorado Gives Day.<br>
+            Make a Wish Come True!</h2>
+          <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank" class="btn btn-warning margin-top-15 margin-bottom-40 text-uppercase white">Please Donate Now!</a> </div>
       </div>
     </div>
   </div>
-  <div class="row bg-teal featured padding-top-30 padding-bottom-40">
+  <div style="padding-top:40px;" class="row bg-sky">
+    <div class="container text-center">
+      <div class="col-md-7 padding-bottom-15 equal-height flex-center">
+        <h3 class="caveat">Today is Colorado Gives Day</h3>
+        <h1 class="caveat">Make a Wish Come True!</h1>
+        <div class="text-center"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank" class="btn btn-warning margin-top-15 margin-bottom-15 text-uppercase white">Please Donate Now!</a></div>
+        <div class="text-center"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img src="cgd-logo.png" alt="Colorado Gives Day"></a></div>
+      </div>
+      <div class="col-md-4 equal-height"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img class="img-responsive image-center" src="goal-2k.png" alt="Please Help Us Meet Our Goals"></a></div>
+    </div>
+  </div>
+  <div class="row bg-teal featured padding-top-15 padding-bottom-20">
     <div class="container">
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div style="padding:0 0 0;" class="icon-circle-default"><i class="fa fa-tree"></i></div>
@@ -375,6 +380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <!--<a data-toggle="modal" data-target="#myModal" href="#">trigger</a>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
