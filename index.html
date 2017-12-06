@@ -78,21 +78,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <link href="https://fonts.googleapis.com/css?family=Hind|Caveat" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
-</script>
-<script type="text/javascript">
-$(document).ready(function () {
-    if (document.cookie.indexOf("shown=true")<0) {
-        var show = function(){
-                $('#myModal').modal('show');
-        };
-        $(window).load(function(){
-            var timer = window.setTimeout(show,0);
-        });
-    }
-    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-});
-</script>
 <style>
 .modal-backdrop {
 	background-color: #000;
@@ -107,7 +92,7 @@ $(document).ready(function () {
 	margin: 190px 0 0 220px;
 }
 .bg-sky {
-	background: #78b7e4 url(wishes-background.png)repeat-x bottom left;
+	background: #78b7e4 url(wishes-background.png)repeat-x bottom right;
 }
 .featured {
 	border-top: 2px solid #fff
@@ -122,24 +107,10 @@ $(document).ready(function () {
 .btn-default:hover, .btn-default:focus {
 	background-color: #ef519e;
 }
-h1.caveat {
+h1.caveat, h1.caveat a {
 	font-family: 'Caveat', cursive;
 	color: #056839;
-	font-size: 58px;
-	line-height: 1;
-	margin: 0;
-	text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.5);
-}
-h2.caveat {
-	font-family: 'Caveat', cursive;
-	color: #fff;
-	font-size: 36px;
-	line-height: 1;
-}
-h3.caveat {
-	font-family: 'Caveat', cursive;
-	color: #056839;
-	font-size: 38px;
+	font-size: 40px;
 	line-height: 1;
 	margin: 0;
 	text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.5);
@@ -336,29 +307,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" --> 
-  
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content white bg-modal padding-15">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="white" aria-hidden="true">&times;</span></button>
-        <div class="wish-box">
-          <h2 class="caveat white">Today is Colorado Gives Day.<br>
-            Make a Wish Come True!</h2>
-          <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank" class="btn btn-warning margin-top-15 margin-bottom-40 text-uppercase white">Please Donate Now!</a> </div>
-      </div>
-    </div>
-  </div>
+  <!-- InstanceBeginEditable name="Content" -->
   <div style="padding-top:40px;" class="row bg-sky">
-    <div class="container text-center">
+    <div class="container text-center margin-lg-100">
       <div class="col-md-7 padding-bottom-15 equal-height flex-center">
-        <h3 class="caveat">Today is Colorado Gives Day</h3>
-        <h1 class="caveat">Make a Wish Come True!</h1>
-        <div class="text-center"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank" class="btn btn-warning margin-top-15 margin-bottom-15 text-uppercase white">Please Donate Now!</a></div>
-        <div class="text-center"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img src="cgd-logo.png" alt="Colorado Gives Day"></a></div>
+        <h1 class="caveat">Thank you for <a class="text-underline" href="foundation/">making wishes come true</a>. We've raised $23,402 during CO Gives Day!</h1>
+        <!--<div class="text-center"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank" class="btn btn-warning margin-top-15 margin-bottom-15 text-uppercase white">Please Donate Now!</a></div>
+        <div class="text-center"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img src="cgd-logo.png" alt="Colorado Gives Day"></a></div>--> 
       </div>
-      <div class="col-md-4 equal-height"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img class="img-responsive image-center" src="goal-18k.png" alt="Please Help Us Meet Our Goals"></a></div>
+      <div class="col-md-4 equal-height"><a href="foundation/"><img class="img-responsive image-center" src="thank-you-well.png" alt="Thank you for making wishes come true."></a></div>
     </div>
   </div>
   <div class="row bg-teal featured padding-top-15 padding-bottom-20">
@@ -380,7 +337,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <!--<a data-toggle="modal" data-target="#myModal" href="#">trigger</a>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
