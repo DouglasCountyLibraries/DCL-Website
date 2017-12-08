@@ -75,6 +75,69 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
+<style>
+.shelf-container img {
+	margin: 15px 15px 17px 15px;
+	vertical-align: bottom;
+}
+.carousel-cell {
+	text-align: center;
+	width: 100%;
+}
+.carousel-cell:before {
+	display: block;
+	text-align: center;
+}
+.flickity-slider {
+	transform: none !important;
+}
+.carousel-cell {
+	left: 0 !important;
+	opacity: 0;
+	transition: opacity 0.9s ease-in-out;
+	z-index: -1;
+}
+.carousel-cell.is-selected {
+	opacity: 1;
+	z-index: 0
+}
+/* big buttons, no circle */
+.flickity-prev-next-button {
+	width: 50px;
+	height: 50px;
+	background: transparent;
+}
+.flickity-prev-next-button:hover {
+	background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+	fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+	color: #efeeed;
+}
+.flickity-prev-next-button {
+	top: 30%;
+}
+.backgroundimg-green {
+	background-image: url(greendiamond.png);
+}
+
+@media (min-width: 992px) {
+.shelf {
+	border-bottom: 20px solid transparent;
+	border-image: url("new-shelf.jpg") 30 30 30 30 round round;
+	border-top: 0 none;
+	padding-bottom: 0;
+}
+.shelf-shadow {
+	background: #fff url("shelf-shadow.jpg");
+	background-repeat: repeat-x;
+}
+}
+</style>
 <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -249,22 +312,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container">
-      <div class="text-center">
-<img class="image-center img-responsive" src="1000-books.jpg" alt="1,000 Books Before Kindergarten">
+      <div class="text-center"> <img class="image-center img-responsive" src="1000-books.jpg" alt="1,000 Books Before Kindergarten">
         <h4 class="roboto margin-lg-100 text-center margin-bottom-30">Reading books to kids ages 0-5 helps prepare them to read in Kindergarten, and increases their potential for learning success in elementary school and beyond. We are excited to join you on your 1000 Books journey!</h4>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row padding-bottom-15">
     <div class="container">
       <div class="col-md-6 padding-bottom-15">Once you <a href="https://wandooreader.com/douglascountylibraries/1000-books-before-kindergarten/users/registrations/new" target="_blank">register your child</a>, every book you read counts toward your goal—even if you read the same book several times or listen to books read aloud at a library <a href="../storytime/">Storytime</a>. So you really can read 1000 Books! Reading just one book a day for three years, or three books a day for one year will get you to your goal in a hurry. </div>
       <div class="col-md-6 padding-bottom-15">Remember to count any books you read any time before the first day of Kindergarten &mdash; even if you read them before finding this page. Happy reading!
-        <div class="margin-top-15 margin-bottom-15"> <a href="https://wandooreader.com/douglascountylibraries/1000-books-before-kindergarten/users/registrations/new" target="_blank" class="text-uppercase btn btn-primary">Register Now</a></div>
+        <div class="text-center margin-top-15 margin-bottom-15"> <a href="https://wandooreader.com/douglascountylibraries/1000-books-before-kindergarten/users/registrations/new" target="_blank" class="text-uppercase btn btn-primary">Register Now</a></div>
         <div> <a href="reading-log.pdf" target="_blank" class="text-uppercase font-weight-400">Print a Paper Log &raquo;</a></div>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-60">
+  <div class="row bg-gray-5 padding-top-40 padding-bottom-15">
     <div class="container">
       <div class="col-md-6 padding-bottom-15 text-center"><img class="img-responsive image-center" src="https://placehold.it/300x200">
         <div></div>
@@ -274,6 +336,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div></div>
         <h4>See Our Finishers</h4>
       </div>
+    </div>
+  </div>
+  <div class="row bg-teal padding-top-15 padding-bottom-30">
+    <div class="container text-center">
+      <h3 class="white">Sign up to receive great tips and lists of our early literacy favorites. </h3>
+      <div class="margin-top-15 margin-bottom-15"> <a href="../newsletters/" class="text-uppercase btn btn-primary">Sign Up Now!</a></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container margin-lg-200 text-center padding-top-60 padding-bottom-40">
+      <div class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "autoPlay": 5000 }'>
+        <div class="carousel-cell">
+          <div><img class="img-circle" src="jill.jpg" alt="" />
+            <div class="padding-top-15">
+              <blockquote>"Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl." <small>Jill Jillson</small></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img class="img-circle" src="beth.jpg" alt="" />
+            <div class="padding-top-15">
+              <blockquote>"Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas." <small>Beth Bethson</small></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img class="img-circle" src="bob.jpg" alt="" />
+            <div class="padding-top-15">
+              <blockquote>"Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque." <small>Bob Bobson</small></blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-top-15">
+    <div class="container">
+      <h1 class="jumbo-text text-center text-uppercase font-weight-400">Books to Get Started</h1>
+    </div>
+  </div>
+  <div class="row shelf">
+    <div class="container shelf-container text-center"> <a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a> </div>
+  </div>
+  <div class="row shelf-shadow padding-bottom-80"> </div>
+  <div class="row">
+    <div class="container">
+      <h1 class="jumbo-text no-margin-top text-center text-uppercase font-weight-400">Storytime Favorites</h1>
+    </div>
+  </div>
+  <div class="row shelf">
+    <div class="container shelf-container text-center"> <a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a><a href="#"><img class="cover-image" src="https://placehold.it/140x200" alt=""></a> </div>
+  </div>
+  <div class="row shelf-shadow padding-bottom-100"> </div>
+  <div class="row bg-teal padding-top-30 padding-bottom-30">
+    <div class="container text-center"><img src="https://placehold.it/400x300">
+      <h2 class="white">Storytime Books Count!</h2>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -330,7 +448,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO&nbsp;&nbsp;80104</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
