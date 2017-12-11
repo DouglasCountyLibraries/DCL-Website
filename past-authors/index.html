@@ -77,13 +77,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
 <script>
-	 $(window).load(function() {
+$(document).ready(function(){
 	var carousel = document.querySelector('.carousel');
 var flkty = new Flickity( carousel, {
   initialIndex: Math.floor( Math.random() * carousel.children.length )
+});	
+$('.carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  autoPlay: true,
+  groupCells: true,
+  wrapAround: true,
 });
-	 })
-	</script>
+})
+</script>
 <style>
 * {
 	box-sizing: border-box;
@@ -306,19 +314,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container">
       <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000 }'>
         <div class="carousel-cell">
-          <div class="quote-wrapper" style="background:#000 url(https://unsplash.it/1240/480/)">
+          <div class="quote-wrapper" style="background:#000 url(https://unsplash.it/1240/480/?random)">
             <h1 class="author">Dan Brown</h1>
             <div> <i>"I LOVED it! The VIP code cracking was quite entertaining and the food was amazing."</i></div>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="quote-wrapper" style="background:#000 url(https://unsplash.it/1240/480/)">
+          <div class="quote-wrapper" style="background:#000 url(https://unsplash.it/1240/480/?random)">
             <h1 class="author">Diana Gabaldon</h1>
             <div> <i>"I could have listened to Diana speak for hours! Fabulous event!"</i></div>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="quote-wrapper" style="background:#000 url(https://unsplash.it/1240/480/)">
+          <div class="quote-wrapper" style="background:#000 url(https://unsplash.it/1240/480/?random)">
             <h1 class="author">C.J. Box</h1>
             <div> He named a character in his novel <i>Off the Grid</i> after a DCL staffer (page 207).</div>
           </div>
