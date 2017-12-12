@@ -96,7 +96,6 @@ $('.carousel').flickity({
 * {
 	box-sizing: border-box;
 }
-
 .carousel {
 	background: #FAFAFA;
 	height: 500px;
@@ -113,12 +112,12 @@ $('.carousel').flickity({
 }
 .author {
 	color: #fff;
-	font-size: 52px;
+	font-size: 48px;
 	text-transform: uppercase;
 	font-weight: 400;
 }
 .quote-wrapper {
-	font-size: 30px;
+	font-size: 28px;
 	font-weight: 300;
 	color: #fff;
 	padding: 7% 15px 0 15px;
@@ -141,9 +140,14 @@ $('.carousel').flickity({
 .flickity-prev-next-button {
 	top: 48%;
 }
+.flickity-prev-next-button.next {
+	right: 0px;
+}
+.flickity-prev-next-button.previous {
+	left: 0px;
+}
 .slide-one {
 	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(https://unsplash.it/1080/600/?random) center center/cover;
-	
 }
 .slide-two {
 	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6) ), url(https://unsplash.it/1080/601/?random) center center/cover;
@@ -176,6 +180,10 @@ $('.carousel').flickity({
 }
 .quote-wrapper {
 	font-size: 22px;
+	padding: 15% 15px 0 15px;
+}
+.flickity-prev-next-button {
+	display: none;
 }
 }
 </style>
@@ -354,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row">
     <div class="carousel">
       <div class="carousel-cell">
-       <div class="overlay"></div>
+        <div class="overlay"></div>
         <div class="slide-one">
           <div class="quote-wrapper container">
             <h1 class="author">Dan Brown</h1>
@@ -363,7 +371,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
       <div class="carousel-cell">
-       <div class="overlay"></div>
+        <div class="overlay"></div>
         <div class="slide-two">
           <div class="quote-wrapper container">
             <h1 class="author">Diana Gabaldon</h1>
@@ -391,8 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="slide-five">
           <div class="quote-wrapper container">
             <h1 class="author">Nicholas Sparks</h1>
-            <div>We now pause this author event for a marriage proposal. She said yes!<br>
-              <i>"Thank you so much for a memorable night! I loved the event and also will never forget how you made it possible to meet my favorite author and leave engaged. So awesome! Thank you!"</i> </div>
+            <div> <i>"Thank you so much for a memorable night! I loved the event and also will never forget how you made it possible to meet my favorite author and leave engaged. So awesome! Thank you!"</i> </div>
           </div>
         </div>
       </div>
