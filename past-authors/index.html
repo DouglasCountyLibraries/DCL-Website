@@ -77,6 +77,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<link rel="stylesheet" href="gallery.css">
 <script>
 $(document).ready(function(){
 $('.carousel').flickity({
@@ -100,7 +102,7 @@ $('.carousel').flickity({
 	transition: height 0.3s;
 }
 .carousel {
-	background: #FAFAFA;
+	background: #fff;
 	width: 100%;
 }
 .carousel-cell {
@@ -117,6 +119,13 @@ $('.carousel').flickity({
 	font-size: 48px;
 	text-transform: uppercase;
 	font-weight: 400;
+}
+.author a {
+	color: #fff;
+}
+.author a:hover {
+	color: #fff;
+	text-decoration: none;
 }
 .quote-wrapper {
 	font-size: 28px;
@@ -366,7 +375,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="carousel-cell">
         <div class="slide-one">
           <div class="quote-wrapper container">
-            <h1 class="author">Dan Brown</h1>
+            <h1 class="author"><a href="#dan-brown">Dan Brown</a></h1>
             <div> <i>"I LOVED it! The VIP code cracking was quite entertaining and the food was amazing."</i></div>
           </div>
         </div>
@@ -438,6 +447,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 id="dan-brown" class="text-uppercase">Dan Brown</h1>
+      <h4 class="roboto">Nearly 1,000 fans of the Robert Langdon series joined us for a riveting author talk and audience Q&A. </h4>
+      <div class="tz-gallery">
+        <div class="row">
+          <div class="col-xs-6"> <a class="lightbox" href="images/dan-brown/dan-brown-speaking.jpg"> <img src="images/dan-brown/dan-brown-speaking.jpg" alt="Dan Brown Speaking"> </a> </div>
+          <div class="col-xs-6"> <a class="lightbox" href="images/dan-brown/dan-brown-books.jpg"> <img src="images/dan-brown/dan-brown-books.jpg" alt="Dan Brown Books"> </a> </div>
+          <div class="col-sm-12 col-md-8"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Traffic"> </a> </div>
+          <div class="col-xs-6 col-md-4"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Coast"> </a> </div>
+          <div class="col-xs-6 col-md-4"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Rails"> </a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <h1 class="text-uppercase">Author</h1>
+      <h4 class="roboto">Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque.</h4>
+      <div class="tz-gallery">
+        <div class="row">
+          <div class="col-sm-12 col-md-8"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Traffic"> </a> </div>
+          <div class="col-xs-6 col-md-4"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Coast"> </a> </div>
+          <div class="col-xs-6 col-md-4"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Rails"> </a> </div>
+          <div class="col-xs-6"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Coast"> </a> </div>
+          <div class="col-xs-6"> <a class="lightbox" href="#"> <img src="http://placehold.it/800x600" alt="Rails"> </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -492,7 +529,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO&nbsp;&nbsp;80104</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script> 
+<script>
+    baguetteBox.run('.tz-gallery');
+</script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
