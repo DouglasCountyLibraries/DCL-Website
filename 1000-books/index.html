@@ -84,9 +84,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	vertical-align: bottom;
 }
 .carousel-cell {
-	text-align: center;
-	width: 100%;
-	min-height: 365px;
 }
 .carousel-cell:before {
 	display: block;
@@ -95,7 +92,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .flickity-slider {
 	transform: none !important;
 }
+.flickity-viewport {
+	transition: height 0.6s;
+}
 .carousel-cell {
+	text-align: center;
+	width: 100%;
 	left: 0 !important;
 	opacity: 0;
 	transition: opacity 0.9s ease-in-out;
@@ -105,24 +107,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	opacity: 1;
 	z-index: 0
 }
-/* big buttons, no circle */
-.flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
-}
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-	fill: #efeeed;
-}
-.flickity-prev-next-button.no-svg {
-	color: #efeeed;
+.carousel:after {
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+	border-bottom: 1px solid rgba(255,255,255,.4);
 }
 .flickity-prev-next-button {
-	top: 30%;
+	display: none;
 }
 .shelf-container img {
 	margin: 15px 15px 17px 15px;
@@ -145,7 +138,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding-bottom: 0;
 }
 .shelf-shadow {
-	background: #4f878c url("shelf-shadow.png");
+	background: #fff url("shelf-shadow.jpg");
 	background-repeat: repeat-x;
 }
 }
@@ -333,13 +326,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container">
       <div class="col-md-6 padding-bottom-15">Once you <a href="https://wandooreader.com/douglascountylibraries/1000-books-before-kindergarten/users/registrations/new" target="_blank">register your child</a>, every book you read counts toward your goal—even if you read the same book several times or listen to books read aloud at a library <a href="../storytime/">Storytime</a>. So you really can read 1000 Books! Reading just one book a day for three years, or three books a day for one year will get you to your goal in a hurry. </div>
       <div class="col-md-6 padding-bottom-15">Remember to count any books you read any time before the first day of Kindergarten. Happy reading!
-        <div class="text-center margin-top-15 margin-bottom-15"> <a href="https://wandooreader.com/douglascountylibraries/1000-books-before-kindergarten/users/registrations/new" target="_blank" class="text-uppercase btn btn-primary">Register Now</a></div>
+        <div class="text-center margin-top-15 margin-bottom-15"> <a href="https://wandooreader.com/douglascountylibraries/1000-books-before-kindergarten/users/registrations/new" target="_blank" class="text-uppercase btn btn-warning">Register Now</a></div>
         <div class="text-center"> <a href="reading-log.pdf" target="_blank" class="text-uppercase font-weight-400">Print a Paper Log &raquo;</a></div>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-40 padding-bottom-15">
-    <div class="container">
+  <div class="row bg-lavender">
+    <div class="container white margin-lg-200 text-center padding-top-30">
+      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "autoPlay": 5000 }'>
+        <div class="carousel-cell">
+          <div>
+            <h4 class="white"><i>Forty percent of children entering kindergarten lack pre-literacy skills needed for school success. Half of those children are behind by two years or more.</i></h4>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>
+            <h4 class="white"><i>The foundation of reading begins at birth and is built word by word, book by book, song by song.</i></h4>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>
+            <h4 class="white"><i>Children who are at risk for reading struggles can reliably be identified as such before kindergarten.</i></h4>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>
+            <h4 class="white"><i>A baby's brain forms 700-1,000 new neural connections each second.</i></h4>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>
+            <h4 class="white"><i>Children in a language-rich environment know about 1,000 words by age three.</i></h4>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>
+            <h4 class="white"><i>Eighty-five percent of brain development is completed by age three.</i></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-lavender padding-bottom-40">
+    <div class="container text-center">
+      <h3 class="white margin-top-10">Sign up to receive great tips and lists of our early literacy favorites. </h3>
+      <div class="margin-top-15 margin-bottom-15"> <a href="../newsletters/" class="text-uppercase btn btn-default">Sign Up Now!</a></div>
+    </div>
+  </div>
+  <div class="row padding-top-40 padding-bottom-15">
+    <div class="container margin-lg-200">
       <div class="col-md-6 padding-bottom-15 text-center"><img class="img-responsive image-center" src="one-thousand-progress.jpg">
         <div></div>
         <h4>Share your progress using #1KBBKDCL</h4>
@@ -350,69 +385,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-teal padding-top-15 padding-bottom-30">
-    <div class="container text-center">
-      <h3 class="white">Sign up to receive great tips and lists of our early literacy favorites. </h3>
-      <div class="margin-top-15 margin-bottom-15"> <a href="../newsletters/" class="text-uppercase btn btn-primary">Sign Up Now!</a></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="container margin-lg-200 text-center padding-top-40 padding-bottom-40">
-      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "autoPlay": 5000 }'>
-        <div class="carousel-cell">
-          <div><img src="https://placehold.it/400x300" alt="" />
-            <div class="padding-top-15">
-              <blockquote>Forty percent of children entering kindergarten lack pre-literacy skills needed for school success. Half of those children are behind by two years or more.</blockquote>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div><img src="https://placehold.it/400x300" alt="" />
-            <div class="padding-top-15">
-              <blockquote>The foundation of reading begins at birth and is built word by word, book by book, song by song. </blockquote>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div><img src="https://placehold.it/400x300" alt="" />
-            <div class="padding-top-15">
-              <blockquote>Children who are at risk for reading struggles can reliably be identified as such before kindergarten. </blockquote>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div><img src="https://placehold.it/400x300" alt="" />
-            <div class="padding-top-15">
-              <blockquote>A baby's brain forms 700-1,000 new neural connections each second. </blockquote>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div><img src="https://placehold.it/400x300" alt="" />
-            <div class="padding-top-15">
-              <blockquote>Children in a language-rich environment know about 1,000 words by age three.</blockquote>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div><img src="https://placehold.it/400x300" alt="" />
-            <div class="padding-top-15">
-              <blockquote>Eighty-five percent of brain development is completed by age three. </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row bg-teal text-center padding-top-15">
-    <h1 class="no-margin-bottom"><a class="white" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">New Read-Alouds</a></h1>
+  <div class="row text-center padding-top-15">
+    <h1 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">New Read-Alouds</a></h1>
     <div><a class="white text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">See Entire List »</a></div>
   </div>
-  <div class="row bg-teal" id="StorytimeFavorites"></div>
-  <div class="row bg-teal shelf-shadow padding-bottom-100"> </div>
-  <div class="row bg-teal padding-bottom-30">
+  <div class="row" id="StorytimeFavorites"></div>
+  <div class="row shelf-shadow padding-bottom-100"> </div>
+  <div class="row padding-bottom-30">
     <div class="container text-center"><img src="one-thousand-storytime.jpg">
-      <h2 class="white">Storytime Books Count!</h2>
+      <h2>Storytime Books Count!</h2>
       <div class="margin-top-15 margin-bottom-15"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&ag=&lib=ALL" target="_blank" class="text-uppercase btn btn-primary">View Calendar</a></div>
     </div>
   </div>
