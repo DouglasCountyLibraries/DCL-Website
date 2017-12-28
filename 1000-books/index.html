@@ -79,43 +79,28 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
 <script src="biblioList.js"></script>
 <style>
-.shelf-container img {
-	margin: 15px 15px 17px 15px;
-	vertical-align: bottom;
+* {
+	box-sizing: border-box;
 }
 .carousel-cell {
+	width: 100%;
 }
 .carousel-cell:before {
 	display: block;
 	text-align: center;
 }
-.flickity-slider {
-	transform: none !important;
+.flickity-page-dots {
+	bottom: -15px;
+	opacity: .5;
 }
-.flickity-viewport {
-	transition: height 0.6s;
-}
-.carousel-cell {
-	text-align: center;
-	width: 100%;
-	left: 0 !important;
-	opacity: 0;
-	transition: opacity 0.9s ease-in-out;
-	z-index: -1;
-}
-.carousel-cell.is-selected {
-	opacity: 1;
-	z-index: 0
-}
-.carousel:after {
-	content: "";
-	display: block;
-	margin: 0 auto;
-	width: 70%;
-	border-bottom: 1px solid rgba(255,255,255,.4);
+.flickity-page-dots .dot {
+	background-color: #fff;
 }
 .flickity-prev-next-button {
 	display: none;
+}
+.flickity-viewport {
+	transition: height 0.6s;
 }
 .shelf-container img {
 	margin: 15px 15px 17px 15px;
@@ -333,35 +318,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-lavender">
     <div class="container white margin-lg-200 text-center padding-top-15">
-      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "autoPlay": 5000 }'>
+      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.30, "autoPlay": 6000 }'>
         <div class="carousel-cell">
           <div>
-            <h4 class="white"><i>Forty percent of children entering kindergarten lack pre-literacy skills needed for school success. Half of those children are behind by two years or more.</i></h4>
+            <h3 class="white"><i>Forty percent of children entering kindergarten lack pre-literacy skills needed for school success. Half of those children are behind by two years or more.</i></h3>
           </div>
         </div>
         <div class="carousel-cell">
           <div>
-            <h4 class="white"><i>The foundation of reading begins at birth and is built word by word, book by book, song by song.</i></h4>
+            <h3 class="white"><i>The foundation of reading begins at birth and is built word by word, book by book, song by song.</i></h3>
           </div>
         </div>
         <div class="carousel-cell">
           <div>
-            <h4 class="white"><i>Children who are at risk for reading struggles can reliably be identified as such before kindergarten.</i></h4>
+            <h3 class="white"><i>Children who are at risk for reading struggles can reliably be identified as such before kindergarten.</i></h3>
           </div>
         </div>
         <div class="carousel-cell">
           <div>
-            <h4 class="white"><i>A baby's brain forms 700-1,000 new neural connections each second.</i></h4>
+            <h3 class="white"><i>A baby's brain forms 700-1,000 new neural connections each second.</i></h3>
           </div>
         </div>
         <div class="carousel-cell">
           <div>
-            <h4 class="white"><i>Children in a language-rich environment know about 1,000 words by age three.</i></h4>
+            <h3 class="white"><i>Children in a language-rich environment know about 1,000 words by age three.</i></h3>
           </div>
         </div>
         <div class="carousel-cell">
           <div>
-            <h4 class="white"><i>Eighty-five percent of brain development is completed by age three.</i></h4>
+            <h3 class="white"><i>Eighty-five percent of brain development is completed by age three.</i></h3>
           </div>
         </div>
       </div>
@@ -369,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-lavender padding-bottom-15">
     <div class="container text-center">
-      <h3 class="white margin-top-10">Sign up to receive great tips and lists of our early literacy favorites. </h3>
+      <h4 class="white padding-top-15">Sign up to receive great tips and lists of our early literacy favorites. </h4>
       <div class="margin-top-15 margin-bottom-15"> <a href="../newsletters/" class="text-uppercase btn btn-default">Sign Up Now!</a></div>
     </div>
   </div>
