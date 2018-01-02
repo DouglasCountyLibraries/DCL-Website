@@ -110,6 +110,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	-webkit-animation: text-focus-two 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) .6s both;
 	animation: text-focus-two 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) .6s both;
 }
+.text-focus-three {
+	-webkit-animation: text-focus-three 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+	animation: text-focus-two 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+}
 .grow {
 	transition: all .4s ease-in-out;
 }
@@ -154,6 +158,30 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 @keyframes text-focus-two {
+ 0% {
+ -webkit-filter: blur(12px);
+ filter: blur(12px);
+ opacity: 0;
+}
+ 100% {
+ -webkit-filter: blur(0px);
+ filter: blur(0px);
+ opacity: 1;
+}
+}
+ @-webkit-keyframes text-focus-three {
+ 0% {
+ -webkit-filter: blur(12px);
+ filter: blur(12px);
+ opacity: 0;
+}
+ 100% {
+ -webkit-filter: blur(0px);
+ filter: blur(0px);
+ opacity: 1;
+}
+}
+@keyframes text-focus-three {
  0% {
  -webkit-filter: blur(12px);
  filter: blur(12px);
@@ -356,6 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="padding-top-30"> <img class="img-responsive image-center hidden-xs" src="new-years.png" alt="New Year's Resolution"> <img class="img-responsive image-center hidden-sm hidden-md hidden-lg" src="new-years-small.png" alt="New Year's Resolution">
         <h1 class="year-link text-focus-one grow text-uppercase font-weight-500"><a href="https://blogs.douglascountylibraries.org/blog/2017/12/28/dcls-most-popular-checkouts-in-2017/">Top Checkouts of 2017</a></h1>
         <h1 class="year-link text-focus-two grow text-uppercase font-weight-500 no-margin-top"><a href="reading-challenge/" target="_blank">Take the 2018 Reading Challenge</a></h1>
+        <h1 class="year-link text-focus-three grow text-uppercase font-weight-500 no-margin-top"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1113424937_most_anticipated_book_for_2018">New Year, Great New Reads!</a></h1>
       </div>
     </div>
   </div>
