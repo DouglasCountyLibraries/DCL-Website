@@ -80,10 +80,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .heading-row {
 	background-color: #b0c7d3;
 }
-.photo {
+.photo-right, .photo-left {
 	padding: 15px;
 	border: 1px solid #ccc;
+}
+.photo-right {
 	transform: rotate(1deg);
+}
+.photo-left {
+	transform: rotate(-1deg);
 }
 * {
 	box-sizing: border-box;
@@ -335,17 +340,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row text-center padding-top-60 padding-bottom-60">
-    <div class="container margin-lg-100">
-      <div id="box-one"></div>
+  <div class="row text-center padding-top-60">
+    <div class="container">
+      <div class="col-md-4 col-sm-6 padding-bottom-15">
+        <div id="box-one"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 hidden-xs padding-bottom-15">
+        <div id="box-two"></div>
+      </div>
+      <div class="col-md-4 hidden-xs hidden-sm padding-bottom-15">
+        <div id="box-three"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center padding-bottom-60">
+    <div class="container">
       <div class="nothing padding-top-15">#BabyBrightFuture</div>
       <div class="margin-lg-200">Snap a photo of your little one with a book and share it on Twitter, Facebook or Instagram using our hashtag. You'll be entered to win a gift basket of baby books; we'll announce a new winner each month.</div>
     </div>
   </div>
   <script>
     var images = ['cuddle-one.jpg', 'cuddle-two.jpg'];
-    $('<img alt="Baby Bright Future" class="center-block shadow-low photo" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
-
+    $('<img alt="Baby Bright Future" class="center-block img-responsive shadow-low photo-left" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+	var images = ['cuddle-three.jpg'];
+    $('<img alt="Baby Bright Future" class="center-block img-responsive shadow-low photo-right" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+	var images = ['cuddle-four.jpg'];
+    $('<img alt="Baby Bright Future" class="center-block img-responsive shadow-low photo-left" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
 </script> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
