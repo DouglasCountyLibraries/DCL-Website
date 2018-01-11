@@ -76,6 +76,46 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script>
 <style>
+/* styles from isotope example start*/
+	
+.button {
+	color: #666;
+	background: #fff;
+	border: 0;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.button:hover {
+	background-color: #4f868b;
+	border: 0;
+	color: #fff;
+}
+.button:active, .button.is-checked {
+	color: #fff;
+	background-color: #456e70;
+	border: 0;
+}
+.button.is-checked {
+	border: 0;
+}
+.location-select {
+	padding: 10px 0
+}
+select {
+	/*for firefox*/
+	-moz-appearance: none;
+	/*for chrome*/
+	-webkit-appearance: none;
+}
+
+/*for IE10*/
+select::-ms-expand {
+ display: none;
+}
+/* ---- button-group ---- */
+
+	
+/* styles from isotope example end*/	
 .events-active {
 	background-color: #f5f5f5;
 }
@@ -89,6 +129,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 #sort .btn {
 	margin: 5px 0 5px;
+}
+.timeof b {
+	display: none;
+}
+/* clear fix */
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 @media (min-width: 992px) {
@@ -192,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../storytime">Storytime</a></li>
           <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
+          <li><a href="../kids-events">Kids Events</a></li>
           <li><a href="../parents-teachers">Parents & Teachers</a></li>
           <li><a href="../research/students">Homework Help</a></li>
           <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
@@ -203,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../authors-events">Authors & Events</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
+          <li><a href="../kids-events">Kids Events</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research">Research</a> </li>
@@ -249,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <ul id="kids-teens" class="nav mobile-nav-list collapse">
                   <li><a href="../storytime">Storytime</a></li>
                   <li><a href="../read-listen-watch">Read, Listen, Watch</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
+                  <li><a href="../kids-events">Kids Events</a></li>
                   <li><a href="../parents-teachers">Parents & Teachers</a></li>
                   <li><a href="../research/students">Homework Help</a></li>
                   <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
@@ -260,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../authors-events">Authors & Events</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=35&lib=ALL&nd=365" target="_blank">Kids Events</a></li>
+                  <li><a href="../kids-events">Kids Events</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research">Research</a> </li>
@@ -290,13 +339,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-30">
+  <div class="row border-top padding-bottom-15">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400">Kids Events</h1>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-child"></i></div>
         </div>
+        <h4 class="roboto">Find something for every child in our robust schedule of fun ongoing events for kids. Filter for you favorite DCL location and sort by event genre (arts/crafts, games, literacy, STEAM, teens or travel), or by time of day (morning, after-school, evening or weekend).</h4>
       </div>
     </div>
   </div>
@@ -310,428 +360,435 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15">
+  <div class="row bg-gray-10 padding-top-40 padding-bottom-15">
     <div class="container text-center">
-      <h4 class="roboto">Find something for every child in our robust schedule of fun ongoing events for kids. Browse them all or sort events by those happening at your favorite DCL location, by event genre (arts/crafts, games, literacy, STEAM, teens or travel), or by time of day (morning, after-school, evening or weekend).</h4>
-      <div>
-        <div id="sort" role="group" aria-label="sort">
-          <h3><span class="roboto margin-right-15 v-align-middle">Sort by:</span>
-            <button type="button" class="btn btn-default text-uppercase" data-sort-by="location">Location</button>
-            <button type="button" class="btn btn-default text-uppercase" data-sort-by="genre">Genre</button>
-            <button type="button" class="btn btn-default text-uppercase" data-sort-by="timeof">Time of Day</button>
-            <button type="button" class="reset btn btn-link-unstyled text-uppercase text-center">Start Over &raquo;</button>
-          </h3>
+      <div class="col-md-6"> <span class="margin-right-10 large-text">Filter by Location:</span>
+        <select class="btn btn-default text-uppercase filters-select">
+          <option value="*">All Locations</option>
+          <option value=".castle-pines"><span>Castle Pines</span></option>
+          <option value=".castle-rock">Castle Rock</option>
+          <option value=".highlands-ranch">Highlands Ranch</option>
+          <option value=".lone-tree">Lone Tree</option>
+          <option value=".parker">Parker</option>
+          <option value=".roxborough">Roxborough</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <div class="button-group" id="sorts"><span class="margin-right-10 larger">Sort by: </span>
+          <button class="button btn btn-default is-checked" data-sort-by="original-order">Event Title</button>
+          <button class="button btn btn-default" data-sort-by="genre">Event Genre</button>
+          <button class="button btn btn-default" data-sort-by="timeof">Time of Day</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-20 padding-bottom-60">
+  <div class="row bg-gray-10 padding-top-20 padding-bottom-60">
     <div class="container no-gutter">
       <div class="col-sm-12">
-        <div id="items">
-          <div class="element-item" data-location="roxborough" data-genre="travel" data-timeof="after-school">
+        <div class="grid">
+          <div class="roxborough element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=around+the+world&df=list&cn=0&lib=1007&nd=365" target="_blank">Around the World</a></h2>
               <h4 class="no-margin">Roxborough</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 6-12</div>
-              <div><span class="text-uppercase small">Genre:</span> Travel</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
-              <div><span class="text-uppercase small">Day & Time: </span>Second Tuesday of Each Month, 4:30-5:30PM</div>
+              <div><span class="travel text-uppercase small">Genre:</span> <span class="genre">Travel</span></div>
+              <div><span class="text-uppercase small">Time of Day:</span> <span class="timeof"><b>B</b>After School</span></div>
+              <div><span class="text-uppercase small">Day & Time:</span> Second Tuesday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Celebrate world cultures through crafts and food.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=around+the+world&df=list&cn=0&lib=1007&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-pines" data-genre="arts-crafts" data-timeof="after-school">
+          <div class="castle-pines element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1000&nd=365" target="_blank">Art Stop on the Go</a></h2>
               <h4 class="no-margin">Castle Pines</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 6-12</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
-              <div><span class="text-uppercase small">Day & Time: </span>First Monday of Each Month, 4:30-5:30PM</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day:</span> <span class="timeof"><b>B</b>After School</span></div>
+              <div><span class="text-uppercase small">Day & Time:</span> First Monday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Hands-on literature-based art with the Boulder Museum of Contemporary Art.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1000&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="arts-crafts" data-timeof="after-school">
+          <div class="castle-rock element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1001&nd=365" target="_blank">Art Stop on the Go</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 6-12</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
-              <div><span class="text-uppercase small">Day & Time: </span>Second Thursday of Each Month, 4:30-5:30PM</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
+              <div><span class="text-uppercase small">Day & Time: </span> Second Thursday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Hands-on literature-based art with the Boulder Museum of Contemporary Art.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1001&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-genre="arts-crafts" data-timeof="after-school">
+          <div class="lone-tree element-item" data-location="lone-tree" data-genre="arts-crafts" data-timeof="after-school">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1002&nd=365" target="_blank">Art Stop on the Go</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 6-12</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Tuesday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Hands-on literature-based art with the Boulder Museum of Contemporary Art.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1002&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-genre="arts-crafts" data-timeof="after-school">
+          <div class="highlands-ranch element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1004&nd=365" target="_blank">Art Stop on the Go</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 6-12</div>
               <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Third Wednesday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Hands-on literature-based art with the Boulder Museum of Contemporary Art.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1004&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-genre="arts-crafts" data-timeof="after-school">
+          <div class="parker element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1005&nd=365" target="_blank">Art Stop on the Go</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 6-12</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Thursday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Hands-on literature-based art with the Boulder Museum of Contemporary Art.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=art+stop+on+the+go&df=list&cn=0&lib=1005&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="games" data-timeof="evening">
+          <div class="castle-rock element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=castle+rock+chess+club&df=list&cn=0&nd=365" target="_blank">Castle Rock Chess Club</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Games</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Evening</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Games</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>C</b>Evening</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Mondays, 6-8:30PM</div>
               <div class="margin-top-15">Friendly drop-in competition for all ages and abilities.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-pines" data-genre="steam" data-timeof="evening">
+          <div class="castle-pines element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=coding+club&df=list&cn=0&nd=365" target="_blank">Coding Club</a></h2>
               <h4 class="no-margin">Castle Pines</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 10-15</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Evening</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>C</b>Evening</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Monday of Each Month, 5:30-7PM</div>
               <div class="margin-top-15">Code using online tools, games and high-tech toys.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=coding+club&df=list&cn=0&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-genre="arts-crafts" data-timeof="weekend">
+          <div class="lone-tree element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=craft+lab&df=list&cn=0&lib=1002&nd=365" target="_blank">Craft Lab</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Third Sunday of Each Month, 2-4PM</div>
               <div class="margin-top-15">Drop in and enjoy select craft, hobby or DIY projects.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-genre="arts-crafts" data-timeof="weekend">
+          <div class="parker element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=craft+lab&df=list&cn=0&lib=1005&nd=365" target="_blank">Craft Lab</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Third Sunday of Each Month, 1:30-3:30PM</div>
               <div class="margin-top-15">Drop in and enjoy select craft, hobby or DIY projects.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-pines" data-genre="arts-crafts" data-timeof="weekend">
+          <div class="castle-pines element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=crafternoons&df=list&cn=0&nd=365" target="_blank">Crafternoons</a></h2>
               <h4 class="no-margin">Castle Pines</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Saturday of Each Month, 1-3PM</div>
               <div class="margin-top-15">Needlecraft, painting, leatherwork, jewelry making, drawing and more.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=crafternoons&df=list&cn=0&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="games" data-timeof="weekend">
+          <div class="castle-rock element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=game+club&df=list&cn=0&nd=365" target="_blank">Game Club</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Teens</div>
-              <div><span class="text-uppercase small">Genre:</span> Games</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Games</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Sunday of Each Month, 12-5PM</div>
               <div class="margin-top-15">Popular and unique role-play and board games.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="literacy" data-timeof="after-school">
+          <div class="castle-rock element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=junior+page+turners+1&df=list&cn=0&nd=365" target="_blank">Junior Page Turners 1</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Grades 1-3</div>
-              <div><span class="text-uppercase small">Genre:</span> Literacy</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Literacy</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Second Wednesday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Read and discuss a different book each month.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=junior+page+turners+1&df=list&cn=0&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="literacy" data-timeof="after-school">
+          <div class="castle-rock element-item" data-location="castle-rock" data-genre="literacy" data-timeof="after-school">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=junior+page+turners+2&df=list&cn=0&nd=365" target="_blank">Junior Page Turners 2</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Grades 1-3</div>
-              <div><span class="text-uppercase small">Genre:</span> Literacy</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Literacy</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Thursday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Read and discuss a different book each month.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=junior+page+turners+2&df=list&cn=0&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-genre="steam" data-timeof="after-school">
+          <div class="highlands-ranch element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=kids'+zone&df=list&cn=0&nd=365" target="_blank">Kids' Zone</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 8-12</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Thursdays, 4-5PM</div>
               <div class="margin-top-15">Drop in for fun and learning!</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-pines" data-genre="arts-crafts" data-timeof="after-school">
+          <div class="castle-pines element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=learn+origami&df=list&cn=0&nd=365" target="_blank">Learn Origami</a></h2>
               <h4 class="no-margin">Castle Pines</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Second Friday of Each Month, 4-5PM</div>
               <div class="margin-top-15">Learn a new folded paper project each month.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-genre="steam" data-timeof="weekend">
+          <div class="highlands-ranch element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=lego+dibs&df=list&cn=0&nd=365" target="_blank">LEGO DIBS</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Second Saturday of Each Month, 2-4PM</div>
               <div class="margin-top-15">Drop in and build something!</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-genre="games" data-timeof="evening">
+          <div class="lone-tree element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=low-tech+gaming&df=list&cn=0&lib=1002&nd=365" target="_blank">Lone Tree Low-Tech Gaming</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Games</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Evening</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Games</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>C</b>Evening</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Mondays, 6-8:30PM</div>
               <div class="margin-top-15">Enjoy our table-top games or bring your own.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=low-tech+gaming&df=list&cn=0&lib=1002&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-genre="arts-crafts" data-timeof="evening">
+          <div class="lone-tree element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=open+studio&df=list&cn=0&lib=1002&nd=365" target="_blank">Open Studio</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Evening</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>C</b>Evening</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Thursday of Each Month, 6:30-8:30PM</div>
               <div class="margin-top-15">Craft using our supplies or bring your own.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-genre="arts-crafts" data-timeof="morning">
+          <div class="lone-tree element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=open+studio&df=list&cn=0&lib=1002&nd=365" target="_blank">Open Studio</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Morning</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>A</b>Morning</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Second Friday of Each Month, 10AM-Noon</div>
               <div class="margin-top-15">Craft using our supplies or bring your own.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-genre="games" data-timeof="evening">
+          <div class="parker element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=parker+chess+club&df=list&cn=0&lib=1005&nd=365" target="_blank">Parker Chess Club</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Games</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Evening</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Games</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>C</b>Evening</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Thursdays, 7-9PM</div>
               <div class="margin-top-15">Friendly drop-in competition for all ages and abilities.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-genre="games" data-timeof="evening">
+          <div class="highlands-ranch element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=play+chess&df=list&cn=0&lib=1004&nd=365" target="_blank">Play Chess!</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Games</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Evening</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Games</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>C</b>Evening</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Second & Fourth Wednesdays of Each Month, 7-9PM</div>
               <div class="margin-top-15">Friendly drop-in competition for all ages and abilities.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="roxborough" data-genre="literacy" data-timeof="weekend">
+          <div class="roxborough element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=wizard+school&df=list&cn=0&lib=1006&nd=365" target="_blank">Real Life Wizard School</a></h2>
               <h4 class="no-margin">Roxborough</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Literacy</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Literacy</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Third Saturday of Each Month, 2-3PM</div>
               <div class="margin-top-15">A different "lesson" each month! Costumes encouraged.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=wizard+school&df=list&cn=0&lib=1006&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="arts-crafts" data-timeof="weekend">
+          <div class="castle-rock element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=saturday+surprise&df=list&cn=0&lib=1001&nd=365" target="_blank">Saturday Surprise</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Saturdays, 10-11AM</div>
               <div class="margin-top-15">Needlecraft, painting, leatherwork, jewelry making, drawing and more.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-pines" data-genre="arts-crafts" data-timeof="after-school">
+          <div class="castle-pines element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=simple+sewing&df=list&cn=0&lib=1000&nd=365" target="_blank">Simple Sewing</a></h2>
               <h4 class="no-margin">Castle Pines</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 10+</div>
-              <div><span class="text-uppercase small">Genre:</span> Arts & Crafts</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Arts & Crafts</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Tuesday of Each Month, 4-6PM</div>
               <div class="margin-top-15">Learn new skills and work on a new project each month.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=simple+sewing&df=list&cn=0&lib=1000&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="roxborough" data-genre="steam" data-timeof="after-school">
+          <div class="roxborough element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=slick+science&df=list&cn=0&lib=1006&nd=365" target="_blank">Slick Science</a></h2>
               <h4 class="no-margin">Roxborough</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 6-12</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Tuesday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Experiment with a new science topic every month.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=slick+science&df=list&cn=0&lib=1006&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-genre="steam" data-timeof="weekend">
+          <div class="lone-tree element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=steamworks&df=list&cn=0&lib=1002&nd=365" target="_blank">STEAMWorks</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Second Saturday of Each Month, 2-3PM</div>
               <div class="margin-top-15">Explore Science, Technology, Engineering, Arts and Math.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-genre="steam" data-timeof="after-school">
+          <div class="highlands-ranch element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=steamworks&df=list&cn=0&lib=1004&nd=365" target="_blank">STEAMWorks</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Wednesday of Each Month, 4-5PM</div>
               <div class="margin-top-15">Explore Science, Technology, Engineering, Arts and Math.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-genre="steam" data-timeof="evening">
+          <div class="highlands-ranch element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=stem+book+club&df=list&cn=0&nd=365" target="_blank">STEM Book Club</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Grades 4-6</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Wednesday of Each Month, 4-6PM</div>
               <div class="margin-top-15">Read and discuss a different STEM-based book each month.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=stem+book+club&df=list&cn=0&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-genre="steam" data-timeof="weekend">
+          <div class="lone-tree element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=sunday+surprise&df=list&cn=0&nd=365" target="_blank">Sunday Surprise</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 8-13</div>
-              <div><span class="text-uppercase small">Genre:</span> STEAM</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Weekend</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">STEAM</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>D</b>Weekend</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Sunday of Each Month, 2-4PM</div>
               <div class="margin-top-15">Explore Science, Technology, Engineering, Arts and Math.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-pines" data-genre="travel" data-timeof="evening">
+          <div class="castle-pines element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=the+great+outdoors&df=list&cn=0&lib=1000&nd=365" target="_blank">The Great Outdoors</a></h2>
               <h4 class="no-margin">Castle Pines</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> All Ages</div>
-              <div><span class="text-uppercase small">Genre:</span> Travel</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Evening</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Travel</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>C</b>Evening</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Thursday of Each Month, 5-6PM</div>
               <div class="margin-top-15">Tips and tricks for enjoying our great state.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=the+great+outdoors&df=list&cn=0&lib=1000&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="literacy" data-timeof="after-school">
+          <div class="castle-rock element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=the+page+twisters&df=list&cn=0&lib=1001&nd=365" target="_blank">The Page Twisters</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Grades 4-6</div>
-              <div><span class="text-uppercase small">Genre:</span> Literacy</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Literacy</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Monday of Each Month, 4:30-5:30PM</div>
               <div class="margin-top-15">Read and discuss a different book each month.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=the+page+twisters&df=list&cn=0&lib=1001&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-genre="games" data-timeof="morning">
+          <div class="parker element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=toddler+time&df=list&cn=0&lib=1005&nd=365" target="_blank">Toddler Time</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 2-4</div>
-              <div><span class="text-uppercase small">Genre:</span> Games</div>
-              <div><span class="text-uppercase small">Time of Day: </span>Morning</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Games</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>A</b>Morning</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>Second Thursday of Each Month, 9:30-11AM</div>
               <div class="margin-top-15">Toddlers explore art, music, dance and more.</div>
               <div class="text-uppercase margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=toddler+time&df=list&cn=0&lib=1005&nd=365" target="_blank">Please Register &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-genre="literacy" data-timeof="after-school">
+          <div class="castle-rock element-item">
             <div class="element-wrapper">
               <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=young+writers%27+guild&lib=1001&nd=365" target="_blank">Young Writers' Guild</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Primary Age Group:</span> Ages 12-18</div>
-              <div><span class="text-uppercase small">Genre:</span> Literacy</div>
-              <div><span class="text-uppercase small">Time of Day: </span>After School</div>
+              <div><span class="text-uppercase small">Genre:</span> <span class="genre">Literacy</span></div>
+              <div><span class="text-uppercase small">Time of Day: </span><span class="timeof"><b>B</b>After School</span></div>
               <div><span class="text-uppercase small">Day & Time: </span>First Tuesday of Each Month, 4:30-6PM</div>
               <div class="margin-top-15">Aspiring writers practice their craft and learn new tools.</div>
               <div class="text-uppercase margin-top-15">No registration required</div>
@@ -798,31 +855,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
   $(window).load(function() {
-
-    var $container = $('#items').isotope({
-      itemSelector: '.element-item',
-      layoutMode: 'fitRows',
-      getSortData: {
-        location: '[data-location]',
-		genre: '[data-genre]',
-		timeof: '[data-timeof]'
-      }
-    })
-
-    // sort items on button click
-    $('#sort').on('click', 'button', function() {
-      var sortByValue = $(this).attr('data-sort-by')
-      $container.isotope({
-        sortBy: sortByValue
-      })
-    })
-	$("reset").click(function(){
-    $("#sort").isotope({
-        filter: '*'
-    });
+// init Isotope
+var $grid = $('.grid').isotope({
+  itemSelector: '.element-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    genre: '.genre',
+    timeof: '.timeof',
+    weight: function( itemElem ) {
+      var weight = $( itemElem ).find('.weight').text();
+      return parseFloat( weight.replace( /[\(\)]/g, '') );
+    }
+  }
 });
-  })
-  </script> 
+// filter functions
+var filterFns = {
+
+};
+// bind filter on select change
+$('.filters-select').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  // use filterFn if matches value
+  filterValue = filterFns[ filterValue ] || filterValue;
+  $grid.isotope({ filter: filterValue });
+});
+// bind sort button click
+$('#sorts').on( 'click', 'button', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $grid.isotope({ sortBy: sortByValue });
+});
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+}); 
+})
+	</script> 
 <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
