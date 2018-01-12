@@ -98,23 +98,33 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .button.is-checked {
 	border: 0;
 }
-.location-select {
-	padding: 10px 0
-}
 select {
-	/*for firefox*/
-	-moz-appearance: none;
-	/*for chrome*/
+	height: 41px;
+	padding: 10px 15px;
+	border: 0;
+	width: 200px;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: inherit;
+	line-height: normal;
+	color: #fff;
+	background-color: #456e70;
+	border-radius: 0;
 	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: white"></polygon></svg>');
+	background-size: 9px 6px;
+	background-position: 100%;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
 }
-
-/*for IE10*/
-select::-ms-expand {
- display: none;
+option {
+	padding: 10px;
+	border-top: 1px solid #fff;
 }
-/* ---- button-group ---- */
-
-	
 /* styles from isotope example end*/	
 .events-active {
 	background-color: #f5f5f5;
@@ -363,9 +373,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row bg-gray-10 padding-top-40 padding-bottom-15">
     <div class="container no-gutter text-center">
       <div class="col-md-6 padding-bottom-15"> <span class="margin-right-5 large-text">Filter by Location:</span>
-        <select class="btn btn-default text-uppercase filters-select">
+        <select class="text-uppercase filters-select">
           <option value="*">All Locations</option>
-          <option value=".castle-pines"><span>Castle Pines</span></option>
+          <option value=".castle-pines">Castle Pines</option>
           <option value=".castle-rock">Castle Rock</option>
           <option value=".highlands-ranch">Highlands Ranch</option>
           <option value=".lone-tree">Lone Tree</option>
