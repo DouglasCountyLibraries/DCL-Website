@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,43 +86,28 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .button:hover {
 	background-color: #4f868b;
-	border: 0;
+	border: 1px solid #4f868b;
 	color: #fff;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 .button:active, .button.is-checked {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 	color: #fff;
 	background-color: #456e70;
-	border: 0;
+	border: 1px solid #456e70;
 }
 .button.is-checked {
-	border: 0;
+	border: 1px solid #456e70;
 }
-select {
-	height: 41px;
-	padding: 10px 15px;
-	border: 0;
-	width: 200px;
-	font-size: 15px;
-	font-weight: 400;
-	font-family: inherit;
-	line-height: normal;
-	color: #fff;
-	background-color: #456e70;
-	border-radius: 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: white"></polygon></svg>');
-	background-size: 9px 6px;
-	background-position: 100%;
-	background-origin: content-box;
-	background-repeat: no-repeat;
-	-webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
-	box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.75);
-}
-option {
-	padding: 10px;
-	border-top: 1px solid #fff;
+.btn-default {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid #ccc
 }
 /* styles from isotope example end*/	
 .events-active {
@@ -136,9 +120,6 @@ option {
 	background-color: #fff;
 	border: 1px solid #fff;
 	padding: 0 15px 25px;
-}
-#sort .btn {
-	margin: 5px 0 5px;
 }
 .timeof b {
 	display: none;
@@ -170,9 +151,6 @@ option {
 
 @media (max-width: 767px) {
 .element-item {
-	width: 100%;
-}
-#sort .btn {
 	width: 100%;
 }
 }
@@ -349,14 +327,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-15">
+  <div class="row border-top padding-bottom-30">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400">Kids Events</h1>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-child"></i></div>
         </div>
-        <h4 class="roboto">Find something for every child in our robust schedule of fun ongoing events for kids. Filter for you favorite DCL location and sort by event genre (arts/crafts, games, literacy, STEAM, teens or travel), or by time of day (morning, after-school, evening or weekend).</h4>
       </div>
     </div>
   </div>
@@ -370,10 +347,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-10 padding-top-40 padding-bottom-15">
-    <div class="container no-gutter text-center">
-      <div class="col-md-6 padding-bottom-15"> <span class="margin-right-5 large-text">Filter by Location:</span>
-        <select class="text-uppercase filters-select">
+  <div class="row bg-gray-5 padding-top-15">
+    <div class="container text-center">
+      <h4 class="roboto">Find something for every child in our robust schedule of fun ongoing events for kids. Filter for you favorite DCL location and sort by event genre (arts/crafts, games, literacy, STEAM, teens or travel), or by time of day (morning, after-school, evening or weekend).</h4>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container no-padding text-center">
+      <div class="col-md-6 padding-bottom-15">
+        <div class="text-uppercase small margin-bottom-5">Filter by Location:</div>
+        <select class="form-control text-uppercase filters-select">
           <option value="*">All Locations</option>
           <option value=".castle-pines">Castle Pines</option>
           <option value=".castle-rock">Castle Rock</option>
@@ -384,15 +367,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </select>
       </div>
       <div class="col-md-6">
-        <div class="button-group" id="sorts"><span class="margin-right-5 large-text">Sort by: </span>
-          <button class="button btn btn-default is-checked" data-sort-by="original-order">Event Title</button>
-          <button class="button btn btn-default" data-sort-by="genre">Event Genre</button>
+        <div class="button-group btn-group" id="sorts">
+          <div class="text-uppercase small margin-bottom-5">Sort by: </div>
+			<button class="button btn btn-default is-checked" data-sort-by="original-order"><span class="hidden-xs">Event </span>Title</button>
+			<button class="button btn btn-default" data-sort-by="genre"><span class="hidden-xs">Event </span>Genre</button>
           <button class="button btn btn-default" data-sort-by="timeof">Time of Day</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-10 padding-top-20 padding-bottom-60">
+  <div class="row bg-gray-5 padding-top-20 padding-bottom-60">
     <div class="container no-gutter">
       <div class="col-sm-12">
         <div class="grid">
@@ -941,7 +925,6 @@ $('.button-group').each( function( i, buttonGroup ) {
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data -->
+<!-- End Structured Data --> 
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
