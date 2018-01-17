@@ -309,10 +309,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h3 class="text-center modal-title">Upcoming Reading Buddies Sessions</h3>
               </div>
-              <div class="modal-body padding-15">
-                <div class="padding-bottom-15">Please choose a session to begin the application process. One of our staff will contact you with more information.</div>
-                <div>Interested teen volunteers can find more information at <a href="https://volunteerconnectdc.org/" target="_blank">volunteerconnectdc.org.</a></div>
-                <iframe id="JotFormIFrame" allowtransparency="true" src="https://form.jotform.us/70474704105147" frameborder="0" style="width:100%;height:750px;border:none;" scrolling="no"></iframe>
+              <div class="modal-body">
+                <div class="padding-left-15 padding-right-15 padding-bottom-15">Please choose a session to begin the application process. One of our staff will contact you with more information.</div>
+                <div class="padding-left-15 padding-right-15">Interested teen volunteers can find more information at <a href="https://volunteerconnectdc.org/" target="_blank">volunteerconnectdc.org.</a></div>
+                <iframe allowtransparency="true" src="https://form.jotform.us/70474704105147" frameborder="0" style="width:100%;height:550px;border:none;" scrolling="no"></iframe>
               </div>
             </div>
           </div>
@@ -359,7 +359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h3 class="text-center modal-title">Library Tour Request</h3>
               </div>
-              <iframe src="https://form.jotform.us/52366750162151" frameborder="0" style="width:100%;height:1530px;border:none;" scrolling="yes"></iframe>
+				<div class="modal-body"><iframe src="https://form.jotform.us/52366750162151" frameborder="0" style="width:100%;height:1530px;border:none;" scrolling="yes"></iframe></div>
             </div>
           </div>
         </div>
@@ -369,16 +369,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="margin-top-15">Resources by Request is like having a personal shopper at the library. We'll compile a set of materials for you on any topic, author or genre &mdash; all you have to do is come pick them up.</div>
         <div class="margin-top-15 text-center"> <!-- Button trigger modal --> 
           
-          <a href="#" class="btn btn-primary text-uppercase" data-toggle="modal" data-target="#modal-three">Get Started</a> </div>
+          <a href="#" class="btn btn-primary text-uppercase" data-toggle="modal" data-target="#resources-by-request-get-stated">Get Started</a> </div>
         <!-- Modal -->
-        <div id="modal-three" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div id="resources-by-request-get-stated" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
           <div class="modal-dialog">
-            <div class="modal-content padding-15">
+            <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h3 class="text-center modal-title">Resources by Request</h3>
               </div>
-              <script type="text/javascript" src="https://form.jotform.com/jsform/52375621938967"></script> 
+              <div class="modal-body"><iframe src="https://form.jotform.us/52375621938967" frameborder="0" style="width:100%;height:1410px;border:none;" scrolling="yes"></iframe></div>
             </div>
           </div>
         </div>
@@ -398,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h3 class="text-center modal-title">Contact a DCL School Liaison</h3>
             </div>
-            <script type="text/javascript" src="https://form.jotform.com/jsform/61675777905168"></script> 
+			  <div class="modal-body"><script type="text/javascript" src="https://form.jotform.com/jsform/61675777905168"></script> </div>
           </div>
         </div>
       </div>
@@ -466,7 +466,10 @@ $(document).ready(function() {
   };
   if(window.location.href.indexOf('#library-tour-get-started') != -1) {
     $('#library-tour-get-started').modal('show')
-  }
+  };
+  if(window.location.href.indexOf('#resources-by-request-get-stated') != -1) {
+    $('#resources-by-request-get-stated').modal('show')
+  };
 });
 </script> 
 <!-- InstanceEndEditable --> 
