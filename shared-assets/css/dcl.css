@@ -2164,18 +2164,35 @@ img.size-full, img.size-large, img.header-image, img.wp-post-image {
 .s-la-navbrowse, .form-control, .input-group .form-control:not(:first-child):not(:last-child), .input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
 	border-radius: 0;
 }
-#blog-heading .accordion-toggle:after {
+.blog-panel-heading .accordion-toggle:after {
     /* symbol for "opening" panels */
     font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
     content: "\e114";    /* adjust as needed, taken from bootstrap.css */
     float: right;        /* adjust as needed */
     color: #ccc;         /* adjust as needed */
 }
-#blog-heading .accordion-toggle.collapsed:after {
+.blog-panel-heading .accordion-toggle.collapsed:after {
     /* symbol for "collapsed" panels */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
 }
-
+.panel-group .blog-panel-heading {
+	background: #efeeed none repeat scroll 0 0;
+	border-bottom: 0 none;/*box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.75);*/
+}
+.panel > .blog-panel-heading:hover, .panel > .panel-heading:focus {
+	cursor: pointer;
+	background-color: #4f878c;
+	color: #fff;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease-out;
+	-ms-transition: all .4s ease-out;
+	-o-transition: all .4s ease-out;
+	transition: all .4s ease-out;
+}
+.panel-group .blog-panel-heading + .panel-collapse > .panel-body, .panel-group .blog-panel-heading + .panel-collapse > .list-group {
+	border-top: none;
+	background-color: #fff;
+}
 
 /* ====== media queries ====== */
 @media (min-width: 480px) {
