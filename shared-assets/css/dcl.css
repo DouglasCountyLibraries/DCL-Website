@@ -2165,19 +2165,24 @@ img.size-full, img.size-large, img.header-image, img.wp-post-image {
 	border-radius: 0;
 }
 .blog-panel-heading .accordion-toggle:after {
-    /* symbol for "opening" panels */
-    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
-    color: #ccc;         /* adjust as needed */
+
+    font-family: 'FontAwesome'; 
+    content: "\f0d8";
+    float: right;
+	margin-right: 1%;
+    color: #ccc;
 }
 .blog-panel-heading .accordion-toggle.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+    content: "\f0d7";
+	margin-right: 1%;
+}
+.blog-panel-heading .panel-title {
+	padding: 10px;
 }
 .panel-group .blog-panel-heading {
 	background: #efeeed none repeat scroll 0 0;
-	border-bottom: 0 none;/*box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.75);*/
+	border-bottom: 0 none;
+	padding:10px;
 }
 .panel > .blog-panel-heading:hover, .panel > .panel-heading:focus {
 	cursor: pointer;
