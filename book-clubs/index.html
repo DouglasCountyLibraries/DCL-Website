@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-	opacity: 0 !important
+    opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -73,46 +74,82 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script>
 <style>
+/* styles from isotope example start*/
+	
+.button {
+    color: #666;
+    background: #fff;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #4f868b;
+    border: 1px solid #4f868b;
+    color: #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.button:active, .button.is-checked {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    background-color: #456e70;
+    border: 1px solid #456e70;
+}
+.button.is-checked {
+    border: 1px solid #456e70;
+}
+.btn-default {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #ccc
+}
+/* styles from isotope example end*/
 .using-the-library-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 .element-item {
-	padding: 2px;
+    padding: 2px;
 }
 .element-wrapper {
-	background-color: #fff;
-	border: 1px solid #fff;
-	padding: 0 15px 30px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 0 15px 30px;
 }
 #sort .btn {
-	margin: 5px 0 5px;
+    margin: 5px 0 5px;
 }
 
 @media (min-width: 992px) {
 .element-item {
-	width: 33.3333%;
+    width: 33.3333%;
 }
 .element-wrapper {
-	min-height: 315px;
+    min-height: 315px;
 }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
 .element-item {
-	width: 50%;
+    width: 50%;
 }
 .element-wrapper {
-	min-height: 315px;
+    min-height: 315px;
 }
 }
 
 @media (max-width: 767px) {
 .element-item {
-	width: 100%;
+    width: 100%;
 }
 #sort .btn {
-	width: 100%;
+    width: 100%;
 }
 }
 </style>
@@ -320,16 +357,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15">
-    <div class="container">
-      <div>
-        <div id="sort" role="group" aria-label="sort">
-          <h3><span class="roboto margin-right-15 v-align-middle">Sort by:</span>
-            <button type="button" class="btn btn-default text-uppercase" data-sort-by="location">Location</button>
-            <button type="button" class="btn btn-default text-uppercase" data-sort-by="audience">Audience</button>
-            <button type="button" class="btn btn-default text-uppercase" data-sort-by="genre">Genre</button>
-            <button type="button" class="reset btn btn-link-unstyled text-uppercase text-center">Start Over &raquo;</button>
-          </h3>
+  <div class="row bg-gray-5">
+    <div class="container no-padding-left no-padding-right padding-top-30 text-center">
+      <div class="col-md-6 padding-bottom-15">
+        <div class="text-uppercase small margin-bottom-5">Filter by Location:</div>
+        <select class="form-control text-uppercase filters-select font-weight-400">
+          <option value="*">All Locations</option>
+          <option value=".castle-rock">Castle Rock</option>
+          <option value=".highlands-ranch">Highlands Ranch</option>
+          <option value=".lone-tree">Lone Tree</option>
+          <option value=".parker">Parker</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <div class="button-group btn-group" id="sorts">
+          <div class="text-uppercase small margin-bottom-5">Sort by Audience: </div>
+          <button class="button btn btn-default" data-sort-by="adult">Adult</button>
+          <button class="button btn btn-default" data-sort-by="child">Children</button>
         </div>
       </div>
     </div>
@@ -337,9 +381,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row bg-gray-5 padding-top-15 padding-bottom-60">
     <div class="container no-gutter">
       <div class="col-sm-12">
-        <div id="items">
-          <div class="element-item" data-location="parker" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+        <div class="grid">
+          <div class="element-item parker" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=20+mile+book+club&df=list&cn=0&lib=1005&nd=365" target="_blank">20 Mile Book Club</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -348,8 +392,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/904339467_20_mile_book_club">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item lone-tree" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=book+banter&df=list&cn=0&lib=ALL&nd=365" target="_blank">Book Banter</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -358,8 +402,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/717033187_book_banter">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-audience="adult" data-genre="young-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item parker" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=brews+&+books&df=list&cn=0&lib=ALL&nd=365" target="_blank">Brews & Books: Teen Reads for Grown-Ups</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> Young Adult</div>
@@ -368,8 +412,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/747124247_books_and_brews_teen_reads_for_grown-ups">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-audience="adult" data-genre="christian-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=christian+literature&df=list&cn=0&lib=ALL&nd=365" target="_blank">Christian Literature Book Club</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> Christian Adult</div>
@@ -378,8 +422,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/703495728_christian_literature_book_club">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="adult-crime-mystery">
-            <div class="element-wrapper equal-height">
+          <div class="element-item lone-tree" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=crime+and+beyond&df=list&cn=0&lib=ALL&nd=365" target="_blank">Crime & Beyond</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> Adult Crime/Mystery</div>
@@ -388,8 +432,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/716638358_crime_amp_beyond">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item highlands-ranch" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=daytime+book+group&df=list&cn=0&lib=ALL&nd=365" target="_blank">Daytime Book Group</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -398,8 +442,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/704045239_daytime_book_group">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item parker" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bookshare&df=list&cn=0&lib=3&nd=365" target="_blank">Bookshare</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -408,19 +452,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
             </div>
           </div>
-          <!-- <div class="element-item" data-location="castle-pines" data-audience="adult" data-genre="young-adult">
-            <div class="element-wrapper equal-height">
-              <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=graphic+novel+book+club&cn=0&lib=1000&nd=365" target="_blank">Graphic Novel Book Club</a></h2>
-              <h4 class="no-margin">Castle Pines</h4>
-              <div><span class="text-uppercase small">Audience:</span> Young Adult, Adult <span class="text-uppercase small margin-left-15">Genre:</span> Young Adult, General Adult</div>
-              <div><span class="text-uppercase small">Day & Time: </span> Second Tuesday, 6PM</div>
-              <div class="margin-top-15">Learn about, read and discuss a variety of graphic novels.</div>
-              <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/827063857_graphic_novel_book_club">View Reading List &raquo;</a></div>
-            </div>
-          </div> -->
-          
-          <div class="element-item" data-location="castle-rock" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=great%20books&cn=0&lib=1001&nd=365" target="_blank">Great Books</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -429,8 +462,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item highlands-ranch" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=great+books:+evening&lib=1004&nd=365" target="_blank">Great Books</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -439,8 +472,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item highlands-ranch" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=great+books:+daytime&lib=1004&nd=365" target="_blank">Great Books</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -449,8 +482,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item lone-tree" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=great%20books&cn=0&lib=1002&nd=365" target="_blank">Great Books</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -459,8 +492,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <!-- add link  <div class="text-uppercase margin-top-15"><a href="#">View Reading List &raquo;</a></div> --> 
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item highlands-ranch" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=highlands+ranch+book+group&df=list&cn=0&lib=ALL&nd=365" target="_blank">Highlands Ranch Book Group</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -469,8 +502,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/710097317_hr_book_group">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="parker" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item parker" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=inklings&lib=1005&nd=365" target="_blank">Inklings Book Club</a></h2>
               <h4 class="no-margin">Parker</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -479,8 +512,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/770621407_inklings_book_club">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-audience="children" data-genre="youth">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="b" data-child="a">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=junior+page+turners+1&df=list&cn=0&lib=ALL&nd=365" target="_blank">Junior Page Turners<br>
                 Group 1 - Wednesdays</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
@@ -490,8 +523,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/710913112_junior_page_turners">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-audience="children" data-genre="youth">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="b" data-child="a">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=junior+page+turners+2&df=list&cn=0&lib=ALL&nd=365" target="_blank">Junior Page Turners<br>
                 Group 2 - Thursdays</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
@@ -501,8 +534,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/735540837_junior_page_turners_thursdays">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-audience="children" data-genre="youth">
-            <div class="element-wrapper equal-height">
+          <div class="element-item highlands-ranch" data-adult="b" data-child="a">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=mother-daughter+book+group&lib=1004&nd=365" target="_blank">Mother-Daughter Book Group</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Audience:</span> Children <span class="text-uppercase small margin-left-15">Genre:</span> Youth</div>
@@ -511,8 +544,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/792381657">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="highlands-ranch" data-audience="adult" data-genre="adult-crime-mystery">
-            <div class="element-wrapper equal-height">
+          <div class="element-item highlands-ranch" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=mystery+loves+company&df=list&cn=0&lib=ALL&nd=365" target="_blank">Mystery Loves Company</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> Adult Crime/Mystery</div>
@@ -521,8 +554,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/721383955_mystery_loves_company">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=night+readers&df=list&cn=0&lib=ALL&nd=365" target="_blank">Night Readers</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -531,8 +564,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/719688188_night_readers_2017_psm_book_discussion_group">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-audience="children" data-genre="youth">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="b" data-child="a">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=page+twisters&df=list&cn=0&lib=ALL&nd=365" target="_blank">Page Twisters</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Children <span class="text-uppercase small margin-left-15">Genre:</span> Youth</div>
@@ -541,8 +574,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/733488197_page_twisters">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item lone-tree" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/List?nomobile=1&ag=&kw=readers%27+roost&df=list&cn=0&lib=1002&nd=365" target="_blank">Readers' Roost</a></h2>
               <h4 class="no-margin">Lone Tree</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -551,18 +584,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/723944697_readers_roost">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="lone-tree" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item lone-tree" data-adult="b" data-child="a">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=stem+book+club&df=list&cn=0&nd=365" target="_blank">STEM Book Club</a></h2>
               <h4 class="no-margin">Highlands Ranch</h4>
               <div><span class="text-uppercase small">Audience:</span> Children <span class="text-uppercase small margin-left-15">Genre:</span> Youth</div>
               <div><span class="text-uppercase small">Day & Time: </span>Fourth Wednesday Every Other Month, 5PM</div>
               <div class="margin-top-15">Kids, grades 4-6, discuss a different STEM-based book each meeting.</div>
-             <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/1128129531_stem_book_club">View Reading List &raquo;</a></div> 
+              <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/1128129531_stem_book_club">View Reading List &raquo;</a></div>
             </div>
           </div>
-			<div class="element-item" data-location="castle-rock" data-audience="adult" data-genre="young-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=teen+reads&lib=1001&nd=365" target="_blank">Teen Reads for Grown-Ups</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> Young Adult</div>
@@ -571,8 +604,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="text-uppercase margin-top-15"><a href="https://dcl.bibliocommons.com/list/share/692285612_dclbookclubs/748711967_teen_reads_for_grown-ups">View Reading List &raquo;</a></div>
             </div>
           </div>
-          <div class="element-item" data-location="castle-rock" data-audience="adult" data-genre="general-adult">
-            <div class="element-wrapper equal-height">
+          <div class="element-item castle-rock" data-adult="a" data-child="b">
+            <div class="element-wrapper">
               <h2 class="roboto"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=thursday+evening+book+club&df=list&cn=0&lib=ALL&nd=365" target="_blank">Thursday Evening Book Club</a></h2>
               <h4 class="no-margin">Castle Rock</h4>
               <div><span class="text-uppercase small">Audience:</span> Adult <span class="text-uppercase small margin-left-15">Genre:</span> General Adult</div>
@@ -585,34 +618,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js"></script> 
   <script>
   $(window).load(function() {
-
-    var $container = $('#items').isotope({
-      itemSelector: '.element-item',
-      layoutMode: 'fitRows',
-      getSortData: {
-        location: '[data-location]',
-        audience: '[data-audience]',
-		genre: '[data-genre]'
-      }
-    })
-
-    // sort items on button click
-    $('#sort').on('click', 'button', function() {
-      var sortByValue = $(this).attr('data-sort-by')
-      $container.isotope({
-        sortBy: sortByValue
-      })
-    })
-	$("reset").click(function(){
-    $("#sort").isotope({
-        filter: '*'
-    });
+// init Isotope
+var $grid = $('.grid').isotope({
+  itemSelector: '.element-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    adult: '[data-adult]',
+    child: '[data-child]',
+    weight: function( itemElem ) {
+      var weight = $( itemElem ).find('.weight').text();
+      return parseFloat( weight.replace( /[\(\)]/g, '') );
+    }
+  }
 });
-  })
-  </script> 
+// filter functions
+var filterFns = {
+
+};
+// bind filter on select change
+$('.filters-select').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  // use filterFn if matches value
+  filterValue = filterFns[ filterValue ] || filterValue;
+  $grid.isotope({ filter: filterValue });
+});
+// bind sort button click
+$('#sorts').on( 'click', 'button', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $grid.isotope({ sortBy: sortByValue });
+});
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+}); 
+})
+	</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -664,7 +711,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-	  <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
@@ -703,6 +750,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
