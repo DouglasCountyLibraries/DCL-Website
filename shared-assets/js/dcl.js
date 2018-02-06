@@ -7,7 +7,6 @@
 // smooth page scroll for page anchors
 // jQuery match-height plugin
 // flip
-// scrollme
 // sticky		
 
 // pull the alert into the global-alert div
