@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-	opacity: 0 !important
+    opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -85,25 +86,69 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     opacity: .9;
 }
 .featured {
-    margin-top: 1px;
-    background: #7d9400;
+    background: #65587b;
 }
 .grow {
+    color: #497c91;
     transition: all .4s ease-in-out;
     z-index: 1000;
 }
 .grow:hover, .grow a:visited, .grow a:hover, .grow a:active {
+    color: #365c6c;
     transform: scale(1.02);
     text-decoration: none;
     opacity: 1;
 }
-.mountains {
-    padding-top: 230px;
+.nothing-text {
+    color: #497c91;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 28px;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    word-spacing: -10px;
+    line-height: 1em;
+}
+.red-grow {
+    color: #d65700;
+    transition: all .4s ease-in-out;
+    z-index: 1000;
+}
+.red-grow:hover, .red-grow a:visited, .red-grow a:hover, .red-grow a:active {
+    color: #a84200;
+    transform: scale(1.2);
+    text-decoration: none;
+    opacity: 1;
+}
+.polaroid-left {
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+}
+.polaroid-right {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+}
+.polaroid-right:hover, .polaroid-right a:hover {
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    text-decoration: none!important;
+}
+.polaroid-left:hover {
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+}
+.polaroid-left, .polaroid-right {
+    margin: 60px 30px 0 30px;
+    padding: 15px;
+    transition: all .1s ease-in-out;
+}
+.shadow-high-hover:hover {
+    transition: all .1s ease-in-out;
 }
 
 @media (max-width: 1200px) {
-.mountains {
-    padding-top: 152px;
+.polaroid-left, .polaroid-right {
+    margin: 30px auto;
+    max-width: 400px;
 }
 }
 </style>
@@ -279,11 +324,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-top-30">
-    <div class="no-gutter center-block" style="max-width:1600px;">
-      <div class="col-md-6 col-md-push-3"><a href="camp-dcl"><img src="camp-dcl-mid.png" alt="Camp DCL" class="grow img-responsive"></a></div>
-      <div class="col-md-3 col-md-pull-6"> <a href="camp-dcl"><img class="mountains img-responsive hidden-xs hidden-sm" src="camp-dcl-left.png" alt="Camp DCL"></a></div>
-      <div class="col-md-3"> <a href="camp-dcl"><img class="mountains img-responsive hidden-xs hidden-sm" src="camp-dcl-right.png" alt="Camp DCL"></a></div>
+  <div class="row border-top padding-top-40 padding-bottom-60">
+    <div class="container-md image-center">
+      <div class="col-md-3 hidden-xs hidden-sm">
+        <div class="polaroid-left shadow-high shadow-high-hover"><a href="camp-dcl">
+          <div id="box-one"></div>
+          </a>
+          <div class="text-center text-uppercase margin-top-10">Be a Chef</div>
+        </div>
+      </div>
+      <div class="col-md-6"><a href="camp-dcl"><img src="camp-dcl-mid.jpg" alt="Camp DCL" class="grow img-responsive"></a>
+        <div class="text-center">
+          <h1 class="jumbo-text text-uppercase no-margin font-weight-500"><a class="grow" href="camp-dcl">Spring Break Camps</a></h1>
+          <h3 class="no-margin font-weight-400"><a class="grow" href="camp-dcl">Registration Ends in <span id="countdown"></span> Days!</a></h3>
+          <h1 class="red-grow margin-top-10 text-uppercase font-weight-500"><a class="red-grow" href="camp-dcl">Sign Up Now</a></h1>
+          <div class="nothing-text margin-top-30"><a class="grow" href="camp-dcl#summer">Summer Camp Registration Now Open</a></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="polaroid-right shadow-high shadow-high-hover"><a href="camp-dcl">
+          <div id="box-two"></div>
+          </a>
+          <div class="text-center text-uppercase margin-top-10">Be a Builder</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row featured padding-top-30 padding-bottom-40">
@@ -304,13 +368,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <script>
+    var images = ['chef-one.jpg', 'chef-two.jpg', 'chef-three.jpg', 'chef-four.jpg', 'chef-five.jpg', 'chef-six.jpg'];
+    $('<img alt="Be a Chef" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+	
+	var images = ['builder-one.jpg', 'builder-two.jpg', 'builder-three.jpg', 'builder-four.jpg', 'builder-five.jpg', 'builder-six.jpg', 'builder-seven.jpg'];
+    $('<img alt="Be a Builder" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+
+</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
     <div class="col-sm-6">
       <div class="text-center">
         <h3>Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h3>
-          <h3 class="margin-top-10"><a href="taxes">Tax Information</a></h3>
+        <h3 class="margin-top-10"><a href="taxes">Tax Information</a></h3>
       </div>
     </div>
     <div class="col-sm-6">
@@ -356,10 +428,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-	  <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+var end = new Date('03/18/2018');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = days;
+
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
@@ -395,6 +498,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
