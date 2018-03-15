@@ -88,6 +88,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .featured {
     background: #416b82;
 }
+h1.jumbo-text .grow {
+    font-size: 60px;
+    color: #41575e;
+}
+h1.jumbo-text {
+    line-height: 40px;
+}
 .grow {
     color: #497c91;
     transition: all .4s ease-in-out;
@@ -138,17 +145,45 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .polaroid-left, .polaroid-right {
     margin: 60px 30px 0 30px;
-    padding: 15px;
+    padding: 15px 15px 8px 15px;
     transition: all .1s ease-in-out;
 }
 .shadow-high-hover:hover {
     transition: all .1s ease-in-out;
+}
+.bullet {
+    font-size: .8em;
+}
+#be-heading, #be-heading-two {
+    font-size: 24px;
+    color: #666;
 }
 
 @media (max-width: 1200px) {
 .polaroid-left, .polaroid-right {
     margin: 30px auto;
     max-width: 400px;
+}
+}
+
+@media (max-width: 1230px) {
+h1.jumbo-text .grow {
+    font-size: 50px;
+}
+h3.font-weight-500 {
+    font-size: 22px;
+}
+}
+
+@media (max-width: 580px) {
+h1.jumbo-text .grow {
+    font-size: 44px;
+}
+h3.font-weight-500 {
+    font-size: 20px;
+}
+.bullet {
+    display: none;
 }
 }
 </style>
@@ -330,22 +365,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="polaroid-left shadow-high shadow-high-hover"><a href="camp-dcl">
           <div id="box-one"></div>
           </a>
-          <div class="text-center text-uppercase margin-top-10">Be a Chef</div>
+          <div id="be-heading" class="nothing text-center margin-top-10"></div>
         </div>
       </div>
       <div class="col-md-6"><a href="camp-dcl"><img src="camp-dcl-mid.jpg" alt="Camp DCL" class="grow img-responsive"></a>
         <div class="text-center">
-          <h1 class="jumbo-text text-uppercase no-margin font-weight-500"><a class="grow" href="camp-dcl">Spring Break Camps</a></h1>
-          <h3 class="no-margin font-weight-400"><a class="grow" href="camp-dcl">Registration Ends in <span id="countdown"></span> Days!</a></h3>
+          <h1 class="jumbo-text text-uppercase no-margin font-weight-500"><a class="grow" href="camp-dcl"><span class="bullet">&bull;</span> Summer Camps <span class="bullet">&bull;</span></a></h1>
+          <h3 class="font-weight-500"><a class="grow" href="camp-dcl"><span class="text-uppercase">Weeklong, Half-day Camps</span></a><br>
+            <a class="grow" href="camp-dcl">June 4-August 3 |<br class="insert-break" />
+            Ages 6-12</a></h3>
           <h1 class="red-grow margin-top-10 text-uppercase font-weight-500"><a class="red-grow" href="camp-dcl">Sign Up Now</a></h1>
-          <div class="nothing-text margin-top-30"><a class="grow" href="camp-dcl#summer">Summer Camp Registration Now Open</a></div>
         </div>
       </div>
       <div class="col-md-3">
         <div class="polaroid-right shadow-high shadow-high-hover"><a href="camp-dcl">
           <div id="box-two"></div>
           </a>
-          <div class="text-center text-uppercase margin-top-10">Be a Builder</div>
+          <div id="be-heading-two" class="nothing text-center margin-top-10"></div>
         </div>
       </div>
     </div>
@@ -382,11 +418,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <script>
-    var images = ['chef-sold-out.jpg'];
-    $('<img alt="Be a Chef" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+    var images = ['chef-one.jpg', 'builder-two.jpg', 'chef-three.jpg', 'builder-four.jpg', 'chef-five.jpg', 'builder-six.jpg', 'chef-seven.jpg'];
+    $('<img alt="What will you be?" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
 	
-	var images = ['builder-one.jpg', 'builder-two.jpg', 'builder-three.jpg', 'builder-four.jpg', 'builder-five.jpg', 'builder-six.jpg', 'builder-seven.jpg'];
-    $('<img alt="Be a Builder" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+	var images = ['builder-one.jpg', 'chef-two.jpg', 'builder-three.jpg', 'chef-four.jpg', 'builder-five.jpg', 'chef-six.jpg', 'builder-seven.jpg'];
+    $('<img alt="What will you be?" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
 
 </script> 
   <!-- InstanceEndEditable --> </div>
@@ -446,34 +482,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-var end = new Date('03/18/2018');
+$(function () {
+    var messages = [],
+        index = 0;
+    messages.push('Be an Artist');
+    messages.push('Be a Chef');
+    messages.push('Be an Engineer');
+    messages.push('Be an Inventor');
+    messages.push('Be a Ninjaneer');
 
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    var timer;
+    function cycle() {
+        $('#be-heading').html(messages[index]);
+        index++;
 
-    function showRemaining() {
-        var now = new Date();
-        var distance = end - now;
-        if (distance < 0) {
-
-            clearInterval(timer);
-            document.getElementById('countdown').innerHTML = 'EXPIRED!';
-
-            return;
+        if (index === messages.length) {
+            index = 0;
         }
-        var days = Math.floor(distance / _day);
-        var hours = Math.floor((distance % _day) / _hour);
-        var minutes = Math.floor((distance % _hour) / _minute);
-        var seconds = Math.floor((distance % _minute) / _second);
 
-        document.getElementById('countdown').innerHTML = days;
-
+        setTimeout(cycle, 1600);
     }
 
-    timer = setInterval(showRemaining, 1000);
+    cycle();
+});
+</script> 
+<script>
+$(function () {
+    var messages = [],
+        index = 0;
+    messages.push('Be an Inventor');
+    messages.push('Be an Engineer');
+    messages.push('Be a Chef');
+    messages.push('Be a Ninjaneer');
+    messages.push('Be an Artist');
+
+    function cycle() {
+        $('#be-heading-two').html(messages[index]);
+        index++;
+
+        if (index === messages.length) {
+            index = 0;
+        }
+
+        setTimeout(cycle, 1700);
+    }
+
+    cycle();
+});
 </script> 
 <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
