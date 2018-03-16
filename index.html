@@ -127,21 +127,29 @@ h1.jumbo-text {
     opacity: 1;
 }
 .polaroid-left {
+    transform: rotate(2deg);
     -webkit-transform: rotate(2deg);
     -moz-transform: rotate(2deg);
+    -webkit-backface-visibility: hidden;
 }
 .polaroid-right {
+    transform: rotate(2deg);
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
+    -webkit-backface-visibility: hidden;
 }
 .polaroid-right:hover, .polaroid-right a:hover {
+    transform: rotate(4deg);
     -webkit-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
+    -webkit-backface-visibility: hidden;
     text-decoration: none!important;
 }
-.polaroid-left:hover {
+.polaroid-left:hover, .polaroid-left a:hover {
+    transform: rotate(-4deg);
     -webkit-transform: rotate(-4deg);
     -moz-transform: rotate(-4deg);
+    -webkit-backface-visibility: hidden;
 }
 .polaroid-left, .polaroid-right {
     margin: 60px 30px 0 30px;
@@ -499,7 +507,7 @@ $(function () {
             index = 0;
         }
 
-        setTimeout(cycle, 1620);
+        setTimeout(cycle, 1720);
     }
 
     cycle();
@@ -523,7 +531,7 @@ $(function () {
             index = 0;
         }
 
-        setTimeout(cycle, 1850);
+        setTimeout(cycle, 1950);
     }
 
     cycle();
