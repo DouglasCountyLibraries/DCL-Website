@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-	opacity: 0 !important
+    opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -73,15 +74,58 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-  <script type="text/javascript">
+<link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+<script type="text/javascript">
    $(function() {
     var images = ['lone-tree-one.jpg', 'lone-tree-two.jpg', 'lone-tree-three.jpg', 'lone-tree-four.jpg', 'lone-tree-five.jpg', 'lone-tree-six.jpg'];
     $('.location-background').css({'background-image': 'url(assets/images/' + images[Math.floor(Math.random() * images.length)] + ')'});
    });
   </script>
-  <style>
+<style>
 .using-the-library-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
+}
+.fest-row {
+    background: #7cc7b9 url(fanfest-background.png) repeat-x center bottom;
+    padding: 30px 0 60px 0;
+}
+h1.fest-text {
+    font-family: 'Carter One', cursive;
+    color: #f8ef24;
+    text-shadow: -1px 8px 0px #000;
+    font-size: 90px;
+    transform: rotate(-6deg);
+    line-height: 75px
+}
+h2.fest-text {
+    font-family: 'Carter One', cursive;
+    color: #ec2028;
+    text-shadow: -1px 2px 0px #000;
+    font-size: 40px;
+    line-height: 45px
+}
+.fest-info {
+    background-color: rgba(255,255,255,.9);
+    border: 5px solid #000;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 30px 20px;
+}
+.btn-warning, .btn-warning:visited, .btn-warning:hover, .btn-warning:active {
+    background-color: #ec2028;
+    border: 5px solid #000;
+}
+
+@media (min-width: 1020px) {
+.cons {
+    position: absolute;
+    top: 100px;
+}
+.heros {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -322,24 +366,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div id="events" class="row event-row bg-teal">
-    <div class="col-md-6 bg-lavender equal-height">
-      <div class="one-featured-item">
-        <div style="padding:2px 0px 0px 5px;" class="icon-circle-default"><i class="fa fa-puzzle-piece"></i></div>
-        <h1 class="roboto">Low-Tech Gaming Group</h1>
-        <div>An evening of fun each week playing board and tabletop games. <span class="text-uppercase">All Ages. </span> </div>
-        <div>Mondays, 6PM. </div>
-        <div><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=gaming+group&lib=1002&nd=30" target="_blank" class="btn btn-default">View Calendar</a></div>
+  <div id="events" class="row fest-row">
+    <div class="container-lg">
+      <div class="col-md-3 hidden-xs hidden-sm"><img class="heros img-responsive image-center" src="super-heros.png" alt="Super Heros"></div>
+      <div class="col-md-6 text-center">
+        <h1 class="fest-text">FAN-tastic<br>
+          Fest!</h1>
+        <h2 class="fest-text">Pop Culture Con & Costume Fair</h2>
+        <div class="fest-info">
+          <div>Let your inner hero (or villain) shine at this celebration of pop culture and fandoms of all kinds. Play games, enter a fan art show, show off creative costumes in a costume parade, snap pictures in our photo booth, and get crafty.<br>
+              Saturday, April 7: <span class="text-uppercase">All ages 1-5pm & Teens Only 5-8PM</span></div>
+          <div class="margin-top-15"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=FAN-tastic+fest&lib=1002" target="_blank" class="btn btn-lg btn-default btn-warning">Register now!</a></div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6 bg-teal equal-height">
-      <div class="two-featured-items">
-        <div style="padding:1px 0px 0px 0px;" class="icon-circle-default"><i class="fa fa-film"></i></div>
-        <h1 class="roboto">FAN-tastic Fest: Pop Culture Con &amp; Costume Fair </h1>
-        <div>Let your inner hero (or villain) shine at this celebration of pop culture and fandom, including geeky games, crafts, a costume parade, and more! <span class="text-uppercase">ALL AGES/TEENS. </span> </div>
-        <div>Saturday, April 7, 1-8PM. </div>
-        <div><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=FAN-tastic+fest&lib=1002&nd=30" target="_blank" class="btn btn-default">View Calendar</a></div>
-      </div>
+      <div class="col-md-3"><img class="cons img-responsive image-center" src="cons.png" alt="Comic Characters"></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -348,7 +388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="col-sm-6">
       <div class="text-center">
         <h3>Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h3>
-          <h3 class="margin-top-10"><a href="../taxes">Tax Information</a></h3>
+        <h3 class="margin-top-10"><a href="../taxes">Tax Information</a></h3>
       </div>
     </div>
     <div class="col-sm-6">
@@ -394,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-	  <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
@@ -433,6 +473,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
