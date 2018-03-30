@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-	opacity: 0 !important
+    opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -73,57 +74,92 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="../shared-assets/js/dcl.js"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
 <style>
-.carousel-cell {
-	text-align: center;
-	height: 265px;
-	width: 200px;
-	margin: 0 40px;
+.cloud-background {
+    background: #015a7c url(clouds.jpg) repeat-x top left;
+    height: 400px;
 }
-.carousel-cell:before {
-	display: block;
-	text-align: center;
+.intro-background {
+    background: rgba(1,89,124,1) fixed;
+    background: -moz-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(1,89,124,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01597c', endColorstr='#000000', GradientType=0 );
 }
-.flickity-page-dots {
-	bottom: -75px;
-	opacity: .5;
+.ship-image {
+    position: absolute;
+    -webkit-animation: 120s linear 0s infinite ship;
+    animation: 120s linear 0s infinite ship;
+    z-index: 1;
 }
-.using-the-library-active {
-	background-color: #f5f5f5;
+.bg-opacity {
+    background: rgba(1,89,124,1) fixed;
+    background: -moz-linear-gradient(top, rgba(0,0,0,.3) 0%, rgba(1,89,124,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,.3)), color-stop(100%, rgba(1,89,124,1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 0%, rgba(1,89,124,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,.3) 0%, rgba(1,89,124,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,.3) 0%, rgba(1,89,124,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,.3) 0%, rgba(1,89,124,1) 100%);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 10px 20px 35px 20px;
+    margin-bottom: 30px;
 }
-.number-card {
-	height: 235px;
-	text-align: center;
+ @-webkit-keyframes ship {
+ 0% {
+ right: 20%;
+ top:388px;
+ -webkit-transform: rotateY(0deg);
 }
-.card-grid:hover, .card-grid:focus {
-	cursor: pointer;
+ 50% {
+ right: 100%;
+ top:388px;
+ -webkit-transform: rotateY(0deg);
 }
-.number {
-	color: #fff;
-	font-size: 80px;
-	padding-bottom: 15px;
+ 50.01% {
+right: 100%;
+ top:388px;
+ -webkit-transform: rotateY(180deg);
 }
-.flickity-prev-next-button {
-	display: none;
+ 50.02% {
+right: 100%;
+ top:388px;
+ -webkit-transform: rotateY(180deg);
 }
-
-@media (min-width: 768px) {
-.number-card {
-	height: 235px;
+ 100% {
+right: 20%;
+ top:388px;
+ -webkit-transform: rotateY(180deg);
 }
 }
-.backgroundimg {
-	background-repeat: repeat-x;
-	background-image: url(diamondtile212.png);
+ @keyframes ship {
+ 0% {
+ right: 20%;
+ top:388px;
+ -webkit-transform: rotateY(0deg);
 }
-.backgroundimg-green {
-	background-repeat: repeat;
-	background-image: url(greendiamond.png);
+ 50% {
+ right: 100%;
+ top:388px;
+ -webkit-transform: rotateY(0deg);
 }
-.backgroundimg-teal {
-	background-repeat: repeat;
-	background-image: url(tealdiamond.png);
+ 50.01% {
+right: 100%;
+ top:388px;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ top:388px;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 20%;
+ top:388px;
+ -webkit-transform: rotateY(180deg);
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -298,87 +334,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-top-30">
+  <div class="row cloud-background">
+    <div class="moon"><img class="moon-image" src="moon.png" alt="Moon"></div>
+    <div class="ship"><img class="ship-image" src="ship.png" alt="ship"></div>
+  </div>
+  <div class="row intro-background padding-bottom-60">
+  <div class="container white">
+  <img class="image-center img-responsive" src="neverland.png" alt="Destination Neverland">
+  <h1 class="roboto no-margin-top text-center white">September 28, 2018, 6-11PM<br>
+    Highlands Ranch Mansion</h1>
+  <div class="padding-bottom-15">Join the <a class="white text-underline" href="../foundation/">Douglas County Libraries Foundation</a> as we travel to Neverland via the second star to the right, and straight on 'til morning! Meet your favorite characters: perhaps Tinker Bell, Wendy Darling, Captain Hook or Peter Pan himself. This is no ordinary gala! How can it be, with delightful adventures awaiting in the fanciful London and mysterious island locales of J. M. Barrie's imagination?</div>
+  <div>Wear your favorite theme-inspired outfit—or not—more casual attire is perfectly fine! Begin your enchanted evening with a stroll to the mansion on the hill. Enjoy a delicious catered dinner, complete with a special dessert. Talk with authors, enjoy oh-so-different entertainment, and experience the fun of a silent auction, sure to satisfy your shopping fantasies. Leave with the wonderful memory of a favorite magical tale, knowing that because of your support, your libraries will continue to be great places for young and old—and for those who never grow up.</div>
+  <h2 class="roboto text-center white padding-bottom-15">Add your name to our list of
+    prestigious sponsors!</h2>
+  <div class="row white">
     <div class="container">
-      <h2 class="roboto text-center">The Douglas County Libraries Foundation Presents Its Third Annual</h2>
-    </div>
-  </div>
-  <div class="row padding-top-20 padding-bottom-30">
-    <div class="backgroundimg"> <img src="adventures-in-wonderland.png" class="img-responsive center-block" alt="Adventures in Wonderland"> </div>
-    <h3 class="roboto text-center ">Friday, October 20, 2017,  6-11PM<br />
-      Highlands Ranch Mansion</h3>
-  </div>
-  <div class="row border-top padding-bottom-40">
-    <div class="container">
-      <div class="col-md-6 margin-lg-30 padding-top-40">Let us transport you through the rabbit hole to our version of Alice's Wonderland! Meet your favorite characters: perhaps the rabbit, the Cheshire Cat, the Queen of Hearts, or Alice herself. This will not be an ordinary gala — how can it be with such delightful adventures awaiting "through the looking glass"? </div>
-      <div class="col-md-6 margin-lg-30 padding-top-40">Wear your favorite theme-inspired outfit, or not — more casual attire is perfectly fine! Begin your enchanted evening with a stroll to the Mansion on the hill. Enjoy a delicious catered dinner, complete with a special dessert. Talk with authors, enjoy oh-so-different entertainment, and experience the fun of a silent auction sure to satisfy your shopping fantasies. Leave with the wonderful memory of a favorite magical tale, knowing that because of your support, your libraries will continue to be great places for young and old.</div>
-    </div>
-  </div>
-  <div class="row backgroundimg-teal padding-top-15 padding-bottom-15">
-    <div class="container">
-      <div class="padding-bottom-30">
-        <h1 class="white roboto text-center">Individual Tickets</h1>
-        <div class="text-center"> <a class="btn btn-primary text-uppercase margin-top-15" href="https://www.eventbrite.com/e/fete-des-fables-adventures-in-wonderland-tickets-33061782682" target="_blank">Purchase a Ticket</a> </div>
-      </div>
-    </div>
-  </div>
-  <div class="row backgroundimg-green padding-top-15 padding-bottom-15">
-    <div class="container">
-      <h1 class="white roboto text-center">Sponsorship</h1>
-      <div class="col-md-3 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front"> <img src="fete-sponsor-cheshire-cat.png" alt="Cheshire Cat"> </div>
-          <div class="back bg-almond shadow-low padding-15 flex-center">
-            <div>$6,500<br />
-              Sponsor the evening's entertainment, including live British music, blackjack tables, and "Alice" character actors. Enjoy a table for eight and excellent brand visibility for your organization.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front"> <img src="fete-sponsor-queen-hearts.png" alt="Queen of Hearts"> </div>
-          <div class="back bg-almond shadow-low padding-15 flex-center">
-            <div>$5,000<br />
-              Enjoy a table for eight, 10 tickets to a 2017 DCL signature event, brand visibility for your organization, and the opportunity for your guests to dedicate a fable for DCL's circulating collection.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front"> <img src="fete-sponsor-mad-hatter.png" alt="Mad Hatter"> </div>
-          <div class="back bg-almond shadow-low padding-15 flex-center">
-            <div>$2,500<br />
-              Enjoy a table for eight, 10 tickets to a 2017 DCL signature event, and brand visibility for your organization.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 margin-top-15 margin-bottom-15">
-        <div class="card-grid number-card">
-          <div class="front"> <img src="fete-sponsor-tweedle-dee.png" alt="Tweedle Dee and Tweedle Dumb"> </div>
-          <div class="back bg-almond shadow-low padding-15 flex-center">
-            <div>$1,250<br />
-              Enjoy a table for eight and a sponsor listing on our program and presentation screens for the evening.</div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center"> <a class="btn btn-primary text-uppercase margin-top-40 margin-bottom-30" href="https://form.jotform.us/70655453285158" target="_blank">Be a Sponsor</a> </div>
-    </div>
-  </div>
-  <div class="row bg-gray-5 padding-top-15 padding-bottom-80">
-    <div class="container"> 
-      <!--<div class="col-md-6 margin-lg-30 padding-top-40"> 
-        <h1 class="roboto text-center no-margin-bottom">Silent Auction</h1>
-        <div class="text-center margin-top-10">Description of items</div>
-        <ul class="list-unstyled text-center margin-top-10 margin-bottom-30">
-          <li>List of entertainment</li>
-          <li></li>
-          <li></li>
+      <div class="col-md-12 bg-opacity">
+        <h3 class="white text-uppercase">Presenting Sponsor<br>
+          $15,000</h3>
+        <h4 class="roboto white">Pre-Event Benefits:</h4>
+        <ul>
+          <li>Recognition on Fête des Fables web page</li>
+          <li>Recognition as Presenting Sponsor in DCL eNewsletter promotions prior to event</li>
+          <li>Your name highlighted in event press releases</li>
+          <li>Your logo on save-the-date postcard and electronic mailings (requires commitment by March 15, 2018)</li>
+          <li>Your logo on event invitations</li>
+          <li>Recognition on our Facebook page</li>
         </ul>
-      </div>-->
-      <div class="col-md-12 padding-top-60 padding-bottom-20"> 
-        <!--<img class="img-circle img-responsive center-block" src="master-builder.png">-->
-        
-        <h3 class="text-center roboto"><a class="margin-top-30 margin-bottom-30" href="https://www.flickr.com/photos/douglascountylibraries/albums/72157678032941604" target="_blank">See photos of the 2016 Fête des Fables</a></h3>
+        <h4 class="roboto white">Event Benefits:</h4>
+        <ul>
+          <li>Your logo on event presentation slides</li>
+          <li>Presenting Sponsor recognition on signage throughout the mansion</li>
+          <li>Recognition and your logo on printed program of events</li>
+          <li>One table for eight (8) guests with VIP event hall placement</li>
+        </ul>
+        <h4 class="roboto white">Post-Event Benefits:</h4>
+        <ul>
+          <li>Your logo on thank-you letters (to sponsors, individual ticket purchasers, auction donors and auction buyers)</li>
+        </ul>
+      </div>
+      <div class="row white">
+        <div class="container">
+          <div class="col-md-3 bg-opacity">
+            <h3 class="white text-uppercase">Peter Pan and the Lost Boys<br>
+              <span class="small white">Entertainment Sponsor</span><br>
+              $7,500</h3>
+            <h4 class="roboto white">Event Benefits:</h4>
+            <ul>
+              <li>Meet the evening's entertainers</li>
+              <li>Table for eight (8) guests with premium placement</li>
+              <li>Eight (8) tickets to any 2018-19 Douglas County Libraries Signature Event (adult and/or children's events)</li>
+              <li>Your logo on event signage, evening program and presentation screens</li>
+              <li>Your name announced at podium</li>
+            </ul>
+          </div>
+          <div class="col-md-3 bg-opacity">
+            <h3 class="white text-uppercase">Captain Hook<br>
+              <span class="small white">Table Sponsor</span><br>
+              $5,000</h3>
+            <h4 class="roboto white">Event Benefits:</h4>
+            <ul>
+              <li>Themed table for eight (8) guests</li>
+              <li>Eight (8) tickets to any 2018-19 Douglas County Libraries Signature Event (adult and/or children's events)</li>
+              <li>Your logo on evening program and presentation screens</li>
+              <li>Your name announced at podium</li>
+            </ul>
+          </div>
+          <div class="col-md-3 bg-opacity">
+            <h3 class="white text-uppercase">Tinker Bell<br>
+              <span class="small white">Table Sponsor</span><br>
+              $2,500</h3>
+            <h4 class="roboto white">Event Benefits:</h4>
+            <ul>
+              <li>Table for eight (8) guests</li>
+              <li>Four (4) tickets to any 2018-19 Douglas County Libraries Signature Event (adult and/or children's events)</li>
+              <li>Your logo on evening program and presentation screens</li>
+            </ul>
+          </div>
+          <div class="col-md-3 bg-opacity">
+            <h3 class="white text-uppercase">Wendy's Table<br>
+              <span class="small white">Table Sponsor</span><br>
+              $1,500</h3>
+            <h4 class="roboto white">Event Benefits:</h4>
+            <ul>
+              <li>Table for eight (8) guests</li>
+              <li>Your name on evening program and presentation screens</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row white">
+        <div class="container">
+          <div class="col-md-12 text-center">
+            <h1 class="white text-uppercase no-margin">New this year!</h1>
+            <h3 class="white text-uppercase no-margin-top">Neverland at Home<br>
+              $1,000</h3>
+            <div class="margin-bottom-10"> What if you want to support our event, but staying at home for the evening is more enticing? Donate and we will provide you a package of goodies for a fun evening in! You and your family and/or friends will enjoy the 1991 Steven Spielberg film "Hook," a colorful Peter Pan book, a variety sampler of gourmet popcorn (yum!), more tasty movie-worthy snacks, and a cozy blanket commemorating "Neverland" – all within the comfort of your own home!</div>
+            <div>And if that isn't enough, we'll do a special Facebook "shout out" to you and/or your organization! </div>
+          </div>
+        </div>
+      </div>
+      <div class="row white margin-top-30 margin-bottom-100">
+        <div class="container text-center">
+          <div class="col-md-12">
+            <h4 class="roboto white">To purchase your sponsorship, please contact:</h4>
+            <h3 class="white no-margin-top">Elaine McCain, Donor Relations</h3>
+            <div><a class="white" href="mailto:emccain@dclibraries.org">emccain@dclibraries.org</a></div>
+            <div><a class="white" href="tel:+17203489509">720-348-9509</a></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -388,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="col-sm-6">
       <div class="text-center">
         <h3>Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h3>
-          <h3 class="margin-top-10"><a href="../taxes">Tax Information</a></h3>
+        <h3 class="margin-top-10"><a href="../taxes">Tax Information</a></h3>
       </div>
     </div>
     <div class="col-sm-6">
@@ -434,14 +498,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-	  <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-		<script>
-	  $(".card-grid").flip();
-		</script> 
-		<!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
@@ -477,6 +537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
