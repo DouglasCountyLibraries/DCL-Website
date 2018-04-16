@@ -77,15 +77,24 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" integrity="sha256-RYxg7tiJnLgQq6MA97aPOy+QCt1360G5PsCmiXw87dA=" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" integrity="sha256-HAaPZfOf77+Qt1BGcxucDhuS/tJVxuZA+uX3tbcnSAk=" crossorigin="anonymous"></script>
 <style>
-.flickity-page-dots .dot {
-    background-color: #fff;
+/* big buttons, no circle */
+.flickity-prev-next-button {
+    width: 60px;
+    height: 60px;
+    background: transparent;
 }
-.flickity-page-dots {
-    bottom: -35px;
-    opacity: .5;
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #fff;
+}
+.flickity-prev-next-button.no-svg {
+    color: #fff;
 }
 .flickity-prev-next-button {
-    display: none;
+    top: 48%;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -391,11 +400,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-teal padding-top-60">
     <div class="container-lg">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="becky.jpg" alt="Volunteer Becky"></div>
+        <div class="carousel-cell"><img src="moving-boxes.jpg" alt="Moving Boxes"></div>
+        <div class="carousel-cell"><img src="little-library-volunteers.jpg" alt="Little Library Volunteers"></div>
+        <div class="carousel-cell"><img src="volunteers-pets.jpg" alt="Volunteers with Chicks"></div>
+        <div class="carousel-cell"><img src="event.jpg" alt="Volunteering at an Event Table"></div>
+        <div class="carousel-cell"><img src="young-volunteer.jpg" alt="Young Woman Volunteering"></div>
+        <div class="carousel-cell"><img src="mentoring.jpg" alt="Mentoring a Child"></div>
+        <div class="carousel-cell"><img src="team-dcl.jpg" alt="Table for Team DCL"></div>
+        <div class="carousel-cell"><img src="book-start.jpg" alt="Book Start"></div>
+        <div class="carousel-cell"><img src="pizza-party.jpg" alt="Volunteer Pizza Party"></div>
+        <div class="carousel-cell"><img src="cleaning-up.jpg" alt="Cleaning Up"></div>
         <div class="carousel-cell"><img src="group.jpg" alt="Volunteer Group"></div>
         <div class="carousel-cell"><img src="elyse.jpg" alt="Elyse Volunteering at the Library"></div>
         <div class="carousel-cell"><img src="fair.jpg" alt="At the Fair"></div>
         <div class="carousel-cell"><img src="nikki.jpg" alt="Nikki Shelving Books"></div>
+        <div class="carousel-cell"><img src="teen-volunteers.jpg" alt="Teen Volunteer Group"></div>
         <div class="carousel-cell"><img src="parade.jpg" alt="On Parade"></div>
         <div class="carousel-cell"><img src="retreat.jpg" alt="At the Retreat"></div>
         <div class="carousel-cell"><img src="volunteering-event.jpg" alt="Volunteering Event"></div>
@@ -403,12 +424,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="carousel-cell"><img src="storytime-volunteer.jpg" alt="Storytime Volunteer"></div>
         <div class="carousel-cell"><img src="little-library.jpg" alt="Little Library"></div>
         <div class="carousel-cell"><img src="workers.jpg" alt="Job Site Volunteers"></div>
-        <div class="carousel-cell"><img src="mentoring.jpg" alt="Mentoring a Child"></div>
-        <div class="carousel-cell"><img src="book-start.jpg" alt="Book Start"></div>
       </div>
     </div>
   </div>
-  <div class="row text-center bg-teal padding-top-20 padding-bottom-40">
+  <div class="row text-center bg-teal padding-top-15 padding-bottom-60">
     <div class="container">
       <h1 class="roboto white text-center">Volunteer News</h1>
       <div class="col-md-6 padding-bottom-15 white text-left-md margin-lg-30">It's an exciting time for Douglas County Libraries and Volunteer Services! We have been certified as a Service Enterprise by Points of Light, the world's largest organization dedicated to volunteer service.</div>
