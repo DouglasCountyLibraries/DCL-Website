@@ -82,7 +82,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     background-color: #fff;
 }
 .flickity-page-dots {
-    bottom: -35px;
+    bottom: -30px;
     opacity: .5;
 }
 .flickity-prev-next-button {
@@ -293,26 +293,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
       <div class="row">
-        <div class="container text-center">
-          <h4 class="roboto">Your event is important to us! Our packages accommodate the style, size and complexity of any event, ranging from Self-Service to Concierge Service, where a dedicated event expert helps you make your special function a success.
-            By reserving a room you <a href="../meeting-room-guidelines" target="_blank">agree to DCL's terms and conditions.</a></h4>
+        <div class="container text-center padding-bottom-15">
+          <h4 class="roboto padding-bottom-15">Your event is important to us! Our packages accommodate the style, size and complexity of any event, ranging from Self-Service to Concierge Service, where a dedicated event expert helps you make your special function a success. By reserving a room you <a href="../meeting-room-guidelines" target="_blank">agree to DCL's terms and conditions.</a></h4>
+          <div><a href="../event-spaces/" type="button" class="btn btn-primary text-uppercase">View Event Spaces</a><a class="margin-left-15 text-nowrap font-weight-400 text-uppercase" href="#service-levels">Select Your Service &raquo;</a> </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row bg-teal padding-top-60 padding-bottom-60">
+  <div class="row bg-teal padding-top-40 padding-bottom-15">
     <div class="container-lg">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.36, "autoPlay": 4000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="view.jpg" alt="View out Window"></div>
         <div class="carousel-cell"><img src="seating.jpg" alt="Seating"></div>
         <div class="carousel-cell"><img src="event-hall.jpg" alt="Event Hall"></div>
         <div class="carousel-cell"><img src="deck.jpg" alt="Deck"></div>
         <div class="carousel-cell"><img src="buffet.jpg" alt="Buffet"></div>
         <div class="carousel-cell"><img src="beverages.jpg" alt="Assortment of Beverages"></div>
+        <div class="carousel-cell"><img src="parker-art.jpg" alt="Parker Conference Room"></div>
+        <div class="carousel-cell"><img src="castle-pine-childrens-area.jpg" alt="Castle Pines Children's Area"></div>
+        <div class="carousel-cell"><img src="parker-art.jpg" alt="Parker Art"></div>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-40 padding-bottom-40">
+  <div class="row white bg-teal padding-bottom-30"> </div>
+  <div id="service-levels" class="row bg-gray-5 padding-top-40 padding-bottom-40">
     <div class="container">
       <div class="col-md-4 service-box equal-height bg-white padding-bottom-30">
         <h1 class="roboto bg-moss text-center">Self-Service</h1>
@@ -329,7 +333,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="text-center margin-top-30"> <a href="http://host.evanced.info/douglas/evanced/roomrequest.asp" target="_blank" class="text-uppercase button btn btn-primary">Reserve a Meeting Room *</a></div>
         </div>
         <div class="text-center">Need help? Call: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></div>
-          <div class="text-center margin-top-10">* <a data-toggle="modal" data-target="#modaltwo" href="#">Spaces account</a> required</div>
+        <div class="text-center margin-top-10">* <a data-toggle="modal" data-target="#modaltwo" href="#">Spaces account</a> required</div>
       </div>
       <!-- Modal -->
       <div class="modal fade" id="modaltwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -430,10 +434,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-40 text-center">
+  <div class="row bg-teal padding-top-15 padding-bottom-40 text-center">
     <h4 class="roboto white">All reservations are subject to room availability.</h4>
     <div class="white large-text margin-lg-200">Select and Concierge Service reservations are subject to availability of Event & Hospitality Services personnel.</div>
-    <a href="../event-spaces/" type="button" class="btn btn-primary text-uppercase margin-top-30">View Event Spaces</a> </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -490,7 +494,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.pkgd.min.js" integrity="sha256-/i359t9LSo1xdNJZ9WO42eKOTAP49Akv2dtgRODmTDI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.pkgd.min.js" integrity="sha256-/i359t9LSo1xdNJZ9WO42eKOTAP49Akv2dtgRODmTDI=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script>
     <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">

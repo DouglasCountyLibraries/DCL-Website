@@ -76,17 +76,30 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.min.css" integrity="sha256-qNqUHYpEZRbIJOvJ+3e0LmuSxt7tHa7SZr2CHtJ7xRY=" crossorigin="anonymous" />
 <style>
 .reserve-a-space-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
-.flickity-page-dots .dot {
-	background-color: #fff;
+.fa-star {
+    color: #FFBE0C;
+}
+.carousel-cell {
+    width: 100%;
+    padding: 0 0 50px 0;
+}
+.carousel-cell:before {
+    display: block;
+    text-align: center;
 }
 .flickity-page-dots {
-	bottom: -35px;
-	opacity: .5;
+    bottom: 20px;
+    opacity: .5;
+}
+.flickity-page-dots .dot {
 }
 .flickity-prev-next-button {
-	display: none;
+    display: none;
+}
+.flickity-viewport {
+    transition: height 0.6s;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -267,104 +280,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <h1 class="jumbo-text text-uppercase font-weight-400">Reserve a Space</h1>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fa fa-check-square-o"></i></div>
-          <h4 class="roboto">Douglas County Libraries offers meeting and study spaces, indoor and outdoor event spaces, and a public bandstand for performances or demonstrations, for nonprofit, community and for-profit groups. By reserving a room you <a href="../meeting-room-guidelines" target="_blank">agree to DCL's terms and conditions.</a></h4>
+          <h4 class="roboto">Douglas County Libraries offers meeting and study spaces, indoor and outdoor event spaces, and a public bandstand for performances or demonstrations, for nonprofit, community and for-profit groups.</h4>
         </div>
       </div>
     </div>
   </div>
-  <div class="row no-gutter sub-nav-row">
-    <div class="sub-nav">
-      <div class="col-md-4 col-md-push-2 sub-nav-item sub-nav-border-first equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="#study-rooms"><i class="fa fa-th"></i>Study Rooms</a></h5>
-      </div>
-      <div class="col-md-4 col-md-push-2 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="#recording-studio"><i class="fa fa-camera-retro"></i>Parker Recording Studio</a></h5>
-      </div>
-    </div>
-  </div>
-  <div class="row white bg-teal padding-bottom-15">
-    <div id="event-hospitality" class="container">
-      <h1 class="text-center white">Event + Hospitality Services</h1>
-    </div>
-  </div>
-  <div class="row bg-teal">
-    <div class="container-lg">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.36, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="event-hall-and-food.jpg" alt="Event Hall and Food"></div>
-        <div class="carousel-cell"><img src="event-room-with-tables.jpg" alt="Event Room with Tables"></div>
-        <div class="carousel-cell"><img src="event-gallery.jpg" alt="Event Gallery"></div>
-        <div class="carousel-cell"><img src="outside-lone-tree.jpg" alt="Outside of Lone Tree"></div>
-        <div class="carousel-cell"><img src="event-treats.jpg" alt="Event Treats"></div>
-        <div class="carousel-cell"><img src="event-terrace.jpg" alt="Event Terrace"></div>
-      </div>
-    </div>
-  </div>
-  <div class="row white bg-teal padding-top-20 padding-bottom-40">
-    <div class="container text-center">
-      <h1 class="white">Discover Exceptional Event Spaces</h1>
-      <div> Our three brand-new, vibrant buildings offer beautiful and ample <a class="white text-underline" href="../event-spaces">event spaces</a>, and maintain the high standards of service you may have encountered in our legacy buildings. From modern furniture to high-end technology, discover the ideal event space for your next corporate function or social event, whether intimate or expansive. We'll even <a class="white text-underline" href="../birthday-parties/">host your child's birthday party!</a></div>
-      <div class="text-center margin-top-30 margin-bottom-15"> <a href="../event-services" class="text-uppercase btn btn-primary">Get Started</a></div>
-    </div>
-  </div>
-  <div class="row padding-top-30 padding-bottom-60">
-    <div class="container">
-      <div class="col-md-6">
-        <div id="study-rooms" class="text-center margin-lg-30">
-          <h1>Study Rooms</h1>
-          <div class="text-left-md">Study rooms for up to eight people (rooms vary by location) may be reserved up to one month in advance, for a maximum of two hours per day. You may forfeit your reservation if you are 15 or more minutes late. For help reserving a study room, call <a href="tel:+13037917323">(303) 791-7323</a> or visit your library.</div>
-          <div class="margin-top-30"> <a href="http://studyrooms.douglascountylibraries.org/srres.html?branchname=CastlePines" target="_blank" class="text-uppercase button btn btn-primary">Reserve a Study Room</a></div>
+  <div class="row white bg-teal padding-top-40">
+    <div class="container-lg no-gutter">
+      <div class="col-md-4 padding-bottom-40">
+        <div id="box-one"></div>
+        <h2 class="text-center white"><a class="white" href="../event-services/">Event Spaces & Services</a></h2>
+        <div class="margin-left-30 margin-right-30">Our vibrant buildings offer beautiful and ample <a class="white text-underline" href="../event-spaces/">event spaces</a>, and maintain the highest standards of service. From modern furniture to high-end technology, discover the ideal event space for your next corporate function or intimate social event. We'll even <a class="white text-underline" href="../birthday-parties/">host your child's birthday party</a>!
+          <div class="margin-top-30 text-center"> <a href="../event-services/" class="btn btn-lg btn-primary">Get Started</a></div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div id="recording-studio" class="text-center margin-lg-30">
-          <h1>Parker Recording Studio</h1>
-          <div class="text-left-md">Patrons at our Parker location can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</div>
-          <div class="text-center margin-top-30"> <a href="http://studyrooms.douglascountylibraries.org/StudioRes.html" target="_blank" class="text-uppercase button btn btn-primary margin-right-10">Reserve Now</a> 
-            
-            <!-- Button trigger modal --> 
-            <a class="margin-left-15 text-uppercase" data-toggle="modal" data-target="#modalone" href="#">Learn More &raquo;</a> 
-            
-            <!-- Modal -->
-            <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="text-center modal-title">Parker Recording Studio</h3>
-                  </div>
-                  <div class="modal-body text-left padding-left-30 padding-right-30 padding-bottom-40">
-                    <div class="padding-bottom-15">The Recording Studio can be reserved for up to three hours at a time. Room use can be extended if no one is waiting. Three single-user computer stations, located just outside the Recording Studio, can also be reserved for digital projects. Software on these computers and the Recording Studio computer may include:</div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <ul>
-                          <li>Tinkercad</li>
-                          <li>Sketch-up Pro</li>
-                          <li>Blender</li>
-                          <li>Unity</li>
-                          <li>Adobe Creative Cloud</li>
-                          <li>Final Cut Pro</li>
-                          <li>Compressor 4</li>
-                          <li>Motion 5</li>
-                        </ul>
-                      </div>
-                      <div class="col-md-6">
-                        <ul>
-                          <li>iMovie</li>
-                          <li>Garageband</li>
-                          <li>iWorks</li>
-                          <li>Manga Studio 5</li>
-                          <li>Camtasia Studio (Mac)</li>
-                          <li>Logic Pro X</li>
-                          <li>MainStage 3</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div>Due to demand, the Recording Studio and additional computer stations may be given to other patrons if you are more than 15 minutes late for your reserved time. The Recording Studio may be booked online in advance, on a walk-in basis or with the assistance of library staff. The additional computers outside the Recording Studio can be booked by library staff over the phone or in person and on a walk-in basis.
-                      <h3 class="no-margin-bottom">Need help?</h3>
-                      Please schedule your session at least five business days in advance for one-on-one assistance. We are not able to accommodate last-minute assistance requests at this time.</div>
-                  </div>
-                </div>
-              </div>
+      <div class="col-md-4 padding-bottom-40">
+        <div id="box-two"></div>
+        <h2 class="text-center white"><a class="white" href="http://studyrooms.douglascountylibraries.org/srres.html?branchname=CastlePines" target="_blank">Study Rooms</a></h2>
+        <div class="margin-left-30 margin-right-30"> Study rooms for up to eight people (rooms vary by location) may be reserved up to one month in advance, for a maximum of two hours per day. You may forfeit your reservation if you are 15 or more minutes late. For help reserving a study room, call <a class="white text-nowrap" href="tel:+13037917323">(303) 791-7323</a> or visit your library.</div>
+        <div class="margin-top-30 text-center"> <a href="http://studyrooms.douglascountylibraries.org/srres.html?branchname=CastlePines" target="_blank" class="btn btn-lg btn-primary">Reserve a Study Room</a></div>
+      </div>
+      <div class="col-md-4 padding-bottom-40">
+        <div id="box-three"></div>
+        <h2 class="text-center white"><a class="white" href="http://studyrooms.douglascountylibraries.org/StudioRes.html" target="_blank">Parker Recording Studio</a></h2>
+        <div class="margin-left-30 margin-right-30">Patrons at our Parker location can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</div>
+        <div class="text-center margin-top-30"> <a href="http://studyrooms.douglascountylibraries.org/StudioRes.html" target="_blank" class="btn btn-lg btn-primary margin-right-10">Reserve Now</a> 
+          <!-- Button trigger modal --> 
+          <a class="white text-underline margin-left-15 font-weight-400 text-uppercase" data-toggle="modal" data-target="#modalone" href="#">Learn More &raquo;</a> </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="text-center modal-title">Parker Recording Studio</h3>
+        </div>
+        <div class="modal-body text-left padding-left-30 padding-right-30 padding-bottom-40">
+          <div class="padding-bottom-15">The Recording Studio can be reserved for up to three hours at a time. Room use can be extended if no one is waiting. Three single-user computer stations, located just outside the Recording Studio, can also be reserved for digital projects. Software on these computers and the Recording Studio computer may include:</div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li>Tinkercad</li>
+                <li>Sketch-up Pro</li>
+                <li>Blender</li>
+                <li>Unity</li>
+                <li>Adobe Creative Cloud</li>
+                <li>Final Cut Pro</li>
+                <li>Compressor 4</li>
+                <li>Motion 5</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>iMovie</li>
+                <li>Garageband</li>
+                <li>iWorks</li>
+                <li>Manga Studio 5</li>
+                <li>Camtasia Studio (Mac)</li>
+                <li>Logic Pro X</li>
+                <li>MainStage 3</li>
+              </ul>
+            </div>
+          </div>
+          <div>Due to demand, the Recording Studio and additional computer stations may be given to other patrons if you are more than 15 minutes late for your reserved time. The Recording Studio may be booked online in advance, on a walk-in basis or with the assistance of library staff. The additional computers outside the Recording Studio can be booked by library staff over the phone or in person and on a walk-in basis.
+            <h4 class="no-margin-bottom">Need help?</h4>
+            Please schedule your session at least five business days in advance for one-on-one assistance. We are not able to accommodate last-minute assistance requests at this time.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var images = ['space-one.jpg', 'space-two.jpg', 'space-three.jpg', 'space-four.jpg', 'space-five.jpg', 'space-six.jpg', 'space-seven.jpg', 'space-eight.jpg', 'space-nine.jpg'];
+    $('<img alt="Event Spaces" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+	
+	var images = ['study-room-one.jpg', 'study-room-two.jpg', 'study-room-three.jpg'];
+    $('<img alt="Study Rooms" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+	
+	var images = ['studio-one.jpg', 'studio-two.jpg', 'studio-three.jpg'];
+    $('<img alt="Parker Recording Studio" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
+
+</script>
+  <div class="row">
+    <div class="container margin-lg-200 text-center padding-top-40 padding-bottom-30">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.30, "autoPlay": 6000 }'>
+        <div class="carousel-cell">
+          <div><img alt="Facebook Review" class="img-circle" src="reviews/jessica-f.jpg" />
+            <div class="padding-top-15">
+              <blockquote>"What beautiful and spacious meeting rooms with lots of built in tech capabilities! Perfect for hosting our organization's guest speaker event. Not to mention the incredibly friendly and helpful staff. Thank you!" <small> <a href="https://www.facebook.com/jessica.fredrickson.779/posts/10155318788053890:0" target="_blank">Jessica F. on Facebook</a></small></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="Yelp Review" class="img-circle" src="reviews/yelp.png" />
+            <div class="padding-top-15">
+              <blockquote>"My company did a credit seminar at the library in Lone Tree. We worked with Michael Morrow and he was amazing. The process of setting up was smooth and he was very helpful. If ever you need to schedule an event I would highly recommend the Douglas County libraries." <small> <a href="https://www.yelp.com/biz/douglas-county-libraries-in-highlands-ranch-highlands-ranch?hrid=FSm2jvSqbwrHk-dXEdatLg&utm_campaign=www_review_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank">Casey M. on Yelp</a></small></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="Instagram Review" class="img-circle" src="reviews/athomeintheclassroom.jpg" />
+            <div class="padding-top-15">
+              <blockquote>"It can be hard to find meeting space in our district, but fortunately our local libraries have beautiful meeting spaces you can book for free!!! The furniture is all flexible and there are so many great options! Yay Castle Pines Library!!!" <small> <a href="https://www.instagram.com/p/BasXfVshyMx/" target="_blank">athomeintheclassroom on Instagram</a></small></blockquote>
             </div>
           </div>
         </div>
@@ -427,7 +446,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.pkgd.min.js" integrity="sha256-/i359t9LSo1xdNJZ9WO42eKOTAP49Akv2dtgRODmTDI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.pkgd.min.js" integrity="sha256-/i359t9LSo1xdNJZ9WO42eKOTAP49Akv2dtgRODmTDI=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script>
     <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
