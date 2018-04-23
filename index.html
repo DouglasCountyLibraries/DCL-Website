@@ -80,10 +80,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 <style>
+.link-row {
+    background: #00AAB0;
+    padding: 80px 0 60px;
+}
 .jumbo {
     background: #00AAB0 url(superheros.gif) repeat-x bottom center;
-    padding: 100px 0 300px;
-    min-height: 275px;
+    min-height: 225px;
+    box-sizing: border-box;
+    -webkit-animation: slide 90s linear infinite;
 }
 .featured {
     background: #0a4978;
@@ -100,7 +105,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     font-size: 60px;
     line-height: 50px;
     color: #e61e25;
-    margin-top: 15px;
+    margin-top: 30px;
     letter-spacing: .06em;
 }
 .grow {
@@ -152,14 +157,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
  text-shadow: 2px 1px 0 #fff, -2px -1px 0 #fff, 2px -1px 0 #fff, -2px 1px 0 #fff, 0px 1px 0 #fff, 2px 0px 0 #fff, 0px -1px 0 #fff, -2px 0px 0 #fff, 5px 8px 1px #000;
 }
 }
-@media (max-width: 768px) {
-.jumbo {
-    padding: 30px 0 200px 0;
+ @-webkit-keyframes slide {
+ from {
+background-position: 0 0;
+}
+ to {
+background-position: -1739px 0;
+}
+}
 
+@media (max-width: 768px) {
+.link-row {
+    padding: 50px 0 0;
 }
 .grow {
-    font-size: 50px;
-    line-height: 45px;
+    font-size: 55px;
+    line-height: 50px;
 }
 }
 </style>
@@ -335,14 +348,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row jumbo">
-    <div class="container">
-      <div class="col-xs-12 text-center">
-        <div class="grow text-shadow-one"><a class="grow" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1177164707">Draw Comic-Book Heroes</a></div>
-        <div class="grow"><a class="grow text-shadow-two" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1177034997_be_a_master_lego_super_hero_engineer">Super LEGO Fun</a></div>
-      </div>
+  <div class="row link-row">
+    <div class="col-xs-12 text-center">
+      <div class="grow text-shadow-one"><a class="grow" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1177164707">Draw Comic-Book Heroes</a></div>
+      <div class="grow"><a class="grow text-shadow-two" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1177034997_be_a_master_lego_super_hero_engineer">Super LEGO Fun</a></div>
     </div>
   </div>
+  <div class="row jumbo"> </div>
   <div class="row featured padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
