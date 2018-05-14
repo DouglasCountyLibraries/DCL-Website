@@ -425,6 +425,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.pkgd.min.js" integrity="sha256-/i359t9LSo1xdNJZ9WO42eKOTAP49Akv2dtgRODmTDI=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
 <script id="e2ma-embed">window.e2ma=window.e2ma||{};e2ma.accountId='1812544';</script><script src="//dk98ddgl0znzm.cloudfront.net/e2ma.js" async="async"></script> 
 <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
