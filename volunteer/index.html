@@ -76,24 +76,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.min.css" integrity="sha256-qNqUHYpEZRbIJOvJ+3e0LmuSxt7tHa7SZr2CHtJ7xRY=" crossorigin="anonymous" />
 <style>
-/* big buttons, no circle */
-.flickity-prev-next-button {
-    width: 60px;
-    height: 60px;
-    background: transparent;
+.flickity-page-dots .dot {
+    background-color: #fff;
 }
-.flickity-prev-next-button:hover {
-    background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-    fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
-    color: #fff;
+.flickity-page-dots {
+    bottom: -30px;
+    opacity: .5;
 }
 .flickity-prev-next-button {
-    top: 48%;
+    display: none;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -399,7 +390,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-teal padding-top-60">
     <div class="container-lg">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="becky.jpg" alt="Volunteer Becky"></div>
         <div class="carousel-cell"><img src="moving-boxes.jpg" alt="Moving Boxes"></div>
         <div class="carousel-cell"><img src="little-library-volunteers.jpg" alt="Little Library Volunteers"></div>
