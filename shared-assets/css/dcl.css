@@ -1254,6 +1254,10 @@ h6.responsive-text {
 .database-box h4 {
     line-height: 1.2em;
 }
+.database-box {
+    padding: 15px 15px 40px 15px;
+    margin-bottom: 15px;
+}
 .database-dropdown {
     width: 100%;
     position: relative;
@@ -2052,12 +2056,12 @@ button.s-srch-facet-btn {
     display: none;
 }
 #archive-header h2 {
-	font-size: 16px;
-	text-transform: uppercase;
-	font-weight: 400;
-	margin-top: 0;
-	position: relative;
-	top: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    top: 20px;
 }
 .blog-nav, .blog-nav a {
     background-color: #d36a50;
@@ -2259,12 +2263,6 @@ body .lightbox .lb-image {
     border-radius: 0;
 }
 
-@media (max-width: 768px) {
-h1.entry-title {
-    font-size: 26px;
-}
-}
-
 /* ====== media queries ====== */
 @media (min-width: 480px) {
 .row-xs-height {
@@ -2272,6 +2270,34 @@ h1.entry-title {
     table-layout: fixed;
     height: 100%;
     width: 100%;
+}
+}
+
+@media (min-width: 575px) {
+.location-background h1 {
+    font-size: 100px;
+    line-height: 85px;
+}
+.location-background h2 {
+    font-size: 60px;
+    line-height: 55px;
+}
+}
+
+/* required for jquery match-height */
+
+@media only screen and (max-width : 767px) {
+.equal-height {
+    height: auto !important;
+}
+}
+
+@media (max-width: 768px) {
+h1.entry-title {
+    font-size: 26px;
+}
+.database-box {
+    min-height: 160px;
 }
 }
 
@@ -2309,25 +2335,6 @@ h1.entry-title {
 }
 }
 
-@media (min-width: 575px) {
-.location-background h1 {
-    font-size: 100px;
-    line-height: 85px;
-}
-.location-background h2 {
-    font-size: 60px;
-    line-height: 55px;
-}
-}
-
-/* required for jquery match-height */
-
-@media only screen and (max-width : 767px) {
-.equal-height {
-    height: auto !important;
-}
-}
-
 @media (min-width: 992px) {
 .padding-top-md-120 {
     padding-top: 120px;
@@ -2346,9 +2353,6 @@ h1.entry-title {
 }
 .padding-right-md-30 {
     padding-right: 30px;
-}
-.database-box {
-    min-height: 235px;
 }
 .text-left-md {
     text-align: left;
@@ -2381,6 +2385,9 @@ h1.entry-title {
     padding-left: 100px;
     padding-right: 100px;
 }
+.database-box {
+    min-height: 210px;
+}
 }
 
 @media (min-width: 1200px) {
@@ -2405,6 +2412,9 @@ h1.entry-title {
     line-height: 20px;
     padding: 20px 5px;
     text-align: center;
+}
+.database-box {
+    min-height: 220px;
 }
 .text-left-lg {
     text-align: left;
