@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-	opacity: 0 !important
+    opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -77,16 +78,37 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 
-<link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 <style>
-.background-gradient {
-    background: linear-gradient(#005c97, #d7f4ff);
+.lobster {
+    font-family: 'Lobster', cursive;
+    letter-spacing: .03em
+}
+.background {
+    background: #ade0f1 url(background.jpg) no-repeat center center/cover;
+    padding-top: 30px;
+}
+.page-wrapper {
+    background: rgba(254,204,79,1) fixed;
+    background: -moz-linear-gradient(top, rgba(254,204,79,1) 0%, rgba(252,232,133,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254,204,79,1)), color-stop(100%, rgba(252,232,133,1)));
+    background: -webkit-linear-gradient(top, rgba(254,204,79,1) 0%, rgba(252,232,133,1) 100%);
+    background: -o-linear-gradient(top, rgba(254,204,79,1) 0%, rgba(252,232,133,1) 100%);
+    background: -ms-linear-gradient(top, rgba(254,204,79,1) 0%, rgba(252,232,133,1) 100%);
+    background: linear-gradient(to bottom, rgba(254,204,79,1) 0%, rgba(252,232,133,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fecc47', endColorstr='#fce885', GradientType=0 );
+}
+.banner {
+    position: relative;
+    top: 10px;
+    z-index: 2;
+}
+.banner:hover {
+    transform: scale(1.03);
+    transition: all .4s ease-in-out;
 }
 .camp-row {
     background: #005c97;
-}
-.link-row {
-    margin: 100px 0 240px;
 }
 .jumbo {
     background: url(graduation.png) repeat-x bottom center;
@@ -98,19 +120,27 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     background: #0a4978;
 }
 .grow {
-    font-family: 'Graduate', cursive;
-    font-size: 60px;
-    line-height: 50px;
+    font-family: 'Lobster', cursive;
     color: #fff;
-    font-weight: bold;
-    margin-top: 30px;
-    text-shadow: 2px 1px 0 #d36a50, -2px -1px 0 #d36a50, 2px -1px 0 #d36a50, -2px 1px 0 #d36a50, 0px 1px 0 #d36a50, 2px 0px 0 #d36a50, 0px -1px 0 #d36a50, -2px 0px 0 #d36a50, 3px 6px 1px #000;
 }
 .grow {
     transition: all .4s ease-in-out;
 }
 .grow:visited, .grow:hover, .grow:active, .grow a:visited, .grow a:hover, .grow a:active {
     color: #fff;
+    transform: scale(1.05);
+    text-decoration: none;
+    opacity: 1;
+}
+.grow-brown {
+    font-family: 'Lobster', cursive;
+    color: #7b4520;
+}
+.grow-brown {
+    transition: all .4s ease-in-out;
+}
+.grow-brown:visited, .grow-brown:hover, .grow-brown:active, .grow-brown a:visited, .grow-borwn a:hover, .grow-brown a:active {
+    color: #7b4520;
     transform: scale(1.05);
     text-decoration: none;
     opacity: 1;
@@ -137,24 +167,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     -webkit-transform: rotate(100deg);
     -o-transform: rotate(100deg);
     transform: rotate(100deg);
-}
- @-webkit-keyframes slide {
- from {
-background-position: 0 0;
-}
- to {
-background-position: -1739px 0;
-}
-}
-
-@media (max-width: 768px) {
-.link-row {
-    margin: 50px 0 200px;
-}
-.grow {
-    font-size: 40px;
-    line-height: 42px;
-}
 }
 
 @media (max-width: 480px) {
@@ -346,16 +358,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-gradient">
-    <div class="link-row">
-      <div class="col-xs-12 text-center">
-        <div class="rotate">
-          <div class="grow text-shadow-one"><a class="grow" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1184963347">11 Book Pairings by Major</a></div>
-          <div class="grow"><a class="grow text-shadow-two" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1186343599_go_forth_the_best_graduation_speeches">12 Great Grad Speeches</a></div>
-        </div>
-      </div>
+  <div class="row background">
+    <div class="container no-padding">
+      <h1 class="grow text-center"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=kickoff+party&lib=ALL&nd=30" target="_blank" class="grow">2018 Summer Reading Program Kickoff Party</a></h1>
+      <h2 class="grow no-margin-top text-center"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=kickoff+party&lib=ALL&nd=30" target="_blank" class="grow">Saturday, June 2</a></h2>
+      <div class="col-xs-12 no-padding"><img class="img-responsive image-center" src="barrel-kids-animation-events.gif" alt="Kickoff Parties!"></div>
     </div>
-    <div class="jumbo"> </div>
+  </div>
+  <div class="row page-wrapper">
+    <div class="container padding-bottom-60">
+      <h1 class="grow-brown text-center margin-top-30"><a class="grow-brown" href="summer-reading/">Register Now for Summer Reading</a></h1>
+    </div>
   </div>
   <div class="row camp-row white padding-top-60 padding-bottom-60">
     <div class="container no-padding text-center">
@@ -382,7 +395,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="sr-ticket"><a href="../summer-reading"><img class="ticket" src="summer-reading.gif" alt="Summer Reading"></a> </div>
+  
+  <!-- remove for now
+  <div class="sr-ticket"><a href="../summer-reading"><img class="ticket" src="summer-reading.gif" alt="Summer Reading"></a> </div>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -434,7 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-	  <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
@@ -479,6 +494,7 @@ $(function () {
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
