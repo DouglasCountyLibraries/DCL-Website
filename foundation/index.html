@@ -8,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-    opacity: 0 !important
+	opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -77,31 +77,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .carousel-cell {
-    text-align: center;
     width: 100%;
+    padding: 0 0 50px 0;
 }
 .carousel-cell:before {
     display: block;
     text-align: center;
 }
-/* big buttons, no circle */
-.flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
-}
-.flickity-prev-next-button:hover {
-    background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-    fill: #efeeed;
-}
-.flickity-prev-next-button.no-svg {
-    color: #efeeed;
+.flickity-page-dots {
+    bottom: 20px;
+    opacity: .5;
 }
 .flickity-prev-next-button {
-    top: 30%;
+    display: none;
+}
+.flickity-viewport {
+    transition: height 0.6s;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -344,7 +335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row">
     <div class="container margin-lg-200 text-center padding-top-15 padding-bottom-30">
       <h1 class="padding-bottom-15">What Your Gift Means</h1>
-      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.08, "friction": 0.30, "autoPlay": 6000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.30, "autoPlay": 6000 }'>
         <div class="carousel-cell">
           <div><img alt="Niki Weninger" class="img-circle" src="niki.jpg" />
             <div class="padding-top-15">
