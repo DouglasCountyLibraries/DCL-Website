@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,101 +78,129 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 
-<link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lobster" rel="stylesheet">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( "#draggable-one" ).draggable();
+	  $( "#draggable-two" ).draggable();
+	  $( "#draggable-three" ).draggable();
+  } );
+  </script>
 <style>
-.background-gradient {
-    background: linear-gradient(#005c97, #d7f4ff);
+.background {
+	background: #fff url(pool.png) center center/cover;
+	background-repeat: no-repeat;
 }
-.camp-row {
-    background: #005c97;
+.srp {
+	background-color: #5495bf;
 }
-.link-row {
-    margin: 100px 0 240px;
-}
-.jumbo {
-    background: url(graduation.png) repeat-x bottom center;
-    min-height: 260px;
-    box-sizing: border-box;
-    -webkit-animation: slide 90s linear infinite;
+#draggable-one:hover, #draggable-two:hover, #draggable-three:hover {
+	cursor: -webkit-grab;
+	cursor: grab;
 }
 .featured {
-    background: #0a4978;
+	margin: 280px auto 30px auto;
 }
-.grow {
-    font-family: 'Graduate', cursive;
-    font-size: 60px;
-    line-height: 50px;
-    color: #fff;
-    font-weight: bold;
-    margin-top: 30px;
-    text-shadow: 2px 1px 0 #d36a50, -2px -1px 0 #d36a50, 2px -1px 0 #d36a50, -2px 1px 0 #d36a50, 0px 1px 0 #d36a50, 2px 0px 0 #d36a50, 0px -1px 0 #d36a50, -2px 0px 0 #d36a50, 3px 6px 1px #000;
+h1.lobster {
+	font-family: 'Lobster', cursive;
+	font-size: 4em;
+	letter-spacing: inherit;
 }
-.grow {
-    transition: all .4s ease-in-out;
+.fourth-text {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-weight: 700;
+	text-shadow: 0px 5px 5px rgba(14,105,132, 1);
 }
-.grow:visited, .grow:hover, .grow:active, .grow a:visited, .grow a:hover, .grow a:active {
-    color: #fff;
-    transform: scale(1.05);
-    text-decoration: none;
-    opacity: 1;
+.fourth-text:hover, .fourth-text a:hover {
+	text-decoration: none;
 }
-.sr-ticket {
-    position: fixed;
-    bottom: 29%;
-    right: -216px;
-    z-index: 2000;
-    -webkit-transition-duration: 4s;
-    -moz-transition-duration: 4s;
-    -o-transition-duration: 4s;
-    transition-duration: 4s;
+.float-one {
+	position: absolute;
+	right: 10%;
+	top: 260px;
+	-webkit-animation: orbit-one 75s linear infinite;
+	animation: orbit-one 75s linear infinite;
 }
-.sr-ticket:hover {
-    position: fixed;
-    bottom: 29%;
-    right: -80px;
-    z-index: 2000;
-    -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    -webkit-transform: rotate(100deg);
-    -o-transform: rotate(100deg);
-    transform: rotate(100deg);
+.float-two {
+	position: absolute;
+	right: 49%;
+	top: 650px;
+	-webkit-animation: orbit-two 35s linear infinite;
+	animation: orbit-two 35s linear infinite;
 }
- @-webkit-keyframes slide {
+.spin-image {
+	position: absolute;
+	top: 150px;
+	left: 10%;
+	-webkit-animation: spin 30s linear infinite;
+	animation: spin 30s linear infinite;
+}
+ @keyframes orbit-one {
  from {
-background-position: 0 0;
+-webkit-transform: rotate(0deg) translateX(70px) rotate(0deg);
 }
  to {
-background-position: -1739px 0;
+-webkit-transform: rotate(360deg) translateX(70px) rotate(-360deg);
+}
+}
+ @-webkit-keyframes orbit-one {
+ from {
+-webkit-transform: rotate(0deg) translateX(70px) rotate(0deg);
+}
+ to {
+-webkit-transform: rotate(360deg) translateX(70px) rotate(-360deg);
+}
+}
+ @keyframes orbit-two {
+ from {
+transform: rotate(0deg) translateX(100px) rotate(0deg);
+}
+ to {
+transform: rotate(360deg) translateX(100px) rotate(-360deg);
+}
+}
+ @-webkit-keyframes orbit-two {
+ from {
+transform: rotate(0deg) translateX(100px) rotate(0deg);
+}
+ to {
+transform: rotate(360deg) translateX(100px) rotate(-360deg);
+}
+}
+ @-webkit-keyframes spin {
+100% {
+-webkit-transform: rotate(360deg);
+}
+}
+@keyframes spin {
+100% {
+-webkit-transform: rotate(360deg);
+transform:rotate(360deg);
 }
 }
 
-@media (max-width: 768px) {
-.link-row {
-    margin: 50px 0 200px;
+@media (min-width: 790px) {
+.fourth-text {
+	font-size: 46px;
+}
+.featured {
+	margin: 80px auto 280px auto;
+	z-index: 10000;
+}
+.spin-image {
+	position: absolute;
+	top: 260px;
+	left: 5%;
+	-webkit-animation: spin 30s linear infinite;
+	animation: spin 30s linear infinite;
+}
 }
 .grow {
-    font-size: 40px;
-    line-height: 42px;
+	transition: all .4s ease-in-out;
 }
-}
-
-@media (max-width: 480px) {
-.ticket {
-    height: 80%;
-    width: 80%;
-}
-.sr-ticket {
-    position: fixed;
-    right: -235px;
-    bottom: 5%;
-}
-.sr-ticket:hover {
-    position: fixed;
-    right: -90px;
-    bottom: 5%;
-}
+.grow:hover {
+	transform: scale(1.1);
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -346,43 +375,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-gradient">
-    <div class="link-row">
-      <div class="col-xs-12 text-center">
-        <div class="rotate">
-          <div class="grow text-shadow-one"><a class="grow" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1184963347">11 Book Pairings by Major</a></div>
-          <div class="grow"><a class="grow text-shadow-two" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1186343599_go_forth_the_best_graduation_speeches">12 Great Grad Speeches</a></div>
+  <div class="row background">
+    <div class="container featured text-center">
+      <div class="hidden-xs"><img id="draggable-two" class="float-one animated" src="summer-loving-tommy.png" alt="Summer Loving Tommy"></div>
+      <div class="hidden-xs hidden-sm"><img id="draggable-three" class="float-two animated" src="summer-loving-jessica.png" alt="Summer Loving Jessica"></div>
+      <div><img id="draggable-one" class="spin-image" src="summer-loving-andrea.png" alt="Summer Loving Andrea"></div>
+      <h1 class="grow margin-bottom-40"><a class="white fourth-text" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1196795147"><span style="font-size:2.2em;letter-spacing: .2em;">10</span><br>
+        Beachy Reads</a></h1>
+      <h1 class="grow"><a class="white grow fourth-text" href="https://blogs.douglascountylibraries.org/blog/2018/06/14/11-festivals-to-celebrate-summer/"><span style="font-size:2.2em;letter-spacing: .2em;">11</span><br>
+        Festivals to Celebrate Summer</a></h1>
+    </div>
+  </div>
+  <div class="row srp">
+    <div class="container padding-top-40 padding-bottom-40 text-center">
+      <div class="col-md-2"><a href="summer-reading/"><img class="img-responsive image-center" src="jason.gif" alt="Jason the Crab"></a></div>
+      <div class="col-md-8">
+        <h1 class="lobster white no-margin">Escape to Neverland</h1>
+        <h3 class="no-margin white">2018 Summer Reading Program for All Ages</h3>
+        <div class="white font-weight-400">Saturday, June 2-Tuesday, July 31</div>
+        <div class="text-center margin-top-15"> <a href="summer-reading/" class="text-uppercase btn btn-primary">Log In or Register</a></div>
+      </div>
+      <div class="col-md-2 hidden-xs hidden-sm"><a href="summer-reading/"><img class="img-responsive image-center" src="duane.gif" alt="Duane the Other Crab"></a></div>
+    </div>
+  </div>
+  <div class="row bg-lavender padding-top-30 padding-bottom-40">
+    <div class="container">
+      <div class="col-md-4 col-md-push-2 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+        <div class="icon-circle-default"><i class="fa fa-fire"></i></div>
+        <h2 class="roboto no-margin-bottom"><a class="white" href="camp-dcl/">Summer Camp Sign-Up</a></h2>
+        <div class="text-uppercase no-margin-top"><a href="camp-dcl/" class="white text-uppercase font-weight-400">Book Now!</a></div>
+      </div>
+      <div class="col-md-4 col-md-push-2 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+        <div class="text-center">
+          <div class="icon-circle-default"><i class="fa fa-map-marker"></i></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="dcl-local/">Sweet Deals</a></h2>
+          <div class="text-uppercase no-margin-top"><a href="dcl-local/" class="white text-uppercase font-weight-400">DCL Local</a></div>
         </div>
       </div>
     </div>
-    <div class="jumbo"> </div>
   </div>
-  <div class="row camp-row white padding-top-60 padding-bottom-60">
-    <div class="container no-padding text-center">
-      <div class="col-xs-12 no-padding text-center"><img src="camp-dcl-kids.jpg" alt="Summer Camps" class="img-responsive image-center">
-        <h1 class="white jumbo-text no-margin font-weight-400 text-uppercase">Summer Camps</h1>
-        <h2 class="white no-margin">Summer Fun Starts Now!</h2>
-        <div class="large-text">Book a spot at our <a class="white text-underline" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="<a href='https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=134951' target='_blank'>Highlands Ranch</a> or <a href='https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=135019' target='_blank'>Parker</a>" data-html="true">Astronaut</a> or <a class="white text-underline" href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=134966" target="_blank">Ninjaneer LEGO</a> camps while you can.</div>
-        <div class="margin-top-15"><a class="btn btn-default btn-warning" href="camp-dcl/">View All Camps</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="row bg-salmon white padding-top-40">
-    <div class="container text-center">
-      <div class="col-xs-12"> <a href="https://dcl.bibliocommons.com/item/show/1467400114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781451687651/MC.GIF" alt="To the Moon and Back" class="margin-right-5 margin-left-5 shadow-low shadow-low-hover"></a> <a href="https://dcl.bibliocommons.com/item/show/1420190114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781451687620/MC.GIF" alt="In this Moment" class="margin-right-5 margin-left-5 shadow-low shadow-low-hover hidden-xs"></a> <a href="https://dcl.bibliocommons.com/item/show/1401377114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781451687590/MC.GIF" alt="Love Story" class="margin-right-5 margin-left-5 shadow-low shadow-low-hover hidden-xs"></a> <a href="https://dcl.bibliocommons.com/item/show/1313462114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781451687538/MC.GIF" alt="Brush of Wings" class="margin-right-5 margin-left-5 shadow-low shadow-low-hover hidden-xs hidden-sm"></a> <a href="https://dcl.bibliocommons.com/item/show/1130308114"><img src="https://secure.syndetics.com/index.aspx?isbn=9781451672985/MC.GIF" alt="The Chance" class="margin-right-5 margin-left-5 shadow-low shadow-low-hover hidden-xs hidden-sm"></a> </div>
-    </div>
-  </div>
-  <div class="row bg-salmon white padding-bottom-40">
-    <div class="container">
-      <div class="col-xs-12 text-center">
-        <h2 class="roboto white no-margin-bottom">DCL Presents</h2>
-        <h1 class="white no-margin font-weight-400 text-uppercase">Karen Kingsbury</h1>
-        <div class="large-text">Inspiring, Moving, Uplifting</div>
-        <div class="margin-top-15"><a class="btn btn-primary" href="karen-kingsbury/">Reserve Your Seat</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="sr-ticket"><a href="../summer-reading"><img class="ticket" src="summer-reading.gif" alt="Summer Reading"></a> </div>
+  <!-- remove for now
+  <div class="sr-ticket"><a href="../summer-reading"><img class="ticket" src="summer-reading.gif" alt="Summer Reading"></a> </div>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
@@ -434,16 +467,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </footer>
 <div class="copyright bg-gray-90">
   <div class="container padding-top-15 padding-bottom-30">
-	  <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
- </script> 
-<!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
@@ -479,6 +506,7 @@ $(function () {
 		"https:\/\/twitter.com\/DCLcolorado"]
   }
 </script> 
-<!-- End Structured Data --> 
+<!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
