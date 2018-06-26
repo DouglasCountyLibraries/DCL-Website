@@ -78,6 +78,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .come-up {
 	background: #28c1f1 url(come-up-background.jpg) repeat-x bottom center;
 }
+.blue-row {
+	background-color: #28c1f1;
+}
 .come-up-text {
 	margin-top: 350px;
 }
@@ -93,9 +96,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .float {
 	position: absolute;
 	right: 45%;
-	top: 425px;
-	-webkit-animation: orbit 55s linear infinite;
-	animation: orbit 55s linear infinite;
+	top: 200px;
+	-webkit-animation: orbit 25s linear infinite;
+	animation: orbit 25s linear infinite;
+}
+.kenburns {
+	-webkit-animation: kenburns 35s ease-out infinite both;
+	animation: kenburns 35s ease-out infinite both;
 }
  @keyframes orbit {
  from {
@@ -113,17 +120,58 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
 }
 }
+ @-webkit-keyframes kenburns {
+ 0% {
+ -webkit-transform: scale(.95) translateY(0);
+ transform: scale(.95) translateY(0);
+ -webkit-transform-origin: 50% 0%;
+ transform-origin: 50% 0%;
+}
+ 50% {
+ -webkit-transform: scale(1);
+ transform: scale(1);
+ -webkit-transform-origin: top;
+ transform-origin: top;
+}
+ 100% {
+ -webkit-transform: scale(.95) translateY(0);
+ transform: scale(.95) translateY(0);
+ -webkit-transform-origin: 50% 0%;
+ transform-origin: 50% 0%;
+}
+}
+@keyframes kenburns {
+ 0% {
+ -webkit-transform: scale(.95) translateY(0);
+ transform: scale(.95) translateY(0);
+ -webkit-transform-origin: 50% 0%;
+ transform-origin: 50% 0%;
+}
+ 50% {
+ -webkit-transform: scale(1);
+ transform: scale(1);
+ -webkit-transform-origin: top;
+ transform-origin: top;
+}
+ 100% {
+ -webkit-transform: scale(.95) translateY(0);
+ transform: scale(.95) translateY(0);
+ -webkit-transform-origin: 50% 0%;
+ transform-origin: 50% 0%;
+}
+}
 
 @media (max-width: 992px) {
 .float {
 	right: 40%;
-	top: 300px;
+	top: 210px;
 }
 }
-	@media (max-width: 768px) {
+
+@media (max-width: 768px) {
 .float {
 	right: 33%;
-	top: 320px;
+	top: 220px;
 }
 }
 </style>
@@ -299,9 +347,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row come-up">
-    <div class="float"><img class="img-responsive image-center" src="cloud.png" alt="Come On Up Cloud"></div>
-    <div class="come-up-text"><img class="img-responsive image-center" src="come-up.png" alt="Come On Up"></div>
+  <div class="row blue-row">
+    <div class="row come-up kenburns no-margin">
+      <div class="float"><img class="img-responsive image-center" src="cloud.png" alt="Come On Up Cloud"></div>
+      <div class="come-up-text"><img class="img-responsive image-center" src="come-up.png" alt="Come On Up"></div>
+    </div>
   </div>
   <div class="row featured padding-bottom-30">
     <div class="container">
