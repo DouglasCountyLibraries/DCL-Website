@@ -136,6 +136,29 @@ h1.lobster {
 	-webkit-animation: spin 30s linear infinite;
 	animation: spin 30s linear infinite;
 }
+.sr-ticket {
+	position: fixed;
+	bottom: 32%;
+	right: -216px;
+	z-index: 2000;
+	-webkit-transition-duration: 4s;
+	-moz-transition-duration: 4s;
+	-o-transition-duration: 4s;
+	transition-duration: 4s;
+}
+.sr-ticket:hover {
+	position: fixed;
+	bottom: 29%;
+	right: -80px;
+	z-index: 2000;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	-webkit-transform: rotate(100deg);
+	-o-transform: rotate(100deg);
+	transform: rotate(100deg);
+}
  @keyframes orbit-one {
  from {
 -webkit-transform: rotate(0deg) translateX(70px) rotate(0deg);
@@ -201,6 +224,23 @@ transform:rotate(360deg);
 }
 .grow:hover {
 	transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+.ticket {
+	height: 80%;
+	width: 80%;
+}
+.sr-ticket {
+	position: fixed;
+	right: -235px;
+	bottom: 5%;
+}
+.sr-ticket:hover {
+	position: fixed;
+	right: -90px;
+	bottom: 5%;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -377,45 +417,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background">
     <div class="container featured text-center">
-      <div class="hidden-xs"><img id="draggable-two" class="float-one animated" src="summer-loving-tommy.png" alt="Summer Loving Tommy"></div>
-      <div class="hidden-xs hidden-sm"><img id="draggable-three" class="float-two animated" src="summer-loving-jessica.png" alt="Summer Loving Jessica"></div>
-      <div><img id="draggable-one" class="spin-image" src="summer-loving-andrea.png" alt="Summer Loving Andrea"></div>
-      <h1 class="grow margin-bottom-40"><a class="white fourth-text" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1196795147"><span style="font-size:2.2em;letter-spacing: .2em;">10</span><br>
-        Beachy Reads</a></h1>
-      <h1 class="grow"><a class="white grow fourth-text" href="https://blogs.douglascountylibraries.org/blog/2018/06/14/11-festivals-to-celebrate-summer/"><span style="font-size:2.2em;letter-spacing: .2em;">11</span><br>
-        Festivals to Celebrate Summer</a></h1>
-    </div>
-  </div>
-  <div class="row srp">
-    <div class="container padding-top-40 padding-bottom-40 text-center">
-      <div class="col-md-2"><a href="summer-reading/"><img class="img-responsive image-center" src="jason.gif" alt="Jason the Crab"></a></div>
-      <div class="col-md-8">
-        <h1 class="lobster white no-margin">Escape to Neverland</h1>
-        <h3 class="no-margin white">2018 Summer Reading Program for All Ages</h3>
-        <div class="white font-weight-400">Saturday, June 2-Tuesday, July 31</div>
-        <div class="text-center margin-top-15"> <a href="summer-reading/" class="text-uppercase btn btn-primary">Log In or Register</a></div>
-      </div>
-      <div class="col-md-2 hidden-xs hidden-sm"><a href="summer-reading/"><img class="img-responsive image-center" src="duane.gif" alt="Duane the Other Crab"></a></div>
+      <div class="hidden-xs"><img id="draggable-two" class="float-one animated" src="summer-loving-jessica.png" alt="Summer Loving Jessica"></div>
+      <div class="hidden-xs hidden-sm"><img id="draggable-three" class="float-two animated" src="summer-loving-andrea.png" alt="Summer Loving Andrea"></div>
+      <div><img id="draggable-one" class="spin-image" src="summer-loving-tommy.png" alt="Summer Loving Tommy"></div>
+      <h1 class="grow margin-bottom-40"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank" class="white fourth-text"><span style="font-size:2.2em;">Top</span><br>
+        Rated Grills</a></h1>
+      <h1 class="grow"><a class="white grow fourth-text" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1217418427"><span style="font-size:2.2em;">10 Great</span><br>
+        Grilling Cookbooks</a></h1>
     </div>
   </div>
   <div class="row bg-lavender padding-top-30 padding-bottom-40">
     <div class="container">
-      <div class="col-md-4 col-md-push-2 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="icon-circle-default"><i class="fa fa-fire"></i></div>
-        <h2 class="roboto no-margin-bottom"><a class="white" href="camp-dcl/">Summer Camp Sign-Up</a></h2>
-        <div class="text-uppercase no-margin-top"><a href="camp-dcl/" class="white text-uppercase font-weight-400">Book Now!</a></div>
+        <h2 class="roboto no-margin-bottom"><a class="white" href="camp-dcl/">Summer Camp Openings</a></h2>
+        <div class="text-uppercase no-margin-top"><a href="camp-dcl/" class="white text-uppercase font-weight-400">Sign Up Now!</a></div>
       </div>
-      <div class="col-md-4 col-md-push-2 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
-          <div class="icon-circle-default"><i class="fa fa-map-marker"></i></div>
-          <h2 class="roboto no-margin-bottom"><a class="white" href="dcl-local/">Sweet Deals</a></h2>
-          <div class="text-uppercase no-margin-top"><a href="dcl-local/" class="white text-uppercase font-weight-400">DCL Local</a></div>
+          <div style="padding: 1px 0 0 1px;" class="icon-circle-default"><i class="fa fa-compass"></i></div>
+          <h2 class="roboto no-margin-bottom"><a href="http://www.eventkeeper.com/mars/tkflex.cfm?curOrg=dclibs&curapp=passes&CFID=141532908&CFTOKEN=7cd38bc79dc57696-9D1F4C11-D4AE-528A-5350924288F0BD2C&jsessionid=843015ecdca2f884cf01502a10fe69574196" target="_blank" class="white">Out & About</a></h2>
+          <div class="text-uppercase no-margin-top"><a href="http://www.eventkeeper.com/mars/tkflex.cfm?curOrg=dclibs&curapp=passes&CFID=141532908&CFTOKEN=7cd38bc79dc57696-9D1F4C11-D4AE-528A-5350924288F0BD2C&jsessionid=843015ecdca2f884cf01502a10fe69574196" target="_blank" class="white text-uppercase font-weight-400">Adventure Pass</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
+        <div class="text-center">
+          <div class="icon-circle-default"><i class="fa fa-map"></i></div>
+          <h2 class="roboto no-margin-bottom"><a class="white" href="library-basics/#check-out-colorado">Check Out Colorado</a></h2>
+          <div class="text-uppercase no-margin-top"><a href="library-basics/#check-out-colorado" class="white text-uppercase font-weight-400">Visit a State Park</a></div>
         </div>
       </div>
     </div>
   </div>
-  <!-- remove for now
-  <div class="sr-ticket"><a href="../summer-reading"><img class="ticket" src="summer-reading.gif" alt="Summer Reading"></a> </div>--> 
+  <div class="sr-ticket"><a href="summer-reading"><img class="ticket" src="summer-reading.gif" alt="Summer Reading"></a> </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
