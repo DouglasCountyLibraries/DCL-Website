@@ -308,15 +308,18 @@ blockquote footer, blockquote small, blockquote .small {
 	font-weight: 600;
 }
 /* ====== navbar, search and login ====== */
-/* ====== CLEANUP after bc integrated log in complete ====== */
 
 .navbar-nav {
 	font-size: 15px;
 }
 .dcl-search {
 	margin: 25px 10px 0;
-	-webkit-animation: fade-in-search .6s cubic-bezier(0.390, 0.575, 0.565, 1.000) .3s both;
-	animation: fade-in-search .6s cubic-bezier(0.390, 0.575, 0.565, 1.000) .3s both;
+	-webkit-animation: fade-in-search .6s linear .3s both;
+	animation: fade-in-search .6s liner .3s both;
+}
+.text-uppercase.jumbo-text.font-weight-400 {
+	-webkit-animation: fade-in-text .4s linear .4s both;
+	animation: fade-in-text .4s liner .4s both;
 }
 @-webkit-keyframes fade-in-search {
  0% {
@@ -327,6 +330,22 @@ blockquote footer, blockquote small, blockquote .small {
 }
 }
 @keyframes fade-in-search {
+ 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@-webkit-keyframes fade-in-text {
+ 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@keyframes fade-in-text {
  0% {
  opacity: 0;
 }
