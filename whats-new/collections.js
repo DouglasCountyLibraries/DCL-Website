@@ -168,6 +168,9 @@ function getCollectionSet() {
                 if (divid == 3) {
                     $('#covers-3').append(createBookList(val,KeyName));
                 }
+				 if (divid == 4) {
+                    $('#covers-4').append(createBookList(val,KeyName));
+                }
 				 if (divid == 10) {
                     $('#covers-Noteworthy').append(createBookList(val,KeyName));
                 }
