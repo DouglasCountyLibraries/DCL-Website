@@ -26,7 +26,7 @@ function createAllPageTitle(title)
      '<div class="text-center">',
       '<h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">What&#39;s New</h1>',
       '<div class="separator-container padding-bottom-15">',
-       ' <div class="separator line-separator"><i class="fa fa-star-o"></i></div>',
+       ' <div class="separator line-separator"><i class="fas fa-star"></i></div>',
      ' </div>',
    ' </div>',
      ' <h1 class="no-margin">' + title + '</h1>  '
