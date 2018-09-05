@@ -77,11 +77,89 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-
-<link href="https://fonts.googleapis.com/css?family=Life+Savers:700" rel="stylesheet">
 <style>
-body {
-	background: url(sky.jpg) repeat-x top center;
+.btn-gala {
+	background-color: #99d0e3;
+	color: #013247;
+	border: 2px solid #fff;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.btn-gala:hover, .btn-gala:focus {
+	background-color: #013247;
+	color: #fff;
+	border: 2px solid #fff;
+}
+.neverland {
+	position: relative;
+	top: -20px;
+	z-index: 1000;
+}
+.cloud-background {
+	position: relative;
+	background: #015a7c url(clouds.jpg) repeat-x top left;
+	height: 400px;
+}
+.intro-background {
+	background: rgba(1,89,124,1) fixed;
+	background: -moz-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(1,89,124,1)), color-stop(100%, rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(1,89,124,1) 0%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01597c', endColorstr='#000000', GradientType=0 );
+}
+.ship-image {
+	position: absolute;
+	bottom: -36px;
+	-webkit-animation: 120s linear 0s infinite ship;
+	animation: 120s linear 0s infinite ship;
+	z-index: 1;
+}
+ @-webkit-keyframes ship {
+ 0% {
+ right: 20%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 20%;
+ -webkit-transform: rotateY(180deg);
+}
+}
+ @keyframes ship {
+ 0% {
+ right: 20%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50% {
+ right: 100%;
+ -webkit-transform: rotateY(0deg);
+}
+ 50.01% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 50.02% {
+right: 100%;
+ -webkit-transform: rotateY(180deg);
+}
+ 100% {
+right: 20%;
+ -webkit-transform: rotateY(180deg);
+}
 }
 .aretha {
 	border: 3px solid #fff;
@@ -91,371 +169,17 @@ body {
 	width: 100px;
 	padding: 4px;
 }
-.dog-background {
-	height: 440px;
-}
-.dcl-logo-search.client_and_search {
-	background: #fff;
-}
-.grass-wrapper {
-	background: url(grass-background.png) no-repeat top center/cover;
-	z-index: 1000;
-}
-.grass {
-	height: 170px;
-	z-index: 1000;
-}
-.dog-box {
-	color: #fff;
-	background: #2b71ac;
-	padding: 10px;
-	font-size: 1.5em;
-	margin-bottom: 15px;
-	border-radius: 25px;
-	font-weight: 400;
-	text-decoration: none;
-}
-.dog-box a:hover, .dog-box a:focus, a.dog-box:hover, a.dog-box:focus {
-	text-decoration: none!important;
-}
-.container-mod {
-	max-width: 1235px;
-	margin: 0 auto;
-}
-h1.jumbo-text {
-	font-family: 'Life Savers', cursive;
-	font-weight: 700;
-	font-size: 60px;
-	line-height: 56px;
-	color: #ffde16;
-	margin-top: 160px;
-	text-shadow: rgb(241, 89, 42) 3px 0px 0px, rgb(241, 89, 42) 2.83333px 0.983333px 0px, rgb(241, 89, 42) 2.35px 1.85px 0px, rgb(241, 89, 42) 1.61667px 2.51667px 0px, rgb(241, 89, 42) 0.7px 2.91667px 0px, rgb(241, 89, 42) -0.283333px 2.98333px 0px, rgb(241, 89, 42) -1.25px 2.73333px 0px, rgb(241, 89, 42) -2.06667px 2.16667px 0px, rgb(241, 89, 42) -2.66667px 1.36667px 0px, rgb(241, 89, 42) -2.96667px 0.416667px 0px, rgb(241, 89, 42) -2.95px -0.566667px 0px, rgb(241, 89, 42) -2.6px -1.5px 0px, rgb(241, 89, 42) -1.96667px -2.26667px 0px, rgb(241, 89, 42) -1.11667px -2.78333px 0px, rgb(241, 89, 42) -0.133333px -3px 0px, rgb(241, 89, 42) 0.85px -2.88333px 0px, rgb(241, 89, 42) 1.75px -2.43333px 0px, rgb(241, 89, 42) 2.45px -1.73333px 0px, rgb(241, 89, 42) 2.88333px -0.833333px 0px;
-}
-.dog-one {
-	display: block;
-	margin: 0 auto;
-	z-index: -1;
+
+@media (min-width: 580px) {
+.shift {
 	position: relative;
-	top: 300px;
-	animation: dog-one 3.2s ease 80;
-	animation-delay: 1s;
-}
-@keyframes dog-one {
- 0% {
-top: 400px;
-}
- 50% {
-top: -170px;
-}
- 100% {
-top: 400px;
-}
- from {
-transform: rotate(-40deg);
-}
- to {
-transform: rotate(33deg);
-}
-}
-@-webkit-keyframes dog-one {
- 0% {
-top: 400px;
-}
- 50% {
-top: -170px;
-}
- 100% {
-top: 400px;
-}
- from {
--webkit-transform: rotate(0deg);
-}
- to {
--webkit-transform: rotate(80deg);
-}
-}
-.ball-one {
-	display: block;
-	margin: 0 auto;
-	z-index: -1;
-	position: relative;
-	top: 400px;
-	left: -120px;
-	animation: ball-one 3.2s ease 80;
-	animation-delay: 1s;
-}
-@keyframes ball-one {
- 0% {
-top: 400px;
-}
- 50% {
-top: -170px;
-}
- 100% {
-top: 400px;
-}
- from {
-transform: rotate(0deg);
-}
- to {
-transform: rotate(360deg);
-}
-}
-@-webkit-keyframes ball-one {
- 0% {
-top: 400px;
-}
- 50% {
-top: -170px;
-}
- 100% {
-top: 400px;
-}
- from {
--webkit-transform: rotate(0deg);
-}
- to {
--webkit-transform: rotate(360deg);
-}
-}
-.dog-two {
-	display: block;
-	margin: 0 auto;
-	z-index: -1;
-	position: relative;
-	top: 300px;
-	animation: dog-two 5s ease 100;
-	animation-delay: 2s;
-}
-@keyframes dog-two {
- 0% {
-top: 300px;
-}
- 5% {
-top: 20px;
-}
- 10% {
-top: 20px;
-}
- 15% {
-top: 300px;
-}
- 100% {
-top: 300px;
-}
- from {
-transform: rotate(-40deg);
-}
- to {
-transform: rotate(20deg);
-}
-}
-@-webkit-keyframes dog-two {
- 0% {
-top: 300px;
-}
- 5% {
-top: 20px;
-}
- 10% {
-top: 120px;
-}
- 15% {
-top: 300px;
-}
- 100% {
-top: 300px;
-}
- from {
--webkit-transform: rotate(-40deg);
-}
- to {
--webkit-transform: rotate(20deg);
-}
-}
-.ball-two {
-	display: block;
-	margin: 0 auto;
-	z-index: -1;
-	position: relative;
-	top: 400px;
-	right: -120px;
-	animation: ball-two 3s ease 90;
-	animation-delay: .5s;
-}
-@keyframes ball-two {
- 0% {
-top: 350px;
-}
- 50% {
-top: -300px;
-}
- 100% {
-top: 350px;
-}
- from {
-transform: rotate(0deg);
-}
- to {
-transform: rotate(360deg);
-}
-}
-@-webkit-keyframes ball-two {
- 0% {
-top: 350px;
-}
- 50% {
-top: -300px;
-}
- 100% {
-top: 350px;
-}
- from {
-transform: rotate(0deg);
-}
- to {
-transform: rotate(360deg);
-}
-}
-.dog-three {
-	display: block;
-	margin: 0 auto;
-	z-index: -1;
-	position: relative;
-	top: 300px;
-	animation: dog-three 3s ease 75;
-	animation-delay: .5s;
-}
-@keyframes dog-three {
- 0% {
-top: 350px;
-}
- 50% {
-top: -150px;
-}
- 100% {
-top: 350px;
-}
- from {
-transform: rotate(-80deg);
-}
- to {
-transform: rotate(90deg);
-}
-}
-@-webkit-keyframes dog-three {
- 0% {
-top: 350px;
-}
- 50% {
-top: -150px;
-}
- 100% {
-top: 350px;
-}
- from {
--webkit-transform: rotate(-80deg);
-}
- to {
--webkit-transform: rotate(90deg);
-}
-}
-.dog-four {
-	display: block;
-	margin: 0 auto;
-	z-index: -1;
-	position: relative;
-	top: 300px;
-	animation: dog-four 8s ease 85;
-}
-@keyframes dog-four {
- 0% {
-top: 300px;
-}
- 20% {
-top: -250px;
-}
- 60% {
-top: 300px;
-}
- 100% {
-top: 300px;
-}
-}
-@-webkit-keyframes dog-four {
- 0% {
-top: 300px;
-}
- 20% {
-top: -250px;
-}
- 60% {
-top: 300px;
-}
- 100% {
-top: 300px;
-}
-}
-.dog-five {
-	display: block;
-	margin: 0 auto;
-	z-index: -1;
-	position: relative;
-	top: 320px;
-	animation: dog-five 4s ease 70;
-	animation-delay: 3s;
-}
-@keyframes dog-five {
- 0% {
-top: 320px;
-}
- 50% {
-top: -200px;
-}
- 100% {
-top: 320px;
-}
- from {
-transform: rotate(20deg);
-}
- to {
-transform: rotate(-100deg);
-}
-}
-@-webkit-keyframes dog-five {
- 0% {
-top: 320px;
-}
- 50% {
-top: -200px;
-}
- 100% {
-top: 320px;
-}
- from {
--webkit-transform: rotate(0deg);
-}
- to {
--webkit-transform: rotate(-70deg);
+	top: -40px;
 }
 }
 
-@media (max-width: 1230px) {
-h1.jumbo-text {
-	font-size: 50px;
-}
-}
-
-@media (max-width: 580px) {
-h1.jumbo-text {
-	font-size: 44px;
-	margin-top: 95px;
-}
-.ball-one {
-	left: 0
-}
-.dog-box {
-	font-size: 18px;
+@media (max-width: 581px) {
+.intro-background {
+	padding-bottom: 25px;
 }
 }
 </style>
@@ -631,38 +355,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row dog-background">
-    <div class="container-md">
-      <div class="text-center">
-        <h1 class="jumbo-text">Dog Days of Summer</h1>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img class="dog-one img-responsive" src="dog-one.png" alt="Dog"></div>
-      <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6"><img class="ball-one img-responsive" src="ball-one.png" alt="Ball"></div>
-      <div class="col-lg-2 col-md-3 hidden-xs hidden-sm"><img class="dog-two img-responsive" src="dog-two.png" alt="Dog"></div>
-      <div class="col-lg-1 hidden-xs hidden-sm hidden-md"><img class="ball-two img-responsive" src="ball-two.png" alt="Ball"></div>
-      <div class="col-lg-2 col-md-3 col-sm-4 hidden-xs"><img class="dog-three img-responsive" src="dog-three.png" alt="Dog"></div>
-      <div class="col-lg-2 hidden-xs hidden-sm hidden-md"><img class="dog-four img-responsive" src="dog-four.png" alt="Dog"></div>
-      <div class="col-lg-2 hidden-xs hidden-sm hidden-md"><img class="dog-five img-responsive" src="dog-five.png" alt="Dog"></div>
-    </div>
+  <div class="row cloud-background">
+    <div class="moon"><img class="moon-image" src="moon.png" alt="Moon"></div>
+    <div class="ship"><img class="ship-image" src="ship.png" alt="ship"></div>
   </div>
-  <div class="row grass-wrapper">
-    <div class="container no-padding text-center grass">
-      <div class="col-xs-6 col-md-3 col-md-push-3">
-        <div class="dog-box shadow-high shadow-high-hover"><a href="https://dcl.bibliocommons.com/list/share/692278051/1245065171"><span class="link-spanner"></span></a>
-          <div>Pawsome Dogs!</div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3 col-md-push-3">
-        <div class="dog-box shadow-high shadow-high-hover"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bark%20for%20books&df=list&cn=0&lib=all&nd=365" target="_blank"><span class="link-spanner"></span></a>
-          <div>Bark for Books</div>
-        </div>
+  <div class="row intro-background text-center">
+    <div class="neverland container no-padding white"> <img class="image-center img-responsive" src="neverland.png" alt="Destination Neverland">
+      <div class="shift">
+        <h4 class="roboto no-margin-top text-center white">September 28, 2018, 6-11PM<br>
+          Highlands Ranch Mansion</h4>
+        <div class="margin-top-15 margin-bottom-15"><a href="fete-des-fables/" class="btn btn-gala">Buy Tickets Now!</a></div>
+        <div class="margin-top-15"><i class="fas fa-book-reader white margin-right-5"></i> <a class="white text-uppercase font-weight-400" href="https://blogs.douglascountylibraries.org/blog/2018/08/31/destination-neverland-books-with-character/">Books With Character</a></div>
       </div>
     </div>
   </div>
   <div class="row bg-white padding-top-30">
     <div class="container padding-top-30"><a href="https://dcl.store/" target="_blank"><img class="hidden-xs hidden-sm img-responsive image-center" src="dcl-delivers-lg.jpg" alt="DCL Delivers"><img class="hidden-md hidden-lg img-responsive image-center" src="dcl-delivers-sm.jpg" alt="DCL Delivers"></a></div>
   </div>
-  <div style="background-color: #2b71ac;" class="row padding-top-30 padding-bottom-40">
+  <div style="background-color: #01597c;" class="row padding-top-30 padding-bottom-40">
     <div class="container">
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
         <div class="text-center">
@@ -672,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
       <div class="col-md-4 text-center padding-left-30 padding-right-30 padding-top-15 padding-bottom-15">
-        <div><img class="aretha" src="aretha.png" alt="RIP Aretha Franklin"></div>
+        <div><img class="aretha" src="aretha.jpg" alt="RIP Aretha Franklin"></div>
         <h2 class="roboto no-margin-bottom"><a href="https://douglascountylibraries.freegalmusic.com/search-page/aretha%2520franklin" target="_blank" class="white">Saluting the Queen</a></h2>
         <div class="text-uppercase no-margin-top"><a href="https://douglascountylibraries.freegalmusic.com/search-page/aretha%2520franklin" target="_blank" class="white text-uppercase font-weight-400">RIP Aretha Franklin</a></div>
       </div>
@@ -682,19 +392,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h2 class="roboto no-margin-bottom"><a class="white" href="adult-education/#cohs" target="_blank">Adult Education</a></h2>
           <div class="text-uppercase no-margin-top"><a href="adult-education/#cohs" class="white text-uppercase font-weight-400">Career Online High School</a></div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div style="" class="row">
-    <div class="container padding-top-30 padding-bottom-40">
-      <div class="text-center">
-        <h2 class="roboto no-margin">You’re Invited:</h2>
-        <h1 class="text-uppercase font-weight-400 no-margin">Destination Neverland</h1>
-        <a href="fete-des-fables/"><img class="margin-top-10 margin-bottom-10 inline-block img-responsive image-center shadow-low" src="fete-des-fables-gala.jpg" alt="Fete Des Fables Gala"></a>
-        <h2 class="text-uppercase font-weight-400 no-margin">A Benefit Gala</h2>
-        <div class="large-text">September 28, 6-11PM<br class="insert-break" />
-          <span class="hidden-xs">&nbsp;|&nbsp;</span>Highlands Ranch Mansion</div>
-        <div class="margin-top-15"><a href="fete-des-fables/" class="btn btn-primary">Learn More</a></div>
       </div>
     </div>
   </div>
