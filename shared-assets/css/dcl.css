@@ -121,6 +121,42 @@ a:hover, a:focus {
 	-o-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 }
+:target h1:first-of-type, :target h2:first-of-type {
+	-webkit-animation: target-fade 5s 1;
+	-moz-animation: target-fade 5s 1;
+}
+@-webkit-keyframes target-fade {
+ 0% {
+background-color: transparent;
+}
+ 20% {
+background-color: #d36a50;
+color: #fff;
+}
+ 80% {
+background-color: #d36a50;
+color: #fff;
+}
+ 100% {
+background-color: transparent;
+}
+}
+@keyframes target-fade {
+ 0% {
+background-color: transparent;
+}
+ 20% {
+background-color: #d36a50;
+color: #fff;
+}
+ 80% {
+background-color: #d36a50;
+color: #fff;
+}
+ 100% {
+background-color: transparent;
+}
+}
 .modal-backdrop {
 	background-color: #fff;
 }

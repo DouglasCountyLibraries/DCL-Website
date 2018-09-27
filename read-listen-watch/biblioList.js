@@ -14,7 +14,7 @@ function createAllPageTitle(title)
      '<div class="text-center">',
       '<h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">What' + "'s"  + 'New</h1>',
       '<div class="separator-container padding-bottom-15">',
-       ' <div class="separator line-separator"><i class="fas fa-star"></i></div>',
+       ' <div class="separator line-separator"><i class="fa fa-star-o"></i></div>',
      ' </div>',
    ' </div>',
      ' <h1 class="no-margin">' + title + '</h1>  '
@@ -82,7 +82,7 @@ function doBiblioList(val) {
     //Noteworthy|New & Noteworthy||5|True|Biblio|975832667|10
     //ListenToThis|Listen To This||5|True|Biblio|963743517|10
     //NowFeaturing|Now Featuring||5|True|Biblio|/991669947|24
-    //EpicReads|Epic Reads||5|True|Biblio|994069717|10
+    //GreatBooksGreatKids|GreatBooksGreatKids||5|True|Biblio|994069717|10
     title = val.DisplayName;
     if (val.KeyName == 'Noteworthy') {
         var myel = $('#Noteworthy').append(createPreShelf(title, val.KeyName, '10'));
@@ -108,11 +108,11 @@ function doBiblioList(val) {
         getRandomCollectionList(val.KeyName, '10');
         $('#StorytimeFavorites').append(createPostShelves(title));
     }
-    if (val.KeyName == 'EpicReads') {
-        var myel = $('#EpicReads').append(createPreShelf(title, val.KeyName, '10'));
+    if (val.KeyName == 'GreatBooksGreatKids') {
+        var myel = $('#GreatBooksGreatKids').append(createPreShelf(title, val.KeyName, '10'));
         console.log('val', val.KeyName)
         getRandomCollectionList(val.KeyName, '10');
-        $('#EpicReads').append(createPostShelves(title));
+        $('#GreatBooksGreatKids').append(createPostShelves(title));
     }	
 }
 function getCollectionSet() {
@@ -216,8 +216,8 @@ function getRandomCollectionList(KeyName, divid) {
                 if (KeyName == "ListenToThis") {
                     $('#covers-ListenToThis').append(createBookList(val, KeyName));
                 }
-                if (KeyName == "EpicReads") {
-                    $('#covers-EpicReads').append(createBookList(val, KeyName));
+                if (KeyName == "GreatBooksGreatKids") {
+                    $('#covers-GreatBooksGreatKids').append(createBookList(val, KeyName));
                 }
               
             }
