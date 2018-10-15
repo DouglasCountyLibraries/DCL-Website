@@ -332,62 +332,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  
-  <!--
-  ###############################
-  ##### Two Featured Items ######
-  ###############################
-       --> 
-  <!-- two featured items event row start -->
-  <div id="events" class="row event-row bg-teal"> 
-    <!-- block 1 start -->
-    <div class="col-md-6 bg-teal equal-height">
-      <div class="two-featured-items">
-        <div class="icon-circle-default" style="padding: 2px 4px 0px 0px;"><i class="fas fa-file-import"></i></div>
-        <h1 class="roboto">Active Minds Presents: Colorado Ballot</h1>
-        <div>An objective review of current issues on the ballot this fall, as well as the referendum and initiative process in Colorado. <span class="text-uppercase">Adults.</span> </div>
-        <div>Wednesday, October 24, 6:30PM.</div>
-        <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=139556" target="_blank" class="btn btn-default">Register Now</a></div>
-      </div>
-    </div>
-    <!-- block 1 end --> 
-    <!-- block 2 start -->
-    <div class="col-md-6 bg-lavender equal-height">
-      <div class="two-featured-items">
-        <div style="padding: 2px 2px 0 0" class="icon-circle-default"><i class="fas fa-crow"></i></div>
-        <h1 class="roboto">Teen Mystery Murder</h1>
-        <div>Solve a Murder on the High Seas at this interactive whodunit! <span class="text-uppercase">Teens.</span> </div>
-        <div>Friday, October 26, 6PM.</div>
-        <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=130565" target="_blank" class="btn btn-default">Register Now</a></div>
-      </div>
-    </div>
-    
-    <!-- block 2 end --> 
-  </div>
-  <!-- two featured items event row end --> 
-  <!--
-  ###############################
-  ###############################
-  ###############################
-       -->
-  <div class="row padding-top-15 padding-bottom-30">
-    <div class="container text-center">
-      <h4 class="roboto margin-lg-200">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h4>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary text-uppercase margin-top-10" type="button">Exhibit Your Work</button>
-      <!-- Modal -->
-      <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
-        <div role="document" class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-              <h4 id="artModalLabel" class="modal-title">Interested in Exhibiting Your Work?</h4>
-            </div>
-            <div class="modal-body">
-              <iframe id="JotFormIFrame" allowtransparency="true" src="https://form.jotform.us/62295606038155" frameborder="0" style="width:100%;height:650px;border:none;" scrolling="no"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div id="events" class="row location-events bg-teal">
+    <div class="container no-padding">
+      <h1 class="white text-uppercase text-center font-weight-400">Featured Branch Events</h1>
+      <div id="eventsinfo"></div>
+      <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Roxborough-Event&lib=ALL&nd=90&dm=html&IncludeDateHtml=1"></script> 
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -445,7 +394,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" -->
+	<script>
+function OpenInNewTab(url ){
+  var win=window.open(url, '_blank');
+  win.focus();
+}
+$("#eventsinfo .item").click(function(){
+     var url = $(this).find("a").attr("href");
+     OpenInNewTab(url);
+     return false;
+});
+	</script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {

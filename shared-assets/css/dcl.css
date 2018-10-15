@@ -87,7 +87,6 @@ table.dataTable thead th, table.dataTable thead td {
 #book-clubs_length > label, #book-clubs_filter > label {
 	font-weight: normal;
 }
-
 a:visited, a:hover, a:focus {
 	outline: 0;
 }
@@ -178,8 +177,8 @@ background-color: transparent;
 	opacity: .8!important;
 }
 .read-more-show:hover, .read-more-hide:hover {
-text-decoration: none;
-opacity: 1!important;
+	text-decoration: none;
+	opacity: 1!important;
 }
 /* ====== typography ====== */
 .text-underline {
@@ -1474,12 +1473,12 @@ h6.responsive-text {
 	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 #eventsinfo .item .title {
-	font-family: "Roboto Slab", palantino, serif;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: 300;
-	line-height: 1.3;
-	letter-spacing: -0.4px;
-	text-rendering: optimizeLegibility;
+}
+#eventsinfo .item .title a, #eventsinfo .item .title a:hover, #eventsinfo .item .title a:focus {
+	color: #333;
+	text-decoration: none;
 }
 #eventsinfo #eventdate {
 	font-size: 16px;
@@ -1492,11 +1491,23 @@ h6.responsive-text {
 	margin: 8px 0;
 }
 #eventsinfo .item {
-	background-color: rgba(255,255,255,.95);
+	background-color: rgba(255,255,255,.9);
 	font-size: 0px; /* hides "-" character */
 	margin: 5px;
 	padding: 30px;
 	flex: 1;
+}
+#eventsinfo .item:hover, #eventsinfo .item:focus {
+	cursor: pointer;
+	background-color: rgba(255,255,255,1);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 8px 16px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0 8px 16px 0;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 8px 16px 0;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease-out;
+	-ms-transition: all .4s ease-out;
+	-o-transition: all .4s ease-out;
+	transition: all .4s ease-out;
 }
 #eventsinfo .time {
 	font-size: 16px;
@@ -1510,7 +1521,7 @@ h6.responsive-text {
 #eventsinfo .location, #eventsinfo .branch, .description br {
 	display: none;
 }
-#location-events {
+.location-events {
 	padding-bottom: 60px;
 }
 
@@ -1518,7 +1529,7 @@ h6.responsive-text {
 .eventList.width {
 	flex-direction: column;
 }
-#events {
+.location-events {
 	padding-bottom: 15px;
 }
 }
