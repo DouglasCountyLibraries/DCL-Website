@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,11 +40,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
 <style>
-.input-group .form-control {
-	z-index: 0 !important;
-}
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
-	z-index: 0 !important;
+#er_search_results .er-search-result-box .er-search-result-top_section {
+	display: block;
+	text-align: bottom;
+	position: relative;
+	bottom: -17px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -84,6 +85,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script>
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<script>
+  (function() {
+    var id = '6f707104-dc5c-11e8-b78f-0242ac130002';
+    var ci_search = document.createElement('script');
+    ci_search.type = 'text/javascript';
+    ci_search.async = true;
+    ci_search.src = 'https://cse.expertrec.com/api/js/ci_common.js?id=' + id;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ci_search, s);
+  })();
+</script>
 <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -265,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" --> 
+  <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container">
       <div class="text-center">
@@ -274,22 +286,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="container padding-top-15 padding-bottom-60 margin-lg-200">
-      <form class="" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-        <div class="input-group">
-          <input type="hidden" name="si" value="87688031">
-          <input type="hidden" name="pid" value="r">
-          <input type="hidden" name="n" value="0">
-          <input type="hidden" name="_charset_" value="">
-          <input type="hidden" name="bcd" value="&#247;">
-          <input class="form-control" type="text" name="query">
-          <span class="input-group-btn">
-          <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
-          </span></div>
-      </form>
+    <div class="container padding-top-15 margin-lg-200">
+      <div class="margin-lg-100 margin-md-50">
+        <ci-search></ci-search>
+      </div>
       <div>
         <h4 class="roboto text-center padding-top-15">Search here for information about Douglas County Libraries hours, locations, services and events. To find an item to borrow, use the search box at the top of the page.</h4>
       </div>
+    </div>
+    <div class="container margin-lg-200 padding-bottom-60">
+      <ci-search-results></ci-search-results>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -385,4 +391,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
