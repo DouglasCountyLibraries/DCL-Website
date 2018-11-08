@@ -75,23 +75,53 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- Start of Zendesk Widget script -->
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script>
 <!-- End of Zendesk Widget script -->
+<style>
+.featured-tour {
+	font-family: "Nothing You Could Do", cursive;
+	font-size: 26px;
+	font-weight: bold;
+	text-rendering: optimizelegibility;
+	background-color: #5f953d;
+	padding: 5px 0;
+}
+.arrow-up {
+	margin: 0 20px 0 24%;
+	-webkit-transform: rotate(220deg);
+	transform: rotate(220deg);
+}
+.tour-backdrop {
+	opacity: 0.3!important;
+}
+.tour-step-background {
+	background-color: transparent!important;
+}
+.popover-content {
+	font-size: 18px;
+	padding: 20px;
+}
+.popover-navigation {
+	border-top: 1px solid #e5e5e5;
+}
+.popover-navigation .btn.btn-sm.btn-default {
+	background-color: #fff;
+	box-shadow: none;
+	color: #666;
+	padding: 10px;
+	text-transform: uppercase;
+}
+.popover-navigation .btn-default:active, .popover-navigation .btn-default:hover, .popover-navigation .btn-default:focus {
+	transform: translateY(0);
+	transition: none;
+}
+.popover-navigation .btn-default.disabled:active, .popover-navigation .btn-default.disabled:hover, .popover-navigation .btn-default.disabled:focus {
+	transform: translateY(0);
+	transition: none;
+}
+</style>	
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
-}
-.icon-circle-moss {
-	background-color: #90ad63;
-	border: 3px solid #fff;
-	border-radius: 50%;
-	box-sizing: border-box;
-	color: #fff;
-	font-size: 60px;
-	height: 100px;
-	line-height: 90px;
-	margin: 0 auto;
-	text-align: center;
-	width: 100px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -152,15 +182,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </li>
       <li class="whats-new-active"><a href="../whats-new">What's New</a> </li>
-      <li class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+      <li id="step1" class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
         <ul class="dropdown-menu">
           <li><a href="../locations">Hours & Locations</a></li>
-          <li><a href="../library-basics">Library Basics</a></li>
-          <li> <a href="http://getacard.org/v2/index.html" target="_blank">Get a Library Card</a> </li>
+          <li><a id="step2" href="../library-basics">Library Basics</a></li>
+          <li> <a id="step3" href="../library-perks">Library Perks</a> </li>
           <li><a href="../book-clubs">Book Clubs</a></li>
           <li><a href="../staff-recommendations">Staff Recommendations</a></li>
           <li><a href="../business">DCL for Business</a></li>
-          <li><a href="../research/online-learning">Online Learning</a></li>
           <li><a href="../adult-education">Adult Education & Test Prep</a></li>
         </ul>
       </li>
@@ -218,11 +247,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <ul id="using-the-library" class="nav mobile-nav-list collapse">
                   <li><a href="../locations">Hours & Locations</a></li>
                   <li><a href="../library-basics">Library Basics</a></li>
-                  <li><a href="http://getacard.org/v2/index.html" target="_blank">Get a Library Card</a> </li>
+				  <li><a href="../library-perks">Library Perks</a></li>
                   <li><a href="../book-clubs">Book Clubs</a></li>
                   <li><a href="../staff-recommendations">Staff Recommendations</a></li>
                   <li><a href="../business">DCL for Business</a></li>
-                  <li><a href="../research/online-learning">Online Learning</a></li>
                   <li><a href="../adult-education">Adult Education & Test Prep</a></li>
                 </ul>
               </li>
@@ -270,6 +298,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </nav>
+	<div id="starttour" class="pointer hidden-xs hidden-sm">
+  <div class="white featured-tour">
+    <div class="container"><i class="material-icons arrow-up opacity-7">redo</i>See what's new! <span class="text-underline">Take a quick tour.</span></div>
+  </div>
+</div>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
   <div class="row alert-warning">
@@ -313,81 +346,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row no-gutter sub-nav-row">
-    <div class="sub-nav">
-      <div class="col-sm-4 sub-nav-item sub-nav-border-first equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../request-title/"><i class="fas fa-share-square"></i>Request a Title</a></h5>
+  <div class="row">
+    <div class="container">
+      <div class="col-md-6">
+        <div class="padding-top-30 col-sm-3">
+          <div style="padding-top:3px;" class="icon-circle-teal"><i class="far fa-credit-card"></i></div>
+        </div>
+        <div class="col-sm-9">
+          <h2><a href="http://getacard.org/v2/index.html" target="_blank">Get a Library Card</a></h2>
+          <div><a href="http://getacard.org/v2/index.html" target="_blank">Register here</a> to get a DCL library card, or to recover your <a href="http://getacard.org/v2/index.html#recoverBarcodeTab" target="_blank">library card number</a> or <a href="http://getacard.org/v2/index.html#recoverPasswordTab" target="_blank">PIN</a>. <a href="../library-perks/">See some of the perks</a> that come with your new card!</div>
+        </div>
       </div>
-      <div class="col-sm-4 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="#fines-fees-borrowing"><i class="fas fa-shopping-basket"></i>Fines, Fees & Borrowing</a></h5>
-      </div>
-      <div class="col-sm-4 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="#print-copy"><i class="fas fa-print"></i>Print & Copy</a></h5>
+      <div class="col-md-6">
+        <div class="padding-top-30 col-sm-3">
+          <div class="icon-circle-teal"><i class="fas fa-thumbs-up"></i></div>
+        </div>
+        <div class="col-sm-9">
+          <h2><a href="../request-title/">Request a Title</a></h2>
+          <div>Can't find what you're looking for in the catalog? Here are a few more options.</div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-30 padding-bottom-60">
+  <div class="row padding-bottom-60">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="padding-top-30 col-sm-3">
-            <div class="icon-circle-teal"><i class="fas fa-comments"></i></div>
-          </div>
-          <div class="col-sm-9">
-            <h2 class="hidden-lg hidden-md"><a href="sms:+17208938008">Text Alerts</a></h2>
-            <div class="hidden-lg hidden-md"><a href="sms:+17208938008">Text the word "signup" to 720-893-8008</a> to get account information via text. We’ll let you know when your holds are available for pickup, and when items are due or overdue. Standard texting rates apply.</div>
-            <h2 class="hidden-xs hidden-sm">Text Alerts</h2>
-            <div class="hidden-xs hidden-sm">Text the word "signup" to 720-893-8008 to get account information via text. We'll let you know when your holds are available for pickup, and when items are due or overdue. Standard texting rates apply.</div>
-          </div>
+      <div class="col-md-6">
+        <div class="padding-top-30 col-sm-3">
+          <div style="padding-top:5px;" class="icon-circle-teal"><i class="far fa-comment-alt"></i></div>
         </div>
-        <div class="col-md-6">
-          <div class="padding-top-30 col-sm-3">
-            <div class="icon-circle-teal"><i class="fas fa-home"></i></div>
-          </div>
-          <div class="col-sm-9">
-            <h2><a class="text-left" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="To find out if you qualify, or to volunteer as a Homebound Delivery driver, call us at (303) 791-7323 and ask for the Branch Volunteer Coordinator at your home library.">Homebound Delivery</a></h2>
-            <div>Qualified cardholders can have library materials delivered right to their doors if they are unable to come to the library due to illness or disability. </div>
-          </div>
+        <div class="col-sm-9">
+          <h2 class="hidden-lg hidden-md"><a href="sms:+17208938008">Text Alerts</a></h2>
+          <div class="hidden-lg hidden-md"><a href="sms:+17208938008">Text the word "signup" to 720-893-8008</a> to get account information via text. We’ll let you know when your holds are available for pickup, and when items are due or overdue. Standard texting rates apply.</div>
+          <h2 class="hidden-xs hidden-sm">Text Alerts</h2>
+          <div class="hidden-xs hidden-sm">Text the word "signup" to 720-893-8008 to get account information via text. We'll let you know when your holds are available for pickup, and when items are due or overdue. Standard texting rates apply.</div>
         </div>
       </div>
-      <div class="row">
-        <div id="check-out-colorado" class="col-md-6">
-          <div class="padding-top-30 col-sm-3">
-            <div class="icon-circle-teal"><i class="fas fa-map"></i></div>
-          </div>
-          <div class="col-sm-9">
-            <h2> <a href="https://dcl.bibliocommons.com/item/show/1350439114">Check Out Colorado</a> </h2>
-            <div>A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks.</div>
-          </div>
+      <div class="col-md-6">
+        <div class="padding-top-30 col-sm-3">
+          <div style="padding: 4px 0 0 3px;" class="icon-circle-teal"><i class="fas fa-truck"></i></div>
         </div>
-        <div class="col-md-6">
-          <div class="padding-top-30 col-sm-3">
-            <div style="padding:2px 0 0 1px;" class="icon-circle-teal"><i class="fas fa-compass"></i></div>
-          </div>
-          <div class="col-sm-9">
-            <h2><a href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Adventure Pass</a> & <a href="../dcl-local/">DCL Local</a></h2>
-            <div>Our partnerships with <a href="../dcl-local/#adventure-pass">area cultural institutions</a> let you reserve free passes up to 30 days in advance. Plus, enjoy DCL Local: Use your library card for discounts at <a href="../dcl-local/">participating businesses</a>!</div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="padding-top-30 col-sm-3">
-            <div style="padding:4px 0 0 0;" class="icon-circle-teal"><i class="fas fa-wifi"></i></div>
-          </div>
-          <div class="col-sm-9">
-            <h2><a href="https://dcl.bibliocommons.com/item/show/1381402114_dcl_hotspot_r850">DCL Hotspot</a></h2>
-            <div>Borrow a DCL hotspot and connect up to 10 devices simultaneously to enjoy long-range Wi-Fi indoors or out.</div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="padding-top-30 col-sm-3">
-            <div style="padding:4px 0 0 2px;"  class="icon-circle-teal"><i class="fas fa-tags"></i></div>
-          </div>
-          <div class="col-sm-9">
-            <h2><a href="https://dcl.bibliocommons.com/search?custom_query=formatcode%3A(EQUIPMENT+)&suppress=true&custom_edit=false">Nontraditional Items</a></h2>
-            <div>We offer more than just books and movies! Check out a sewing machine, microscope, or drawing tool and more for your next project. Items are available on a first-come, first-served basis; ask a staff member for more information.</div>
-          </div>
+        <div class="col-sm-9">
+          <h2><a class="text-left" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="To find out if you qualify, or to volunteer as a Homebound Delivery driver, call us at (303) 791-7323 and ask for the Branch Volunteer Coordinator at your home library.">Homebound Delivery</a></h2>
+          <div>Qualified cardholders can have library materials delivered right to their doors if they are unable to come to the library due to illness or disability. </div>
         </div>
       </div>
     </div>
@@ -399,10 +399,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="text-center margin-top-30"> <a href="https://dcl.bibliocommons.com/fines" target="_blank" class="text-uppercase btn btn-primary">Pay Your Fines</a> <a href="../fines-fees-borrowing" class="white margin-left-10 text-uppercase">Learn More &raquo;</a></div>
     </div>
   </div>
-  <div id="print-copy" class="row padding-top-30 padding-bottom-60">
+  <div id="print-copy" class="row padding-top-15 padding-bottom-15">
     <div class="container">
       <h1 class="text-center">Print &amp; Copy</h1>
-      <div class="col-md-4 margin-lg-30 padding-top-5 padding-bottom-40">
+      <div class="col-md-4 margin-lg-30 padding-top-5">
         <h2 class="roboto">Printing</h2>
         <div>Print on the library's public printers during library hours regardless of device, network or location. Large documents and PDFs may take a few minutes to print; jobs not picked up within two hours of being sent will be deleted.</div>
         <div class="dropdown"> <a data-toggle="dropdown" class="btn btn-primary text-uppercase margin-top-15 dropdown-toggle">Print Now <span class="caret"></span></a>
@@ -421,7 +421,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
         </div>
       </div>
-      <div class="col-md-4 margin-lg-30 padding-bottom-40">
+      <div class="col-md-4 margin-lg-30">
         <h2 class="roboto">Printing Prices</h2>
         <div>Letter & legal size
           <ul>
@@ -436,7 +436,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </ul>
         </div>
       </div>
-      <div class="col-md-4 margin-lg-30 padding-bottom-40">
+      <div class="col-md-4 margin-lg-30">
         <h2 class="roboto">Copying Prices</h2>
         <div>Letter & legal size
           <ul>
@@ -451,6 +451,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row padding-bottom-60">
+    <div class="container">
       <div class="small text-center">To pay with your Visa or MasterCard credit card, see a DCL staff member; $1 minimum. There is a $5 maximum per print/copy job.</div>
     </div>
   </div>
@@ -553,5 +557,61 @@ $(function () {
   }
 </script> 
 <!-- End Structured Data -->
+	<link rel="stylesheet" type="text/css" href="../bootstrap-tour.css">
+<script src="../bootstrap-tour.js"></script> 
+<script>
+// Instance the tour
+var tour = new Tour({
+  debug: true,
+  storage: false,
+  steps: [
+  {
+    element: "#step1",
+    content: "We've made some changes.",
+    placement: "bottom",
+	backdrop: true,
+  },
+  {
+    element: "#step2",
+    content: "Get a Library Card can now be found under Library Basics.",
+    placement: "right",
+	backdrop: true,
+    onShow: function() {
+      return $("#step1").addClass("open");
+    },      
+    onHide: function() {
+      $("#step1").removeClass("open"); 
+    } 
+  } ,
+  {
+    element: "#step3",
+    content: "Online Learning has moved! Find it under Library Perks.",
+    placement: "right",
+	backdrop: true,
+    onShow: function() {
+      return $("#step1").addClass("open");
+    },      
+    onHide: function() {
+      $("#step1").removeClass("open"); 
+    } 
+  },    
+	  	  
+	  {
+	content: "Explore <a href='https://www.dcl.org/library-perks'>Library Perks now</a> and learn the benefits of being a DCL cardholder.",
+	orphan: true,
+	backdrop: true,
+	  }
+]});
+
+tour.init();
+
+$("#starttour").click(function(){
+    tour.start();
+    });
+$(document).on('click', '.popover-navigation [data-role=next],.popover-navigation [data-role=prev]', function (e) {
+        e.stopPropagation();
+    });
+
+</script>
 </body>
 <!-- InstanceEnd --></html>
