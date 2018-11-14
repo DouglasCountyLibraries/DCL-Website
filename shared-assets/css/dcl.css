@@ -370,7 +370,11 @@ blockquote footer, blockquote small, blockquote .small {
 }
 .fade-in-text {
 	-webkit-animation: fade-in-text .4s linear .4s both;
-	animation: fade-in-text .4s liner .4s both;
+	animation: fade-in-text .4s linear .4s both;
+}
+.fade-in-background {
+	-webkit-animation: fade-in-background .4s linear 1.2s both;
+	animation: fade-in-background .4s linear 1.2s both;
 }
 @-webkit-keyframes fade-in-search {
  0% {
@@ -397,6 +401,22 @@ blockquote footer, blockquote small, blockquote .small {
 }
 }
 @keyframes fade-in-text {
+ 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@-webkit-keyframes fade-in-background {
+ 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+@keyframes fade-in-background {
  0% {
  opacity: 0;
 }
