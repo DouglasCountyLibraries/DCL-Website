@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -118,9 +119,59 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	transform: translateY(0);
 	transition: none;
 }
-</style>	
+</style>
 <!-- InstanceBeginEditable name="head" -->
+<link href="https://fonts.googleapis.com/css?family=Clicker+Script|Prata" rel="stylesheet">
 <style>
+.feature-one {
+	font-family: 'Clicker Script', cursive;
+	font-size: 160px;
+	color: #6c781d;
+	line-height: 130px;
+}
+.feature-two {
+	font-family: 'Prata', serif;
+	text-transform: uppercase;
+	font-size: 100px;
+	color: #6c781d;
+	line-height: 60px;
+}
+.what-text {
+	font-family: 'Clicker Script', cursive;
+	font-size: 60px;
+	color: #fff;
+	text-transform: lowercase;
+	line-height: 50px;
+}
+.tree-background {
+	background: #f5ebdc url("tree-background.png") repeat-x bottom center;
+}
+.red-text {
+	color: #000;
+	font-weight: 400;
+}
+.red-text a:active, .red-text a:hover, .red-text a:focus {
+	color: #873928;
+	text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+.text-center.headings {
+	position: relative;
+	top: -53px;
+}
+.tree-background {
+	background: #f5ebdc;
+}
+.feature-one {
+	font-size: 150px;
+	line-height: 175px;
+}
+.feature-two {
+	font-size: 90px;
+	line-height: 0px;
+}
+}
 .carousel-cell {
 	width: 100%;
 	padding: 0 0 50px 0;
@@ -287,7 +338,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <ul id="using-the-library" class="nav mobile-nav-list collapse">
                   <li><a href="../locations">Hours & Locations</a></li>
                   <li><a href="../library-basics">Library Basics</a></li>
-				  <li><a href="../library-perks">Library Perks</a></li>
+                  <li><a href="../library-perks">Library Perks</a></li>
                   <li><a href="../book-clubs">Book Clubs</a></li>
                   <li><a href="../staff-recommendations">Staff Recommendations</a></li>
                   <li><a href="../business">DCL for Business</a></li>
@@ -338,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </nav>
-	<div id="starttour" class="pointer hidden-xs hidden-sm">
+<div id="starttour" class="pointer hidden-xs hidden-sm">
   <div class="white featured-tour">
     <div class="container"><i class="material-icons arrow-up opacity-7">redo</i>See what's new! <span class="text-underline">Take a quick tour.</span></div>
   </div>
@@ -376,9 +427,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row white bg-lavender padding-bottom-30">
+  <div class="row tree-background padding-top-15">
+    <div class="container-md">
+      <div class="col-lg-7"><img class="padding-top-15 padding-bottom-15 img-responsive center-block" src="treehouse.png" alt="Come On Up"></div>
+      <div class="col-lg-5 col-lg-pull-2 padding-top-15 padding-bottom-15">
+        <div class="text-center headings">
+          <div class="feature-one">come</div>
+          <div class="feature-two">on&nbsp;up</div>
+        </div>
+        <h3 class="text-center gray-90">Colorado Gives Day is Tuesday, December 4.</h3>
+        <h4 class="text-center red-text text-uppercase"><a class="red-text" href="../donate/">Learn More &raquo;</a></h4>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #7f8d21;" class="row white padding-bottom-30">
     <div class="container-lg no-gutter">
-      <h1 class="text-center white">What We Do</h1>
+      <div class="padding-top-15 hidden-lg"></div>
+      <div class="text-center what-text">What We Do</div>
       <div class="col-lg-3 col-md-6 col-sm-6 padding-top-15 padding-bottom-30">
         <div id="box-one"></div>
         <h2 class="roboto text-center white"><a class="white" href="../adult-education/">Career Online High School & HSE Prep</a></h2>
@@ -633,7 +698,7 @@ for (var i = 0; i < cards.length; i++) {
   }
 </script> 
 <!-- End Structured Data -->
-	<link rel="stylesheet" type="text/css" href="../bootstrap-tour.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap-tour.css">
 <script src="../bootstrap-tour.js"></script> 
 <script>
 // Instance the tour
@@ -690,4 +755,5 @@ $(document).on('click', '.popover-navigation [data-role=next],.popover-navigatio
 
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
