@@ -129,12 +129,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script>
 <script type="text/javascript">
 $(document).ready(function () {
-    if (document.cookie.indexOf("shown=true")<10) {
+    if (document.cookie.indexOf("shown=true")<0) {
         var show = function(){
                 $('#myModal').modal('show');
         };
         $(window).load(function(){
-            var timer = window.setTimeout(show,0);
+            var timer = window.setTimeout(show,1);
         });
     }
     document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
