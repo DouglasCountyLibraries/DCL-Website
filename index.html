@@ -137,18 +137,20 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	color: #03938b;
 	line-height: 38px;
 }
-.feature-one {
+.feature-one, .feature-one a, .feature-one a:hover, .feature-one a:focus {
 	font-family: 'Clicker Script', cursive;
 	font-size: 160px;
 	color: #6c781d;
 	line-height: 130px;
+	text-decoration: none;
 }
-.feature-two {
+.feature-two, .feature-two a, .feature-two a:hover, .feature-two a:focus {
 	font-family: 'Prata', serif;
 	text-transform: uppercase;
 	font-size: 100px;
 	color: #6c781d;
 	line-height: 80px;
+	text-decoration: none;
 }
 .red-text {
 	font-weight: 400;
@@ -182,10 +184,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	line-height: 38px;
 }
 .btn-warning {
-	background: #cc1f22;
+	background: #95191c;
 }
 .btn-warning:active, .btn-warning:hover, .btn.warning:focus {
-	background: #95191c;
+	background: #6c2e20;
 }
 .sub-title {
 	color: #E6E6E8;
@@ -196,12 +198,19 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding-left: 300px;
 	padding-right: 300px;
 }
+.date-box {
+	position: relative;
+	top: 20px;
+}
+.date-box h3, .date-box h3 a {
+	color: #fff;
+}
 }
 
 @media (max-width: 1200px) {
-.text-center.headings {
+.headings {
 	position: relative;
-	top: -53px;
+	top: -50px;
 }
 .image-center-md {
 	margin: 0 auto;
@@ -214,7 +223,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .feature-one {
 	font-size: 150px;
-	line-height: 175px;
+	line-height: 125px;
 }
 .feature-two {
 	font-size: 90px;
@@ -225,6 +234,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 @media (min-width: 1200px) {
 .holiday-text {
 	padding-top: 40px
+}
+.tree-background {
+	padding-bottom: 40px;
 }
 }
 
@@ -419,16 +431,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row tree-background padding-top-60 padding-bottom-60">
+  <div class="row tree-background padding-top-30">
     <div class="container-md">
-      <div class="col-lg-7"><img class="padding-top-15 padding-bottom-15 img-responsive center-block" src="treehouse.png" alt="Come On Up"></div>
+      <div class="col-lg-7"><a href="donate/"><img class="hidden-xs hidden-sm hidden-md padding-top-15 padding-bottom-15 img-responsive center-block" src="treehouse.png" alt="Come On Up"><img class="hidden-lg padding-top-15 padding-bottom-15 img-responsive center-block" src="treehouse-sm.png" alt="Come On Up"></a></div>
       <div class="col-lg-5 col-lg-pull-2 padding-top-15 padding-bottom-15">
         <div class="text-center headings">
-          <div class="feature-one">come</div>
-          <div class="feature-two">on&nbsp;up</div>
+          <div class="feature-one"><a href="donate/">come</a></div>
+          <div class="feature-two"><a href="donate/">on&nbsp;up</a></div>
+          <a href="donate/"><img class="img-responsive image-center padding-top-15" src="cgd-logo.png" alt="Colorado Gives Day"></a>
+          <div class="date-box text-center">
+            <h3>Colorado Gives Day is Tuesday,<br>
+              December&nbsp;4! <a class="text-underline" href="donate/">Learn More</a> &raquo;</h3>
+          </div>
         </div>
-        <h3 class="text-center gray-90">Colorado Gives Day is Tuesday, December 4.</h3>
-        <h4 class="text-center red-text text-uppercase"><a class="red-text" href="donate/">Learn More &raquo;</a></h4>
       </div>
     </div>
   </div>
