@@ -129,12 +129,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script>
 <script type="text/javascript">
 $(document).ready(function () {
-    if (document.cookie.indexOf("shown=true")<0) {
+    if (document.cookie.indexOf("shown=true")<10) {
         var show = function(){
                 $('#myModal').modal('show');
         };
         $(window).load(function(){
-            var timer = window.setTimeout(show,1);
+            var timer = window.setTimeout(show,0);
         });
     }
     document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
@@ -233,7 +233,7 @@ $(document).ready(function () {
 	line-height: 38px;
 }
 .btn-warning {
-	background: #cc1f22;
+	background: #b73321;
 }
 .btn-warning:active, .btn-warning:hover, .btn.warning:focus {
 	background: #95191c;
@@ -474,12 +474,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="modal-dialog" role="document">
       <div class="modal-content bg-modal">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="padding-15" aria-hidden="true">&times;</span></button>
-        <div class="donate-box">
+        <div class="donate-box"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank"><span class="link-spanner"></span></a>
           <div class="donate-box-top"><img class="image-center img-responsive" src="donate.jpg" alt="Colorado Gives Day"></div>
-          <div class="donate-box-bottom">
-            <div class="donate-text-one">Today is</div>
-            <div class="donate-text-two">Colorado Gives Day</div>
-            <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank" class="btn btn-warning margin-top-30 margin-bottom-40 text-uppercase white">Please Donate!</a> </div>
+          <div class="donate-box-bottom"> <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank" class="btn btn-warning margin-bottom-40 text-uppercase white">Please Donate!</a> </div>
         </div>
       </div>
     </div>
