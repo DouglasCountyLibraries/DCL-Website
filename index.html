@@ -124,7 +124,57 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Prata|Bangers|Noto+Serif+JP:700" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    if (document.cookie.indexOf("shown=true")<0) {
+        var show = function(){
+                $('#myModal').modal('show');
+        };
+        $(window).load(function(){
+            var timer = window.setTimeout(show,1);
+        });
+    }
+    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+});
+</script>
 <style>
+.modal-backdrop {
+	background-color: #f29f04;
+}
+.modal-backdrop.in {
+	opacity: 0.4;
+}
+.bg-modal {
+	background-color: #f5ebdc;
+	min-height: 400px;
+	text-align: center;
+}
+.close {
+	line-height: 1.6;
+}
+.donate-box {
+	border: 3px solid #fff;
+}
+.donate-box-top {
+	background-color: #f5ebdc;
+}
+.donate-box-bottom {
+	background-color: #94a427;
+}
+.donate-text-one {
+	font-family: 'Prata', serif;
+	text-transform: uppercase;
+	font-size: 36px;
+	color: #fff;
+}
+.donate-text-two {
+	font-family: 'Clicker Script', cursive;
+	font-size: 68px;
+	color: #fff;
+	line-height: 54px;
+}
 .snow-background {
 	background: #fff url("snow-background.jpg") center center/cover;
 }
@@ -184,10 +234,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	line-height: 38px;
 }
 .btn-warning {
-	background: #95191c;
+	background: #b73321;
 }
 .btn-warning:active, .btn-warning:hover, .btn.warning:focus {
-	background: #6c2e20;
+	background: #95191c;
 }
 .sub-title {
 	color: #E6E6E8;
@@ -202,7 +252,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	position: relative;
 	top: 20px;
 }
-.date-box h3, .date-box h3 a {
+.date-box h3, .date-box h3 a, .link-box a {
 	color: #fff;
 }
 }
@@ -431,17 +481,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="padding-15" aria-hidden="true">&times;</span></button>
+        <div class="donate-box">
+          <div class="donate-box-top"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank"><img class="image-center img-responsive" src="donate.jpg" alt="Colorado Gives Day"></a></div>
+          <div class="donate-box-bottom"> <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank" class="btn btn-warning margin-bottom-40 text-uppercase white">Please Donate!</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="row tree-background padding-top-30">
     <div class="container-md">
-      <div class="col-lg-7"><a href="donate/"><img class="hidden-xs hidden-sm hidden-md padding-top-15 padding-bottom-15 img-responsive center-block" src="treehouse.png" alt="Come On Up"><img class="hidden-lg padding-top-15 padding-bottom-15 img-responsive center-block" src="treehouse-sm.png" alt="Come On Up"></a></div>
+      <div class="col-lg-7"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank"><img class="hidden-xs hidden-sm hidden-md padding-top-15 padding-bottom-15 img-responsive center-block" src="treehouse.png" alt="Come On Up"><img src="treehouse-sm.png" alt="Come On Up" class="hidden-lg padding-top-15 padding-bottom-15 img-responsive center-block" border="0"></a></div>
       <div class="col-lg-5 col-lg-pull-2 padding-top-15 padding-bottom-15">
         <div class="text-center headings">
-          <div class="feature-one"><a href="donate/">come</a></div>
-          <div class="feature-two"><a href="donate/">on&nbsp;up</a></div>
-          <a href="donate/"><img class="img-responsive image-center padding-top-15" src="cgd-logo.png" alt="Colorado Gives Day"></a>
+          <div class="feature-one"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank">come</a></div>
+          <div class="feature-two"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank">on&nbsp;up</a></div>
+          <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank"><img class="img-responsive image-center padding-top-15" src="cgd-logo.png" alt="Colorado Gives Day"></a>
           <div class="date-box text-center">
-            <h3>Colorado Gives Day is Tuesday,<br>
-              December&nbsp;4! <a class="text-underline" href="donate/">Learn More</a> &raquo;</h3>
+            <h3>Today is Colorado Gives Day!</h3>
+            <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788#1" target="_blank" class="btn btn-warning text-uppercase white">Please Donate!</a>
+            <div class="link-box margin-top-10"><a class="text-uppercase font-weight-400" href="donate/">Learn More &raquo;</a></div>
           </div>
         </div>
       </div>
