@@ -2075,62 +2075,49 @@ h6.responsive-text {
 .baguetteBox-button {
 	background-color: transparent !important;
 }
-/* styles for Springshare */
+/* keyframes for card animations (requires jquery visible script) */
 
-#tinymce .row {
-	margin: 0;
+.come-in {
+	transform: translateY(250px);
+	animation: come-in 0.8s ease forwards;
 }
-#tinymce {
-	padding: 20px!important;
+.come-in:nth-child(1) {
+	animation-duration: 0.2s;
 }
-.s-la-footer.s-la-color-bars.s-la-color-bars-border {
-	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-	border-top: medium none;
-	margin-bottom: 60px;
+.come-in:nth-child(2) {
+	animation-duration: 0.4s;
 }
-.s-srch-result-meta .metalabel, label.check, .s-srch-result-title, .s-la-faq-listing-q {
-	font-weight: 300;
+.come-in:nth-child(3) {
+	animation-duration: 0.6s;
 }
-.s-srch-result-title {
-	font-size: 16px;
+.come-in:nth-child(4) {
+	animation-duration: 0.8s;
 }
-#s-la-bc .breadcrumb, .s-srch-result-meta, .s-la-faq-listing-meta, .s-srch-top-header, #s-srch-sort-0-btn, #s-srch-facet-0-keywords, #s-srch-facet-0-g, #s-srch-params-0, #s-la-footer-brand, #s-la-footer-admin-links {
-	display: none;
+.come-in:nth-child(5) {
+	animation-duration: 1s;
 }
-.s-la-public-header-text {
-	float: none;
-	margin: 15px 0 30px;
-	text-align: center;
-	text-transform: uppercase;
+.come-in:nth-child(6) {
+	animation-duration: 1.2s;
 }
-.s-la-color-bars {
-	background-image: none;
+.come-in-card.come-in {
+	animation-duration: 2.5s;
+	transform: rotate(30deg)
 }
-h1#s-la-public-header-title {
-	color: #666;
-	font-size: 48px;
-	font-weight: 400;
+/* everybody slides in
+.already-visible {
+  transform: translateY(0);
+  animation: none;
 }
-.s-srch-askbutton .alert-info {
-	background-color: #5d9732;
-	border: medium none;
-	border-radius: 0;
-	color: #fff;
-	text-align: center;
+*/
+@keyframes come-in {
+ to {
+ transform: translateY(0);
 }
-.alert-info .btn-primary {
-	border-radius: 0;
-	padding: 10px;
-	text-transform: uppercase;
 }
-button.s-srch-facet-btn {
-	color: #fff;
-	letter-spacing: 1px;
-	padding: 12px;
-	text-transform: uppercase;
+ @-webkit-keyframes come-in {
+ to {
+ transform: translateY(0);
 }
-.s-la-header.row.clearfix {
-	padding: 0;
 }
 /* styles for the blogs */
 /* we don't want the featured image to display. just have it available for open graph */

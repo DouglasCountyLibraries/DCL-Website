@@ -150,48 +150,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	-webkit-transform: rotate(-10deg);
 	z-index: -1;
 }
-.come-in {
-	transform: translateY(250px);
-	animation: come-in 0.8s ease forwards;
-}
-.come-in:nth-child(1) {
-	animation-duration: 0.2s;
-}
-.come-in:nth-child(2) {
-	animation-duration: 0.4s;
-}
-.come-in:nth-child(3) {
-	animation-duration: 0.6s;
-}
-.come-in:nth-child(4) {
-	animation-duration: 0.8s;
-}
-.come-in:nth-child(5) {
-	animation-duration: 1s;
-}
-.come-in:nth-child(6) {
-	animation-duration: 1.2s;
-}
-.come-in-card.come-in {
-	animation-duration: 2.5s;
-	transform: rotate(30deg)
-}
-/* everybody slides in
-.already-visible {
-  transform: translateY(0);
-  animation: none;
-}
-*/
-@keyframes come-in {
- to {
- transform: translateY(0);
-}
-}
- @-webkit-keyframes come-in {
- to {
- transform: translateY(0);
-}
-}
 
 @media (max-width: 992px) {
 .staff-person.img-responsive.center-block {
@@ -544,7 +502,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-	<script>
+ <script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+ </script> 
+ <!-- #BeginLibraryItem "/Library/jquery-visible.lbi" --> 
+ <script>
 	(function($) {
 
   /**
@@ -596,13 +560,7 @@ win.scroll(function(event) {
   });
   
 });
-	</script> 
-	<script>
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
- </script> 
-	<!-- InstanceEndEditable --> 
+	</script> <!-- #EndLibraryItem --> <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
   {
