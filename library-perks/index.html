@@ -126,18 +126,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .gradient-row {
 	background: rgb(255,255,255);
-	background: radial-gradient(ellipse at bottom center, #ffffff 0%, #ffffff 60%, rgba(218,201,185,.8) 100%);
+	background: radial-gradient(ellipse at bottom center, #ffffff 0%, #ffffff 50%, #f5f5f5 100%);
 }
 .cb-box {
 	background: #fff;
-	padding: 40px 30px 0;
-	margin: 165px 0 -3px;
+	padding: 50px 95px 0;
+	margin: 170px 0 0px;
 }
 #activities {
-	padding: 110px 0 75px;
+	padding: 85px 0;
 }
 #online-learning {
 	padding: 50px 0 60px;
+}
+.icon-circle-lavender {
+	background-color: rgba(255,255,255,.4);
 }
 .cb-background {
 	background: url("creative-bug.jpg") repeat-x center center;
@@ -148,7 +151,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	z-index: -1;
 }
 .aaptiv-row {
-	background: rgba(218,201,185,.2);
+	background: #f5f5f5;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -157,7 +160,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	flex: 1 100%;
 }
 .aside {
-	padding: 30px;
+	padding: 15px 30px 45px 30px;
+}
+.item-wrapper {
+	display: flex;
+}
+.item {
+	background: #f5f5f5;
+	margin: 5px;
+	padding: 45px 30px 75px 30px;
+	flex: 1;
 }
 
 @media (max-width: 992px) {
@@ -165,10 +177,19 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	max-height: 275px;
 }
 .cb-box {
-	margin: 110px 0 -3px;
+	padding: 40px 30px 0;
+	margin: 165px 0 -3px;
 }
 .aaptiv-row {
 	flex-flow: row wrap;
+}
+.item-wrapper {
+	flex-direction: column;
+}
+.item {
+
+	padding: 30px;
+	
 }
 .aside {
 	padding: 30px 15px;
@@ -406,18 +427,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="activities" class="row">
-    <div class="container">
-      <div id="check-out-colorado" class="col-md-4 padding-bottom-30">
+    <div class="container item-wrapper">
+      <div id="check-out-colorado" class="item shadow-low">
         <div style="padding-top:2px;" class="icon-circle-lavender"><i class="fas fa-hiking"></i></div>
         <h3 class="text-center"> <a href="https://dcl.bibliocommons.com/item/show/1350439114">Check Out Colorado</a> </h3>
         <div>A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks.</div>
       </div>
-      <div class="col-md-4 padding-bottom-30">
+      <div id="nontraditional-items" class="item shadow-low">
         <div style="padding-top:2px;" class="icon-circle-lavender"><i class="fas fa-microscope"></i></div>
         <h3 class="text-center"> <a href="https://dcl.bibliocommons.com/search?custom_query=formatcode%3A(EQUIPMENT+)&suppress=true&custom_edit=false">Nontraditional Items</a> </h3>
         <div>We offer more than just books and movies! Check out a sewing machine, microscope, or drawing tool and more for your next project. Items are available on a first-come, first-served basis; ask a staff member for more information.</div>
       </div>
-      <div class="col-md-4 padding-bottom-30">
+      <div id="dcl-local" class="item shadow-low">
         <div style="padding-top:2px;" class="icon-circle-lavender"><i class="fas fa-hands-helping"></i></div>
         <h3 class="text-center"><a href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Adventure Pass</a> & <a href="../dcl-local/">DCL Local</a></h3>
         <div>Our partnerships with <a href="../dcl-local/#adventure-pass">area cultural institutions</a> let you reserve free passes up to 30 days in advance. Plus, enjoy DCL Local: Use your library card for discounts at <a href="../dcl-local/">participating businesses</a>!</div>
