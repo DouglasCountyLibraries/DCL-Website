@@ -75,49 +75,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- Start of Zendesk Widget script -->
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script>
 <!-- End of Zendesk Widget script -->
-<style>
-.featured-tour {
-	font-family: "Nothing You Could Do", cursive;
-	font-size: 26px;
-	font-weight: bold;
-	text-rendering: optimizelegibility;
-	background-color: #5f953d;
-	padding: 5px 0;
-}
-.arrow-up {
-	margin: 0 20px 0 24%;
-	-webkit-transform: rotate(220deg);
-	transform: rotate(220deg);
-}
-.tour-backdrop {
-	opacity: 0.3!important;
-}
-.tour-step-background {
-	background-color: transparent!important;
-}
-.popover-content {
-	font-size: 18px;
-	padding: 20px;
-}
-.popover-navigation {
-	border-top: 1px solid #e5e5e5;
-}
-.popover-navigation .btn.btn-sm.btn-default {
-	background-color: #fff;
-	box-shadow: none;
-	color: #666;
-	padding: 10px;
-	text-transform: uppercase;
-}
-.popover-navigation .btn-default:active, .popover-navigation .btn-default:hover, .popover-navigation .btn-default:focus {
-	transform: translateY(0);
-	transition: none;
-}
-.popover-navigation .btn-default.disabled:active, .popover-navigation .btn-default.disabled:hover, .popover-navigation .btn-default.disabled:focus {
-	transform: translateY(0);
-	transition: none;
-}
-</style>	
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .come-up {
@@ -278,11 +235,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </li>
       <li class="whats-new-active"><a href="../whats-new">What's New</a> </li>
-      <li id="step1" class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+      <li class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
         <ul class="dropdown-menu">
           <li><a href="../locations">Hours & Locations</a></li>
-          <li><a id="step2" href="../library-basics">Library Basics</a></li>
-          <li> <a id="step3" href="../library-perks">Library Perks</a> </li>
+          <li><a href="../library-basics">Library Basics</a></li>
+          <li><a href="../library-perks">Library Perks</a></li>
           <li><a href="../book-clubs">Book Clubs</a></li>
           <li><a href="../staff-recommendations">Staff Recommendations</a></li>
           <li><a href="../business">DCL for Business</a></li>
@@ -343,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <ul id="using-the-library" class="nav mobile-nav-list collapse">
                   <li><a href="../locations">Hours & Locations</a></li>
                   <li><a href="../library-basics">Library Basics</a></li>
-				  <li><a href="../library-perks">Library Perks</a></li>
+                  <li><a href="../library-perks">Library Perks</a> </li>
                   <li><a href="../book-clubs">Book Clubs</a></li>
                   <li><a href="../staff-recommendations">Staff Recommendations</a></li>
                   <li><a href="../business">DCL for Business</a></li>
@@ -394,11 +351,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </nav>
-	<div id="starttour" class="pointer hidden-xs hidden-sm">
-  <div class="white featured-tour">
-    <div class="container"><i class="material-icons arrow-up opacity-7">redo</i>See what's new! <span class="text-underline">Take a quick tour.</span></div>
-  </div>
-</div>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
   <div class="row alert-warning">
@@ -533,61 +485,5 @@ $(document).ready(function(){
   }
 </script> 
 <!-- End Structured Data -->
-	<link rel="stylesheet" type="text/css" href="../bootstrap-tour.css">
-<script src="../bootstrap-tour.js"></script> 
-<script>
-// Instance the tour
-var tour = new Tour({
-  debug: true,
-  storage: false,
-  steps: [
-  {
-    element: "#step1",
-    content: "We've made some changes.",
-    placement: "bottom",
-	backdrop: true,
-  },
-  {
-    element: "#step2",
-    content: "Get a Library Card can now be found under Library Basics.",
-    placement: "right",
-	backdrop: true,
-    onShow: function() {
-      return $("#step1").addClass("open");
-    },      
-    onHide: function() {
-      $("#step1").removeClass("open"); 
-    } 
-  } ,
-  {
-    element: "#step3",
-    content: "Online Learning has moved! Find it under Library Perks.",
-    placement: "right",
-	backdrop: true,
-    onShow: function() {
-      return $("#step1").addClass("open");
-    },      
-    onHide: function() {
-      $("#step1").removeClass("open"); 
-    } 
-  },    
-	  	  
-	  {
-	content: "Explore <a href='https://www.dcl.org/library-perks'>Library Perks now</a> and learn the benefits of being a DCL cardholder.",
-	orphan: true,
-	backdrop: true,
-	  }
-]});
-
-tour.init();
-
-$("#starttour").click(function(){
-    tour.start();
-    });
-$(document).on('click', '.popover-navigation [data-role=next],.popover-navigation [data-role=prev]', function (e) {
-        e.stopPropagation();
-    });
-
-</script>
 </body>
 <!-- InstanceEnd --></html>
