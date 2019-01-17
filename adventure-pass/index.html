@@ -35,9 +35,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MV5DM73');</script>
 <!-- End Google Tag Manager -->
 <!-- InstanceBeginEditable name="title" -->
-<title>DCL Local Card | Douglas County Libraries</title>
-<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library Card, Specials, Special Offers, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
-<meta name="description" content="Show your Douglas County Libraries library card at participating DCL Local merchants to receive special offers!">
+<title>Adventure Pass | Douglas County Libraries</title>
+<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library Card, Specials, Special Offers, Butterfly Pavilion, Clyfford Still Museum, Colorado Symphony, Denver Firefighters Museum, Denver Museum of Nature & Science, History Colorado Center, Molly Brown House Museum, Museum of Contemporary Art Denver, Wings Over the Rockies Air & Space Museum">
+<meta name="description" content="Use your library card to reserve a Douglas County Libraries Adventure Pass to one of our local participating cultural institutions. Reserve free passes up to 30 days in advance.">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -77,59 +77,614 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+/*
+############################################################################################
+pan and zoom css - to add another slide update $items: and recompile the scss
+/*compile the css from the scss below. Codepen reference: https://codepen.io/anon/pen/qLvRKr
+############################################################################################
+$items: 3;
+$animation-time: 6s;
+$transition-time: 1.2s;
+$scale: 10%;
+
+$total-time: ($animation-time * $items);
+$scale-base-1: (1 + $scale / 100%);
+
+.slideshow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  animation-name: kenburns;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: $total-time;
+  opacity: 1;
+  transform: scale($scale-base-1);
+
+  @for $i from 1 through $items {
+    &:nth-child(#{$i}) {
+      animation-name: kenburns-#{$i};
+      z-index: ($items - $i);
+    }
+  }
+}
+
+@for $i from 1 through $items {
+  @keyframes kenburns-#{$i} {
+    $animation-time-percent: percentage($animation-time / $total-time);
+    $transition-time-percent: percentage($transition-time / $total-time);
+    
+    $t1: ($animation-time-percent * ($i - 1) - $transition-time-percent / 2);
+    $t2: ($animation-time-percent * ($i - 1) + $transition-time-percent / 2);
+    @if($t1 < 0%) { $t1: 0%; }
+    @if($t2 < 0%) { $t2: 0%; }
+
+    $t3: ($animation-time-percent * ($i) - $transition-time-percent / 2);
+    $t4: ($animation-time-percent * ($i) + $transition-time-percent / 2);
+    @if($t3 > 100%) { $t3: 100%; }
+    @if($t4 > 100%) { $t4: 100%; }
+
+    $t5: (100% - $transition-time-percent / 2);
+    $t6: (($t4 - $t1) * 100% / $t5);
+
+    #{$t1} { opacity: 1; transform: scale($scale-base-1); }
+    #{$t2} { opacity: 1; }
+    #{$t3} { opacity: 1; }
+    #{$t4} { opacity: 0; transform: scale(1); }
+    
+    @if($i != $items) {
+      100% { opacity: 0; transform: scale($scale-base-1); }
+    }
+    
+    @if($i == 1) {
+      $scale-plus: ($scale * (100% - $t5) / $t4);
+      $scale-plus-base-1: (1 + ($scale + $scale-plus) / 100%);
+    
+      #{$t5} { opacity: 0; transform: scale($scale-plus-base-1); }
+      100% { opacity: 1; }
+    }
+  }
+}
+	
+/* compiled css below */
+	
+.photo-credit {
+	color: white;
+	font-weight: 400;
+	font-size: .6em;
+	position: absolute;
+	bottom: 5%;
+	right: 7%;
+	text-align: right;
+}
+.pic-wrapper {
+	position: relative;
+	width: 50vw;
+	height: 42vh;
+	overflow: hidden;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 10px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 10px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 3px 10px 0;
+}
+.slideshow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.slideshow-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: no-repeat 50% 50%;
+	background-size: cover;
+	-webkit-animation-name: kenburns;
+	animation-name: kenburns;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-duration: 54s;
+	animation-duration: 54s;
+	opacity: 1;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.slideshow-image:nth-child(1) {
+	-webkit-animation-name: kenburns-1;
+	animation-name: kenburns-1;
+	z-index: 8;
+}
+.slideshow-image:nth-child(2) {
+	-webkit-animation-name: kenburns-2;
+	animation-name: kenburns-2;
+	z-index: 7;
+}
+.slideshow-image:nth-child(3) {
+	-webkit-animation-name: kenburns-3;
+	animation-name: kenburns-3;
+	z-index: 6;
+}
+.slideshow-image:nth-child(4) {
+	-webkit-animation-name: kenburns-4;
+	animation-name: kenburns-4;
+	z-index: 5;
+}
+.slideshow-image:nth-child(5) {
+	-webkit-animation-name: kenburns-5;
+	animation-name: kenburns-5;
+	z-index: 4;
+}
+.slideshow-image:nth-child(6) {
+	-webkit-animation-name: kenburns-6;
+	animation-name: kenburns-6;
+	z-index: 3;
+}
+.slideshow-image:nth-child(7) {
+	-webkit-animation-name: kenburns-7;
+	animation-name: kenburns-7;
+	z-index: 2;
+}
+.slideshow-image:nth-child(8) {
+	-webkit-animation-name: kenburns-8;
+	animation-name: kenburns-8;
+	z-index: 1;
+}
+.slideshow-image:nth-child(9) {
+	-webkit-animation-name: kenburns-9;
+	animation-name: kenburns-9;
+	z-index: 0;
+}
+ @-webkit-keyframes kenburns-1 {
+ 0% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 1.1111111111% {
+ opacity: 1;
+}
+ 10% {
+ opacity: 1;
+}
+ 12.2222222222% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 98.8888888889% {
+ opacity: 0;
+ -webkit-transform: scale(1.1090909091);
+ transform: scale(1.1090909091);
+}
+ 100% {
+ opacity: 1;
+}
+}
+ @keyframes kenburns-1 {
+ 0% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 1.1111111111% {
+ opacity: 1;
+}
+ 10% {
+ opacity: 1;
+}
+ 12.2222222222% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 98.8888888889% {
+ opacity: 0;
+ -webkit-transform: scale(1.1090909091);
+ transform: scale(1.1090909091);
+}
+ 100% {
+ opacity: 1;
+}
+}
+@-webkit-keyframes kenburns-2 {
+ 10% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 12.2222222222% {
+ opacity: 1;
+}
+ 21.1111111111% {
+ opacity: 1;
+}
+ 23.3333333333% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@keyframes kenburns-2 {
+ 10% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 12.2222222222% {
+ opacity: 1;
+}
+ 21.1111111111% {
+ opacity: 1;
+}
+ 23.3333333333% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@-webkit-keyframes kenburns-3 {
+ 21.1111111111% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 23.3333333333% {
+ opacity: 1;
+}
+ 32.2222222222% {
+ opacity: 1;
+}
+ 34.4444444444% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@keyframes kenburns-3 {
+ 21.1111111111% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 23.3333333333% {
+ opacity: 1;
+}
+ 32.2222222222% {
+ opacity: 1;
+}
+ 34.4444444444% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@-webkit-keyframes kenburns-4 {
+ 32.2222222222% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 34.4444444444% {
+ opacity: 1;
+}
+ 43.3333333333% {
+ opacity: 1;
+}
+ 45.5555555556% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@keyframes kenburns-4 {
+ 32.2222222222% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 34.4444444444% {
+ opacity: 1;
+}
+ 43.3333333333% {
+ opacity: 1;
+}
+ 45.5555555556% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@-webkit-keyframes kenburns-5 {
+ 43.3333333333% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 45.5555555556% {
+ opacity: 1;
+}
+ 54.4444444444% {
+ opacity: 1;
+}
+ 56.6666666667% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@keyframes kenburns-5 {
+ 43.3333333333% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 45.5555555556% {
+ opacity: 1;
+}
+ 54.4444444444% {
+ opacity: 1;
+}
+ 56.6666666667% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@-webkit-keyframes kenburns-6 {
+ 54.4444444444% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 56.6666666667% {
+ opacity: 1;
+}
+ 65.5555555556% {
+ opacity: 1;
+}
+ 67.7777777778% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@keyframes kenburns-6 {
+ 54.4444444444% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 56.6666666667% {
+ opacity: 1;
+}
+ 65.5555555556% {
+ opacity: 1;
+}
+ 67.7777777778% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@-webkit-keyframes kenburns-7 {
+ 65.5555555556% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 67.7777777778% {
+ opacity: 1;
+}
+ 76.6666666667% {
+ opacity: 1;
+}
+ 78.8888888889% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@keyframes kenburns-7 {
+ 65.5555555556% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 67.7777777778% {
+ opacity: 1;
+}
+ 76.6666666667% {
+ opacity: 1;
+}
+ 78.8888888889% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@-webkit-keyframes kenburns-8 {
+ 76.6666666667% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 78.8888888889% {
+ opacity: 1;
+}
+ 87.7777777778% {
+ opacity: 1;
+}
+ 90% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@keyframes kenburns-8 {
+ 76.6666666667% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 78.8888888889% {
+ opacity: 1;
+}
+ 87.7777777778% {
+ opacity: 1;
+}
+ 90% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+}
+@-webkit-keyframes kenburns-9 {
+ 87.7777777778% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 90% {
+ opacity: 1;
+}
+ 98.8888888889% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+}
+@keyframes kenburns-9 {
+ 87.7777777778% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+ transform: scale(1.1);
+}
+ 90% {
+ opacity: 1;
+}
+ 98.8888888889% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+}
+/*
+#######################################################
+#######################################################
+	*/	
+	
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.gray-row, .white-row {
-	border-top: 1px solid #ddd;
-}
-.gray-row {
-	background: #f5f5f5;
-}
-.gray-row.last, .white-row.last {
-	border-bottom: 1px solid #ddd;
-}
-.gray-circle {
-	border: 10px solid #f5f5f5;
-}
-.white-circle {
-	border: 10px solid #fff;
-}
-.bottom-bkg {
-	background: #fff url(bkg.gif) center bottom repeat-x;
-}
-.top-bkg {
-	background: #fff url(bkg.gif) center top repeat-x;
-}
-.gray-row .gray-aside h4, .white-row .white-aside h4 {
-	font-size: 20px;
-	font-weight: 400;
-	text-transform: uppercase;
-	color: #fff;
-}
-.gray-row h3, .gray-row h4, .white-row h3, .white-row h4 {
-	margin: 0;
-}
-.vcenter {
+.item-wrapper {
 	display: flex;
 	align-items: center;
-	padding: 15px;
+	justify-content: center;
 }
-.vcenter {
-	flex: 1 100%;
+.item {
+	flex: 0 auto;
 }
-.gray-aside, .white-aside {
-	padding: 40px 55px 40px 35px;
-	width: 250px;
+.item-list {
+	padding: 30px;
 }
-.moss-aside {
-	background: #f5f5f5 url("moss-aside.jpg") center right no-repeat;
-}
-.teal-aside {
-	background: #ffff url("teal-aside.jpg") center right no-repeat;
-}
-.lavender-aside {
-	background: #f5f5f5 url("lavender-aside.jpg") center right no-repeat;
+.date-list li {
+	padding-bottom: 15px;
 }
 .library-card {
 	transform: rotate(15deg);
@@ -159,23 +714,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 
-@media (max-width: 720px) {
-.vcenter {
-	flex-flow: row wrap;
-	padding: 20px 0 25px;
+@media (max-width: 992px) {
+.item {
+	text-align: center;
 }
-.gray-aside, .white-aside {
-	padding: 25px 25px 27px 15px;
-	margin: 0 15px 5px 15px;
+.item-wrapper {
+	flex-direction: column;
 }
-}
-
-@media (min-width: 830px) {
-.container.vcenter {
-	width: 825px;
+.pic-wrapper {
+	width: 96vw;
+	height: 45vh;
 }
 }
-
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -357,289 +907,121 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
+  <div class="row border-top padding-bottom-15">
     <div class="container">
       <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">DCL Local</h1>
+        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Adventure Pass</h1>
         <div class="separator-container">
-          <div class="separator line-separator"><i class="fa fa-map-marker"></i></div>
+          <div class="separator line-separator"><i class="fas fa-compass"></i></div>
         </div>
       </div>
-      <h4 class="roboto text-center margin-lg-100">Show your Douglas County Libraries library card at participating DCL Local merchants to receive special offers of <a href="#food-drink">Food & Drink</a>, <a href="#shopping">Shopping</a> and <a href="#classes-experiences">Classes & Experiences</a>.</h4>
+      <h4 class="roboto text-center margin-lg-100">Use your library card to reserve a Douglas County Libraries <a href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Adventure Pass</a> to one of our local participating cultural institutions. Reserve free passes up to 30 days in advance. </h4>
     </div>
   </div>
-  <div class="row bottom-bkg">
-    <div id="food-drink"><img src="food-drink.png" alt="Food & Drink" class="white-circle img-circle img-responsive center-block"></div>
-  </div>
-  <div class="row bg-gray-5 text-center">
-    <h1 class="no-margin-top padding-bottom-15 text-uppercase font-weight-400">Food & Drink</h1>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>$1 Off</h4>
+  <div class="row bg-teal padding-top-30 padding-bottom-40">
+    <div class="container-md item-wrapper no-padding">
+      <div class="item">
+        <div class="pic-wrapper">
+          <div class="slideshow">
+            <div class="slideshow-image" style="background-image: url('butterfly-pavilion.jpg')">
+              <div class="photo-credit">&copy; Butterfly Pavilion</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('clifford-still-museum.jpg')">
+              <div class="photo-credit">&copy; Clyfford Still Museum</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('colorado-symphony.jpg')">
+              <div class="photo-credit">&copy; Jedediah Liddell</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('denver-firefighters-museum.jpg')">
+              <div class="photo-credit">&copy; Denver Firefighters Museum</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('denver-museum-of-nature-and-science.jpg')">
+              <div class="photo-credit">&copy; Denver Museum of Nature & Science</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('history-colorado-center.jpg')">
+              <div class="photo-credit">&copy; History Colorado Center</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('molly-brown-house-museum.jpg')">
+              <div class="photo-credit">&copy; Paul Brokering Photography</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('museum-of-contemporary-art.jpg')">
+              <div class="photo-credit">&copy; MCA Denver</div>
+            </div>
+            <div class="slideshow-image" style="background-image: url('wings-over-the-rockies.jpg')">
+              <div class="photo-credit">&copy; Wings Over the Rockies Air & Space Museum</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/xJkqX1xRyCT2" target="_blank">3 Freaks Brewery</a></h4>
-        <div>$1 off first two pints. Valid Tuesdays, Wednesdays and Thursdays only.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>Buy 1, get 1 half off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/HuKVuJVgy5x" target="_blank">Briccy's Coffee</a></h4>
-        <div>Buy one drink, get one drink 50% off. Same size or smaller drink.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>$5 Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/RWHyr7vzwW62" target="_blank">The Chicken Shack</a></h4>
-        <div>$5 off a minimum of 2 combos purchased. Not valid with any other offer.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>25% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/ryzk4fhcdRr" target="_blank">Festive Cup Coffee & Gift Boutique</a></h4>
-        <div>25% off any hand-crafted coffee, tea or smoothie. </div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>10% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4 class="no-margin-bottom"><a href="https://goo.gl/maps/7JS4w96NJUM2" target="_blank">Hokulia Shave Ice</a></h4>
-        <div>10% off total purchase. Located inside Walmart.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>10% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/tWA7SnV3gtu" target="_blank">Living the Dream Brewing</a></h4>
-        <div>10% off on-site taproom beers.</div>
+      <div class="item item-list">
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/VJiUS4pxFem" target="_blank">Butterfly Pavilion</a></h4>
+        </div>
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/1SZaYEK3cv52" target="_blank">Clyfford Still Museum</a></h4>
+        </div>
+        <div>
+          <h4 class="no-margin-bottom"><a class="white" href="https://goo.gl/maps/hdpzfdcKg4s" target="_blank">Colorado Symphony*</a></h4>
+          <div><a href="#" data-toggle="modal" data-target="#symphony" class="small white">*Passes available for these performances</a></div>
+        </div>
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/nswiDYjXdYo" target="_blank">Denver Firefighters Museum</a></h4>
+        </div>
+        <!-- removed until they re-open <div>
+         <h4><a href="https://goo.gl/maps/gB4iKfbCsXx" target="_blank">Denver Museum of Miniatures, Dolls and Toys</a></h4>
+        </div>-->
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/wDgZGzgiLct" target="_blank">Denver Museum of Nature & Science</a></h4>
+        </div>
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/DC8LFDAHJLo" target="_blank">History Colorado Center</a></h4>
+        </div>
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/nSdLFauthwT2" target="_blank">Molly Brown House Museum</a></h4>
+        </div>
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/ZH2Vas4RAYt" target="_blank">Museum of Contemporary Art Denver</a></h4>
+        </div>
+        <div>
+          <h4><a class="white" href="https://goo.gl/maps/jxLnGpwLNts" target="_blank">Wings Over the Rockies Air &amp; Space Museum</a></h4>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>10% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/7R15KVHsV6R2" target="_blank">Lone Tree Brewing Company</a></h4>
-        <div>10% off on-site taproom beers.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>10% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4 class="no-margin-bottom"><a href="https://goo.gl/maps/ZfQdtdjpEuB2" target="_blank">Old Blinking Light</a></h4>
-        <div>10% off total purchase. Offer may not be used on Happy Hour menu.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>Buy 2, get 1 free</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://drive.google.com/open?id=1JHR-ocgpdQcW7BaFoXZEMtjPfsg0EMNG&usp=sharing" target="_blank">Purgatory Cellars Winery</a></h4>
-        <div>Buy two bottles of wine to go, get one of equal or lesser value free.</div>
+    <!-- Modal -->
+    <div class="modal fade" id="symphony" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="text-center modal-title">Adventure Passes available for these 2019 Performances</h4>
+          </div>
+          <div class="modal-body padding-30">
+            <ul class="list-unstyled date-list">
+              <li>A Tribute to Arthur Fiedler and the Boston Pops<br>
+                Saturday, January 12, 2019, 7:30PM</li>
+              <li>Symphonic Tribute to Comic Con<br>
+                Friday, February 8, 2019, 7:30PM</li>
+              <li>A Classical Romance<br>
+                Sunday, February 17, 1PM</li>
+              <li>Mussorgsky Pictures at an Exhibition<br>
+                Sunday, March 31, 2019, 1PM</li>
+              <li>Brahms Symphony No. 4<br>
+                Friday, April 12, 2019, 7:30PM</li>
+              <li>Danny Elfman Violin Concerto featuring Sandy Cameron<br>
+                Friday, May 17, 2019, 7:30PM</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="text-center"> <a class="text-uppercase btn btn-primary margin-top-30" href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Reserve Now</a></div>
   </div>
-  <div class="row gray-row last">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside moss-aside">
-        <h4>Buy 1, get 1 free</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/emNZ3PXS1Ez" target="_blank">Welcome Home Brewery</a></h4>
-        <div>Buy one pint, get one pint free. One per person, per visit. Show library card or use code: DCL.</div>
-      </div>
-    </div>
-  </div>
-  
-  <!----################################### -->
-  
-  <div class="row top-bkg padding-top-15">
-    <div id="shopping"><img src="shopping.png" alt="Shopping" class="white-circle img-circle img-responsive center-block"></div>
-  </div>
-  <div class="row text-center">
-    <h1 class="no-margin-top padding-bottom-15 text-uppercase font-weight-400">Shopping</h1>
-  </div>
-  <div class="row white-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 white-aside teal-aside">
-        <h4>10% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/vcTNPF2x57t" target="_blank">Hall of Justice Comics & Collectibles</a></h4>
-        <div>10% off total purchase. Excludes comic books that are part of customers' pull lists.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row white-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 white-aside teal-aside">
-        <h4>30% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/i2ZURiaHMpw" target="_blank">Love Me Twice</a></h4>
-        <div>30% off total purchase. Discount on original price. Not valid with any other coupons, discounts, red tag sales, online or clearance racks.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row white-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 white-aside teal-aside">
-        <h4>$10 off $50</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/BqUovXAArkR2" target="_blank">Mainstream Boutique of Highlands Ranch</a></h4>
-        <div>$10 off purchase of $50 or more. Valid at Highlands Ranch location only. Offer may not be combined with other offers or applied to previous purchases. One time use per customer.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row white-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 white-aside teal-aside">
-        <h4>10% off $50</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/QbCCjykuC2u" target="_blank">The Perfect Fit, Inc.</a></h4>
-        <div>10% off purchase of $50 or more. Not eligible for loyalty points.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row white-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 white-aside teal-aside">
-        <h4>10% off $50</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/ryB7tWNZMEn" target="_blank">Petit Parker + Co</a></h4>
-        <div>10% off purchase of $50 or more. Valid on regular price items only.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row white-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 white-aside teal-aside">
-        <h4>25% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/9CTgoki5oYT2" target="_blank">Rock Jewelers</a></h4>
-        <div>25% off total purchase of anything in stock, excludes watch bands and batteries. Not valid on sale or discounted items.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row white-row last">
-    <div class="container vcenter">
-      <div class="col-xs-2 white-aside teal-aside">
-        <h4>10% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/uo5nq6vUotN2" target="_blank">Sew-ciety Inc.</a></h4>
-        <div>10% off total purchase. One discount per purchase; not valid with any other offers.</div>
-      </div>
-    </div>
-  </div>
-  
-  <!----################################### -->
-  
-  <div class="row bottom-bkg padding-top-15">
-    <div id="classes-experiences"><img src="classes-experiences.png" alt="Classes & Experiences" class="white-circle img-circle img-responsive center-block"></div>
-  </div>
-  <div class="row bg-gray-5 text-center">
-    <h1 class="no-margin-top padding-bottom-15 text-uppercase font-weight-400">Classes & Experiences</h1>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside lavender-aside">
-        <h4>$9.99 Deal</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/B2CFpxsKL2S2" target="_blank">ATA Karate Denver</a></h4>
-        <div>30 days unlimited martial arts, a pizza party for up to 35 kids (food, drinks & fun included) for only $9.99, 25% off any membership (after introductory offer). Valid at the Highlands Ranch and Lone Tree locations.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside lavender-aside">
-        <h4>$2 Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/Yzbfm5Ynfsm" target="_blank">Cheyenne Mountain Zoo</a></h4>
-        <div>$2 off daytime admission, valid for up to three people. Valid for daytime admission only. Not valid for special events.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside lavender-aside">
-        <h4>10% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="../birthday-parties/">DCL Birthday Parties</a></h4>
-        <div>10% off any customized Birthday Party package for kids ages 0-12. <a href="../birthday-parties/#restrictions">Restrictions apply.</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside lavender-aside">
-        <h4>25% Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/E2F1L6Gz3EH2" target="_blank">Roxborough Academy of Martial Arts</a></h4>
-        <div>25% off 1 month Karate or Kick-Box Fit; includes free uniform with Karate purchase.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row gray-row last">
-    <div class="container vcenter">
-      <div class="col-xs-2 gray-aside lavender-aside">
-        <h4>$1 Off</h4>
-      </div>
-      <div class="col-sm-10 col-xs-12 main">
-        <h4><a href="https://goo.gl/maps/TjNdjbxJrrx" target="_blank">Wings Over the Rockies Exploration of Flight</a></h4>
-        <div>$1 off admission for everyone in your party. Open Saturday-Sunday only.</div>
-      </div>
-    </div>
-  </div>
-  <div class="row text-center text-left-sm padding-top-60 padding-bottom-40">
-    <div class="container ">
-      <div class="col-md-4 padding-bottom-30 module come-in-card"><a href="dcl-local-card.pdf" target="_blank"><img class="img-responsive image-center library-card" src="dcl-local-card.png" alt="DCL Local Card"></a></div>
+  <div class="row bg-gray-5 text-center text-left-md padding-top-60 padding-bottom-40">
+    <div class="container margin-lg-100">
+      <div class="col-md-4 padding-bottom-30 module come-in-card"><a href="http://getacard.org/v2/index.html" target="_blank"><img class="img-responsive image-center library-card" src="library-card.jpg" alt="Get a Library Card"></a></div>
       <div class="col-md-8">
-        <h4 class="roboto">Don't have a physical library card? <a href="dcl-local-card.pdf" target="_blank">Print a DCL Local card here.</a></h4>
-        <h5>Note: the DCL Local card is not a library card. To enjoy all the benefits of being a DCL cardholder, <a href="http://getacard.org/v2/index.html" target="_blank">sign up here</a>.</h5><div>Did you know you can use your library card to <a href="../adventure-pass/">reserve free passes</a> to one of our local participating cultural institutions?</div>
+        <h4 class="roboto">Did you know you can show your Douglas County Libraries library card at participating <a href="../dcl-local/">DCL Local merchants</a> to receive special offers?</h4>
+        <div>To enjoy all the benefits of being a DCL cardholder, <a href="http://getacard.org/v2/index.html" target="_blank">sign up here</a>.</div>
       </div>
     </div>
   </div>
@@ -657,7 +1039,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <h3 class="text-center modal-title">Join the DCL Local Family</h3>
             </div>
             <div class="padding-right-30 padding-bottom-30 padding-left-30 text-center">
-              <iframe id="JotFormIFrame" allowtransparency="true" src="https://form.jotform.com/71066246324149" frameborder="0" style="width:100%;height:385px;border:none;" scrolling="no"></iframe>
+<script type="text/javascript" src="https://form.jotform.com/jsform/90085514556156"></script>
             </div>
           </div>
         </div>
@@ -720,7 +1102,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-
 <script>
 	(function($) {
 
