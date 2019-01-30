@@ -82,7 +82,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 
-<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Loved+by+the+King" rel="stylesheet">
 <style>
 @font-face {
 	font-family: 'Amsterdam One';
@@ -90,19 +90,61 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-weight: normal;
 	font-style: normal;
 }
-.handlee {
-	font-family: 'Handlee', cursive;
-	font-size: 24px;
-	line-height: 30px;
+.king {
+	font-family: 'Loved by the King', cursive;
+	font-size: 30px;
+	line-height: 40px;
+	word-spacing: -10px;
+	border: 4px solid #00aab0;
+	padding: 15px;
+	max-width: 160px;
+	background: #eff8fb;
 }
-.handlee a, .handlee a:active, .handlee a:visited, .handlee a:hover {
+.king a, .king a:active, .king a:visited, .king a:hover {
 	text-decoration: none;
 	color: #333;
 }
 .amsterdam {
 	font-family: 'Amsterdam One', cursive;
 	color: #acc8d9;
-	font-size: 80px;
+	font-size: 56px;
+	line-height: 38px;
+}
+.background-wrapper {
+	background: linear-gradient(0deg, rgba(218,234,248,1) 0%, rgba(120,183,228,1) 100%);
+}
+.clouds {
+	background: transparent url("cloud-background.png") bottom left repeat-x;
+	min-height: 260px;
+}
+.love-row {
+	background: #f0f9fc;
+	padding: 5px 15px 60px;
+}
+.v-one-wrapper {
+	background: url("v-one-background.png") top center no-repeat;
+	padding-top: 225px;
+}
+.v-one-wrapper {
+	background: url("v-two-background.png") top center no-repeat;
+	padding-top: 225px;
+}
+.v-one-wrapper {
+	background: url("v-three-background.png") top center no-repeat;
+	padding-top: 225px;
+}
+.v-one {
+	margin: 0 60px 0 auto;
+	transform: rotate(-12deg);
+	-webkit-backface-visibility: hidden;
+}
+.v-two {
+	transform: rotate(18deg);
+	-webkit-backface-visibility: hidden;
+}
+.v-three {
+	transform: rotate(-14deg);
+	-webkit-backface-visibility: hidden;
 }
 .grow-text a {
 	color: #666;
@@ -122,6 +164,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 
 @media (min-width: 992px) {
+.amsterdam {
+	font-size: 80px;
+	line-height: 50px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -304,23 +350,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
+  <div class="background-wrapper row">
     <div class="container text-center">
-      <div>
-        <div class="amsterdam">love connection</div>
+      <div class="col-md-4">
+        <div class="v-one-wrapper">
+          <div class="king v-one"><a href="https://dcl.store/">Dear Valentine,<br>
+            Sending Love & Treats. Be Mine?</a></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="king v-two"><a href="authors-events/#other-author-events">Mom,<br>
+          Camp DCL is cool! Thanks for sending me.</a></div>
+      </div>
+      <div class="col-md-4">
+        <div class="king v-three"><a href="camp-dcl/">Darling,<br>
+          You + Me = A Great Love Story </a></div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="container text-center">
-      <div class="col-md-4">
-        <div class="handlee"><a href="#">Dear Valentine, Sending Love & Treats. Be Mine?</a></div>
-      </div>
-      <div class="col-md-4">
-        <div class="handlee"><a href="#">Mom, Camp DCL is cool! Thanks for sending me.</a></div>
-      </div>
-      <div class="col-md-4">
-        <div class="handlee"><a href="#">Darling, You + Me = A Great Love Story </a></div>
+    <div class="clouds"> </div>
+    <div class="love-row">
+      <div class="container text-center">
+        <div>
+          <div class="amsterdam">love connection</div>
+        </div>
       </div>
     </div>
   </div>
