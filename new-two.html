@@ -129,11 +129,156 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .grow-text:hover {
 	transform: scale(1.02);
 }
+.v-one a:hover, .v-two a:hover, .v-three a:hover {
+	opacity: .8;
+}
 
 @media (min-width: 992px) {
 .amsterdam {
 	font-size: 80px;
 	line-height: 50px;
+}
+}
+.v-one {
+	animation: v-one-move linear 4s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: v-one-move linear 4s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes v-one-move {
+ 0% {
+ transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ transform:  translate(0px, 20px) rotate(-5deg);
+}
+}
+ @-webkit-keyframes v-one-move {
+ 0% {
+ -webkit-transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 20px) rotate(-5deg);
+}
+}
+.v-two {
+	animation: v-two-move linear 5.5s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: v-two-move linear 5.5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes v-two-move {
+ 0% {
+ transform:  translate(0px, 475px) rotate(0deg);
+}
+ 30% {
+ transform:  translate(0px, 475px) rotate(-15deg);
+}
+ 30% {
+ transform:  translate(0px, 475px) rotate(15deg);
+}
+ 100% {
+ transform:  translate(0px, 50px) rotate(0deg);
+}
+}
+ @-webkit-keyframes v-two-move {
+ 0% {
+ -webkit-transform:  translate(0px, 475px) rotate(0deg);
+}
+ 30% {
+ -webkit-transform:  translate(0px, 475px) rotate(-15deg);
+}
+ 30% {
+ -webkit-transform:  translate(0px, 475px) rotate(15deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 50px) rotate(0deg);
+}
+}
+.v-three {
+	animation: v-three-move linear 5s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: v-three-move linear 5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes v-three-move {
+ 0% {
+ transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ transform:  translate(0px, 10px) rotate(-5deg);
+}
+}
+ @-webkit-keyframes v-three-move {
+ 0% {
+ -webkit-transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 10px) rotate(-5deg);
+}
+}
+.me-one {
+	animation: me-one-move linear 3s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: me-one-move linear 3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes me-one-move {
+ 0% {
+ transform:  translate(0px, 300px) rotate(0deg);
+}
+ 100% {
+ transform:  translate(0px, 20px) rotate(0deg);
+}
+}
+ @-webkit-keyframes me-one-move {
+ 0% {
+ -webkit-transform:  translate(0px, 300px) rotate(0deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 20px) rotate(0deg);
+}
+}
+.me-two {
+	animation: me-two-move linear 3s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: me-two-move linear 3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes me-two-move {
+ 0% {
+ transform:  translate(0px, 300px) rotate(0deg);
+}
+ 100% {
+ transform:  translate(0px, 10px) rotate(0deg);
+}
+}
+ @-webkit-keyframes me-two-move {
+ 0% {
+ -webkit-transform:  translate(0px, 300px) rotate(0deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 10px) rotate(0deg);
 }
 }
 </style>
@@ -318,21 +463,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="background-wrapper row">
-    <div class="container text-center">
-      <div class="col-md-4">
-        <div class="v-one">
-          <a href="https://dcl.store/"><img src="be-mine.png" alt="Be Mine"></a>
-        </div>
+    <div class="container-md text-center">
+      <div class="col-md-2 hidden-xs hidden-sm hidden-md">
+        <div class="me-one"><img class="img-responsive center-block" src="mini-me-one.png" alt="valentines"></div>
       </div>
-      <div class="col-md-4">
-        <div class="v-two">
-          <a href="camp-dcl/"><img src="camp-dcl.png" alt="Camp DCL"></a>
-        </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="v-one"> <a href="https://dcl.store/"><img class="center-block" src="be-mine.png" alt="Be Mine"></a> </div>
       </div>
-      <div class="col-md-4">
-        <div class="v-three">
-          <a href="#"><img src="love-story.png" alt="Love Stories"></a>
-        </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="v-two"> <a href="camp-dcl/"><img class="center-block" src="camp-dcl.png" alt="Camp DCL"></a> </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="v-three"> <a href="#"><img class="center-block" src="love-story.png" alt="Love Stories"></a> </div>
+      </div>
+      <div class="col-md-2 hidden-xs hidden-sm hidden-md">
+        <div class="me-two"><img class="img-responsive center-block" src="mini-me-two.png" alt="valentines"></div>
       </div>
     </div>
   </div>
