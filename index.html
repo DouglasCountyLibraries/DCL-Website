@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,46 +81,203 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 
-<link href="https://fonts.googleapis.com/css?family=Clicker+Script|Prata|Encode+Sans+Expanded:500,300" rel="stylesheet">
 <style>
-.res-box h1 {
-	font-family: 'Encode Sans Expanded', sans-serif;
-	font-weight: 500;
-	margin: 18px 5px 22px;
-	color: #686a6c;
+@font-face {
+	font-family: 'Amsterdam One';
+	src: url('shared-assets/web-fonts/subset-Amsterdam-One.woff2') format('woff2'), url('shared-assets/web-fonts/subset-Amsterdam-One.woff') format('woff'), url('shared-assets/web-fonts/subset-Amsterdam-One.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
-.link-row h2 {
-	font-family: 'Encode Sans Expanded', sans-serif;
-	font-size: 26px;
-	font-weight: 500;
-	margin: 10px 15px 11px 15px;
+.amsterdam {
+	font-family: 'Amsterdam One', cursive;
+	color: #acc8d9;
+	font-size: 56px;
+	line-height: 38px;
 }
-.text-wrapper {
-	border: 3px solid #686a6c;
-	border-radius: 2px;
-	background-color: #fff;
+.background-wrapper {
+	background: #fff url("skyscape.jpg") bottom center/cover;
+	min-height: 950px;
 }
-.best-text a {
-	color: #4f878c;
+.cloud-row {
+	background: transparent url("tiled-clouds.png") bottom center repeat-x;
+	height: 134px;
+	position: relative;
+	top: -130px;
 }
-.best-text a:hover {
+.love-row {
+	background: #f0f9fc;
+	margin-top: -100px;
+	padding-bottom: 65px;
+}
+.container-fluid {
+	background: #f0f9fc;
+}
+.grow-text a {
+	color: #666;
+}
+.grow-text a:hover {
 	transition: all .5s ease-in-out;
-	text-shadow: 0px 0px 12px rgba(255,235,204,.5);
 	text-decoration: none;
 }
-.best-text a:active, .best-text a:visited, .best-text a:hover {
+.grow-text a:active, .grow-text a:visited, .grow-text a:hover {
 	text-decoration: none;
 }
-.best-text {
+.grow-text {
 	transition: all .5s ease-in-out;
 }
-.best-text:hover {
-	transform: scale(1.05);
+.grow-text:hover {
+	transform: scale(1.02);
+}
+.v-one a:hover, .v-two a:hover, .v-three a:hover {
+	opacity: .8;
+}
+.me-one {
+	animation: me-one-move linear 4s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: me-one-move linear 4s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes me-one-move {
+ 0% {
+ transform:  translate(0px, 450px) rotate(0deg) scaleX(0.40) scaleY(0.40);
+}
+ 100% {
+ transform:  translate(0px, 80px) rotate(-5deg) scaleX(1) scaleY(1);
+}
+}
+ @-webkit-keyframes me-one-move {
+0% {
+ transform:  translate(0px, 450px) rotate(0deg) scaleX(0.40) scaleY(0.40);
+}
+ 100% {
+ transform:  translate(0px, 80px) rotate(-5deg) scaleX(1) scaleY(1);
+}
+}
+.me-two {
+	animation: me-two-move linear 5s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: me-two-move linear 5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes me-two-move {
+ 0% {
+ transform:  translate(0px, 380px) rotate(0deg) scaleX(0.40) scaleY(0.40);
+}
+ 100% {
+ transform:  translate(0px, 30px) rotate(0deg) scaleX(1) scaleY(1);
+}
+}
+ @-webkit-keyframes me-two-move {
+ 0% {
+ -webkit-transform:  translate(0px, 380px) rotate(5deg) scaleX(0.40) scaleY(0.40);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 30px) rotate(5deg) scaleX(1) scaleY(1);
+}
 }
 
 @media (min-width: 992px) {
-.link-row {
-	background: #fff url(link-row-bg.png) repeat-x center center;
+.amsterdam {
+	font-size: 80px;
+	line-height: 50px;
+}
+.v-one {
+	animation: v-one-move linear 4s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: v-one-move linear 4s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes v-one-move {
+ 0% {
+ transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ transform:  translate(0px, 20px) rotate(-5deg);
+}
+}
+ @-webkit-keyframes v-one-move {
+ 0% {
+ -webkit-transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 20px) rotate(-5deg);
+}
+}
+.v-two {
+	animation: v-two-move linear 5.5s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: v-two-move linear 5.5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes v-two-move {
+ 0% {
+ transform:  translate(0px, 475px) rotate(0deg);
+}
+ 30% {
+ transform:  translate(0px, 475px) rotate(-15deg);
+}
+ 30% {
+ transform:  translate(0px, 475px) rotate(15deg);
+}
+ 100% {
+ transform:  translate(0px, 50px) rotate(0deg);
+}
+}
+ @-webkit-keyframes v-two-move {
+ 0% {
+ -webkit-transform:  translate(0px, 475px) rotate(0deg);
+}
+ 30% {
+ -webkit-transform:  translate(0px, 475px) rotate(-15deg);
+}
+ 30% {
+ -webkit-transform:  translate(0px, 475px) rotate(15deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 50px) rotate(0deg);
+}
+}
+.v-three {
+	animation: v-three-move linear 5s;
+	animation-iteration-count: 1;
+	transform-origin: 50% 50%;
+	animation-fill-mode: forwards; /*when the spec is finished*/
+	-webkit-animation: v-three-move linear 5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+}
+ @keyframes v-three-move {
+ 0% {
+ transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ transform:  translate(0px, 10px) rotate(-5deg);
+}
+}
+ @-webkit-keyframes v-three-move {
+ 0% {
+ -webkit-transform:  translate(0px, 500px) rotate(0deg);
+}
+ 100% {
+ -webkit-transform:  translate(0px, 10px) rotate(-5deg);
+}
 }
 }
 </style>
@@ -303,41 +461,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div style="padding-top:50px;" class="row border-top">
-    <div class="container">
-      <div><img class="img-responsive center-block" src="resolutions.png" alt="New Year, New Goals"/></div>
-      <div class="res-box text-uppercase text-center">
-        <h1>New Year, New Goals</h1>
+  <div class="background-wrapper row">
+    <div class="container-md text-center">
+      <div class="col-md-2 hidden-xs hidden-sm hidden-md">
+        <div class="me-one"><img class="img-responsive center-block" src="mini-me-one.png" alt="valentines"></div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="v-one"> <a href="https://dcl.store/" target="_blank"><img class="center-block" src="be-mine.png" alt="Be Mine"></a> </div>
+      </div>
+      <div class="col-md-4 col-lg-2">
+        <div class="v-two"> <a href="camp-dcl/"><img class="center-block" src="camp-dcl.png" alt="Camp DCL"></a> </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="v-three"> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1348209319"><img class="center-block" src="love-story.png" alt="Love Stories"></a> </div>
+      </div>
+      <div class="col-md-2 hidden-xs hidden-sm hidden-md">
+        <div class="me-two"><img class="img-responsive center-block" src="mini-me-two.png" alt="valentines"></div>
       </div>
     </div>
   </div>
-  <div class="link-row row">
-    <div class="container text-center text-uppercase">
-      <div class="col-md-6 padding-bottom-15">
-        <div class="text-wrapper">
-          <h2 class="best-text"><a href="library-perks/#aaptiv">Audio-Guided Workouts</a></h2>
-        </div>
-      </div>
-      <div class="col-md-6 padding-bottom-15">
-        <div class="text-wrapper">
-          <h2 class="best-text"><a href="reading-challenge/">Reading Challenge!</a></h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="link-row row margin-bottom-60">
-    <div class="container text-center text-uppercase">
-      <div class="col-md-6 padding-bottom-15">
-        <div class="text-wrapper">
-          <h2 class="best-text"><a href="camp-dcl/">Camp DCL<br>
-            Spring Break Camps Now on Sale</a></h2>
-        </div>
-      </div>
-      <div class="col-md-6 padding-bottom-15">
-        <div class="text-wrapper">
-          <h2 class="best-text"><a href="2020/">2020 Strategic Planning<br>
-            Share Your Thoughts</a></h2>
-        </div>
+  <div class="row cloud-row"></div>
+  <div class="row love-row">
+    <div class="container text-center">
+      <div>
+        <div class="amsterdam">love connection</div>
       </div>
     </div>
   </div>
@@ -462,4 +609,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
