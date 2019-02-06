@@ -1395,9 +1395,10 @@ h6.responsive-text {
 	font-size: 16px;
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
-	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	display: -webkit-flex;     /* NEW - Chrome */
-	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
 }
 #eventsinfo .item .title {
 	font-size: 24px;
@@ -1424,7 +1425,8 @@ h6.responsive-text {
 	font-size: 0px; /* hides "-" character */
 	margin: 5px;
 	padding: 30px;
-	flex: 1;
+	min-width: 300px;
+	max-width: 450px;
 }
 #eventsinfo .item:hover, #eventsinfo .item:focus {
 	cursor: pointer;
