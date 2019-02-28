@@ -97,53 +97,90 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .link-row {
 	background: #fefefe;
 }
-.grow-text a {
-	color: #666;
+.downed {
+	position: relative;
+	top: 85px;
+	float: right;
+	right: 10px;
 }
-.grow-text a:hover {
-	transition: all .5s ease-in-out;
-	text-decoration: none;
+.bubble {
+	position: relative;
+	min-width: 270px;
+	padding: 0px;
+	background: #D95236;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 18px;
+	font-weight: 400;
 }
-.grow-text a:active, .grow-text a:visited, .grow-text a:hover {
-	text-decoration: none;
-}
-.grow-text {
-	transition: all .5s ease-in-out;
-}
-.grow-text:hover {
-	transform: scale(1.02);
+
+.bubble::after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 16px 12px 0;
+	border-color: #D95236 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -16px;
+	left: 160px;
 }
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-	.gondolas {
-  animation: g-one linear 4s;
-  animation-iteration-count: infinite;
-  transform-origin: 50% 50%;
-  -webkit-animation: g-one linear 4s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-transform-origin: 50% 50%;
-		
+.grow-text a:active, .grow-text a:visited, .grow-text a:hover, .grow-text a:focus {
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
 }
-
-@keyframes g-one{
-  0% {
-    transform:  translate(1020px,0px)  scaleX(0.10) scaleY(0.10) ;
-  }
-  100% {
-    transform:  translate(-200px,475px)  scaleX(1.00) scaleY(1.00) ;
-  }
+.grow-text {
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
 }
-
-@-webkit-keyframes g-one {
-  0% {
-    -webkit-transform:  translate(1020px,0px)  scaleX(0.10) scaleY(0.10) ;
-  }
-  100% {
-    -webkit-transform:  translate(-200px,475px)  scaleX(1.00) scaleY(1.00) ;
-  }
+.grow-text:hover, .grow-text:focus {
+	transform: scale(1.1);
+	text-decoration: none;
 }
-
-
+.gondolas {
+	animation: g-one linear 14s;
+	animation-iteration-count: infinite;
+	-webkit-animation: g-one linear 14s;
+	-webkit-animation-iteration-count: infinite;
+}
+ @keyframes g-one {
+ 0% {
+ transform:  translate(1020px, 200px) scaleX(0.20) scaleY(0.20);
+}
+ 100% {
+ transform:  translate(-200px, 1275px) scaleX(1.00) scaleY(1.00);
+}
+}
+ @-webkit-keyframes g-one {
+ 0% {
+ -webkit-transform:  translate(1020px, 200px) scaleX(0.20) scaleY(0.20);
+}
+ 100% {
+ -webkit-transform:  translate(-200px, 1275px) scaleX(1.00) scaleY(1.00);
+}
+}
 
 @media (min-width: 992px) {
 .amsterdam {
@@ -333,12 +370,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="background-wrapper row">
+    <div class="downed text-right">
+      <div class="bubble">I'm ready for <a class="white text-underline" href="camp-dcl/">Summer Camp</a>.</div>
+      <img src="downed-skier.png" alt="Downed Skier"></div>
     <div class="gondolas"><img src="gondola.png" alt="Gondola"></div>
   </div>
   <div class="link-row row">
     <div class="container text-center">
       <div>
-        <div>content goes here</div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="#"><div class="bubble grow-text">Audiobooks for<br>the Drive</div></a></div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><div class="bubble">Gear to<br>Go!</div></div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><div class="bubble">Spring Author Event:<br>Gretchen Rubin!</div></div>
       </div>
     </div>
   </div>
