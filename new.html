@@ -80,16 +80,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<link href="https://fonts.googleapis.com/css?family=Loved+by+the+King" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Farsan" rel="stylesheet">
 <!-- pinterest - do not remove -->
 
 <style>
-.loved {
-	font-family: 'Loved by the King', cursive;
-	color: #333;
-	font-size: 40px;
-	margin: 0;
-}
 .background-wrapper {
 	background: #fff url("ski-slope.png") top right/cover;
 	min-height: 975px;
@@ -102,8 +96,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	top: 85px;
 	float: right;
 	right: 10px;
+	z-index: 1000;
 }
 .bubble {
+	font-family: 'Farsan', cursive;
 	position: relative;
 	min-width: 270px;
 	padding: 0px;
@@ -115,10 +111,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding: 15px;
 	text-align: center;
 	margin-bottom: 25px;
-	font-size: 18px;
-	font-weight: 400;
+	font-size: 24px;
 }
-
 .bubble::after {
 	content: '';
 	position: absolute;
@@ -131,22 +125,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	bottom: -16px;
 	left: 160px;
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+.bubble.bcenter {
+	font-size: 36px;
+	line-height: 34px;
+}
+.bubble.bcenter::after {
+	left: 46%;
+}
+.social-footer, .footer, .dcl-navbar, .dcl-logo-search {
+	z-index: 100;
+	position: relative;
+}
 .grow-text a:active, .grow-text a:visited, .grow-text a:hover, .grow-text a:focus {
 	transition: all .3s ease-in-out;
 	-webkit-transition: all .3s ease-in-out;
@@ -160,25 +149,25 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-decoration: none;
 }
 .gondolas {
-	animation: g-one linear 14s;
+	animation: g-one linear 4s;
 	animation-iteration-count: infinite;
-	-webkit-animation: g-one linear 14s;
+	-webkit-animation: g-one linear 4s;
 	-webkit-animation-iteration-count: infinite;
 }
  @keyframes g-one {
  0% {
- transform:  translate(1020px, 200px) scaleX(0.20) scaleY(0.20);
+ transform:  translate(1820px, -150px) scaleX(0.20) scaleY(0.20);
 }
  100% {
- transform:  translate(-200px, 1275px) scaleX(1.00) scaleY(1.00);
+ transform:  translate(-100px, 800px) scaleX(1.00) scaleY(1.00);
 }
 }
  @-webkit-keyframes g-one {
  0% {
- -webkit-transform:  translate(1020px, 200px) scaleX(0.20) scaleY(0.20);
+ -webkit-transform:  translate(1820px, -150px) scaleX(0.20) scaleY(0.20);
 }
  100% {
- -webkit-transform:  translate(-200px, 1275px) scaleX(1.00) scaleY(1.00);
+ -webkit-transform:  translate(-100px, 800px) scaleX(1.00) scaleY(1.00);
 }
 }
 
@@ -370,17 +359,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="background-wrapper row">
-    <div class="downed text-right">
-      <div class="bubble">I'm ready for <a class="white text-underline" href="camp-dcl/">Summer Camp</a>.</div>
-      <img src="downed-skier.png" alt="Downed Skier"></div>
+    <div class="downed text-right"> <a class="grow-text" href="camp-dcl/">
+      <div class="bubble grow-text">I'm ready for Summer Camp.</div>
+      </a> <img src="downed-skier.png" alt="Downed Skier"></div>
     <div class="gondolas"><img src="gondola.png" alt="Gondola"></div>
   </div>
   <div class="link-row row">
     <div class="container text-center">
       <div>
-        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="#"><div class="bubble grow-text">Audiobooks for<br>the Drive</div></a></div>
-        <div class="col-md-4 padding-left-30 padding-right-30"><div class="bubble">Gear to<br>Go!</div></div>
-        <div class="col-md-4 padding-left-30 padding-right-30"><div class="bubble">Spring Author Event:<br>Gretchen Rubin!</div></div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="#">
+          <div class="bubble bcenter grow-text">Audiobooks for<br>
+            the Drive</div>
+          </a></div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="#">
+          <div class="bubble bcenter grow-text">Gear to<br>
+            Go!</div>
+          </a></div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="#">
+          <div class="bubble bcenter grow-text">Spring Author Event:<br>
+            Gretchen Rubin!</div>
+          </a></div>
       </div>
     </div>
   </div>
