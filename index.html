@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,218 +79,319 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<link href="https://fonts.googleapis.com/css?family=Loved+by+the+King" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Farsan" rel="stylesheet">
 <!-- pinterest - do not remove -->
 
 <style>
-@font-face {
-	font-family: 'Amsterdam One';
-	src: url('shared-assets/web-fonts/subset-Amsterdam-One.woff2') format('woff2'), url('shared-assets/web-fonts/subset-Amsterdam-One.woff') format('woff'), url('shared-assets/web-fonts/subset-Amsterdam-One.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-.amsterdam {
-	font-family: 'Amsterdam One', cursive;
-	color: #acc8d9;
-	font-size: 56px;
-	line-height: 38px;
-}
-.loved {
-	font-family: 'Loved by the King', cursive;
-	color: #333;
-	font-size: 40px;
-	margin: 0;
-}
-.btn-primary {
-	background: #703182;
-}
-.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
-	background-color: #4e0e64;
-}
 .background-wrapper {
-	background: #fff url("skyscape.jpg") bottom center/cover;
-	min-height: 950px;
+	background: #fff url("ski-slope.png") top right/cover;
+	min-height: 975px;
 }
-.cloud-row {
-	background: transparent url("tiled-clouds.png") bottom center repeat-x;
-	height: 134px;
+.link-row {
+	background: #fefefe;
+}
+.downed {
 	position: relative;
-	top: -130px;
+	top: 85px;
+	float: right;
+	right: 10px;
+	z-index: 1000;
 }
-.love-row {
-	background: #f0f9fc;
-	margin-top: -100px;
-	padding-bottom: 65px;
+.bubble {
+	font-family: 'Farsan', cursive;
+	position: relative;
+	min-width: 270px;
+	padding: 0px;
+	background: #D95236;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 24px;
 }
-.container-fluid {
-	background: #f0f9fc;
+.bubble::after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 16px 12px 0;
+	border-color: #D95236 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -16px;
+	left: 160px;
 }
-.grow-text a {
-	color: #666;
+.bubble.bcenter {
+	font-size: 36px;
+	line-height: 34px;
 }
-.grow-text a:hover {
-	transition: all .5s ease-in-out;
-	text-decoration: none;
+.bubble.bcenter::after {
+	left: 46%;
 }
-.grow-text a:active, .grow-text a:visited, .grow-text a:hover {
-	text-decoration: none;
+.social-footer, .footer, .dcl-navbar, .dcl-logo-search {
+	z-index: 100;
+	position: relative;
+}
+.grow-text a:active, .grow-text a:visited, .grow-text a:hover, .grow-text a:focus {
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
 }
 .grow-text {
-	transition: all .5s ease-in-out;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
 }
-.grow-text:hover {
-	transform: scale(1.02);
+.grow-text:hover, .grow-text:focus {
+	transform: scale(1.1);
+	text-decoration: none;
 }
-.v-one a:hover, .v-two a:hover, .v-three a:hover {
-	opacity: .8;
+.skier-one {
+	position: absolute;
+	-webkit-animation: 8s linear 0s infinite s-one;
+	animation: 8s linear 0s infinite s-one;
 }
-.me-one {
-	animation: me-one-move linear 4s;
-	animation-iteration-count: 1;
-	transform-origin: 50% 50%;
-	animation-fill-mode: forwards; /*when the spec is finished*/
-	-webkit-animation: me-one-move linear 4s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-transform-origin: 50% 50%;
-	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
-}
- @keyframes me-one-move {
+ @-webkit-keyframes s-one {
  0% {
- transform:  translate(0px, 450px) rotate(0deg) scaleX(0.40) scaleY(0.40);
+ right: -200px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+50% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(1.00) scaleY(1.00);
 }
  100% {
- transform:  translate(0px, 80px) rotate(-5deg) scaleX(1) scaleY(1);
+right: 100%;
+ top:1200px;
+transform:  scaleX(0.4) scaleY(0.4);
 }
 }
- @-webkit-keyframes me-one-move {
-0% {
- transform:  translate(0px, 450px) rotate(0deg) scaleX(0.40) scaleY(0.40);
-}
- 100% {
- transform:  translate(0px, 80px) rotate(-5deg) scaleX(1) scaleY(1);
-}
-}
-.me-two {
-	animation: me-two-move linear 5s;
-	animation-iteration-count: 1;
-	transform-origin: 50% 50%;
-	animation-fill-mode: forwards; /*when the spec is finished*/
-	-webkit-animation: me-two-move linear 5s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-transform-origin: 50% 50%;
-	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
-}
- @keyframes me-two-move {
+ @keyframes s-one {
  0% {
- transform:  translate(0px, 380px) rotate(0deg) scaleX(0.40) scaleY(0.40);
+ right: -200px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+50% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(1.00) scaleY(1.00);
 }
  100% {
- transform:  translate(0px, 30px) rotate(0deg) scaleX(1) scaleY(1);
+right: 100%;
+ top:1200px;
+transform:  scaleX(0.4) scaleY(0.4);
 }
 }
- @-webkit-keyframes me-two-move {
+.skier-two {
+	position: absolute;
+	-webkit-animation: 10s linear 0s infinite s-two;
+	animation: 10s linear 0s infinite s-two;
+}
+ @-webkit-keyframes s-two {
  0% {
- -webkit-transform:  translate(0px, 380px) rotate(5deg) scaleX(0.40) scaleY(0.40);
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 10% {
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 50% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(1.00) scaleY(1.00);
 }
  100% {
- -webkit-transform:  translate(0px, 30px) rotate(5deg) scaleX(1) scaleY(1);
+right: 100%;
+ top:1200px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+}
+ @keyframes s-two {
+ 0% {
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 10% {
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 50% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(1.00) scaleY(1.00);
+}
+ 100% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+}
+.skier-three {
+	position: absolute;
+	-webkit-animation: 13s linear 0s infinite s-three;
+	animation: 13s linear 0s infinite s-three;
+}
+ @-webkit-keyframes s-three {
+ 0% {
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 30% {
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 60% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(1.00) scaleY(1.00);
+}
+ 100% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+}
+ @keyframes s-three {
+ 0% {
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 30% {
+ right: -300px;
+ top:500px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 60% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(1.00) scaleY(1.00);
+}
+ 100% {
+right: 100%;
+ top:1200px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+}
+.skier-four {
+	position: absolute;
+	-webkit-animation: 14s linear 0s infinite s-four;
+	animation: 14s linear 0s infinite s-four;
+}
+ @-webkit-keyframes s-four {
+ 0% {
+ right: -300px;
+ top:300px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 35% {
+ right: -300px;
+ top:300px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 65% {
+right: 100%;
+ top:1600px;
+transform:  scaleX(1.00) scaleY(1.00);
+}
+ 100% {
+right: 100%;
+ top:1600px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+}
+ @keyframes s-four {
+ 0% {
+ right: -300px;
+ top:300px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 35% {
+ right: -300px;
+ top:300px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+ 65% {
+right: 100%;
+ top:1600px;
+transform:  scaleX(1.00) scaleY(1.00);
+}
+ 100% {
+right: 100%;
+ top:1600px;
+transform:  scaleX(0.4) scaleY(0.4);
+}
+}
+.skier-five {
+	position: absolute;
+	-webkit-animation: 45s linear 0s infinite s-five;
+	animation: 45s linear 0s infinite s-five;
+}
+ @-webkit-keyframes s-five {
+ 0% {
+ right: -410px;
+ top:700px;
+transform:  scaleX(0.6) scaleY(0.6);
+}
+ 10% {
+ right: -410px;
+ top:700px;
+transform:  scaleX(0.6) scaleY(0.6);
+}
+ 60% {
+right: 100%;
+ top:1100px;
+transform:  scaleX(1.00) scaleY(1.00);
+}
+ 100% {
+right: 100%;
+ top:1100px;
+transform:  scaleX(0.6) scaleY(0.6);
+}
+}
+ @keyframes s-five {
+ 0% {
+ right: -410px;
+ top:700px;
+transform:  scaleX(0.6) scaleY(0.6);
+}
+ 10% {
+ right: -410px;
+ top:700px;
+transform:  scaleX(0.6) scaleY(0.6);
+}
+ 60% {
+right: 100%;
+ top:1100px;
+transform:  scaleX(1.00) scaleY(1.00);
+}
+ 100% {
+right: 100%;
+ top:1100px;
+transform:  scaleX(0.6) scaleY(0.6);
 }
 }
 
-@media (min-width: 992px) {
-.amsterdam {
-	font-size: 80px;
-	line-height: 50px;
+@media (max-width: 992px) {
+.background-wrapper {
+	min-height: 375px;
 }
-.v-one {
-	animation: v-one-move linear 4s;
-	animation-iteration-count: 1;
-	transform-origin: 50% 50%;
-	animation-fill-mode: forwards; /*when the spec is finished*/
-	-webkit-animation: v-one-move linear 4s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-transform-origin: 50% 50%;
-	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
+.skier-one, .skier-two, .skier-three, .skier-four, .skier-five {
+	display: none;
 }
- @keyframes v-one-move {
- 0% {
- transform:  translate(0px, 500px) rotate(0deg);
-}
- 100% {
- transform:  translate(0px, 20px) rotate(-5deg);
-}
-}
- @-webkit-keyframes v-one-move {
- 0% {
- -webkit-transform:  translate(0px, 500px) rotate(0deg);
-}
- 100% {
- -webkit-transform:  translate(0px, 20px) rotate(-5deg);
-}
-}
-.v-two {
-	animation: v-two-move linear 5.5s;
-	animation-iteration-count: 1;
-	transform-origin: 50% 50%;
-	animation-fill-mode: forwards; /*when the spec is finished*/
-	-webkit-animation: v-two-move linear 5.5s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-transform-origin: 50% 50%;
-	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
-}
- @keyframes v-two-move {
- 0% {
- transform:  translate(0px, 475px) rotate(0deg);
-}
- 30% {
- transform:  translate(0px, 475px) rotate(-15deg);
-}
- 30% {
- transform:  translate(0px, 475px) rotate(15deg);
-}
- 100% {
- transform:  translate(0px, 50px) rotate(0deg);
-}
-}
- @-webkit-keyframes v-two-move {
- 0% {
- -webkit-transform:  translate(0px, 475px) rotate(0deg);
-}
- 30% {
- -webkit-transform:  translate(0px, 475px) rotate(-15deg);
-}
- 30% {
- -webkit-transform:  translate(0px, 475px) rotate(15deg);
-}
- 100% {
- -webkit-transform:  translate(0px, 50px) rotate(0deg);
-}
-}
-.v-three {
-	animation: v-three-move linear 5s;
-	animation-iteration-count: 1;
-	transform-origin: 50% 50%;
-	animation-fill-mode: forwards; /*when the spec is finished*/
-	-webkit-animation: v-three-move linear 5s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-transform-origin: 50% 50%;
-	-webkit-animation-fill-mode: forwards; /*Chrome 16+, Safari 4+*/
-}
- @keyframes v-three-move {
- 0% {
- transform:  translate(0px, 500px) rotate(0deg);
-}
- 100% {
- transform:  translate(0px, 10px) rotate(-5deg);
-}
-}
- @-webkit-keyframes v-three-move {
- 0% {
- -webkit-transform:  translate(0px, 500px) rotate(0deg);
-}
- 100% {
- -webkit-transform:  translate(0px, 10px) rotate(-5deg);
-}
+.insert-br {
+	display: none; /* <br class="insert-br" /> */
 }
 }
 </style>
@@ -474,29 +576,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="background-wrapper row">
-    <div class="container-md text-center">
-      <div class="col-md-2 hidden-xs hidden-sm hidden-md">
-        <div class="me-one"><img class="img-responsive center-block" src="mini-me-one.png" alt="valentines"></div>
-      </div>
-      <div class="col-md-4 col-lg-3">
-        <div class="v-one"> <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank"><img class="center-block" src="mango.png" alt="Mango Languages"></a> </div>
-      </div>
-      <div class="col-md-4 col-lg-2">
-        <div class="v-two"> <a href="camp-dcl/?valentine"><img class="center-block" src="camp-dcl.png" alt="Camp DCL"></a> </div>
-      </div>
-      <div class="col-md-4 col-lg-3">
-        <div class="v-three"> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1348209319"><img class="center-block" src="love-story.png" alt="Love Stories"></a> </div>
-      </div>
-      <div class="col-md-2 hidden-xs hidden-sm hidden-md">
-        <div class="me-two"><img class="img-responsive center-block" src="mini-me-two.png" alt="valentines"></div>
-      </div>
-    </div>
+    <div class="downed text-right"> <a class="grow-text" href="camp-dcl/">
+      <div class="bubble grow-text">I'm ready for Summer Camp.</div>
+      </a> <img src="downed-skier.png" alt="Downed Skier"></div>
+    <div class="skier-two"><img src="skier-two.png" alt="Skier"></div>
+    <div class="skier-one"><img src="skier-one.png" alt="Skier"></div>
+    <div class="skier-three"><img src="skier-three.png" alt="Skier"></div>
+    <div class="skier-four"><img src="skier-four.png" alt="Skier"></div>
+    <div class="skier-five"><img src="skier-five.gif" alt="Skier"></div>
   </div>
-  <div class="row cloud-row"></div>
-  <div class="row love-row">
+  <div class="link-row row">
     <div class="container text-center">
       <div>
-        <div class="amsterdam">love connection</div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1364751827">
+          <div class="bubble bcenter grow-text">Audiobooks for <br class="insert-br" />
+            the Trip</div>
+          </a></div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="https://blogs.douglascountylibraries.org/blog/2019/02/28/dcl-gear-to-go/">
+          <div class="bubble bcenter grow-text">Gear to <br class="insert-br" />
+            Go!</div>
+          </a></div>
+        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="https://www.eventbrite.com/e/dcl-presents-gretchen-rubin-tickets-55932936920?aff=HomePage" target="_blank">
+          <div class="bubble bcenter grow-text">Spring Author Event: <br class="insert-br" />
+            Gretchen Rubin!</div>
+          </a></div>
       </div>
     </div>
   </div>
@@ -621,4 +724,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
