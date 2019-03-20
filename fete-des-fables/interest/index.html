@@ -105,11 +105,37 @@ h2.red {
 	font-weight: 700;
 	text-transform: uppercase;
 }
-	.eyes {
-		margin-bottom: 20px;
-	}
-.content-wrapper {
+.eyes {
+	margin-bottom: 80px;
+	margin-top: -10px;
+}
+	.scale {
+	-webkit-animation: scale 8s ease-in-out 4s both;
+	        animation: scale 8s ease-in-out 4s both;
+}
 
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.content-wrapper {
 	background: #000;
 }
 .jungle-top {
@@ -302,14 +328,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row bg-black text-center">
-    
-		<div class="bg-black"><div class="jungle-top"></div><div class="eyes"><img class="img-responsive image-center" src="cat-eyes.jpg" alt="The Jungle Book"></div>
-        <h2 class="red">You're on the List!</h2>
-        <h4 class="red">You'll be the first to hear the details about... </h4>
-        <h1 class="smoking">The Jungle Book</h1>
-        <h3 class="smoking">Friday, September 27, 2019</h3><div class="jungle-bottom"></div>
-      </div>
-    
+    <div class="bg-black">
+      <div class="jungle-top"></div>
+      <div class="eyes"><img class="scale img-responsive image-center" src="cat-eyes.gif" alt="The Jungle Book"></div>
+      <h2 class="red">You're on the List!</h2>
+      <h4 class="red">You'll be the first to hear the details about... </h4>
+      <h1 class="smoking">The Jungle Book</h1>
+      <h3 class="smoking">Friday, September 27, 2019</h3>
+      <div class="jungle-bottom"></div>
+    </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
