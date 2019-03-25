@@ -90,7 +90,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .grass {
 	background: transparent url(grass.png) top center repeat-x;
 	min-height: 300px;
-	margin-top: -320px;
+	margin-top: -300px;
 	position: relative;
 }
 .bunny-container {
@@ -106,13 +106,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin: 0 auto;
 }
 .one {
-	padding-top: 25px;
+	padding-top: 35px;
 }
 .two {
-	padding-top: 58px;
+	padding-top: 70px;
 }
 .three {
-	padding-top: 10px;
+	padding-top: 15px;
 }
 .bubble {
 	font-family: 'Gloria Hallelujah', sans-serif;
@@ -128,8 +128,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-weight: 700;
 	letter-spacing: .05em;
 	word-spacing: -.1em;
-	-webkit-animation: jello 0.9s 2s 2 both;
-	animation: jello 0.9s 2s 2 both;
 }
 .bubble::after {
 	content: '';
@@ -150,8 +148,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-decoration: none;
 }
 .one > .bcenter {
-	transform: rotate(-4deg);
-	-webkit-backface-visibility: hidden;
+	-webkit-animation: jello 0.9s 4s 1 both;
+	animation: jello 0.9s 4s 1 both;
 	margin-bottom: -25px;
 }
 .one > .bubble.bcenter::after {
@@ -160,6 +158,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	bottom: -20px;
 }
 .two > .bcenter {
+	-webkit-animation: jello 0.9s 2s 3 both;
+	animation: jello 0.9s 2s 3 both;
 	margin-bottom: -45px;
 }
 .two > .bubble.bcenter::after {
@@ -170,14 +170,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	bottom: -10px;
 }
 .three > .bcenter {
-	transform: rotate(4deg);
-	-webkit-backface-visibility: hidden;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
+	-webkit-animation: jello 0.9s 8s 1 both;
+	animation: jello 0.9s 6s 1 both;
 }
 .three > .bubble.bcenter::after {
-	left: 42%;
+	left: 45%;
 	border-width: 40px 30px 0;
 	bottom: -20px;
+	transform: rotate(-10deg);
+	-webkit-backface-visibility: hidden;
 }
 .toggle-text:hover {
 	cursor: pointer;
