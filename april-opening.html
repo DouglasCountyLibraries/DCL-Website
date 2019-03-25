@@ -80,61 +80,85 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<link href="https://fonts.googleapis.com/css?family=Farsan" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 <!-- pinterest - do not remove -->
 
 <style>
 .sky {
-background: rgb(255,234,183);
-background: linear-gradient(0deg, rgba(255,234,183,1) 0%, rgba(123,141,199,1) 60%);
+	background: rgb(255,234,183);
+	background: linear-gradient(0deg, rgba(255,234,183,1) 0%, rgba(123,141,199,1) 60%);
 }
-	.grass {
-		background: transparent url(grass.png) top center repeat-x;
-		min-height: 200px;
-		margin-top: -50px;
-		
-	}
-	.bunny-container {
-		display: flex;
-	}
-	.bunny-box {
-		
-	}
-.bubble {
-	font-family: 'Farsan', cursive;
+.grass {
+	background: transparent url(grass.png) top center repeat-x;
+	min-height: 375px;
+	margin-top: -100px;
 	position: relative;
-	min-width: 270px;
-	padding: 0px;
+}
+.bunny-container {
+	display: flex;
+	z-index: -1;
+	padding-top: 30px;
+}
+.bunny-box {
+}
+.bubble {
+	font-family: 'Gloria Hallelujah', sans-serif;
+	position: relative;
 	background: #fff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	color: #333;
-	padding: 15px;
 	text-align: center;
 	margin-bottom: 25px;
-	font-size: 24px;
+	max-width: 300px;
+	font-weight: 700;
+	letter-spacing: .05em;
+	box-shadow: 0px -5px 16px rgba(0,0,0,.3);
 }
 .bubble::after {
 	content: '';
 	position: absolute;
 	border-style: solid;
-	border-width: 16px 12px 0;
+	border-width: 23px 16px 0;
 	border-color: #fff transparent;
 	display: block;
 	width: 0;
 	z-index: 1;
-	bottom: -16px;
-	left: 160px;
+	bottom: -20px;
 }
 .bubble.bcenter {
-	font-size: 36px;
-	line-height: 34px;
+	font-size: 22px;
+	line-height: 24px;
+	padding: 50px 35px 40px;
+	text-transform: uppercase;
 }
 .bubble.bcenter::after {
 	left: 46%;
 }
-
+.bcenter a:hover, .bcenter a:focus {
+	text-decoration: none;
+}
+.one > .bcenter {
+	transform: rotate(-1deg);
+	-webkit-backface-visibility: hidden;
+}
+.three > .bcenter {
+	transform: rotate(1deg);
+	-webkit-backface-visibility: hidden;
+}
+.toggle-text:hover {
+	cursor: pointer;
+}
+.toggle-text {
+	color: #555;
+}
+.toggle-text:hover {
+	color: #333;
+}
+.joke-one, .joke-two, .joke-three {
+	padding-top: 10px
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -318,22 +342,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="sky row">
     <div class="container bunny-container text-center">
-      
-        <div class="bunny-box one">
-          <div class="bubble bcenter">Knock knock.</div>
-          <div><img class="img-responsive image-center" src="bubba-bunny.png" alt="Gretchen Rubin Tickets on Sale"></div>
+      <div class="bunny-box one">
+        <div class="bubble bcenter">
+          <div class="toggle-text" onclick="$('.joke-one').toggle(200,'swing');"> Knock knock!<br>
+            Who’s there?<br>
+            Boo!<br>
+            <a href="#">Boo who?</a></div>
+          <div class="joke-one" style="display:none">Don’t cry, <a href="#" target="_blank">Gretchen Rubin tickets</a> are still available.</div>
         </div>
-        <div class="bunny-box two">
-          <div class="bubble bcenter">Why do summer camp counselors wear sunglasses?</div>
-			<div><img class="img-responsive image-center" src="bubba-bunny.png" alt="Camp DCL"></div>
+        <div><img class="img-responsive image-center" src="bubba-bunny.png" alt="Gretchen Rubin Tickets on Sale"></div>
+      </div>
+      <div class="bunny-box two">
+        <div class="bubble bcenter">
+          <div class="toggle-text" onclick="$('.joke-two').toggle(200,'swing');"> Why do summer camp counselors <a href="#">wear sunglasses?</a></div>
+          <div class="joke-two" style="display:none">Because <a href="camp-dcl/">the campers</a> are so bright!</div>
         </div>
-        <div class="bunny-box three">
-          <div class="bubble bcenter">Knock knock.</div>
-			<div><img class="img-responsive image-center" src="bubba-bunny.png" alt="Check out this List"></div>
+        <div><img class="img-responsive image-center" src="bubba-bunny.png" alt="Gretchen Rubin Tickets on Sale"></div>
+      </div>
+      <div class="bunny-box three">
+        <div class="bubble bcenter">
+          <div class="toggle-text" onclick="$('.joke-three').toggle(200,'swing');"> Knock knock!<br>
+            Who’s there?<br>
+            Stopwatch.<br>
+            <a href="#">Stopwatch who?</a></div>
+          <div class="joke-three" style="display:none">Stopwatch you’re doing and check out <a href="#">these LOL movies/books.</a></div>
         </div>
-     
-    </div><div class="grass"></div>
-	</div>
+        <div><img class="img-responsive image-center" src="bubba-bunny.png" alt="Gretchen Rubin Tickets on Sale"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row grass"></div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
