@@ -115,10 +115,34 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .sub-nav-item a, .sub-nav-item a:hover {
 	padding: 19px 15px 15px 15px;
 }
-.event-card {
-	height: 100%;
-	background-color: #fff;
-	padding: 1px 0 40px;
+.author-wrapper, .event-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.book-wrapper {
+	display: flex;
+	align-items: center;
+}
+.event-item {
+	margin: 15px;
+}
+.author-item {
+	background: #fff;
+	padding: 30px 35px 40px 35px;
+	-webkit-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	margin: 5px;
+}
+.author-item h2 {
+	text-transform: uppercase;
+	font-weight: 400;
+	margin: 0;
+}
+.author-item h4 {
+	margin: 0;
+	padding-bottom: 15px;
 }
 .dropdown-menu.dropdown-event-menu a {
 	color: #b0852e;
@@ -135,6 +159,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .bg-white.padding-top-20.padding-right-40.padding-bottom-40.padding-left-40.shadow-low.equal-height {
 	max-width: 610px;
 	margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+.event-item {
+	max-width: 400px;
+}
+.author-item {
+	max-width: 600px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -410,34 +443,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row padding-bottom-15">
     <div class="container-md">
-      <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div class="padding-left-30 padding-right-30"> <img class="img-responsive center-block" src="enchanted-castle.jpg" alt="Enchanted Castle">
-          <div class="text-center padding-top-15">Dungeons, mazes, Lords and Ladies, and other imaginative delights! Costumes encouraged. <span class="text-uppercase">Ages 6-12.</span><br>
-            Castle Rock, Saturday, April 6, 10AM.
-            <div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=142755" class="btn btn-primary text-uppercase margin-15" target="_blank">Register Now</a></div>
+      <div class="event-wrapper">
+        <div class="event-item">
+          <div> <img class="img-responsive center-block" src="enchanted-castle.jpg" alt="Enchanted Castle">
+            <div class="text-center padding-top-15">Dungeons, mazes, Lords and Ladies, and other imaginative delights! Costumes encouraged. <span class="text-uppercase">Ages 6-12.</span><br>
+              Castle Rock, Saturday, April 6, 10AM.
+              <div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=142755" class="btn btn-primary text-uppercase margin-15" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div class="padding-left-30 padding-right-30"> <img class="img-responsive center-block" src="camp-dcl.jpg" alt="Camp DCL">
-          <div class="text-center padding-top-15">Weeklong, half-day summer camps for kids on sale now! <span class="text-uppercase">Ages 5-12.</span><br>
-            Various DCL locations.
-            <div class="text-center"><a href="../camp-dcl/" class="btn btn-primary text-uppercase margin-15">Learn More</a></div>
+        <div class="event-item">
+          <div> <img class="img-responsive center-block" src="camp-dcl.jpg" alt="Camp DCL">
+            <div class="text-center padding-top-15">Weeklong, half-day summer camps for kids on sale now! <span class="text-uppercase">Ages 5-12.</span><br>
+              Various DCL locations.
+              <div class="text-center"><a href="../camp-dcl/" class="btn btn-primary text-uppercase margin-15">Learn More</a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div class="padding-left-30 padding-right-30"> <img class="img-responsive center-block" src="my-yard.jpg" alt="My Yard!">
-          <div class="text-center padding-top-15">Get expert tips and ideas for lawn and landscape maintenance in this weekly series. <span class="text-uppercase">Adults.</span><br>
-            Castle Pines, Thursdays, 10AM.
-            <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=my+yard!&lib=1000&nd=360" class="btn btn-primary text-uppercase margin-15" target="_blank">Register Now</a></div>
+        <div class="event-item">
+          <div> <img class="img-responsive center-block" src="my-yard.jpg" alt="My Yard!">
+            <div class="text-center padding-top-15">Get expert tips and ideas for lawn and landscape maintenance in this weekly series. <span class="text-uppercase">Adults.</span><br>
+              Castle Pines, Thursdays, 10AM.
+              <div class="text-center"><a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=my+yard!&lib=1000&nd=360" class="btn btn-primary text-uppercase margin-15" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row bg-lavender">
-    <div class="container text-center padding-15 margin-lg-100">
+  <div class="row bg-teal">
+    <div class="container text-center padding-30 margin-lg-100">
       <h4 class="roboto white no-margin-top"><a href="../newsletters/" class="white text-underline">Become a DCL insider</a> and be the first to access ticket sales for our events! You’ll also get the inside scoop on great reads and upcoming events.</h4>
     </div>
   </div>
@@ -450,64 +485,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5 padding-bottom-60">
-    <div class="container">
-      <div class="col-md-6 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low equal-height">
-          <h2 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Kevin Ikenberry</h2>
-          <h4 class="no-margin-top text-center">Parker, Thursday, March 28, 6:30PM</h4>
-          <div class="row padding-top-15">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1554232114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781948485135/MC.GIF" alt="Honor the Threat"></a>Writing workshop! Learn various methods for constructing your story and plot from military science fiction writer and author of <i>Vendetta Protocol</i> and <i><a href="https://dcl.bibliocommons.com/item/show/1554232114">Honor the Threat</a></i>, Kevin Ikenberry. Bring a notebook or laptop. <span class="text-uppercase">Adults.</span></div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=141075" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
+    <div class="container-md">
+      <div class="author-wrapper">
+        <div class="author-item">
+          <h2>Kevin Ikenberry</h2>
+          <h4>Parker, Thursday, March 28, 6:30PM</h4>
+          <div class="book-wrapper">
+            <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/1554232114"><img class="margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781948485135/MC.GIF" alt="Honor the Threat"></a></div>
+            <div class="book-item">Writing workshop! Learn various methods for constructing your story and plot from military science fiction writer and author of <i>Vendetta Protocol</i> and <i><a href="https://dcl.bibliocommons.com/item/show/1554232114">Honor the Threat</a></i>, Kevin Ikenberry. Bring a notebook or laptop. <span class="text-uppercase">Adults.</span>
+              <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=141075" class="btn btn-primary text-uppercase" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low equal-height">
-          <h2 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Lisa Scottoline</h2>
-          <h4 class="no-margin-top text-center">Castle Rock, Friday, April 12, 7PM</h4>
-          <div class="row padding-top-15">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1541115114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780525539643/MC.GIF" alt="The Feather Thief"></a>Don’t miss <i>New York Times</i> bestselling author Lisa Scottoline when she joins us to talk about her new psychological thriller, <a href="https://dcl.bibliocommons.com/item/show/1541115114"><i>Someone Knows</i></a>. A book sale and signing will follow the author’s talk. <span class="text-uppercase">Adults.</span></div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=152826" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
+        <div class="author-item">
+          <h2>Lisa Scottoline</h2>
+          <h4>Castle Rock, Friday, April 12, 7PM</h4>
+          <div class="book-wrapper">
+            <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/1541115114"><img class="margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780525539643/MC.GIF" alt="The Feather Thief"></a></div>
+            <div class="book-item">Don’t miss <i>New York Times</i> bestselling author Lisa Scottoline when she joins us to talk about her new psychological thriller, <a href="https://dcl.bibliocommons.com/item/show/1541115114"><i>Someone Knows</i></a>. A book sale and signing will follow the author’s talk. <span class="text-uppercase">Adults.</span>
+              <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=152826" class="btn btn-primary text-uppercase" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low equal-height">
-          <h2 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Warren Hammond & Angie Hodapp</h2>
-          <h4 class="no-margin-top text-center">Parker, Thursday, April 25, 6:30PM</h4>
-          <div class="row padding-top-15">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1423695114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780998666716/MC.GIF" alt="Tooth & Claw"></a>Writing workshop! Learn about world building and developing characters at this workshop led by award-winning authors <a href="https://dcl.bibliocommons.com/v2/search?query=Hammond%2C+Warren&searchType=author">Warren Hammond</a> and <a href="https://dcl.bibliocommons.com/v2/search?query=Hodapp%2C+Angie&searchType=author">Angie Hodapp</a>. Bring a notebook or laptop. <span class="text-uppercase">Adults.</span></div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=141076" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
+        <div class="author-item">
+          <h2>Warren Hammond & Angie Hodapp</h2>
+          <h4>Parker, Thursday, April 25, 6:30PM</h4>
+          <div class="book-wrapper">
+            <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/1423695114"><img class="margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780998666716/MC.GIF" alt="Tooth & Claw"></a></div>
+            <div class="book-item">Writing workshop! Learn about world building and developing characters at this workshop led by award-winning authors <a href="https://dcl.bibliocommons.com/v2/search?query=Hammond%2C+Warren&searchType=author">Warren Hammond</a> and <a href="https://dcl.bibliocommons.com/v2/search?query=Hodapp%2C+Angie&searchType=author">Angie Hodapp</a>. Bring a notebook or laptop. <span class="text-uppercase">Adults.</span>
+              <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=141076" class="btn btn-primary text-uppercase" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low equal-height">
-          <h2 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Mark Obmascik</h2>
-          <h4 class="no-margin-top text-center">Highlands Ranch, Tuesday, April 30, 6:30PM</h4>
-          <div class="row padding-top-15">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1558048114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781451678376/MC.GIF" alt="The Malta Exchange"></a>Join the Pulitzer Prize-winning journalist and local bestselling author as he introduces his new biography, <i><a href="https://dcl.bibliocommons.com/item/show/1558048114">The Storm on Our Shores</a></i>. Learn about the incredible story of two WWII soldiers and “The Forgotten Battle” that raged in May 1943, during the Battle of Attu. A book sale and signing will follow the author’s talk. <span class="text-uppercase">Adults.</span></div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=152226" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
+        <div class="author-item">
+          <h2>Mark Obmascik</h2>
+          <h4>Highlands Ranch, Tuesday, April 30, 6:30PM</h4>
+          <div class="book-wrapper">
+            <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/1558048114"><img class="margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781451678376/MC.GIF" alt="The Malta Exchange"></a></div>
+            <div class="book-item">Join the Pulitzer Prize-winning journalist and local bestselling author as he introduces his new biography, <i><a href="https://dcl.bibliocommons.com/item/show/1558048114">The Storm on Our Shores</a></i>. Learn about the incredible story of two WWII soldiers and “The Forgotten Battle” that raged in May 1943, during the Battle of Attu. A book sale and signing will follow the author’s talk. <span class="text-uppercase">Adults.</span>
+              <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=152226" class="btn btn-primary text-uppercase" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low equal-height">
-          <h2 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Polly Letofsky</h2>
-          <h4 class="no-margin-top text-center">Parker, Thursday, May 30, 6:30PM</h4>
-          <div class="row padding-top-15">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/969458114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780983208501/MC.GIF" alt="3Mph"></a>Writing workshop! Author and publishing consultant Polly Letofsky presents Publishing 101. Learn about self-publishing, including industry information, costs, steps for self-publishing, marketing, and more. Bring a notebook or laptop. <span class="text-uppercase">Adults.</span></div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=141077" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
+        <div class="author-item">
+          <h2>Polly Letofsky</h2>
+          <h4>Parker, Thursday, May 30, 6:30PM</h4>
+          <div class="book-wrapper">
+            <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/969458114"><img class="margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9780983208501/MC.GIF" alt="3Mph"></a></div>
+            <div class="book-item">Writing workshop! Author and publishing consultant Polly Letofsky presents Publishing 101. Learn about self-publishing, including industry information, costs, steps for self-publishing, marketing, and more. Bring a notebook or laptop. <span class="text-uppercase">Adults.</span>
+              <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=141077" class="btn btn-primary text-uppercase" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 padding-bottom-15">
-        <div class="bg-white padding-top-20 padding-right-40 padding-bottom-40 padding-left-40 shadow-low equal-height" style="height: 349px;">
-          <h2 class="text-uppercase text-center no-margin-bottom no-margin-top font-weight-400">Kirk W. Johnson</h2>
-          <h4 class="no-margin-top text-center">Highlands Ranch, Tuesday, June 25, 6:30PM</h4>
-          <div class="row padding-top-15">
-            <div> <a href="https://dcl.bibliocommons.com/item/show/1440672114"><img class="img-responsive pull-left margin-right-15 book-cover shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781101981610/MC.GIF" alt="The Feather Thief"></a>If you enjoy true-crime stories, don’t miss this author event! Johnson will talk about the real-life crime that inspired his latest book, <i><a href="https://dcl.bibliocommons.com/item/show/1440672114">The Feather Thief: Beauty, Obsession, and the Natural History Heist of the Century</a></i>. A book sale and signing will follow his presentation. <span class="text-uppercase">Adults.</span></div>
-            <div><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=152778" class="btn btn-primary text-uppercase margin-top-15" target="_blank">Register Now</a></div>
+        <div class="author-item">
+          <h2>Kirk W. Johnson</h2>
+          <h4>Highlands Ranch, Tuesday, June 25, 6:30PM</h4>
+          <div class="book-wrapper">
+            <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/1440672114"><img class="margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781101981610/MC.GIF" alt="The Feather Thief"></a></div>
+            <div class="book-item">If you enjoy true-crime stories, don’t miss this author event! Johnson will talk about the real-life crime that inspired his latest book, <i><a href="https://dcl.bibliocommons.com/item/show/1440672114">The Feather Thief: Beauty, Obsession, and the Natural History Heist of the Century</a></i>. A book sale and signing will follow his presentation. <span class="text-uppercase">Adults.</span>
+              <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=152778" class="btn btn-primary text-uppercase" target="_blank">Register Now</a></div>
+            </div>
           </div>
         </div>
       </div>
