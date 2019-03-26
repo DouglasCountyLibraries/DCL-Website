@@ -97,14 +97,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- Push Notifications End - Do Not Remove -->
 
 <style>
-.gradient-row {
+.rubin-background {
 	background: #7b8ec7;
-}
-.gradient-background {
-	background: #7b8ec7;
-}
-.gradient-background h1 {
-	color: #2F3690;
 }
 .sub-title {
 	color: #E6E6E8;
@@ -114,6 +108,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .sub-nav-item a, .sub-nav-item a:hover {
 	padding: 19px 15px 15px 15px;
+}
+.rubin-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.rubin-item {
+	margin: 0 15px;
 }
 .author-wrapper, .event-wrapper {
 	display: flex;
@@ -167,6 +170,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .author-item {
 	max-width: 600px;
+}
+}
+
+@media (max-width: 1252px) {
+.rubin-item {
+	text-align: center;
+	margin-bottom: 30px;
 }
 }
 </style>
@@ -426,11 +436,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row gradient-row">
-    <div class="container text-center gradient-background padding-top-30"><img class="img-responsive center-block" src="gretchen-rubin.jpg" alt="Gretchen Rubin">
-      <h1 class="no-margin jumbo-text text-uppercase font-weight-500">Gretchen Rubin</h1>
-      <h5 class="white no-margin font-weight-400">Tuesday, May 7, 7PM-10PM</h5>
-      <div class="text-center padding-bottom-15"><a href="https://www.eventbrite.com/e/dcl-presents-gretchen-rubin-tickets-55932936920?aff=AuthorsEvents" class="btn btn-warning text-uppercase margin-15" target="_blank">Buy Now!</a></div>
+  <div class="row rubin-background">
+    <div class="rubin-wrapper">
+      <div class="rubin-item"> <img class="img-responsive center-block" src="gretchen-rubin.jpg" alt="Gretchen Rubin"></div>
+      <div class="rubin-item">
+        <h1 class="white no-margin jumbo-text text-uppercase font-weight-500">Gretchen Rubin</h1>
+        <h3 class="white no-margin font-weight-400">Tuesday, May 7, 7PM-10PM</h3>
+        <div class="padding-top-15"><a href="https://www.eventbrite.com/e/dcl-presents-gretchen-rubin-tickets-55932936920?aff=AuthorsEvents" class="btn btn-primary btn-lg text-uppercase" target="_blank">Buy Now!</a></div>
+      </div>
     </div>
   </div>
   <div id="featured-events" class="row">
