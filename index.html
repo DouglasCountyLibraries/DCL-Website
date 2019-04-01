@@ -39,6 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
+
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -79,318 +80,177 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<link href="https://fonts.googleapis.com/css?family=Farsan" rel="stylesheet">
 <!-- pinterest - do not remove -->
-
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 <style>
-.background-wrapper {
-	background: #fff url("ski-slope.png") top right/cover;
-	min-height: 975px;
+.sky {
+	background: rgb(255,234,183);
+	background: linear-gradient(0deg, rgba(255,234,183,1) 0%, rgba(123,141,199,1) 60%);
 }
-.link-row {
-	background: #fefefe;
-}
-.downed {
+.grass {
+	background: transparent url(grass.png) top center repeat-x;
+	min-height: 300px;
+	margin-top: -300px;
 	position: relative;
-	top: 85px;
-	float: right;
-	right: 10px;
+}
+.bunny-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	z-index: -1;
+	padding-bottom: 215px;
+}
+.bunny-box {
+	padding: 30px 15px 0;
+	margin: 0 auto;
+}
+.one {
+	padding-top: 35px;
+}
+.two {
+	padding-top: 70px;
+}
+.three {
+	padding-top: 15px;
 }
 .bubble {
-	font-family: 'Farsan', cursive;
+	font-family: 'Gloria Hallelujah', sans-serif;
 	position: relative;
-	min-width: 270px;
-	padding: 0px;
-	background: #D95236;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-	color: #fff;
-	padding: 15px;
+	background: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	color: #333;
 	text-align: center;
 	margin-bottom: 25px;
-	font-size: 24px;
+	max-width: 300px;
+	font-weight: 700;
+	letter-spacing: .05em;
+	word-spacing: -.1em;
 }
 .bubble::after {
 	content: '';
 	position: absolute;
 	border-style: solid;
-	border-width: 16px 12px 0;
-	border-color: #D95236 transparent;
+	border-color: #fff transparent;
 	display: block;
 	width: 0;
 	z-index: 1;
-	bottom: -16px;
-	left: 160px;
 }
 .bubble.bcenter {
-	font-size: 36px;
-	line-height: 34px;
+	font-size: 22px;
+	line-height: 24px;
+	padding: 40px 35px;
+	text-transform: uppercase;
 }
-.bubble.bcenter::after {
-	left: 46%;
-}
-.social-footer, .footer, .dcl-navbar, .dcl-logo-search {
-	z-index: 100;
-	position: relative;
-}
-.grow-text a:active, .grow-text a:visited, .grow-text a:hover, .grow-text a:focus {
-	transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
-}
-.grow-text {
-	transition: all .3s ease-in-out;
-	-webkit-transition: all .3s ease-in-out;
-}
-.grow-text:hover, .grow-text:focus {
-	transform: scale(1.1);
+.bcenter a:hover, .bcenter a:focus {
 	text-decoration: none;
 }
-.skier-one {
-	position: absolute;
-	-webkit-animation: 8s linear 0s infinite s-one;
-	animation: 8s linear 0s infinite s-one;
+.one > .bcenter {
+	-webkit-animation: jello 0.9s 6s 1 both;
+	animation: jello 0.9s 6s 1 both;
+	margin-bottom: -25px;
 }
- @-webkit-keyframes s-one {
+.one > .bubble.bcenter::after {
+	left: 44%;
+	border-width: 40px 30px 0;
+	bottom: -20px;
+}
+.two > .bcenter {
+	-webkit-animation: jello 0.9s 2s 3 both;
+	animation: jello 0.9s 2s 3 both;
+	margin-bottom: -45px;
+}
+.two > .bubble.bcenter::after {
+	right: 17%;
+	border-width: 40px 30px 0;
+	transform: rotate(-16deg);
+	-webkit-backface-visibility: hidden;
+	bottom: -10px;
+}
+.three > .bcenter {
+	margin-bottom: 25px;
+	-webkit-animation: jello 0.9s 8s 1 both;
+	animation: jello 0.9s 6s 1 both;
+}
+.three > .bubble.bcenter::after {
+	left: 45%;
+	border-width: 40px 30px 0;
+	bottom: -20px;
+	transform: rotate(-10deg);
+	-webkit-backface-visibility: hidden;
+}
+.toggle-text:hover {
+	cursor: pointer;
+}
+.toggle-text {
+	color: #555;
+}
+.toggle-text:hover {
+	color: #333;
+}
+.joke-one, .joke-two, .joke-three {
+	padding-top: 10px
+}
+ @-webkit-keyframes jello {
  0% {
- right: -200px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-50% {
-right: 100%;
- top:1200px;
-transform:  scaleX(1.00) scaleY(1.00);
-}
- 100% {
-right: 100%;
- top:1200px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-}
- @keyframes s-one {
- 0% {
- right: -200px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-50% {
-right: 100%;
- top:1200px;
-transform:  scaleX(1.00) scaleY(1.00);
-}
- 100% {
-right: 100%;
- top:1200px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-}
-.skier-two {
-	position: absolute;
-	-webkit-animation: 10s linear 0s infinite s-two;
-	animation: 10s linear 0s infinite s-two;
-}
- @-webkit-keyframes s-two {
- 0% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
- 10% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
- 50% {
-right: 100%;
- top:1200px;
-transform:  scaleX(1.00) scaleY(1.00);
-}
- 100% {
-right: 100%;
- top:1200px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-}
- @keyframes s-two {
- 0% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
- 10% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
- 50% {
-right: 100%;
- top:1200px;
-transform:  scaleX(1.00) scaleY(1.00);
-}
- 100% {
-right: 100%;
- top:1200px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-}
-.skier-three {
-	position: absolute;
-	-webkit-animation: 13s linear 0s infinite s-three;
-	animation: 13s linear 0s infinite s-three;
-}
- @-webkit-keyframes s-three {
- 0% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
+ -webkit-transform: scale3d(1, 1, 1);
+ transform: scale3d(1, 1, 1);
 }
  30% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
+ -webkit-transform: scale3d(1.05, 0.95, 1);
+ transform: scale3d(1.05, 0.95, 1);
 }
- 60% {
-right: 100%;
- top:1200px;
-transform:  scaleX(1.00) scaleY(1.00);
+ 40% {
+ -webkit-transform: scale3d(0.95, 1.05, 1);
+ transform: scale3d(0.95, 1.05, 1);
+}
+ 50% {
+ -webkit-transform: scale3d(1.05, 0.85, 1);
+ transform: scale3d(1.05, 0.85, 1);
+}
+ 65% {
+ -webkit-transform: scale3d(0.95, 1.05, 1);
+ transform: scale3d(0.95, 1.05, 1);
+}
+ 75% {
+ -webkit-transform: scale3d(1.05, 0.95, 1);
+ transform: scale3d(1.05, 0.95, 1);
 }
  100% {
-right: 100%;
- top:1200px;
-transform:  scaleX(0.4) scaleY(0.4);
+ -webkit-transform: scale3d(1, 1, 1);
+ transform: scale3d(1, 1, 1);
 }
 }
- @keyframes s-three {
+@keyframes jello {
  0% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
+ -webkit-transform: scale3d(1, 1, 1);
+ transform: scale3d(1, 1, 1);
 }
  30% {
- right: -300px;
- top:500px;
-transform:  scaleX(0.4) scaleY(0.4);
+ -webkit-transform: scale3d(1.05, 0.95, 1);
+ transform: scale3d(1.05, 0.95, 1);
 }
- 60% {
-right: 100%;
- top:1200px;
-transform:  scaleX(1.00) scaleY(1.00);
+ 40% {
+ -webkit-transform: scale3d(0.95, 1.05, 1);
+ transform: scale3d(0.95, 1.05, 1);
 }
- 100% {
-right: 100%;
- top:1200px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-}
-.skier-four {
-	position: absolute;
-	-webkit-animation: 14s linear 0s infinite s-four;
-	animation: 14s linear 0s infinite s-four;
-}
- @-webkit-keyframes s-four {
- 0% {
- right: -300px;
- top:300px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
- 35% {
- right: -300px;
- top:300px;
-transform:  scaleX(0.4) scaleY(0.4);
+ 50% {
+ -webkit-transform: scale3d(1.05, 0.85, 1);
+ transform: scale3d(1.05, 0.85, 1);
 }
  65% {
-right: 100%;
- top:1600px;
-transform:  scaleX(1.00) scaleY(1.00);
+ -webkit-transform: scale3d(0.95, 1.05, 1);
+ transform: scale3d(0.95, 1.05, 1);
+}
+ 75% {
+ -webkit-transform: scale3d(1.05, 0.95, 1);
+ transform: scale3d(1.05, 0.95, 1);
 }
  100% {
-right: 100%;
- top:1600px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-}
- @keyframes s-four {
- 0% {
- right: -300px;
- top:300px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
- 35% {
- right: -300px;
- top:300px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
- 65% {
-right: 100%;
- top:1600px;
-transform:  scaleX(1.00) scaleY(1.00);
-}
- 100% {
-right: 100%;
- top:1600px;
-transform:  scaleX(0.4) scaleY(0.4);
-}
-}
-.skier-five {
-	position: absolute;
-	-webkit-animation: 45s linear 0s infinite s-five;
-	animation: 45s linear 0s infinite s-five;
-}
- @-webkit-keyframes s-five {
- 0% {
- right: -410px;
- top:700px;
-transform:  scaleX(0.6) scaleY(0.6);
-}
- 10% {
- right: -410px;
- top:700px;
-transform:  scaleX(0.6) scaleY(0.6);
-}
- 60% {
-right: 100%;
- top:1100px;
-transform:  scaleX(1.00) scaleY(1.00);
-}
- 100% {
-right: 100%;
- top:1100px;
-transform:  scaleX(0.6) scaleY(0.6);
-}
-}
- @keyframes s-five {
- 0% {
- right: -410px;
- top:700px;
-transform:  scaleX(0.6) scaleY(0.6);
-}
- 10% {
- right: -410px;
- top:700px;
-transform:  scaleX(0.6) scaleY(0.6);
-}
- 60% {
-right: 100%;
- top:1100px;
-transform:  scaleX(1.00) scaleY(1.00);
-}
- 100% {
-right: 100%;
- top:1100px;
-transform:  scaleX(0.6) scaleY(0.6);
-}
-}
-
-@media (max-width: 992px) {
-.background-wrapper {
-	min-height: 375px;
-}
-.skier-one, .skier-two, .skier-three, .skier-four, .skier-five {
-	display: none;
-}
-.insert-br {
-	display: none; /* <br class="insert-br" /> */
+ -webkit-transform: scale3d(1, 1, 1);
+ transform: scale3d(1, 1, 1);
 }
 }
 </style>
@@ -574,34 +434,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="background-wrapper row">
-    <div class="downed text-right"> <a class="grow-text" href="camp-dcl/">
-      <div class="bubble grow-text">I'm ready for Summer Camp.</div>
-      </a> <img src="downed-skier.png" alt="Downed Skier"></div>
-    <div class="skier-two"><img src="skier-two.png" alt="Skier"></div>
-    <div class="skier-one"><img src="skier-one.png" alt="Skier"></div>
-    <div class="skier-three"><img src="skier-three.png" alt="Skier"></div>
-    <div class="skier-four"><img src="skier-four.png" alt="Skier"></div>
-    <div class="skier-five"><img src="skier-five.gif" alt="Skier"></div>
-  </div>
-  <div class="link-row row">
-    <div class="container text-center">
-      <div>
-        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1364751827">
-          <div class="bubble bcenter grow-text">Audiobooks for <br class="insert-br" />
-            the Trip</div>
-          </a></div>
-        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="https://blogs.douglascountylibraries.org/blog/2019/02/28/dcl-gear-to-go/">
-          <div class="bubble bcenter grow-text">Gear to <br class="insert-br" />
-            Go!</div>
-          </a></div>
-        <div class="col-md-4 padding-left-30 padding-right-30"><a class="grow-text" href="https://www.eventbrite.com/e/dcl-presents-gretchen-rubin-tickets-55932936920?aff=HomePage" target="_blank">
-          <div class="bubble bcenter grow-text">Spring Author Event: <br class="insert-br" />
-            Gretchen Rubin!</div>
-          </a></div>
+  <div class="sky row">
+    <div class="container bunny-container text-center">
+      <div class="bunny-box one">
+        <div class="bubble bcenter">
+          <div class="toggle-text" onclick="$('.joke-one').toggle(200,'swing');"> Knock knock!<br>
+            Who’s there?<br>
+            Boo!<br>
+            <a href="#joke-one">Boo who?</a></div>
+          <div class="joke-one" style="display:none">Don’t cry, <a href="https://www.eventbrite.com/e/dcl-presents-gretchen-rubin-tickets-55932936920?aff=HomePage" target="_blank">Gretchen Rubin tickets</a> are still available.</div>
+        </div>
+        <div><img class="img-responsive image-center" src="bubba.png" alt="Gretchen Rubin Tickets on Sale"></div>
+      </div>
+      <div class="bunny-box two">
+        <div class="bubble bcenter">
+          <div class="toggle-text" onclick="$('.joke-two').toggle(200,'swing');"> Why do summer camp counselors <a href="#joke-two">wear sunglasses?</a></div>
+          <div class="joke-two" style="display:none">Because <a href="camp-dcl/">the campers</a> are so bright!</div>
+        </div>
+        <div><img class="img-responsive image-center" src="rudolph.png" alt="Camp DCL"></div>
+      </div>
+      <div class="bunny-box three">
+        <div class="bubble bcenter">
+          <div class="toggle-text" onclick="$('.joke-three').toggle(200,'swing');"> Knock knock!<br>
+            Who’s there?<br>
+            Stopwatch.<br>
+            <a href="#joke-three">Stopwatch who?</a></div>
+          <div class="joke-three" style="display:none">Stopwatch you’re doing and check out <a href="https://dcl.bibliocommons.com/list/share/692278051/1379228640">these LOL books.</a></div>
+        </div>
+        <div><img class="img-responsive image-center" src="rosie.png" alt="Funny books and movies"></div>
       </div>
     </div>
   </div>
+  <div class="row grass"></div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
