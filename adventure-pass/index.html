@@ -687,31 +687,9 @@ $scale-base-1: (1 + $scale / 100%);
 	padding-bottom: 15px;
 }
 .library-card {
-	transform: rotate(15deg);
-	-webkit-transform: rotate(15deg);
-	-webkit-backface-visibility: hidden;
-	z-index: -1;
+	transform: rotate(-5deg);
 	box-shadow: 1px 5px 8px 1px rgba(0,0,0,.2);
-}
-.come-in-card.come-in {
-	animation: come-in 2.5s ease forwards;
-	transform-origin: 50% 50%;
-}
- @keyframes come-in {
- 0% {
- transform:  translate(0px, 0px) rotate(0deg);
-}
- 100% {
- transform:  translate(0px, 0px) rotate(-30deg);
-}
-}
- @-webkit-keyframes come-in {
- 0% {
- -webkit-transform:  translate(0px, 0px) rotate(0deg);
-}
- 100% {
- -webkit-transform:  translate(0px, 0px) rotate(-30deg);
-}
+	-webkit-backface-visibility: hidden;
 }
 
 @media (max-width: 992px) {
@@ -1102,59 +1080,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script>
-	(function($) {
-
-  /**
-   * Copyright 2012, Digital Fusion
-   * Licensed under the MIT license.
-   * http://teamdf.com/jquery-plugins/license/
-   *
-   * @author Sam Sehnert
-   * @desc A small plugin that checks whether elements are within
-   *     the user visible viewport of a web browser.
-   *     only accounts for vertical position, not horizontal.
-   */
-
-  $.fn.visible = function(partial) {
-    
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          _bottom       = _top + $t.height(),
-          compareTop    = partial === true ? _bottom : _top,
-          compareBottom = partial === true ? _top : _bottom;
-    
-    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-  };
-    
-})(jQuery);
-
-var win = $(window);
-
-var allMods = $(".module");
-
-allMods.each(function(i, el) {
-  var el = $(el);
-  if (el.visible(true)) {
-    el.addClass("already-visible"); 
-  } 
-});
-
-win.scroll(function(event) {
-  
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in"); 
-    } 
-  });
-  
-});
-	</script> 
 <!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
