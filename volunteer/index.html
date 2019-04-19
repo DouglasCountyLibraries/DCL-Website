@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -100,6 +101,20 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .panel {
 	cursor: inherit;
+}
+.award-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.award-item {
+	flex-basis: 48%;
+	padding: 15px;
+}
+
+@media (max-width: 992px) {
+.award-wrapper {
+	flex-direction: column;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -548,9 +563,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row padding-top-15 padding-bottom-15">
-    <div class="container margin-lg-200">
-      <div><img class="pull-left margin-right-15" src="service-enterprise-certified.jpg" alt="Service Enterprise Certified">Douglas County Libraries is proud to be Service Enterprise Certified, a designation that signifies our commitment to best practices for engaging volunteers. The national Service Enterprise Initiative, led by Points of Light, helps nonprofit organizations leverage volunteers and their skills to address community needs.</div>
+  <div class="row">
+    <div class="award-wrapper container text-center padding-15">
+      <div class="award-item">
+        <div><img src="pvsa-logo.jpg" alt="The President's Volunteer Service Service Award"></div>
+        <div class="text-left-md margin-top-10">Douglas County Libraries is a Certified Organization for the national and prestigious Presidential Volunteer Service Award.</div>
+      </div>
+      <div class="award-item">
+        <div><img src="service-enterprise-certified.jpg" alt="Service Enterprise Certified"></div>
+        <div class="text-left-md margin-top-10">DCL is proud to be Service Enterprise Certified, a designation that signifies our commitment to best practices for engaging volunteers. The national Service Enterprise Initiative, led by Points of Light, helps nonprofit organizations leverage volunteers and their skills to address community needs.</div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -684,4 +706,5 @@ for (var i = 0; i < cards.length; i++) {
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
