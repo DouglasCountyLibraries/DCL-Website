@@ -97,23 +97,111 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 &noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
-.flickity-page-dots .dot {
-	background-color: #fff;
+.eventList.width {
+	font-family: "Ubuntu", arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	text-align: center;
+	padding: 15px 30px 15px;
 }
-.flickity-page-dots {
-	bottom: -30px;
-	opacity: .5;
+#eventsinfo .item {
+	font-size: 0px;
 }
-.flickity-prev-next-button {
-	display: none;
+#eventsinfo {
+	background: #fff;
+	width: 80%;
+	margin: 0 auto;
 }
-.carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
+#eventsinfo .item .title {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: -0.8px;
+}
+#eventsinfo .item .title a, #eventsinfo .item .title a:hover, #eventsinfo .item .title a:focus {
+	cursor: text;
+	color: #666;
+	text-decoration: none;
+}
+#eventsinfo #eventdate {
+	font-size: 16px;
+	padding-left: 20px;
+}
+#eventsinfo .description {
+	font-size: 16px;
+	margin: 8px 0 0;
+}
+#eventsinfo .time, #eventsinfo span.location {
+	font-size: 16px;
+}
+#eventsinfo #noevent {
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.button-wrapper {
+	background: rgba(255,255,255,1);
+	padding-bottom: 25px;
+	width: 80%;
+	margin: 0 auto;
+}
+.slide-wrapper {
+	position: relative;
+}
+.prev, .prev a, .next, .next a, .prev:hover, .prev a:hover, .next:hover, .next a:hover {
+	cursor: pointer;
+	font-size: 80px;
+	color: rgba(255,255,255,.4);
+	position: absolute;
+	top: 28%;
+	text-decoration: none;
+}
+.prev:hover, .prev a:hover, .next:hover, .next a:hover, .prev:focus, .prev a:focus, .next:focus, .next a:focus {
+	cursor: pointer;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+.prev, .prev a {
+	left: 0px;
+	padding: 10px 10px 10px 0;
+}
+.next, .next a {
+	right: 0px;
+	padding: 10px 0 10px 10px;
+}
+.flex-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.item-one {
+	width: 100%;
+}
+.item-two {
+	width: 100%;
+}
+.title a, .title a:hover, .title a:focus {
+	color: #333;
+	cursor: text;
+	text-decoration: none;
+}
+.contact-info {
+	padding-top: 5px;
+}
+.description b {
+	font-weight: 300;
+	display: block;
+	white-space: nowrap;
+}
+.description b:nth-child(1) {
+	font-size: 20px;
 }
 .service-box {
 	border: 4px solid #f5f5f5;
@@ -137,6 +225,48 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 }
 .fa-th {
 	vertical-align: middle;
+}
+/* Fading animation */
+.item {
+	-webkit-animation-name: item-fade;
+	-webkit-animation-duration: 1s;
+	animation-name: item-fade;
+	animation-duration: 1s;
+}
+ @-webkit-keyframes item-fade {
+ from {
+opacity: 0
+}
+ to {
+opacity: 1
+}
+}
+ @keyframes item-fade {
+ from {
+opacity: 0
+}
+ to {
+opacity: 1
+}
+}
+.item:nth-of-type(n+7) {
+	display: none;
+}
+
+@media (max-width: 992px) {
+.item-one {
+	order: 2;
+}
+.item-two {
+	order: 1;
+}
+}
+
+@media (max-width: 768px) {
+.item-one > .container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -351,143 +481,133 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-teal padding-top-40 padding-bottom-15">
-    <div class="container-lg">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="meeting-room.jpg" alt="Meeting Room"></div>
-        <div class="carousel-cell"><img src="lone-tree-terrace.jpg" alt="Lone Tree Terrace"></div>
-        <div class="carousel-cell"><img src="chocolate-therapist.jpg" alt="Chocolate Therapist"></div>
-        <div class="carousel-cell"><img src="parker-entrance.jpg" alt="Parker Entrance"></div>
-        <div class="carousel-cell"><img src="table-setting.jpg" alt="Table Setting"></div>
-        <div class="carousel-cell"><img src="highlands-ranch-terrace.jpg" alt="Highlands Ranch Terrace"></div>
-        <div class="carousel-cell"><img src="cookies.jpg" alt="Cookies"></div>
-        <div class="carousel-cell"><img src="chafing-dishes.jpg" alt="Chafing Dishes"></div>
-        <div class="carousel-cell"><img src="display.jpg" alt="Display"></div>
-        <div class="carousel-cell"><img src="well-wishes.jpg" alt="Well Wishes"></div>
-        <div class="carousel-cell"><img src="beverage-glasses.jpg" alt="Beverage Glasses"></div>
-        <div class="carousel-cell"><img src="parker.jpg" alt="Parker at Night"></div>
-        <div class="carousel-cell"><img src="parker-tables.jpg" alt="Parker Meeting Room"></div>
-        <div class="carousel-cell"><img src="seating.jpg" alt="Seating"></div>
-        <div class="carousel-cell"><img src="event-hall.jpg" alt="Event Hall"></div>
-        <div class="carousel-cell"><img src="deck.jpg" alt="Deck"></div>
-        <div class="carousel-cell"><img src="buffet.jpg" alt="Buffet"></div>
-        <div class="carousel-cell"><img src="beverages.jpg" alt="Assortment of Beverages"></div>
-        <div class="carousel-cell"><img src="parker-art.jpg" alt="Parker Conference Room"></div>
-        <div class="carousel-cell"><img src="castle-pine-childrens-area.jpg" alt="Castle Pines Children's Area"></div>
+  <div class="flex-wrapper">
+    <div class="item-one bg-lavender padding-bottom-30">
+      <div class="container">
+        <h1 class="roboto white text-center no-margin-bottom">Upcoming Community Events</h1>
+        <div class="white text-center margin-lg-50 padding-bottom-15">Events listed below are sponsored by community groups and/or individuals using Douglas County Libraries spaces for a fee. These events are not sponsored by Douglas County Libraries. Events are listed in chronological order.</div>
+        <div class="slide-wrapper">
+          <div> <a class="prev" onclick="plusSlides(-1)">&#139;</a> <a class="next" onclick="plusSlides(1)">&#155;</a> </div>
+          <div id="eventsinfo" class="eventsinfo margin-lg-100"></div>
+        </div>
+        <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?et=41&private=2&lib=ALL&nd=90&dm=html"></script>
+        <div class="button-wrapper text-center"><a href="community-events/" class="text-uppercase font-weight-400">View All Community Events &raquo;</a></div>
+        <div class="white large-text text-center padding-top-15">Contact our Event + Hospitality Services team for information about how to list your event at <span class="text-nowrap"><a class="white" href="tel:303-688-7605">(303) 688-7605</a>.</span></div>
+      </div>
+    </div>
+    <div id="service-levels" class="item-two bg-gray-5 padding-top-30 padding-bottom-40">
+      <div class="container">
+        <div id="self-service" class="col-md-4 service-box equal-height bg-white padding-bottom-30">
+          <h1 class="roboto bg-moss text-center">Self-Service</h1>
+          <div class="padding-top-15 padding-bottom-15">
+            <ul class="fa-ul self">
+              <li><i class="fa-li fa fa-check fa-lg"></i>Basic free meeting service during library operating hours</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>You reserve your space online *</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>You set up and return the room to its pre-event state</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>You run your event, including managing agendas, vendors and finances</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Drop-off/unstaffed catering permitted</li>
+            </ul>
+            <div class="margin-bottom-15">Upgrade to Select or Concierge Service to sell tickets, charge an entry fee, sell goods or services, or accept donations.</div>
+            <div> Upgrade to Concierge Service to reserve 50-100% of the library, serve alcohol, or use a full-service caterer with banquet staff. </div>
+            <div class="text-center margin-top-30"> <a href="http://host.evanced.info/douglas/evanced/roomrequest.asp" target="_blank" class="text-uppercase button btn btn-primary">Reserve a Meeting Room *</a></div>
+          </div>
+          <div class="text-center">Need help? Call: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></div>
+          <div class="text-center margin-top-10">* <a data-toggle="modal" data-target="#self-service-get-started" href="#">Spaces account</a> required</div>
+        </div>
+        <!-- Modal -->
+        <div id="self-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <ul class="padding-top-15 padding-bottom-15">
+                  <li class="margin-bottom-10"><a href="http://douglascountylibraries.evanced.info/spaces" target="_blank">Access Spaces &raquo;</a></li>
+                  <li class="margin-bottom-10">To create a new account, click Create an Account. Complete the process; check your email and click the supplied link to verify your account email.</li>
+                  <li class="margin-bottom-10">Once you have an account, enter your desired meeting date and time, then click Search for a Space. On the next screen, pick a space, then log in to your account to complete your reservation. Repeat the process for additional reservations.</li>
+                  <li>For questions, to reserve a room outside of library operating hours, or to explore other Select Service or Concierge Service options, call <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="select-service" class="col-md-4 service-box equal-height bg-white padding-bottom-30">
+          <h1 class="roboto bg-loquacious text-center">Select Service</h1>
+          <div class="padding-top-15 padding-bottom-15">
+            <ul class="fa-ul select">
+              <li><i class="fa-li fa fa-check fa-lg"></i>You reserve your space online, at least 48 hours in advance</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Spaces may be used outside of library operating hours</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Expert consultation from a DCL event specialist, including final walk-through and AV troubleshooting</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>We set the room up and take it down upon your event's conclusion</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Drop-off catering allowed; we provide recommendations if you wish</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Supplemental furniture rental allowed through <a href="dcl-permitted-vendors.pdf" target="_blank">DCL's permitted vendor</a></li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Ticket sales/entry fees allowed</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Sale of goods/services or receipt of donations allowed</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Private parties/receptions allowed (without alcohol) </li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>List your event on this page for an optional additional fee</li>
+            </ul>
+            <div>Upgrade to Concierge Service to reserve 50-100% of the library, serve alcohol, or use a full-service caterer with banquet staff. </div>
+            <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
+              <a href="#" class="btn text-uppercase btn-primary" data-toggle="modal" data-target="#select-service-get-started">Get Started</a> </div>
+            <!-- Modal -->
+            <div id="select-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center modal-title">DCL Event + Hospitality Services - Select Service</h4>
+                  </div>
+                  <div class="padding-right-15 padding-bottom-15 padding-left-15">
+                    <iframe src="https://widget.honeybook.com/assets_users_production/companies/5a207e3ebaba1a21c232ddd0/widgets/honeybook_widget.html" frameBorder="0" width="100%" height="750"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+        </div>
+        <div id="concierge-service" class="col-md-4 service-box equal-height bg-white padding-bottom-30">
+          <h1 class="roboto bg-salmon text-center">Concierge Service</h1>
+          <div class="padding-top-15 padding-bottom-15">
+            <ul class="fa-ul concierge">
+              <li><i class="fa-li fa fa-check fa-lg"></i>We make your reservation for you, at least six weeks and up to three years in advance, and before rooms are available to the public</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Spaces may be used outside of library operating hours; 50-100% of the library may be rented</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Full-service event planning and management, including agendas, vendors, finances and AV troubleshooting</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>We set the room up and take it down upon your event's conclusion</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Drop-off and full-service/staffed catering (through a <a href="dcl-permitted-vendors.pdf" target="_blank">DCL permitted vendor</a>) allowed</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Supplemental furniture rental allowed through <a href="dcl-permitted-vendors.pdf" target="_blank">DCL's permitted vendor</a></li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Ticket sales/entry fees allowed</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Sale of goods/services or receipt of donations allowed</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Private parties/receptions allowed; <a href="alcohol-request-form/">alcohol may be served</a> (some restrictions apply)</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>List your event on this page for an optional additional fee</li>
+            </ul>
+            <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
+              <a href="#" class="btn text-uppercase btn-primary" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
+            <!-- Modal -->
+            <div id="concierge-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="text-center modal-title">DCL Event + Hospitality Services - Concierge Service</h4>
+                  </div>
+                  <div class="padding-right-15 padding-bottom-15 padding-left-15">
+                    <iframe src="https://widget.honeybook.com/assets_users_production/companies/5a207e3ebaba1a21c232ddd0/widgets/honeybook_widget.html" frameBorder="0" width="100%" height="750"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row white bg-teal padding-bottom-30"> </div>
-  <div class="row bg-gray-5 padding-top-20 text-center">
-    <div><a href="../event-spaces/" type="button" class="btn btn-primary text-uppercase">View Event Spaces</a></div>
-  </div>
-  <div id="service-levels" class="row bg-gray-5 padding-top-15 padding-bottom-40">
+  <div class="row bg-teal padding-top-30 padding-bottom-40 text-center">
     <div class="container">
-      <div id="self-service" class="col-md-4 service-box equal-height bg-white padding-bottom-30">
-        <h1 class="roboto bg-moss text-center">Self-Service</h1>
-        <div class="padding-top-15 padding-bottom-15">
-          <ul class="fa-ul self">
-            <li><i class="fa-li fa fa-check fa-lg"></i>Basic free meeting service during library operating hours</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>You reserve your space online *</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>You set up and return the room to its pre-event state</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>You run your event, including managing agendas, vendors and finances</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Drop-off/unstaffed catering permitted</li>
-          </ul>
-          <div class="margin-bottom-15">Upgrade to Select or Concierge Service to sell tickets, charge an entry fee, sell goods or services, or accept donations.</div>
-          <div> Upgrade to Concierge Service to reserve 50-100% of the library, serve alcohol, or use a full-service caterer with banquet staff. </div>
-          <div class="text-center margin-top-30"> <a href="http://host.evanced.info/douglas/evanced/roomrequest.asp" target="_blank" class="text-uppercase button btn btn-primary">Reserve a Meeting Room *</a></div>
-        </div>
-        <div class="text-center">Need help? Call: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></div>
-        <div class="text-center margin-top-10">* <a data-toggle="modal" data-target="#self-service-get-started" href="#">Spaces account</a> required</div>
-      </div>
-      <!-- Modal -->
-      <div id="self-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <ul class="padding-top-15 padding-bottom-15">
-                <li class="margin-bottom-10"><a href="http://douglascountylibraries.evanced.info/spaces" target="_blank">Access Spaces &raquo;</a></li>
-                <li class="margin-bottom-10">To create a new account, click Create an Account. Complete the process; check your email and click the supplied link to verify your account email.</li>
-                <li class="margin-bottom-10">Once you have an account, enter your desired meeting date and time, then click Search for a Space. On the next screen, pick a space, then log in to your account to complete your reservation. Repeat the process for additional reservations.</li>
-                <li>For questions, to reserve a room outside of library operating hours, or to explore other Select Service or Concierge Service options, call <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="select-service" class="col-md-4 service-box equal-height bg-white padding-bottom-30">
-        <h1 class="roboto bg-loquacious text-center">Select Service</h1>
-        <div class="padding-top-15 padding-bottom-15">
-          <ul class="fa-ul select">
-            <li><i class="fa-li fa fa-check fa-lg"></i>You reserve your space online, at least 48 hours in advance</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Spaces may be used outside of library operating hours</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Expert consultation from a DCL event specialist, including final walk-through and AV troubleshooting</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>We set the room up and take it down upon your event's conclusion</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Drop-off catering allowed; we provide recommendations if you wish</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Supplemental furniture rental allowed through <a href="dcl-permitted-vendors.pdf" target="_blank">DCL's permitted vendor</a></li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Ticket sales/entry fees allowed</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Sale of goods/services or receipt of donations allowed</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Private parties/receptions allowed (without alcohol) </li>
-          </ul>
-          <div>Upgrade to Concierge Service to reserve 50-100% of the library, serve alcohol, or use a full-service caterer with banquet staff. </div>
-          <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-            <a href="#" class="btn text-uppercase btn-primary" data-toggle="modal" data-target="#select-service-get-started">Get Started</a> </div>
-          <!-- Modal -->
-          <div id="select-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="text-center modal-title">DCL Event + Hospitality Services - Select Service</h4>
-                </div>
-                <div class="padding-right-15 padding-bottom-15 padding-left-15">
-                  <iframe src="https://widget.honeybook.com/assets_users_production/companies/5a207e3ebaba1a21c232ddd0/widgets/honeybook_widget.html" frameBorder="0" width="100%" height="750"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center">Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      </div>
-      <div id="concierge-service" class="col-md-4 service-box equal-height bg-white padding-bottom-30">
-        <h1 class="roboto bg-salmon text-center">Concierge Service</h1>
-        <div class="padding-top-15 padding-bottom-15">
-          <ul class="fa-ul concierge">
-            <li><i class="fa-li fa fa-check fa-lg"></i>We make your reservation for you, at least six weeks and up to three years in advance, and before rooms are available to the public</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Spaces may be used outside of library operating hours; 50-100% of the library may be rented</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Full-service event planning and management, including agendas, vendors, finances and AV troubleshooting</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>We set the room up and take it down upon your event's conclusion</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Drop-off and full-service/staffed catering (through a <a href="dcl-permitted-vendors.pdf" target="_blank">DCL permitted vendor</a>) allowed</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Supplemental furniture rental allowed through <a href="dcl-permitted-vendors.pdf" target="_blank">DCL's permitted vendor</a></li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Ticket sales/entry fees allowed</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Sale of goods/services or receipt of donations allowed</li>
-            <li><i class="fa-li fa fa-check fa-lg"></i>Private parties/receptions allowed; <a href="alcohol-request-form/">alcohol may be served</a> (some restrictions apply)</li>
-          </ul>
-          <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-            <a href="#" class="btn text-uppercase btn-primary" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-          <!-- Modal -->
-          <div id="concierge-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="text-center modal-title">DCL Event + Hospitality Services - Concierge Service</h4>
-                </div>
-                <div class="padding-right-15 padding-bottom-15 padding-left-15">
-                  <iframe src="https://widget.honeybook.com/assets_users_production/companies/5a207e3ebaba1a21c232ddd0/widgets/honeybook_widget.html" frameBorder="0" width="100%" height="750"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center">Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      </div>
+      <div><a href="../event-spaces/" type="button" class="btn btn-default text-uppercase">View Event Spaces</a></div>
+      <h4 class="roboto white">All reservations are subject to room availability.</h4>
+      <div class="white large-text margin-lg-200">Select and Concierge Service reservations are subject to availability of Event & Hospitality Services personnel.</div>
     </div>
-  </div>
-  <div class="row bg-teal padding-top-15 padding-bottom-40 text-center">
-    <h4 class="roboto white">All reservations are subject to room availability.</h4>
-    <div class="white large-text margin-lg-200">Select and Concierge Service reservations are subject to availability of Event & Hospitality Services personnel.</div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
@@ -545,15 +665,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
 <script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
+var slideIndex = 1;
+var timer = null;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  clearTimeout(timer);
+  showSlides(slideIndex += n);
 }
- </script> 
+
+function currentSlide(n) {
+  clearTimeout(timer);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("item");
+  var item = document.getElementsByClassName("item");
+  if (n==undefined){n = ++slideIndex}
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+ 
+  slides[slideIndex-1].style.display = "block";
+  
+  timer = setTimeout(showSlides, 8000);
+} 
+</script> 
 <script type="text/javascript">
 $(document).ready(function() {
   if(window.location.href.indexOf('#self-service-get-started') != -1) {
