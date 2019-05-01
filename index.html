@@ -80,176 +80,129 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 <style>
-.sky {
-	background: rgb(255,234,183);
-	background: linear-gradient(0deg, rgba(255,234,183,1) 0%, rgba(123,141,199,1) 60%);
+.travel-background {
+	background: #fff url("travel-posters.jpg") top center;
 }
-.grass {
-	background: transparent url(grass.png) top center repeat-x;
-	min-height: 300px;
-	margin-top: -300px;
-	position: relative;
-}
-.bunny-container {
+.item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	align-content: center;
-	z-index: -1;
-	padding-bottom: 215px;
+	justify-content: center;
 }
-.bunny-box {
-	padding: 30px 15px 0;
-	margin: 0 auto;
+.item.one {
+	margin: 350px 25px 100px 25px;
+}
+.item.two {
+	margin: 300px 25px 100px 25px;
+}
+.item.three {
+	margin: 350px 25px 100px 25px;
 }
 .one {
-	padding-top: 35px;
+	-webkit-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+.one:hover, .one:focus {
+	-webkit-animation: one 0.7s linear both;
+	animation: one 0.7s linear both;
+}
+ @-webkit-keyframes one {
+ 0% {
+ -webkit-transform: scale(1) rotateZ(-10deg);
+ transform: scale(1) rotateZ(-10deg);
+}
+ 50% {
+ -webkit-transform: scale(1.05) rotateZ(180deg);
+ transform: scale(1.05) rotateZ(180deg);
+}
+ 100% {
+ -webkit-transform: scale(1) rotateZ(350deg);
+ transform: scale(1) rotateZ(350deg);
+}
+}
+@keyframes one {
+ 0% {
+ -webkit-transform: scale(1) rotateZ(-10deg);
+ transform: scale(1) rotateZ(-10deg);
+}
+ 50% {
+ -webkit-transform: scale(1.05) rotateZ(180deg);
+ transform: scale(1.05) rotateZ(180deg);
+}
+ 100% {
+ -webkit-transform: scale(1) rotateZ(350deg);
+ transform: scale(1) rotateZ(350deg);
+}
 }
 .two {
-	padding-top: 70px;
+	-webkit-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+.two:hover, .two:focus {
+	-webkit-animation: two 0.2s both;
+	animation: two 0.2s both;
+}
+ @-webkit-keyframes two {
+ 0% {
+ -webkit-transform: rotateZ(2deg) translateY(0);
+ transform: rotateZ(2deg) translateY(0);
+}
+ 100% {
+ -webkit-transform: rotateZ(2deg) translateY(20px);
+ transform: rotateZ(2deg) translateY(20px);
+}
+}
+@keyframes two {
+ 0% {
+ -webkit-transform: rotateZ(2deg) translateY(0);
+ transform: rotateZ(2deg) translateY(0);
+}
+ 100% {
+ -webkit-transform: rotateZ(2deg) translateY(20px);
+ transform: rotateZ(2deg) translateY(20px);
+}
 }
 .three {
-	padding-top: 15px;
+	-webkit-transform: rotate(5deg);
+	transform: rotate(5deg);
 }
-.bubble {
-	font-family: 'Gloria Hallelujah', sans-serif;
-	position: relative;
-	background: #fff;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	color: #333;
-	text-align: center;
-	margin-bottom: 25px;
-	max-width: 300px;
-	font-weight: 700;
-	letter-spacing: .05em;
-	word-spacing: -.1em;
+.three:hover, .three:focus {
+	-webkit-animation: three 0.3s linear both;
+	animation: three 0.3s linear both;
 }
-.bubble::after {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-color: #fff transparent;
-	display: block;
-	width: 0;
-	z-index: 1;
-}
-.bubble.bcenter {
-	font-size: 22px;
-	line-height: 24px;
-	padding: 40px 35px;
-	text-transform: uppercase;
-}
-.bcenter a:hover, .bcenter a:focus {
-	text-decoration: none;
-}
-.one > .bcenter {
-	-webkit-animation: jello 0.9s 6s 1 both;
-	animation: jello 0.9s 6s 1 both;
-	margin-bottom: -25px;
-}
-.one > .bubble.bcenter::after {
-	left: 44%;
-	border-width: 40px 30px 0;
-	bottom: -20px;
-}
-.two > .bcenter {
-	-webkit-animation: jello 0.9s 2s 3 both;
-	animation: jello 0.9s 2s 3 both;
-	margin-bottom: -45px;
-}
-.two > .bubble.bcenter::after {
-	right: 17%;
-	border-width: 40px 30px 0;
-	transform: rotate(-16deg);
-	-webkit-backface-visibility: hidden;
-	bottom: -10px;
-}
-.three > .bcenter {
-	margin-bottom: 25px;
-	-webkit-animation: jello 0.9s 8s 1 both;
-	animation: jello 0.9s 6s 1 both;
-}
-.three > .bubble.bcenter::after {
-	left: 45%;
-	border-width: 40px 30px 0;
-	bottom: -20px;
-	transform: rotate(-10deg);
-	-webkit-backface-visibility: hidden;
-}
-.toggle-text:hover {
-	cursor: pointer;
-}
-.toggle-text {
-	color: #555;
-}
-.toggle-text:hover {
-	color: #333;
-}
-.joke-one, .joke-two, .joke-three {
-	padding-top: 10px
-}
- @-webkit-keyframes jello {
+ @-webkit-keyframes three {
  0% {
- -webkit-transform: scale3d(1, 1, 1);
- transform: scale3d(1, 1, 1);
-}
- 30% {
- -webkit-transform: scale3d(1.05, 0.95, 1);
- transform: scale3d(1.05, 0.95, 1);
-}
- 40% {
- -webkit-transform: scale3d(0.95, 1.05, 1);
- transform: scale3d(0.95, 1.05, 1);
+ -webkit-transform: rotate(5deg);
+ transform: rotate(5deg);
 }
  50% {
- -webkit-transform: scale3d(1.05, 0.85, 1);
- transform: scale3d(1.05, 0.85, 1);
-}
- 65% {
- -webkit-transform: scale3d(0.95, 1.05, 1);
- transform: scale3d(0.95, 1.05, 1);
-}
- 75% {
- -webkit-transform: scale3d(1.05, 0.95, 1);
- transform: scale3d(1.05, 0.95, 1);
+ -webkit-transform: rotate(-15deg);
+ transform: rotate(-15deg);
 }
  100% {
- -webkit-transform: scale3d(1, 1, 1);
- transform: scale3d(1, 1, 1);
+ -webkit-transform: rotate(5deg);
+ transform: rotate(5deg);
 }
 }
-@keyframes jello {
+@keyframes three {
  0% {
- -webkit-transform: scale3d(1, 1, 1);
- transform: scale3d(1, 1, 1);
-}
- 30% {
- -webkit-transform: scale3d(1.05, 0.95, 1);
- transform: scale3d(1.05, 0.95, 1);
-}
- 40% {
- -webkit-transform: scale3d(0.95, 1.05, 1);
- transform: scale3d(0.95, 1.05, 1);
+ -webkit-transform: rotate(5deg);
+ transform: rotate(5deg);
 }
  50% {
- -webkit-transform: scale3d(1.05, 0.85, 1);
- transform: scale3d(1.05, 0.85, 1);
-}
- 65% {
- -webkit-transform: scale3d(0.95, 1.05, 1);
- transform: scale3d(0.95, 1.05, 1);
-}
- 75% {
- -webkit-transform: scale3d(1.05, 0.95, 1);
- transform: scale3d(1.05, 0.95, 1);
+ -webkit-transform: rotate(-15deg);
+ transform: rotate(-15deg);
 }
  100% {
- -webkit-transform: scale3d(1, 1, 1);
- transform: scale3d(1, 1, 1);
+ -webkit-transform: rotate(5deg);
+ transform: rotate(5deg);
+}
+}
+
+@media (max-width:1200px) {
+.item.one, .item.two, .item.three {
+	margin: 15px;
 }
 }
 </style>
@@ -433,38 +386,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="sky row">
-    <div class="container bunny-container text-center">
-      <div class="bunny-box one">
-        <div class="bubble bcenter">
-          <div class="toggle-text" onclick="$('.joke-one').toggle(200,'swing');"> Knock knock!<br>
-            Who’s there?<br>
-            Boo!<br>
-            <a href="#joke-one">Boo who?</a></div>
-          <div class="joke-one" style="display:none">Don’t cry, <a href="https://www.eventbrite.com/e/dcl-presents-gretchen-rubin-tickets-55932936920?aff=HomePage" target="_blank">Gretchen Rubin tickets</a> are still available.</div>
-        </div>
-        <div><img class="img-responsive image-center" src="bubba.png" alt="Gretchen Rubin Tickets on Sale"></div>
-      </div>
-      <div class="bunny-box two">
-        <div class="bubble bcenter">
-          <div class="toggle-text" onclick="$('.joke-two').toggle(200,'swing');"> Why do summer camp counselors <a href="#joke-two">wear sunglasses?</a></div>
-          <div class="joke-two" style="display:none">Because <a href="camp-dcl/">the campers</a> are so bright!</div>
-        </div>
-        <div><img class="img-responsive image-center" src="rudolph.png" alt="Camp DCL"></div>
-      </div>
-      <div class="bunny-box three">
-        <div class="bubble bcenter">
-          <div class="toggle-text" onclick="$('.joke-three').toggle(200,'swing');"> Knock knock!<br>
-            Who’s there?<br>
-            Stopwatch.<br>
-            <a href="#joke-three">Stopwatch who?</a></div>
-          <div class="joke-three" style="display:none">Stopwatch you’re doing and check out <a href="https://dcl.bibliocommons.com/list/share/692278051/1379228640">these LOL books.</a></div>
-        </div>
-        <div><img class="img-responsive image-center" src="rosie.png" alt="Funny books and movies"></div>
-      </div>
+  <div class="travel-background row">
+    <div class="container item-wrapper">
+      <div class="item one"><a href="summer-reading/"><img class="img-responsive" src="road-trip.png" alt="Register for Summer Reading"></a></div>
+      <div class="item two"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1383206907"><img class="img-responsive" src="getaways.png" alt="Armchair Getaways"></a></div>
+      <div class="item three"><a href="library-perks/#online-learning"><img class="img-responsive" src="mango.png" alt="Mango Languages"></a></div>
     </div>
   </div>
-  <div class="row grass"></div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
