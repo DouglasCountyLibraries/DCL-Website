@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Summer Reading | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Summer Reading, Summer Events, The Great Summer Reading Road Trip">
 <meta name="description" content="The Great Summer Reading Road Trip. Pack your bags for a fun-filled, book-filled summer. Summer Reading Program for babies, kids, teens and adults.">
-<meta property="og:image" content="https://www.dcl.org/summer-reading/mobile-billboard.png">	
+<meta property="og:image" content="https://www.dcl.org/summer-reading/mobile-billboard.png">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -83,6 +83,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .grand-hotel {
 	font-family: 'Grand Hotel', cursive;
 	font-size: 3.5em;
+	text-shadow: -1px 2px 0 rgba(0,0,0,.5);
 }
 .sky-row {
 	background: #386799 url("landscape.jpg") bottom left repeat-x;
@@ -118,6 +119,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	animation: slide 28s linear infinite;
 	margin-top: -193px;
 	padding-bottom: 193px;
+}
+.item-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.item {
+	margin: 15px 30px;
 }
  @-webkit-keyframes slide {
  from {
@@ -239,6 +249,9 @@ background-position: 2700px 0;
 @media (max-width: 980px) {
 .sky-row {
 	display: none;
+}
+	.item {
+	margin: 15px;
 }
 }
 </style>
@@ -446,13 +459,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row far-lane"></div>
   <div class="row near-lane"></div>
   <div class="row content-row">
-    <div class="container white text-center padding-bottom-30">
-      <h1 class="grand-hotel no-margin-bottom white">Come to our Kickoff Party!</h1>
-      <h3 class="roboto white">Saturday, June 1, 10AM-2PM, at all DCL locations.</h3>
-      <h4 class="white no-margin-bottom">Bouncy House, Games, Food Truck, Book Fair and much more!</h4>
-      <div class="margin-top-30 margin-bottom-15"> <a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff&lib=ALL&nd=45" target="_blank" class="text-uppercase btn btn-primary">Choose Your Party!</a></div>
-      <div>Kickoff Parties sponsored in part by Smile Doctors.</div>
-    </div>
+    <div class="item-wrapper container-md white text-center">
+      <div class="item">
+        <h1 class="grand-hotel no-margin-bottom white">Come to our Kickoff Party!</h1>
+        <h3 class="roboto white no-margin">Saturday, June 1, 10AM-2PM, at all DCL locations.</h3>
+        <h4 class="white no-margin">Bouncy House, Games, Food Truck, Book Fair and much more!</h4>
+        <div class="margin-top-30"> <a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff&lib=ALL&nd=45" target="_blank" class="text-uppercase btn btn-primary">Choose Your Party</a></div>
+       
+      </div>
+      <div class="item">
+        <h1 class="grand-hotel no-margin-bottom white">Find the Fun!</h1>
+        <h3 class="roboto white no-margin">Sign up for Summer Reading Program Events.</h3>
+        <div class="margin-top-30"> <a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+program&lib=ALL&nd=365" target="_blank" class="text-uppercase btn btn-primary">Register Now</a></div>
+      </div>
+    </div> <div class="white text-center padding-top-30 padding-bottom-15">Kickoff Parties sponsored in part by Smile Doctors.</div>
   </div>
   
   <!-- Modal -->
@@ -461,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="modal-content padding-15">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="padding-30 text-center">
-          <h4 class="roboto no-margin-top">Pre-register for Summer Reading to get early access to popular reading program events.</h4>
+          <h4 class="roboto no-margin-top">Pre-register for Summer Reading to skip the lines at the kickoff parties.</h4>
           <div class="margin-top-30"> <a href="registration/" class="text-uppercase btn btn-primary">Register Now!</a></div>
         </div>
       </div>
