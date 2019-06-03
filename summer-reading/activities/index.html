@@ -85,8 +85,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-family: 'Grand Hotel', cursive;
 	font-size: 3.5em;
 }
-.landscape-row, .registration-row {
-	background: #578ec7;
+.gradient-row {
+	background: #578ec7 linear-gradient(#578ec7, #375972);
 }
 .btn-primary {
 	background-color: #375972;
@@ -98,13 +98,91 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-shadow: -1px 2px 0 rgba(0,0,0,.5);
 	font-size: 95px;
 }
-.content-row {
-	background: #375972 linear-gradient(#578ec7, #375972);
-}
 .button-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+.suitcase-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-bottom: -15px;
+}
+.bus-row {
+	background: url("bus-top.png") no-repeat top center;
+	min-height: 250px;
+}
+.vibrate:hover, .vibrate:focus {
+	-webkit-animation: vibrate .5s linear infinite both;
+	animation: vibrate .5s linear infinite both;
+}
+@-webkit-keyframes vibrate {
+ 0% {
+ -webkit-transform: translate(0);
+ transform: translate(0);
+}
+ 20% {
+ -webkit-transform: translate(-2px, 2px);
+ transform: translate(-2px, 2px);
+}
+ 40% {
+ -webkit-transform: translate(-2px, -2px);
+ transform: translate(-2px, -2px);
+}
+ 60% {
+ -webkit-transform: translate(2px, 2px);
+ transform: translate(2px, 2px);
+}
+ 80% {
+ -webkit-transform: translate(2px, -2px);
+ transform: translate(2px, -2px);
+}
+ 100% {
+ -webkit-transform: translate(0);
+ transform: translate(0);
+}
+}
+@keyframes vibrate {
+ 0% {
+ -webkit-transform: translate(0);
+ transform: translate(0);
+}
+ 20% {
+ -webkit-transform: translate(-2px, 2px);
+ transform: translate(-2px, 2px);
+}
+ 40% {
+ -webkit-transform: translate(-2px, -2px);
+ transform: translate(-2px, -2px);
+}
+ 60% {
+ -webkit-transform: translate(2px, 2px);
+ transform: translate(2px, 2px);
+}
+ 80% {
+ -webkit-transform: translate(2px, -2px);
+ transform: translate(2px, -2px);
+}
+ 100% {
+ -webkit-transform: translate(0);
+ transform: translate(0);
+}
+}
+
+@media (max-width: 880px) {
+.suitcase-wrapper {
+	flex-wrap: wrap;
+}
+.bus-row {
+	display: none;
+}
+.suitcase-wrapper {
+	margin-bottom: 60px;
+}
+.suitcase {
+	margin: 5px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -287,29 +365,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row landscape-row">
+  <div class="row gradient-row">
     <div class="container white text-center padding-top-30">
       <h1 class="grand-hotel gh-shadow no-margin white">Activities</h1>
       <h1 class="no-margin roboto white">The Great Summer Reading Road Trip</h1>
     </div>
-  </div>
-  <div class="row registration-row">
-    <div class="padding-top-40 padding-bottom-30">
-      <div class="button-wrapper">
-        <div class="button-item"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Summer+Reading+Program&lib=all&nd=365" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Summer Reading Events</a></div>
-        <div class="button-item"><a href="#" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Take our Quiz</a></div>
-        <div class="button-item"><a href="../summer-reading-log.pdf" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Print a Reading Log</a></div>
+    <div class="registration-row">
+      <div class="padding-top-40 padding-bottom-30">
+        <div class="button-wrapper">
+          <div class="button-item"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Summer+Reading+Program&lib=all&nd=365" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Summer Reading Events</a></div>
+          <div class="button-item"><a href="https://www.facebook.com/DCLColorado/app/36495350702/" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Take our Quiz</a></div>
+          <div class="button-item"><a href="../summer-reading-log.pdf" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Print a Reading Log</a></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row content-row">
-    <div class="container text-center black padding-bottom-80">
-      <h1 class="white text-uppercase">Fun Downloads:</h1>
-      <h2 class="white">Jokes PDF</h2>
-      <h2 class="white">Postcard</h2>
-      <h2 class="white"><a class="white" href="https://drive.google.com/file/d/15P7fgVRytHK4yM7QruKMY9_TsscUS9aX/view" target="_blank">School Passport</a></h2>
-      <h2 class="white"><a class="white" href="summer-reading-rapids-voucher.pdf" target="_blank">Rapids Voucher</a></h2>
+    <div class="container-md suitcase-wrapper text-center">
+      <div class="suitcase vibrate"><a href="summer-reading-jokes-puns.pdf" target="_blank"><img class="img-responsive" src="jokes.png" alt="Jokes"></a></div>
+      <div class="suitcase vibrate"><a href="#"><img class="img-responsive" src="postcards.png" alt="Postcards"></a></div>
+      <div class="suitcase vibrate"><a class="white" href="summer-reading-rapids-voucher.pdf" target="_blank"><img class="img-responsive" src="rapids-voucher.png" alt="Rapids Voucher"></a></div>
+      <div class="suitcase vibrate"><a class="white" href="https://drive.google.com/file/d/15P7fgVRytHK4yM7QruKMY9_TsscUS9aX/view" target="_blank"><img class="img-responsive" src="school-passport.png" alt="School Passport"></a></div>
     </div>
+    <div class="bus-row"></div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
