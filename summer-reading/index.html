@@ -126,14 +126,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin-top: -193px;
 	padding-bottom: 193px;
 }
-.item-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.item {
-	margin: 15px 30px;
-}
  @-webkit-keyframes slide {
  from {
 background-position: 0 0;
@@ -244,6 +236,15 @@ background-position: 2700px 0;
 .mobile-sign-three {
 	margin-bottom: 250px;
 }
+.item-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.item {
+	margin: 15px 30px;
+	width: 500px;
+}
 
 @media (min-width: 981px) {
 .mobile-sky-row {
@@ -256,7 +257,8 @@ background-position: 2700px 0;
 	display: none;
 }
 .item {
-	margin: 15px;
+	margin: 0;
+	width: 100%;
 }
 }
 </style>
@@ -449,7 +451,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="vibrate"><a href="#" data-toggle="modal" data-target="#modalone"><img src="activities.gif" alt="Road Trip Activities"></a></div>
       </div>
       <div class="sign-three">
-        <div class="vibrate"><a href="#" data-toggle="modal" data-target="#modalone"><img src="scrapbook.gif" alt="Road Trip Scrapbook"></a></div>
+        <div class="vibrate"><a href="#" data-toggle="modal" data-target="#modaltwo"><img src="scrapbook.gif" alt="Road Trip Scrapbook"></a></div>
       </div>
     </div>
   </div>
@@ -458,17 +460,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="mobile-billboard"><img class="img-responsive" src="mobile-billboard.png" alt="The Great Summer Reading Road Trip"></div>
       <div class="mobile-sign-one vibrate"> <a href="registration/"><img class="img-responsive" src="registration.gif" alt="Register Now!"></a> </div>
       <div class="mobile-sign-two vibrate"> <a href="#" data-toggle="modal" data-target="#modalone"><img class="img-responsive" src="activities.gif" alt="Road Trip Activities"></a> </div>
-      <div class="mobile-sign-three vibrate"> <a href="#" data-toggle="modal" data-target="#modalone"><img class="img-responsive" src="scrapbook.gif" alt="Road Trip Scrapbook"></a> </div>
+      <div class="mobile-sign-three vibrate"> <a href="#" data-toggle="modal" data-target="#modaltwo"><img class="img-responsive" src="scrapbook.gif" alt="Road Trip Scrapbook"></a> </div>
     </div>
   </div>
   <div class="row far-lane"></div>
   <div class="row near-lane"></div>
   <div class="row content-row">
-    <div class="item-wrapper container-md white text-center">
+    <div class="item-wrapper container white text-center">
       <div class="item">
         <h1 class="grand-hotel no-margin-bottom white">Find the Fun!</h1>
         <h3 class="roboto white no-margin">Sign up for Summer Reading Program Events.</h3>
-        <div class="margin-top-30 margin-bottom-30"> <a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+program&lib=ALL&nd=365" target="_blank" class="text-uppercase btn btn-primary">Register Now</a></div>
+        <div class="margin-top-30"> <a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+program&lib=ALL&nd=365" target="_blank" class="text-uppercase btn btn-primary">Register Now</a></div>
+      </div>
+      <div class="item">
+        <h3 class="white margin-bottom-5">Summer Reading Sign-up Gifts:</h3>
+        <div>Visit us in person to pick up your prize while supplies last. Kids can get a fun beach ball, and teens and adults can get a special-edition reusable book bag.</div>
+        <img class="margin-15" src="texas-roadhouse.png" alt="Summer Reading sign-up gifts courtesy of Texas Roadhouse">
+        <div class="padding-bottom-20">Summer Reading sign-up gifts courtesy of Texas Roadhouse.</div>
       </div>
     </div>
   </div>
@@ -481,6 +489,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="padding-30 text-center">
           <h4 class="roboto no-margin-top">Pre-register for Summer Reading to skip the lines at the kickoff parties.</h4>
           <div class="margin-top-30"> <a href="registration/" class="text-uppercase btn btn-primary">Register Now!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modaltwo" tabindex="-1" role="dialog" aria-labelledby="modaltwo">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content padding-15">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="padding-30 text-center">
+          <h4 class="roboto no-margin-top">Share your photos of summer fun!</h4>
+          <div class="nothing">#GreatDCLRoadTrip</div>
         </div>
       </div>
     </div>
