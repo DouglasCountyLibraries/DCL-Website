@@ -84,9 +84,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-family: 'Grand Hotel', cursive;
 	font-size: 3.5em;
 }
-.gradient-row {
-	background: #578ec7 linear-gradient(#578ec7, #375972);
-}
 .btn-primary {
 	background-color: #375972;
 }
@@ -108,15 +105,19 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	align-items: flex-end;
 	margin-bottom: -15px;
 }
+.suitcase {
+	z-index: 1;
+}
 .bus-row {
 	background: url("bus-top.png") no-repeat top center;
 	min-height: 250px;
+	z-index: 0;
 }
-.vibrate:hover, .vibrate:focus {
-	-webkit-animation: vibrate .5s linear infinite both;
-	animation: vibrate .5s linear infinite both;
+.vibrate {
+	-webkit-animation: vibrate 2s linear infinite both;
+	animation: vibrate 2s linear infinite both;
 }
-@-webkit-keyframes vibrate {
+ @-webkit-keyframes vibrate {
  0% {
  -webkit-transform: translate(0);
  transform: translate(0);
@@ -166,6 +167,27 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
  100% {
  -webkit-transform: translate(0);
  transform: translate(0);
+}
+}
+.gradient-row {
+	background: transparent url("clouds.png") repeat-x bottom center;
+	-webkit-animation: slide 25s linear infinite;
+	animation: slide 25s linear infinite;
+}
+ @-webkit-keyframes slide {
+ from {
+background-position: 0 0;
+}
+ to {
+background-position: -1740px 0;
+}
+}
+ @keyframes slide {
+ from {
+background-position: 0 0;
+}
+ to {
+background-position: -1740px 0;
 }
 }
 
@@ -384,7 +406,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="suitcase vibrate"><a href="https://drive.google.com/file/d/15P7fgVRytHK4yM7QruKMY9_TsscUS9aX/view" target="_blank"><img class="img-responsive" src="school-passport.png" alt="School Passport"></a></div>
       <div class="suitcase vibrate"><a href="summer-reading-postcards.pdf" target="_blank"><img class="img-responsive" src="postcards.png" alt="Postcards"></a></div>
     </div>
-    <div class="bus-row"></div>
+    <div class="bus-row vibrate"></div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
