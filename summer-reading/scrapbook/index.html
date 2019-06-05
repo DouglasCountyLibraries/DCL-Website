@@ -40,7 +40,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Summer Reading, Summer Events, The Great Summer Reading Road Trip">
 <meta name="description" content="The Great Summer Reading Road Trip, Register Now! Pack your bags for a fun-filled, book-filled summer. Summer Reading Program for babies, kids, teens and adults.">
 <meta property="og:image" content="https://www.dcl.org/summer-reading/mobile-billboard.png">
-<meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
@@ -83,19 +82,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 .grand-hotel {
 	font-family: 'Grand Hotel', cursive;
-	font-size: 3.5em;
-}
-.gradient-row {
-	background: #578ec7 linear-gradient(#578ec7, #375972);
-}
-.btn-primary {
-	background-color: #375972;
-}
-.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
-	background-color: #457097;
-}
-.gh-shadow {
-	text-shadow: -1px 2px 0 rgba(0,0,0,.5);
 	font-size: 95px;
 }
 .button-wrapper {
@@ -103,86 +89,63 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	flex-wrap: wrap;
 	justify-content: center;
 }
-.suitcase-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	margin-bottom: -15px;
-}
 .paper-row {
 	background: url("paper.jpg") repeat;
-	min-height: 800px;
 }
-.vibrate:hover, .vibrate:focus {
-	-webkit-animation: vibrate .5s linear infinite both;
-	animation: vibrate .5s linear infinite both;
-}
-@-webkit-keyframes vibrate {
- 0% {
- -webkit-transform: translate(0);
- transform: translate(0);
-}
- 20% {
- -webkit-transform: translate(-2px, 2px);
- transform: translate(-2px, 2px);
-}
- 40% {
- -webkit-transform: translate(-2px, -2px);
- transform: translate(-2px, -2px);
-}
- 60% {
- -webkit-transform: translate(2px, 2px);
- transform: translate(2px, 2px);
-}
- 80% {
- -webkit-transform: translate(2px, -2px);
- transform: translate(2px, -2px);
-}
- 100% {
- -webkit-transform: translate(0);
- transform: translate(0);
-}
-}
-@keyframes vibrate {
- 0% {
- -webkit-transform: translate(0);
- transform: translate(0);
-}
- 20% {
- -webkit-transform: translate(-2px, 2px);
- transform: translate(-2px, 2px);
-}
- 40% {
- -webkit-transform: translate(-2px, -2px);
- transform: translate(-2px, -2px);
-}
- 60% {
- -webkit-transform: translate(2px, 2px);
- transform: translate(2px, 2px);
-}
- 80% {
- -webkit-transform: translate(2px, -2px);
- transform: translate(2px, -2px);
-}
- 100% {
- -webkit-transform: translate(0);
- transform: translate(0);
-}
-}
-
-@media (max-width: 880px) {
-.suitcase-wrapper {
+.photo-wrapper {
+	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
+	margin-bottom: -15px;
 }
-.bus-row {
-	display: none;
+.photo {
+	max-width: 350px;
+	-webkit-backface-visibility: hidden;
+	background: #fff;
+	padding: 15px 15px 40px 15px;
+	-webkit-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-moz-box-shadow: 0px 6px 10px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0px 6px 10px rgba(0,0,0,.4);
+	box-shadow: 0px 6px 10px rgba(0,0,0,.4);
+	margin-bottom: 20px;
 }
-.suitcase-wrapper {
-	margin-bottom: 60px;
+.photo:nth-child(even) {
+	-webkit-animation: fade-in-text .6s linear 1s both;
+	animation: fade-in-text .6s linear 1s both;
+	-webkit-backface-visibility: hidden;
+	-o-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-moz-box-shadow: 0px 3px 10px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0px 3px 10px rgba(0,0,0,.4);
+	box-shadow: 0px 3px 10px rgba(0,0,0,.4);
+	margin-bottom: 2px;
 }
-.suitcase {
-	margin: 5px;
+.photo:nth-child(3n) {
+	-webkit-animation: fade-in-text .8s linear .8s both;
+	animation: fade-in-text .8s linear .8s both;
+	-webkit-backface-visibility: hidden;
+	-o-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-moz-box-shadow: 0px 9px 10px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0px 9px 10px rgba(0,0,0,.4);
+	box-shadow: 0px 9px 10px rgba(0,0,0,.4);
+	margin-bottom: 6px;
 }
+.photo:nth-child(5n) {
+	-webkit-animation: fade-in-text .4s linear .5s both;
+	animation: fade-in-text .4s linear .5s both;
+	-webkit-backface-visibility: hidden;
+	-o-transform: rotate(-2deg);
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-moz-box-shadow: 0px 4px 10px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0px 4px 10px rgba(0,0,0,.4);
+	box-shadow: 0px 4px 10px rgba(0,0,0,.4);
+	margin-bottom: 30px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -366,9 +329,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row paper-row">
-    <div class="container white text-center padding-top-30">
-      <h1 class="grand-hotel gh-shadow">Scrapbook</h1>
-      <h1 class="nothing">#GreatDCLRoadTrip</h1>
+    <div class="container text-center padding-top-30">
+      <h1 class="no-margin grand-hotel">Scrapbook</h1>
+      <h4 class="roboto">Hey, Douglas County! Enter our photo contest to win the Ultimate Summer Road Trip Package. </h4>
+      <div class="padding-bottom-30">With a $50 gas card and a cooler full of road trip goodies, you’ll have everything you need to get to your summer destination. Submit your best summer-of-fun or <a class="gray-80 text-underline" href="https://facebook.com/DCLColorado/app/303561899745219/" target="_blank">road trip photo here</a> or use #GreatDCLRoadTrip on Twitter, Instagram or Facebook to win. The photo with the most votes wins!</div>
+    </div>
+    <div class="container-md padding-bottom-80">
+      <div class="photo-wrapper"> <img class="photo img-responsive" src="one.jpg" alt="Photo One"><img class="photo img-responsive" src="two.jpg" alt="Photo Two"><img class="photo img-responsive" src="three.jpg" alt="Photo Three"><img class="photo img-responsive" src="four.jpg" alt="Photo Four"><img class="photo img-responsive" src="five.jpg" alt="Photo Five"><img class="photo img-responsive" src="six.jpg" alt="Photo Six"><img class="photo img-responsive" src="seven.jpg" alt="Photo Seven"> </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
