@@ -80,26 +80,76 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script>
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<link href="css/responsive-table.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/datetime-moment.js"></script>
+<script src="js/zurb-responsive-tables.js"></script>
+<script>
+$(document).ready(function() {
+    $.fn.dataTable.moment( 'MMM D, YYYY, h:mm A' );
+    $('#meetings').DataTable( {
+        "order": []
+    } );
+} );
+</script>
 <style>
-.box-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
+.table>thead>tr>th {
+	border-bottom: 0px;
 }
-.box-item {
-	background: #fff;
-	width: 425px;
-	padding: 10px 30px 30px;
-	margin: 10px;
+.table {
+	margin-bottom: 0;
+}
+table.dataTable thead th, table.dataTable thead td {
+	background-color: transparent;
+}
+.dataTables_filter > label {
+	font-weight: 300;
+	margin-bottom: 0px;
+}
+.dataTables_wrapper .dataTables_length {
+	float: right;
+	display: none;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	vertical-align: middle;
+}
+.table > thead > tr > th {
+	vertical-align: middle;
+}
+ .form-control.table-search::-webkit-input-placeholder {
+ color: #333;
+}
+.form-control.table-search::-moz-placeholder {
+ color: #333;
+}
+.form-control.table-search:-ms-input-placeholder {
+ color: #333;
+}
+.form-control.table-search::placeholder {
+ color: #333;
+}
+.paginate_button.current {
+	border: 1px solid #333;
+	border-radius: 50%;
 }
 .line-through {
 	text-decoration: line-through;
 }
+table.dataTable thead th, table.dataTable tfoot th {
+	font-weight: 300;
+	font-size: 1.4em;
+}
+
+@media (max-width:992px) {
+table.dataTable thead th, table.dataTable tfoot th {
+	font-size: 1em;
+}
+}
 
 @media (max-width: 768px) {
-.box-item {
-	width: 100%;
+.word-break {
+	display: none; /* <br class="insert-break" /> */
 }
 }
 </style>
@@ -283,187 +333,243 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-bottom-20 border-top">
-    <div class="container">
+  <div class="row border-top">
+    <div class="container padding-bottom-15">
       <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Board of Trustees</h1>
+        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Board Meetings</h1>
         <div class="separator-container">
-          <div class="separator line-separator"><i class="fas fa-university"></i></div>
+          <div class="separator line-separator"><i class="fas fa-comments"></i></div>
         </div>
-        <h4 class="roboto margin-lg-100">Trustees are volunteers, appointed by the Douglas County Commissioners. The board adopts and oversees the budget, bylaws and policies. The board conducts long-range planning and hires and evaluates the library director.</h4>
-      </div>
-    </div>
-  </div>
-  <div class="row no-gutter sub-nav-row">
-    <div class="sub-nav">
-      <div class="col-sm-6 col-md-3 sub-nav-item sub-nav-border-first equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../board-meetings/"><i class="fas fa-comments"></i>Meetings</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="dcl-board-policies.pdf" target="_blank"><i class="fas fa-clipboard-list"></i>Bylaws & Policies</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="2019-budget.pdf" target="_blank"><i class="fas fa-dollar-sign"></i>2019 Budget</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="2018-audit.pdf" target="_blank"><i class="fas fa-archive"></i>Annual Audit Report</a></h5>
-      </div>
-    </div>
-  </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-30">
-    <div class="container-md box-wrapper">
-      <div class="text-center box-item shadow-low">
-        <h3 class="no-margin-bottom">Sean Duffy</h3>
-        <h6 class="text-capitalize no-margin-top">President</h6>
-        <img alt="Sean Duffy, President" class="img-circle center-block" src="sduffy.jpg" />
-        <div class="margin-top-10">District III, Term Expires 12/31/2020</div>
-        <div class="padding-top-15 text-left">Appointed in January 2017. Sean Duffy has three decades of experience in media relations and public affairs in the public and private sectors, including as Deputy Chief of Staff to Gov. Bill Owens. He has served on numerous boards of business, civic and charitable organizations and is currently the volunteer managing partner of The Barnabas Group. Sean resides in Highlands Ranch along with his wife, Susan, and young son, Brendan. </div>
-      </div>
-      <div class="text-center box-item shadow-low">
-        <h3 class="no-margin-bottom">Ron Cole</h3>
-        <h6 class="text-capitalize no-margin-top">Vice President</h6>
-        <img alt="Ron Cole, Vice President" class="img-circle center-block" src="rcole.jpg" />
-        <div class="margin-top-10">District II, Term Expires 12/31/2021</div>
-        <div class="padding-top-15 text-left">Appointed in January 2016. Ron Cole is a former senior intelligence leader with 50-plus years of experience in the intelligence community, supporting federal government agencies and private firms on policy, management and technical issues. He has served as a board member of the Colorado Space Business Roundtable and in roles with other space-related organizations. Ron established the Independent IC Consultancy, LLC (I2C2) in 2016 to provide professional advice to elements of the intelligence community. </div>
-      </div>
-      <div class="text-center box-item shadow-low">
-        <h3 class="no-margin-bottom">Bob Morris</h3>
-        <h6 class="text-capitalize no-margin-top">Treasurer</h6>
-        <img alt="Bob Morris, Treasurer" class="img-circle center-block" src="bmorris.jpg" />
-        <div class="margin-top-10">District I, Term Expires 12/31/2019</div>
-        <div class="padding-top-15 text-left">Appointed in May 2010. Bob Morris has served in the roles of Board President and, currently, as Treasurer. Bob has spent 40 years working in various aspects of business administration and finance, including starting his own property management company and running a homeowner association. He also served on the Parker Planning Commission for 15 years. Since retiring in 2012, Bob has traveled the world extensively. </div>
-      </div>
-      <div class="text-center box-item shadow-low">
-        <h3 class="no-margin-bottom">Louise Wood</h3>
-        <h6 class="text-capitalize no-margin-top">Secretary</h6>
-        <img alt="Louise Wood, Secretary" class="img-circle center-block" src="lwood.jpg" />
-        <div class="margin-top-10">District III, Term Expires 12/31/2021</div>
-        <div class="padding-top-15 text-left">Appointed in February 2019. Louise Wood previously worked in private wealth management and financial planning before leaving the industry to spend more time with her family. Now a homeschooling mom and English teacher at the high school and college levels, Louise loves working with students, reading great literature, and enjoying our beautiful community with friends and family. She lives in Highlands Ranch with her husband, Ryan, and their rambunctious boys.</div>
-      </div>
-      <div class="text-center box-item shadow-low">
-        <h3>John Beckwith</h3>
-        <img alt="John Beckwith" class="img-circle center-block" src="jbeckwith.jpg" />
-        <div class="margin-top-10">At Large, Term Expires 12/31/2019</div>
-        <div class="padding-top-15 text-left">Appointed in January 2014. John Beckwith is the owner of Design Resource Group. </div>
-      </div>
-      <div class="text-center box-item shadow-low">
-        <h3>Lawrence Falter</h3>
-        <img alt="Lawrence Falter" class="img-circle center-block" src="lfalter.jpg" />
-        <div class="margin-top-10">District II, Term Expires 12/31/2019</div>
-        <div class="padding-top-15 text-left">Appointed in September 2018. Lawrence Falter, retired, has a broad background as a seasoned, high-energy lawyer with extensive experience in several aspects of commercial and contract law, labor relations, change management, strategic issues, employee benefits, and employment policies and practices. He has a strong background in management planning, budgeting, staffing, lean manufacturing, and Six Sigma methodologies, all designed to enhance productivity and profitability. </div>
-      </div>
-      <div class="text-center box-item shadow-low">
-        <h3>Meghann Silverthorn</h3>
-        <img alt="Meghann Silverthron" class="img-circle center-block" src="msilverthorn.jpg" />
-        <div class="margin-top-10">District I, Term Expires 12/31/2021</div>
-        <div class="padding-top-15 text-left">Appointed in February 2019. Meghann Silverthorn has a diverse background in public and civil service. She worked as an aerospace engineer and analyst for the Department of Defense for more than 10 years. She also served as an elected member of the Douglas County School District Board of Education for eight years, including two years as its president.</div>
+        <h4 class="roboto margin-lg-100">DCL regular <a href="../board/">library board</a> meetings are held at least eight times a year at 7PM at locations around the District. Board study sessions, committee meetings and developments sessions are held both on a recurring basis and/or as needed.</h4>
       </div>
     </div>
   </div>
   <div class="row">
-    <div id="join" class="container">
-      <div class="text-center margin-lg-200 padding-top-15 padding-bottom-60">
-        <h1>Get on Board!</h1>
-        <div>We are seeking talented and qualified people to join our Board of Trustees. This is a great opportunity for anyone with a passion for DCL's mission and vision and a genuine desire to serve the community. People with backgrounds in communications, technology, finance, law or strategic business planning are especially encouraged to apply by contacting the board liaison.</div>
-        <div class="text-center padding-top-30"> <!-- Button trigger modal --> 
-          <a href="#" class="btn text-uppercase btn-primary" data-toggle="modal" data-target="#modalone">Contact the Board</a> </div>
-        <!-- Modal -->
-        <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="text-center modal-title">Contact the Board Liaison</h3>
-              </div>
-              <div class="modal-body">
-
-    <iframe
-      id="JotFormIFrame-61805944927163"
-      title="Contact the Board of Trustees"
-      onload="window.parent.scrollTo(0,0)"
-      allowtransparency="true"
-      allowfullscreen="true"
-      allow="geolocation; microphone; camera"
-      src="https://form.jotform.com/61805944927163"
-      frameborder="0"
-      style="width: 1px;
-      min-width: 100%;
-      height:375px;
-      border:none;"
-      scrolling="no"
-    >
-    </iframe>
-    <script type="text/javascript">
-      var ifr = document.getElementById("JotFormIFrame-61805944927163");
-      if(window.location.href && window.location.href.indexOf("?") > -1) {
-        var get = window.location.href.substr(window.location.href.indexOf("?") + 1);
-        if(ifr && get.length > 0) {
-          var src = ifr.src;
-          src = src.indexOf("?") > -1 ? src + "&" + get : src  + "?" + get;
-          ifr.src = src;
-        }
-      }
-      window.handleIFrameMessage = function(e) {
-        if (typeof e.data === 'object') { return; }
-        var args = e.data.split(":");
-        if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-        if (!iframe) { return; }
-        switch (args[0]) {
-          case "scrollIntoView":
-            iframe.scrollIntoView();
-            break;
-          case "setHeight":
-            iframe.style.height = args[1] + "px";
-            break;
-          case "collapseErrorPage":
-            if (iframe.clientHeight > window.innerHeight) {
-              iframe.style.height = window.innerHeight + "px";
-            }
-            break;
-          case "reloadPage":
-            window.location.reload();
-            break;
-          case "loadScript":
-            var src = args[1];
-            if (args.length > 3) {
-                src = args[1] + ':' + args[2];
-            }
-            var script = document.createElement('script');
-            script.src = src;
-            script.type = 'text/javascript';
-            document.body.appendChild(script);
-            break;
-          case "exitFullscreen":
-            if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-            else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-            else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-            else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-            else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-            break;
-        }
-        var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-        if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-          var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-          iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-        }
-      };
-      if (window.addEventListener) {
-        window.addEventListener("message", handleIFrameMessage, false);
-      } else if (window.attachEvent) {
-        window.attachEvent("onmessage", handleIFrameMessage);
-      }
-      </script>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container no-padding margin-bottom-30">
+      <table id="meetings" class="responsive display table table-striped" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Date/Time</th>
+            <th>Meeting Type</th>
+            <th>Location</th>
+            <th>Agenda/Topic</th>
+            <th>Minutes or Record</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>JAN 30, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td>Cancelled</td>
+            <td>Cancelled</td>
+          </tr>
+          <tr>
+            <td>JAN 30, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td>Cancelled</td>
+            <td>Cancelled</td>
+          </tr>
+          <tr>
+            <td>FEB 27, 2019, 5:00 PM</td>
+            <td>Development Session</td>
+            <td><a href="../lone-tree/">Lone Tree</a></td>
+            <td>Colorado Open Meeting Law,<br class="word-break" />
+              Trustee Volunteer Agreement</td>
+            <td><a href="record/02-27-19-record.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Record</a></td>
+          </tr>
+          <tr>
+            <td>FEB 27, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../lone-tree/">Lone Tree</a></td>
+            <td><a href="agenda/02-27-19-agenda.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Agenda</a></td>
+            <td><a href="minutes/02-27-19-minutes.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Minutes</a></td>
+          </tr>
+          <tr>
+            <td>MAR 9, 2019, 8:00 AM</td>
+            <td>Annual Board Retreat</td>
+            <td><a href="../lone-tree/">Lone Tree</a></td>
+            <td>Strategic Planning</td>
+            <td><a href="record/03-09-19-record.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Record</a></td>
+          </tr>
+          <tr>
+            <td>MAR 27, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../parker/">Parker</a></td>
+            <td>Volunteer Agreement Castle<br class="word-break" />
+              Rock Renovation</td>
+            <td><a href="record/03-27-19-record.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Record</a></td>
+          </tr>
+          <tr>
+            <td>MAR 27, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../parker/">Parker</a></td>
+            <td><a href="agenda/03-27-19-agenda.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Agenda</a></td>
+            <td><a href="minutes/03-27-19-minutes.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Minutes</a></td>
+          </tr>
+          <tr>
+            <td>APR 24, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../highlands-ranch/">Highlands Ranch</a></td>
+            <td>Castle Rock Renovation</td>
+            <td><a href="record/04-24-19-record.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Record</a></td>
+          </tr>
+          <tr>
+            <td>APR 24, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../highlands-ranch/">Highlands Ranch</a></td>
+            <td><a href="agenda/04-24-19-agenda.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Agenda</a></td>
+            <td><a href="minutes/04-24-19-minutes.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Minutes</a></td>
+          </tr>
+          <tr>
+            <td>MAY 9, 2019, 8:30 AM</td>
+            <td>Development Session</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td>Training/Development</td>
+            <td><a href="record/05-09-19-record.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Record</a></td>
+          </tr>
+          <tr>
+            <td>MAY 15, 2019, 7:30 AM</td>
+            <td>Partnership of DC Govts</td>
+            <td>Douglas County Events Center</td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">PDCG</a></td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">Record</a></td>
+          </tr>
+          <tr>
+            <td>MAY 29, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../castle-rock/">Castle Rock</a></td>
+            <td>Proposed Bylaws and Policy <br class="word-break">
+              Housekeeping Changes</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>MAY 29, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../castle-rock/">Castle Rock</a></td>
+            <td><a href="agenda/05-29-19-agenda.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Agenda</a></td>
+            <td class="opacity-6">Minutes</td>
+          </tr>
+          <tr>
+            <td>JUN 26, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>JUN 26, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Minutes</td>
+          </tr>
+          <tr>
+            <td>JUL 17, 2019, 7:00 AM</td>
+            <td>Partnership of DC Govts</td>
+            <td>Millhouse at Philip S. Miller<br class="word-break">
+              Park, Castle Rock</td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">PDCG</a></td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">Record</a></td>
+          </tr>
+          <tr>
+            <td>AUG 8, 2019, 3:00 PM</td>
+            <td>Development Session</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td>Training/Development</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>AUG 28, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>AUG 28, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Minutes</td>
+          </tr>
+          <tr>
+            <td>SEP 18, 2019, 7:00 AM</td>
+            <td>Partnership of DC Govts</td>
+            <td><a href="../highlands-ranch/">Highlands Ranch</a></td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">PDCG</a></td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">Record</a></td>
+          </tr>
+          <tr>
+            <td>SEP 25, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../lone-tree/">Lone Tree</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>SEP 25, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../lone-tree/">Lone Tree</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Minutes</td>
+          </tr>
+          <tr>
+            <td>OCT 30, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../parker/">Parker</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>OCT 30, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting</td>
+            <td><a href="../parker/">Parker</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Minutes</td>
+          </tr>
+          <tr>
+            <td>NOV 7, 2019, 7:00 AM</td>
+            <td>Partnership of DC Govts</td>
+            <td>TBA</td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">PDCG</a></td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">Record</a></td>
+          </tr>
+          <tr>
+            <td>NOV 14, 2019, 3:00 PM</td>
+            <td>Development Session</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td>Training/Development</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>NOV 20, 2019, 5:00 PM</td>
+            <td>Study Session</td>
+            <td><a href="../highlands-ranch/">Highlands Ranch</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Record</td>
+          </tr>
+          <tr>
+            <td>NOV 20, 2019, 7:00 PM</td>
+            <td>Regular Board Meeting*</td>
+            <td><a href="../highlands-ranch/">Highlands Ranch</a></td>
+            <td class="opacity-6">Agenda</td>
+            <td class="opacity-6">Minutes</td>
+          </tr>
+          <tr>
+            <td>DEC 18, 2019, 7:00 AM</td>
+            <td>Partnership of DC Govts</td>
+            <td><a href="../castle-pines/">Castle Pines</a></td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">PDCG</a></td>
+            <td><a href="http://www.douglascountypartnership.org/meetings-agendas/" target="_blank">Record</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="margin-top-15 margin-left-15 margin-right-15">There are no meetings in July and December 2019.<br>
+        *The November 2019 board meeting will be held the third Wednesday of the month due to the Thanksgiving holiday.</div>
     </div>
   </div>
-  <script>
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
- </script> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
