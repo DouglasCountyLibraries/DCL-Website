@@ -405,10 +405,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="button-wrapper">
           <div class="button-item"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Summer+Reading+Program&lib=all&nd=365" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Summer Reading Events</a></div>
           <div class="button-item"><a href="https://www.facebook.com/DCLColorado/app/36495350702/" target="_blank" class="margin-15 text-uppercase btn btn-primary btn-lg">Where should you go?</a></div>
-          <div class="button-item"><a href="#" data-toggle="modal" data-target="#pit-stop" class="margin-15 text-uppercase btn btn-primary btn-lg">Summer Reading Pit Stops</a></div>
+          <div class="button-item"><a href="#" data-toggle="modal" data-target="#pit-stops" class="margin-15 text-uppercase btn btn-primary btn-lg">Summer Reading Pit Stops</a></div>
           
           <!-- Modal -->
-          <div id="pit-stop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div id="pit-stops" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -507,7 +507,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" -->
+<script type="text/javascript">
+$(document).ready(function() {
+  if(window.location.href.indexOf('#pit-stops') != -1) {
+    $('#pit-stops').modal('show')
+  };
+});
+</script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
 {
