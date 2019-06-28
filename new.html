@@ -81,12 +81,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"> 
 <!-- pinterest - do not remove -->
 <style>
 .container-fluid {
 	padding-left: 0px;
 	padding-right: 0px;
 }
+	.orbitron {
+		font-family: 'Orbitron', sans-serif;
+		color: blue;
+	}
 .night-sky {
 	overflow: hidden;
 	background: #333 url("moon-stars.jpg") center bottom no-repeat;
@@ -96,6 +101,31 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	height: 500px;
 	overflow: hidden;
 }
+	.blink {
+  -webkit-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: blue;
+  }
+}
+
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: blue;
+  }
+}
+
 .saturn {
 	/* 
      * Make the initial position to be the center of the circle you want this
@@ -377,13 +407,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div style="background-color: #333;" class="row no-margin">
     <div class="container">
       <div class="col-md-4 text-center">
-        <h1 class="white">To Infinity & Beyond</h1>
+        <h1 class="orbitron">To Infinity & Beyond</h1>
       </div>
       <div class="col-md-4 text-center">
-        <h1 class="white">Space Odysseys</h1>
+        <h1 class="orbitron">Space Odysseys</h1>
       </div>
       <div class="col-md-4 text-center">
-        <h1 class="white">So Long, Earth</h1>
+		  <h1 class="orbitron">So Long, Earth<span class="blink">|</span></h1>
       </div>
     </div>
   </div>
