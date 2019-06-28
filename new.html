@@ -107,23 +107,29 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 }
 
-@keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: blue;
-  }
+.typewriter h1 a {
+			font-family: 'Orbitron', sans-serif;
+		color: #12E4F5;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #12E4F5; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  
+  animation: 
+    typing 18s steps(120, end),
+    blink-caret .s step-end 30;
 }
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-@-webkit-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: blue;
-  }
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #12E4F5; }
 }
 
 .saturn {
@@ -405,16 +411,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row no-gutter no-margin no-padding night-sky"> <img class="saturn" src="rocket.png" alt="Saturn"> </div>
   <div style="background-color: #333;" class="row no-margin">
-    <div class="container">
-      <div class="col-md-4 text-center">
-        <h1 class="orbitron">To Infinity & Beyond</h1>
+    <div class="">
+      <div class="text-center typewriter">
+        <h1 class=""><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1404020207">To Infinity & Beyond&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Space Odysseys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So Long, Earth</h1>
       </div>
-      <div class="col-md-4 text-center">
-        <h1 class="orbitron">Space Odysseys</h1>
-      </div>
-      <div class="col-md-4 text-center">
-		  <h1 class="orbitron">So Long, Earth<span class="blink">|</span></h1>
-      </div>
+
+
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
