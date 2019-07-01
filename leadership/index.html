@@ -79,8 +79,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+	.card-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
 .admin-card {
-	height: 630px;
+	height: 530px;
+	width: 350px;
+	margin: 0px 15px;
 }
 .card-grid:hover, .card-grid:focus {
 	cursor: pointer;
@@ -102,33 +110,40 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 @media (min-width: 375px) {
 .admin-card {
-	height: 540px;
+	height: 560px;
 }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 625px) {
 .admin-card {
-	height: 500px;
+	height: 445px;
 }
 }
-
 @media (min-width: 991px) {
-.admin-card {
-	height: 580px;
+
+	.admin-card {
+		
+		height: 555px;
+	}
 }
+@media (max-width: 992px) {
+	.card-wrapper {
+		flex-direction: column;
+		
+	}
+	.admin-card {
+		width: auto;
+		
+	}
 }
 
 @media (min-width: 1180px) {
 .admin-card {
-	height: 640px;
+	height: 545px;
 }
 }
 
-@media (min-width: 1600px) {
-.admin-card {
-	height: 530px;
-}
-}
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -322,8 +337,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-teal padding-top-30 padding-bottom-30">
-    <div class="container-md">
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
+    <div class="container card-wrapper">
+      <div class="card-item margin-top-15 margin-bottom-15">
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-high padding-30">
             <h3 class="text-center margin-top-5 no-margin-bottom">Bob Pasicznyuk<i class="flip-btn material-icons">arrow_forward</i></h3>
@@ -331,14 +346,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <img alt="Bob Pasicznyuk, Executive Director" class="img-circle center-block" src="bob.jpg" />
             <div class="margin-top-15"><i>"Our patrons have high expectations of their library district, and we aim to meet those expectations by providing exceptional library experiences through our <a href="../authors-events/">signature events</a>, beautiful facilities, contemporary technology, and <a href="https://dcl.bibliocommons.com/">expansive collections</a>."</i></div>
           </div>
-          <div class="back bg-white shadow-high padding-left-15 padding-right-15"><i class="unflip-btn material-icons">clear</i>
-            <h3 class="text-center no-margin-bottom padding-top-60">Bob Pasicznyuk</h3>
+          <div class="back bg-white shadow-high padding-30"><i class="unflip-btn material-icons">clear</i>
+            <h3 class="text-center no-margin-bottom">Bob Pasicznyuk</h3>
             <h6 class="text-capitalize no-margin-top text-center">Executive Library Director</h6>
             <div>Bob Pasicznyuk reunited with Douglas County Libraries in 2014 after a five-year hiatus leading the Cedar Rapids Public Library in a time of rapid change and rebuilding. Previously, Bob managed projects and technology efforts in libraries at Douglas County, Pikes Peak Library District, and the University of Colorado. He has an M.S. in Library Science and Certificate of Advanced Study in Information Science from the University of North Texas. </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="card-item margin-top-15 margin-bottom-15">
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-high padding-30">
             <h3 class="text-center margin-top-5 no-margin-bottom">Amber DeBerry<i class="flip-btn material-icons">arrow_forward</i></h3>
@@ -346,29 +361,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <img alt="Amber DeBerry, Community Relations Director" class="img-circle center-block" src="../shared-assets/images/amber.jpg" />
             <div class="margin-top-15"><i>"<a href="../locations/">Our libraries</a> are more than just learning hubs, they’re the centers of our community. Douglas County Libraries brings the community together, inside and outside our beautiful buildings, with excellent public resources and educational, <a href="../authors-events/">engaging and entertaining events</a> for all patrons."</i></div>
           </div>
-          <div class="back bg-white shadow-high padding-left-15 padding-right-15"><i class="unflip-btn material-icons">clear</i>
-            <h3 class="text-center no-margin-bottom padding-top-60">Amber DeBerry</h3>
+          <div class="back bg-white shadow-high padding-30"><i class="unflip-btn material-icons">clear</i>
+            <h3 class="text-center no-margin-bottom">Amber DeBerry</h3>
             <h6 class="text-capitalize no-margin-top text-center">Community Relations Director</h6>
             <div>Amber DeBerry joined Douglas County Libraries in May of 2011. Previously, she was Senior Vice President of Revenue Operations for The Wildlife Experience and in the marketing department of the Denver Zoological Foundation. She has a B.S. in Journalism with a minor in Business from the University of Colorado at Boulder. Over the years, she has been a member of various marketing and foundation committees. At Douglas County Libraries, Amber oversees Community Relations, District Programming, and the Douglas County Libraries Foundation. </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
-        <div class="card-grid admin-card">
-          <div class="front shadow-high bg-white padding-30">
-            <h3 class="text-center margin-top-5 no-margin-bottom">Sheila Kerber<i class="flip-btn material-icons">arrow_forward</i></h3>
-            <h6 class="text-center text-capitalize no-margin-top">Operations Director</h6>
-            <img alt="Sheila Kerber, Operations Director" class="img-circle center-block" src="sheila.jpg" />
-            <div class="margin-top-15"><i>&quot;Our libraries, including new, larger branches in <a href="../castle-pines/">Castle Pines</a>, <a href="../lone-tree/">Lone Tree</a> and <a href="../parker/">Parker</a>, allow us to serve patrons in fresh and fun ways. Staff, amenities and materials in all our locations facilitate meeting, studying and learning. Douglas County Libraries truly is building community. I often think I have the best job in the whole world!&quot; </i></div>
-          </div>
-          <div class="back shadow-high bg-white padding-left-15 padding-right-15"><i class="unflip-btn material-icons">clear</i>
-            <h3 class="text-center no-margin-bottom padding-top-60">Sheila Kerber</h3>
-            <h6 class="text-capitalize no-margin-top text-center">Operations Director</h6>
-            <div>Sheila Kerber has been with Douglas County Libraries since 2007. Previously, she worked for the Library of Congress, the University of Dayton, and the Arapahoe Library District before coming to Douglas County Libraries. Kerber provides the professional leadership to coordinate and supervise all aspects of branch operations, in addition to providing supervisory support to the District's Branch Manager Team and our Business Librarian. She has a B.A. in English Literature and a Master of Library and Information Science. </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="card-item margin-top-15 margin-bottom-15">
         <div class="card-grid admin-card">
           <div class="front shadow-high bg-white padding-30">
             <h3 class="text-center margin-top-5 no-margin-bottom">Patti Owen-DeLay<i class="flip-btn material-icons">arrow_forward</i></h3>
@@ -376,14 +376,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <img alt="Patti Owen-DeLay, Executive Administrator" class="img-circle center-block" src="patti.jpg" />
             <div class="margin-top-15"><i>"Douglas County Libraries’ administrative team takes a thoughtful, forward-looking approach to providing premium library experiences for our guests. All of our <a href="../who-we-are/#goals-strategies">strategic plans and goals</a> are designed with the patron top of mind."</i></div>
           </div>
-          <div class="back shadow-high bg-white padding-left-15 padding-right-15"><i class="unflip-btn material-icons">clear</i>
-            <h3 class="text-center no-margin-bottom padding-top-60">Patti Owen-DeLay</h3>
+          <div class="back bg-white shadow-high padding-30"><i class="unflip-btn material-icons">clear</i>
+            <h3 class="text-center no-margin-bottom">Patti Owen-DeLay</h3>
             <h6 class="text-capitalize no-margin-top text-center">Executive Administrator</h6>
             <div>Patti Owen-DeLay has rejoined Douglas County Libraries after an absence of seven years. During her absence she became a Professional Certified Coach and led coach training programs in the United States and Canada. Recently, she returned to libraries, working for Arapahoe Library District. Back at Douglas County Libraries, she is again Executive Administrator. </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-lg-push-1 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="card-item margin-top-15 margin-bottom-15">
         <div class="card-grid admin-card">
           <div class="front shadow-high bg-white padding-30">
             <h3 class="text-center margin-top-5 no-margin-bottom">Jeff Konishi<i class="flip-btn material-icons">arrow_forward</i></h3>
@@ -391,14 +391,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <img alt="Jeff Konishi, Information Technology Director" class="img-circle center-block" src="jeff.jpg" />
             <div class="margin-top-15"><i>"Technology is best when it helps, not hinders. At Douglas County Libraries, we strive to give visitors a seamless technology experience — whether they’re using the audiovisual equipment in <a href="../reserve-a-space/">meeting rooms</a>, public Wi-Fi, <a href="../library-basics/#print-copy-fax">print/copy services</a>, public computers, laptop vending, or simply the self-checkouts. We want to exceed patron expectations."</i></div>
           </div>
-          <div class="back shadow-high bg-white padding-left-15 padding-right-15"><i class="unflip-btn material-icons">clear</i>
-            <h3 class="text-center no-margin-bottom padding-top-60">Jeff Konishi</h3>
+          <div class="back bg-white shadow-high padding-30"><i class="unflip-btn material-icons">clear</i>
+            <h3 class="text-center no-margin-bottom">Jeff Konishi</h3>
             <h6 class="text-capitalize no-margin-top text-center">Information Technology Director</h6>
             <div>Jeff Konishi joined Douglas County Libraries after acting as IT Director for several public sector organizations, including the City of Amarillo and the City of Englewood. His previous experience also includes project management, programming and business analysis, plus various accounting, auditing and budgeting positions. Jeff has a B.S. in Accounting from the University of Northern Colorado and a Masters in Computer Information Systems from the University of Denver. At Douglas County Libraries, Jeff leads the IT team and associated technology endeavors. </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-lg-push-1 col-sm-6 margin-top-15 margin-bottom-15">
+      <div class="card-item margin-top-15 margin-bottom-15">
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-high padding-30 col-lg-12">
             <h3 class="text-center margin-top-5 no-margin-bottom">April Durham<i class="flip-btn material-icons">arrow_forward</i></h3>
@@ -406,14 +406,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <img alt="April Durham, Human Resources Director" class="img-circle center-block" src="april.jpg" />
             <div class="margin-top-15"><em>"It’s our privilege in HR to support the dedicated DCL staff who so passionately strive to create a vibrant learning environment and exceptional experiences for every child, teen and adult they serve."</em></div>
           </div>
-          <div class="back bg-white shadow-high padding-left-15 padding-right-15"><i class="unflip-btn material-icons">clear</i>
-            <h3 class="text-center no-margin-bottom padding-top-60">April Durham</h3>
+          <div class="back bg-white shadow-high padding-30"><i class="unflip-btn material-icons">clear</i>
+            <h3 class="text-center no-margin-bottom">April Durham</h3>
             <h6 class="text-capitalize no-margin-top text-center">Human Resources Director</h6>
             <div>April Durham joined Douglas County Libraries in 2017 with more than 20 years of progressive experience in human resources management. Ms. Durham oversees management of the Human Resources, Volunteer Services, and Learning & Development Departments. She holds a B.B.A. in Business Administration from Pacific Lutheran University and a J.D. from the University of Arkansas School of Law (Fayetteville). </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-lg-push-1 col-sm-6 col-sm-push-3 margin-top-15 margin-bottom-15">
+      <div class="card-item margin-top-15 margin-bottom-15">
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-high padding-30">
             <h3 class="text-center margin-top-5 no-margin-bottom">Dave Anderson<i class="flip-btn material-icons">arrow_forward</i></h3>
@@ -421,8 +421,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <img alt="Dave Anderson, Finance Director" class="img-circle center-block" src="dave.jpg" />
             <div class="margin-top-15"><i>"<a href="../locations/">Douglas County Libraries</a> is committed to utilizing the resources provided by the taxpayers of Douglas County in a responsible and disciplined manner. Our overarching goal is to protect and enhance the library services and facilities that have become a vital part of life in Douglas County."</i></div>
           </div>
-          <div class="back bg-white shadow-high padding-left-15 padding-right-15"><i class="unflip-btn material-icons">clear</i>
-            <h3 class="text-center no-margin-bottom padding-top-60">Dave Anderson</h3>
+          <div class="back bg-white shadow-high padding-30"><i class="unflip-btn material-icons">clear</i>
+            <h3 class="text-center no-margin-bottom">Dave Anderson</h3>
             <h6 class="text-capitalize no-margin-top text-center">Finance Director</h6>
             <div>David Anderson joined Douglas County Libraries in September 2018. Previously, he served as Chief Financial Officer at CHB Capital Partners. Prior to that David was an independent financial consultant and also worked in mid- to senior-level financial management positions in the capital equipment finance industry. Dave graduated with Departmental honors from the University of Wisconsin-Milwaukee with a bachelor’s degree in accounting. He has been a licensed CPA since 1981. </div>
           </div>
