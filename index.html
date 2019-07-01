@@ -80,192 +80,105 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
+<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 <!-- pinterest - do not remove -->
-<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
 <style>
-.grand-hotel {
-	font-family: 'Grand Hotel', cursive;
-	font-size: 3.5em;
-	text-shadow: -1px 2px 0 rgba(0,0,0,.5);
+.orbitron h1 a {
+	font-family: 'Orbitron', sans-serif;
+	color: lime;
 }
-.sky-row {
-	background: #386799 url("landscape.jpg") bottom left repeat-x;
+.orbitron h1 a:hover, .orbitron h1 a:focus {
+	font-family: 'Orbitron', sans-serif;
+	color: #00eee0;
+	text-decoration: none;
+	text-shadow: 0px 0px 20px #fff;
 }
-.content-row {
-	background: #375972 linear-gradient(#375972, #578ec7);
-	border-top: 5px solid #d6d6d8;
+.orbitron {
+	margin-top: 50px;
 }
-.btn-primary {
-	background-color: #375972;
+.stars {
+	background: #020822 url("stars.jpg") center center repeat;
 }
-.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
-	background-color: #457097;
+.night-sky {
+	overflow: hidden;
+	background: transparent url("moon.jpg") center bottom no-repeat;
+	position: relative;
+	display: block;
+	border: none;
+	height: 630px;
+	overflow: hidden;
 }
-.sign-wrapper {
-	display: flex;
-	justify-content: center;
+.alien-orbit {
+	position: absolute;
+	left: 48%;
+	top: 800px;
+	-webkit-animation: myOrbit 8s linear infinite;
+	-moz-animation: myOrbit 8s linear infinite;
+	-o-animation: myOrbit 8s linear infinite;
+	animation: myOrbit 8s linear infinite;
 }
-.sign-one {
-	background: transparent url("pole.jpg") 50% 310px no-repeat;
-	padding-top: 135px;
-	margin-right: -45px;
-}
-.sign-two {
-	background: transparent url("pole.jpg") bottom center no-repeat;
-	height: 650px;
-	padding: 45px 155px 0 135px;
-	margin-top: 10px;
-}
-.sign-three {
-	background: transparent url("pole.jpg") 50% 308px no-repeat;
-	padding-top: 160px;
-	margin-left: -45px;
-}
-.far-lane {
-	min-height: 150px;
-	background: transparent url("far-lane-vehicles.png") repeat-x bottom center;
-	-webkit-animation: slide 28s linear infinite;
-	animation: slide 28s linear infinite;
-	margin-top: -193px;
-	padding-bottom: 193px;
-}
-.item-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.item {
-	margin: 15px 30px;
-}
- @-webkit-keyframes slide {
+ @-webkit-keyframes myOrbit {
  from {
-background-position: 0 0;
+-webkit-transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
  to {
-background-position: -2100px 0;
+-webkit-transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
- @keyframes slide {
+ @-moz-keyframes myOrbit {
  from {
-background-position: 0 0;
+-moz-transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
  to {
-background-position: -2100px 0;
+-moz-transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
-.near-lane {
-	min-height: 180px;
-	background: transparent url("near-lane-vehicles.png") repeat-x bottom center;
-	-webkit-animation: left-slide 18s linear infinite;
-	animation: left-slide 18s linear infinite;
-	margin-top: -193px;
-	padding-bottom: 193px;
-}
- @-webkit-keyframes left-slide {
+ @-o-keyframes myOrbit {
  from {
-background-position: 0 0;
+-o-transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
  to {
-background-position: 2700px 0;
+-o-transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
- @keyframes left-slide {
+ @keyframes myOrbit {
  from {
-background-position: 0 0;
+transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
  to {
-background-position: 2700px 0;
+transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
-.vibrate:hover, .vibrate:focus {
-	-webkit-animation: vibrate 0.3s linear infinite both;
-	animation: vibrate 0.3s linear infinite both;
+ @-webkit-keyframes myOrbit {
+ from {
+-webkit-transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
-@-webkit-keyframes vibrate {
- 0% {
- -webkit-transform: translate(0);
- transform: translate(0);
-}
- 20% {
- -webkit-transform: translate(-2px, 2px);
- transform: translate(-2px, 2px);
-}
- 40% {
- -webkit-transform: translate(-2px, -2px);
- transform: translate(-2px, -2px);
-}
- 60% {
- -webkit-transform: translate(2px, 2px);
- transform: translate(2px, 2px);
-}
- 80% {
- -webkit-transform: translate(2px, -2px);
- transform: translate(2px, -2px);
-}
- 100% {
- -webkit-transform: translate(0);
- transform: translate(0);
+ to {
+-webkit-transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
-@keyframes vibrate {
- 0% {
- -webkit-transform: translate(0);
- transform: translate(0);
+ @-moz-keyframes myOrbit {
+ from {
+-moz-transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
- 20% {
- -webkit-transform: translate(-2px, 2px);
- transform: translate(-2px, 2px);
-}
- 40% {
- -webkit-transform: translate(-2px, -2px);
- transform: translate(-2px, -2px);
-}
- 60% {
- -webkit-transform: translate(2px, 2px);
- transform: translate(2px, 2px);
-}
- 80% {
- -webkit-transform: translate(2px, -2px);
- transform: translate(2px, -2px);
-}
- 100% {
- -webkit-transform: translate(0);
- transform: translate(0);
+ to {
+-moz-transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
-.mobile-sky-row {
-	background: #4070a0 url("mobile-landscape.jpg") bottom center repeat-x;
+ @-o-keyframes myOrbit {
+ from {
+-o-transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
-.mobile-sign-wrapper {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-.mobile-billboard {
-	padding: 10px 0 30px 0;
-}
-.mobile-sign-three {
-	margin-bottom: 250px;
-}
-.mobile-sign-two {
-	margin-bottom: 15px;
-}
-
-@media (min-width: 981px) {
-.mobile-sky-row {
-	display: none;
+ to {
+-o-transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
-
-@media (max-width: 980px) {
-.sky-row {
-	display: none;
+ @keyframes myOrbit {
+ from {
+transform: rotate(0deg) translateX(800px) rotate(0deg);
 }
-.item {
-	margin: 15px;
-}
-.mobile-sign-wrapper {
-	margin-top: 15px;
+ to {
+transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
 </style>
@@ -449,28 +362,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row sky-row">
-    <div class="sign-wrapper">
-      <div class="sign-one">
-        <div class="vibrate"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1430634917"><img class="img-responsive" src="beachy-books.gif" alt="Beachy Books"></a></div>
-      </div>
-      <div class="sign-two">
-        <div class="vibrate"><a href="summer-reading/"><img class="img-responsive" src="summer-reading.gif" alt="Summer Reading"></a></div>
-      </div>
-      <div class="sign-three">
-        <div class="vibrate"><a href="camp-dcl/"><img class="img-responsive" src="kids-camps.gif" alt="Camp DCL"></a></div>
+  <div class="row stars">
+    <div class="night-sky"> <img class="alien-orbit hidden-xs hidden-sm" src="alien.png" alt="Alien">
+      <div class="container-md">
+        <div class="text-center orbitron">
+          <div class="col-md-4">
+            <h1><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1404020207">To Infinity & Beyond</a> </h1>
+          </div>
+          <div class="col-md-4">
+            <h1><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1403911218">Mission Moon</a> </h1>
+          </div>
+          <div class="col-md-4">
+            <h1><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1430703789">So Long, Earth</a> </h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row mobile-sky-row">
-    <div class="mobile-sign-wrapper">
-      <div class="mobile-sign-one vibrate"> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1430634917"><img class="img-responsive" src="beachy-books.gif" alt="Beachy Books"></a> </div>
-      <div class="mobile-sign-two vibrate"> <a href="summer-reading/"><img class="img-responsive" src="summer-reading.gif" alt="Summer Reading"></a> </div>
-      <div class="mobile-sign-three vibrate"> <a href="camp-dcl/"><img class="img-responsive" src="kids-camps.gif" alt="Camp DCL"></a> </div>
-    </div>
-  </div>
-  <div class="row far-lane"></div>
-  <div class="row near-lane"></div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
