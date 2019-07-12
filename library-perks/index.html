@@ -91,22 +91,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding: 50px 95px 0;
 	margin: 170px 0 0px;
 }
-#activities {
-	padding: 85px 0;
-}
-#online-learning {
-	padding: 50px 0 60px;
-}
-.icon-circle-lavender {
-	background-color: rgba(255,255,255,.4);
-}
-.cb-background {
-	background: url("creative-bug.jpg") repeat-x center center;
-}
-.library-card {
-	transform: rotate(-5deg);
-	box-shadow: 1px 5px 8px 1px rgba(0,0,0,.2);
-	-webkit-backface-visibility: hidden;
+#online-learning, #activities {
+	padding: 45px 0 55px;
 }
 .aaptiv-row {
 	background: #f5f5f5;
@@ -124,7 +110,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	display: flex;
 }
 .item {
-	background: #f5f5f5;
+	background: #f5f5f5 url(white-bar.jpg) top repeat-x;
 	margin: 5px;
 	padding: 40px 30px 45px 30px;
 	flex: 1;
@@ -143,9 +129,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .item {
 	padding: 35px 30px 45px 30px;
-}
-.break-here {
-	display: none;
 }
 }
 
@@ -346,18 +329,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row gradient-row">
     <div class="container">
-      <div class="col-md-4">
-        <div class="padding-top-15"><img class="staff-person img-responsive center-block" src="woman.png" alt="Library Perks"></div>
+      <div class="col-md-5 col-lg-4">
+        <div id="box-one" class="padding-top-15"> </div>
       </div>
-      <div class="col-md-8 padding-bottom-15">
+      <div class="col-md-7 col-lg-8 padding-bottom-15">
         <div class="padding-top-30 hidden-xs hidden-sm"></div>
-        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text text-center text-left-md">Library Perks</h1>
-        <h4 class="roboto">Congratulations! Being a <a href="http://getacard.org/v2/index.html" target="_blank">DCL cardholder</a> means you have access to all sorts of fun perks, everything from free <a href="../digital-media/" target="_blank">digital media</a>, to free <a href="#online-learning">online classes</a> (in crafting, software, language and more), to <a href="#activities">activities</a> you can enjoy in real life, like museum and park passes.
-          <div class="padding-top-15 hidden-xs hidden-sm"></div>
-          Explore your options and do something new!</h4>
+        <div class="text-center text-left-md">
+          <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Library Perks</h1>
+          <h4 class="roboto">Congratulations! Being a <a href="http://getacard.org/v2/index.html" target="_blank">DCL cardholder</a> means you have access to all sorts of fun perks, everything from free <a href="../digital-media/" target="_blank">digital media</a>, to free <a href="#online-learning">online classes</a> (in crafting, software, language and more), to <a href="#activities">activities</a> you can enjoy in real life, like museum and park passes.
+            <div class="padding-top-15 hidden-xs hidden-sm"></div>
+            Explore your options and do something new!</h4>
+        </div>
       </div>
     </div>
   </div>
+  <script>
+    var images = ['woman-one.png', 'woman-two.png', 'woman-three.png', 'man-one.png'];
+    $('<img alt="Scholarships" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');</script>
   <div id="aaptiv" class="row aaptiv-row">
     <div class="aaptiv-box aside"><img class="img-responsive center-block" src="aaptiv-logo.png" alt="Aaptiv">
       <h4 class="roboto text-center">Get unlimited access for three months to over 2,500 audio-guided workouts and programs led by expert trainers in running, strength, yoga, and 10 other categories.</h4>
@@ -373,39 +361,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div id="creative-bug" class="row cb-background">
-    <div class="container">
-      <div class="col-md-8 col-md-push-2">
-        <div class="cb-box"><img class="img-responsive image-center" src="creativebug-logo.png" alt="Creative Bug">
-          <h4 class="roboto text-center margin-top-5">Watch more than 1,000 DIY classes from renowned <span class="text-nowrap">artists&mdash;anytime,</span> anywhere. No pressure, just possibilities! </h4>
-          <div class="text-center"><a href="https://creativebug.com/lib/dcl" target="_blank" class="btn btn-primary text-uppercase margin-15">Get Started Now</a></div>
-          <div class="text-center">Create a Creative Bug account using your library card and PIN, and start crafting!</div>
+  <div id="activities">
+    <div class="row">
+      <div class="container text-center text-left-sm">
+        <div id="check-out-colorado" class="col-md-6">
+          <div class="padding-top-30 col-sm-3">
+            <div style="padding-top:3px;" class="icon-circle-lavender"><i class="fas fa-hiking"></i></div>
+          </div>
+          <div class="col-sm-9">
+            <h2><a href="https://dcl.bibliocommons.com/item/show/1350439114">Check Out Colorado</a></h2>
+            <div>A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks.</div>
+          </div>
+        </div>
+        <div id="nontraditional-items" class="col-md-6">
+          <div class="padding-top-30 col-sm-3">
+            <div class="icon-circle-lavender"><i class="fas fa-microscope"></i></div>
+          </div>
+          <div class="col-sm-9">
+            <h2><a href="https://dcl.bibliocommons.com/v2/search?custom_edit=false&query=formatcode%3A%28EQUIPMENT+%29&searchType=bl&suppress=true">Nontraditional Items</a></h2>
+            <div>We offer more than just books and movies! Check out a sewing machine, microscope, drawing tool and more for your next project.</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div id="activities" class="row">
-    <div class="container item-wrapper">
-      <div id="check-out-colorado" class="item shadow-low">
-        <div style="padding-top:2px;" class="icon-circle-lavender"><i class="fas fa-hiking"></i></div>
-        <h3 class="text-center"> <a href="https://dcl.bibliocommons.com/item/show/1350439114">Check Out Colorado</a> </h3>
-        <div>A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks.</div>
-      </div>
-      <div id="nontraditional-items" class="item shadow-low">
-        <div style="padding-top:2px;" class="icon-circle-lavender"><i class="fas fa-microscope"></i></div>
-        <h3 class="text-center"> <a href="https://dcl.bibliocommons.com/v2/search?custom_edit=false&query=formatcode%3A%28EQUIPMENT+%29&searchType=bl&suppress=true">Nontraditional Items</a> </h3>
-        <div>We offer more than just books and movies! Check out a sewing machine, microscope, drawing tool and more for your next project.</div>
-      </div>
-      <div id="dcl-care-kits" class="item shadow-low">
-        <div style="padding-top:2px;" class="icon-circle-lavender"><i class="fas fa-shopping-bag"></i></div>
-        <h3 class="text-center"> <a href="https://dcl.bibliocommons.com/v2/search?f_FORMAT=EQUIPMENT&query=dcl+care+kit&searchType=keyword">DCL <br class="break-here" />
-          Care Kits</a> </h3>
-        <div>Our specialized, self-contained Anxiety Relief Kits for kids and Memory Care Kits for adults and caregivers can be checked out for three weeks.</div>
-      </div>
-      <div id="dcl-local" class="item shadow-low">
-        <div style="padding-top:2px;" class="icon-circle-lavender"><i class="fas fa-hands-helping"></i></div>
-        <h3 class="text-center"><a href="../adventure-pass/">Adventure Pass</a> <span class="smallish">&</span> <a href="../dcl-local/">DCL Local</a></h3>
-        <div>Our partnerships with <a href="../adventure-pass/">area cultural institutions</a> let you reserve free passes up to 30 days in advance. Plus, enjoy DCL Local: Use your library card for discounts at <a href="../dcl-local/">participating businesses</a>!</div>
+    <div class="row">
+      <div class="container text-center text-left-sm">
+        <div id="dcl-care-kits" class="col-md-6">
+          <div class="padding-top-30 col-sm-3">
+            <div class="icon-circle-lavender"><i class="fas fa-shopping-bag"></i></div>
+          </div>
+          <div class="col-sm-9">
+            <h2><a href="https://dcl.bibliocommons.com/v2/search?f_FORMAT=EQUIPMENT&query=dcl+care+kit&searchType=keyword">DCL Care Kits</a></h2>
+            <div>Our specialized, self-contained Anxiety Relief Kits for kids and Memory Care Kits for adults and caregivers can be checked out for three weeks.</div>
+          </div>
+        </div>
+        <div id="dcl-local" class="col-md-6">
+          <div class="padding-top-30 col-sm-3">
+            <div style="padding-top:3px;" class="icon-circle-lavender"><i class="fas fa-hands-helping"></i></div>
+          </div>
+          <div class="col-sm-9">
+            <h2><a href="../adventure-pass/">Adventure Pass</a> <span class="smallish">&</span> <a href="../dcl-local/">DCL Local</a></h2>
+            <div>Our partnerships with <a href="../adventure-pass/">area cultural institutions</a> let you reserve free passes up to 30 days in advance. Plus, enjoy DCL Local: Use your library card for discounts at <a href="../dcl-local/">participating businesses</a>!</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -413,13 +411,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container text-center">
       <h1 class="text-uppercase font-weight-400">Online Learning</h1>
       <h4 class="roboto padding-bottom-15">These resources make learning a new language or new technology skills simple and convenient. Learn from the privacy of your own home&mdash;or your local library or coffee shop.</h4>
-      <div class="col-md-6 text-center padding-bottom-30"> <img class="img-responsive image-center" src="mango-languages-logo.jpg" alt="Mango Languages">
+      <div id="mango" class="col-md-4 text-center padding-bottom-30"> <img class="img-responsive image-center" src="mango-languages.jpg" alt="Mango Languages">
         <h2><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h2>
         <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
       </div>
-      <div class="col-md-6 text-center padding-bottom-30"> <img class="img-responsive image-center" src="lynda-logo.jpg" alt="Lynda.com">
+      <div id="lynda" class="col-md-4 text-center padding-bottom-30"> <img class="img-responsive image-center" src="lynda.jpg" alt="Lynda.com">
         <h2><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank">Lynda.com</a></h2>
         <div>Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</div>
+      </div>
+      <div id="creativebug" class="col-md-4 text-center padding-bottom-30"> <img class="img-responsive image-center" src="creativebug.jpg" alt="Creativebug">
+        <h2><a href="https://creativebug.com/lib/dcl" target="_blank">Creativebug</a></h2>
+        <div>Watch more than 1,000 DIY classes from renowned artists&mdash;anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting!</div>
       </div>
     </div>
   </div>
