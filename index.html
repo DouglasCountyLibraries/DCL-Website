@@ -100,7 +100,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-decoration: none;
 	text-shadow: 0px 0px 20px #fff;
 }
-.orbitron {
+.srp h1 a {
+	font-family: 'Orbitron', sans-serif;
+	color: #00eee0;
+}
+.srp h1 a:hover, .orbitron h1 a:focus {
+	font-family: 'Orbitron', sans-serif;
+	color: lime;
+	text-decoration: none;
+	text-shadow: 0px 0px 20px #fff;
+}
+.orbitron, .srp {
 	margin-top: 50px;
 }
 .stars {
@@ -126,8 +136,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .summer-reading h1 a {
 	font-family: 'Orbitron', sans-serif;
-	font-size: 28px;
-	color: blue;
+	color: #007800;
+	text-shadow: 0px 0px 20px #fff;
 }
 .summer-reading {
 	font-weight: 400;
@@ -137,9 +147,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .summer-reading h1 a:hover, .summer-reading h1 a:focus {
 	font-family: 'Orbitron', sans-serif;
-	color: #0000ff;
+	color: #333;
 	text-decoration: none;
-	text-shadow: 0px 0px 6px rgba(0,0,255,.5);
+	text-shadow: 0px 0px 3px #00eee0;
 }
  @-webkit-keyframes myOrbit {
  from {
@@ -206,11 +216,14 @@ transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
 
-@media (max-width:410px) {
+@media (max-width:585px) {
 .summer-reading {
-	margin-top: -105px;
+	margin-top: -63px;
 	position: relative;
 	margin-bottom: 20px;
+}
+.orbitron, .srp {
+	margin-top: 15px;
 }
 }
 </style>
@@ -397,21 +410,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row stars">
     <div class="night-sky"> <img class="alien-orbit hidden-xs hidden-sm" src="alien.png" alt="Alien">
       <div class="container-md">
-        <div class="text-center orbitron">
-          <div class="col-md-4">
+        <div class="text-center">
+          <div class="col-md-4 orbitron">
             <h1><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1404020207">To Infinity & Beyond</a> </h1>
           </div>
-          <div class="col-md-4">
-            <h1><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1403911218">Mission: Moon</a> </h1>
+          <div class="col-md-4 srp">
+            <h1><a href="summer-reading/">Summer Reading, Earthlings</a></h1>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 orbitron">
             <h1><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1430703789">So Long, Earth</a> </h1>
           </div>
         </div>
       </div>
     </div>
     <div class="summer-reading text-center">
-      <h1 class="no-margin"><a href="summer-reading/">Summer Reading, Earthlings</a></h1>
+      <h1 class="no-margin"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1403911218">Mission: Moon</a></h1>
     </div>
   </div>
   <div id="amazon-message" class="row">
