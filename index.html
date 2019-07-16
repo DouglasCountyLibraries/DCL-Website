@@ -223,14 +223,26 @@ transform: rotate(360deg) translateX(800px) rotate(-360deg);
 }
 }
 
+@media (max-width:768px) {
+#typed, .typed-cursor.typed-cursor--blink, .typed-cursor {
+	font-size: 16px;
+}
+.orbitron h1, .srp h1 {
+	font-size: 28px;
+}
+.orbitron, .srp {
+	margin-top: 15px;
+}
+}
+
 @media (max-width:585px) {
 .summer-reading {
 	margin-top: -63px;
 	position: relative;
 	margin-bottom: 20px;
 }
-.orbitron, .srp {
-	margin-top: 15px;
+#typed, .typed-cursor {
+	display: none;
 }
 }
 </style>
@@ -423,7 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
           <div class="col-md-4 srp">
             <h1 class="margin-bottom-5"><a href="summer-reading/">Summer Reading, Earthlings</a></h1>
-            <div id="typed-strings" class="hidden-xs"> <span>People of Earth...</span>
+            <div id="typed-strings"> <span>People of Earth...</span>
               <p>we are close to meeting our goal of...</p>
               <p>16,775 people signed up for Summer Reading.</p>
               <p>If we meet our goal...</p>
