@@ -86,7 +86,37 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .green-row {
 	background: #76bd43 url("background.jpg") center center no-repeat;
 }
+.first, .second, .third {
+	width: 215px;
+	height: 250px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	justify-content: center;
+	font-weight: 500;
+	line-height: 50px;
+}
+.first {
+	background: url("first.png") center center/cover;
+	margin: 10px auto;
+}
+.second {
+	background: url("second.png") center center/cover;
+	margin: 10px auto;
+}
+.third {
+	background: url("third.png") center center/cover;
+	margin: 10px auto;
+}
 
+@media (min-width: 525px) {
+	.first, .third {position: relative; left: -60px;}
+	.second {position: relative; right: -60px;}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -271,12 +301,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row green-row">
     <div class="container">
      
-        <div class="one"><a class="white" href="#">Schoolkit for Kids</a></div>
-        <div class="two">
+        <div class="first"><a class="white" href="#">Schoolkit for Kids</a></div>
+        <div class="second">
           <a class="white" href="#">Teacher Support</a>
          <a class="white" href="#">Get Organized</a>
         </div>
-        <div class="three"><a class="white" href="#">You've Got a Friend</a></div>
+        <div class="third"><a class="white" href="#">You've Got a Friend</a></div>
       
     </div>
   </div>
