@@ -80,169 +80,52 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
-<script src="typed.js" type="text/javascript"></script> 
-<script src="demos.js"></script> 
 <!-- pinterest - do not remove -->
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
 <style>
-#amazon-message {
+.green-row {
+	background: #76bd43 url("background.jpg") center center no-repeat;
+}
+.first, .second, .third {
+	font-family: 'Bree Serif', serif;
+	width: 228px;
+	height: 266px;
 	color: #fff;
-	background-color: #007800;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-size: 20px;
-	padding: 5px 0 6px;
 	text-align: center;
+	text-transform: uppercase;
+	justify-content: center;
+	font-weight: 700;
+	letter-spacing: .03em;
 }
-.orbitron h1 a {
-	font-family: 'Orbitron', sans-serif;
-	color: lime;
-}
-.orbitron h1 a:hover, .orbitron h1 a:focus {
-	font-family: 'Orbitron', sans-serif;
-	color: #00eee0;
+.first a:hover, .second a:hover, .third a:hover {
+	text-shadow: 2px 2px 2px rgba(0,0,0,.8);
 	text-decoration: none;
-	text-shadow: 0px 0px 20px #fff;
 }
-.srp h1 a {
-	font-family: 'Orbitron', sans-serif;
-	color: #00eee0;
+.first {
+	background: url("first.png") center center/cover;
+	margin: 0 auto;
 }
-.srp h1 a:hover, .orbitron h1 a:focus {
-	font-family: 'Orbitron', sans-serif;
-	color: lime;
-	text-decoration: none;
-	text-shadow: 0px 0px 20px #fff;
+.second {
+	background: url("second.png") center center/cover;
+	margin: 0 auto;
 }
-#typed, .typed-cursor.typed-cursor--blink, .typed-cursor {
-	font-size: 21px;
-	font-family: 'Orbitron', sans-serif;
-	color: #fff;
-}
-.orbitron, .srp {
-	margin-top: 50px;
-}
-.stars {
-	background: #020822 url("stars.jpg") center center repeat;
-}
-.night-sky {
-	overflow: hidden;
-	background: transparent url("moon.jpg") center bottom no-repeat;
-	position: relative;
-	display: block;
-	border: none;
-	height: 630px;
-	overflow: hidden;
-}
-.alien-orbit {
-	position: absolute;
-	left: 48%;
-	top: 800px;
-	-webkit-animation: myOrbit 8s linear infinite;
-	-moz-animation: myOrbit 8s linear infinite;
-	-o-animation: myOrbit 8s linear infinite;
-	animation: myOrbit 8s linear infinite;
-}
-.summer-reading h1 a {
-	font-family: 'Orbitron', sans-serif;
-	color: #007800;
-	text-shadow: 0px 0px 20px #fff;
-}
-.summer-reading {
-	font-weight: 400;
-	margin-top: -63px;
-	position: relative;
-	margin-bottom: 20px;
-}
-.summer-reading h1 a:hover, .summer-reading h1 a:focus {
-	font-family: 'Orbitron', sans-serif;
-	color: #333;
-	text-decoration: none;
-	text-shadow: 0px 0px 3px #00eee0;
-}
-@-webkit-keyframes myOrbit {
-from {
--webkit-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
--webkit-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
-}
-@-moz-keyframes myOrbit {
-from {
--moz-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
--moz-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
-}
-@-o-keyframes myOrbit {
-from {
--o-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
--o-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
-}
-@keyframes myOrbit {
-from {
-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
-}
-@-webkit-keyframes myOrbit {
-from {
--webkit-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
--webkit-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
-}
-@-moz-keyframes myOrbit {
-from {
--moz-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
--moz-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
-}
-@-o-keyframes myOrbit {
-from {
--o-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
--o-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
-}
-@keyframes myOrbit {
-from {
-transform: rotate(0deg) translateX(800px) rotate(0deg);
-}
-to {
-transform: rotate(360deg) translateX(800px) rotate(-360deg);
-}
+.third {
+	background: url("third.png") center center/cover;
+	margin: 0 auto;
 }
 
-@media (max-width:768px) {
-#typed, .typed-cursor.typed-cursor--blink, .typed-cursor {
-	font-size: 16px;
-}
-.orbitron h1, .srp h1 {
-	font-size: 28px;
-}
-.orbitron, .srp {
-	margin-top: 15px;
-}
-}
-
-@media (max-width:585px) {
-.summer-reading {
-	margin-top: -63px;
+@media (min-width: 525px) {
+.first, .third {
 	position: relative;
-	margin-bottom: 20px;
+	left: -60px;
 }
-#typed, .typed-cursor {
-	display: none;
+.second {
+	position: relative;
+	right: -60px;
 }
 }
 </style>
@@ -426,33 +309,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row stars">
-    <div class="night-sky"> <img class="alien-orbit hidden-xs hidden-sm" src="alien.png" alt="Alien">
-      <div class="container-md">
-        <div class="text-center">
-          <div class="col-md-4 orbitron">
-            <h1><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1404020207">To Infinity & Beyond</a> </h1>
-          </div>
-          <div class="col-md-4 srp">
-            <h1 class="margin-bottom-5"><a href="summer-reading/">Summer Reading, Earthlings</a></h1>
-            <div id="typed-strings"> <span>People of Earth...</span>
-              <p>we are close to meeting our goal of...</p>
-              <p>16,775 people signed up for Summer Reading.</p>
-              <p>If we meet our goal...</p>
-              <p>the Douglas County Libraries Foundation...</p>
-              <p>will donate $500 to Nature’s Educators.</p>
-              <p>We only need 2,726 more earthlings to sign up.</p>
-              <p><a style="color:#fff;" href="summer-reading/">Register Now!</a></p>
-            </div>
-            <span id="typed" style="white-space:pre;"></span> </div>
-          <div class="col-md-4 orbitron">
-            <h1><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1430703789">So Long, Earth</a> </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="summer-reading text-center">
-      <h1 class="no-margin"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1403911218">Mission: Moon</a></h1>
+  <div class="row green-row">
+    <div class="container">
+      <div class="first"><a class="white" href="https://blogs.douglascountylibraries.org/blog/2019/07/23/your-dcl-schoolkit/">Schoolkit<br>
+        for Kids</a></div>
+      <div class="second"> <a class="white" href="https://blogs.douglascountylibraries.org/blog/2019/07/23/teacher-support-resources/">Teacher Support</a> <span class="margin-top-30"><a class="white" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1452031897">Get Organized</a> </span></div>
+      <div class="third"><a class="white" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1452559057">You've Got<br>
+        a Friend</a></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
