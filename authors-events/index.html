@@ -98,8 +98,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- Push Notifications End - Do Not Remove -->
 
 <style>
-.rubin-background {
-	background: #7b8ec7;
+.jodi-background {
+	background: #fff url("jodi-background.png") left center;
 }
 .sub-title {
 	color: #E6E6E8;
@@ -110,14 +110,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .sub-nav-item a, .sub-nav-item a:hover {
 	padding: 19px 15px 15px 15px;
 }
-.rubin-wrapper {
+.jodi-wrapper {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	margin: 15px 0;
+	background: #fff;
 }
-.rubin-item {
-	margin: 0 15px;
+.jodi-item {
+	flex-basis: 36%;
+	padding: 30px 0;
 }
 .author-wrapper, .event-wrapper {
 	display: flex;
@@ -160,6 +162,41 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	max-width: 610px;
 	margin: 0 auto;
 }
+.jodi-item img {
+	border-radius: 20px;
+	box-shadow: 0px 3px 7px rgba(77,62,152,1);
+	-webkit-backface-visibility: hidden;
+}
+.jodi-item img {
+	-webkit-animation: rotate-jodi 3s linear .5s both;
+	animation: rotate-jodi 3s linear .5s both;
+}
+@-webkit-keyframes rotate-jodi {
+0% {
+opacity: 0;
+transform: rotate(0deg);
+}
+50% {
+opacity: 1;
+}
+100% {
+opacity: 1;
+transform: rotate(-6deg);
+}
+}
+@keyframes rotate-jodi {
+0% {
+opacity: 0;
+transform: rotate(0deg);
+}
+50% {
+opacity: 1;
+}
+100% {
+opacity: 1;
+transform: rotate(-6deg);
+}
+}
 
 @media (max-width: 480px) {
 .author-item h2 {
@@ -182,10 +219,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 
-@media (max-width: 1252px) {
-.rubin-item {
+@media (max-width: 992px) {
+.jodi-wrapper {
+	flex-direction: column;
+}
+.jodi-item {
+	padding: 15px;
 	text-align: center;
-	margin-bottom: 30px;
 }
 }
 </style>
@@ -442,6 +482,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="col-sm-12 col-md-8 col-lg-15 sub-nav-item sub-nav-border equal-height">
         <h5 class="no-margin text-uppercase"><a class="show" href="../past-authors/"><i class="fas fa-history"></i>Past Authors</a></h5>
+      </div>
+    </div>
+  </div>
+  <div class="row jodi-background">
+    <div class="container no-padding">
+      <div class="jodi-wrapper">
+        <div class="jodi-item"> <img class="img-responsive" src="jodi-picoult.jpg" alt="Jodi Picoult"> </div>
+        <div class="jodi-item">
+          <h3 class="roboto text-center no-margin opacity-9">DCL Presents:</h3>
+          <h1 class="text-center no-margin-top jumbo-text text-uppercase font-weight-400">Jodi Picoult</h1>
+          <div class="padding-bottom-15">Douglas County Libraries is excited to host Jodi Picoult, <i>New York Times</i> bestselling author of many beloved novels including <i><a href="https://dcl.bibliocommons.com/item/show/920713114">My Sister's Keeper</a></i>, <i><a href="https://dcl.bibliocommons.com/item/show/788197114">Nineteen Minutes</a></i>, and <i><a href="https://dcl.bibliocommons.com/item/show/1355045114">Small Great Things</a></i>.</div>
+          <div>Ticket includes a seat at the author's presentation, dessert bites, a pre-signed paperback copy of <i><a href="https://dcl.bibliocommons.com/item/show/1485368114">A Spark of Light</a></i>, and a place in the photo line.</div>
+          <div class="text-center">
+            <h2 class="text-uppercase no-margin-bottom"><a href="https://goo.gl/maps/476yTpzsaVM2" target="_blank">CU South Denver</a></h2>
+            <h4 class="no-margin-top no-margin-bottom">Tuesday, September 24, 2019 | 7PM-11PM</h4>
+            <div> <a class="text-uppercase btn btn-lg btn-warning margin-top-15" href="https://www.eventbrite.com/e/dcl-presents-jodi-picoult-tickets-60710704351?aff=AuthorsEvents" target="_blank">Buy Now!</a></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
