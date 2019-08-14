@@ -80,26 +80,27 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-	td, th {
+td, th {
 	padding: 0px;
 }
 .cse .gsc-search-button-v2, .gsc-search-button-v2 {
-	font-size: 0px;
-	padding: 17px 22px!important;
-	width: auto;
-	vertical-align: middle;
-	border: 1px solid #000;
+	padding: 14px 17px!important;
 	border-radius: 0px!important;
-	margin-top: 2px;
-	border-color: #000;
-	background-color: #333333;
-	background-image: linear-gradient(top, #333333, #333333);
+}
+.gsc-search-button {
+	margin-left: 0px!important;
+	margin-top: 0px!important;
+}
+.gsc-search-button-v2 svg {
+	width: 19px;
+	height: 20px;
 }
 .gsc-above-wrapper-area {
 	display: none;
 }
 #gsc-i-id1 {
-	padding: 9px 4px 9px 4px !important;
+	padding: 8px 4px !important;
+	background: none!important;
 }
 .gsc-control-cse .gs-spelling, .gsc-control-cse .gs-result .gs-title, .gsc-control-cse .gs-result .gs-title * {
 	font-family: "Ubuntu", arial, sans-serif!important;
@@ -109,14 +110,20 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .gsc-control-cse .gs-spelling:hover, .gsc-control-cse .gs-result .gs-title:hover, .gsc-control-cse .gs-result .gs-title:hover * {
 	text-decoration: underline!important;
 }
-	.cse .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result.gsc-promotion:hover, .gsc-results .gsc-imageResult-classic:hover, .gsc-results .gsc-imageResult-column:hover {
+.cse .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result:hover, .gsc-webResult.gsc-result.gsc-promotion:hover, .gsc-results .gsc-imageResult-classic:hover, .gsc-results .gsc-imageResult-column:hover {
 	border-left: 0px!important;
-		border: 0px!important;
+	border: 0px!important;
+}
+.cse table.gsc-search-box td.gsc-input, table.gsc-search-box td.gsc-input {
+	padding-right: 0px !important;
 }
 .gsc-control-cse, .gsc-control-cse .gsc-table-result {
 	font-family: "Ubuntu", arial, sans-serif!important;
 	font-size: 16px!important;
 	color: #333!important;
+}
+.gsc-resultsHeader {
+	margin-top: 20px;
 }
 .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
 	border-color: #fff!important;
@@ -129,6 +136,25 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .gcsc-find-more-on-google {
 	display: none!important;
+}
+	::-webkit-input-placeholder {
+color: #fff;
+}
+::-moz-placeholder {
+color: #fff;
+}
+:-ms-input-placeholder {
+color: #fff;
+}
+:-moz-placeholder {
+color: #fff;
+}
+
+@media (min-width: 992px) {
+table.gsc-search-box {
+	width: 65%!important;
+	margin: 0 auto;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -325,7 +351,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="container margin-lg-200 padding-bottom-60"> 
+    <div class="container margin-lg-150 padding-bottom-60"> 
       <script async src="https://cse.google.com/cse.js?cx=012860723134675418133:mgjjjwj_3-8"></script>
       <div class="gcse-search"></div>
     </div>
