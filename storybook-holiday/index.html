@@ -88,19 +88,62 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .sunshine {
 	font-family: 'Sunshine Script', cursive;
 }
-.sunshine {
-	font-family: 'Sunshine Script', cursive;
-}
 .sunshine.white {
 	font-size: 4em;
 	text-shadow: 0px 3px 0px rgba(0,0,0,.5);
 }
 .sunshine.green {
-	font-size: 4.5em;
+	font-size: 3.5em;
 	color: #115252;
 }
 .wrapper-row {
 	background: #1a6d71 url("background.jpg") top center/cover;
+}
+.btn.btn-default.btn-lg {
+	background-color: #734a20;
+	color: #fff;
+}
+.btn.btn-default.btn-lg:hover, .btn.btn-default.btn-lg:focus {
+	background-color: #c79144;
+	color: #3f2811;
+}
+.icon {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.icon:after {
+	animation: shine 8s ease-in-out infinite;
+	animation-fill-mode: forwards;
+	content: "";
+	position: absolute;
+	top: -130%;
+	left: -230%;
+	width: 250%;
+	height: 250%;
+	opacity: 0;
+	transform: rotate(10deg);
+	background: rgba(237, 192, 105, 0.9);
+	background: linear-gradient( to right, rgba(237, 192, 105, 0.1) 0%, rgba(237, 192, 105, 0.4) 60%, rgba(237, 192, 105, 0.9) 90%, rgba(237, 192, 105, 0.0) 100% );
+}
+.icon:active:after {
+	opacity: 0;
+}
+@keyframes shine {
+10% {
+opacity: 1;
+top: -30%;
+left: -30%;
+transition-property: left, top, opacity;
+transition-duration: 0.7s, 0.7s, 0.15s;
+transition-timing-function: ease;
+}
+100% {
+opacity: 0;
+top: -30%;
+left: -30%;
+transition-property: left, top, opacity;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -284,22 +327,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row wrapper-row">
-    <h1 class="sunshine green text-center no-margin-bottom">a storybook holiday</h1>
-    <div class="container text-center white padding-top-30"><img class="img-responsive image-center" src="nutcraker.png" alt="Storybook Holiday, The Nutcracker">
+    <h2 class="sunshine green text-center no-margin-bottom">A Storybook Holiday</h2>
+    <div class="container text-center white"><img class="img-responsive image-center" src="nutcraker.png" alt="Storybook Holiday, The Nutcracker">
       <h4 class="roboto white">Celebrate the holiday season with DCL! Our Lone Tree location will magically transform into the holiday wonderland of The Nutcracker and Clara’s sugar-plum dreams.</h4>
     </div>
-    <div class="container white">
-      <div class="col-md-6 padding-bottom-30">
-        <h1 class="sunshine white text-center">Evening Edition</h1>
-        <div class="large-text text-center text-capitalize font-weight-400">Saturday, December 7, 5-9PM </div>
+    <div class="container white padding-bottom-60">
+      <div class="col-md-6 padding-bottom-15">
+        <h2 class="sunshine white text-center no-margin-bottom">Evening Edition</h2>
+        <div class="large-text text-center text-capitalize font-weight-400 margin-bottom-10">Saturday, December 7, 5-9PM </div>
         <div>Join us for a holiday party extravaganza! Enjoy a visit with Santa, live performances of your favorite Nutcracker vignettes, music and entertainment, and make-and-take gifts, plus a delectable menu of light dinner bites, hot cocoa concoctions, and other beverages.</div>
-        <div>Tickets: $25 (adults), $20 (ages 3-12)</div>
+        <div class="text-center">
+          <div class="large-text text-center text-capitalize font-weight-400 margin-top-10">Tickets: $25 (adults), $20 (ages 3-12)</div>
+          <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-evening-edition-tickets-69906561407?aff=storybookholidayevening" target="_blank" class="icon margin-15 text-uppercase btn btn-default btn-lg">Buy Tickets</a> </div>
       </div>
-      <div class="col-md-6 padding-bottom-30">
-        <h1 class="sunshine white text-center">Brunch Edition</h1>
-        <h4 class="white text-center">Sunday, December 8, 9-11AM</h4>
+      <div class="col-md-6 padding-bottom-15">
+        <h2 class="sunshine white text-center no-margin-bottom">Brunch Edition</h2>
+        <div class="large-text text-center text-capitalize font-weight-400 margin-bottom-10">Sunday, December 8, 9-11AM</div>
         <div>Our whimsical holiday brunch includes the same festive activities as our evening event, but over brunch. Visit with Santa and enjoy live performances of your favorite Nutcracker pieces, music and entertainment, and make-and-take gifts, plus a delicious menu of brunch bites, hot cocoa concoctions, and other beverages.</div>
-        <div>Tickets: $22 (adults), $18 (ages 3-12)</div>
+        <div class="text-center">
+          <div class="large-text text-center text-capitalize font-weight-400 margin-top-10">Tickets: $22 (adults), $18 (ages 3-12)</div>
+          <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-brunch-edition-tickets-69926647485?aff=storybookholidaybrunch" target="_blank" class="icon margin-15 text-uppercase btn btn-default btn-lg">Buy Tickets</a> </div>
       </div>
     </div>
   </div>
