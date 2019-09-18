@@ -272,17 +272,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row">
     <div class="container-md no-padding">
-		      <div class="col-md-6 no-padding">
+      <div class="col-md-6 no-padding">
         <div class="embed-responsive embed-responsive-16by9">
-          <video poster="poster.png" controls="controls">
-            <source src="steam-spot.avi" type="video/mp4">
+          <video poster="poster.png" controls="controls" muted="muted" >
+            <source src="https://dcl.org/would-you-rather/steam-spot.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="col-md-6 no-padding">
         <div class="embed-responsive embed-responsive-16by9">
-          <video poster="poster.png" controls="controls">
-            <source src="travel-spot.mp4" type="video/mp4">
+          <video poster="poster.png" controls="controls" muted="muted" >
+            <source src="https://dcl.org/would-you-rather/travel-spot.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -343,7 +343,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+	// Get all videos.
+var videos = document.querySelectorAll('video');
+
+// Create a promise to wait all videos to be loaded at the same time.
+// When all of the videos are ready, call resolve().
+var promise = new Promise(function(resolve) {
+  var loaded = 0;
+
+  videos.forEach(function(v) {
+    v.addEventListener('loadedmetadata', function() {
+      loaded++;
+
+      if (loaded === videos.length) {
+        resolve();
+      }
+    });
+  });
+});
+
+// Play all videos one by one only when all videos are ready to be played.
+promise.then(function() {
+  videos.forEach(function(v) {
+    v.play();
+  });
+});
+	</script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
 {
