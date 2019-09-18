@@ -39,6 +39,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Would You Rather | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
@@ -258,18 +261,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
-  <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
+  <!-- InstanceBeginEditable name="Content" --> 
+  <!--heading if needed <div class="row border-top">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Would You Rather</h1>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fas fa-book"></i></div>
         </div>
-        <h4 class="roboto text-center">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl.</h4>
+        <h4 class="roboto text-center margin-bottom-30">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl.</h4>
       </div>
     </div>
-  </div>
+  </div>-->
   <div class="row">
     <div class="container-md no-padding">
       <div class="col-md-6 no-padding">
@@ -278,7 +281,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <source src="https://dcl.org/would-you-rather/steam-spot.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="text-center">content goes here</div>
+        <div class="text-center padding-15 margin-bottom-30">
+          <h4>content goes here</h4>
+        </div>
       </div>
       <div class="col-md-6 no-padding">
         <div class="embed-responsive embed-responsive-16by9">
@@ -286,7 +291,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <source src="https://dcl.org/would-you-rather/travel-spot.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="text-center">content goes here</div>
+        <div class="text-center padding-15 margin-bottom-30">
+          <h4>content goes here</h4>
+        </div>
       </div>
     </div>
   </div>
@@ -349,12 +356,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 	// Get all videos.
 var videos = document.querySelectorAll('video');
-
 // Create a promise to wait all videos to be loaded at the same time.
 // When all of the videos are ready, call resolve().
 var promise = new Promise(function(resolve) {
   var loaded = 0;
-
   videos.forEach(function(v) {
     v.addEventListener('loadedmetadata', function() {
       loaded++;
@@ -365,7 +370,6 @@ var promise = new Promise(function(resolve) {
     });
   });
 });
-
 // Play all videos one by one only when all videos are ready to be played.
 promise.then(function() {
   videos.forEach(function(v) {
