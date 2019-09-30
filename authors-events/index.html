@@ -96,10 +96,46 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     }]);
   </script> 
 <!-- Push Notifications End - Do Not Remove -->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-.jodi-background {
-	background: #fff url("jodi-background.png") left center;
+/* carousel height, as percentage of width */
+/* inherit height from parent */
+* {
+	box-sizing: border-box;
+}
+.carousel-cell {
+	width: 100%;
+	white-space: nowrap;
+}
+.carousel-cell:before {
+	display: block;
+	text-align: center;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+@font-face {
+	font-family: 'Sunshine Script';
+	src: url('../shared-assets/web-fonts/sunshine_script-webfont.woff2') format('woff2'), url('../shared-assets/web-fonts/sunshine_script-webfont.woff') format('woff'), url('../shared-assets/web-fonts/sunshine_script-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.sunshine {
+	font-family: 'Sunshine Script', cursive;
+}
+h1.sunshine.green {
+	font-size: 3.5em;
+	color: #115252;
+}
+h2.sunshine.green {
+	font-size: 2.5em;
+	color: #115252;
+}
+.green {
+	color: #115252;
+}
+.wrapper-row {
+	background: linear-gradient(#bad1d5, #93bcbe);
 }
 .sub-title {
 	color: #E6E6E8;
@@ -109,17 +145,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .sub-nav-item a, .sub-nav-item a:hover {
 	padding: 19px 15px 15px 15px;
-}
-.jodi-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 15px 0 -16px 0;
-	background: #fff;
-}
-.jodi-item {
-	flex-basis: 36%;
-	padding: 30px 0;
 }
 .author-wrapper, .event-wrapper {
 	display: flex;
@@ -486,13 +511,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <div id="featured-events" class="row">
     <div class="container">
-      <div class="text-center padding-top-15 padding-bottom-15">
+      <div class="text-center padding-top-15 padding-bottom-30">
         <h1 class="jumbo-text text-uppercase font-weight-400">Featured Events</h1>
         <h4 class="roboto margin-lg-200 text-center">Don't miss these special library events! Check out our <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37&lib=ALL" target="_blank">Events Calendar</a> for more fun happenings at all DCL locations.</h4>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-15">
+  <div class="row wrapper-row green padding-top-30 padding-bottom-20">
+    <h1 class="sunshine green text-center no-margin-top">A Storybook Holiday</h1>
+    <div class="container no-gutter no-padding text-center">
+      <div class="col-md-4 col-md-push-4 text-center"><img class="img-responsive image-center" src="../storybook-holiday/nutcraker-logo.png" alt="Storybook Holiday, The Nutcracker">
+        <div class="carousel" data-flickity='{ "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "selectedAttraction": 0.15, "friction": 0.35, "autoPlay": 3000 }'>
+          <div class="carousel-cell">
+            <div>
+              <h3 class="green font-weight-400 text-uppercase">Visit with Santa</h3>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div>
+              <h3 class="green font-weight-400 text-uppercase">Live Ballet Performances</h3>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div>
+              <h3 class="green font-weight-400 text-uppercase">Music & Entertainment</h3>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div>
+              <h3 class="green font-weight-400 text-uppercase">Make-and-Take Gifts</h3>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div>
+              <h3 class="green font-weight-400 text-uppercase">Tasty Light Bites</h3>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div>
+              <h3 class="green font-weight-400 text-uppercase">Hot Cocoa Concoctions</h3>
+            </div>
+          </div>
+        </div>
+        <div class="green text-center padding-right-15 padding-left-15 padding-bottom-15">Celebrate the holiday season with DCL!</div>
+      </div>
+      <div class="col-md-4 col-md-pull-4 text-center padding-bottom-15">
+        <h2 class="sunshine green no-margin">Evening Edition</h2>
+        <div>Saturday, December 7, 5-9PM </div>
+        <div>Adults: $25</div>
+        <div>Kids, Ages 3-12: $20</div>
+        <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-evening-edition-tickets-69906561407?aff=FeaturedEvents" target="_blank" class="icon margin-15 text-uppercase btn btn-primary btn-lg">Buy Tickets</a> </div>
+      <div class="col-md-4 text-center padding-bottom-15">
+        <h2 class="sunshine green no-margin">Brunch Edition</h2>
+        <div>Sunday, December 8, 9-11AM</div>
+        <div>Adults: $22</div>
+        <div>Kids, Ages 3-12: $18</div>
+        <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-brunch-edition-tickets-69926647485?aff=FeaturedEvents" target="_blank" class="icon margin-15 text-uppercase btn btn-primary btn-lg">Buy Tickets</a> </div>
+    </div>
+  </div>
+  <div class="row padding-bottom-15 padding-top-30">
     <div class="container-md">
       <div class="event-wrapper">
         <div class="event-item"> <img class="img-responsive center-block" src="high-seas-murder.jpg" alt="Murder on the High Seas">
@@ -598,7 +675,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
 {
