@@ -90,7 +90,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding-bottom: 30px;
 }
 .gourd-row {
-	background: #f3c65e url("gourd-background.png") bottom center repeat-x;
+	background: #f3c65e url("gourds.png") bottom center repeat-x;
 	padding-bottom: 30px;
 }
 .link-wrapper {
@@ -108,6 +108,91 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	color: #b63c1f;
 	letter-spacing: .4px;
 	text-decoration: none;
+}
+.twinkle-one {
+	position: absolute;
+	top: 635px;
+	left: 58%;
+	-webkit-animation: rotate-scale-one 5s linear infinite both;
+	animation: rotate-scale-one 5s linear infinite both;
+}
+.twinkle-two {
+	position: absolute;
+	top: 420px;
+	left: 55%;
+	-webkit-animation: rotate-scale-two 5s 8s linear infinite both;
+	animation: rotate-scale-two 5s 8s linear infinite both;
+}
+.twinkle-three {
+	position: absolute;
+	top: 232px;
+	left: 31%;
+	-webkit-animation: rotate-scale-one 6s 2.5s linear infinite both;
+	animation: rotate-scale-one 6s 2.5s linear infinite both;
+}
+
+
+
+@media (max-width: 1120px) {
+.twinkle-three {
+	display: none;
+}
+}
+@-webkit-keyframes rotate-scale-one {
+0% {
+-webkit-transform: scale(1) rotateZ(0);
+transform: scale(1) rotateZ(0);
+}
+50% {
+-webkit-transform: scale(1.5) rotateZ(180deg);
+transform: scale(1.5) rotateZ(180deg);
+}
+100% {
+-webkit-transform: scale(1) rotateZ(360deg);
+transform: scale(1) rotateZ(360deg);
+}
+}
+@keyframes rotate-scale-one {
+0% {
+-webkit-transform: scale(1) rotateZ(0);
+transform: scale(1) rotateZ(0);
+}
+50% {
+-webkit-transform: scale(1.5) rotateZ(180deg);
+transform: scale(1.5) rotateZ(180deg);
+}
+100% {
+-webkit-transform: scale(1) rotateZ(360deg);
+transform: scale(1) rotateZ(360deg);
+}
+}
+@-webkit-keyframes rotate-scale-two {
+0% {
+-webkit-transform: scale(1) rotateZ(0);
+transform: scale(1) rotateZ(0);
+}
+50% {
+-webkit-transform: scale(.7) rotateZ(-180deg);
+transform: scale(.7) rotateZ(-180deg);
+}
+100% {
+-webkit-transform: scale(1) rotateZ(-360deg);
+transform: scale(1) rotateZ(-360deg);
+}
+}
+@keyframes rotate-scale-two {
+0% {
+-webkit-transform: scale(1) rotateZ(0);
+transform: scale(1) rotateZ(0);
+}
+50% {
+-webkit-transform: scale(.7) rotateZ(-180deg);
+transform: scale(.7) rotateZ(-180deg);
+}
+100% {
+-webkit-transform: scale(1) rotateZ(-360deg);
+transform: scale(1) rotateZ(-360deg);
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -292,6 +377,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row row-wrapper">
     <div class="gourd-row">
+      <div><img class="twinkle-one" src="twinkle-one.png" alt="twinkle"></div>
+      <div><img class="twinkle-two" src="twinkle-two.png" alt="twinkle"></div>
+      <div><img class="twinkle-three" src="twinkle-one.png" alt="twinkle"></div>
       <div class="link-wrapper text-center">
         <h1 style="margin-bottom: -10px;"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1494839149"><span style="font-size:1.2em;vertical-align:-5px;">10</span> Harvest Cookbooks</a></h1>
         <h1 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1498571159">Stories for Little Pumpkins</a></h1>
