@@ -96,42 +96,36 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"
 </noscript>
 <style>
 
-.gray-circle {
-	border: 10px solid #f5f5f5;
+.photo-one, .photo-two, .photo-three {
+	background: #fff;
+	display: inline;
+	padding: 10px 10px 20px 10px;
+	box-shadow: 0px 5px 5px rgba(0,0,0,.3);
+	border: 1px solid rgba(0,0,0,.05);
+	margin: 15px 0 25px 0;
 }
-
-
+	.photo-one {
+	-webkit-backface-visibility: hidden;
+	transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	}
+	.photo-two {
+	-webkit-backface-visibility: hidden;
+	transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+		margin-bottom: 5px;
+	}
+.photo-three {
+	-webkit-backface-visibility: hidden;
+	transform: rotate(4deg);
+	-webkit-transform: rotate(4deg);
+}
 .teal-bottom-bkg {
 	background: #fff url(teal-bottom.gif) center center repeat-x;
 }
 h4.nothing {
 	font-size: 40px;
 	margin-bottom: 0;
-}
-.box-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
-	}
-.box-item {
-	background: #fff;
-	width: 500px;
-	padding: 0 30px 10px;
-	margin: 5px;
-}
-
-@media (max-width: 768px) {
-.box-item {
-	width: 100%;
-}
-	.nav-justified li > a > h1 {
-white-space: pre-wrap;
-}
-}
-:target h1:first-of-type, :target h2:first-of-type, :target h1 a:first-of-type, :target h2 a:first-of-type {
-	-webkit-animation: target-fade 0s 0;
-	-moz-animation: target-fade 0s 0;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -329,7 +323,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="margin-top-5 margin-bottom-10"><img src="lego-camps.jpg" alt="Lego Camps" class="gray-circle img-circle img-responsive center-block"></div>
+    <div class="container text-center">
+      <div class="photos"><img src="holiday-camp-one.jpg" alt="Holiday Camp" class="photo-one img-responsive"><img src="holiday-camp-two.jpg" alt="Holiday Camp" class="photo-two img-responsive hidden-xs hidden-sm"><img src="holiday-camp-three.jpg" alt="Holiday Camp" class="hidden-xs hidden-sm hidden-md photo-three img-responsive"></div>
+    </div>
   </div>
   <div class="row text-center"> </div>
   <div class="row padding-bottom-30">
