@@ -80,9 +80,47 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<!-- pinterest - do not remove -->
+<!-- pinterest - do not remove --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
+</script> 
+<script type="text/javascript">
+$(document).ready(function () {
+    if (document.cookie.indexOf("shown=true")<1) {
+        var show = function(){
+                $('#myModal').modal('show');
+        };
+        $(window).load(function(){
+            var timer = window.setTimeout(show,0);
+        });
+    }
+    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+});
+</script>
 <link href="https://fonts.googleapis.com/css?family=Emilys+Candy&display=swap" rel="stylesheet">
 <style>
+@font-face {
+	font-family: 'Sunshine Script';
+	src: url('shared-assets/web-fonts/sunshine_script-webfont.woff2') format('woff2'), url('shared-assets/web-fonts/sunshine_script-webfont.woff') format('woff'), url('shared-assets/web-fonts/sunshine_script-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.bg-sbh {
+	background: linear-gradient(#83b6b3, #def9fa);
+	padding: 15px;
+}
+.bg-sbh h1 {
+	font-family: 'Sunshine Script', serif;
+	text-rendering: optimizeLegibility;
+	font-size: 52px;
+	color: #115252;
+}
+.bg-sbh h4 {
+	color: #115252;
+}
+.modal .close {
+	color: #fff;
+	opacity: .6;
+}
 .row-wrapper {
 	background: #54182d;
 }
@@ -102,6 +140,52 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	color: #ffb571;
 	letter-spacing: 2px;
 	text-decoration: none;
+}
+	.btn.btn-default.btn-lg {
+	background-color: #734a20;
+	color: #fff;
+}
+.btn.btn-default.btn-lg:hover, .btn.btn-default.btn-lg:focus {
+	background-color: #c79144;
+	color: #3f2811;
+}
+.icon {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.icon:after {
+	animation: shine 4s ease-in-out infinite;
+	animation-fill-mode: forwards;
+	content: "";
+	position: absolute;
+	top: -130%;
+	left: -230%;
+	width: 250%;
+	height: 250%;
+	opacity: 0;
+	transform: rotate(10deg);
+	background: rgba(237, 192, 105, 0.9);
+	background: linear-gradient( to right, rgba(237, 192, 105, 0.1) 0%, rgba(237, 192, 105, 0.2) 60%, rgba(237, 192, 105, 0.7) 80%, rgba(237, 192, 105, 0.9) 90%, rgba(237, 192, 105, 0.0) 100% );
+}
+.icon:active:after {
+	opacity: 0;
+}
+@keyframes shine {
+10% {
+opacity: 1;
+top: -30%;
+left: -30%;
+transition-property: left, top, opacity;
+transition-duration: 0.7s, 0.7s, 0.15s;
+transition-timing-function: ease;
+}
+100% {
+opacity: 0;
+top: -30%;
+left: -30%;
+transition-property: left, top, opacity;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -286,19 +370,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-sbh">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="text-center">
+          <h1>A Storybook Holiday Party</h1>
+          <div><img class="img-responsive" src="nutcracker.png" alt="Storybook Holiday"></div>
+          <h4>Storybook Holiday brunch is sold out.<br>
+            Get tickets now for the evening event!</h4>
+          <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-evening-edition-tickets-69906561407?aff=storybookholidayevening" target="_blank" class="icon margin-top-15 margin-bottom-30 text-uppercase btn btn-default btn-lg">Buy Tickets</a> </div>
+      </div>
+    </div>
+  </div>
   <div class="row row-wrapper">
     <div class="container no-padding no-gutter text-center">
       <div class="col-md-4 col-md-push-4">
         <div><img class="img-responsive center-block" src="pie-two.gif" alt="Pie"></div>
-        <h1><a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-evening-edition-tickets-69906561407?aff=DCLHomepage" target="_blank">A Storybook<br>Holiday Party</a></h1>
+        <h1><a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-evening-edition-tickets-69906561407?aff=homepagemodal" target="_blank">A Storybook<br>
+          Holiday Party</a></h1>
       </div>
       <div class="col-md-4 col-md-pull-4">
         <div><img class="img-responsive center-block" src="pie-one.png" alt="Pie"></div>
-        <h1><a href="camp-dcl/">HoliDay<br>Camp</a></h1>
+        <h1><a href="camp-dcl/">HoliDay<br>
+          Camp</a></h1>
       </div>
       <div class="col-md-4">
         <div><img class="img-responsive center-block" src="pie-three.png" alt="Pie"></div>
-        <h1><a href="donate/">Think<br>Giving</a></h1>
+        <h1><a href="donate/">Think<br>
+          Giving</a></h1>
       </div>
     </div>
   </div>
