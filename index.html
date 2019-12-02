@@ -96,11 +96,16 @@ $(document).ready(function () {
     document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
 });
 </script>
-<link href="https://fonts.googleapis.com/css?family=Emilys+Candy&display=swap" rel="stylesheet">
 <style>
 @font-face {
 	font-family: 'Sunshine Script';
 	src: url('shared-assets/web-fonts/sunshine_script-webfont.woff2') format('woff2'), url('shared-assets/web-fonts/sunshine_script-webfont.woff') format('woff'), url('shared-assets/web-fonts/sunshine_script-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Fox and Bower';
+	src: url('shared-assets/web-fonts/FoxAndBowerRegular.woff2') format('woff2'), url('shared-assets/web-fonts/FoxAndBowerRegular.woff') format('woff'), url('shared-assets/web-fonts/FoxAndBowerRegular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -121,25 +126,32 @@ $(document).ready(function () {
 	color: #fff;
 	opacity: .6;
 }
-.row-wrapper {
-	background: #54182d;
+.btn-default {
+	background-color: #ed8140;
 }
-.row-wrapper {
-	padding: 0 0 100px 0;
+.btn-default:active, .btn-default:hover, .btn-default:focus {
+	background-color: #b35324;
 }
-.row-wrapper h1 {
-	font-family: 'Emilys Candy', serif;
-	text-rendering: optimizeLegibility;
-	letter-spacing: 1px;
+h1.fox {
+	font-family: 'Fox and Bower', cursive;
+	font-size: 2.8em;
 	color: #fff;
+	letter-spacing: 1.5px;
 }
-.row-wrapper h1 a {
+.page-row {
+	background-color: #0f75bc;
 	color: #fff;
+	padding-bottom: 30px;
 }
-.row-wrapper h1 a:hover, .row-wrapper h1 a:focus, .row-wrapper h1 a:active {
-	color: #ffb571;
-	letter-spacing: 2px;
+.page-container {
+	background: #0f75bc url("acorn-background.jpg") bottom right no-repeat;
+}
+.content-column {
+	margin: 555px 15px 120px;
+}
+a.funding:hover, a.funding:focus {
 	text-decoration: none;
+	color: #ed8140;
 }
 .btn.btn-default.btn-lg {
 	background-color: #734a20;
@@ -185,6 +197,43 @@ opacity: 0;
 top: -30%;
 left: -30%;
 transition-property: left, top, opacity;
+}
+}
+.btn.btn-default.btn-funding.btn-lg {
+	background-color: #ed8140;
+}
+.btn.btn-default.btn-funding.btn-lg:hover, .btn.btn-default.btn-funding.btn-lg:focus {
+	background-color: #b35324;
+	color: #fff;
+}
+
+@media (min-width: 1200px) {
+.container.page-container {
+	width: 1020px;
+}
+}
+
+@media (min-width: 992px) {
+.content-column {
+	margin: 440px auto 222px auto;
+}
+}
+
+@media (max-width: 620px) {
+.page-container {
+	background: #0f75bc url("acorn-background-sm.jpg") bottom center no-repeat;
+	padding-bottom: 0px;
+}
+.content-column {
+	padding-bottom: 150px;
+	margin: 225px auto auto auto;
+	text-align: center;
+}
+.page-row {
+	padding-bottom: 0px;
+}
+.center-button {
+	text-align: center;
 }
 }
 </style>
@@ -386,22 +435,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row alert-warning">
     <div id="local-alert" class="container-md">Our Lone Tree location will close at 3PM Sat., Dec. 7, and reopen at 1PM Sun., Dec. 8, for <a class="text-underline white" href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-evening-edition-tickets-69906561407?aff=homepagemodal" target="_blank">A Storybook Holiday</a>.</div>
   </div>
-  <div class="row row-wrapper">
-    <div class="container no-padding no-gutter text-center">
-      <div class="col-md-4 col-md-push-4">
-        <div><img class="img-responsive center-block" src="pie-nutcracker.gif" alt="Pie"></div>
-        <h1><a href="https://www.eventbrite.com/e/a-storybook-holiday-the-nutcracker-evening-edition-tickets-69906561407?aff=homepagemodal" target="_blank">A Storybook<br>
-          Holiday Party</a></h1>
-      </div>
-      <div class="col-md-4 col-md-pull-4">
-        <div><img class="img-responsive center-block" src="pie-one.png" alt="Pie"></div>
-        <h1><a href="camp-dcl/">HoliDay<br>
-          Camp</a></h1>
-      </div>
-      <div class="col-md-4">
-        <div><img class="img-responsive center-block" src="pie-three.png" alt="Pie"></div>
-        <h1><a href="donate/">Think<br>
-          Giving</a></h1>
+  <div class="row page-row">
+    <div class="container page-container">
+      <div class="col-md-8 no-padding content-column">
+        <h1 class="white no-margin jumbo-text">Colorado Gives Day</h1>
+        <h2 class="white no-margin">December 10</h2>
+        <h1 class="fox no-margin-bottom"><a class="funding white" href="donate/">Funding the Future</a></h1>
+        <div class="padding-top-30 padding-bottom-30"><a class="btn btn-default btn-funding btn-lg" href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Schedule Donation </a></div>
       </div>
     </div>
   </div>
