@@ -83,33 +83,24 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <style>
 @font-face {
-	font-family: 'Sunshine Script';
-	src: url('shared-assets/web-fonts/sunshine_script-webfont.woff2') format('woff2'), url('shared-assets/web-fonts/sunshine_script-webfont.woff') format('woff'), url('shared-assets/web-fonts/sunshine_script-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
 	font-family: 'Fox and Bower';
 	src: url('shared-assets/web-fonts/FoxAndBowerRegular.woff2') format('woff2'), url('shared-assets/web-fonts/FoxAndBowerRegular.woff') format('woff'), url('shared-assets/web-fonts/FoxAndBowerRegular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
-.bg-sbh {
-	background: linear-gradient(#83b6b3, #def9fa);
-	padding: 15px;
-}
-.bg-sbh h1 {
-	font-family: 'Sunshine Script', serif;
-	text-rendering: optimizeLegibility;
-	font-size: 52px;
-	color: #115252;
-}
-.bg-sbh h4 {
-	color: #115252;
-}
-.modal .close {
+.page-row {
+	background-color: #257BE0;
 	color: #fff;
-	opacity: .6;
+	border-bottom: 5px solid #fff;
+}
+.goal-wrapper {
+	padding: 20px 15px 0 15px;
+}
+.goal-image {
+	padding-top: 150px;
+}
+.content-column {
+	position: absolute;
 }
 .btn-default {
 	background-color: #ed8140;
@@ -123,69 +114,9 @@ h1.fox {
 	color: #fff;
 	letter-spacing: 1.5px;
 }
-.page-row {
-	background-color: #0f75bc;
-	color: #fff;
-	padding-bottom: 30px;
-}
-.page-container {
-	background: #0f75bc url("acorn-background.jpg") bottom right no-repeat;
-}
-.foundation {
-	margin-bottom: 18px;
-}
-.content-column {
-	margin: 415px 15px 120px;
-}
 a.funding:hover, a.funding:focus {
 	text-decoration: none;
 	color: #ed8140;
-}
-.btn.btn-default.btn-lg {
-	background-color: #734a20;
-	color: #fff;
-}
-.btn.btn-default.btn-lg:hover, .btn.btn-default.btn-lg:focus {
-	background-color: #c79144;
-	color: #3f2811;
-}
-.icon {
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
-}
-.icon:after {
-	animation: shine 4s ease-in-out infinite;
-	animation-fill-mode: forwards;
-	content: "";
-	position: absolute;
-	top: -130%;
-	left: -230%;
-	width: 250%;
-	height: 250%;
-	opacity: 0;
-	transform: rotate(10deg);
-	background: rgba(237, 192, 105, 0.9);
-	background: linear-gradient( to right, rgba(237, 192, 105, 0.1) 0%, rgba(237, 192, 105, 0.2) 60%, rgba(237, 192, 105, 0.7) 80%, rgba(237, 192, 105, 0.9) 90%, rgba(237, 192, 105, 0.0) 100% );
-}
-.icon:active:after {
-	opacity: 0;
-}
-@keyframes shine {
-10% {
-opacity: 1;
-top: -30%;
-left: -30%;
-transition-property: left, top, opacity;
-transition-duration: 0.7s, 0.7s, 0.15s;
-transition-timing-function: ease;
-}
-100% {
-opacity: 0;
-top: -30%;
-left: -30%;
-transition-property: left, top, opacity;
-}
 }
 .btn.btn-default.btn-funding.btn-lg {
 	background-color: #ed8140;
@@ -195,39 +126,36 @@ transition-property: left, top, opacity;
 	color: #fff;
 }
 
-@media (min-width: 1200px) {
-.container.page-container {
-	width: 1020px;
+@media (max-width: 1200px) {
+.goal-image {
+	padding-top: 175px;
 }
 }
 
-@media (min-width: 992px) {
-.content-column {
-	margin: 360px auto 222px auto;
+@media (max-width: 992px) {
+.goal-image {
+	padding-top: 225px;
 }
 }
 
-@media (min-width: 668px) {
-.content-column {
-	margin: 465px 15px 120px;
+@media (max-width: 768px) {
+.goal-image {
+	padding-top: 225px;
 }
 }
 
-@media (max-width: 620px) {
-.page-container {
-	background: #0f75bc url("acorn-background-sm.jpg") bottom center no-repeat;
-	padding-bottom: 0px;
+@media (max-width: 655px) {
+.goal-image {
+	display: none;
 }
 .content-column {
-	padding-bottom: 150px;
-	margin: 225px auto auto auto;
+	position: relative;
 	text-align: center;
 }
-.page-row {
-	padding-bottom: 0px;
-}
-.center-button {
-	text-align: center;
+.content-column img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 }
 </style>
@@ -414,12 +342,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row page-row">
-    <div class="container page-container">
-      <div class="col-md-8 no-padding content-column"><img class="foundation" src="foundation-logo.png" alt="Douglas County Libraries Foundation">
-        <h1 class="white no-margin jumbo-text">Colorado Gives Day</h1>
-        <h2 class="white no-margin">December 10</h2>
-        <h1 class="fox no-margin-bottom"><a class="funding white" href="donate/">Funding the Future</a></h1>
-        <div class="padding-top-30 padding-bottom-30"><a class="btn btn-default btn-funding btn-lg" href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Schedule Donation </a></div>
+    <div class="container no-padding">
+      <div class="goal-wrapper">
+        <div class="content-column"><img class="img-responsive" src="foundation-logo.png" alt="Douglas County Libraries Foundation">
+          <h1 class="fox white no-margin-bottom">Funding the Future</h1>
+          <h2 class="white">Today is Colorado Gives Day</h2>
+          <a class="btn btn-default btn-funding btn-lg margin-top-30" href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Give Today!</a>
+          <div class="padding-top-30 padding-bottom-30"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img class="img-responsive" src="cgd-logo.png" alt="Colorado Gives Day"></a></div>
+        </div>
+        <div class="goal-image"><img class="img-responsive" src="goal.png" alt="Colorado Gives Day"></div>
       </div>
     </div>
   </div>
