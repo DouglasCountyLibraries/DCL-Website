@@ -81,10 +81,70 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<!-- pinterest - do not remove -->  
-
+<!-- pinterest - do not remove -->
+<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 <style>
-
+.theme.one {
+	background-image: url("one-background.png");
+	-webkit-animation: slide 30s linear infinite;
+	animation: slide 30s linear infinite;
+}
+.gradient-one {
+	background: linear-gradient(#c9e3fc, transparent);
+	padding-top: 15px;
+	padding-bottom: 30px;
+}
+.theme.one h1 a {
+	font-family: 'Cinzel', serif;
+	text-transform: uppercase;
+	color: #114577;
+	font-size: 32px;
+}
+.theme.one h1 {
+	line-height: .7;
+	margin-bottom: 15px;
+}
+.theme.one h1 a:hover, .theme.one h1 a:focus {
+	text-decoration: none;
+	color: #114577;
+	letter-spacing: .5px;
+}
+@-webkit-keyframes slide {
+from {
+background-position: 0 -291px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes slide {
+from {
+background-position: 0 -291px;
+}
+to {
+background-position: 0 0;
+}
+}
+.theme.two {
+	background: radial-gradient(#ffffff 30%,#83dae8 100%);
+	padding-top: 15px;
+	padding-bottom: 30px;
+}
+.theme.two h1 a {
+	font-family: 'Cinzel', serif;
+	text-transform: uppercase;
+	color: #e82e2a;
+	font-size: 32px;
+}
+.theme.two h1 {
+	line-height: .7;
+	margin-bottom: 15px;
+}
+.theme.two h1 a:hover, .theme.two h1 a:focus {
+	text-decoration: none;
+	color: #e82e2a;
+	letter-spacing: .5px;
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -268,23 +328,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-
-<div class="row theme one"><div class="container text-center">
-  <img src="https://placehold.it/400"><h1>One</h1>
-</div></div>
-<div class="row theme two"><div class="container text-center">
-  <img src="https://placehold.it/400"><h1>Two</h1>
-</div></div>
-<div class="row theme three"><div class="container text-center">
-  <img src="https://placehold.it/400"><h1>Three</h1>
-</div></div>
-<div class="row theme four"><div class="container text-center">
-  <img src="https://placehold.it/400"><h1>Four</h1>
-</div></div>
- 	<script>
+  <div class="row theme one">
+    <div class="gradient-one">
+      <div class="container text-center"> <img class="img-responsive image-center" src="one.png" alt="Happy Holidays">
+        <h1 class="no-margin"><a href="donate/">Funding the Future</a></h1>
+        <h1 class="no-margin"><a href="https://www.hoopladigital.com/collection/4941" target="_blank">Mistletoe Movies</a></h1>
+        <h1 class="no-margin"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1536351179">10 Holiday Books for Kids</a></h1>
+      </div>
+    </div>
+  </div>
+  <div class="row theme two">
+    <div class="container text-center"> <img class="img-responsive image-center" src="two.png" alt="Happy Holidays">
+      <h1 class="no-margin"><a href="donate/">Funding the Future</a></h1>
+      <h1 class="no-margin"><a href="https://www.hoopladigital.com/collection/4941" target="_blank">Mistletoe Movies</a></h1>
+      <h1 class="no-margin"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1536351179">10 Holiday Books for Kids</a></h1>
+    </div>
+  </div>
+  <script>
 var random = Math.floor(Math.random() * $('.theme').length);
 $('.theme').hide().eq(random).show();
-</script>
+</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
