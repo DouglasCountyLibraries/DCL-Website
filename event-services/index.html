@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,22 +76,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script src="../shared-assets/js/dcl.js"></script> 
 <!-- Start of Zendesk Widget script --> 
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
-<!-- End of Zendesk Widget script --> 
+<!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js">
-</script>
+<!-- modal popup once per session, expires after 7 days -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-    if (document.cookie.indexOf("shown=true")<1) {
-        var show = function(){
-                $('#myModal').modal('show');
-        };
-        $(window).load(function(){
-            var timer = window.setTimeout(show,0);
-        });
-    }
-    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-});
+            $(document).ready(function() {
+                 if ($.cookie('modalpop') == null) {
+                     $('#waterModal').modal('show');
+                     $.cookie('modalpop', '90');
+                 }
+             });
 </script>
 <!-- Facebook Pixel Code -->
 <script>
@@ -473,7 +469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="waterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content bg-water">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -783,4 +779,5 @@ $(document).ready(function() {
 </script> 
 <!-- End Structured Data -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
