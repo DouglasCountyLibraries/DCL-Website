@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#007b83">
 <meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css" integrity="sha256-qQHUQX+gGGYfpC7Zdni08sr+h0ymXr0avmIASucY4FM=" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="../shared-assets/css/dcl.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
@@ -90,38 +90,72 @@ fbq('track', 'PageView');
 </script>
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"
-/>
+src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
 </noscript>
 <style>
-
-.photo-one, .photo-two, .photo-three {
-	background: #fff;
-	display: inline;
-	padding: 10px 10px 20px 10px;
-	box-shadow: 0px 5px 5px rgba(0,0,0,.3);
-	border: 1px solid rgba(0,0,0,.05);
-	margin: 15px 0 25px 0;
+.nav-justified li > a > h1 {
+	color: #666;
+	opacity: .4;
+	white-space: nowrap;
 }
-	.photo-one {
-	-webkit-backface-visibility: hidden;
-	transform: rotate(-3deg);
-	-webkit-transform: rotate(-3deg);
-	}
-	.photo-two {
-	-webkit-backface-visibility: hidden;
-	transform: rotate(1deg);
-	-webkit-transform: rotate(1deg);
-		margin-bottom: 5px;
-	}
-.photo-three {
-	-webkit-backface-visibility: hidden;
-	transform: rotate(4deg);
-	-webkit-transform: rotate(4deg);
+.nav-justified li > a > h1:hover, .nav-justified li > a > h1:focus {
+	color: #666;
+	opacity: 1;
+}
+.nav-justified .active > a > h1 {
+	color: #666;
+	opacity: 1;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: #fff;
+	color: #999;
+}
+.gray-circle {
+	border: 10px solid #f5f5f5;
+}
+.white-circle {
+	border: 10px solid #fff;
+}
+.teal-circle {
+	border: 10px solid #4f878c;
+}
+.white-top-bkg {
+	background: #fff url(white-top.gif) center center repeat-x;
+}
+.white-bottom-bkg {
+	background: #fff url(white-bottom.gif) center center repeat-x;
+}
+.teal-bottom-bkg {
+	background: #fff url(teal-bottom.gif) center center repeat-x;
 }
 h4.nothing {
 	font-size: 40px;
 	margin-bottom: 0;
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	}
+.box-item {flex: 1;
+	padding: 0 30px 35px;
+	margin: 5px;
+}
+
+@media (max-width: 992px) {
+.box-item {
+	flex: none;
+	width: 100%;
+	
+}
+.nav-justified li > a > h1 {
+	white-space: pre-wrap;
+}
+}
+:target h1:first-of-type, :target h2:first-of-type, :target h1 a:first-of-type, :target h2 a:first-of-type {
+	-webkit-animation: target-fade 0s 0;
+	-moz-animation: target-fade 0s 0;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -191,6 +225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li><a href="../staff-recommendations/">Staff Recommendations</a></li>
           <li><a href="../business/">DCL for Business</a></li>
           <li><a href="../adult-education/">Adult Education & Test Prep</a></li>
+          <li><a href="../join-our-team/">Join Our Team</a></li>
         </ul>
       </li>
       <li class="dropdown kids-teens-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kids & Teens <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
@@ -200,7 +235,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li><a href="../kids-events/">Kids Events</a></li>
           <li><a href="../parents-teachers/">Parents & Teachers</a></li>
           <li><a href="../research/students/">Homework Help</a></li>
-          <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
+          <li><a href="../teens/">Teens</a></li>
         </ul>
       </li>
       <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
@@ -252,6 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                   <li><a href="../staff-recommendations/">Staff Recommendations</a></li>
                   <li><a href="../business/">DCL for Business</a></li>
                   <li><a href="../adult-education/">Adult Education & Test Prep</a></li>
+                  <li><a href="../join-our-team/">Join Our Team</a></li>
                 </ul>
               </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#kids-teens">Kids & Teens <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
@@ -261,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                   <li><a href="../kids-events/">Kids Events</a></li>
                   <li><a href="../parents-teachers/">Parents & Teachers</a></li>
                   <li><a href="../research/students/">Homework Help</a></li>
-                  <li><a href="http://blogs.douglascountylibraries.org/teens/">Teens</a></li>
+                  <li><a href="../teens/">Teens</a></li>
                 </ul>
               </li>
               <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
@@ -310,37 +346,314 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="separator-container">
         <div class="separator line-separator"><i class="fas fa-tree"></i></div>
       </div>
+      <h1 class="margin-top-5 text-uppercase font-weight-400">Spring Break Camps</h1>
     </div>
   </div>
-  <div class="row">
-    <div class="container text-center">
-      <h1 class="margin-top-5 no-margin-bottom font-weight-400">HoliDay Camp: Gift Giving</h1>
-      <h4 class="roboto text-center">Kids ages 7-10 will spend a full day creating special gift surprises for their family and friends. </h4>
+  
+  <!-- Nav tabs removed for now <div class="container margin-lg-100">
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li role="presentation" class="active"><a class="tab" href="#spring" aria-controls="one" role="tab" data-toggle="tab">
+        <h1 class="no-margin text-uppercase font-weight-400">Spring Break Camps</h1>
+        </a></li>
+      <li role="presentation"><a class="tab" href="#summer" aria-controls="two" role="tab" data-toggle="tab">
+        <h1 class="no-margin text-uppercase font-weight-400">Summer Camps</h1>
+        </a></li>
+    </ul>
+  </div>--> 
+  
+  <!-- Tab panes -->
+  <div class="tab-content"> 
+    <!-- 
+##################
+spring tab begins
+################## 
+-->
+    <div role="tabpanel" class="tab-pane fade in active" id="spring">
+      <div class="row">
+        <div class="container text-center padding-bottom-30">
+          <h2 class="no-margin-top text-uppercase font-weight-400">March 16-20</h2>
+          <h4 class="roboto text-center">Half-day camps, $175 per camper. Reserve a full day for a single camper for $315 (a 10% discount). Full-day campers will be at one location all day (Highlands Ranch, Lone Tree or Parker) and must bring a peanut-free lunch each day.</h4>
+          <div class="text-center"> <a href="spring-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-15 margin-bottom-15">Register Now!</a> </div>
+          <div class="text-uppercase font-weight-400"><a href="#" data-toggle="modal" data-target="#faq">Frequently Asked Questions</a></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="white-top-bkg">
+          <div id="highlands-ranch"><img src="lego-camps.jpg" alt="Highlands Ranch" class="gray-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-gray-5 text-center">
+        <h1 class="no-margin-top text-uppercase font-weight-400">Highlands Ranch</h1>
+      </div>
+      <div class="row bg-gray-5 padding-bottom-30">
+        <div class="container-md box-wrapper">
+          <div class="box-item bg-white">
+            <h3 class="text-center">LEGO Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 9AM-12:30PM, $175</h4>
+            <div>Kids ages 5-10 will level up their engineering skills with Snapology and thousands of LEGO parts including gears, pulleys, axles and levers. They'll apply real-world concepts in physics, engineering and architecture through fun projects designed to teach about simple and complex machines, structures and teamwork. Kids design and build as never before, and explore their craziest ideas in a supportive environment. </div>
+          </div>
+          <div class="box-item bg-white">
+            <h3 class="text-center">Steam Cooking Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 1-4:30PM, $175</h4>
+            <div>Cooking and science are a match made in...the kitchen! Campers ages 5-10 will explore the many connections between cooking and Science, Technology, Engineering, Art and Math! Chefs from Sticky Fingers add spice, subtract boredom and multiply the fun to create culinary masterpieces. Young chefs will not only create delectable dishes but also conduct experiments with edible ingredients in this fascinating and delicious camp.</div>
+          </div>
+          <div class="box-item bg-white">
+            <h3 class="text-center">Highlands Ranch Full Day Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 9AM-4:30PM, $315</h4>
+            <div>In the morning session, your child's imagination and skills will soar while they explore engineering concepts with Snapology through building and creating using LEGOs. The creativity doesn't stop there! Each afternoon, campers will cook up yummy food while learning about the connections and science of cooking. Campers need to bring their own peanut-free lunch daily; we will provide two snacks per day. </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="white-bottom-bkg">
+          <div id="lone-tree"><img src="art-camps.jpg" alt="Lone Tree" class="white-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1 class="no-margin-top text-uppercase font-weight-400">Lone Tree</h1>
+      </div>
+      <div class="row padding-bottom-30">
+        <div class="container-md box-wrapper">
+          <div class="box-item bg-gray-5">
+            <h3 class="text-center">Superfoods of the Rainbow Cooking Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 9AM-12:30PM, $175</h4>
+            <div>You may know that carrots can improve your eyesight, but did you know that cherries can help improve your memory? Kids ages 5-10 explore superfoods from all colors of the rainbow in this adventurous camp with experts from Sticky Fingers! Young chefs will learn about what makes certain ingredients so super for your body and how delicious they can taste, while practicing basic kitchen techniques on their way to becoming super chefs. </div>
+          </div>
+          <div class="box-item bg-gray-5">
+            <h3 class="text-center">Fantasy Art Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 1-4:30PM, $175</h4>
+            <div>Kids ages 5-10 will spend the week making amazing art from their wildest imaginations. They'll learn to draw wizards, unicorns and a flaming phoenix, and make their own fairy gardens, dragon pencil pots, bedazzled mermaid fins and much more! Camp is led by certified KidzArt instructors. </div>
+          </div>
+          <div class="box-item bg-gray-5">
+            <h3 class="text-center">Lone Tree Full Day Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 9AM-4:30PM, $315</h4>
+            <div>In the morning session, campers will learn how fun making and eating a rainbow of foods can be. Each afternoon, campers will kick up the creativity with fantasy art camp – where they learn to draw and create magical and mystical pieces throughout the week. Campers need to bring their own peanut-free lunch daily; we will provide two snacks per day. </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="white-top-bkg">
+          <div id="Parker"><img src="cooking-camps.jpg" alt="Parker" class="gray-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-gray-5 text-center">
+        <h1 class="no-margin-top text-uppercase font-weight-400">Parker</h1>
+      </div>
+      <div class="row bg-gray-5 padding-bottom-30">
+        <div class="container-md box-wrapper">
+          <div class="box-item bg-white">
+            <h3 class="text-center">Cooks + Books:<br>
+              Children's Literature + Cooking Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 9AM-12:30PM, $175</h4>
+            <div>Love to read as much as you love to cook? In this fun camp, kids ages 5-10 will read some favorite books and cook up recipes inspired by the stories: Cloudy with a Chance of Meatballs, Harry Potter, and Thelonius Monster's Sky-High Fly Pie. Young chefs will bring their imaginations to life in this hands-on literary and culinary experience with chefs from Sticky Fingers. </div>
+          </div>
+          <div class="box-item bg-white">
+            <h3 class="text-center">Horse Art Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 1-4:30PM, $175</h4>
+            <div>Campers ages 5-10 will draw horses in a variety of different art styles (Native American, realistic, abstract, etc.), while exploring lots of art mediums. They'll also make horseshoe suncatchers, clay horse stables and horse models, bookmarks, horse-themed mason jar lights and more in this fun camp led by instructors from Kidz Art. </div>
+          </div>
+          <div class="box-item bg-white">
+            <h3 class="text-center">Parker Full Day Camp</h3>
+            <h4 class="roboto text-center">Ages 5-10, 9AM-4:30PM, $315</h4>
+            <div>In the morning session, campers will cook and have fun with food and some of their favorite books. Each afternoon, campers will kick up the creativity with horse art camp – where they learn to draw and create through different art styles and mediums. Campers need to bring their own peanut-free lunch daily; we will provide two snacks per day. </div>
+          </div>
+        </div>
+        <div class="text-center"> <a href="spring-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Register Now!</a> </div>
+      </div>
+      <div class="row">
+        <div class="teal-bottom-bkg text-center">
+          <div><a href="https://agents.allstate.com/tammy-lopez-castle-pines-co.html"><img style="display: inline-block" src="allstate-insurance.jpg" alt="Allstate Insurance" class="teal-circle img-circle img-responsive"></a></div>
+        </div>
+      </div>
+      <div class="row bg-teal padding-bottom-30">
+        <div class="container">
+          <h4 class="white roboto text-center margin-lg-200">Camp scholarships provided via the <a class="white text-underline" href="../foundation/">Douglas County Libraries Foundation</a>, courtesy of our generous sponsor, <a class="white text-underline" href="https://agents.allstate.com/tammy-lopez-castle-pines-co.html" target="_blank">Tammy Lopez, Castle Pines Allstate</a>.</h4>
+          <div class="text-center"> <a href="scholarship-form/" class="btn btn-primary btn-lg text-uppercase margin-top-15">Apply Now!</a> </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="container text-center">
-      <div class="photos"><img src="holiday-camp-one.jpg" alt="Holiday Camp" class="photo-one img-responsive"><img src="holiday-camp-two.jpg" alt="Holiday Camp" class="photo-two img-responsive hidden-xs hidden-sm"><img src="holiday-camp-three.jpg" alt="Holiday Camp" class="hidden-xs hidden-sm hidden-md photo-three img-responsive"></div>
+    <!-- 
+##################
+spring tab ends
+################## 
+--> 
+    <!-- 
+##################
+summer tab begins
+################## 
+remove for now
+    <div role="tabpanel" class="tab-pane fade" id="summer">
+      <div class="row">
+        <div class="container text-center padding-bottom-30">
+          <h2 class="text-uppercase margin-top-30 font-weight-400">June 3-August 2</h2>
+          <h4 class="roboto text-center">Camp DCL's weeklong, half-day summer camps provide hands-on fun and unique learning experiences for kids ages 5-12, giving them the chance to discover what they love. All camps include supplies and daily snacks.</h4>
+          <div class="text-center"> <a href="summer-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-15 margin-bottom-15">Register Now!</a> </div>
+          <div class="text-uppercase font-weight-400"><a href="#" data-toggle="modal" data-target="#faq">Frequently Asked Questions</a></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="white-top-bkg">
+          <div id="Cooking Camps"><img src="cooking-camps.jpg" alt="Cooking Camps" class="gray-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-gray-5 text-center">
+        <h1 class="no-margin-top text-uppercase font-weight-400">Cooking Camps</h1>
+      </div>
+      <div class="row bg-gray-5 padding-bottom-30">
+        <div class="container-md no-padding box-wrapper">
+          <div class="box-item">
+            <h3 class="text-center">Global Flavors</h3>
+            <h4 class="roboto text-center">Kids ages 6-10 will cook their way around the world in this fun and delicious camp! </h4>
+            <div>What better way to explore another culture than through its food? Young chefs will explore global customs, songs and languages while creating tasty, healthy cuisine from South America, Europe, Africa and Asia. Recipes include French Apple Cranberry Tarte Tatin Cups and Indian Sweet Potato Samosas. Camp facilitated by professionals from Sticky Fingers. </div>
+            <div>
+              <h5>Roxborough, Ages 6-10, JUN 3-7, 9AM-12:30PM, $170</h5>
+              <h5>Castle Rock, Ages 6-10, JUL 15-19, 9AM-12:30PM, $170</h5>
+            </div>
+          </div>
+          <div class="box-item">
+            <h3 class="text-center">Kids Cooking Network</h3>
+            <h4 class="roboto text-center">Chefs ages 8-12 will work together to complete cooking challenges.</h4>
+            <div>Campers will complete challenges inspired by favorite TV shows, like Master Chef Jr., Cupcake Wars, Chopped Jr., and Cutthroat Kitchen. Kids will learn about new cooking equipment and techniques, explore flavor pairing, and create mouthwatering recipes from scratch each day. Recipes include Hawaiian Rainbow Watermelon Poke Bowls and Wonderous Watermelon Soda Spanish Red Pepper Croquetas. Camp facilitated by professionals from Sticky Fingers. </div>
+            <div>
+              <h5 class="no-margin-bottom" style="text-decoration:line-through;">Lone Tree, Ages 8-12, JUN 10-14, 1:30-5PM, $170</h5>
+              <div class="text-uppercase font-weight-400">Sold out - <a href="waitlist-form/">Join the waitlist</a></div>
+              <h5>Parker, Ages 8-12, JUL 22-26, 9AM-12:30PM, $170</h5>
+            </div>
+          </div>
+          <div class="box-item">
+            <h3 class="text-center">Cooks & Books</h3>
+            <h4 class="roboto text-center">Kids ages 6-10 will bring their favorite books to life!</h4>
+            <div>Campers will bring their favorite books to life through delicious recipes like "Cloudy With a Chance of Spaghetti & Meat Balls," Fastest Tomato Sauce Ever, Harry Potter's Pumpkin Pasties, and Madame Pomfrey's Pumpkin Smoothies. Young chefs will broaden their imaginations and expand their skills in this hands-on literary and culinary camp. Camp facilitated by professionals from Sticky Fingers. </div>
+            <div>
+              <h5>Castle Pines, Ages 6-10, JUN 24-28, 9AM-12:30PM, $170</h5>
+              <h5>Lone Tree, Ages 6-10, JUL 29-AUG 2, 9AM-12:30PM, $170</h5>
+            </div>
+          </div>
+        </div>
+        <div class="text-center"> <a href="summer-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Register Now!</a> </div>
+      </div>
+      <div class="row">
+        <div class="white-bottom-bkg">
+          <div id="Art Camps"><img src="art-camps.jpg" alt="Art Camps" class="white-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1 class="no-margin-top text-uppercase font-weight-400">Art Camps</h1>
+      </div>
+      <div class="row padding-bottom-30">
+        <div class="container-md no-padding box-wrapper">
+          <div class="box-item">
+            <h3 class="text-center">Zoofari Animal Art</h3>
+            <h4 class="roboto text-center">Kids ages 7-11 are going on safari!</h4>
+            <div>They'll check out all kinds of cool creatures and the places they live, then learn how to draw some of their favorite exotic animals using bold patterns and colors. This camp is packed with 2-D and 3-D projects&mdash;drawing on velvet and rainbow paper, collage, wire sculpture, watercolor and more! Kids will gain skills that will last a lifetime through fun art techniques. Camp facilitated by professionals from KidzArt.</div>
+            <div>
+              <h5>Highlands Ranch, Ages 7-11, JUN 3-7, 1:30-5PM, $165</h5>
+              <h5>Castle Pines, Ages 7-11, JUL 15-19, 1:30-5PM, $165</h5>
+            </div>
+          </div>
+          <div class="box-item">
+            <h3 class="text-center">Out of This World Space Art</h3>
+            <h4 class="roboto text-center">Kids ages 7-11 launch into an exciting galaxy of drawings and projects.</h4>
+            <div>They'll voyage to realms both real and imagined, touch down on the famous Peaceful Pink and Purple Puppy Planet, and design their own planets as they experiment with sculpture, painting and projects to thrill any outer space explorer. Camp facilitated by professionals from KidzArt.</div>
+            <div>
+              <h5>Parker, Ages 7-11, JUN 17-21, 9AM-12:30PM, $165</h5>
+              <h5>Castle Rock, Ages 7-11, JUN 24-28, 1:30-5PM, $165</h5>
+            </div>
+          </div>
+        </div>
+        <div class="text-center"> <a href="summer-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Register Now!</a> </div>
+      </div>
+      <div class="row">
+        <div class="white-top-bkg">
+          <div id="Lego Camps"><img src="lego-camps.jpg" alt="Lego Camps" class="gray-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-gray-5 text-center">
+        <h1 class="no-margin-top text-uppercase font-weight-400">LEGO Camps</h1>
+      </div>
+      <div class="row bg-gray-5 padding-bottom-30">
+        <div class="container-md no-padding box-wrapper">
+          <div id="" class="box-item">
+            <h3 class="text-center">Jedi LEGO Engineering</h3>
+            <h4 class="roboto text-center">Young Jedi ages 5-8 will love this introductory engineering course!</h4>
+            <div>The Force Awakens as they explore concepts while designing and building LEGO projects such as XWings, R2 Units, Energy Catapults, Defense Turrets, and Settlements from a galaxy far, far away. They'll even create motorized projects to defeat the Empire! Camp facilitated by professionals from Play-Well TEKnologies.</div>
+            <div>
+              <h5>Roxborough, Ages 5-8, JUL 8-12, 9AM-12:30PM, $170</h5>
+            </div>
+          </div>
+          <div class="box-item">
+            <h3 class="text-center">Harry Potter Master LEGO Engineering</h3>
+            <h4 class="roboto text-center">Campers ages 7-11 will master the magic of Harry Potter using LEGOs!</h4>
+            <div>Kids will build Diagon Alley, explore Hogwarts School of Witchcraft and Wizardry, play Quidditch, challenge the serpentine Basilisk, and face the evil Voldemort. They'll have so much fun they won't realize they're learning advanced STEM concepts in the process! Camp facilitated by professionals from Play-Well TEKnologies.</div>
+            <div>
+              <h5>Castle Rock, Ages 7-11, JUL 22-26, 1:30-5PM, $170</h5>
+            </div>
+          </div>
+          <div id="" class="box-item">
+            <h3 class="text-center">Minecraft LEGO Engineering</h3>
+            <h4 class="roboto text-center">Young campers ages 5-7 will bring Minecraft to life using tens of thousands of LEGO parts!</h4>
+            <div>They'll build engineer-designed projects such as a motorized Creeper, a portal to the Nether, and a moving Minecart with the guidance of an experienced instructor. Whether kids are new to Minecraft and LEGO materials or seasoned veterans, they'll be hooked on the endless creative possibilities. Camp facilitated by professionals from Play-Well TEKnologies.</div>
+            <div>
+              <h5>Parker, Ages 5-7, JUL 29-AUG 2, 1:30-5PM, $170</h5>
+            </div>
+          </div>
+        </div>
+        <div class="text-center"> <a href="summer-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Register Now!</a> </div>
+      </div>
+      <div class="row">
+        <div class="white-bottom-bkg">
+          <div id="STEAM Camps"><img src="steam-camps.jpg" alt="STEAM Camps" class="white-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1 class="no-margin-top text-uppercase font-weight-400">STEAM Camps</h1>
+      </div>
+      <div class="row padding-bottom-30">
+        <div class="container-md no-padding box-wrapper">
+          <div class="box-item">
+            <h3 class="text-center">Robotics for Little Coders</h3>
+            <h4 class="roboto text-center">Campers ages 5-7 will develop computational thinking skills and build their first programs!</h4>
+            <div>We'll introduce students to basic coding concepts with simple tasks, such as customizing their Ozobot and assigning commands through different colors, then build up to more complex tasks with Ozobot's simple drag-and-drop language. Ozobot is designed for early readers' cognitive abilities and typical attention spans. Camp facilitated by professionals from Coding With Kids.</div>
+            <div>
+              <h5>Highlands Ranch, Ages 5-7, JUN 10-14, 9AM-12:30PM, $240</h5>
+            </div>
+          </div>
+          <div class="box-item">
+            <h3 class="text-center">Minecraft Adventure</h3>
+            <h4 class="roboto text-center">Kids ages 8-12 will create and innovate on our exclusive, safe, and local online server.</h4>
+            <div>They'll work together to build towns and strategize to complete four epic quests, travelling to far away lands, battling foes, and navigating through fiery volcanoes. After camp, participants will receive a "Minecraft Crafting and Skills Guide," a surprise Minecraft gift, and a year of access to the exclusive server where they can continue to play with their new friends. Camp facilitated by professionals from Colorado Code Club. </div>
+            <div>
+              <h5>Lone Tree, Ages 8-12, JUN 17-21, 1:30-5PM, $240</h5>
+            </div>
+          </div>
+          <div class="box-item">
+            <h3 class="text-center">WeDo Robotics</h3>
+            <h4 class="roboto text-center">Kids ages 7-9 will build and program robots in this introductory class using the LEGO WeDo system.</h4>
+            <div>They'll learn basic programming skills, simple engineering concepts, and the names of robot components, then work in small groups to complete several projects using tilt and motion sensors. This is a great way to prepare young robotics enthusiasts for our more advanced robotics programs. Camp facilitated by professionals from Play-Well TEKnologies.</div>
+            <div>
+              <h5>Highlands Ranch, Ages 7-9, JUL 8-12, 1:30-5PM, $185</h5>
+            </div>
+          </div>
+        </div>
+        <div class="text-center"> <a href="summer-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Register Now!</a> </div>
+      </div>
+      <div class="row">
+        <div class="teal-bottom-bkg text-center">
+          <div><a href="https://agents.allstate.com/tammy-lopez-castle-pines-co.html"><img style="display: inline-block" src="allstate-insurance.jpg" alt="Allstate Insurance" class="teal-circle img-circle img-responsive"></a></div>
+        </div>
+      </div>
+      <div class="row bg-teal padding-bottom-30">
+        <div class="container">
+          <h4 class="white roboto text-center margin-lg-200">Camp scholarships provided via the <a class="white text-underline" href="../foundation/">Douglas County Libraries Foundation</a>, courtesy of our generous sponsor, <a class="white text-underline" href="https://agents.allstate.com/tammy-lopez-castle-pines-co.html" target="_blank">Tammy Lopez, Castle Pines Allstate</a>.</h4>
+          <div class="text-center"> <a href="scholarship-form/" class="btn btn-primary btn-lg text-uppercase margin-top-15">Apply Now!</a> </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row text-center"> </div>
-  <div class="row padding-bottom-30">
-    <div class="container text-center margin-lg-150">
-      <div>During the morning, campers will work with artists from <i>KidzArt</i> to create unique gifts, and in the afternoon professionals from <i>Craftsman & Apprentice</i> will lead the gift-making session. Each camper will head home with at least five handmade holiday gifts, wrapped and ready to give or place under the tree. Please pack a lunch. </div>
-      <h5>Lone Tree, Ages 7-10, DEC 20, 9AM-4PM, $75</h5>
-    </div>
-    <div class="text-center"> <a href="holiday-registration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-15 margin-bottom-15">Register Now!</a>
-      <div class="text-uppercase font-weight-400"><a href="#" data-toggle="modal" data-target="#faq">Frequently Asked Questions</a></div>
-    </div>
-  </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-30">
-    <div class="container text-center grow"><a class="white nothing" href="camps/">A typical day<br class="insert-break" />
-      at Camp DCL...</a></div>
-  </div>
-  <div class="row bg-lavender padding-top-15 padding-bottom-30">
-    <div class="container">
-      <h4 class="roboto white text-center margin-lg-200">Spring break camp registration opens January 2020. Applications for Camp DCL scholarships will be available soon.</h4>
-    </div>
+    <!-- 
+##################
+summer tab ends
+################## 
+--> 
   </div>
   <div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog">
@@ -350,13 +663,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h2 class="modal-title text-center no-margin" id="myModalLabel">FAQs</h2>
         </div>
         <div class="modal-body padding-30">
-          <h5 class="no-margin-top">Please note: Your camper’s spot is not fully secured until your payment has been processed by Douglas County Libraries and you have received a payment confirmation email.</h5>
+          <h5 class="no-margin-top">Please note: Your camper's spot is not fully secured until your payment has been processed by Douglas County Libraries and you have received a payment confirmation email.</h5>
           <div class="margin-bottom-10"> <span class="font-weight-400">Q:</span> Are snacks provided, and what are they?<br>
             <span class="font-weight-400">A:</span> Yes, we provide a drink (usually juice and/or water), fresh fruit (an apple, small orange, etc.), and usually a nut-free prepackaged snack (such as graham crackers, animal crackers, etc.). We will let you know which specific snacks will be offered for your camp in the pre-camp email.</div>
           <div class="margin-bottom-10"> <span class="font-weight-400">Q:</span> Will you provide more information on the camp as the date gets closer?<br>
-            <span class="font-weight-400">A:</span> Yes, a pre-camp email will be sent the week prior to your scheduled camp and it will list the dates, times, location, a brief daily description, tips or notes for the week, a contact phone number, and any additional information you’ll need to review prior to the start of camp.</div>
+            <span class="font-weight-400">A:</span> Yes, a pre-camp email will be sent the week prior to your scheduled camp and it will list the dates, times, location, a brief daily description, tips or notes for the week, a contact phone number, and any additional information you'll need to review prior to the start of camp.</div>
           <div class="margin-bottom-10"> <span class="font-weight-400">Q:</span> What is your cancellation policy?<br>
-            <span class="font-weight-400">A:</span> Cancellations & Refunds: Cancellations made up to three business days prior to Camp start will be eligible for a full refund, less a $50 cancellation fee. No refund is given for a cancellation with fewer than three business days’ notice. A full refund will be given if DCL cancels a Camp for any reason. In the event of a DCL-initiated cancellation, parents or guardians will be notified by email or phone. Parents wishing to withdraw a child from Camp should provide written notification via email.</div>
+            <span class="font-weight-400">A:</span> Cancellations & Refunds: Cancellations made up to three business days prior to Camp start will be eligible for a full refund, less a $50 cancellation fee. No refund is given for a cancellation with fewer than three business days' notice. A full refund will be given if DCL cancels a Camp for any reason. In the event of a DCL-initiated cancellation, parents or guardians will be notified by email or phone. Parents wishing to withdraw a child from Camp should provide written notification via email.</div>
           <div class="margin-bottom-10"> For more information on our Policies & Procedures, <a href="policies-procedures/">click here</a>.</div>
         </div>
       </div>
@@ -417,7 +730,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+$(function(){
+  var hash = window.location.hash;
+  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+});
+	</script> 
+<!-- InstanceEndEditable --> 
 <!-- Structured Data --> 
 <script type="application/ld+json">
 {
@@ -429,32 +749,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"addressRegion": "CO",
 		"postalCode": "80104",
 		"streetAddress": "100 S. Wilcox Street"
-	},
-	"event": {
-		"@type": "Event",
-		"about": ["Camp DCL", "Summer Reading", "Author Events, Kids Events"],
-		"name": "Douglas County Libraries Authors & Events",
-		"image": ["https://www.dcl.org/past-authors/images/dan-brown/dan-brown-speaking.jpg", "https://www.dcl.org/past-authors/images/jason-segel/jason-segel-laughing.jpg", "https://www.dcl.org/past-authors/images/sarah.j.maas/sarah-j-maas-answers.jpg", "https://www.dcl.org/past-authors/images/jojo-moyes/jojo-moyes-speaking.jpg"],
-		"description": "Spend an evening with diverse authors and hear the stories behind their stories. We regularly host bestsellers, local authors, children's writers, and more. Don't miss these special library events! Check out our Events Calendar for more fun happenings at all DCL locations.",
-		"url": "https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37&lib=ALL",
-		"startDate": "January 1, 2019",
-		"endDate": "December 31, 2019",
-		"performer": {
-			"@type": "Person",
-			"name": ["Dan Brown", "Jason Segel", "Sarah J. Maas", "JoJo Moyes", "Lemony Snicket", "Louis Penny", "Craig Johnson", "Diana Gabaldon", "Brad Meltzer"]
-		},
-		"location": {
-			"@type": "Place",
-			"name": "Douglas County Libraries",
-			"address": {
-				"@type": "PostalAddress",
-				"addressLocality": "Douglas County",
-				"addressRegion": "CO"
-			},
-			"image": ["https://www.dcl.org/past-authors/images/dan-brown/dan-brown-speaking.jpg", "https://www.dcl.org/past-authors/images/jason-segel/jason-segel-laughing.jpg", "https://www.dcl.org/past-authors/images/sarah.j.maas/sarah-j-maas-answers.jpg", "https://www.dcl.org/past-authors/images/jojo-moyes/jojo-moyes-speaking.jpg"],
-			"description": "Don't miss these special library events! Check out our Events Calendar for more fun happenings at all DCL locations.",
-			"url": "https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37&lib=ALL"
-		}
 	},
 	"telephone": "(303) 791-7323",
 	"name": "Douglas County Libraries",
