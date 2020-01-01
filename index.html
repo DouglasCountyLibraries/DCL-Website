@@ -80,132 +80,51 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<!-- pinterest - do not remove --> 
-<link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+<!-- pinterest - do not remove -->
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap" rel="stylesheet">
 <style>
-.camp-one {
-	background-image: url("one-background.png");
-	-webkit-animation: slide 25s linear infinite;
-	animation: slide 25s linear infinite;
-	background-color: #fff;
+.row .circle-container {
+	padding: 300px 15px 75px 15px;
 }
-.camp-two {
-	background: linear-gradient(#c9e3fc, transparent);
-	padding: 15px;
+.circle-wrapper {
+	background: #fff url("background.png") top/cover;
 }
-.camp-one h1 {
-	font-family: 'Domine', serif;
-	color: #165a9c;
-	letter-spacing: .1px;
-	line-height: .9;
+.circle-container {
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
 }
-.camp-one, .camp-one a {
-	color: #439E6C;
-	font-size: 18px;
-	font-weight: 400;
+.circle {
+	background-color: #00b7c3;
+	width: 225px;
+	height: 225px;
+	border-radius: 50%;
+	margin: 1em;
 }
-.separator-container .separator.line-separator::before, .separator-container .separator.line-separator::after {
-	border: 1px solid #439E6C;
+.circle:hover {
+	background-color: #ef1165;
 }
-.fas.fa-tree {
-	color: #439E6C;
+.circle > a:hover {
+	text-decoration: none !important;
 }
-.btn.btn-default.btn-lg.buy-btn {
-	background: #d52a27;
-}
-.btn.btn-default.btn-lg.buy-btn:hover, .btn.btn-default.btn-lg.buy-btn:focus {
-	background: #971e1b;
-}
-.modal .close {
-	color: #165a9c;
-	opacity: .8;
-}
-.theme.one {
-	background-image: url("one-background.png");
-	-webkit-animation: slide 25s linear infinite;
-	animation: slide 25s linear infinite;
-}
-.gradient-one {
-	background: linear-gradient(#c9e3fc, transparent);
-	padding-top: 15px;
-	padding-bottom: 30px;
-}
-.theme.one h1 a {
-	font-family: 'Domine', serif;
-	color: #165a9c;
-	font-size: 30px;
-	letter-spacing: .1px;
-}
-.theme.one h1 {
-	line-height: .9;
-	margin-bottom: 10px;
-}
-.theme.one h1 a:hover, .theme.one h1 a:focus {
-	text-decoration: none;
-	color: #114577;
-	letter-spacing: .5px;
-}
-@-webkit-keyframes slide {
-from {
-background-position: 0 -291px;
-}
-to {
-background-position: 0 0;
-}
-}
-@keyframes slide {
-from {
-background-position: 0 -291px;
-}
-to {
-background-position: 0 0;
-}
-}
-.theme.two {
-	background-image: url("one-background.png");
-	-webkit-animation: slide 25s linear infinite;
-	animation: slide 25s linear infinite;
-}
-.gradient-two {
-	background: radial-gradient(transparent 0%, transparent, #8be7f6 100%);
-	padding-top: 15px;
-	padding-bottom: 30px;
-}
-.theme.two h1 a, .theme.three h1 a {
-	font-family: 'Domine', serif;
-	color: #d52a27;
-	font-size: 30px;
-	letter-spacing: .1px;
-}
-.theme.two h1, .theme.three h1 {
-	line-height: .9;
-	margin-bottom: 10px;
-}
-.theme.two h1 a:hover, .theme.two h1 a:focus, .theme.three h1 a:hover, .theme.three h1 a:focus {
-	text-decoration: none;
-	color: #971e1b;
-	letter-spacing: .5px;
-}
-.theme.three {
-	background: #fff url(three-background.png) top left repeat-x;
-	padding: 15px 0 30px;
+.aligner {
+	font-family: 'Comfortaa', sans-serif;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	text-align: center;
+	font-size: 24px;
+	line-height: 28px;
+	color: #fff;
 }
 
-@media (max-width: 992px) {
-.theme.three {
-	padding: 55px 0 30px;
-}
-}
-
-@media (max-width: 500px) {
-.theme.three {
-	padding: 130px 0 30px;
-}
-}
-
-@media (max-width: 425px) {
-.theme.three {
-	padding: 180px 0 30px;
+@media (max-width: 1057px) {
+.row .circle-container {
+	padding: 60px 15px 60px 15px;
 }
 }
 </style>
@@ -391,36 +310,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  
-  <div class="row theme one">
-    <div class="gradient-one">
-      <div class="container text-center"> <img class="img-responsive image-center" src="one.png" alt="Happy Holidays">
-        <h1 class="no-margin"><a href="donate/">Funding the Future</a></h1>
-        <h1 class="no-margin"><a href="top-checkouts/">2019 Top Checkouts</a></h1>
-        <h1 class="no-margin"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1536351179">10 Holiday Books for Kids</a></h1>
-      </div>
+  <div class="row circle-wrapper">
+    <div class="circle-container">
+      <div class="circle"> <a href="reading-challenge/">
+        <div class="aligner">Reading<br>
+          Challenge</div>
+        </a></div>
+      <div class="circle"><a href="library-perks/#aaptiv">
+        <div class="aligner">New You:<br>
+          Aaptiv Fitness</div>
+        </a></div>
+      <div class="circle"><a href="camp-dcl/">
+        <div class="aligner">Spring<br>
+          Camps</div>
+        </a> </div>
+      <div class="circle"><a href="top-checkouts/">
+        <div class="aligner">Top Checkouts<br>
+          2019</div>
+        </a> </div>
     </div>
   </div>
-  <div class="row theme two">
-    <div class="gradient-two">
-      <div class="container text-center"> <img class="img-responsive image-center" src="two.png" alt="Happy Holidays">
-        <h1 class="no-margin"><a href="donate/">Funding the Future</a></h1>
-        <h1 class="no-margin"><a href="top-checkouts/">2019 Top Checkouts</a></h1>
-        <h1 class="no-margin"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1536351179">10 Holiday Books for Kids</a></h1>
-      </div>
-    </div>
-  </div>
-  <div class="row theme three">
-    <div class="container text-center"> <img class="img-responsive image-center" src="three.png" alt="Happy Holidays">
-      <h1 class="no-margin"><a href="donate/">Funding the Future</a></h1>
-      <h1 class="no-margin"><a href="top-checkouts/">2019 Top Checkouts</a></h1>
-      <h1 class="no-margin"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1536351179">10 Holiday Books for Kids</a></h1>
-    </div>
-  </div>
-  <script>
-var random = Math.floor(Math.random() * $('.theme').length);
-$('.theme').hide().eq(random).show();
-</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix padding-bottom-20">
