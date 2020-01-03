@@ -96,49 +96,39 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     }]);
   </script> 
 <!-- Push Notifications End - Do Not Remove -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
+
 <style>
-/* carousel height, as percentage of width */
-/* inherit height from parent */
-* {
-	box-sizing: border-box;
-}
-.carousel-cell {
-	width: 100%;
-	white-space: nowrap;
-}
-.carousel-cell:before {
-	display: block;
-	text-align: center;
-}
-.flickity-prev-next-button {
-	display: none;
-}
 @font-face {
-	font-family: 'Sunshine Script';
-	src: url('../shared-assets/web-fonts/sunshine_script-webfont.woff2') format('woff2'), url('../shared-assets/web-fonts/sunshine_script-webfont.woff') format('woff'), url('../shared-assets/web-fonts/sunshine_script-webfont.ttf') format('truetype');
+	font-family: 'Everyday Loving';
+	src: url('subset-EverydayLoving-Regular.woff2') format('woff2'), url('subset-EverydayLoving-Regular.woff') format('woff'), url('subset-EverydayLoving-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
-.sunshine {
-	font-family: 'Sunshine Script', cursive;
+.loving {
+	font-family: 'Everyday Loving', cursive;
 }
-h1.sunshine.green {
-	font-size: 3.5em;
-	color: #115252;
+h1.loving {
+	font-size: 90px;
+	color: #333;
+	text-shadow: 1px 3px 1px #B1C5C2;
+	line-height: 75px;
 }
-h2.sunshine.green {
-	font-size: 2.5em;
-	color: #115252;
+.dicamillo-row {
+	background: #fff url(dicamillo-background.jpg) bottom/cover;
 }
-.green {
-	color: #115252;
+.dicamillo-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
-.wrapper-row {
-	background: linear-gradient(#bad1d5, #93bcbe);
+.dicamillo-item {
+	margin: 15px 15px 0 15px;
 }
-.sub-title {
-	color: #E6E6E8;
+.dicamillo-item img {
+	transform: rotate(-2deg);
+	box-shadow: 4px 5px 1px #b1c5c2;
+	-webkit-backface-visibility: hidden;
 }
 .events-active {
 	background-color: #f5f5f5;
@@ -183,10 +173,6 @@ h2.sunshine.green {
 	min-width: 100%;
 	padding: 15px;
 }
-.bg-white.padding-top-20.padding-right-40.padding-bottom-40.padding-left-40.shadow-low.equal-height {
-	max-width: 610px;
-	margin: 0 auto;
-}
 
 @media (max-width: 480px) {
 .author-item h2 {
@@ -194,6 +180,19 @@ h2.sunshine.green {
 }
 .author-item h4 {
 	text-align: center;
+}
+}
+
+@media (max-width: 1200px) {
+.dicamillo-item {
+	text-align: center;
+}
+}
+
+@media (min-width: 992px) {
+.dicamillo-item {
+	max-width: 750px;
+	margin: 15px 20px 15px 20px;
 }
 }
 
@@ -206,12 +205,6 @@ h2.sunshine.green {
 @media (min-width: 992px) {
 .event-item {
 	max-width: 400px;
-}
-}
-
-@media (min-width: 992px) {
-.top-padding {
-	padding-top: 30px;
 }
 }
 </style>
@@ -469,6 +462,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="col-sm-12 col-md-8 col-lg-15 sub-nav-item sub-nav-border equal-height">
         <h5 class="no-margin text-uppercase"><a class="show" href="../past-authors/"><i class="fas fa-history"></i>Past Authors</a></h5>
+      </div>
+    </div>
+  </div>
+  <div class="row dicamillo-row padding-top-20 padding-bottom-80">
+    <div class="container dicamillo-wrapper">
+      <div class="dicamillo-item"><a href="https://dcl.bibliocommons.com/item/show/1588021114"><img src="dicamillo-cover.jpg" alt="Beverly, Right Here"></a></div>
+      <div class="dicamillo-item">
+        <h4 class="roboto">DCL Presents:</h4>
+        <h1 class="loving no-margin">Kate DiCamillo</h1>
+        <div class="black">The Newbery Award-winning and <i>New York Times</i> bestselling author will visit Douglas County Libraries in Parker to talk about her newest book, <i><a href="https://dcl.bibliocommons.com/item/show/1588021114" class="text-underline black">Beverly, Right Here</a></i>, the finale in the Three Rancheros series. A copy of the book is included with ticket, and a book signing will follow the author's presentation.</div>
+        <h3 class="text-uppercase no-margin-bottom font-weight-400 gray-80 text-center text-left-md">Douglas County Libraries in Parker</h3>
+        <h4 class="no-margin gray-90">Saturday, March 14, 2-3:30PM</h4>
+        <div><a href="https://www.eventbrite.com/e/dcl-presents-kate-dicamillo-tickets-83361812425?aff=authorsevents" target="_blank" class="btn btn-primary btn-lg text-uppercase font-weight-400 margin-top-15">Buy Now!</a></div>
       </div>
     </div>
   </div>
