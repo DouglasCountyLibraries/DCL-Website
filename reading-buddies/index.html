@@ -85,10 +85,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .item-wrapper {
 	display: flex;
+	padding: 15px 0;
 }
 .item {
 	flex: 1;
-	padding: 15px;
+	padding: 0 15px;
 }
 .self .fa-check {
 	color: #90ad63;
@@ -109,6 +110,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .carousel-cell {
 	border-right: 1px solid rgba(255,255,255,.6);
+}
+@media (max-width: 992px) {
+.item-wrapper {
+	flex-direction: column;
+}
+.item {
+	padding: 0;
 }
 </style>
 <!-- InstanceEndEditable -->
