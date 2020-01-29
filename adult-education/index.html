@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,6 +86,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .dropdown-menu.dropdown-menu-center {
 	width: 330px;
 }
+.box-wrapper {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.box-item {
+	flex: 1;
+	padding: 15px 15px 40px 15px;
+	margin: 0 4px 15px 4px;
+}
 /* carousel height, as percentage of width */
 /* inherit height from parent */
 * {
@@ -110,6 +121,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .flickity-viewport {
 	transition: height 0.6s;
+}
+
+@media (max-width: 992px) {
+.box-wrapper {
+	flex-direction: column;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -348,36 +365,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-teal padding-top-40">
     <div class="container-md container-md-fix">
-      <div class="col-lg-3 col-md-6">
-        <div class="bg-white shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=terc" target="_blank"><span class="link-spanner"></span></a>
-            <h4>Testing &amp; Education Reference Center</h4>
-            <div>Online tests and prep tools for academic and professional exams. Also includes school scholarship info and a resume builder.</div>
-          </div>
+      <div class="box-wrapper">
+        <div class="box-item bg-white shadow-low hover-shadow default-block-container"> <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=terc" target="_blank"><span class="link-spanner"></span></a>
+          <h4>Testing &amp; Education Reference Center</h4>
+          <div>Online tests and prep tools for academic and professional exams. Also includes school scholarship info and a resume builder.</div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="bg-white shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank"><span class="link-spanner"></span></a>
-            <h4>Adult Learning Center</h4>
-            <div>Live assistance from Brainfuse on passing the GED, preparing for the U.S. citizenship test, writing a resume, and getting help with Microsoft Office.</div>
-          </div>
+        <div class="box-item bg-white shadow-low hover-shadow default-block-container"> <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank"><span class="link-spanner"></span></a>
+          <h4>Adult Learning Center</h4>
+          <div>Live assistance from Brainfuse on passing the GED, preparing for the U.S. citizenship test, writing a resume, and getting help with Microsoft Office.</div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="bg-white shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=news-for-you" target="_blank"><span class="link-spanner"></span></a>
-            <h4>News for You</h4>
-            <div>Easy-to-read news stories from reputable news services to help improve English language skills. Includes audio, vocabulary lists, exercises and puzzles.</div>
-          </div>
+        <div class="box-item bg-white shadow-low hover-shadow default-block-container"> <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=news-for-you" target="_blank"><span class="link-spanner"></span></a>
+          <h4>News for You</h4>
+          <div>Easy-to-read news stories from reputable news services to help improve English language skills. Includes audio, vocabulary lists, exercises and puzzles.</div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="bg-white shadow-low hover-shadow default-block-container gutter-five">
-          <div class="database-box"><a href="https://dcl.kanopy.com/category/supplier/great-courses" target="_blank"><span class="link-spanner"></span></a>
-            <h4>The Great Courses</h4>
-            <div>Unlimited access to college-level video courses covering a variety of subjects, including history, science, humanities, hobbies and more.</div>
-          </div>
+        <div class="box-item bg-white shadow-low hover-shadow default-block-container"> <a href="https://dcl.kanopy.com/category/supplier/great-courses" target="_blank"><span class="link-spanner"></span></a>
+          <h4>The Great Courses</h4>
+          <div>Unlimited access to college-level video courses covering a variety of subjects, including history, science, humanities, hobbies and more.</div>
+        </div>
+        <div class="box-item bg-white shadow-low hover-shadow default-block-container"> <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank"><span class="link-spanner"></span></a>
+          <h4>Mango Languages</h4>
+          <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
         </div>
       </div>
     </div>
@@ -423,13 +430,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div id="adult-tutoring" class="col-md-4 padding-bottom-30"><img class="img-responsive center-block" src="adult-tutoring.jpg" alt="Adult Tutoring">
         <h2 class="roboto text-center">Adult Tutoring</h2>
-        <div>Tutoring for <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and high school equivalency exam preparation is personalized to individual student needs. ESL and basic literacy students meet with tutors one hour a week for six months; high school equivalency students study with a tutor for three months. </div>
+        <div>Tutoring for <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, GED/HiSET/TASC exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for six months. GED/TASC/HiSET students work with tutor until they are ready to pass the test. </div>
         <div class="dropdown text-center"> <a class="btn btn-primary btn-lg text-uppercase margin-top-30" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Now <span class="caret"></span></a>
           <div class="dropdown-menu dropdown-menu-center">
             <div class="padding-15 text-capitalize">
               <ul class="list-unstyled no-margin">
-                <li><a href="https://forms.gle/vrGGcVtEpWFXuAiSA" target="_blank">HSE/GED Student Application</a></li>
-                <li class="margin-top-5"><a href=" https://forms.gle/saorQgwod2EXsf6R9" target="_blank">ESL Student Application</a></li>
+                <li><a href="https://forms.gle/oMTjaFTEk8LsYABFA" target="_blank">HSE/GED Student Application</a></li>
+                <li class="margin-top-5"><a href="https://forms.gle/PxJLHA5ENzWr9Grw6" target="_blank">ESL Student Application</a></li>
                 <li class="margin-top-5"><a href="https://forms.gle/g9rj3C8DSRKFCZTW7" target="_blank">Solicitud de tutor de ESL en español</a></li>
               </ul>
             </div>
@@ -541,8 +548,7 @@ $(function () {
 })
  </script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" -->
-
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -578,7 +584,8 @@ $(function () {
 		"https:\/\/twitter.com\/DCLcolorado"
 	]
 }
-</script>
+</script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
