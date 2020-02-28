@@ -96,7 +96,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .photo-container {
 	background: #fff8e6 url("photo-background.jpg") bottom center/cover;
 	display: flex;
-justify-content: center;
+	justify-content: center;
 	align-items: flex-start;
 }
 .marker {
@@ -104,13 +104,58 @@ justify-content: center;
 }
 .marker a:hover, .marker a:focus {
 	text-decoration: none;
-	color: rgba(51,51,51,1);
+	color: #340d84;
+}
+.link-row {
+	background: linear-gradient(270deg, #f7941d, #a53594);
+	background-size: 400% 400%;
+	-webkit-animation: AnimationName 10s ease infinite;
+	animation: AnimationName 10s ease infinite;
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 32px;
+	line-height: 30px;
+	padding: 30px 10px 33px;
+	text-align: center;
+	box-shadow: inset 0px 6px 9px -5px rgba(0,0,0,0.75);
+}
+-webkit-animation: AnimationName 8s ease infinite;
+animation: AnimationName 8s ease infinite;
+@-webkit-keyframes AnimationName {
+0% {
+background-position:0% 50%
+}
+50% {
+background-position:100% 50%
+}
+100% {
+background-position:0% 50%
+}
+}
+@keyframes AnimationName {
+0% {
+background-position:0% 50%
+}
+50% {
+background-position:100% 50%
+}
+100% {
+background-position:0% 50%
+}
+}
+.link-row a {
+	letter-spacing: 0.8px;
+	color: #fff;
+}
+.link-row a:hover, .link-row a:focus {
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-shadow: 0px 0px 15px rgba(255,255,255,.5);
 }
 h1.marker, h1.marker a {
 	font-size: 24px;
 	line-height: 26px;
 	letter-spacing: 0.8px;
-	color: rgba(51,51,51,.6);
+	color: #a53594;
 	margin: 10px 0 10px;
 }
 .photo-one, .photo-two, .photo-three {
@@ -118,104 +163,99 @@ h1.marker, h1.marker a {
 	text-align: center;
 	background: #e7eef0;
 	padding: 20px;
+	border-radius: 4px;
 	box-shadow: 1px 5px 8px 1px rgba(0,0,0,.6);
 	-webkit-backface-visibility: hidden;
 	max-width: 350px;
 }
 .photo-one {
-
 	-webkit-animation: photo-one 1s ease-out 0s both;
-	        animation: photo-one 1s ease-out 0s both;
+	animation: photo-one 1s ease-out 0s both;
 }
 .photo-two {
-
 	-webkit-animation: photo-two 1s ease-out .5s both;
-	        animation: photo-two 1s ease-out .5s both;
+	animation: photo-two 1s ease-out .5s both;
 }
 .photo-three {
-
 	-webkit-animation: photo-three 1s ease-out 1s both;
-	        animation: photo-three 1s ease-out 1s both;
+	animation: photo-three 1s ease-out 1s both;
 }
-
 @-webkit-keyframes photo-one {
-  0% {
-    -webkit-transform: rotate(-540deg) scale(0);
-            transform: rotate(-540deg) scale(0);
-    opacity: .6;
-  }
-  100% {
-    -webkit-transform: rotate(2deg) scale(1);
-            transform: rotate(2deg) scale(1);
-    opacity: 1;
-  }
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+opacity: .6;
+}
+100% {
+-webkit-transform: rotate(2deg) scale(1);
+transform: rotate(2deg) scale(1);
+opacity: 1;
+}
 }
 @keyframes photo-one {
-  0% {
-    -webkit-transform: rotate(-540deg) scale(0);
-            transform: rotate(-540deg) scale(0);
-    opacity: .6;
-  }
-  100% {
-    -webkit-transform: rotate(2deg) scale(1);
-            transform: rotate(2deg) scale(1);
-    opacity: 1;
-  }
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+opacity: .6;
 }
-	@-webkit-keyframes photo-two {
-  0% {
-    -webkit-transform: rotate(-540deg) scale(0);
-            transform: rotate(-540deg) scale(0);
-    opacity: .6;
-  }
-  100% {
-    -webkit-transform: rotate(-6deg) scale(1);
-            transform: rotate(-6deg) scale(1);
-    opacity: 1;
-  }
+100% {
+-webkit-transform: rotate(2deg) scale(1);
+transform: rotate(2deg) scale(1);
+opacity: 1;
+}
+}
+@-webkit-keyframes photo-two {
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+opacity: .6;
+}
+100% {
+-webkit-transform: rotate(-6deg) scale(1);
+transform: rotate(-6deg) scale(1);
+opacity: 1;
+}
 }
 @keyframes photo-two {
-  0% {
-    -webkit-transform: rotate(-540deg) scale(0);
-            transform: rotate(-540deg) scale(0);
-    opacity: .6;
-  }
-  100% {
-    -webkit-transform: rotate(-6deg) scale(1);
-            transform: rotate(-6deg) scale(1);
-    opacity: 1;
-  }
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+opacity: .6;
 }
-
-	
-	@-webkit-keyframes photo-three {
-  0% {
-    -webkit-transform: rotate(-540deg) scale(0);
-            transform: rotate(-540deg) scale(0);
-    opacity: .6;
-  }
-  100% {
-    -webkit-transform: rotate(6deg) scale(1);
-            transform: rotate(6deg) scale(1);
-    opacity: 1;
-  }
+100% {
+-webkit-transform: rotate(-6deg) scale(1);
+transform: rotate(-6deg) scale(1);
+opacity: 1;
+}
+}
+@-webkit-keyframes photo-three {
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+opacity: .6;
+}
+100% {
+-webkit-transform: rotate(6deg) scale(1);
+transform: rotate(6deg) scale(1);
+opacity: 1;
+}
 }
 @keyframes photo-three {
-  0% {
-    -webkit-transform: rotate(-540deg) scale(0);
-            transform: rotate(-540deg) scale(0);
-    opacity: .6;
-  }
-  100% {
-    -webkit-transform: rotate(6deg) scale(1);
-            transform: rotate(6deg) scale(1);
-    opacity: 1;
-  }
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+opacity: .6;
 }
-	
-@media (min-width: 1058px) {
+100% {
+-webkit-transform: rotate(6deg) scale(1);
+transform: rotate(6deg) scale(1);
+opacity: 1;
+}
+}
+
+@media (min-width: 1300px) {
 .photo-container {
-	padding: 135px 0
+	padding: 110px 0 200px;
 }
 .photo-one {
 	margin: 0 0 0 175px;
@@ -228,7 +268,39 @@ h1.marker, h1.marker a {
 }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 1299px) {
+.photo-container {
+	background: #fff8e6 url("plain-background.jpg") bottom center/cover;
+	align-items: center;
+	padding: 50px 0 125px;
+}
+.photo-one {
+	margin: 0 0 0 0;
+}
+.photo-two {
+	margin: 80px 10px 10px 0;
+}
+.photo-three {
+	margin: 73px 0 0 25px;
+}
+}
+
+@media (max-width: 1125px) {
+.photo-container {
+	background: #fff8e6 url("tall-background.jpg") bottom center/cover;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 0 0;
+}
+.photo-one {
+	margin: 10px;
+}
+.photo-two {
+	margin: 10px;
+}
+.photo-three {
+	margin: 10px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -414,9 +486,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row photo-container">
-
-	  
-	  
     <div class="photo-one"><img class="img-responsive" src="still-life.jpg" alt="Still Life">
       <h1 class="marker"><a href="say-i-do/">Host a Bash: Spring Flings at DCL</a></h1>
     </div>
@@ -424,11 +493,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h1 class="marker"><a href="https://douglascountylibraries.freegalmusic.com/search-page/love%2520songs" target="_blank">Mood Music: Love Songs & Playlists</a></h1>
     </div>
     <div class="photo-three"><img class="img-responsive" src="flappers.jpg" alt="Costume Party">
-      <h1 class="marker"><a href="camp-dcl/" target="_blank">Soirees & Such: Fictional Fetes</a></h1>
+      <h1 class="marker"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1584956199_soirees_such">Soirees & Such: Fictional Fetes</a></h1>
     </div>
-	  
-
   </div>
+  <div class="row link-row"><a href="camp-dcl/">Register Now: Spring & Summer Camps</a></div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
