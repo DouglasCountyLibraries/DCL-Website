@@ -89,14 +89,26 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<!-- pinterest - do not remove -->
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<!-- pinterest - do not remove -->
+
 <style>
-.photo-container {
-    background: #fff8e6 url("photo-background.jpg") bottom center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.closing-background {
+    padding: 100px 10px 120px;
+    background: #A31E21;
+    background-image: linear-gradient(135deg, #a31e21 25%, #c4282f 25%, #c4282f 50%, #a31e21 50%, #a31e21 75%, #c4282f 75%, #c4282f 100%);
+    background-size: 56.57px 56.57px;
+    box-shadow: inset 0px 0px 50px 5px rgba(0,0,0,.3);
+}
+.closing-box {
+    background: #fff;
+    padding: 0 15px 35px;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.4);
+}
+.closing-box h1 {
+    font-size: 200px;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 .marker {
     font-family: 'Permanent Marker', sans-serif;
@@ -105,27 +117,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     text-decoration: none;
     color: #340d84;
 }
-.notice-row {
-    background: linear-gradient(270deg, #d88119, #a53594);
-    background-size: 400% 400%;
-    -webkit-animation: AnimationName 20s ease infinite;
-    animation: AnimationName 20s ease infinite;
-    font-weight: 400;
-    padding: 30px 0 33px;
-    text-align: center;
-    box-shadow: inset 0px -6px 9px -5px rgba(0,0,0,0.75);
-}
 .link-row {
-    background: linear-gradient(270deg, #d88119, #a53594);
+    background: linear-gradient(270deg, #a10062, #850051);
     background-size: 400% 400%;
-    -webkit-animation: AnimationName 20s ease infinite;
-    animation: AnimationName 20s ease infinite;
+    -webkit-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
     font-family: 'Permanent Marker', sans-serif;
     font-size: 32px;
     line-height: 30px;
     padding: 30px 10px 33px;
     text-align: center;
-    box-shadow: inset 0px 6px 9px -5px rgba(0,0,0,0.75);
+    margin-top: 15px;
 }
 -webkit-animation: AnimationName 8s ease infinite;
 animation: AnimationName 8s ease infinite;
@@ -167,148 +169,16 @@ h1.marker, h1.marker a {
     color: #a53594;
     margin: 10px 0 10px;
 }
-.photo-one, .photo-two, .photo-three {
-    flex: 1 auto;
-    text-align: center;
-    background: #e7eef0;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 1px 5px 8px 1px rgba(0,0,0,.6);
-    -webkit-backface-visibility: hidden;
-    max-width: 350px;
-}
-.photo-one {
-    -webkit-animation: photo-one 1s ease-out 0s both;
-    animation: photo-one 1s ease-out 0s both;
-}
-.photo-two {
-    -webkit-animation: photo-two 1s ease-out .5s both;
-    animation: photo-two 1s ease-out .5s both;
-}
-.photo-three {
-    -webkit-animation: photo-three 1s ease-out 1s both;
-    animation: photo-three 1s ease-out 1s both;
-}
-@-webkit-keyframes photo-one {
-0% {
--webkit-transform: rotate(-540deg) scale(0);
-transform: rotate(-540deg) scale(0);
-opacity: .6;
-}
-100% {
--webkit-transform: rotate(2deg) scale(1);
-transform: rotate(2deg) scale(1);
-opacity: 1;
-}
-}
-@keyframes photo-one {
-0% {
--webkit-transform: rotate(-540deg) scale(0);
-transform: rotate(-540deg) scale(0);
-opacity: .6;
-}
-100% {
--webkit-transform: rotate(2deg) scale(1);
-transform: rotate(2deg) scale(1);
-opacity: 1;
-}
-}
-@-webkit-keyframes photo-two {
-0% {
--webkit-transform: rotate(-540deg) scale(0);
-transform: rotate(-540deg) scale(0);
-opacity: .6;
-}
-100% {
--webkit-transform: rotate(-6deg) scale(1);
-transform: rotate(-6deg) scale(1);
-opacity: 1;
-}
-}
-@keyframes photo-two {
-0% {
--webkit-transform: rotate(-540deg) scale(0);
-transform: rotate(-540deg) scale(0);
-opacity: .6;
-}
-100% {
--webkit-transform: rotate(-6deg) scale(1);
-transform: rotate(-6deg) scale(1);
-opacity: 1;
-}
-}
-@-webkit-keyframes photo-three {
-0% {
--webkit-transform: rotate(-540deg) scale(0);
-transform: rotate(-540deg) scale(0);
-opacity: .6;
-}
-100% {
--webkit-transform: rotate(6deg) scale(1);
-transform: rotate(6deg) scale(1);
-opacity: 1;
-}
-}
-@keyframes photo-three {
-0% {
--webkit-transform: rotate(-540deg) scale(0);
-transform: rotate(-540deg) scale(0);
-opacity: .6;
-}
-100% {
--webkit-transform: rotate(6deg) scale(1);
-transform: rotate(6deg) scale(1);
-opacity: 1;
+
+@media (max-width: 992px) {
+.closing-box h1 {
+    font-size: 150px;
 }
 }
 
-@media (min-width: 1300px) {
-.photo-container {
-    padding: 110px 0 200px;
-}
-.photo-one {
-    margin: 0 0 0 175px;
-}
-.photo-two {
-    margin: 80px 10px 10px 0;
-}
-.photo-three {
-    margin: 73px 0 0 25px;
-}
-}
-
-@media (max-width: 1299px) {
-.photo-container {
-    background: #fff8e6 url("plain-background.jpg") bottom center/cover;
-    align-items: center;
-    padding: 50px 0 125px;
-}
-.photo-one {
-    margin: 0 0 0 0;
-}
-.photo-two {
-    margin: 80px 10px 10px 0;
-}
-.photo-three {
-    margin: 73px 0 0 25px;
-}
-}
-
-@media (max-width: 1125px) {
-.photo-container {
-    background: #fff8e6 url("tall-background.jpg") bottom center/cover;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0 0;
-}
-.photo-one {
-    margin: 10px;
-}
-.photo-two {
-    margin: 10px;
-}
-.photo-three {
-    margin: 10px;
+@media (max-width: 575px) {
+.closing-box h1 {
+    font-size: 80px;
 }
 }
 </style>
@@ -494,15 +364,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row photo-container">
-    <div class="photo-one"><img class="img-responsive" src="still-life.jpg" alt="Still Life">
-      <h1 class="marker"><a href="say-i-do/">Host a Bash: Spring Flings at DCL</a></h1>
-    </div>
-    <div class="photo-two"><img class="img-responsive" src="couple.jpg" alt="Couple">
-      <h1 class="marker"><a href="https://douglascountylibraries.freegalmusic.com/search-page/love%2520songs" target="_blank">Mood Music: Love Songs & Playlists</a></h1>
-    </div>
-    <div class="photo-three"><img class="img-responsive" src="flappers.jpg" alt="Costume Party">
-      <h1 class="marker"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1584956199_soirees_such">Soirees & Such: Fictional Fetes</a></h1>
+  <div class="row closing-background">
+    <div class="container closing-box">
+      <h1 class="text-center">Closed</h1>
+      <div class="margin-lg-50"><h4 class="text-center">Please keep library items until we reopen. Fines will be waived.</h4>
+      <div>Please see our <a href="safety-notice/">Community Safety Notice</a> for the most up-to-date information on the DCL closure and what you need to know. Here are just a few ways to keep enjoying the library:</div>
+      <ul class="margin-top-10">
+        <li>Our <a href="digital-media/">digital library</a> is open, free and enhanced for more checkouts and shorter wait times! Find e-books, audiobooks, magazines and more.</li>
+        <li>Take advantage of your digital <a href="library-perks/">cardholder perks</a> to stay fit, keep calm, and keep learning!</li>
+        <li>Keep the kids engaged and entertained with virtual Storytime through <a href="https://www.storyblocks.org/" target="_blank">Storyblocks</a>.</li>
+        <li>Laugh a little (maybe a lot, we need it) with these <a href="https://www.hoopladigital.com/genre/318351159" target="_blank">free comedies</a>. Or choose from other genres. </li>
+        </ul></div>
     </div>
   </div>
   <div class="row link-row"><a href="camp-dcl/">Register Now: Summer Camps</a></div>
