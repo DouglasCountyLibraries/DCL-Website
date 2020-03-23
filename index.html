@@ -89,48 +89,103 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 <!-- pinterest - do not remove -->
-
+<link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap" rel="stylesheet">
 <style>
-.closing-background {
-    padding: 100px 10px 120px;
-    background: #A31E21;
-    background-image: linear-gradient(135deg, #a31e21 25%, #c4282f 25%, #c4282f 50%, #a31e21 50%, #a31e21 75%, #c4282f 75%, #c4282f 100%);
-    background-size: 56.57px 56.57px;
-    box-shadow: inset 0px 0px 50px 5px rgba(0,0,0,.3);
+.row .box-item-container {
+    padding: 185px 15px 220px 15px;
+    border-top: 6px solid #fff7e0;
+    border-bottom: 6px solid #fff7e0;
 }
-.closing-box {
-    background: #fff;
-    padding: 0 15px 35px;
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.4);
-}
-.closing-box h1 {
-    font-size: 200px;
+.link-row h4 {
     text-transform: uppercase;
+    color: #fff;
+    margin-top: 0;
     font-weight: 400;
 }
-.marker {
-    font-family: 'Permanent Marker', sans-serif;
+.box-item-wrapper {
+    background: #fff7e0 url("pattern-background.png");
 }
-.marker a:hover, .marker a:focus {
-    text-decoration: none;
-    color: #340d84;
+.box-item-container {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.box-item {
+    background-color: #fff;
+    width: 240px;
+    border-radius: 2px;
+    margin: .8em;
+    padding: 10px;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.box-item:hover {
+    background-color: rgb(255,255,255);
+    -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.75);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.box-item > a:hover {
+    text-decoration: none !important;
+    color: #000;
+}
+.aligner {
+    font-family: 'Bellota', sans-serif;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 34px;
+    color: #333;
+    border-radius: 2px;
+    padding: 62px 15px 68px 15px;
+}
+.smaller {
+    font-size: 22px;
+    line-height: 24px;
+}
+.aligner:hover {
+    color: #000;
+}
+.aligner.one {
+    border: 4px solid #9ed0c3;
+}
+.aligner.two {
+    border: 4px solid #2c787e;
+}
+.aligner.three {
+    border: 4px solid #ffc80c;
+}
+.aligner.four {
+    border: 4px solid #8da66d;
+}
+.aligner.five {
+    border: 4px solid #f07062;
 }
 .link-row {
-    background: linear-gradient(270deg, #a10062, #850051);
+    background: linear-gradient(270deg, #f07062, #ffc80c, #2c787c);
     background-size: 400% 400%;
-    -webkit-animation: AnimationName 5s ease infinite;
-    animation: AnimationName 5s ease infinite;
-    font-family: 'Permanent Marker', sans-serif;
+    -webkit-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+    font-family: 'Bellota', sans-serif;
     font-size: 32px;
     line-height: 30px;
-    padding: 30px 10px 33px;
+    padding: 35px 10px 40px;
     text-align: center;
-    margin-top: 15px;
 }
--webkit-animation: AnimationName 8s ease infinite;
-animation: AnimationName 8s ease infinite;
 @-webkit-keyframes AnimationName {
 0% {
 background-position:0% 50%
@@ -156,29 +211,17 @@ background-position:0% 50%
 .link-row a {
     letter-spacing: 0.8px;
     color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.15);
 }
 .link-row a:hover, .link-row a:focus {
     letter-spacing: 1px;
     text-decoration: none;
     text-shadow: 0px 0px 15px rgba(255,255,255,.5);
 }
-h1.marker, h1.marker a {
-    font-size: 24px;
-    line-height: 26px;
-    letter-spacing: 0.8px;
-    color: #a53594;
-    margin: 10px 0 10px;
-}
 
-@media (max-width: 992px) {
-.closing-box h1 {
-    font-size: 150px;
-}
-}
-
-@media (max-width: 575px) {
-.closing-box h1 {
-    font-size: 80px;
+@media (max-width: 1057px) {
+.row .box-item-container {
+    padding: 60px 15px 60px 15px;
 }
 }
 </style>
@@ -364,20 +407,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row closing-background">
-    <div class="container closing-box">
-      <h1 class="text-center">Closed</h1>
-      <div class="margin-lg-50"><h4 class="text-center">Please keep library items until we reopen. Fines will be waived.</h4>
-      <div>Please see our <a href="safety-notice/">Community Safety Notice</a> for the most up-to-date information on the DCL closure and what you need to know. Here are just a few ways to keep enjoying the library:</div>
-      <ul class="margin-top-10">
-        <li>Our <a href="digital-media/">digital library</a> is open, free and enhanced for more checkouts and shorter wait times! Find e-books, audiobooks, magazines and more.</li>
-        <li>Take advantage of your digital <a href="library-perks/">cardholder perks</a> to stay fit, keep calm, and keep learning!</li>
-        <li>Keep the kids engaged and entertained with virtual Storytime through <a href="https://www.storyblocks.org/" target="_blank">Storyblocks</a>.</li>
-        <li>Laugh a little (maybe a lot, we need it) with these <a href="https://www.hoopladigital.com/genre/318351159" target="_blank">free comedies</a>. Or choose from other genres. </li>
-        </ul><h4 class="text-center">Check back often for more digital library offerings!</h4></div>
+  <div class="row box-item-wrapper">
+    <div class="box-item-container">
+      <div class="box-item"> <a href="digital-media/">
+        <div class="aligner one">
+          <div class="smaller">Welcome to</div>
+          <div>DCL Digital</div>
+        </div>
+        </a></div>
+      <div class="box-item"><a href="http://getacard.org/v2/index.html" target="_blank">
+        <div class="aligner two">
+          <div class="smaller">Get a</div>
+          <div>Library Card</div>
+        </div>
+        </a></div>
+      <div class="box-item"><a href="https://www.hoopladigital.com/" target="_blank">
+        <div class="aligner three">
+          <div class="smaller">Fun with</div>
+          <div>Hoopla</div>
+        </div>
+        </a> </div>
+      <div class="box-item"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=tumblebooks" target="_blank">
+        <div class="aligner four">
+          <div class="smaller">Read & Watch with</div>
+          <div>Tumblebooks</div>
+        </div>
+        </a> </div>
+      <div class="box-item"><a href="safety-notice/">
+        <div class="aligner five">
+          <div>We're Closed</div>
+          <div class="smaller">More Details Here</div>
+        </div>
+        </a> </div>
     </div>
   </div>
-  <div class="row link-row"><a href="camp-dcl/">Register Now: Summer Camps</a></div>
+  <div class="row link-row">
+    <h4>Check back often for more digital library offerings!</h4>
+    <a href="camp-dcl/">Register Now: Summer Camps</a></div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
