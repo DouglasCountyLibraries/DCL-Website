@@ -107,89 +107,112 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- Push Notifications End - Do Not Remove -->
 
 <style>
+@font-face {
+	font-family: 'Everyday Loving';
+	src: url('subset-EverydayLoving-Regular.woff2') format('woff2'), url('subset-EverydayLoving-Regular.woff') format('woff'), url('subset-EverydayLoving-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.loving {
+	font-family: 'Everyday Loving', cursive;
+}
+h1.loving {
+	font-size: 90px;
+	color: #333;
+	text-shadow: 1px 3px 1px #B1C5C2;
+	line-height: 75px;
+}
+.dicamillo-row {
+	background: #fff url(dicamillo-background.jpg) bottom/cover;
+}
+.dicamillo-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.dicamillo-item {
+	margin: 15px 15px 0 15px;
+}
+.dicamillo-item img {
+	transform: rotate(-2deg);
+	-webkit-backface-visibility: hidden;
+}
 .events-active {
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
 }
 .sub-nav-item a, .sub-nav-item a:hover {
-    padding: 19px 15px 15px 15px;
-}
-.coben-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.coben-item {
-    margin: 15px 15px 0 15px;
+	padding: 19px 15px 15px 15px;
 }
 .author-wrapper, .event-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .event-item {
-    margin: 15px;
+	margin: 15px;
 }
 .author-item {
-    background: #fff;
-    padding: 30px 35px 40px 35px;
-    -webkit-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
-    margin: 5px;
+	background: #fff;
+	padding: 30px 35px 40px 35px;
+	-webkit-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+	margin: 5px;
 }
 .author-item h2 {
-    text-transform: uppercase;
-    font-weight: 400;
-    margin: 0;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin: 0;
 }
 .author-item h4 {
-    margin: 0;
-    padding-bottom: 15px;
+	margin: 0;
+	padding-bottom: 15px;
 }
 .dropdown-menu.dropdown-event-menu a {
-    color: #b0852e;
-    padding: 0;
-    line-height: 1.6em;
+	color: #b0852e;
+	padding: 0;
+	line-height: 1.6em;
 }
 .dropdown-menu.dropdown-event-menu a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 .dropdown-menu.dropdown-event-menu {
-    min-width: 100%;
-    padding: 15px;
+	min-width: 100%;
+	padding: 15px;
 }
 
 @media (max-width: 480px) {
 .author-item h2 {
-    text-align: center;
+	text-align: center;
 }
 .author-item h4 {
-    text-align: center;
+	text-align: center;
 }
 }
 
-@media (max-width: 992px) {
-.coben-wrapper {
-    text-align: center;
-    flex-direction: column;
+@media (max-width: 1200px) {
+.dicamillo-item {
+	text-align: center;
 }
 }
 
 @media (min-width: 992px) {
-.coben-item {
-    margin: 15px 20px 15px 20px;
+.dicamillo-item {
+	max-width: 750px;
+	margin: 15px 20px 15px 20px;
 }
 }
 
 @media (min-width: 600px) {
 .author-item {
-    max-width: 600px;
+	max-width: 600px;
 }
 }
 
 @media (min-width: 992px) {
 .event-item {
-    max-width: 400px;
+	max-width: 400px;
 }
 }
 </style>
@@ -412,31 +435,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div id="other-author-events" class="row bg-gray-5 padding-bottom-30">
-    <div class="container">
-      <div class="text-center padding-top-15">
-        <h1>Author Events</h1>
-        <h4 class="roboto margin-lg-100 text-center">Spend an evening with these diverse authors and hear the stories behind their stories. We regularly host bestsellers, local authors, children's writers, and more.</h4>
+  <div class="row dicamillo-row padding-top-20 padding-bottom-80">
+    <div class="container dicamillo-wrapper">
+      <div class="dicamillo-item"><a href="https://dcl.bibliocommons.com/item/show/1588021114"><img src="dicamillo-cover.jpg" alt="Beverly, Right Here"></a></div>
+      <div class="dicamillo-item">
+        <h4 class="roboto">DCL Presents:</h4>
+        <h1 class="loving no-margin">Kate DiCamillo</h1>
+        <div class="black">Join Douglas County Libraries in welcoming Newbery Award-winning and <i>New York Times</i> bestselling author Kate DiCamillo. The author will talk about her newest book, <i><a href="https://dcl.bibliocommons.com/item/show/1588021114" class="text-underline black">Beverly, Right Here</a></i>, the finale in the Three Rancheros series. A copy of the book is included with ticket, and a book signing will follow the author's presentation.</div>
+        <h3 class="text-uppercase no-margin-bottom font-weight-400 gray-80 text-center text-left-md">CU South Denver</h3>
+        <h4 class="no-margin gray-90">Saturday, August 22, 2-3:30PM</h4>
+        <div><a href="https://www.eventbrite.com/e/dcl-presents-kate-dicamillo-tickets-99685602320?aff=authorsevents" target="_blank" class="btn btn-primary btn-lg text-uppercase font-weight-400 margin-top-15">Buy Now!</a></div>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-bottom-60">
+  <div id="featured-events" class="row">
+    <div class="container">
+      <div class="text-center padding-top-15 padding-bottom-15">
+        <h1 class="jumbo-text text-uppercase font-weight-400">Featured Events</h1>
+        <h4 class="roboto margin-lg-200 text-center">Don't miss these special library events!</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-bottom-15">
     <div class="container-md">
-      <div class="author-wrapper">
-        <div class="author-item">
-          <h2>Writing Workshop</h2>
-          <h4>Parker, Saturday, March 28, 9AM</h4>
-          <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/1548499114"><img class="pull-left margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781733579001/MC.GIF" alt="Do You Need a Literary Agent?"></a></div>
-          <div class="book-item">In this full-day workshop, writers of all skill sets can get expert help with developing characters and plot, as well as scene-building. Bestselling author Kevin Ikenberry and Angie Hodapp from Nelson Literary Agency lead the workshop to help bring your stories to life. <span class="text-uppercase">Adults.</span>
-            <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=160881" target="_blank" class="btn btn-primary text-uppercase">Register Now</a></div>
-          </div>
-        </div>
-        <div class="author-item">
-          <h2>Susan Harness</h2>
-          <h4>Parker, Tuesday, April 7, 6PM</h4>
-          <div class="book-item"><a href="https://dcl.bibliocommons.com/item/show/1550456114"><img class="pull-left margin-right-15 shadow-low shadow-low-hover" src="https://secure.syndetics.com/index.aspx?isbn=9781496207463/MC.GIF" alt="Dumb Luck and the Kindness of Strangers"></a></div>
-          <div class="book-item">Join the award-winning author and cultural anthropologist as she talks about her memoir, <i><a href="https://dcl.bibliocommons.com/item/show/1550456114">Bitterroot: A Salish Memoir of Transracial Adoption</a></i>. Ms. Harness is a member of the Confederated Salish and Kootenai Tribes and is an American Indian transracial adoptee. <span class="text-uppercase">Adults.</span>
-            <div class="margin-top-15"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=165340" target="_blank" class="btn btn-primary text-uppercase">Register Now</a></div>
+      <div class="event-wrapper">
+        <div class="event-item"> <img class="img-responsive center-block" src="book-lovers.jpg" alt="Book Lovers">
+          <div class="text-center padding-top-15">Book Lovers at Home! Looking for great new reads? We'll send you book lists, links to author interviews, and more to enjoy from home. <span class="text-uppercase">Adults.</span><br>
+            Wednesday, April 29, 6:30PM
+            <div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=158206" target="_blank" class="btn btn-primary text-uppercase margin-15">Register Now</a></div>
           </div>
         </div>
       </div>
