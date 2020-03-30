@@ -89,14 +89,41 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+.nav-justified li > a > h2 {
+    color: #666;
+    opacity: .4;
+    white-space: nowrap;
+}
+.nav-justified li > a > h2:hover, .nav-justified li > a > h2:focus {
+    color: #666;
+    opacity: 1;
+}
+.nav-justified .active > a > h2 {
+    color: #666;
+    opacity: 1;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #fff;
+    color: #999;
+}
+    .nav-tabs > li > a::after {
+    background: #f16f63;
+}
+.jumps a {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    white-space: nowrap;
+    font-weight: 400;
+}
 .yellow-circle {
     border: 10px solid #FFF7E0;
     background: #fff;
 }
-.white-top-bkg {
+.yellow-top-background {
     background: #fff url(yellow-top.gif) center center repeat-x;
 }
-.white-bottom-bkg {
+.yellow-bottom-background {
     background: #fff url(yellow-bottom.gif) center center repeat-x;
 }
 .teal-bottom-bkg {
@@ -127,6 +154,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     flex-direction: column;
     min-width: 100%;
 }
+}
+
+@media (max-width: 475px) {
+.nav-justified li > a > h2 {
+    white-space: pre-wrap;
+}
+}
+:target h1:first-of-type, :target h2:first-of-type, :target h1 a:first-of-type, :target h2 a:first-of-type {
+    -webkit-animation: target-fade 0s 0;
+    -moz-animation: target-fade 0s 0;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -313,160 +350,356 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase fade-in-text font-weight-400">Link Central Station</h1>
+      <h1 class="jumbo-text text-uppercase fade-in-text font-weight-400">DCL Connect</h1>
       <div class="separator-container">
-        <div class="separator line-separator"><i class="fas fa-train"></i></div>
-        <h4 class="roboto text-center margin-lg-200 padding-bottom-15">A digital world of activities, Storytimes, attractions, and school and learning resources are at your fingertips. Check back often for new ideas! </h4>
+        <div class="separator line-separator"><i class="fas fa-laptop"></i></div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="white-top-bkg">
-      <div id="boredom-busters"><img src="one.png" alt="Boredom Busters" class="yellow-circle img-circle img-responsive center-block"></div>
+  <div class="container margin-lg-100">
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li role="presentation" class="active"><a class="tab" href="#family-resources" aria-controls="one" role="tab" data-toggle="tab">
+        <h2 class="no-margin text-uppercase font-weight-400">Family Resources</h2>
+        </a></li>
+      <li role="presentation"><a class="tab" href="#community-resources" aria-controls="two" role="tab" data-toggle="tab">
+        <h2 class="no-margin text-uppercase font-weight-400">Community Resources</h2>
+        </a></li>
+    </ul>
+  </div>
+  
+  <!-- Tab panes -->
+  <div class="tab-content"> 
+    <!-- 
+##################
+family resources tab begins
+################## 
+-->
+    
+    <div role="tabpanel" class="tab-pane fade in active" id="family-resources">
+      <div class="row">
+        <div class="container text-center margin-lg-100 padding-top-15 padding-bottom-20">
+          <h4 class="roboto">A digital world of activities, Storytimes, attractions, and school and learning resources are at your fingertips. Check back often for new ideas! </h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-top-background">
+          <div id="boredom-busters"><img src="one.png" alt="Boredom Busters" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-yellow-5 text-center">
+        <h1 class="no-margin-top font-weight-400">Boredom Busters</h1>
+        <h4 class="roboto">Activities available anytime, anywhere</h4>
+      </div>
+      <div class="row bg-yellow-5 padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.creativebug.com/lib/dcl" target="_blank">Online Crafting</a></h4>
+              Watch more than 1,000 DIY classes from renowned artists—anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting! </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://aaptivenroll.douglascountylibraries.org/aaptiv/goforth" target="_blank">Audio-guided Fitness</a></h4>
+              Get unlimited access for three months to over 2,500 audio-guided workouts and programs led by expert trainers in running, strength, yoga, and ten other categories. Create an Aaptiv account using your library card and PIN. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://archives.dcl.org" target="_blank">DCL Archives & Local History</a></h4>
+              Local history is at your fingertips through ALH! Browse our collection of historical images, documents, oral histories and more. Highlights include the oral history from a <a href="https://archives.dcl.org/digital/collection/doh/id/936/rec/1" target="_blank">former Devil's Head fire lookout</a> and converted video footage of the <a href="https://archives.dcl.org/digital/collection/photos/id/3365/rec/1" target="_blank">1965 Castle Rock flood</a>. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.dcl.org/read-listen-watch/#digital-media">Kids Downloads</a></h4>
+              OverDrive Kids, TumbleBooks and Kanopy Kids. Log in or sign up with your library card and PIN.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-bottom-background">
+          <div id="storytime-everywhere"><img src="two.png" alt="Storytime Everywhere" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1 class="no-margin-top font-weight-400">Storytime Here, There, Everywhere</h1>
+        <h4 class="roboto">A different Storytime experience wherever you are </h4>
+      </div>
+      <div class="row padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.storyblocks.org/" target="_blank">Storyblocks</a></h4>
+              A reference collection of 30-60 second videos of songs, rhymes, and fingerplays appropriate for early childhood. Each video clip includes helpful early literacy tips to increase caregivers' understanding of child development and pre-literacy needs.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://storytimefromspace.com/" target="_blank">Storytime from Space</a></h4>
+              "What you cannot imagine, you cannot do." Now imagine Astronauts on the Space Station reading stories to and conducting science experiments for the children of Earth as the world rotates. A project of the Global Space Education Foundation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-top-background">
+          <div id="around-the-world"><img src="three.png" alt="Around the World " class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-yellow-5 text-center">
+        <h1 class="no-margin-top font-weight-400">Around the World</h1>
+        <h4 class="roboto">Virtual field trips and famous attractions to visit from home</h4>
+      </div>
+      <div class="row bg-yellow-5 padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://freedomhomeschooling.com/virtual-field-trips/" target="_blank">Free Virtual Field Trips</a></h4>
+              Visit places around the world without ever leaving home.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.louvre.fr/en/visites-en-ligne" target="_blank">The Louvre</a></h4>
+              Discover the works from this world-famous art museum's extensive collection with these virtual tours.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://artsandculture.google.com/partner?hl=en" target="_blank">Google Arts & Culture </a></h4>
+              Featuring content from over 2,000 leading museums and archives who have partnered with the Google Cultural Institute to bring the world's treasures online.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.montereybayaquarium.org/animals/live-cams" target="_blank">Monterey Bay Aquarium Live </a></h4>
+              Frolicking sea otters, fast-swimming sharks, pulsating jellies and waddling penguins&mdash;what could be more delightful? Choose from ten different live cams.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://zoo.sandiegozoo.org/live-cams" target="_blank">San Diego Zoo Live</a></h4>
+              Enjoy polar bears, penguins, koalas and more on these live animal cams. Watch archived footage of Bai Yun and Xiao Liwu from the <a href="https://zoo.sandiegozoo.org/cams/panda-cam" target="_blank">Panda Cam Archive</a>, recorded from January through April 2019.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-bottom-background">
+          <div id="kids-learning"><img src="four.png" alt="Kids Learning" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1 class="no-margin-top font-weight-400">Kids Learning</h1>
+        <h4 class="roboto">School and learning resources to keep kids engaged and on track</h4>
+      </div>
+      <div class="row padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.pebblego.com/" target="_blank">PebbleGo K-3 Databases</a></h4>
+              <div><i>username:</i> engaged</div>
+              <div class="margin-bottom-5"><i>password:</i> learning</div>
+              PebbleGo is a curricular content hub specifically designed for K-3 students. Packed with informational articles, ready-made activities, and literacy supports for students of all abilities, it boosts engagement and fosters independent learning in core subject areas.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.pebblego.com/" target="_blank">Capstone Interactive E-books </a></h4>
+              <div><i>username:</i> continue</div>
+              <div class="margin-bottom-5"><i>password:</i> reading</div>
+              Build literacy skills and have fun reading with these interactive titles. Designed for emergent, struggling, reluctant and ELL readers, the high-interest content combined with text-highlighting, read-aloud features, and engaging graphics makes reading a successful experience for every reader.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.khanacademy.org/humanities/hass-storytelling/imagineering-in-a-box" target="_blank">Imagineering in a Box </a></h4>
+              Walt Disney Imagineering partnered with Khan Academy to bring this one-of-a-kind learning experience to life. The series offers 32 videos in which Imagineers share how they use a wide range of skills&mdash;from story development and conceptual design, to math, physics and engineering&mdash;to create truly immersive experiences.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="../parents-teachers/#teachables">Scholastic Teachables </a></h4>
+              Thousands of ready-to-go lessons, mini-books, activities and more for elementary grades. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://bedtimemath.org/fun-math-at-home/" target="_blank">Math Fun</a></h4>
+              Engaging after-school math activities for your kids to enjoy at home.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://schoolchoiceweek.com/keep-learning/#resources" target="_blank">Distance Learning</a></h4>
+              Free online resources for schools shifting online during the coronavirus pandemic.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-top-background">
+          <div id="adult-resources"><img src="five.png" alt="Resources for Adults" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-yellow-5 text-center">
+        <h1 class="no-margin-top font-weight-400">Resources for Adults</h1>
+        <h4 class="roboto">Learning and entertainment to keep you going</h4>
+      </div>
+      <div class="row bg-yellow-5 padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100 padding-bottom-40">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://theclub.hoopladigital.com/" target="_blank">Digital Book Club</a></h4>
+              Every three months Hoopla releases new titles in their Spotlight Selection along with eight additional curated suggestions, perfect for any book club. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank">AncestryPlus Genealogy</a></h4>
+              Whether you're just starting your family history or looking for a new perspective on your research, Ancestry will help you discover how your story was shaped.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h4>
+              Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank">Lynda.com</a></h4>
+              Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.zooniverse.org/" target="_blank">Zooniverse</a></h4>
+              People-powered research of all kinds, from classifying galaxies to counting penguins to transcribing manuscripts. Whatever your interest, there's a Zooniverse project for you. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://archive.org/details/feature_films" target="_blank">Feature Films</a></h4>
+              A category within the <a href="https://archive.org/details/moviesandfilms" target="_blank">movie section</a> of the <a href="https://archive.org/" target="_blank">Internet Archive</a>, enjoy classic feature films such as <a href="https://archive.org/details/InvasionOfTheBeeGirls" target="_blank"><i>Invasion of the Bee Girls</i></a> and Buster Keaton's <i><a href="https://archive.org/details/TheGoat" target="_blank">The Goat</a></i>.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row bg-yellow-5 text-center">
-    <h1 class="no-margin-top font-weight-400">Boredom Busters</h1>
-    <h4 class="roboto">Activities available anytime, anywhere</h4>
-  </div>
-  <div class="row bg-yellow-5 padding-bottom-30">
-    <div class="container margin-lg-200 margin-md-100">
-      <ul class="list-unstyled">
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.creativebug.com/lib/dcl" target="_blank">Online Crafting</a></h4>
-          Watch more than 1,000 DIY classes from renowned artists—anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting! </li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://aaptivenroll.douglascountylibraries.org/aaptiv/goforth" target="_blank">Audio-guided Fitness</a></h4>
-          Get unlimited access for three months to over 2,500 audio-guided workouts and programs led by expert trainers in running, strength, yoga, and ten other categories. Create an Aaptiv account using your library card and PIN. </li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://archives.dcl.org" target="_blank">DCL Archives & Local History</a></h4>
-          Local history is at your fingertips through ALH! Browse our collection of historical images, documents, oral histories and more. Highlights include the oral history from a <a href="https://archives.dcl.org/digital/collection/doh/id/936/rec/1" target="_blank">former Devil's Head fire lookout</a> and converted video footage of the <a href="https://archives.dcl.org/digital/collection/photos/id/3365/rec/1" target="_blank">1965 Castle Rock flood</a>. </li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.dcl.org/read-listen-watch/#digital-media">Kids Downloads</a></h4>
-          OverDrive Kids, TumbleBooks and Kanopy Kids. Log in or sign up with your library card and PIN.</li>
-      </ul>
+    <!-- 
+##################
+family resources tab ends
+################## 
+--> 
+    <!-- 
+##################
+community resources tab begins
+################## 
+-->
+        <div role="tabpanel" class="tab-pane fade in" id="community-resources">
+      <div class="row">
+        <div class="container text-center margin-lg-100 padding-top-15 padding-bottom-20">
+          <h4 class="roboto">Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-top-background">
+          <div id="boredom-busters"><img src="five.png" alt="Boredom Busters" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-yellow-5 text-center">
+        <h1 class="no-margin-top font-weight-400">Boredom Busters</h1>
+        <h4 class="roboto">Activities available anytime, anywhere</h4>
+      </div>
+      <div class="row bg-yellow-5 padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.creativebug.com/lib/dcl" target="_blank">Online Crafting</a></h4>
+              Watch more than 1,000 DIY classes from renowned artists—anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting! </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://aaptivenroll.douglascountylibraries.org/aaptiv/goforth" target="_blank">Audio-guided Fitness</a></h4>
+              Get unlimited access for three months to over 2,500 audio-guided workouts and programs led by expert trainers in running, strength, yoga, and ten other categories. Create an Aaptiv account using your library card and PIN. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://archives.dcl.org" target="_blank">DCL Archives & Local History</a></h4>
+              Local history is at your fingertips through ALH! Browse our collection of historical images, documents, oral histories and more. Highlights include the oral history from a <a href="https://archives.dcl.org/digital/collection/doh/id/936/rec/1" target="_blank">former Devil's Head fire lookout</a> and converted video footage of the <a href="https://archives.dcl.org/digital/collection/photos/id/3365/rec/1" target="_blank">1965 Castle Rock flood</a>. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.dcl.org/read-listen-watch/#digital-media">Kids Downloads</a></h4>
+              OverDrive Kids, TumbleBooks and Kanopy Kids. Log in or sign up with your library card and PIN.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-bottom-background">
+          <div id="storytime-everywhere"><img src="four.png" alt="Storytime Everywhere" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1 class="no-margin-top font-weight-400">Storytime Here, There, Everywhere</h1>
+        <h4 class="roboto">A different Storytime experience wherever you are </h4>
+      </div>
+      <div class="row padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.storyblocks.org/" target="_blank">Storyblocks</a></h4>
+              A reference collection of 30-60 second videos of songs, rhymes, and fingerplays appropriate for early childhood. Each video clip includes helpful early literacy tips to increase caregivers' understanding of child development and pre-literacy needs.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://storytimefromspace.com/" target="_blank">Storytime from Space</a></h4>
+              "What you cannot imagine, you cannot do." Now imagine Astronauts on the Space Station reading stories to and conducting science experiments for the children of Earth as the world rotates. A project of the Global Space Education Foundation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-top-background">
+          <div id="around-the-world"><img src="three.png" alt="Around the World " class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-yellow-5 text-center">
+        <h1 class="no-margin-top font-weight-400">Around the World</h1>
+        <h4 class="roboto">Virtual field trips and famous attractions to visit from home</h4>
+      </div>
+      <div class="row bg-yellow-5 padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://freedomhomeschooling.com/virtual-field-trips/" target="_blank">Free Virtual Field Trips</a></h4>
+              Visit places around the world without ever leaving home.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.louvre.fr/en/visites-en-ligne" target="_blank">The Louvre</a></h4>
+              Discover the works from this world-famous art museum's extensive collection with these virtual tours.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://artsandculture.google.com/partner?hl=en" target="_blank">Google Arts & Culture </a></h4>
+              Featuring content from over 2,000 leading museums and archives who have partnered with the Google Cultural Institute to bring the world's treasures online.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.montereybayaquarium.org/animals/live-cams" target="_blank">Monterey Bay Aquarium Live </a></h4>
+              Frolicking sea otters, fast-swimming sharks, pulsating jellies and waddling penguins&mdash;what could be more delightful? Choose from ten different live cams.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://zoo.sandiegozoo.org/live-cams" target="_blank">San Diego Zoo Live</a></h4>
+              Enjoy polar bears, penguins, koalas and more on these live animal cams. Watch archived footage of Bai Yun and Xiao Liwu from the <a href="https://zoo.sandiegozoo.org/cams/panda-cam" target="_blank">Panda Cam Archive</a>, recorded from January through April 2019.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-bottom-background">
+          <div id="kids-learning"><img src="two.png" alt="Kids Learning" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <h1 class="no-margin-top font-weight-400">Kids Learning</h1>
+        <h4 class="roboto">School and learning resources to keep kids engaged and on track</h4>
+      </div>
+      <div class="row padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.pebblego.com/" target="_blank">PebbleGo K-3 Databases</a></h4>
+              <div><i>username:</i> engaged</div>
+              <div class="margin-bottom-5"><i>password:</i> learning</div>
+              PebbleGo is a curricular content hub specifically designed for K-3 students. Packed with informational articles, ready-made activities, and literacy supports for students of all abilities, it boosts engagement and fosters independent learning in core subject areas.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.pebblego.com/" target="_blank">Capstone Interactive E-books </a></h4>
+              <div><i>username:</i> continue</div>
+              <div class="margin-bottom-5"><i>password:</i> reading</div>
+              Build literacy skills and have fun reading with these interactive titles. Designed for emergent, struggling, reluctant and ELL readers, the high-interest content combined with text-highlighting, read-aloud features, and engaging graphics makes reading a successful experience for every reader.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.khanacademy.org/humanities/hass-storytelling/imagineering-in-a-box" target="_blank">Imagineering in a Box </a></h4>
+              Walt Disney Imagineering partnered with Khan Academy to bring this one-of-a-kind learning experience to life. The series offers 32 videos in which Imagineers share how they use a wide range of skills&mdash;from story development and conceptual design, to math, physics and engineering&mdash;to create truly immersive experiences.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="../parents-teachers/#teachables">Scholastic Teachables </a></h4>
+              Thousands of ready-to-go lessons, mini-books, activities and more for elementary grades. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://bedtimemath.org/fun-math-at-home/" target="_blank">Math Fun</a></h4>
+              Engaging after-school math activities for your kids to enjoy at home.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://schoolchoiceweek.com/keep-learning/#resources" target="_blank">Distance Learning</a></h4>
+              Free online resources for schools shifting online during the coronavirus pandemic.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="yellow-top-background">
+          <div id="adult-resources"><img src="one.png" alt="Resources for Adults" class="yellow-circle img-circle img-responsive center-block"></div>
+        </div>
+      </div>
+      <div class="row bg-yellow-5 text-center">
+        <h1 class="no-margin-top font-weight-400">Resources for Adults</h1>
+        <h4 class="roboto">Learning and entertainment to keep you going</h4>
+      </div>
+      <div class="row bg-yellow-5 padding-bottom-30">
+        <div class="container margin-lg-200 margin-md-100 padding-bottom-40">
+          <ul class="list-unstyled">
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://theclub.hoopladigital.com/" target="_blank">Digital Book Club</a></h4>
+              Every three months Hoopla releases new titles in their Spotlight Selection along with eight additional curated suggestions, perfect for any book club. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank">AncestryPlus Genealogy</a></h4>
+              Whether you're just starting your family history or looking for a new perspective on your research, Ancestry will help you discover how your story was shaped.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h4>
+              Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank">Lynda.com</a></h4>
+              Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://www.zooniverse.org/" target="_blank">Zooniverse</a></h4>
+              People-powered research of all kinds, from classifying galaxies to counting penguins to transcribing manuscripts. Whatever your interest, there's a Zooniverse project for you. </li>
+            <li>
+              <h4 class="no-margin-bottom"><a href="https://archive.org/details/feature_films" target="_blank">Feature Films</a></h4>
+              A category within the <a href="https://archive.org/details/moviesandfilms" target="_blank">movie section</a> of the <a href="https://archive.org/" target="_blank">Internet Archive</a>, enjoy classic feature films such as <a href="https://archive.org/details/InvasionOfTheBeeGirls" target="_blank"><i>Invasion of the Bee Girls</i></a> and Buster Keaton's <i><a href="https://archive.org/details/TheGoat" target="_blank">The Goat</a></i>.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="white-bottom-bkg">
-      <div id="storytime-everywhere"><img src="two.png" alt="Storytime Everywhere" class="yellow-circle img-circle img-responsive center-block"></div>
-    </div>
-  </div>
-  <div class="row text-center">
-    <h1 class="no-margin-top font-weight-400">Storytime Here, There, Everywhere</h1>
-    <h4 class="roboto">A different Storytime experience wherever you are </h4>
-  </div>
-  <div class="row padding-bottom-30">
-    <div class="container margin-lg-200 margin-md-100">
-      <ul class="list-unstyled">
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.storyblocks.org/" target="_blank">Storyblocks</a></h4>
-          A reference collection of 30-60 second videos of songs, rhymes, and fingerplays appropriate for early childhood. Each video clip includes helpful early literacy tips to increase caregivers' understanding of child development and pre-literacy needs.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://storytimefromspace.com/" target="_blank">Storytime from Space</a></h4>
-          "What you cannot imagine, you cannot do." Now imagine Astronauts on the Space Station reading stories to and conducting science experiments for the children of Earth as the world rotates. A project of the Global Space Education Foundation.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="white-top-bkg">
-      <div id="around-the-world"><img src="three.png" alt="Around the World " class="yellow-circle img-circle img-responsive center-block"></div>
-    </div>
-  </div>
-  <div class="row bg-yellow-5 text-center">
-    <h1 class="no-margin-top font-weight-400">Around the World</h1>
-    <h4 class="roboto">Virtual field trips and famous attractions to visit from home</h4>
-  </div>
-  <div class="row bg-yellow-5 padding-bottom-30">
-    <div class="container margin-lg-200 margin-md-100">
-      <ul class="list-unstyled">
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://freedomhomeschooling.com/virtual-field-trips/" target="_blank">Free Virtual Field Trips</a></h4>
-          Visit places around the world without ever leaving home.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.louvre.fr/en/visites-en-ligne" target="_blank">The Louvre</a></h4>
-          Discover the works from this world-famous art museum's extensive collection with these virtual tours.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://artsandculture.google.com/partner?hl=en" target="_blank">Google Arts & Culture </a></h4>
-          Featuring content from over 2,000 leading museums and archives who have partnered with the Google Cultural Institute to bring the world's treasures online.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.montereybayaquarium.org/animals/live-cams" target="_blank">Monterey Bay Aquarium Live </a></h4>
-          Frolicking sea otters, fast-swimming sharks, pulsating jellies and waddling penguins&mdash;what could be more delightful? Choose from ten different live cams.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://zoo.sandiegozoo.org/live-cams" target="_blank">San Diego Zoo Live</a></h4>
-          Enjoy polar bears, penguins, koalas and more on these live animal cams. Watch archived footage of Bai Yun and Xiao Liwu from the <a href="https://zoo.sandiegozoo.org/cams/panda-cam" target="_blank">Panda Cam Archive</a>, recorded from January through April 2019.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="white-bottom-bkg">
-      <div id="kids-learning"><img src="four.png" alt="Kids Learning" class="yellow-circle img-circle img-responsive center-block"></div>
-    </div>
-  </div>
-  <div class="row text-center">
-    <h1 class="no-margin-top font-weight-400">Kids Learning</h1>
-    <h4 class="roboto">School and learning resources to keep kids engaged and on track</h4>
-  </div>
-  <div class="row padding-bottom-30">
-    <div class="container margin-lg-200 margin-md-100">
-      <ul class="list-unstyled">
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.pebblego.com/" target="_blank">PebbleGo K-3 Databases</a></h4>
-          <div><i>username:</i> engaged</div>
-          <div class="margin-bottom-5"><i>password:</i> learning</div>
-          PebbleGo is a curricular content hub specifically designed for K-3 students. Packed with informational articles, ready-made activities, and literacy supports for students of all abilities, it boosts engagement and fosters independent learning in core subject areas.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.pebblego.com/" target="_blank">Capstone Interactive E-books </a></h4>
-          <div><i>username:</i> continue</div>
-          <div class="margin-bottom-5"><i>password:</i> reading</div>
-          Build literacy skills and have fun reading with these interactive titles. Designed for emergent, struggling, reluctant and ELL readers, the high-interest content combined with text-highlighting, read-aloud features, and engaging graphics makes reading a successful experience for every reader.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.khanacademy.org/humanities/hass-storytelling/imagineering-in-a-box" target="_blank">Imagineering in a Box </a></h4>
-          Walt Disney Imagineering partnered with Khan Academy to bring this one-of-a-kind learning experience to life. The series offers 32 videos in which Imagineers share how they use a wide range of skills&mdash;from story development and conceptual design, to math, physics and engineering&mdash;to create truly immersive experiences.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="../parents-teachers/#teachables">Scholastic Teachables </a></h4>
-          Thousands of ready-to-go lessons, mini-books, activities and more for elementary grades. </li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="http://bedtimemath.org/fun-math-at-home/" target="_blank">Math Fun</a></h4>
-          Engaging after-school math activities for your kids to enjoy at home.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://schoolchoiceweek.com/keep-learning/#resources" target="_blank">Distance Learning</a></h4>
-          Free online resources for schools shifting online during the coronavirus pandemic.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="white-top-bkg">
-      <div id="adult-resources"><img src="five.png" alt="Resources for Adults" class="yellow-circle img-circle img-responsive center-block"></div>
-    </div>
-  </div>
-  <div class="row bg-yellow-5 text-center">
-    <h1 class="no-margin-top font-weight-400">Resources for Adults</h1>
-    <h4 class="roboto">Learning and entertainment to keep you going</h4>
-  </div>
-  <div class="row bg-yellow-5 padding-bottom-30">
-    <div class="container margin-lg-200 margin-md-100 padding-bottom-40">
-      <ul class="list-unstyled">
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://theclub.hoopladigital.com/" target="_blank">Digital Book Club</a></h4>
-          Every three months Hoopla releases new titles in their Spotlight Selection along with eight additional curated suggestions, perfect for any book club. </li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank">AncestryPlus Genealogy</a></h4>
-          Whether you're just starting your family history or looking for a new perspective on your research, Ancestry will help you discover how your story was shaped.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h4>
-          Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank">Lynda.com</a></h4>
-          Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://www.zooniverse.org/" target="_blank">Zooniverse</a></h4>
-          People-powered research of all kinds, from classifying galaxies to counting penguins to transcribing manuscripts. Whatever your interest, there's a Zooniverse project for you. </li>
-        <li>
-          <h4 class="no-margin-bottom"><a href="https://archive.org/details/feature_films" target="_blank">Feature Films</a></h4>
-          A category within the <a href="https://archive.org/details/moviesandfilms" target="_blank">movie section</a> of the <a href="https://archive.org/" target="_blank">Internet Archive</a>, enjoy classic feature films such as <a href="https://archive.org/details/InvasionOfTheBeeGirls" target="_blank"><i>Invasion of the Bee Girls</i></a> and Buster Keaton's <i><a href="https://archive.org/details/TheGoat" target="_blank">The Goat</a></i>.</li>
-      </ul>
-    </div>
+    <!-- 
+##################
+community resources tab ends
+################## 
+--> 
   </div>
   <div class="row bg-teal padding-top-20 padding-bottom-30">
     <div class="container">
@@ -529,7 +762,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+$(function(){
+  var hash = window.location.hash;
+  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+});
+	</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
