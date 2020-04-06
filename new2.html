@@ -96,7 +96,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .box-item-wrapper {
     background: #ABE22D url("leaf-background.jpg") center center/cover;
     border-top: 6px solid #ABE22D;
-    border-bottom: 6px solid #ABE22D;
 }
 .box-item-container {
     display: flex;
@@ -109,16 +108,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     color: #fff;
     flex-grow: 1;
     background-color: rgba(0,120,55,.6);
-    padding: 10px;
-
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.9);
 }
 .box-item.one, .box-item.three, .box-item.five {
+    padding: 40px 10px 10px;
     margin: 0 20px 80px;
-box-shadow: 0 5px 5px -5px #333;
 }
-    .box-item.two, .box-item.four {
+.box-item.two, .box-item.four {
+    padding: 10px 10px 40px;
     margin: 80px 20px 0;
-box-shadow: 5px 0 5px -5px #333;
 }
 .box-item:hover {
 }
@@ -139,6 +139,9 @@ box-shadow: 5px 0 5px -5px #333;
     font-weight: 400;
 }
 .link-row {
+    position: relative;
+    top: 0;
+    border-top: 6px solid #ABE22D;
     background: linear-gradient(270deg, #bccd30, #8eb936, #008a60 );
     background-size: 400% 400%;
     -webkit-animation: AnimationName 15s ease infinite;
