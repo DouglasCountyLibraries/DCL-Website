@@ -93,19 +93,32 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <link href="https://fonts.googleapis.com/css?family=Bellota:700|Cutive&display=swap" rel="stylesheet">
 <style>
-.row .box-item-container {
+.box-item-wrapper {
+    background: #ABE22D url("leaf-background.jpg") center center/cover;
     border-top: 6px solid #ABE22D;
     border-bottom: 6px solid #ABE22D;
 }
-.box-item-wrapper {
-    background: #ABE22D url("leaf-background.jpg") center center/cover;
-}
 .box-item-container {
+    display: flex;
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
 }
 .box-item {
-    background-color: #fff;
-    margin: 20px;
+    font-family: 'Cutive', serif;
+    color: #fff;
+    flex-grow: 1;
+    background-color: rgba(0,120,55,.6);
     padding: 10px;
+
+}
+.box-item.one, .box-item.three, .box-item.five {
+    margin: 0 20px 80px;
+box-shadow: 0 5px 5px -5px #333;
+}
+    .box-item.two, .box-item.four {
+    margin: 80px 20px 0;
+box-shadow: 5px 0 5px -5px #333;
 }
 .box-item:hover {
 }
@@ -355,20 +368,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row text-center box-item-wrapper">
-    <div class="box-item-container container-md">
-      <div class="box-item">
+    <div class="box-item-container container">
+      <div class="box-item one">
         <div>one static</div>
       </div>
-      <div class="visible-lg box-item">
+      <div class="visible-lg box-item two">
         <div>two</div>
       </div>
-      <div class="box-item">
+      <div class="box-item three">
         <div>three static</div>
       </div>
-      <div class="visible-lg box-item">
+      <div class="visible-lg box-item four">
         <div>four</div>
       </div>
-      <div class="box-item">
+      <div class="box-item five">
         <div>five static</div>
       </div>
     </div>
