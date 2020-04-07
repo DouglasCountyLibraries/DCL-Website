@@ -103,23 +103,25 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
 }
-.box-item {
+.box-item h4 {
     font-family: 'Cutive', serif;
     color: #fff;
     font-size: 22px;
-    flex-grow: 1;
+}
+.box-item {
+    width: 190px;
     background-color: rgba(0,120,55,.7);
     -webkit-box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
     -moz-box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
     box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
 }
 .box-item.one, .box-item.three, .box-item.five {
-    padding: 240px 10px 30px;
-    margin: 0 20px 200px;
+	padding: 200px 10px 250px;
+	margin: 0 20px 125px;
 }
 .box-item.two, .box-item.four {
-    padding: 30px 10px 240px;
-    margin: 200px 20px 0;
+	padding: 100px 10px 0;
+	margin: 300px 20px 0;
 }
 .box-item:hover {
 }
@@ -136,14 +138,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 @media (max-width: 1199px) {
 .box-item.three {
-    margin: 80px 20px 0;
+	margin: 100px 20px 0;
+	padding: 100px 10px;
 }
 }
 
 @media (max-width: 992px) {
+.box-item {
+    width: 100%;
+}
 .box-item.one, .box-item.three, .box-item.five {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -402,23 +408,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row text-center box-item-wrapper">
     <div class="box-item-container container no-padding">
       <div class="box-item one">
-        <div>one static</div>
+        <h4>Welcome to DCL Digital</h4>
       </div>
       <div class="visible-lg box-item two">
-        <div class="this">two a random</div>
-        <div class="this">two b random</div>
-        <div class="this">two c random</div>
+        <h4 class="this">Two A Random</h4>
+        <h4 class="this">Two B Random</h4>
+        <h4 class="this">Two C Random</h4>
       </div>
       <div class="box-item three">
-        <div>three static</div>
+        <h4>DCL Connect: Info & Resources</h4>
+        <div class="hidden-lg"><div>
+          <h4 class="var-this">X Random</h4>
+          <h4 class="var-this">Y Random</h4>
+          <h4 class="var-this">Z Random</h4>
+        </div>
+        <div>
+          <h4 class="var-that">1 Random</h4>
+          <h4 class="var-that">2 Random</h4>
+          <h4 class="var-that">3 Random</h4>
+        </div></div>
       </div>
       <div class="visible-lg box-item four">
-        <div class="that">four a random</div>
-        <div class="that">four b random</div>
-        <div class="that">four c random</div>
+        <h4 class="that">Four A Random</h4>
+        <h4 class="that">Four B random</h4>
+        <h4 class="that">Four C random</h4>
       </div>
       <div class="box-item five">
-        <div>five static</div>
+        <h4 class="other">Five A Random</h4>
+        <h4 class="other">Five B Random</h4>
+        <h4 class="other">Five C random</h4>
       </div>
     </div>
   </div>
@@ -484,9 +502,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
 var random = Math.floor(Math.random() * $('.this').length);
-    var random = Math.floor(Math.random() * $('.that').length);
+var random = Math.floor(Math.random() * $('.that').length);
+var random = Math.floor(Math.random() * $('.other').length);
+    var random = Math.floor(Math.random() * $('.var-this').length);
+    var random = Math.floor(Math.random() * $('.var-that').length);
 $('.this').hide().eq(random).show();
-    $('.that').hide().eq(random).show();
+$('.that').hide().eq(random).show();
+$('.other').hide().eq(random).show();
+    $('.var-this').hide().eq(random).show();
+    $('.var-that').hide().eq(random).show();
 </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
