@@ -116,12 +116,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
 }
 .box-item.one, .box-item.three, .box-item.five {
-	padding: 200px 10px 250px;
-	margin: 0 20px 125px;
+    padding: 200px 10px 250px;
+    margin: 0 20px 125px;
 }
 .box-item.two, .box-item.four {
-	padding: 100px 10px 0;
-	margin: 300px 20px 0;
+    padding: 100px 10px 0;
+    margin: 300px 20px 0;
 }
 .box-item:hover {
 }
@@ -138,18 +138,29 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 @media (max-width: 1199px) {
 .box-item.three {
-	margin: 100px 20px 0;
-	padding: 100px 10px;
+    margin: 100px 20px 0;
+    padding: 100px 10px;
 }
 }
 
 @media (max-width: 992px) {
+.var-this, .var-that {
+    padding: 10px 0 0;
+}
 .box-item {
     width: 100%;
 }
+.box-item.one {
+    padding: 50px 10px 0;
+}
+    .box-item.three {
+        padding: 0 10px 0;
+    }
+.box-item.five {
+    padding: 0 10px 60px;
+}
 .box-item.one, .box-item.three, .box-item.five {
     margin: 0;
-    padding: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -417,16 +428,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="box-item three">
         <h4>DCL Connect: Info & Resources</h4>
-        <div class="hidden-lg"><div>
-          <h4 class="var-this">X Random</h4>
-          <h4 class="var-this">Y Random</h4>
-          <h4 class="var-this">Z Random</h4>
+        <div class="hidden-lg">
+          <div>
+            <h4 class="var-this">X Random</h4>
+            <h4 class="var-this">Y Random</h4>
+            <h4 class="var-this">Z Random</h4>
+          </div>
+          <div>
+            <h4 class="var-that">1 Random</h4>
+            <h4 class="var-that">2 Random</h4>
+            <h4 class="var-that">3 Random</h4>
+          </div>
         </div>
-        <div>
-          <h4 class="var-that">1 Random</h4>
-          <h4 class="var-that">2 Random</h4>
-          <h4 class="var-that">3 Random</h4>
-        </div></div>
       </div>
       <div class="visible-lg box-item four">
         <h4 class="that">Four A Random</h4>
