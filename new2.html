@@ -405,13 +405,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>one static</div>
       </div>
       <div class="visible-lg box-item two">
-        <div>two</div>
+        <div class="this">two a random</div>
+        <div class="this">two b random</div>
+        <div class="this">two c random</div>
       </div>
       <div class="box-item three">
         <div>three static</div>
       </div>
       <div class="visible-lg box-item four">
-        <div>four</div>
+        <div class="that">four a random</div>
+        <div class="that">four b random</div>
+        <div class="that">four c random</div>
       </div>
       <div class="box-item five">
         <div>five static</div>
@@ -477,7 +481,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+var random = Math.floor(Math.random() * $('.this').length);
+    var random = Math.floor(Math.random() * $('.that').length);
+$('.this').hide().eq(random).show();
+    $('.that').hide().eq(random).show();
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
