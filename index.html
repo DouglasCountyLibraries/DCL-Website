@@ -90,12 +90,98 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bellota:700|Calistoga&display=swap" rel="stylesheet">
 <style>
-.row .box-item-container {
-    padding: 185px 15px 220px 15px;
-    border-top: 6px solid #fff7e0;
-    border-bottom: 6px solid #fff7e0;
+.box-item-wrapper {
+    background: #ABE22D url("leaf-background.jpg") center center/cover;
+    border-top: 6px solid #ABE22D;
+}
+.box-item-container {
+    display: flex;
+    justify-content: center;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.box-item h4 {
+    font-family: 'Calistoga', serif;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1em;
+}
+.box-item h4 a {
+    color: #fff;
+    letter-spacing: 0.9px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.75);
+}
+.box-item h4 a:hover, .box-item h4 a:focus {
+    text-decoration: none;
+    text-shadow: 0px 0px 15px rgba(255,255,255,.5);
+    letter-spacing: 1px;
+}
+.smaller {
+    font-size: 24px;
+    line-height: 30px;
+}
+.box-item {
+    width: 190px;
+    background-color: rgba(0,120,55,.7);
+    -webkit-box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
+    box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
+}
+.box-item.one, .box-item.three, .box-item.five {
+    padding: 175px 10px 300px;
+    margin: 0 20px 75px;
+}
+.box-item.two, .box-item.four {
+    padding: 60px 10px 0;
+    margin: 275px 20px 0;
+}
+
+@media (max-width: 1199px) {
+.box-item.three {
+    margin: 100px 20px 0;
+    padding: 75px 10px;
+}
+}
+
+@media (max-width: 992px) {
+.var-this, .var-that {
+    padding: 10px 0 0;
+}
+.box-item {
+    width: 100%;
+}
+.box-item.one {
+    padding: 50px 10px 0;
+}
+.box-item.three {
+    padding: 0 10px 0;
+}
+.box-item.five {
+    padding: 0 10px 60px;
+}
+.box-item.one, .box-item.three, .box-item.five {
+    margin: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.box-item-container {
+    justify-content: center;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
+    box-shadow: 6px 12px 20px 2px rgba(0, 0, 0, 0.65);
+}
+}
+
+@media (max-width: 768px) {
+.box-item-container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 }
 .link-row h4 {
     text-transform: uppercase;
@@ -103,80 +189,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     margin-top: 0;
     font-weight: 400;
 }
-.box-item-wrapper {
-    background: #fff7e0 url("pattern-background.png");
-}
-.box-item-container {
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-}
-.box-item {
-    background-color: #fff;
-    width: 250px;
-    border-radius: 2px;
-    margin: .8em;
-    padding: 10px;
-    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
-}
-.box-item:hover {
-    background-color: rgb(255,255,255);
-    -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.75);
-    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.75);
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease-out;
-    -ms-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-}
-.box-item > a:visited, .box-item > a:hover, .box-item > a:focus, .box-item > a:active {
-    text-decoration: none !important;
-    color: #000;
-}
-.aligner {
-    font-family: 'Bellota', sans-serif;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    font-size: 30px;
-    line-height: 34px;
-    color: #333;
-    border-radius: 2px;
-    padding: 62px 15px 68px 15px;
-}
-.smaller {
-    font-size: 22px;
-    line-height: 24px;
-}
-.aligner:hover {
-    color: #000;
-}
-.aligner.one {
-    border: 4px solid #9ed0c3;
-}
-.aligner.two {
-    border: 4px solid #2c787e;
-}
-.aligner.three {
-    border: 4px solid #ffc80c;
-}
-.aligner.four {
-    border: 4px solid #8da66d;
-}
-.aligner.five {
-    border: 4px solid #f07062;
-}
 .link-row {
-    background: linear-gradient(270deg, #f07062, #ffc80c, #2c787c);
+    position: relative;
+    top: 0;
+    border-top: 6px solid #ABE22D;
+    background: linear-gradient(270deg, #bccd30, #8eb936, #008a60 );
     background-size: 400% 400%;
     -webkit-animation: AnimationName 15s ease infinite;
     animation: AnimationName 15s ease infinite;
@@ -217,12 +234,6 @@ background-position:0% 50%
     letter-spacing: 1px;
     text-decoration: none;
     text-shadow: 0px 0px 15px rgba(255,255,255,.5);
-}
-
-@media (max-width: 1057px) {
-.row .box-item-container {
-    padding: 60px 15px 60px 15px;
-}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -407,38 +418,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row box-item-wrapper">
-    <div class="box-item-container">
-      <div class="box-item"> <a href="digital-media/">
-        <div class="aligner one">
+  <div class="row text-center box-item-wrapper">
+    <div class="box-item-container container no-padding">
+      <div class="box-item one">
+        <h4><a href="digital-media/">
           <div class="smaller">Welcome to</div>
-          <div>DCL Digital</div>
-        </div>
-        </a></div>
-      <div class="box-item"><a href="http://getacard.org/v2/index.html" target="_blank">
-        <div class="aligner two">
-          <div class="smaller">Get a</div>
-          <div>Library Card</div>
-        </div>
-        </a></div>
-      <div class="box-item"><a href="resources/">
-        <div class="aligner three">
+          DCL Digital</a></h4>
+      </div>
+      <div class="visible-lg box-item two">
+        <h4 class="this"><a href="library-perks/#aaptiv">Fitness
+          <div class="smaller">on the Go</div>
+          </a></h4>
+        <h4 class="this"><a href="https://douglascountylibraries.freegalmusic.com/search-page/everything's%2520gonna%2520be%2520alright/songs" target="_blank">
+          <div class="smaller">Good-Mood</div>
+          Music</a></h4>
+        <h4 class="this"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank">
+          <div class="smaller">Trace Your</div>
+          Roots</a></h4>
+        <h4 class="this"><a href="library-perks/#creativebug">Create!</a></h4>
+        <h4 class="this"><a href="https://www.hoopladigital.com/publisher/entangled-publishing,-llc/5919367865/titles" target="_blank">Romantic<br>
+          Escapes</a></h4>
+      </div>
+      <div class="box-item three">
+        <h4><a href="resources/">
           <div class="smaller">DCL Connect:</div>
-          <div>Info & Resources</div>
+          Info & Resources</a></h4>
+        <div class="hidden-lg">
+          <div>
+            <h4 class="var-this"><a href="library-perks/#aaptiv">Fitness
+              <div class="smaller">on the Go</div>
+              </a></h4>
+            <h4 class="var-this"><a href="https://douglascountylibraries.freegalmusic.com/search-page/everything's%2520gonna%2520be%2520alright/songs" target="_blank">
+              <div class="smaller">Good-Mood</div>
+              Music</a></h4>
+            <h4 class="var-this"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=ancestryplus" target="_blank">
+              <div class="smaller">Trace Your</div>
+              Roots</a></h4>
+            <h4 class="var-this"><a href="library-perks/#creativebug">Create!</a></h4>
+            <h4 class="var-this"><a href="https://www.hoopladigital.com/publisher/entangled-publishing,-llc/5919367865/titles?utm_source=pardot-library&utm_medium=email&utm_campaign=entangled&umt_term=books&utm_content=entangled" target="_blank">Romantic<br>
+              Escapes</a></h4>
+          </div>
+          <div>
+            <h4 class="var-that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1612545489">Zombies!</a></h4>
+            <h4 class="var-that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1616574130">
+              <div class="smaller">Escape Planet</div>
+              Earth</a></h4>
+            <h4 class="var-that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1616577039">Armchair
+              <div class="smaller"> Travel</div>
+              </a></h4>
+            <h4 class="var-that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1614997906">
+              <div class="smaller">Home, but not</div>
+              Alone</a></h4>
+            <h4 class="var-that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1612547699">In the Garden</a></h4>
+          </div>
         </div>
-        </a></div>
-      <div class="box-item"><a href="https://www.hoopladigital.com/" target="_blank">
-        <div class="aligner four">
-          <div class="smaller">Fun with</div>
-          <div>Hoopla</div>
-        </div>
-        </a></div>
-      <div class="box-item"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=tumblebooks" target="_blank">
-        <div class="aligner five">
-          <div class="smaller">Read & Watch with</div>
-          <div>Tumblebooks</div>
-        </div>
-        </a></div>
+      </div>
+      <div class="visible-lg box-item four">
+        <h4 class="that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1612545489">Zombies!</a></h4>
+        <h4 class="that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1616574130">
+          <div class="smaller">Escape Planet</div>
+          Earth</a></h4>
+        <h4 class="that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1616577039">Armchair
+          <div class="smaller"> Travel</div>
+          </a></h4>
+        <h4 class="that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1614997906">
+          <div class="smaller">Home, but not</div>
+          Alone</a></h4>
+        <h4 class="that"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1612547699">In the Garden</a></h4>
+      </div>
+      <div class="box-item five">
+        <h4 class="other"><a href="https://www.kanopy.com/category/supplier/great-courses" target="_blank">
+          <div class="smaller">Courses</div>
+          Served Up!</a></h4>
+        <h4 class="other"><a href="https://dcl.overdrive.com/collection/1048321" target="_blank">
+          <div class="smaller">Colorful</div>
+          Colorado</a></h4>
+        <h4 class="other"><a href="https://dcl.overdrive.com/collection/1048321" target="_blank">Spotlight</a></h4>
+        <h4 class="other"><a href="https://dcl.overdrive.com/collection/1050622" target="_blank">
+          <div class="smaller">Fresh</div>
+          Spring Picks</a></h4>
+        <h4 class="other"><a href="https://dcl.overdrive.com/collection/1050777" target="_blank">
+          <div class="smaller">Prime</div>
+          E-reads</a></h4>
+      </div>
     </div>
   </div>
   <div class="row link-row">
@@ -500,7 +562,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+var random = Math.floor(Math.random() * $('.this').length);
+    $('.this').hide().eq(random).show();
+var random = Math.floor(Math.random() * $('.that').length);
+    $('.that').hide().eq(random).show();
+var random = Math.floor(Math.random() * $('.other').length);
+    $('.other').hide().eq(random).show();
+var random = Math.floor(Math.random() * $('.var-this').length);
+    $('.var-this').hide().eq(random).show();
+var random = Math.floor(Math.random() * $('.var-that').length);
+    $('.var-that').hide().eq(random).show();
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
