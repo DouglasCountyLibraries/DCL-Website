@@ -113,7 +113,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     flex: 1 100%;
 }
 .aside {
-    padding: 15px 30px 45px 30px;
+    padding: 15px 75px 15px 75px;
 }
 .item-wrapper {
     display: flex;
@@ -141,18 +141,30 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 
+@media (max-width: 1475px) {
+.aside {
+    padding: 15px;
+}
+}
+
 @media (max-width: 1325px) {
 .aaptiv-row {
     flex-flow: row wrap;
 }
 .aside {
-    padding: 30px 15px;
+    padding: 60px 80px;
 }
 .aside {
     order: 2;
 }
 .main {
     order: 1;
+}
+}
+
+@media (max-width: 778px) {
+.aside {
+    padding: 30px 15px;
 }
 }
 </style>
@@ -344,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div id="box-one" class="padding-top-15"> </div>
       </div>
       <div class="col-md-7 col-lg-8 padding-bottom-15">
-        <div class="padding-top-30 hidden-xs hidden-sm"></div>
+        <div class="padding-top-60 hidden-xs hidden-sm"></div>
         <div class="text-center text-left-md">
           <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Library Perks</h1>
           <h4 class="roboto">Congratulations! Being a <a href="http://getacard.org/v2/index.html" target="_blank">DCL cardholder</a> means you have access to all sorts of fun perks, everything from free <a href="../digital-media/" target="_blank">digital media</a> to free <a href="#online-learning">online classes</a> (in crafting, software, language and more).
@@ -357,18 +369,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <script>
     var images = ['woman-one.png', 'woman-two.png', 'woman-three.png', 'man-one.png'];
     $('<img alt="Scholarships" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');</script>
-  <div id="aaptiv" class="row aaptiv-row">
-    <div class="aaptiv-box aside"><img class="img-responsive center-block" src="aaptiv-logo.png" alt="Aaptiv">
-      <h4 class="roboto text-center">Get unlimited access for three months to over 2,500 audio-guided workouts and programs led by expert trainers in running, strength, yoga, and 10 other categories.</h4>
-      <div class="text-center"><a href="https://aaptivenroll.douglascountylibraries.org/aaptiv/goforth" target="_blank" class="btn btn-primary text-uppercase margin-top-15 margin-left-15 margin-right-15 margin-bottom-10">Get Started Now</a></div>
-      <div class="text-center margin-bottom-15"><a href="https://forms.gle/Bywh6Dw1PaRzNGrq9" target="_blank" class="text-uppercase font-weight-400">Renew Your Membership &raquo;</a></div>
-      <div class="text-center">Create an Aaptiv account using your library card and PIN. Limited subscriptions are available.</div>
+  <div id="headspace" class="row aaptiv-row">
+    <div class="aaptiv-box">
+      <div class="aside"> <img class="img-responsive center-block" src="headspace-logo.png" alt="Headspace">
+        <h4 class="roboto text-center margin-bottom-5">Take care of your mind with 1000+ hours of themed meditation on everything from stress and sleep, to focus and anxiety.</h4><div class="text-center">Reduce stress in just 10 minutes a day with Headspace's sleep guidance, and mindful movement co-created with Nike and other partner trainers.</div>
+        <div class="text-center"><a href="https://work.headspace.com/douglascountylibraries/member-enroll" target="_blank" class="btn btn-primary text-uppercase margin-top-15 margin-left-15 margin-right-15 margin-bottom-15">Get Started Now</a></div>
+        <div class="text-center">Create a Headspace account using your library card number and last name. Limited subscriptions expire <span class="text-nowrap">April 19, 2021.</span></div>
+      </div>
     </div>
+    <div class="aaptiv-box main">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video class="embed-responsive-item" poster="headspace.jpg" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+          <source data-src="hs-video.mp4" type="video/mp4" src="hs-video.mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <div id="aaptiv" class="row aaptiv-row">
     <div class="aaptiv-box main">
       <div class="embed-responsive embed-responsive-16by9">
         <video class="embed-responsive-item" poster="aaptiv.jpg" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
           <source data-src="aaptiv-video.mp4" type="video/mp4" src="aaptiv-video.mp4">
         </video>
+      </div>
+    </div>
+    <div class="aaptiv-box">
+      <div class="aside"><img class="img-responsive center-block" src="aaptiv-logo.png" alt="Aaptiv">
+        <h4 class="roboto text-center">Get unlimited access for three months to over 2,500 audio-guided workouts and programs led by expert trainers in running, strength, yoga, and 10 other categories.</h4>
+        <div class="text-center"><a href="https://aaptivenroll.douglascountylibraries.org/aaptiv/goforth" target="_blank" class="btn btn-primary text-uppercase margin-top-15 margin-left-15 margin-right-15 margin-bottom-10">Get Started Now</a></div>
+        <div class="text-center margin-bottom-15"><a href="https://forms.gle/Bywh6Dw1PaRzNGrq9" target="_blank" class="text-uppercase font-weight-400">Renew Your Membership &raquo;</a></div>
+        <div class="text-center">Create an Aaptiv account using your library card and PIN. Limited subscriptions are available.</div>
       </div>
     </div>
   </div>
