@@ -96,6 +96,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 h1.coquette, .coquette {
     font-family: coquette, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #c5cdc7;
+}
+    .coquette {
+    font-family: coquette, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #c5cdc7;
@@ -104,11 +110,43 @@ h1.coquette {
     font-size: 60px;
     margin: 0;
 }
+    coquette {
+    font-size: 24px;
+    margin: 0;
+}
+.box-item-wrapper {
+    background: #748696;
+}
+.box-item-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.box-item {
+    flex: 1 1 0px;
+}
+.box-item.one {
+    background: #fff;
+    border-right: 7px solid #c5cdc7;
+}
 .box-item.two {
     background: #748696;
     padding: 100px 15px 120px;
+    border-left: 7px solid #c5cdc7;
 }
+.flourish-top img {
+	padding: 0 0 15px;
 
+}
+    .flourish-bottom img {
+	padding: 30px 0 0;
+
+}
+    
+    .flourish-top img, .flourish-bottom img {
+        	width: 175px;
+        height: inherit;
+    }
 @media (min-width: 992px) {
 h1.coquette {
     font-size: 80px;
@@ -302,10 +340,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="box-item-container container no-padding">
       <div class="box-item one"> </div>
       <div class="box-item two ">
-        <h1 class="coquette">Take Care<br>
+        <div class="flourish-top"><img src="flourish-top.png" alt="Design Element"></div><h1 class="coquette">Take Care<br>
           &<br>
           Treat<br>
-          Yo' Shelf</h1>
+          Yo' Shelf</h1><div class="flourish-bottom"><img src="flourish-bottom.png" alt="Design Element"></div>
       </div>
     </div>
   </div>
