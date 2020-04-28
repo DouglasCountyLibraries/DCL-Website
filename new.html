@@ -107,12 +107,11 @@ h1.coquette, .coquette {
     color: #c5cdc7;
 }
 h1.coquette {
-    font-size: 60px;
+    font-size: 80px;
     margin: 0;
 }
 .coquette {
     font-size: 44px;
-    margin: 0;
 }
 .coquette a:hover, .coquette a:focus, .coquette a:active {
     color: #fff;
@@ -133,19 +132,15 @@ h1.coquette {
 .box-item-container {
     display: flex;
     align-content: center;
+    align-items: center;
     justify-content: center;
 }
-.box-item {
-    flex: 1 1 0px;
-}
 .box-item.one {
-    background: #fff url("large-photos.jpg") top center/cover;
-    border-right: 7px solid #c5cdc7;
+    border-right: 10px solid #c5cdc7;
 }
 .box-item.two {
     background: #748696;
-    padding: 100px 30px 120px;
-    border-left: 7px solid #c5cdc7;
+    padding: 45px 30px 85px;
 }
 .link-list {
     padding: 40px 15px 0;
@@ -161,10 +156,39 @@ h1.coquette {
     height: inherit;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1576px) {
+.box-item.one.vert {
+    display: none;
+}
+}
+
+@media (max-width: 1575px) {
+.box-item.one.horz {
+    display: none;
+}
 h1.coquette {
     font-size: 80px;
-    margin: 0;
+}
+.coquette {
+    font-size: 44px;
+}
+}
+
+@media (max-width: 1050px) {
+h1.coquette {
+    font-size: 60px;
+}
+.coquette {
+    font-size: 36px;
+}
+}
+
+@media (max-width: 825px) {
+h1.coquette {
+    font-size: 40px;
+}
+.coquette {
+    font-size: 30px;
 }
 }
 </style>
@@ -352,7 +376,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row text-center box-item-wrapper">
     <div class="box-item-container no-padding">
-      <div class="box-item one"> </div>
+      <div class="box-item one horz"><img class="img-responsive" src="photos-wide.jpg" alt="Photographs"></div>
+      <div class="box-item one vert"><img class="img-responsive" src="photos-tall.jpg" alt="Photographs"></div>
       <div class="box-item two ">
         <div class="flourish-top"><img src="flourish-top.png" alt="Design Element"></div>
         <h1 class="coquette">Take Care & Treat <span class="text-nowrap">Yo' Shelf</span></h1>
