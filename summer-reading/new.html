@@ -118,16 +118,22 @@ h1.source, h2.source {
 }
 .one a, .two a, .three a {
     color: #17144b;
-    padding: 4px 50px 6px;
+    padding: 5px 50px;
     border: 4px solid rgba(255,255,255,.6);
     border-radius: 2px;
 }
 .one a:hover, .one a:focus, .two a:hover, .two a:focus, .three a:hover, .three a:focus {
     text-decoration: none;
-    box-shadow: 0 2px 20px rgba(255,255,255,.5);
 }
 .one a {
     background: #FBB040;
+}
+.one a:hover {
+    background: #fb8b40;
+    color: rgba(255,255,255,1);
+    border: 4px solid rgba(255,255,255,1);
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
 }
 .two a {
     background: #5cbdb9;
@@ -136,8 +142,8 @@ h1.source, h2.source {
     background: #ef7376;
 }
 .jello:hover {
-    -webkit-animation: jello-vertical 1.2s both;
-    animation: jello-vertical 1.2s both;
+    -webkit-animation: jello-vertical 1s both;
+    animation: jello-vertical 1s both;
 }
 @-webkit-keyframes jello-vertical {
 0% {
