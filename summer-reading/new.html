@@ -116,24 +116,90 @@ h1.source, h2.source {
     font-size: 36px;
     text-transform: uppercase;
 }
-.button-group > .one, .button-group > .two, .button-group > .three {
+.one a, .two a, .three a {
     color: #17144b;
     padding: 4px 50px 6px;
     border: 4px solid rgba(255,255,255,.6);
-        border-radius: 2px;
+    border-radius: 2px;
 }
-.button-group > .one {
+.one a:hover, .one a:focus, .two a:hover, .two a:focus, .three a:hover, .three a:focus {
+    text-decoration: none;
+    box-shadow: 0 2px 20px rgba(255,255,255,.5);
+}
+.one a {
     background: #FBB040;
 }
-.button-group > .two {
+.two a {
     background: #5cbdb9;
 }
-.button-group > .three {
+.three a {
     background: #ef7376;
 }
-    
-    
-    
+.jello:hover {
+    -webkit-animation: jello-vertical 1.2s both;
+    animation: jello-vertical 1.2s both;
+}
+@-webkit-keyframes jello-vertical {
+0% {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+}
+30% {
+-webkit-transform: scale3d(0.75, 1.15, 1);
+transform: scale3d(0.75, 1.15, 1);
+}
+40% {
+-webkit-transform: scale3d(1.15, 0.75, 1);
+transform: scale3d(1.15, 0.75, 1);
+}
+50% {
+-webkit-transform: scale3d(0.85, 1.05, 1);
+transform: scale3d(0.85, 1.05, 1);
+}
+65% {
+-webkit-transform: scale3d(1.05, 0.95, 1);
+transform: scale3d(1.05, 0.95, 1);
+}
+75% {
+-webkit-transform: scale3d(0.95, 1.05, 1);
+transform: scale3d(0.95, 1.05, 1);
+}
+100% {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+}
+}
+@keyframes jello-vertical {
+0% {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+}
+30% {
+-webkit-transform: scale3d(0.75, 1.15, 1);
+transform: scale3d(0.75, 1.15, 1);
+}
+40% {
+-webkit-transform: scale3d(1.15, 0.75, 1);
+transform: scale3d(1.15, 0.75, 1);
+}
+50% {
+-webkit-transform: scale3d(0.85, 1.05, 1);
+transform: scale3d(0.85, 1.05, 1);
+}
+65% {
+-webkit-transform: scale3d(1.05, 0.95, 1);
+transform: scale3d(1.05, 0.95, 1);
+}
+75% {
+-webkit-transform: scale3d(0.95, 1.05, 1);
+transform: scale3d(0.95, 1.05, 1);
+}
+100% {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+}
+}
+
 /*@keyframes fade-in {
 0% {
 opacity: 0;
@@ -398,9 +464,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </defs>
 </svg>-->
       <ul class="source list-inline text-center button-group">
-        <li class="one">Register</li>
-        <li class="two">Giveaways</li>
-        <li class="three">Scrapbook</li>
+        <li class="one jello"><a href="#">Register</a></li>
+        <li class="two jello"><a href="#">Giveaways</a></li>
+        <li class="three jello"><a href="#">Scrapbook</a></li>
       </ul>
     </div>
   </div>
