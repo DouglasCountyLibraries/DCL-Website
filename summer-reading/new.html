@@ -104,16 +104,20 @@ h1.source, h2.source {
 }
 .green-row {
     background: #329b8d;
-    padding: 45px 0 25px;
+    padding: 40px 0 25px;
 }
 .orange-row {
     background: #FBB040;
     color: #17144b;
-    padding: 15px 0 15px;
+    padding: 35px 0 30px;
 }
-    .dot-row {
-        background: #329b8d;
+    .orange-row a {
+        color: #17144b;
+        
     }
+.dot-row {
+    background: #329b8d;
+}
 .button-group {
     font-size: 36px;
     text-transform: uppercase;
@@ -218,70 +222,6 @@ transform: scale3d(0.95, 1.05, 1);
 transform: scale3d(1, 1, 1);
 }
 }
-
-/*@keyframes fade-in {
-0% {
-opacity: 0;
-}
-100% {
-opacity: 1;
-}
-}
-@keyframes drop {
-0% {
-bottom: 0px;
-opacity: 1;
-}
-80% {
-opacity: 1;
-}
-100% {
-opacity: 1;
-bottom: -200px;
-}
-}
-@keyframes wave {
-0% {
-background-position: 0 160px;
-background-size: 170px 300px;
-}
-100% {
-background-position: 500px -18px;
-background-size: 250px 150px;
-}
-}
-.drops {
-    -webkit-filter: url('#liquid');
-    filter: url('#liquid');
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 9px;
-    right: 0;
-    z-index: 1;
-    opacity: 0;
-    animation: fade-in .1s linear .4s forwards;
-}
-.drop1, .drop2 {
-    width: 21px;
-    height: 24px;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background-color: #FBB040;
-}
-.drop1 {
-    width: 90px;
-    height: 16px;
-    bottom: 2px;
-    border-radius: 0;
-}
-.drop2 {
-    animation: drop 1.3s cubic-bezier(1, .19, .66, .12) .5s infinite;
-}*/
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -465,23 +405,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row banner-row"><img class="img-responsive center-block" src="summer-reading.png" alt="Summer Reading"></div>
+  <div class="row banner-row"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="summer-reading-small.png" alt="Summer Reading"><img class="hidden-xs img-responsive center-block" src="summer-reading.png" alt="Summer Reading"></div>
   <div class="row green-row">
     <div class="container"> 
-      
-      <!--maybe later<div class="drops">
-    <div class="drop1"></div>
-    <div class="drop2"></div>  
-  </div>
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <defs>
-    <filter id="liquid">
-      <fegaussianblur in="SourceGraphic" stdDeviation="10" result="blur" />
-      <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="liquid" />
-    </filter>
-  </defs>
-</svg>-->
       <ul class="source list-inline text-center button-group">
         <li class="one jello"><a href="#">Register</a></li>
         <li class="two jello"><a href="#">Giveaways</a></li>
@@ -492,11 +418,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row dot-row text-center"><img src="orange-dot.png" alt="Placeholder"></div>
   <div class="row orange-row">
     <div class="container">
-      <div class="text-center">
+      <div class="text-center margin-lg-200 margin-md-100">
+        <div class="pull-right hidden-xs"><img class="img-responsive" src="surfboards.png" alt="Surfboards"></div>
         <h2 class="source">Welcome to Splash Into Summer!</h2>
-        <div class="text-left-md">You're invited to have a great summer: reading, soaking up the sun, and keeping cool while enjoying tons of fun summer activities. 
-          
-          We've suggested 1000 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest on the reading log (include the unlinked words now; this will eventually be a link to a pdf). We aren't set on you reading 1000 minutes, we just want you to read and have fun while doing it! </div>
+        <div class="text-left-sm large-text">
+          <div>You're invited to have a great summer: reading, soaking up the sun, and keeping cool while enjoying tons of fun summer activities.</div>
+          <div class="margin-top-15 margin-bottom-30"> We've suggested 1000 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest on the <a class="text-underline" href="#" target="_blank">reading log</a>. We aren't set on you reading 1000 minutes, we just want you to read and have fun while doing it! </div>
+        </div>
       </div>
     </div>
   </div>
