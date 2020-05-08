@@ -93,6 +93,35 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     background: #329b8d;
     padding-bottom: 45px;
 }
+        .banner-row-image {
+    background: linear-gradient(180deg, #cf1106, #fcc36c, #ef8576);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+border-bottom: 45px solid #329B8D;
+}
+@-webkit-keyframes AnimationName {
+0% {
+background-position:0% 75%
+}
+50% {
+background-position:100% 25%
+}
+100% {
+background-position:0% 75%
+}
+}
+@keyframes AnimationName {
+0% {
+background-position:0% 75%
+}
+50% {
+background-position:100% 25%
+}
+100% {
+background-position:0% 75%
+}
+}
 .source {
     font-family: 'Source Serif Pro', serif;
     font-weight: 700;
@@ -529,7 +558,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row banner-row"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="summer-reading-small.png" alt="Summer Reading"><img class="hidden-xs img-responsive center-block" src="summer-reading.png" alt="Summer Reading">
+  <div class="row banner-row"><div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="summer-reading-small.png" alt="Summer Reading"><img class="hidden-xs img-responsive center-block" src="summer-reading.png" alt="Summer Reading"></div>
     <div class="static-container container">
       <ul class="source list-inline text-center button-group">
         <li class="one jello"><a href="registration/">Registration</a></li>
