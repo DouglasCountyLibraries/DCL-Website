@@ -280,6 +280,58 @@ to {
 background-position: -2500px 0;
 }
 }
+.swimming {
+    animation: swim linear 25s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    -webkit-animation: swim linear 25s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 50% 50%;
+}
+@keyframes swim {
+0% {
+opacity:1;
+transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
+}
+20% {
+opacity:0.9;
+transform:  translate(5px, 20px) scaleX(0.90) scaleY(0.90);
+}
+60% {
+opacity:0.6;
+transform:  translate(-8px, -25px) scaleX(0.60) scaleY(0.60);
+}
+90% {
+opacity:1;
+transform:  translate(10px, -25px) scaleX(1.00) scaleY(1.00);
+}
+100% {
+opacity:1;
+transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
+}
+}
+@-webkit-keyframes swim {
+0% {
+opacity:1;
+-webkit-transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
+}
+20% {
+opacity:0.9;
+-webkit-transform:  translate(5px, 20px) scaleX(0.90) scaleY(0.90);
+}
+60% {
+opacity:0.6;
+-webkit-transform:  translate(-8px, -25px) scaleX(0.60) scaleY(0.60);
+}
+90% {
+opacity:1;
+-webkit-transform:  translate(10px, -25px) scaleX(1.00) scaleY(1.00);
+}
+100% {
+opacity:1;
+-webkit-transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
+}
+}
 
 @media (min-width: 992px) {
 .button-group {
@@ -290,9 +342,9 @@ background-position: -2500px 0;
     right: 0;
     bottom: 0px;
 }
-    .fish-row {
-        padding-bottom: 100px;
-    }
+.fish-row {
+    padding-bottom: 100px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -502,13 +554,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row fish-row">
     <div class="container-md">
       <h2 class="blue source text-center padding-top-15 padding-bottom-30">Help us meet our community goal of 8 million minutes read!</h2>
-      
-      
       <div class="fish-wrapper">
         <div class="large-text text-box boxes hidden-xs hidden-sm">Watch our school of fish grow and help us meet our goal. If we meet our goal, the <a class="text-underline" href="../foundation/">Douglas County Libraries Foundation</a> will donate $1000 to the COVID-19 Recovery Fund through the Douglas County Community Foundation (DCCF).</div>
         <div class="meter-box boxes"><img class="img-responsive image-center" src="minutes.png" alt="Goal Meter"></div>
-        <div class="fish-box boxes"><img class="img-responsive image-center" src="fish.png" alt="Fish"></div>
-      </div><div class="large-text text-center hidden-md hidden-lg padding-30">Watch our school of fish grow and help us meet our goal. If we meet our goal, the <a class="text-underline" href="../foundation/">Douglas County Libraries Foundation</a> will donate $1000 to the COVID-19 Recovery Fund through the Douglas County Community Foundation (DCCF).</div>
+        <div class="fish-box boxes swimming"><img class="img-responsive image-center" src="fish.png" alt="Fish"></div>
+      </div>
+      <div class="large-text text-center hidden-md hidden-lg padding-30">Watch our school of fish grow and help us meet our goal. If we meet our goal, the <a class="text-underline" href="../foundation/">Douglas County Libraries Foundation</a> will donate $1000 to the COVID-19 Recovery Fund through the Douglas County Community Foundation (DCCF).</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
