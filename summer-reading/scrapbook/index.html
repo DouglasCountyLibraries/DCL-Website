@@ -92,6 +92,34 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .banner-row {
     background: #17144b;
 }
+.banner-row-image {
+    background: linear-gradient(#cf372e 0%, #fed973 20%, #eb7545 50%, #ef7175 60%, #cf372e 100%);
+    background-size: 200% 200%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+0% {
+background-position:0% 75%
+}
+50% {
+background-position:100% 25%
+}
+100% {
+background-position:0% 75%
+}
+}
+@keyframes AnimationName {
+0% {
+background-position:0% 75%
+}
+50% {
+background-position:100% 25%
+}
+100% {
+background-position:0% 75%
+}
+}
 .source {
     font-family: 'Source Serif Pro', serif;
     font-weight: 700;
@@ -346,7 +374,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row banner-row"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="scrapbook-small.png" alt="Summer Reading Scrapbook"><img class="hidden-xs img-responsive center-block" src="scrapbook.png" alt="Summer Reading Scrapbook"> </div>
+  <div class="row banner-row">
+    <div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="scrapbook-small.png" alt="Summer Reading Scrapbook"><img class="hidden-xs img-responsive center-block" src="scrapbook.png" alt="Summer Reading Scrapbook"></div>
+  </div>
   <div class="row blue-row">
     <div class="container">
       <div class="text-center">
