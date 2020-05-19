@@ -109,7 +109,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 @font-face {
     font-family: 'Everyday Loving';
-    src: url('subset-EverydayLoving-Regular.woff2') format('woff2'), url('subset-EverydayLoving-Regular.woff') format('woff'), url('subset-EverydayLoving-Regular.ttf') format('truetype');
+    src: url('EverydayLoving-Regular.woff2') format('woff2'), url('EverydayLoving-Regular.woff') format('woff'), url('EverydayLoving-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -117,26 +117,20 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     font-family: 'Everyday Loving', cursive;
 }
 h1.loving {
-    font-size: 90px;
-    color: #333;
-    text-shadow: 1px 3px 1px #B1C5C2;
-    line-height: 75px;
+    font-size: 70px;
+    color: #fce540;
+    text-shadow: -1px 3px 1px #000;
+    line-height: 65px;
 }
-.dicamillo-row {
-    background: #fff url(dicamillo-background.jpg) bottom/cover;
+.quiz-show-row {
+    background: #fff url("quiz-show-background.png") repeat;
 }
-.dicamillo-wrapper {
+.quiz-show-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 .dicamillo-item {
-    margin: 15px 15px 0 15px;
-}
-.dicamillo-item img {
-    transform: rotate(-2deg);
-    -webkit-backface-visibility: hidden;
 }
 .events-active {
     background-color: #f5f5f5;
@@ -192,16 +186,12 @@ h1.loving {
 }
 
 @media (max-width: 1200px) {
-.dicamillo-item {
-    text-align: center;
+.quiz-show-wrapper {
+    flex-direction: column;
 }
 }
 
-@media (min-width: 992px) {
-.dicamillo-item {
-    max-width: 750px;
-    margin: 15px 20px 15px 20px;
-}
+@media (max-width: 992px) {
 }
 
 @media (min-width: 600px) {
@@ -213,6 +203,9 @@ h1.loving {
 @media (min-width: 992px) {
 .event-item {
     max-width: 400px;
+}
+.quiz-image img {
+    min-width: 725px;
 }
 }
 </style>
@@ -421,16 +414,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row dicamillo-row padding-top-20 padding-bottom-80">
-    <div class="container dicamillo-wrapper">
-      <div class="dicamillo-item"><a href="https://dcl.bibliocommons.com/item/show/1588021114"><img src="dicamillo-cover.jpg" alt="Beverly, Right Here"></a></div>
+  <div class="row quiz-show-row padding-top-30 padding-bottom-30">
+    <div class="container quiz-show-wrapper no-padding">
+      <div class="dicamillo-item quiz-image"><img class="img-responsive" src="quiz-show.png" alt="Quarantine Quiz Show"></div>
       <div class="dicamillo-item">
-        <h4 class="roboto">DCL Presents:</h4>
-        <h1 class="loving no-margin">Kate DiCamillo</h1>
-        <div class="black">Join Douglas County Libraries in welcoming Newbery Award-winning and <i>New York Times</i> bestselling author Kate DiCamillo. The author will talk about her newest book, <i><a href="https://dcl.bibliocommons.com/item/show/1588021114" class="text-underline black">Beverly, Right Here</a></i>, the finale in the Three Rancheros series. A copy of the book is included with ticket, and a book signing will follow the author's presentation.</div>
-        <h3 class="text-uppercase no-margin-bottom font-weight-400 gray-80 text-center text-left-md">CU South Denver</h3>
-        <h4 class="no-margin gray-90">Saturday, August 22, 2-3:30PM</h4>
-        <div><a href="https://www.eventbrite.com/e/dcl-presents-kate-dicamillo-tickets-99685602320?aff=authorsevents" target="_blank" class="btn btn-primary btn-lg text-uppercase font-weight-400 margin-top-15">Buy Now!</a></div>
+        <h1 class="loving text-center padding-left-15 padding-right-15">Coming Soon to your Family Room!</h1>
       </div>
     </div>
   </div>
