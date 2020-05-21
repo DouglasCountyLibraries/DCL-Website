@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,69 +89,62 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700&display=swap" rel="stylesheet">
 <style>
-.banner-row {
-    background: #17144b;
+@font-face {
+    font-family: 'The Beardy Pro';
+    src: url('TheBeardyPro-Display.woff2') format('woff2'), url('TheBeardyPro-Display.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-.banner-row-image {
-    background: linear-gradient(10deg, #cf372e 0%, #fed973 50%, #cf372e 100%);
-    background-size: 250% 250%;
-    -webkit-animation: AnimationName 10s ease infinite;
-    animation: AnimationName 10s ease infinite;
+.beardy {
+    font-family: 'The Beardy Pro', serif;
 }
-@-webkit-keyframes AnimationName {
-0% {
-background-position:0% 75%
-}
-50% {
-background-position:100% 25%
-}
-100% {
-background-position:0% 75%
-}
-}
-@keyframes AnimationName {
-0% {
-background-position:0% 75%
-}
-50% {
-background-position:100% 25%
-}
-100% {
-background-position:0% 75%
-}
+.number {
+    font-family: 'The Beardy Pro', serif;
+    font-size: 28em;
+    color: #17144b;
 }
 .source {
     font-family: 'Source Serif Pro', serif;
     font-weight: 700;
 }
-h1.source, h2.source {
-    color: #fff;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
-}
-h1.blue.source, h2.blue.source {
-    color: #5cbdb9;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
-}
-.blue-row {
-    background: linear-gradient(#1c3059 20%, #5cbdb9 100%);
-    background: url(fish.png) center top, linear-gradient(#1c3059 20%, #5cbdb9 100%);
+.source.details {
     color: #17144b;
-    padding: 20px 0 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
 }
-.blue-row a {
-    color: #fff;
+.full-page {
+    background: #f2e8c3 url("sand-background.jpg");
 }
-.photo-wrapper {
-    background: #fff url("sand-background.jpg");
+.prizes-wrapper {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 50px auto 40px auto;
-    height: 500px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
-
+.item {
+    width: 360px;
+    height: 360px;
+    margin: 10px;
+}
+.item.one {
+}
+.item.two {
+    background: url(two.png) center center/cover;
+}
+.item.three {
+    background: url(three.png) center center/cover;
+}
+.item.four {
+    background: url(four.png) center center/cover;
+}
+.item.five {
+    background: url(five.png) center center/cover;
+}
+.item.six {
+    background: url(six.png) center center/cover;
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -334,17 +328,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row banner-row">
-    <div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="scrapbook-small.png" alt="Summer Reading Scrapbook"><img class="hidden-xs img-responsive center-block" src="scrapbook.png" alt="Summer Reading Scrapbook"></div>
-  </div>
-  <div class="row blue-row">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="source white">Hey, Douglas County! Enter our photo contest to win our Ultimate Splash Into Summer Prize Package.</h2>
-        <div class="large-text white margin-lg-100"> Submit your best summer-of-fun or <a class="white text-underline" href="https://facebook.com/DCLColorado/" target="_blank">Splash Into Summer photo here</a> or use #DCLSplashIntoSummer on Twitter, Instagram or Facebook to win. The photo with the most votes wins! </div>
+  <div class="row full-page">
+    <div class="banner-row">
+      <div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="fifteen-days-small.png" alt="15 Days of Giveaways"><img class="hidden-xs img-responsive center-block" src="fifteen-days.png" alt="15 Days of Giveaways"></div>
+    </div>
+    <div class="prizes-row">
+      <div class="prizes-wrapper container">
+        <div class="item one">
+          <div class="source details text-center">Day Number 1
+          <img class="center-block" src="https://placehold.it/200" alt="">Details</div>
+        </div>
+                <div class="item one">
+          <div class="source details text-center">Day Number 2
+          <img class="center-block" src="https://placehold.it/200" alt="">Details</div>
+        </div>
+        <div class="item three"></div>
+        <div class="item four opacity-8"></div>
+        <div class="item five opacity-8"></div>
+        <div class="item six opacity-8"></div>
       </div>
     </div>
-    <div class="photo-wrapper"></div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
@@ -402,8 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -442,4 +444,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
