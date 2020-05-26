@@ -90,14 +90,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700&display=swap" rel="stylesheet">
 <style>
-.beardy {
-    font-family: 'The Beardy Pro', serif;
-}
-.number {
-    font-family: 'The Beardy Pro', serif;
-    font-size: 28em;
-    color: #17144b;
-}
 .source {
     font-family: 'Source Serif Pro', serif;
     font-weight: 700;
@@ -127,7 +119,7 @@ h1.source, h2.source, h3.source, h4.source {
     font-size: 24px;
     margin: 0 auto 15px auto;
 }
-    .modal-content h2 {
+.modal-content h2 {
     font-family: 'Source Serif Pro', serif;
     font-weight: 700;
     color: #17144b;
@@ -145,6 +137,9 @@ button.close {
 .rules {
     width: 70%;
     margin-top: -14%;
+}
+.prizes-row {
+    padding-bottom: 40px;
 }
 .prizes-wrapper {
     display: flex;
@@ -209,10 +204,10 @@ button.close {
 .item.thirteen {
     background: url(thirteen.png) center center/cover;
 }
-.item.eleven {
+.item.fourteen {
     background: url(fourteen.png) center center/cover;
 }
-.item.twelve {
+.item.fifteen {
     background: url(fifteen.png) center center/cover;
 }
 .headlines-flyin {
@@ -255,26 +250,23 @@ min-height: calc(100% - (.5rem * 2));
 min-height: calc(100% - (1.75rem * 2));
 }
 }
-    
 .prize-button {
     font-family: 'Source Serif Pro', serif;
-font-weight: 700;
-	font-size: 20px;
-	text-transform: uppercase;
-	
-} 
-
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 .prize-button a {
-	display: block;
-	color: #17144b;
-	padding: 10px 0;
-	border: 4px solid rgba(255,255,255,.8);
-	border-radius: 2px;
-	width: 360px;
-	text-align: center;
-	background: #ef7376;
-	margin: 8px 0;
-	box-shadow: 0px 4px 4px rgba(23,20,75,.6);
+    display: block;
+    color: #17144b;
+    padding: 10px 0;
+    border: 4px solid rgba(255,255,255,.8);
+    border-radius: 2px;
+    width: 360px;
+    text-align: center;
+    background: #ef7376;
+    margin: 8px 0;
+    box-shadow: 0px 4px 4px rgba(23,20,75,.6);
 }
 .prize-button a:hover, .prize-button a:focus {
     text-decoration: none;
@@ -285,8 +277,6 @@ font-weight: 700;
     transition-duration: .5s;
     box-shadow: 0px 4px 16px rgba(23,20,75,.9);
 }
-
-
 .jello:hover {
     -webkit-animation: jello-vertical 1s both;
     animation: jello-vertical 1s both;
@@ -543,7 +533,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h4 class="source">Do you feel lucky? We're giving away 15 awesome prizes to Summer Reading participants who sign up for the program June 1-15.</h4>
           <div class="large-text">
             <div>Each day features a random drawing for that day's prize. Everyone registered May 1-June 15 will be entered into grand prize drawings on June 14-15. What could you win? Throw your sunhat in the ring today to find out. No purchase necessary, and registration is free.</div>
-          </div><div class="prize-button"><a class="jello" href="#prize-pickup" data-toggle="modal" data-target="#prize-pickup">Prize Pick-Up Instructions</a></div>
+          </div>
+          <div class="prize-button"><a class="jello" href="#prize-pickup" data-toggle="modal" data-target="#prize-pickup">Prize Pick-Up Instructions</a></div>
         </div>
       </div>
       <div class="prizes-row">
@@ -784,28 +775,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-      <!-- prize pick-up modal -->
+  <!-- prize pick-up modal -->
   <div class="modal fade" id="prize-pickup" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
-    <div class="prizes">
-      <h2>Sign-Up Prizes</h2>
-      <div class="large-text">
-        <div>Use our Summer Reading curbside service to pick up your sign-up and mid-way prizes June 1-15, while supplies last. Summer Reading sign-up gift coupons and vouchers courtesy of Pirates Cove and Parry's Pizza.</div>
-      </div>
-      <h2>Packet & Prize Pick-Up</h2>
-      <div class="large-text">
-        <div>Use our Summer Reading curbside service June 1-15 to pick up your reading log, registration packet, and sign-up prizes. Pick-up service is available at our Castle Rock, Castle Pines, Highlands Ranch, Lone Tree, Parker and Roxborough locations.
-          <h4>Prize Pick-Up Hours, June 1-15:</h4><div>MON-FRI 10AM-2PM</div><div>TUE-THU Evenings, 4-6PM</div><div>SAT 12-4PM</div><div>SUN 1-3PM</div></div>
-      </div>
-      <h2>Finishing Prizes</h2>
-      <div class="large-text padding-bottom-30">
-        <div>Collect a prize when you complete a challenge, or just for having a great summer! Kids will receive a new book. Readers of all ages will be entered into a drawing to win one of 10 prizes: For adults, the prize is a stand-up paddleboard; for teens a 2021 season pass to Elitch Gardens; and for kids a 2021 season pass to Pirates Cove. Check this page starting July 1 for information on finishing prize pick-up dates and times. </div>
-      </div>
-    </div>
+        <div class="prizes">
+          <h2>Sign-Up Prizes</h2>
+          <div class="large-text">
+            <div>Use our Summer Reading curbside service to pick up your sign-up and mid-way prizes June 1-15, while supplies last. Summer Reading sign-up gift coupons and vouchers courtesy of Pirates Cove and Parry's Pizza.</div>
+          </div>
+          <h2>Packet & Prize Pick-Up</h2>
+          <div class="large-text">
+            <div>Use our Summer Reading curbside service June 1-15 to pick up your reading log, registration packet, and sign-up prizes. Pick-up service is available at our Castle Rock, Castle Pines, Highlands Ranch, Lone Tree, Parker and Roxborough locations.
+              <h4>Prize Pick-Up Hours, June 1-15:</h4>
+              <div>MON-FRI 10AM-2PM</div>
+              <div>TUE-THU Evenings, 4-6PM</div>
+              <div>SAT 12-4PM</div>
+              <div>SUN 1-3PM</div>
+            </div>
+          </div>
+          <h2>Finishing Prizes</h2>
+          <div class="large-text padding-bottom-30">
+            <div>Collect a prize when you complete a challenge, or just for having a great summer! Kids will receive a new book. Readers of all ages will be entered into a drawing to win one of 10 prizes: For adults, the prize is a stand-up paddleboard; for teens a 2021 season pass to Elitch Gardens; and for kids a 2021 season pass to Pirates Cove. Check this page starting July 1 for information on finishing prize pick-up dates and times. </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
