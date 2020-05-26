@@ -114,10 +114,30 @@ h1.source, h2.source, h3.source, h4.source {
     font-weight: 700;
 }
 .details {
-	margin-top: 279px;
+    margin-top: 279px;
 }
-.full-page {
+.full-page, .modal-content {
     background: #f2e8c3 url("sand-background.jpg");
+    color: #17144b;
+}
+.modal-content {
+	color: #17144b;
+	padding: 30px 25px 25px 25px;
+	text-align: center;
+}
+.modal-content h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
+    color: #17144b;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0 auto 15px auto;
+}
+.modal-content h4 {
+    color: #17144b;
+}
+button.close {
+    margin-top: -15px;
 }
 .rules {
     width: 70%;
@@ -143,6 +163,7 @@ h1.source, h2.source, h3.source, h4.source {
     text-align: center;
     text-transform: uppercase;
     font-size: 24px;
+    margin: 15px auto;
 }
 .item.one {
     background: url(one.png) center center/cover;
@@ -345,47 +366,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row full-page">
-  <div class="banner-row">
-  <div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="fifteen-days-small.png" alt="15 Days of Giveaways"><img class="hidden-xs img-responsive center-block" src="fifteen-days.png" alt="15 Days of Giveaways"></div>
-  <div class="container">
-    <div class="rules">
-      <h1 class="source">Sign Up to Win!</h1>
-      <h4 class="source">Do you feel lucky? We're giving away 15 awesome prizes to Summer Reading participants who sign up for the program June 1-15.</h4>
-      <div class="large-text">
-        <div>Each day features a random drawing for that day's prize. Everyone registered May 1-June 15 will be entered into grand prize drawings on June 14-15. What could you win? Throw your sunhat in the ring today to find out. No purchase necessary, and registration is free.</div>
-      </div>
-    </div>
-  </div>
-  <div class="prizes-row">
-    <div class="prizes-wrapper">
-      <div class="item one">
-<h1 class="details"><a href="#">Details</a></h1>
-      </div>
-      <div class="item two">
-        <h1>Day 2 Giveaway!</h1>
-        <img src="https://placehold.it/200" alt="">
-        <h1><a href="#" data-toggle="modal" data-target="#two">Details</a></h1>
-      </div>
-      <div class="item three opacity-6"></div>
-      <div class="item four opacity-6"></div>
-      <div class="item five opacity-6"></div>
-      <div class="item six opacity-6"></div>
-    </div></div></div></div>
-  
-          <!-- modal one -->
-    <div class="modal fade" id="two" tabindex="-1" role="dialog" aria-labelledby="modal-two">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content padding-15">
-         
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-         
-          <div class="modal-body text-center"><h1 class="no-margin-top">Day 2 Giveaway!</h1>
-        <img src="https://placehold.it/200" alt="">
-            <h4>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
+    <div class="banner-row">
+      <div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="fifteen-days-small.png" alt="15 Days of Giveaways"><img class="hidden-xs img-responsive center-block" src="fifteen-days.png" alt="15 Days of Giveaways"></div>
+      <div class="container">
+        <div class="rules">
+          <h1 class="source">Sign Up to Win!</h1>
+          <h4 class="source">Do you feel lucky? We're giving away 15 awesome prizes to Summer Reading participants who sign up for the program June 1-15.</h4>
+          <div class="large-text">
+            <div>Each day features a random drawing for that day's prize. Everyone registered May 1-June 15 will be entered into grand prize drawings on June 14-15. What could you win? Throw your sunhat in the ring today to find out. No purchase necessary, and registration is free.</div>
           </div>
         </div>
       </div>
+      <div class="prizes-row">
+        <div class="prizes-wrapper">
+          <div class="item one">
+            <h1 class="details"><a href="#">Details</a></h1>
+          </div>
+          <div class="item two">
+            <h1>Day 2 Giveaway!</h1>
+            <img src="https://placehold.it/200" alt="">
+            <h1><a href="#" data-toggle="modal" data-target="#two">Details</a></h1>
+          </div>
+          <div class="item three opacity-6"></div>
+          <div class="item four opacity-6"></div>
+          <div class="item five opacity-6"></div>
+          <div class="item six opacity-6"></div>
+        </div>
+      </div>
     </div>
+  </div>
+  
+  <!-- modal one -->
+  <div class="modal fade" id="two" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <h1>Day 2 Giveaway!</h1>
+        <img src="https://placehold.it/200" alt="">
+        <h4>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
