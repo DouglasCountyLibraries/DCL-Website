@@ -214,6 +214,46 @@ button.close {
 .item.twelve {
     background: url(fifteen.png) center center/cover;
 }
+.headlines-flyin {
+    -webkit-animation: headlines-flyin 0.6s ease-out both;
+    animation: headlines-flyin 0.6s ease-out both;
+}
+@-webkit-keyframes headlines-flyin {
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+}
+100% {
+-webkit-transform: rotate(0) scale(1);
+transform: rotate(0) scale(1);
+}
+}
+@keyframes headlines-flyin {
+0% {
+-webkit-transform: rotate(-540deg) scale(0);
+transform: rotate(-540deg) scale(0);
+}
+100% {
+-webkit-transform: rotate(0) scale(1);
+transform: rotate(0) scale(1);
+}
+}
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+.modal-dialog-centered {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+min-height: calc(100% - (.5rem * 2));
+}
+
+@media (min-width: 576px) {
+.modal-dialog-centered {
+min-height: calc(100% - (1.75rem * 2));
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -439,7 +479,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <!-- modal one -->
   <div class="modal fade" id="one" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -453,7 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal two -->
   <div class="modal fade" id="two" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -467,7 +507,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal three -->
   <div class="modal fade" id="three" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -481,7 +521,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal four -->
   <div class="modal fade" id="four" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -495,7 +535,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal five -->
   <div class="modal fade" id="five" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -509,7 +549,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal six -->
   <div class="modal fade" id="six" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -523,7 +563,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal seven -->
   <div class="modal fade" id="seven" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -537,7 +577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal eight -->
   <div class="modal fade" id="eight" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -551,7 +591,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal nine -->
   <div class="modal fade" id="nine" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -565,7 +605,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal ten -->
   <div class="modal fade" id="ten" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -579,7 +619,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal eleven -->
   <div class="modal fade" id="eleven" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -593,7 +633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal twelve -->
   <div class="modal fade" id="twelve" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -607,7 +647,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal thirteen -->
   <div class="modal fade" id="thirteen" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -621,7 +661,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal fourteen -->
   <div class="modal fade" id="fourteen" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -635,7 +675,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- modal fifteen -->
   <div class="modal fade" id="fifteen" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered headlines-flyin" role="document">
       <div class="modal-content">
         <div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
