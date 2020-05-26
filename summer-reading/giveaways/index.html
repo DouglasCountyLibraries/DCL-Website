@@ -121,9 +121,9 @@ h1.source, h2.source, h3.source, h4.source {
     color: #17144b;
 }
 .modal-content {
-	color: #17144b;
-	padding: 30px 25px 25px 25px;
-	text-align: center;
+    color: #17144b;
+    padding: 30px 25px 25px 25px;
+    text-align: center;
 }
 .modal-content h1 {
     font-family: 'Source Serif Pro', serif;
@@ -134,6 +134,8 @@ h1.source, h2.source, h3.source, h4.source {
     margin: 0 auto 15px auto;
 }
 .modal-content h4 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
     color: #17144b;
 }
 button.close {
@@ -161,9 +163,11 @@ button.close {
     font-weight: 700;
     color: #17144b;
     text-align: center;
-    text-transform: uppercase;
     font-size: 24px;
     margin: 15px auto;
+}
+.item h1.details {
+    margin-top: 272px;
 }
 .item.one {
     background: url(one.png) center center/cover;
@@ -380,23 +384,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="prizes-row">
         <div class="prizes-wrapper">
           <div class="item one">
-            <h1 class="details"><a href="#">Details</a></h1>
+            <h1 class="details"><a href="#one" data-toggle="modal" data-target="#one">Details</a></h1>
           </div>
           <div class="item two">
-            <h1>Day 2 Giveaway!</h1>
+            <h1 class="text-uppercase">Day 2 Giveaway!</h1>
             <img src="https://placehold.it/200" alt="">
-            <h1><a href="#" data-toggle="modal" data-target="#two">Details</a></h1>
+            <h1><a href="#two" data-toggle="modal" data-target="#two">Details</a></h1>
           </div>
-          <div class="item three opacity-6"></div>
-          <div class="item four opacity-6"></div>
-          <div class="item five opacity-6"></div>
-          <div class="item six opacity-6"></div>
+          <div class="item three"></div>
+          <div class="item four"></div>
+          <div class="item five"></div>
+          <div class="item six"></div>
+          <div class="item seven"></div>
+          <div class="item eight"></div>
+          <div class="item nine"></div>
+          <div class="item ten"></div>
+          <div class="item eleven"></div>
+          <div class="item twelve"></div>
+          <div class="item thirteen"></div>
+          <div class="item fourteen"></div>
+          <div class="item fifteen"></div>
         </div>
       </div>
     </div>
   </div>
   
   <!-- modal one -->
+  <div class="modal fade" id="one" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <h1>Day 1 Giveaway!</h1>
+        <img src="https://placehold.it/200" alt="">
+        <h4>Round Beach Towel</h4>
+        <div class="large-text">You'll need a great beach towel while splashing around this summer, and this 100% velour round towel is perfect for that! Details: 59" diameter, machine washable. </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal two -->
   <div class="modal fade" id="two" tabindex="-1" role="dialog" aria-labelledby="prize-modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -405,7 +432,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <h1>Day 2 Giveaway!</h1>
         <img src="https://placehold.it/200" alt="">
-        <h4>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h4>
+        <h4>Large Utility Tote</h4>
+        <div class="large-text">This large tote, at 11.75"H x 21.5"L x 10"D, can carry just about everything you need to enjoy summer, including camping equipment, pool items, games, books, toys and more! It includes a wire support at top to hold its shape and is collapsible for easy storage. </div>
       </div>
     </div>
   </div>
