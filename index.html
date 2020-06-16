@@ -92,49 +92,96 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700&display=swap" rel="stylesheet">
 <style>
-.blue-row {
-    background-color: #18154c;
-    padding: 90px 0;
+.banner-row {
+    background: #17144b;
+    padding-bottom: 75px;
+}
+.banner-row-image {
+    background: linear-gradient(#cf372e 0%, #fed973 50%, #cf372e 100%);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+0% {
+background-position:0% 75%
+}
+50% {
+background-position:100% 25%
+}
+100% {
+background-position:0% 75%
+}
+}
+@keyframes AnimationName {
+0% {
+background-position:0% 75%
+}
+50% {
+background-position:100% 25%
+}
+100% {
+background-position:0% 75%
+}
 }
 .source {
     font-family: 'Source Serif Pro', serif;
     font-weight: 700;
 }
+h1.source, h2.source {
+    color: #17144b;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
+}
+.blue-row {
+    background-color: #17144b;
+    padding: 0 0 100px 0;
+}
 .button-group {
     font-size: 20px;
     text-transform: uppercase;
 }
-.one a, .two a, .three a {
+.one a, .two a, .three a, .four a {
     color: #17144b;
-    padding: 20px 0;
+    padding: 5px 0;
+    border: 4px solid rgba(255,255,255,.8);
     border-radius: 2px;
     width: 300px;
     display: block;
     margin: 8px 0;
+    box-shadow: 0px 4px 4px rgba(23,20,75,.6);
 }
-.one a:hover, .one a:focus, .two a:hover, .two a:focus, .three a:hover, .three a:focus {
+.one a:hover, .one a:focus, .two a:hover, .two a:focus, .three a:hover, .three a:focus, .four a:hover, .f a:focus {
     text-decoration: none;
-    color: #17144b;
+    color: rgba(255,255,255,1);
+    border: 4px solid rgba(255,255,255,1);
     -webkit-transition-duration: .5s;
     transition-duration: .5s;
+    box-shadow: 0px 4px 16px rgba(23,20,75,.9);
 }
 .one a {
-    background: #f3e4c7;
+    background: #ef7376;
 }
 .one a:hover {
-    background: #f6f7f9;
+    background: #cf372e;
 }
 .two a {
-    background: #f3e4c7;
+    background: #5cbdb9;
 }
 .two a:hover {
-    background: #f6f7f9;
+    background: #17144b;
 }
 .three a {
-    background: #f3e4c7;
+    background: #FBB040;
 }
 .three a:hover {
-    background: #f6f7f9;
+    background: #f07c1f;
+}
+.four a {
+    background: #82acbe;
+}
+.four a:hover {
+    background: #3d7188;
 }
 .jello:hover {
     -webkit-animation: jello-vertical 1s both;
@@ -205,7 +252,7 @@ transform: scale3d(1, 1, 1);
 .button-group {
     font-size: 24px;
 }
-.one a, .two a, .three a {
+.one a, .two a, .three a, .four a {
     width: 365px;
 }
 }
@@ -392,18 +439,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row banner-row"><a href="summer-reading/giveaways/"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="home-small-two.jpg" alt="Summer Reading 15 Days of Giveaways"></a><a href="summer-reading/giveaways/"><img class="hidden-xs img-responsive center-block" src="home-two.jpg" alt="Summer Reading 15 Days of Giveaways"></a> </div>
+  <div class="row banner-row">
+    <div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="summer-reading-small.png" alt="Summer Reading"><img class="hidden-xs img-responsive center-block" src="summer-reading.png" alt="Summer Reading"></div>
+  </div>
   <div class="row blue-row">
-    <div class="container">
-      <div class="static-container container">
-        <ul class="source list-inline text-center button-group">
-          <li class="one jello"><a href="summer-reading/">Summer Reading</a></li>
-          <li class="two jello"><a href="who-we-are/">DCL Welcomes All</a></li>
-          <li class="three jello"><a href="camp-dcl/">Camp DCL</a></li>
-        </ul>
-      </div>
+    <div class="container margin-lg-100">
+      <ul class="source list-inline text-center button-group">
+        <li class="one jello"><a href="summer-reading/">Summer Reading</a></li>
+        <li class="two jello"><a href="who-we-are/">DCL Welcomes All</a></li>
+        <li class="three jello"><a href="camp-dcl/">Camp DCL</a></li>
+        <li class="four jello"><a href="delivers/">DCL Delivers Good Times</a></li>
+      </ul>
     </div>
-  </div> 
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
