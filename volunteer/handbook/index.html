@@ -112,6 +112,24 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .custom-blockquote blockquote {
     font-size: 18px;
 }
+    
+    
+
+.find {
+width: 30%;
+font-size: 14px;
+line-height: 26px;
+color: #333;
+background-color: #fcfcfc;
+border: 1px solid #ddd;
+padding: 5px 15px;
+    margin: 15px;
+}
+
+mark {
+  background: orange;
+  color: black;
+} 
 
 @media (max-width: 768px) {
 .custom-blockquote {
@@ -323,10 +341,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li> <a href="#volunteerism">Volunteerism</a></li>
           <li> <a href="#safety-wellness">Safety & Wellness</a></li>
           <li> <a href="#voices">Voices</a></li>
-        </ul>
+        </ul><input class="find form-control" type="text" value="test" placeholder="Find on Page »">
       </div>
     </div>
-  </div>
+  </div><div id="context">
   <div id="welcome" class="row">
     <div class="container padding-bottom-20">
       <h3 class="text-center">Welcome to Douglas County Libraries!</h3>
@@ -469,7 +487,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="padding-bottom-15">"Volunteering is the ultimate exercise in democracy. You vote in elections once a year, but when you volunteer, you vote every day about the kind of community you want to live in." - Unknown</div>
       <div> "How wonderful it is that nobody need wait a single moment before starting to improve the world." - Anne Frank</div>
     </div>
-  </div>
+  </div></div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
@@ -526,7 +544,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdn.jsdelivr.net/mark.js/7.0.0/jquery.mark.min.js"></script>
+    <script>
+$(function() {
+  $("input").on("input.highlight", function() {
+    // Determine specified search term
+    var searchTerm = $(this).val();
+    // Highlight search term inside a specific context
+    $("#context").unmark().mark(searchTerm);
+  }).trigger("input.highlight").focus();
+});</script>
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
 </html>
