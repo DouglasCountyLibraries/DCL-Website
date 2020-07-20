@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -134,6 +135,22 @@ h1.blue.source, h2.blue.source {
     font-family: 'Source Serif Pro', serif;
     font-weight: 600;
 }
+h4.source, h4.source a {
+    color: #17144b;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 400;
+}
+h5.source {
+    color: #17144b;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 400;
+}
+.location {
+    color: #17144b;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
 .smaller, .smaller:hover, .smaller:focus {
     font-size: .85em;
     font-weight: 400;
@@ -142,6 +159,16 @@ h1.blue.source, h2.blue.source {
 .green-row {
     background: #329b8d;
     padding: 40px 0 25px;
+}
+.sweetmodal {
+    background: #FBB040;
+    color: #17144b;
+}
+.sweetmodal .modal-header {
+    background: #17144b;
+    color: #5cbdb9;
+    border-bottom: 0px;
+    padding-bottom: 20px;
 }
 .orange-row {
     background: #FBB040;
@@ -571,12 +598,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row orange-row">
-    <div class="container">
-      <div class="text-center margin-lg-200 margin-md-100">
-        <div class="pull-right hidden-xs"><img class="img-responsive" src="surfboards.png" alt="Surfboards"></div>
-        <h2 class="source">Welcome to Splash Into Summer!</h2>
-        <div class="text-left-sm large-text">
-          <div>You're invited to have a great summer: reading, soaking up the sun, and keeping cool while enjoying tons of fun summer activities.</div>
+  <div class="container">
+    <div class="text-center margin-lg-200 margin-md-100">
+      <div class="pull-right hidden-xs"><img class="img-responsive" src="surfboards.png" alt="Surfboards"></div>
+      <h2 class="source">Welcome to Splash Into Summer!</h2>
+      <div class="text-left-sm large-text">
+        <div>You're invited to have a great summer: reading, soaking up the sun, and keeping cool while enjoying tons of fun summer activities.</div>
+        <div class="margin-top-15"> 
+          <!--link for ice cream truck modal<h4 class="source text-center">Celebrate Splash Into Summer <a class="pointer text-underline" data-target="#sweetmodal" data-toggle="modal" type="button">with a sweet treat!</a></h4>
+          </div>-->
           <div class="margin-top-15 margin-bottom-30"> We've suggested 1000 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest on the reading log. We aren't set on you reading 1000 minutes, we just want you to read and have fun while doing it! </div>
         </div>
       </div>
@@ -599,9 +629,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="large-text text-center hidden-md hidden-lg padding-30">
         <div>Watch our school of fish grow and help us meet our goal. If we meet our goal, the <a class="text-underline" href="../foundation/">Douglas County Libraries Foundation</a> will donate $1000 to the COVID-19 Recovery Fund through the Douglas County Community Foundation (DCCF).</div>
-<div class="margin-top-10">Already registered?
-            <h3 class="blue source no-margin"><a class="text-underline" href="https://wandooreader.com/douglascountylibraries/splash-into-summer" target="_blank">Log Your Minutes</a></h3>
-          </div>
+        <div class="margin-top-10">Already registered?
+          <h3 class="blue source no-margin"><a class="text-underline" href="https://wandooreader.com/douglascountylibraries/splash-into-summer" target="_blank">Log Your Minutes</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sweetmodal" class="modal fade" aria-labelledby="myModalLabel" role="dialog" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content sweetmodal">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <div class="modal-title text-center">
+            <h4 style="color: #5cbdb9;" class="source no-margin-bottom">The ice cream truck is coming to your neighborhood!</h4>
+            Stop by and enjoy a free cold treat to celebrate summer reading.</div>
+        </div>
+        <div class="modal-body text-left padding-left-30 padding-right-30 padding-bottom-30">
+          <h5 class="source no-margin-top">Wednesday, July 29</h5>
+          <h6 class="location">Castle Rock</h6>
+          <ul>
+            <li>11-11:45AM – The Philip S. Miller Park, 1375 W. Plum Creek Parkway, Castle Rock, CO 80109</li>
+            <li>12-1PM – Douglas County Libraries in Castle Rock, 100 S. Wilcox St., Castle Rock, CO 80104</li>
+            <li>1:15-1:45PM – Founders Park, 4671 Enderud Blvd., Castle Rock, CO 80104</li>
+          </ul>
+          <h6 class="location">Castle Pines</h6>
+          <ul>
+            <li>2:15-3:15PM – Elk Ridge Park, 7005 Mira Vista Lane, Castle Pines, CO 80108</li>
+            <li>3:30-4:15PM – Douglas County Libraries in Castle Pines, 360 Village Square Lane, Castle Pines, CO 80108</li>
+          </ul>
+          <h5 class="source">Thursday, July 30</h5>
+          <h6 class="location">Parker</h6>
+          <ul>
+            <li>11AM-12PM – O'Brien Park, 10795 Victorian Dr., Parker, CO 80138</li>
+            <li>12:15-1:15PM – Douglas County Libraries in Parker, 20105 E. Mainstreet, Parker, CO 80138</li>
+          </ul>
+          <h6 class="location">Lone Tree</h6>
+          <ul>
+            <li>1:45-2:45PM – Douglas County Libraries in Lone Tree, 10055 Library Way, Lone Tree, CO 80124</li>
+            <li>3-4PM – Lone Tree Rec Center, 10249 RidgeGate Circle, Lone Tree, CO 80124 (KK TO CONFIRM)</li>
+          </ul>
+          <h5 class="source">Friday, July 31</h5>
+          <h6 class="location">Highlands Ranch</h6>
+          <ul>
+            <li>11-11:30AM – Redstone Park, 3280 Redstone Park Circle, Highlands Ranch, CO 80129</li>
+            <li>11:45AM-12:15PM – Northridge Park, 8800 S. Broadway, Highlands Ranch, CO 80126</li>
+            <li>12:30-1:15PM – Douglas County Libraries in Highlands Ranch, 9292 S. Ridgeline Blvd., Highlands Ranch, CO 80129</li>
+          </ul>
+          <h6 class="location">Roxborough</h6>
+          <ul>
+            <li>1:45-2:15PM – Roxborough Skatepark, 7673 S. Rampart Range Rd., Littleton, CO 80125</li>
+            <li>2:30-3:15PM – Douglas County Libraries in Roxborough, 8357 N. Rampart Range Rd. #200, Littleton, CO 80125</li>
+            <li>3:30-4PM – Sterling Ranch Park/Gazebo, address TBD </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -706,4 +786,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
