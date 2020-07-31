@@ -94,9 +94,23 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="stylesheet" href="https://use.typekit.net/hxw5uje.css">
 <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
 <style>
+.stripe-row {
+    background: repeating-linear-gradient( 135deg, #75ccd3, #75ccd3 2px, #5ec6cd 2px, #5ec6cd 15px)
+}
 .background-row {
-    background: #2d7a7a url("background.png") bottom left/cover;
-    height: 900px;
+    background: transparent url("background.png") bottom center no-repeat;
+}
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.right {
+    margin: 0 0 40px 35px;
+}
+.left {
+    margin: 0 0 15px;
 }
 .vidaloka {
     font-family: 'Vidaloka', serif;
@@ -134,9 +148,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 @media (max-width: 500px) {
 .vidaloka {
-    font-size: 135px;
-    line-height: 110px;
+    font-size: 125px;
+    line-height: 100px;
     letter-spacing: -5px;
+}
+.box a {
+    width: 375px;
 }
 }
 </style>
@@ -322,18 +339,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
-    <div class="vidaloka text-center">Mind<br>
-      Grown!</div>
-    <div class="box-container">
-      <ul class="list-unstyled futura text-center box-group">
-        <li class="box"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1452031897"> <span class="text-uppercase">Imagine Being Organized</span><br>
-          Useful Tips for All </a></li>
-        <li class="box"><a href="library-perks/"> <span class="text-uppercase">Explore an Alternate Recess</span><br>
-          You Don't Need Monkey Bars </a></li>
-        <li class="box"><a href="storytime/"> <span class="text-uppercase">Learn at a Virtual Storytime</span><br>
-          Get Ready to Read </a></li>
-      </ul>
+  <div class="row stripe-row">
+    <div class="background-row">
+      <div class="container-wrapper container">
+        <div class="left"><img class="img-responsive" src="growth.gif" alt="Mind Grown!"></div>
+        <div class="right">
+          <div class="vidaloka text-center">Mind<br>
+            Grown!</div>
+          <div class="box-container">
+            <ul class="list-unstyled futura text-center box-group">
+              <li class="box"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1452031897"> <span class="text-uppercase">Imagine Being Organized</span><br>
+                Useful Tips for All </a></li>
+              <li class="box"><a href="library-perks/"> <span class="text-uppercase">Explore an Alternate Recess</span><br>
+                You Don't Need Monkey Bars </a></li>
+              <li class="box"><a href="storytime/"> <span class="text-uppercase">Learn at a Virtual Storytime</span><br>
+                Get Ready to Read </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
