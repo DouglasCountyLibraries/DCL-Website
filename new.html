@@ -107,10 +107,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     align-items: center;
 }
 .right {
-    margin: 0 0 40px 35px;
+    margin: 0 0 50px 35px;
 }
 .left {
-    margin: 0 0 15px;
+    margin: 15px 0 15px;
 }
 .vidaloka {
     font-family: 'Vidaloka', serif;
@@ -139,7 +139,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     box-shadow: 0px 0px 8px rgba(0,51,52,.3);
 }
 .box a:hover, .box a:focus {
-	background: #fff;
+    background: #fff;
     text-decoration: none;
     color: #001e4c;
     -webkit-transition-duration: .2s;
@@ -147,14 +147,35 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     box-shadow: 0px 4px 8px rgba(0,51,52,.9);
 }
 
-@media (max-width: 500px) {
-.vidaloka {
-    font-size: 125px;
-    line-height: 100px;
+@media (min-width: 993px) {
+.vidaloka.mind-small {
+    display: none;
+}
+}
+
+@media (max-width: 992px) {
+.background-row {
+    background: transparent url("background-small.png") bottom center no-repeat;
+}
+.vidaloka.mind-small {
+    font-size: 100px;
+    line-height: 80px;
     letter-spacing: -5px;
 }
+.right {
+    margin: 0 auto 15px auto;
+}
+.container-wrapper {
+    flex-direction: column;
+}
+.vidaloka.mind-large {
+    display: none;
+}
+}
+
+@media (max-width: 500px) {
 .box a {
-    width: 375px;
+    width: 350px;
 }
 }
 </style>
@@ -343,9 +364,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row stripe-row">
     <div class="background-row">
       <div class="container-wrapper container">
-        <div class="left"><img class="img-responsive" src="growth.gif" alt="Mind Grown!"></div>
+        <div class="vidaloka mind-small padding-top-15 text-center">Mind Grown!</div>
+        <div class="left"><img class="img-responsive" src="grow.gif" alt="Mind Grown!"></div>
         <div class="right">
-          <div class="vidaloka text-center">Mind<br>
+          <div class="vidaloka mind-large text-center">Mind<br>
             Grown!</div>
           <div class="box-container">
             <ul class="list-unstyled futura text-center box-group">
