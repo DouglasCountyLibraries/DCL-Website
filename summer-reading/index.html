@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,324 +86,130 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600,700&display=swap" rel="stylesheet">
 <style>
-.banner-row {
-    background: #329b8d;
+.admin-card {
+	height: 400px;
+	margin-top: 15px;
 }
-.banner-row-image {
-    background: linear-gradient(#cf372e 0%, #fed973 20%, #eb7545 50%, #ef7175 60%, #cf372e 100%);
-    background-size: 300% 300%;
-    -webkit-animation: AnimationName 10s ease infinite;
-    animation: AnimationName 10s ease infinite;
+.card-grid:hover, .card-grid:focus {
+	cursor: pointer;
 }
-@-webkit-keyframes AnimationName {
-0% {
-background-position:0% 75%
-}
-50% {
-background-position:100% 25%
-}
-100% {
-background-position:0% 75%
-}
-}
-@keyframes AnimationName {
-0% {
-background-position:0% 75%
-}
-50% {
-background-position:100% 25%
-}
-100% {
-background-position:0% 75%
-}
-}
-.source {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 700;
-}
-h1.source, h2.source {
-    color: #17144b;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
-}
-h1.blue.source, h2.blue.source {
-    color: #5cbdb9;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
-}
-h4.source, h4.source a {
-    color: #17144b;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 400;
-}
-h5.source {
-    color: #17144b;
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 400;
-}
-.location {
-    color: #17144b;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 3px;
-}
-.smaller, .smaller:hover, .smaller:focus {
-    font-size: .85em;
-    font-weight: 400;
-    text-decoration: none;
-}
-.green-row {
-    background: #329b8d;
-    padding: 40px 0 25px;
-}
-.sweetmodal {
-    background: #FBB040;
-    color: #17144b;
-}
-.sweetmodal .modal-header {
-    background: #17144b;
-    color: #5cbdb9;
-    border-bottom: 0px;
-    padding-bottom: 20px;
-}
-.orange-row {
-    background: #FBB040;
-    color: #17144b;
-    padding: 35px 0 30px;
-}
-.orange-row a {
-    color: #17144b;
-}
-.blue-row {
-    background: #17144b;
-    padding: 40px 0 65px;
-    color: #5cbdb9;
-}
-.blue-row a {
-    color: #5cbdb9;
-}
-.dot-row {
-    background: #329b8d;
-}
-.static-container {
-    position: relative;
-}
-.button-group {
-    font-size: 30px;
-    text-transform: uppercase;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.one a, .two a, .three a {
-    color: #17144b;
-    padding: 5px 0;
-    border: 4px solid rgba(255,255,255,.8);
-    border-radius: 2px;
-    width: 300px;
-    display: block;
-    margin: 8px 0;
-    box-shadow: 0px 4px 4px rgba(23,20,75,.6);
-}
-.one a:hover, .one a:focus, .two a:hover, .two a:focus, .three a:hover, .three a:focus {
-    text-decoration: none;
-    color: rgba(255,255,255,1);
-    border: 4px solid rgba(255,255,255,1);
-    -webkit-transition-duration: .5s;
-    transition-duration: .5s;
-    box-shadow: 0px 4px 16px rgba(23,20,75,.9);
-}
-.one a {
-    background: #ef7376;
-}
-.one a:hover {
-    background: #cf372e;
-}
-.two a {
-    background: #5cbdb9;
-}
-.two a:hover {
-    background: #17144b;
+.flip-btn {
+	color: #fff;
+	cursor: pointer;
+	font-size: 32px;
+	vertical-align: top;
+	margin-top: 4px;
 }
-.three a {
-    background: #FBB040;
+.unflip-btn {
+	color: #fff;
+	cursor: pointer;
+	padding: 6px;
+	position: absolute;
+	right: 15px;
+	top: 25px;
 }
-.three a:hover {
-    background: #f07c1f;
+.flip-btn:hover, .flip-btn:focus {
+	color: rgba(255,255,255, .6);
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
-.jello:hover {
-    -webkit-animation: jello-vertical 1s both;
-    animation: jello-vertical 1s both;
+.unflip-btn:hover, .unflip-btn:focus {
+	color: rgba(255,255,255, .6);
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
-@-webkit-keyframes jello-vertical {
-0% {
--webkit-transform: scale3d(1, 1, 1);
-transform: scale3d(1, 1, 1);
+.front {
+	padding: 23% 15px 20px;
+	text-align: center;
 }
-30% {
--webkit-transform: scale3d(0.75, 1.15, 1);
-transform: scale3d(0.75, 1.15, 1);
+.back {
+	padding: 20% 30px 30px;
 }
-40% {
--webkit-transform: scale3d(1.15, 0.75, 1);
-transform: scale3d(1.15, 0.75, 1);
+.hamburger {
+	margin-top: 125px;
 }
-50% {
--webkit-transform: scale3d(0.85, 1.05, 1);
-transform: scale3d(0.85, 1.05, 1);
+.background {
+	padding-bottom: 40px;
+	margin-bottom: 15px;
+	background: #fff url("bg.png") repeat-x bottom;
 }
-65% {
--webkit-transform: scale3d(1.05, 0.95, 1);
-transform: scale3d(1.05, 0.95, 1);
+.image-one {
+	background: #fff url("assets/images/box-one.jpg") no-repeat top center / cover;
 }
-75% {
--webkit-transform: scale3d(0.95, 1.05, 1);
-transform: scale3d(0.95, 1.05, 1);
+.image-two {
+	background: #fff url("assets/images/box-two.jpg") no-repeat top center / cover;
 }
-100% {
--webkit-transform: scale3d(1, 1, 1);
-transform: scale3d(1, 1, 1);
+.image-three {
+	background: #fff url("assets/images/box-three.jpg") no-repeat top center / cover;
 }
+.image-four {
+	background: #fff url("assets/images/box-four.jpg") no-repeat top center / cover;
 }
-@keyframes jello-vertical {
-0% {
--webkit-transform: scale3d(1, 1, 1);
-transform: scale3d(1, 1, 1);
+.image-five {
+	background: #fff url("assets/images/box-five.jpg") no-repeat top center / cover;
 }
-30% {
--webkit-transform: scale3d(0.75, 1.15, 1);
-transform: scale3d(0.75, 1.15, 1);
+.image-six {
+	background: #fff url("assets/images/box-six.jpg") no-repeat top center / cover;
 }
-40% {
--webkit-transform: scale3d(1.15, 0.75, 1);
-transform: scale3d(1.15, 0.75, 1);
+.image-seven {
+	background: #fff url("assets/images/box-seven.jpg") no-repeat top center / cover;
 }
-50% {
--webkit-transform: scale3d(0.85, 1.05, 1);
-transform: scale3d(0.85, 1.05, 1);
+.image-eight {
+	background: #fff url("assets/images/box-eight.jpg") no-repeat top center / cover;
 }
-65% {
--webkit-transform: scale3d(1.05, 0.95, 1);
-transform: scale3d(1.05, 0.95, 1);
+.image-one-fill {
+	background: #fff url("assets/images/box-one-fill.gif") no-repeat top center / cover;
 }
-75% {
--webkit-transform: scale3d(0.95, 1.05, 1);
-transform: scale3d(0.95, 1.05, 1);
+.image-two-fill {
+	background: #fff url("assets/images/box-two-fill.gif") no-repeat top center / cover;
 }
-100% {
--webkit-transform: scale3d(1, 1, 1);
-transform: scale3d(1, 1, 1);
+.image-three-fill {
+	background: #fff url("assets/images/box-three-fill.gif") no-repeat top center / cover;
 }
+.image-four-fill {
+	background: #fff url("assets/images/box-four-fill.gif") no-repeat top center / cover;
 }
-.fish-wrapper {
-    display: flex;
-    align-items: center;
+.image-five-fill {
+	background: #fff url("assets/images/box-five-fill.gif") no-repeat top center / cover;
 }
-.fish-box {
-    flex-grow: 4;
+.image-six-fill {
+	background: #fff url("assets/images/box-six-fill.gif") no-repeat top center / cover;
 }
-.text-box {
-    padding: 15px;
-    width: 30%;
+.image-seven-fill {
+	background: #fff url("assets/images/box-seven-fill.gif") no-repeat top center / cover;
 }
-.fish-row a {
-    color: #5cbdb9;
+.image-eight-fill {
+	background: #fff url("assets/images/box-eight-fill.gif") no-repeat top center / cover;
 }
-.fish-row {
-    background: #17144b url("fish-background.jpg") repeat-x bottom center;
-    color: #5cbdb9;
-    padding-bottom: 30px;
-    -webkit-animation: slide 90s linear infinite;
-    animation: slide 90s linear infinite;
-}
-@-webkit-keyframes slide {
-from {
-background-position: 0 0;
-}
-to {
-background-position: -2500px 0;
-}
-}
-@keyframes slide {
-from {
-background-position: 0 0;
-}
-to {
-background-position: -2500px 0;
-}
-}
-.swimming {
-    animation: swim linear 25s;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%;
-    -webkit-animation: swim linear 25s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-transform-origin: 50% 50%;
-}
-@keyframes swim {
-0% {
-opacity:1;
-transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
-}
-20% {
-opacity:0.9;
-transform:  translate(5px, 20px) scaleX(0.90) scaleY(0.90);
-}
-60% {
-opacity:0.8;
-transform:  translate(-8px, -25px) scaleX(0.60) scaleY(0.60);
-}
-90% {
-opacity:1;
-transform:  translate(10px, -25px) scaleX(1.00) scaleY(1.00);
-}
-100% {
-opacity:1;
-transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
-}
-}
-@-webkit-keyframes swim {
-0% {
-opacity:1;
--webkit-transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
-}
-20% {
-opacity:0.9;
--webkit-transform:  translate(5px, 20px) scaleX(0.90) scaleY(0.90);
-}
-60% {
-opacity:0.8;
--webkit-transform:  translate(-8px, -25px) scaleX(0.60) scaleY(0.60);
-}
-90% {
-opacity:1;
--webkit-transform:  translate(10px, -25px) scaleX(1.00) scaleY(1.00);
-}
-100% {
-opacity:1;
--webkit-transform:  translate(0px, 0px) scaleX(1.00) scaleY(1.00);
+
+@media (max-width: 414px) {
+.admin-card {
+	height: 480px;
+	margin-top: 15px;
+}
+.front {
+	padding: 30% 15px 20px;
+}
+.back {
+	padding: 30% 30px 30px;
 }
 }
 
-@media (min-width: 992px) {
-.button-group {
-    font-size: 30px;
-    text-transform: uppercase;
-    width: 400px;
-    position: absolute;
-    right: 0;
-    bottom: 70px;
+@media (max-width: 375px) {
+.admin-card {
+	height: 540px;
+	margin-top: 15px;
 }
-.fish-row {
-    padding-bottom: 75px;
+.front {
+	padding: 30% 15px 20px;
 }
-}
-
-@media (min-width: 768px) {
-.button-group {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.back {
+	padding: 30% 30px 30px;
 }
 }
 </style>
@@ -590,106 +395,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row banner-row">
-    <div class="banner-row-image"><img class="hidden-sm hidden-md hidden-lg img-responsive center-block" src="summer-reading-small.png" alt="Summer Reading"><img class="hidden-xs img-responsive center-block" src="summer-reading.png" alt="Summer Reading"></div>
-    <div class="static-container container">
-      <ul class="source list-inline text-center button-group">
-        <li class="three jello"><a href="scrapbook/">Scrapbook</a></li>
-        <br>
-        <li class="jello"><a href="jokes.pdf" target="_blank" class="white smaller">Splishy-Splashy Jokes</a></li>
-      </ul>
+  <div class="row border-top">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase font-weight-400">Summer Reading</h1>
+        <div class="separator-container">
+          <div class="separator line-separator"><i class="fas fa-heart"></i></div>
+        </div>
+        <h4 class="roboto">Congratulations to our 2020 school contest winners: Copper Mesa Elementary School, Ranch View Middle School, Castle View High School and Leman Classical Academy (Charter). Each school will be awarded $500 courtesy of the Douglas County Libraries Foundation.</h4>
+      </div>
     </div>
   </div>
-  <div class="row orange-row">
+  <div class="row padding-bottom-60">
+    <div class="container">
+      <h2 class="text-uppercase text-center no-margin-top">8 Reasons Why We Love Summer Reading:</h2>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-one">
+            <h4 class="white font-weight-400">For school-aged kids, a single summer without reading can lead to falling behind by one to three months in reading skill <i class="flip-btn material-icons">more_horiz</i></h4>
+          </div>
+          <div class="back image-one-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">The effect is cumulative, and it's not easy to catch up. A study done by Johns Hopkins Center for Summer Learning showed that by the end of fifth grade, children who didn't read over summer breaks lagged two years behind the reading levels of summer readers. Library summer reading programs play an important role in helping combat this "summer slide." Kids who read at least six books over summer breaks maintain or improve their reading skills. Summer reading programs kick-start learning in reading, boosting test scores, motivation, confidence and positive attitudes toward reading. </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-two">
+            <h4 class="white font-weight-400">Access to books is the best way to combat the "summer&nbsp;slide" <i class="flip-btn material-icons">more_horiz</i></h4>
+          </div>
+          <div class="back image-two-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">Kids who have books around them find books they want to read. The more they read, the less they slide. We offer exciting reading choices for all ages, all year long. Our staff is excited to <a class="white text-underline" href="../read-listen-watch/">share their favorites</a> as suggestions! </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-three">
+            <h4 class="white font-weight-400">Summer Reading gives kids a chance to choose books they'd like to read <i class="flip-btn material-icons">more_horiz</i></h4>
+          </div>
+          <div class="back image-three-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">Though it can be practical for schools to guide students by reading level, summer offers them freedom to read outside those boundaries. When children are motivated by their interests, they can read successfully above their tested levels, growing their vocabulary and skills. When children are allowed to read books that might be considered too easy, they may develop fluency and comprehension, so they can better understand and retell what they've read. Most of all, free choice helps kids be excited about books&mdash;which motivates them to read even more!</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-four">
+            <h4 class="white font-weight-400">Summer Reading gives reluctant readers the time and freedom to explore their own interests at their own pace <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-four-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">As J.K. Rowling said, "If you don't like to read, you haven't found the right book." For struggling readers, the library can provide not only the right book, but also extra motivation. Summer Reading helps build reading connections through fun events and activities. Summer Reading prizes reward practice and make reading less work and more fun. </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-five">
+            <h4 class="white font-weight-400">Summer Reading encourages families to be creative about reading. Reading becomes a game, and families are encouraged to be playful with it <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-five-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">Summer Reading includes fun activities for children, in addition to keeping track of time spent reading. We encourage kids to make connections between what they read and their world. We encourage families to grow the fun quotient by mixing up regular reading routines. Perhaps they'd like to make a book fort for a rainy afternoon, or find a great place to read outside&mdash;or enjoy the quintessential kid favorite: stay up late, reading with a flashlight!</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-six">
+            <h4 class="white font-weight-400">We all enjoy listening to a great book, but for children, reading aloud is an important part of becoming a reader&mdash;and one that shouldn't stop as kids start reading on their own <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-six-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">Author and educator Jim Trelease says that a child's reading level doesn't match his listening level until eighth grade. When parents read aloud with older children, it provides unique opportunities for understanding, empathy, discussion and bonding, in addition to myriad academic benefits.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-seven">
+            <h4 class="white font-weight-400">Summer Reading helps us educate people about early literacy <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-seven-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">With special activities for babies and toddlers, we encourage parents to begin literacy education from the very beginning. Through <a class="white text-underline" href="../storytime/">Storytime</a>, <a class="white text-underline" href="../authors-events/">library events</a>, and a targeted approach to Summer Reading, we help prepare kids to read on their own through talking, reading, writing, singing and playing.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-grid admin-card">
+          <div class="front image-eight">
+            <h4 class="white font-weight-400">Summer Reading builds community by providing a shared goal <i class="flip-btn material-icons">more_horiz</i> </h4>
+          </div>
+          <div class="back image-eight-fill"><i class="unflip-btn material-icons">clear</i>
+            <div class="white">It encourages families to make reading a part of their traditions and helps parents become great role models for young readers. Kids are more apt to read when they see their parents reading, too. Summer Reading emphasizes the universal importance of reading&mdash;for all ages and stages.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-teal padding-top-15 padding-bottom-40">
     <div class="container text-center">
-      <div class="col-sm-6 padding-bottom-15">
-        <h4 class="source">Splash Into Summer Finishing Prizes</h4>
-        <div class="text-left-sm large-text">
-          <div>We hope you had a great summer of reading! Kids finishing prizes can be picked up through August 9. Visit your preferred DCL location during current operating hours to pick out a book to keep, while supplies last. </div>
-          <div class="margin-top-15">Finishing prize drawing winners of all ages will be announced Tuesday, August 4, and notified via email. Check your email to see if you’ve won a stand-up paddleboard or Visa gift card.</div>
-        </div>
-      </div>
-      <div class="col-sm-6 padding-bottom-15">
-        <h4 class="source">School Contest Award Recipients</h4>
-        <div class="text-left-sm large-text">These are the schools with the most summer reading sign-ups. Each school will be awarded $500 this month courtesy of the Douglas County Libraries Foundation.
-          <ul class="list-unstyled padding-top-20">
-            <li>Elementary: Copper Mesa Elementary School</li>
-			  <li>Middle: Ranch View Middle School</li>
-			   <li>High: Castle View High School</li>
-			   <li>Charter: Leman Classical Academy</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row fish-row">
-    <div class="container-md">
-      <h2 class="blue source text-center padding-top-15 padding-bottom-30">Community Goal&mdash;5 Million Minutes Read!</h2>
-      <div class="fish-wrapper margin-lg-50">
-        <div class="large-text text-box boxes hidden-xs hidden-sm">
-          <div>Congratulations, summer readers! We finished with a combined total of 5 million minutes read. To celebrate that milestone, the Douglas County Libraries Foundation has donated $1,000 to the COVID-19 Recovery Fund through the Douglas County Community Foundation. Thank you for contributing your minutes to this worthy cause. </div>
-        </div>
-        <div class="meter-box boxes"><img class="img-responsive image-center" src="minutes.png" alt="Goal Meter"></div>
-        <div class="hidden-md hidden-sm hidden-xs fish-box boxes swimming"><img class="image-center" src="fewer-fish.png" alt="Fish"></div>
-        <div class="fish-box boxes swimming"><img class="image-center" src="fish.png" alt="Fish"></div>
-        <div class="hidden-xs fish-box boxes swimming"><img class="image-center" src="few-fish.png" alt="Fish"></div>
-      </div>
-      <div class="large-text text-center hidden-md hidden-lg padding-30">
-        <div>Watch our school of fish grow and help us meet our goal. If we meet our goal, the <a class="text-underline" href="../foundation/">Douglas County Libraries Foundation</a> will donate $1000 to the COVID-19 Recovery Fund through the Douglas County Community Foundation (DCCF).</div>
-        <div class="margin-top-10">Already registered?
-          <h3 class="blue source no-margin"><a class="text-underline" href="https://wandooreader.com/douglascountylibraries/splash-into-summer" target="_blank">Log Your Minutes</a></h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="sweetmodal" class="modal fade" aria-labelledby="myModalLabel" role="dialog" style="display: none;">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content sweetmodal">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-          <div class="modal-title text-center">
-            <h4 style="color: #5cbdb9;" class="source no-margin-bottom">The ice cream truck is coming to your neighborhood!</h4>
-            Stop by and enjoy a free cold treat to celebrate summer reading.</div>
-        </div>
-        <div class="modal-body text-left padding-left-30 padding-right-30 padding-bottom-30">
-          <h5 class="source no-margin-top">Wednesday, July 29</h5>
-          <h6 class="location">Castle Rock</h6>
-          <ul>
-            <li>11-11:45AM – The Philip S. Miller Park, 1375 W. Plum Creek Parkway, Castle Rock, CO 80109</li>
-            <li>12-1PM – Douglas County Libraries in Castle Rock, 100 S. Wilcox St., Castle Rock, CO 80104</li>
-            <li>1:15-1:45PM – Founders Park, 4671 Enderud Blvd., Castle Rock, CO 80104</li>
-          </ul>
-          <h6 class="location">Castle Pines</h6>
-          <ul>
-            <li>2:15-3:15PM – Elk Ridge Park, 7005 Mira Vista Lane, Castle Pines, CO 80108</li>
-            <li>3:30-4:15PM – Douglas County Libraries in Castle Pines, 360 Village Square Lane, Castle Pines, CO 80108</li>
-          </ul>
-          <h5 class="source">Thursday, July 30</h5>
-          <h6 class="location">Parker</h6>
-          <ul>
-            <li>11AM-12PM – O'Brien Park, 10795 Victorian Dr., Parker, CO 80138</li>
-            <li>12:15-1:15PM – Douglas County Libraries in Parker, 20105 E. Mainstreet, Parker, CO 80138</li>
-          </ul>
-          <h6 class="location">Lone Tree</h6>
-          <ul>
-            <li>1:45-2:45PM – Douglas County Libraries in Lone Tree, 10055 Library Way, Lone Tree, CO 80124</li>
-            <li>3-4PM – Carriage Club Estates Park, 10476 Dunsford Dr., Lone Tree, CO 80124</li>
-          </ul>
-          <h5 class="source">Friday, July 31</h5>
-          <h6 class="location">Highlands Ranch</h6>
-          <ul>
-            <li>11-11:30AM – Redstone Park, 3280 Redstone Park Circle, Highlands Ranch, CO 80129</li>
-            <li>11:45AM-12:15PM – Northridge Park, 8800 S. Broadway, Highlands Ranch, CO 80126</li>
-            <li>12:30-1:15PM – Douglas County Libraries in Highlands Ranch, 9292 S. Ridgeline Blvd., Highlands Ranch, CO 80129</li>
-          </ul>
-          <h6 class="location">Roxborough</h6>
-          <ul>
-            <li>1:45-2:15PM – Roxborough Skatepark, 7673 S. Rampart Range Rd., Littleton, CO 80125</li>
-            <li>2:30-3:15PM – Douglas County Libraries in Roxborough, 8357 N. Rampart Range Rd. #200, Littleton, CO 80125</li>
-            <li>3:30-4PM – Sterling Ranch Park/Gazebo, 8155 Piney River Ave., Littleton, CO 80125 (Enter the community from the Titan Road roundabout and take the first left. Park east of the building on the northwest corner of Piney River and Eagle River.) </li>
-          </ul>
-        </div>
-      </div>
+      <h2 class="white">Summer Reading begins June 2021!</h2>
+      <h4 class="roboto white margin-lg-200">Stay in touch by <a class="white text-underline" href="../newsletters/"> becoming a DCL insider</a>! You'll also get the inside scoop on great reads and upcoming library events.</h4>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -754,7 +559,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		  axis: 'x'
 	  });
 		</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" -->
+
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -790,8 +596,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"
 	]
 }
-</script> 
+</script>
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
