@@ -88,17 +88,26 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-.movie .fa-check {
-    color: #90ad63;
+.blue-background {
+    background: #e2ffff;
+    border: 4px solid #666;
+    padding: 0 20px 40px 20px;
+    margin: 80px auto 80px;
+    border-radius: 2px;
 }
-.bbq .fa-check {
-    color: #B0852E;
+.blue-background img {
+    margin-top: -80px;
 }
-.birthday-curbside .fa-check {
-    color: #4f878c;
+.package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.birthday-delivery .fa-check {
-    color: #65587b;
+.package ul {
+    max-width: 500px;
+}
+.default .fa-check {
+    color: #666;
 }
 .fa-check.optional {
     color: #d36a50;
@@ -111,6 +120,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .sold-out-box {
     background: #fff url(soldout.png) center center no-repeat;
+}
+
+@media (max-width: 600px) {
+.blue-background img {
+    margin-top: -40px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -295,20 +310,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
+  <div id="good-times" class="row border-top">
     <div class="container">
-      <div class="text-center padding-top-30 padding-bottom-15"> <img class="img-responsive image-center" src="good-times.jpg" alt="DCL Delivers Good Times">
+      <div class="text-center padding-top-30 padding-bottom-15"> <img class="img-responsive image-center" src="good-times-new.jpg" alt="DCL Delivers Good Times">
         <h4 class="margin-lg-200">Check out our entertaining at-home experiences, or host your child’s birthday party in DCL style. </h4>
       </div>
     </div>
   </div>
+  <div id="movie-night" class="row">
+    <div class="container blue-background"> <img class="padding-bottom-15 img-responsive image-center" src="movie-night.png" alt="DCL Delivers Movie Night">
+      <div>What could be better on a crisp Colorado evening than a movie under the stars? Our Backyard Movie Night checkout includes everything you need for an entertaining evening out back with family and friends, including projector, projection equipment and screen, and DCL-curated film recommendations. And what would movie night be without a tasty treat to snack on? We provide that too! It's the perfect way to welcome fall. </div>
+      <div class="package">
+        <h4>Package includes:</h4>
+        <ul class="fa-ul default">
+          <li><i class="fa-li fa fa-check"></i>Projector, remote and charger in hard case</li>
+          <li><i class="fa-li fa fa-check"></i>Tripod</li>
+          <li><i class="fa-li fa fa-check"></i>Projection screen with stakes bundled together in bag</li>
+          <li><i class="fa-li fa fa-check"></i>Specialty popcorn treat to share, with snack bags and scoop *</li>
+          <li><i class="fa-li fa fa-check"></i>DCL-curated movie recommendations *</li>
+        </ul>
+        * These items do not need to be returned.
+        <div class="text-center"> <a href="movie-night-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Reserve Now!</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="smore-fun" class="row">
+    <div class="container blue-background"> <img class="padding-bottom-15 img-responsive image-center" src="smores.png" alt="DCL Delivers S'more Backyard Fun">
+      <div>Make sweet memories this fall with our S'more Backyard Fun kit. We've bundled the tools and accessories for creating a cozy gathering out back, including a tabletop fire pit with fuel, roasting sticks, s’mores cookbooks for new twists on the classic, and yard games for the fun of it. Invite the neighbors for a s'marvelous time.</div>
+      <div class="package">
+        <h4>Package includes:</h4>
+        <ul class="fa-ul default">
+          <li><i class="fa-li fa fa-check"></i>Tabletop indoor/outdoor fire pit and fuel</li>
+          <li><i class="fa-li fa fa-check"></i>Roasting sticks</li>
+          <li><i class="fa-li fa fa-check"></i>2 s'mores cookbooks</li>
+          <ul style="padding-bottom: 5px;">
+            <li><i>S’mores!</i> by Dan Whalen</li>
+            <li><i>So Much S’more to Do</i> by Becky Rasmussen</li>
+          </ul>
+          <li><i class="fa-li fa fa-check"></i>1 Giant Jenga yard game</li>
+          <li><i class="fa-li fa fa-check"></i>1 Bocce Ball yard game</li>
+        </ul>
+        <div class="text-center"> <a href="smore-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-15">Reserve Now!</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="brunch" class="row">
+    <div class="container blue-background"> <img class="padding-bottom-15 img-responsive image-center" src="brunch.png" alt="A Flippin' Good Brunch">
+      <div>Make brunch memorable! Our Flippin' Good Brunch package includes the cooking tools, gadgets and accessories to awe your family and friends. What’s on the menu? Wow them with a course of crepes and ebelskivers using the mix, pans and tools for these delectable treats. Two cookbooks in the kit offer great recipe ideas, too. And if pancakes are more your wheelhouse, we've included molds for those as well! Make a brunch they'll flip for. </div>
+      <div class="package">
+        <h4>Package includes:</h4>
+        <ul class="fa-ul default">
+          <li><i class="fa-li fa fa-check"></i>1 crepe pan</li>
+          <li><i class="fa-li fa fa-check"></i>Crepe mix *</li>
+          <li><i class="fa-li fa fa-check"></i>1 ebelskiver pan</li>
+          <li><i class="fa-li fa fa-check"></i>Pancake molds</li>
+          <li><i class="fa-li fa fa-check"></i>Cooking tools and accessories</li>
+          <li><i class="fa-li fa fa-check"></i>2 brunch cookbooks</li>
+          <ul style="padding-bottom: 5px;">
+            <li>Brunch Life by Matt Basile</li>
+            <li>Ebelskivers by Kevin Crafts</li>
+          </ul>
+        </ul>
+        * This item does not need to be returned.
+        <div class="text-center"> <a href="brunch-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Reserve Now!</a> </div>
+      </div>
+    </div>
+  </div>
   <div id="backyard-party" class="row">
-    <div class="container margin-md-50 margin-lg-100"> <img class="padding-bottom-15 img-responsive image-center" src="celebrations.jpg" alt="DCL Delivers Backyard Celebrations">
-      <h4 class="text-center margin-top-5 no-margin-bottom">$50 Curbside Pick-Up or $79 Staffed Delivery </h4><div class="padding-bottom-15 text-center">Want to take the celebration indoors? <a href="../birthday-parties/">We have spaces for that!</a></div>
-      <div>Surprise! You can throw your own DCL backyard party! Our convenient, customized and self-contained Backyard Celebration Party package is perfect for celebrating at home or a local park, whether it's a birthday or playdate. The curbside pick-up kit includes snacks, crafts and activities for your child and up to nine party guests, plus other fun party extras. Our staffed home-delivery option includes those same items as well as an experienced on-site party coordinator to set up and kick off the fun and a trained storyteller for an entertaining Storytime. It's all you need to get the party started!</div>
-      <div class="col-md-6 col-md-push-3">
+    <div class="container blue-background"> <img class="padding-bottom-15 img-responsive image-center" src="celebrations.jpg" alt="DCL Delivers Backyard Celebrations">
+      <h4 class="text-center margin-top-5 no-margin-bottom">$50 Curbside Pick-Up or $79 Staffed Delivery </h4>
+      <div class="padding-bottom-15 text-center">Want to take the celebration indoors? <a href="../birthday-parties/">We have spaces for that!</a></div>
+      <div>Surprise! You can throw your own DCL backyard party! Our convenient, customized and self-contained Backyard Celebrations package is perfect for celebrating at home or a local park, whether it's a birthday or playdate. The curbside pick-up kit includes snacks, crafts and activities for your child and up to nine party guests, plus other fun party extras. Our staffed home-delivery option includes those same items as well as an experienced on-site party coordinator to set up and kick off the fun and a trained storyteller for an entertaining Storytime. It's all you need to get the party started!</div>
+      <div class="package">
         <h4>Curbside Pick-Up package includes:</h4>
-        <ul class="fa-ul birthday-curbside">
+        <ul class="fa-ul default">
           <li><i class="fa-li fa fa-check"></i>Choice of three fun party themes: Once Upon a Time, Things That Roar, or Folklore & Fantasy</li>
           <li><i class="fa-li fa fa-check"></i>Detailed instructions, including tips for making the day extra-special</li>
           <li><i class="fa-li fa fa-check"></i>A new book for the party host's child to keep</li>
@@ -320,70 +395,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li><i class="fa-li fa fa-check"></i>A pair of disposable party centerpieces and table coverings</li>
           <li><i class="fa-li fa fa-check"></i>10 thank-you notes for use after the party</li>
           <li><i class="fa-li fa fa-check optional"></i>OPTIONAL decorate-it-yourself dessert from a local bakery for an additional $20 fee</li>
-          <li><i class="fa-li fa fa-check optional"></i>OPTIONAL inflatable water slide is available to DCL cardholders and Douglas County residents, based on availability, for an additional $50 delivery and rental fee. NOTE: Inflatable water slides must be returned within 24 hours of your party</li>
         </ul>
         <h4>Staffed Delivery package includes: *</h4>
-        <ul class="fa-ul birthday-delivery">
+        <ul class="fa-ul default">
           <li><i class="fa-li fa fa-check"></i>All items included with Curbside Pick-Up package</li>
           <li><i class="fa-li fa fa-check"></i>An experienced on-site party coordinator to set up and kick off the party</li>
           <li><i class="fa-li fa fa-check"></i>A trained DCL storyteller to present a signature DCL Storytime</li>
           <li><i class="fa-li fa fa-check optional"></i>OPTIONAL decorate-it-yourself dessert from a local bakery for an additional $20 fee</li>
-          <li><i class="fa-li fa fa-check optional"></i>OPTIONAL inflatable water slide is available to DCL cardholders and Douglas County residents, based on availability, for an additional $50 delivery and rental fee. NOTE: Inflatable water slides must be returned within 24 hours of your party</li>
         </ul>
       </div>
-    </div>
-  </div>
-  <div class="row padding-bottom-15">
-    <div class="container margin-md-50 margin-lg-100 padding-bottom-15">
       <div class="padding-bottom-15">* The Staffed Delivery option is available only to Douglas County residents and requires an outdoor area with enough space for all guests, including tabletop space for crafting.</div>
-      <div>NOTE: Backyard Celebration Party packages do not include cleanup; you are responsible for the disposal of any and all trash. Government-mandated gathering restrictions apply. DCL personnel will be masked and gloved. The inflatable water slide option is available only to DCL cardholders and Douglas County residents and is based on availability; an additional $50 delivery and rental fee applies. </div>
-      <div class="text-center"> <a href="backyard-celebration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-15 margin-bottom-15">Reserve Now!</a> </div>
-    </div>
-  </div>
-  <div id="backyard-bbq" class="row padding-bottom-30">
-    <div class="sold-out-box container margin-md-50 margin-lg-100"> <img class="padding-bottom-15 img-responsive image-center" src="bbq.jpg" alt="DCL Delivers Backyard BBQ">
-      <div>Fire up the smoker and get cookin' with our Backyard BBQ checkout. We've bundled just about everything you'll need for your own personal bonanza in this package, including a smoker and charcoal or wood chips, smoker seasonings, cookbooks filled with tips and recipes, disposable dinnerware, and yard games to help you work up an appetite. Invite the neighbors for a no-muss, no-fuss evening out back. </div>
-      <div class="col-md-6 col-md-push-3">
-        <h4>Package includes:</h4>
-        <ul class="fa-ul bbq">
-          <li><i class="fa-li fa fa-check"></i>Full-size smoker (with plastic container for easy portability)</li>
-          <li><i class="fa-li fa fa-check"></i>3 cookbooks:</li>
-          <ul style="padding-bottom: 5px;">
-            <li>Smoking Meat 101: The Ultimate Beginner's Guide by Will West</li>
-            <li>Project Smoke by Steven Raichlen</li>
-            <li>How to Grill Everything by Mark Bittman</li>
-          </ul>
-          <li><i class="fa-li fa fa-check"></i>1 Bocce Ball yard game</li>
-          <li><i class="fa-li fa fa-check"></i>1 Giant Jenga yard game</li>
-          <li><i class="fa-li fa fa-check"></i>1 smoker seasoning pack *</li>
-          <li><i class="fa-li fa fa-check"></i>Charcoal or wood chips *</li>
-          <li><i class="fa-li fa fa-check"></i>Disposable dinnerware for 20 (plates, cups, utensils, napkins) *</li>
-        </ul>
-        * These items do not need to be returned. </div>
-    </div>
-    <div class="container">
-      <div class="text-center"> <a href="#" target="_blank" class="btn btn-null btn-lg text-uppercase margin-top-15">Sold Out</a> </div>
-      <h4 class="text-center">Look for new DCL Delivers kits coming in September!</h4>
-    </div>
-  </div>
-  <div id="movie-night" class="row padding-bottom-60">
-    <div class="sold-out-box container margin-md-50 margin-lg-100"> <img class="padding-bottom-15 img-responsive image-center" src="movie-night.jpg" alt="DCL Delivers Movie Night">
-      <div>What could be better on a warm Colorado night than a movie under the stars? Our Backyard Movie Night checkout includes everything you need for an entertaining evening out back with family and friends, including projector, projection equipment and screen, Bluetooth speaker, and DCL-curated streaming film recommendations. And what would a movie be without popcorn? We provide that too! It's the perfect way to celebrate summer.</div>
-      <div class="col-md-8 col-md-push-3">
-        <h4>Package includes:</h4>
-        <ul class="fa-ul movie">
-          <li><i class="fa-li fa fa-check"></i>Projector, tripod, and power cord bundled together in bag</li>
-          <li><i class="fa-li fa fa-check"></i>Foldable screen with stakes bundled together in bag</li>
-          <li><i class="fa-li fa fa-check"></i>Bluetooth speaker</li>
-          <li><i class="fa-li fa fa-check"></i>Bulk package of popcorn and spices *</li>
-          <li><i class="fa-li fa fa-check"></i>Disposable popcorn containers *</li>
-          <li><i class="fa-li fa fa-check"></i>DCL-curated streaming movie recommendations *</li>
-        </ul>
-        * These items do not need to be returned. </div>
-    </div>
-    <div class="container">
-      <div class="text-center"> <a href="#" target="_blank" class="btn btn-null btn-lg text-uppercase margin-top-15">Sold Out</a> </div>
-      <h4 class="text-center">Look for new DCL Delivers kits coming in September!</h4>
+      <div>NOTE: Backyard Celebration packages do not include cleanup; you are responsible for the disposal of any and all trash. Government-mandated gathering restrictions apply. DCL personnel will be masked and gloved.</div>
+      <div class="text-center"> <a href="backyard-celebration-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase margin-top-30">Reserve Now!</a> </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
