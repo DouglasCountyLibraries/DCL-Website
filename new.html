@@ -92,17 +92,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 
-<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
 <style>
-	.row-wrapper {
-		position: relative;
-	}
-	.slide-wrapper {
-	position: absolute;
-	top: 20px;
-	width: 400px;
-		border: 2px solid red;
-	right: 0;
+.row-wrapper {
+    position: relative;
 }
 video {
     object-fit: cover;
@@ -112,36 +105,65 @@ video {
     top: 0;
     left: 0;
 }
-	.slide-in-right {
-	-webkit-animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 6s both;
-	        animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 6s both;
+.slide-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    border: 2px solid red;
 }
-
+.circle-inner {
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	background-color: #f15a29;
+	text-align: center;
+	border-radius: 50%;
+	border: 6px dashed #fbe4ae;
+	height: 300px;
+	width: 300px;
+	align-items: center;
+	font-size: 60px;
+	line-height: 65px;
+}
+.circle-outer {
+    border: 15px solid #f15a29;
+	background-color: #f15a29;
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    text-align: center;
+}
+.slide-in-right {
+    font-family: 'Oswald', sans-serif;
+    color: #fbe4ae;
+    -webkit-animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 6s both;
+    animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 6s both;
+}
 @-webkit-keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+-webkit-transform: translateX(1000px);
+transform: translateX(1000px);
+opacity: 0;
+}
+100% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+opacity: 1;
+}
 }
 @keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
+0% {
+-webkit-transform: translateX(1000px);
+transform: translateX(1000px);
+opacity: 0;
 }
-
+100% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+opacity: 1;
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -332,10 +354,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <source src="fall-video.mp4" type="video/mp4">
       </video>
     </div>
-	  <div class="slide-wrapper">
-    <div class="slide-in-right">
-      <h1> Content goes here </h1>
-	  </div></div>
+    <div class="slide-wrapper">
+      <div class="slide-in-right">
+        <div class="circle-outer">
+          <div class="circle-inner">Welcome<br>
+            Change</div>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
