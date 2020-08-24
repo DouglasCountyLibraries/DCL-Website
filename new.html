@@ -94,6 +94,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 
 <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
 <style>
+	.row-wrapper {
+		position: relative;
+	}
+	.slide-wrapper {
+	position: absolute;
+	top: 20px;
+	width: 400px;
+		border: 2px solid red;
+	right: 0;
+}
 video {
     object-fit: cover;
     width: 100vw;
@@ -102,6 +112,36 @@ video {
     top: 0;
     left: 0;
 }
+	.slide-in-right {
+	-webkit-animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 6s both;
+	        animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 6s both;
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -285,16 +325,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row">
+  <div class="row row-wrapper">
     <div class="embed-responsive embed-responsive-16by9">
       <video playsinline autoplay muted poster="polina.jpg" id="bgvid">
         <source src="fall-video.webm" type="video/webm">
         <source src="fall-video.mp4" type="video/mp4">
       </video>
     </div>
-    <header class="viewport-header">
+	  <div class="slide-wrapper">
+    <div class="slide-in-right">
       <h1> Content goes here </h1>
-    </header>
+	  </div></div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
