@@ -133,11 +133,52 @@ h1.block-font {
     position: relative;
     top: -20px;
 }
-.sky-row {
+/*.sky-row {
     background: #7ECDAA;
     background: -webkit-radial-gradient(bottom, #7ECDAA 8%, #04666F 70%, #04666F 100%);
     background: -moz-radial-gradient(bottom, #7ECDAA 8%, #04666F 70%, #04666F 100%);
     background: radial-gradient(to top, #7ECDAA 8%, #04666F 70%, #04666F 100%);
+}*/
+.sky-row {
+    background: #04666F url("sky.jpg") top center/cover;
+}
+.bottom-row {
+    background: #754d29 url("bottom.jpg") top center repeat-x;
+    padding: 35px 0 55px;
+}
+.flash {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    animation: lighting 1s linear 2;
+    opacity: 1;
+}
+
+@keyframes lighting {
+0% {
+opacity: 0;
+}
+10% {
+opacity: 0;
+}
+11% {
+opacity: 1;
+}
+14% {
+opacity: 0;
+}
+20% {
+opacity: 0;
+}
+21% {
+opacity: 1;
+}
+24% {
+opacity: 0;
+}
+104% {
+opacity: 0;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -322,11 +363,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row sky-row text-center bg-gray-5 padding-top-100 padding-bottom-100">
-    <div class="script-heading-one">a storybook holiday</div>
-    <h1 class="block-font">Frankenstein's</h1>
-    <div><span class="block-font date">October 24</span><span class="script-heading-two">castle</span><span class="block-font date">3-8:30PM</span></div>
-  </div>
+<div class="flash">
+    <div class="row sky-row text-center bg-gray-5 padding-top-30 padding-bottom-100">
+      <div class="script-heading-one">a storybook holiday</div>
+      <h1 class="block-font">Frankenstein's</h1>
+      <div><span class="block-font date">October 24</span><span class="script-heading-two">castle</span><span class="block-font date">3-8:30PM</span></div>
+	</div></div>
+
+  <div class="row bottom-row">
+    <div class="container bottom white">
+      <h4 class="white text-capitalize margin-bottom-5">Our Safety Precautions:</h4>
+      DCL is committed to keeping our guests and staff safe. Choosing one of the wave-based time slots allows for capacity limits, social distancing, and surface cleaning. The building will be cleared and surfaces cleaned every 90 minutes; we appreciate your help in adhering to this timeline. DCL complies with the guidelines of government and health authorities regarding masks. </div>
+  </div> 
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
