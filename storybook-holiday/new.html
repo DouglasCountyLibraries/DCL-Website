@@ -119,7 +119,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 h1.block-font {
     color: #0f291e;
-    background: linear-gradient(to bottom, #0f291e, #358c64);
+    background: linear-gradient(to bottom, #0f291e, #286c4f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 120px;
@@ -139,8 +139,14 @@ h1.block-font {
     font-size: 24px;
     letter-spacing: 1px;
 }
-.block-font.white {
+.block-font.green {
     color: #4FBB9B;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+.block-font.white {
+    color: #fff;
     font-weight: 400;
     font-size: 24px;
     letter-spacing: 1px;
@@ -160,20 +166,37 @@ h1.block-font {
     border-bottom: 45px solid #0d8a7d;
 }
 .dark-row {
-    background: #010c0b url("light-noise.png");
+    background: #0f291e url("light-noise.png") repeat-x;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 .item-wrapper {
 }
 .item.brain {
-    margin-top: -200px;
-    margin-bottom: -22px;
-    z-index: 1;
 }
-.btn.btn-warning {
+.btn.btn-custom {
     background: #a9283a;
     font-size: 24px;
     letter-spacing: 1.5px;
+    color: #fff;
+    border-radius: 2px;
+}
+.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
+    background: #ef6971;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    border-radius: 2px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    opacity: 1;
+    cursor: pointer;
 }
 .monster-row {
     background: transparent url("monster.png") bottom center no-repeat;
@@ -186,7 +209,7 @@ h1.block-font {
 }
 .bottom-row {
     background: #754d29 url("bottom.jpg") top center repeat-x;
-    padding: 35px 0 55px;
+    padding: 25px 0 35px;
 }
 .flash {
     height: 100%;
@@ -219,6 +242,29 @@ opacity: 0;
 }
 104% {
 opacity: 0;
+}
+}
+
+@media (max-width: 650px) {
+h1.block-font {
+    font-size: 70px;
+}
+.script-heading-one {
+    font-size: 26px;
+    line-height: 32px;
+}
+.script-heading-two {
+    font-size: 60px;
+    line-height: auto;
+}
+.block-font.date {
+    display: none;
+}
+.tree-row {
+    height: 604px;
+}
+.monster-row {
+    height: 650px;
 }
 }
 </style>
@@ -417,23 +463,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="container">
           <div class="item-wrapper">
             <div class="white padding-bottom-15">Round up your little monsters for a family-friendly tour through the haunted halls and dungeon of Frankenstein’s Castle. Enjoy monster and fall-themed crafts and activities, spooktacular treats and refreshments, and a fiendishly delicious menu of heavy appetizers and drinks. </div>
-            <div class="block-font white">
+            <div class="block-font green">
               <div>Celebrate Halloween with DCL</div>
               <div>Saturday, October 24</div>
               <div>3-4:30PM, 5-6:30PM OR 7-8:30PM</div>
-              <div><a href="https://www.eventbrite.com/e/a-storybook-holiday-halloween-frankensteins-castle-tickets-117291661517" target="_blank" class="btn btn-warning margin-top-15 margin-bottom-15">Buy Tickets!</a></div>
+              <div><a href="https://www.eventbrite.com/e/a-storybook-holiday-halloween-frankensteins-castle-tickets-117291661517" target="_blank" class="btn btn-custom margin-top-15 margin-bottom-15">Buy Tickets!</a></div>
             </div>
             <!--<div class="item brain"><img class="img-responsive" src="monster-brain.png" alt="The Monster's Brain"></div>-->
-            <div class="white padding-bottom-30">$10 AGES 3+ (Ages 0-2 free with paying adult)<br>
-              An additional alcohol beverage ticket is $10 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages. </div>
+            <div>
+              <div class="block-font green">$10 AGES 3+</div>
+              <div class="white">(Ages 0-2 free with paying adult)</div>
+              <div class="white margin-lg-200 margin-md-50">An additional alcohol beverage ticket is $10 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages.</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row bottom-row">
-    <div class="container bottom white">
-      <h4 class="white text-capitalize margin-bottom-5">Our Safety Precautions:</h4>
+    <div class="container text-center bottom white">
+      <div class="block-font white">Our Safety Precautions:</div>
       DCL is committed to keeping our guests and staff safe. Choosing one of the wave-based time slots allows for capacity limits, social distancing, and surface cleaning. The building will be cleared and surfaces cleaned every 90 minutes; we appreciate your help in adhering to this timeline. DCL complies with the guidelines of government and health authorities regarding masks. </div>
   </div>
   <!-- InstanceEndEditable --> </div>
