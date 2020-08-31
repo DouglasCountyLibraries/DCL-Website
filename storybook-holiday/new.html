@@ -129,9 +129,21 @@ h1.block-font {
 .block-font.date {
     font-size: 30px;
     margin: 0 20px;
-    color: #1b544b;
+    color: #0f291e;
     position: relative;
     top: -20px;
+}
+.block-font.copy {
+    color: #0f291e;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+.block-font.white {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 /*.sky-row {
     background: #7ECDAA;
@@ -143,23 +155,31 @@ h1.block-font {
     background: #04666F url("sky.jpg") top center/cover;
 }
 .tree-row {
-	background: transparent url("castle-trees.png") top center no-repeat;
-	height: 694px;
-	border-bottom: 45px solid #0d8a7d;
+    background: transparent url("castle-trees.png") top center no-repeat;
+    height: 694px;
+    border-bottom: 45px solid #0d8a7d;
 }
 .dark-row {
-	background: #010c0b url("light-noise.png");
-	height: 200px;
+    background: #010c0b url("light-noise.png");
+    padding-top: 50px;
+}
+.item-wrapper {
+    display: flex;
+}
+.item.brain {
+    margin-top: -200px;
+    margin-bottom: -22px;
+    z-index: 1;
 }
 .monster-row {
-	background: transparent url("monster.png") bottom center no-repeat;
-	height: 740px;
-	position: relative;
+    background: transparent url("monster.png") bottom center no-repeat;
+    height: 740px;
+    position: relative;
 }
-	.bg-row {
-		background: #010a09;
-		height: 15px;
-	}
+.bg-row {
+    background: #010a09;
+    height: 15px;
+}
 .bottom-row {
     background: #754d29 url("bottom.jpg") top center repeat-x;
     padding: 35px 0 55px;
@@ -385,7 +405,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="script-heading-one">a storybook holiday</div>
       <h1 class="block-font">Frankenstein's</h1>
       <div><span class="block-font date">October 24</span><span class="script-heading-two">castle</span><span class="block-font date">3-8:30PM</span></div>
-		<div class="tree-row"><div class="monster-row"></div></div><div class="dark-row"></div>
+      <div class="container block-font copy padding-top-15 margin-lg-150 margin-md-50">Join us for an evening of spooky treats and frightful delights as we bring Frankenstein’s Castle to life at our Highlands Ranch location. Wear your costume creations! </div>
+      <div class="tree-row">
+        <div class="monster-row"></div>
+      </div>
+      <div class="dark-row">
+        <div class="container">
+          <div class="item-wrapper">
+            <div class="item block-font white text-left">
+              <div>Celebrate Halloween with DCL</div>
+              <div>Saturday, October 24</div>
+              <div>3-4:30PM, 5-6:30PM OR 7-8:30PM</div>
+            </div>
+            <div class="item brain"><img class="img-responsive" src="monster-brain.png" alt="The Monster's Brain"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row bottom-row">
