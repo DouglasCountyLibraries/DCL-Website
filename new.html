@@ -48,7 +48,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
-<meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -158,9 +157,16 @@ video {
     box-shadow: 0px 4px 8px rgba(0,0,0,.2);
 }
 .static-row {
+    display: flex;
     background: #D5E8F6;
     text-align: center;
-    padding-bottom: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    margin-right: 10px;
+    margin-left: 10px;
 }
 .small-circle-inner {
     display: flex;
@@ -185,7 +191,6 @@ video {
     width: 230px;
     border-radius: 50%;
     text-align: center;
-    margin: 0 auto 10px auto;
 }
 .small-box a {
     font-family: 'Oswald', sans-serif;
@@ -193,7 +198,7 @@ video {
     white-space: nowrap;
     color: #fbe4ae;
     background-color: #f15a29;
-    padding: 7px 0px 8px;
+    padding: 7px 0px 10px;
     border-radius: 4px;
     width: 230px;
     display: inline-block;
@@ -236,6 +241,12 @@ opacity: 0;
 -webkit-transform: translateX(0);
 transform: translateX(0);
 opacity: 1;
+}
+}
+
+@media (max-width: 525px) {
+.static-row {
+    flex-direction: column;
 }
 }
 
@@ -465,8 +476,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row row-wrapper">
     <div class="embed-responsive embed-responsive-16by9">
-      <video playsinline autoplay muted poster="polina.jpg" id="bgvid">
-        <source src="fall-video.webm" type="video/webm">
+      <video playsinline autoplay muted poster="polina.jpg" id="bgvid"> 
+        <!--<source src="fall-video.webm" type="video/webm">-->
         <source src="fall-video.mp4" type="video/mp4">
       </video>
     </div>
@@ -486,11 +497,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row static-row">
-    <div class="small-circle-outer">
+    <div class="item small-circle-outer">
       <div class="small-circle-inner">Welcome<br>
         Change</div>
     </div>
-    <ul class="list-unstyled">
+    <ul class="item list-unstyled">
       <li class="small-box"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1697110649_time_to_harvest">Time to Harvest</a></li>
       <li class="small-box"><a href="https://www.hoopladigital.com/" target="_blank">New Music Routine</a></li>
       <li class="small-box"><a href="delivers/">Fun for Fall!</a></li>

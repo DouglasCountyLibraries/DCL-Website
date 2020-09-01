@@ -90,91 +90,205 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="stylesheet" href="https://use.typekit.net/hxw5uje.css">
-<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
 <style>
-.stripe-row {
-    background: repeating-linear-gradient( 135deg, #75ccd3, #75ccd3 2px, #5ec6cd 2px, #5ec6cd 15px)
+.row-wrapper {
+    position: relative;
 }
-.background-row {
-    background: transparent url("background.png") bottom center no-repeat;
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-.container-wrapper {
+.embed-responsive-16by9 {
+    padding-bottom: 48.25%;
+}
+.slide-wrapper {
+    position: absolute;
+    top: 14%;
+    right: 15%;
+}
+.circle-inner {
     display: flex;
     justify-content: center;
-    align-content: center;
+    text-transform: uppercase;
+    background-color: #f15a29;
+    text-align: center;
+    border-radius: 50%;
+    border: 6px dashed #fbe4ae;
+    height: 300px;
+    width: 300px;
     align-items: center;
+    font-size: 60px;
+    line-height: 65px;
 }
-.right {
-    margin: 0 30px 50px 55px;
-}
-.left {
-    margin: 15px 0 15px;
-}
-.vidaloka {
-    font-family: 'Vidaloka', serif;
-    font-size: 160px;
-    font-weight: 400;
-    font-style: normal;
-    color: #2E3E70;
-    line-height: 135px;
-    letter-spacing: -5px;
-}
-.futura {
-    font-family: futura-pt, sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 26px;
+.circle-outer {
+    border: 15px solid #f15a29;
+    background-color: #f15a29;
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 25px;
 }
 .box a {
-    color: #2E3E70;
-    background: rgba(255,255,255,.95);
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    white-space: nowrap;
+    color: #fbe4ae;
+    background-color: #f15a29;
     padding: 7px 0px 8px;
-    border-radius: 2px;
-    width: 425px;
+    border-radius: 8px;
+    width: 330px;
     display: inline-block;
     margin: 8px 0;
-    box-shadow: 0px 0px 8px rgba(0,51,52,.3);
+    text-align: center;
 }
 .box a:hover, .box a:focus {
-    background: #fff;
+    background-color: #f13d03;
+    color: #fbeed1;
     text-decoration: none;
-    color: #001e4c;
     -webkit-transition-duration: .2s;
     transition-duration: .2s;
-    box-shadow: 0px 4px 8px rgba(0,51,52,.9);
+    box-shadow: 0px 4px 8px rgba(0,0,0,.2);
+}
+.static-row {
+    display: flex;
+    background: #D5E8F6;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.small-circle-inner {
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    color: #fbe4ae;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: #f15a29;
+    text-align: center;
+    border-radius: 50%;
+    border: 4px dashed #fbe4ae;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    font-size: 38px;
+    line-height: 45px;
+}
+.small-circle-outer {
+    border: 15px solid #f15a29;
+    background-color: #f15a29;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    text-align: center;
+}
+.small-box a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+    color: #fbe4ae;
+    background-color: #f15a29;
+    padding: 7px 0px 10px;
+    border-radius: 4px;
+    width: 230px;
+    display: inline-block;
+    margin: 8px 0;
+    text-align: center;
+}
+.small-box a:hover, .small-box a:focus {
+    background-color: #f13d03;
+    color: #fbeed1;
+    text-decoration: none;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    box-shadow: 0px 4px 8px rgba(0,0,0,.2);
+}
+.slide-in-right {
+    font-family: 'Oswald', sans-serif;
+    color: #fbe4ae;
+    -webkit-animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.8s both;
+    animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.8s both;
+}
+@-webkit-keyframes slide-in-right {
+0% {
+-webkit-transform: translateX(1000px);
+transform: translateX(1000px);
+opacity: 0;
+}
+100% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+opacity: 1;
+}
+}
+@keyframes slide-in-right {
+0% {
+-webkit-transform: translateX(1000px);
+transform: translateX(1000px);
+opacity: 0;
+}
+100% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+opacity: 1;
+}
 }
 
-@media (min-width: 993px) {
-.vidaloka.mind-small {
-    display: none;
-}
-}
-
-@media (max-width: 992px) {
-.background-row {
-    background: transparent url("background-small.png") bottom center no-repeat;
-}
-.vidaloka.mind-small {
-    font-size: 100px;
-    line-height: 80px;
-    letter-spacing: -5px;
-}
-.right {
-    margin: 0 auto 25px auto;
-}
-.container-wrapper {
+@media (max-width: 525px) {
+.static-row {
     flex-direction: column;
 }
-.vidaloka.mind-large {
+}
+
+@media (min-width: 1150px) {
+.static-row {
     display: none;
 }
 }
 
-@media (max-width: 500px) {
-.box a {
-    width: 350px;
+@media (max-width: 1149px) {
+.slide-wrapper {
+    display: none;
+}
+}
+
+@media (max-width: 1200px) {
+.slide-wrapper {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+}
+
+@media (max-width: 1450px) {
+.slide-wrapper {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+}
+
+@media (max-width: 1550px) {
+.slide-wrapper {
+    position: absolute;
+    top: 5%;
+    right: 8%;
+}
+}
+
+@media (max-width: 1375px) {
+.embed-responsive-16by9 {
+    padding-bottom: 56.25%;
 }
 }
 </style>
@@ -360,27 +474,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row stripe-row">
-    <div class="background-row">
-      <div class="container-wrapper container">
-        <div class="vidaloka mind-small padding-top-15 text-center">Mind Grown!</div>
-        <div class="left"><img class="img-responsive" src="grow.gif" alt="Mind Grown!"></div>
-        <div class="right">
-          <div class="vidaloka mind-large text-center">Mind<br>
-            Grown!</div>
-          <div class="box-container">
-            <ul class="list-unstyled futura text-center box-group">
-              <li class="box"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1452031897"> <span class="text-uppercase">Imagine Being Organized</span><br>
-                Useful Tips for All </a></li>
-              <li class="box"><a href="library-perks/"> <span class="text-uppercase">Explore an Alternate Recess</span><br>
-                You Don't Need Monkey Bars </a></li>
-              <li class="box"><a href="storytime/"> <span class="text-uppercase">Learn at a Virtual Storytime</span><br>
-                Get Ready to Read </a></li>
-            </ul>
-          </div>
+  <div class="row row-wrapper">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video playsinline autoplay muted poster="polina.jpg" id="bgvid"> 
+        <!--<source src="fall-video.webm" type="video/webm">-->
+        <source src="fall-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="slide-wrapper">
+      <div class="slide-in-right">
+        <div class="circle-outer">
+          <div class="circle-inner">Welcome<br>
+            Change</div>
         </div>
+        <ul class="list-unstyled">
+          <li class="box"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1697110649_time_to_harvest">Time to Harvest</a></li>
+          <li class="box"><a href="https://www.hoopladigital.com/" target="_blank">New Music Routine</a></li>
+          <li class="box"><a href="delivers/">Fun for Fall!</a></li>
+          <li class="box"><a href="storybook-holiday/">A Storybook Halloween</a></li>
+        </ul>
       </div>
     </div>
+  </div>
+  <div class="row static-row">
+    <div class="item small-circle-outer">
+      <div class="small-circle-inner">Welcome<br>
+        Change</div>
+    </div>
+    <ul class="item list-unstyled">
+      <li class="small-box"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1697110649_time_to_harvest">Time to Harvest</a></li>
+      <li class="small-box"><a href="https://www.hoopladigital.com/" target="_blank">New Music Routine</a></li>
+      <li class="small-box"><a href="delivers/">Fun for Fall!</a></li>
+      <li class="small-box"><a href="storybook-holiday/">A Storybook Halloween</a></li>
+    </ul>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
