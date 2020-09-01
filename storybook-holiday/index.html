@@ -209,7 +209,7 @@ h1.block-font {
     height: 100%;
     width: 100%;
     background: #fff;
-    animation: lighting .8s 2s linear 2;
+    animation: lighting .8s 1.8s linear 2;
     opacity: 1;
 }
 @keyframes lighting {
@@ -259,6 +259,110 @@ h1.block-font {
 }
 .monster-row {
     height: 650px;
+}
+}
+.bat.one {
+    position: absolute;
+    left: 20%;
+    top: 62%;
+}
+.bat.two {
+    position: absolute;
+    right: 20%;
+    top: 65%;
+}
+.bat.three {
+    position: absolute;
+    left: 15%;
+    top: 58%;
+}
+.bat.four {
+    position: absolute;
+    right: 25%;
+    top: 54%;
+}
+.bat.five {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+}
+.bat.six {
+    position: absolute;
+    right: 12%;
+    top: 46%;
+}
+.bat.one {
+    -webkit-animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+    animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+}
+.bat.two {
+    -webkit-animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) .3s both;
+    animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) .3s both;
+}
+.bat.three {
+    -webkit-animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+    animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+}
+.bat.four {
+    -webkit-animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .9s both;
+    animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .9s both;
+}
+.bat.five {
+    -webkit-animation: slide-in-elliptic-top-fwd 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
+    animation: slide-in-elliptic-top-fwd 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
+}
+.bat.six {
+    -webkit-animation: slide-in-elliptic-top-fwd 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+    animation: slide-in-elliptic-top-fwd 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+}
+.bat.one img {
+    transform: rotate(-10deg);
+}
+.bat.two img {
+    transform: scale(0.5) rotate(12deg);
+}
+.bat.three img {
+    transform: scale(0.7) rotate(-1deg);
+}
+.bat.four img {
+    transform: scale(0.9) rotate(9deg);
+}
+.bat.five img {
+    transform: scale(0.8) rotate(-3deg);
+}
+.bat.six img {
+    transform: scale(0.6) rotate(8deg);
+}
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+0% {
+-webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+transform: translateY(-600px) rotateX(-30deg) scale(0);
+-webkit-transform-origin: 50% 100%;
+transform-origin: 50% 100%;
+opacity: 1;
+}
+100% {
+-webkit-transform: translateY(0) rotateX(0) scale(1);
+transform: translateY(0) rotateX(0) scale(1);
+-webkit-transform-origin: 50% 1400px;
+transform-origin: 50% 1400px;
+opacity: 1;
+}
+}
+@keyframes slide-in-elliptic-top-fwd {
+0% {
+-webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+transform: translateY(-600px) rotateX(-30deg) scale(0);
+-webkit-transform-origin: 50% 100%;
+transform-origin: 50% 100%;
+opacity: 1;
+}
+100% {
+-webkit-transform: translateY(0) rotateX(0) scale(1);
+transform: translateY(0) rotateX(0) scale(1);
+-webkit-transform-origin: 50% 1400px;
+transform-origin: 50% 1400px;
+opacity: 1;
 }
 }
 </style>
@@ -450,8 +554,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h1 class="block-font">Frankenstein's</h1>
       <div><span class="block-font date">October 24</span><span class="script-heading-two">castle</span><span class="block-font date">3-8:30PM</span></div>
       <div class="container block-font copy padding-top-15 margin-lg-150 margin-md-50">Join us for an evening of spooky treats and frightful delights as we bring Frankenstein’s Castle to life at our Highlands Ranch location. Wear your costume creations! </div>
+      <div class="bat one hidden-xs"><img src="bat.png" alt="Bat"></div>
+      <div class="bat two hidden-xs hidden-sm"><img src="bat.png" alt="Bat"></div>
+      <div class="bat three hidden-xs"><img src="bat.png" alt="Bat"></div>
+      <div class="bat four hidden-xs hidden-sm"><img src="bat.png" alt="Bat"></div>
+      <div class="bat five hidden-xs"><img src="bat.png" alt="Bat"></div>
+      <div class="bat six hidden-xs"><img src="bat.png" alt="Bat"></div>
       <div class="tree-row">
-        <div class="monster-row"></div>
+        <div class="monster-row"> </div>
       </div>
       <div class="dark-row">
         <div class="container">
