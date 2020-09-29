@@ -95,12 +95,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 .row-wrapper {
     background: #d0dbe5 url(background.png);
+    margin-bottom: -115px;
+    padding-bottom: 30px;
+}
+.social-footer {
+    padding-top: 75px;
+    border-top: 5px solid #000;
 }
 h1.darcy {
     font-family: mr-darcy, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 120px;
+    font-size: 100px;
     color: #333;
 }
 .black {
@@ -119,16 +125,32 @@ h1.darcy {
     color: #c35b07;
     text-decoration: underline;
 }
-.item-wrapper {
+.column-wrapper {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
+.item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.item {
+    margin: 5px;
+}
 .shadow {
     background: transparent url("shadow.png") center bottom no-repeat;
     height: 231px;
     width: 250px;
+}
+
+@media (min-width:992px) {
+.right-column {
+    padding-bottom: 85px;
+}
 }
 .jar-one:hover {
     -webkit-animation: jump 1s both;
@@ -413,21 +435,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container">
       <h1 class="darcy text-center"><a class="black" href="https://dcl.bibliocommons.com/list/share/692283576/1733565609">Trick</a> or <a class="orange" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1733579049">Treat</a></h1>
     </div>
-  </div>
-  <div class="row row-wrapper">
-    <div class="container">
-      <div class="item-wrapper">
-        <div class="item">
-          <div class="shadow"><a href="learning-lab/"><img class="jar-one" src="jar-one.png" alt="Escape to the Laboratory"></a></div>
-        </div>
-        <div class="item">
-          <div class="shadow"><a href="library-perks/#creativebug"><img class="jar-one" src="jar-two.png" alt="Not-So-Haunted Home"></a></div>
-        </div>
-        <div class="item">
-          <div class="shadow"><a href="https://dcl.bibliocommons.com/list/share/692278051/1734401389"><img class="jar-one" src="jar-three.png" alt="Wicked Good Tales"></a></div>
-        </div>
-        <div class="item">
-          <div class="shadow"><a href="https://dcl.bibliocommons.com/list/share/692283576/1734411579"><img class="jar-one" src="jar-four.png" alt="Hocus Pocus Craft Lab"></a></div>
+    <div class="container column-wrapper">
+      <div class="left-column hidden-xs hidden-sm"><img class="img-responsive" src="potion.png" alt="Trick or Treat"></div>
+      <div class="right-column"><!--<h1 class="darcy text-center"><a class="black" href="https://dcl.bibliocommons.com/list/share/692283576/1733565609">Trick</a> or <a class="orange" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1733579049">Treat</a></h1>-->
+        <div class="item-wrapper">
+          <div class="item">
+            <div class="shadow"><a href="learning-lab/"><img class="jar-one" src="jar-one.png" alt="Escape to the Laboratory"></a></div>
+          </div>
+          <div class="item">
+            <div class="shadow"><a href="library-perks/#creativebug"><img class="jar-one" src="jar-two.png" alt="Not-So-Haunted Home"></a></div>
+          </div>
+          <div class="item">
+            <div class="shadow"><a href="https://dcl.bibliocommons.com/list/share/692278051/1734401389"><img class="jar-one" src="jar-three.png" alt="Wicked Good Tales"></a></div>
+          </div>
+          <div class="item">
+            <div class="shadow"><a href="https://dcl.bibliocommons.com/list/share/692283576/1734411579"><img class="jar-one" src="jar-four.png" alt="Hocus Pocus Craft Lab"></a></div>
+          </div>
         </div>
       </div>
     </div>
