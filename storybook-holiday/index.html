@@ -89,283 +89,115 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <style>
 @font-face {
-    font-family: 'ScriptFont';
-    src: url('ScriptFont.woff2') format('woff2'), url('ScriptFont.woff') format('woff');
+    font-family: 'BellaNotte';
+    src: url('BellaNotteRegular.woff2') format('woff2'), url('BellaNotteRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'BlockFont';
-    src: url('BlockFont.woff2') format('woff2'), url('BlockFont.woff') format('woff');
+    font-family: 'Mighty Mountain';
+    src: url('MightyMountainRegular.woff2') format('woff2'), url('MightyMountainRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-	.line-through {
-		text-decoration: line-through;
-	}
-.script-heading-one, .script-heading-two {
-    font-family: "ScriptFont", sans-serif;
-    color: #fff;
+.bella-font {
+    font-family: "BellaNotte", sans-serif;
+    font-size: 90px;
+    line-height: .7em;
 }
-.script-heading-one {
-    font-size: 36px;
-    line-height: 48px;
+.mountain-font {
+    font-family: "Mighty Mountain", sans-serif;
 }
-.script-heading-two {
-    font-size: 95px;
-    line-height: 60px;
+.mountain-font.big {
+    font-family: "Mighty Mountain", sans-serif;
+    font-size: 150px;
+    color: #be1e2d;
+    text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
+    letter-spacing: 0.02em;
+    line-height: .8;
+    margin-top: 10px;
 }
-.block-font {
-    font-family: "BlockFont", sans-serif;
+.mountain-font.event {
+    font-size: 50px;
+    line-height: 1;
 }
-h1.block-font {
-    color: #0f291e;
-    background: linear-gradient(to bottom, #0f291e, #286c4f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 120px;
+a.btn.btn-primary.custom {
     text-transform: uppercase;
-    margin: 0;
-}
-.block-font.date {
-    font-size: 30px;
-    margin: 0 20px;
-    color: #0f291e;
-    position: relative;
-    top: -20px;
-}
-.block-font.copy {
-    color: #0f291e;
-    font-weight: 400;
-    font-size: 24px;
-    letter-spacing: 1px;
-}
-.block-font.green {
-    color: #4FBB9B;
-    font-weight: 400;
-    font-size: 24px;
-    letter-spacing: 1px;
-}
-.block-font.white {
+    border: 0;
+    background: #be1e2d;
     color: #fff;
     font-weight: 400;
-    font-size: 24px;
-    letter-spacing: 1px;
+    font-size: 18px;
+    padding: 14px 18px;
 }
-.sky-row {
-    background: #04666F url("sky.jpg") top center/cover;
-}
-.tree-row {
-    background: transparent url("castle-trees.png") top center no-repeat;
-    height: 694px;
-    border-bottom: 45px solid #0d8a7d;
-}
-.dark-row {
-    background: #0f291e url("light-noise.png") repeat-x;
-    padding-top: 50px;
-    padding-bottom: 50px;
+a.btn.btn-primary.custom:hover, a.btn.btn-primary.custom:focus {
+    background: red;
 }
 .item-wrapper {
+    display: flex;
+    padding: 45px 0 0 0;
 }
-.item.brain {
+.item {
+    flex: 1;
+    margin: 10px;
+    padding: 25px;
+    border: 5px dotted #be1e2d;
 }
-.btn.btn-custom {
-    background: #a9283a;
-    font-size: 24px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    border-radius: 2px;
+.deer {
+    margin-bottom: -53px;
 }
-.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
-    background: #ef6971;
-    font-size: 24px;
-    letter-spacing: 1.5px;
-    color: #fff;
-    border-radius: 2px;
-    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
-    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease-out;
-    -ms-transition: all .4s ease-out;
-    -o-transition: all .4s ease-out;
-    transition: all .4s ease-out;
-    opacity: 1;
-    cursor: not-allowed;
+.tree-row {
+    background: transparent url("tree-line.png") bottom center repeat-x;
 }
-.monster-row {
-    background: transparent url("monster.png") bottom center no-repeat;
-    height: 740px;
-    position: relative;
+.safety {
+	padding: 30px 0 40px;
+	background: linear-gradient(#fff 1%, #c4dce0 5%, #fff 75%);
+	margin-top: 40px;
 }
-.bg-row {
-    background: #010a09;
-    height: 15px;
+.snow {
+    background: #9ecad1 url("snow.png") bottom center repeat;
+    -webkit-animation: slide 8s linear infinite;
+    animation: slide 8s linear infinite;
 }
-.bottom-row {
-    background: #754d29 url("bottom.jpg") top center repeat-x;
-    padding: 25px 0 35px;
+.tree-wrapper {
+    display: flex;
 }
-.flash {
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    animation: lighting .8s 1.8s linear 2;
-    opacity: 1;
+@-webkit-keyframes slide {
+from {
+background-position: 0 -631px;
 }
-@keyframes lighting {
-0% {
-opacity: 0;
+to {
+background-position: 0 0;
 }
-10% {
-opacity: 0;
 }
-11% {
-opacity: 1;
+@keyframes slide {
+from {
+background-position: 0 -631px;
 }
-14% {
-opacity: 0;
-}
-20% {
-opacity: 0;
-}
-21% {
-opacity: 1;
-}
-24% {
-opacity: 0;
-}
-104% {
-opacity: 0;
+to {
+background-position: 0 0;
 }
 }
 
-@media (max-width: 650px) {
-h1.block-font {
-    font-size: 70px;
-}
-.script-heading-one {
-    font-size: 26px;
-    line-height: 32px;
-}
-.script-heading-two {
-    font-size: 60px;
-    line-height: auto;
-}
-.block-font.date {
-    display: none;
-}
-.tree-row {
-    height: 604px;
-}
-.monster-row {
-    height: 650px;
+@media (max-width: 768px) {
+.item-wrapper {
+    flex-direction: column;
 }
 }
-.bat.one {
-    position: absolute;
-    left: 20%;
-    top: 62%;
+
+@media (max-width: 480px) {
+.bella-font {
+    font-size: 50px;
+    line-height: .7em;
 }
-.bat.two {
-    position: absolute;
-    right: 20%;
-    top: 65%;
+.mountain-font {
+    font-family: "Mighty Mountain", sans-serif;
 }
-.bat.three {
-    position: absolute;
-    left: 15%;
-    top: 58%;
-}
-.bat.four {
-    position: absolute;
-    right: 25%;
-    top: 54%;
-}
-.bat.five {
-    position: absolute;
-    left: 30%;
-    top: 50%;
-}
-.bat.six {
-    position: absolute;
-    right: 12%;
-    top: 46%;
-}
-.bat.one {
-    -webkit-animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-    animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-}
-.bat.two {
-    -webkit-animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) .3s both;
-    animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) .3s both;
-}
-.bat.three {
-    -webkit-animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-    animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-}
-.bat.four {
-    -webkit-animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .9s both;
-    animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .9s both;
-}
-.bat.five {
-    -webkit-animation: slide-in-elliptic-top-fwd 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
-    animation: slide-in-elliptic-top-fwd 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.2s both;
-}
-.bat.six {
-    -webkit-animation: slide-in-elliptic-top-fwd 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
-    animation: slide-in-elliptic-top-fwd 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
-}
-.bat.one img {
-    transform: rotate(-10deg);
-}
-.bat.two img {
-    transform: scale(0.5) rotate(12deg);
-}
-.bat.three img {
-    transform: scale(0.7) rotate(-1deg);
-}
-.bat.four img {
-    transform: scale(0.9) rotate(9deg);
-}
-.bat.five img {
-    transform: scale(0.8) rotate(-3deg);
-}
-.bat.six img {
-    transform: scale(0.6) rotate(8deg);
-}
-@-webkit-keyframes slide-in-elliptic-top-fwd {
-0% {
--webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-transform: translateY(-600px) rotateX(-30deg) scale(0);
--webkit-transform-origin: 50% 100%;
-transform-origin: 50% 100%;
-opacity: 1;
-}
-100% {
--webkit-transform: translateY(0) rotateX(0) scale(1);
-transform: translateY(0) rotateX(0) scale(1);
--webkit-transform-origin: 50% 1400px;
-transform-origin: 50% 1400px;
-opacity: 1;
-}
-}
-@keyframes slide-in-elliptic-top-fwd {
-0% {
--webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-transform: translateY(-600px) rotateX(-30deg) scale(0);
--webkit-transform-origin: 50% 100%;
-transform-origin: 50% 100%;
-opacity: 1;
-}
-100% {
--webkit-transform: translateY(0) rotateX(0) scale(1);
-transform: translateY(0) rotateX(0) scale(1);
--webkit-transform-origin: 50% 1400px;
-transform-origin: 50% 1400px;
-opacity: 1;
+.mountain-font.big {
+    font-size: 100px;
+    line-height: .8;
 }
 }
 </style>
@@ -551,46 +383,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="flash">
-    <div class="row sky-row text-center bg-gray-5 padding-top-30">
-      <div class="script-heading-one">a storybook holiday</div>
-      <h1 class="block-font">Frankenstein's</h1>
-      <div><span class="block-font date">October 24</span><span class="script-heading-two">castle</span><span class="block-font date">3-8:30PM</span></div>
-      <div class="container block-font copy padding-top-15 margin-lg-150 margin-md-50">Join us for an evening of spooky treats and frightful delights as we bring Frankenstein’s Castle to life at our Highlands Ranch location. Wear your costume creations! </div>
-      <div class="bat one hidden-xs"><img src="bat.png" alt="Bat"></div>
-      <div class="bat two hidden-xs hidden-sm"><img src="bat.png" alt="Bat"></div>
-      <div class="bat three hidden-xs"><img src="bat.png" alt="Bat"></div>
-      <div class="bat four hidden-xs hidden-sm"><img src="bat.png" alt="Bat"></div>
-      <div class="bat five hidden-xs"><img src="bat.png" alt="Bat"></div>
-      <div class="bat six hidden-xs"><img src="bat.png" alt="Bat"></div>
-      <div class="tree-row">
-        <div class="monster-row"> </div>
+  <div class="row snow">
+    <div class="black">
+      <div class="container text-center padding-top-30">
+        <div class="text-center bella-font">Storybook Holiday</div>
+        <div class="text-center mountain-font big">rEINDEEr<br>
+          GAMEs</div>
+        <h4 class="black text-center">Join us for our annual holiday celebration! Our Lone Tree location will transform into a woodsy winter wonderland with delightful entertainment, spirited festivities, and fun for the whole family. </h4>
       </div>
-      <div class="dark-row">
-        <div class="container">
-          <div class="item-wrapper">
-            <div class="white padding-bottom-15">Round up your little monsters for a family-friendly tour through the haunted halls and dungeon of Frankenstein’s Castle. Enjoy monster and fall-themed crafts and activities, spooktacular treats and refreshments, and a fiendishly delicious menu of heavy appetizers and drinks. </div>
-            <div class="block-font green">
-              <div>Celebrate Halloween with DCL</div>
-              <div>Saturday, October 24</div>
-              <div><div><span class="opacity-6 line-through">3-4:30PM, 5-6:30PM, 7-8:30PM</span> Sold Out</div></div>
-              <div><a class="btn btn-custom margin-top-15 margin-bottom-15">Sold Out</a></div>
-            </div>
-            <!--<div class="item brain"><img class="img-responsive" src="monster-brain.png" alt="The Monster's Brain"></div>-->
-            <div>
-              <div class="block-font green">$10 AGES 3+</div>
-              <div class="white">(Ages 0-2 free with paying adult)</div>
-              <div class="white margin-lg-200 margin-md-50">An additional alcohol beverage ticket is $10 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages.</div>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="tree-row text-center"><img class="deer" src="deer.png" alt="Random Deer"></div>
+  </div>
+  <div class="row">
+    <div class="container item-wrapper text-center">
+      <div class="item">
+        <div class="mountain-font event">DinNEr EDitiOn</div>
+        <h4 class="black no-margin">Saturday, December 5<br>
+          4-6PM OR 6:30-8:30PM</h4>
+        <div>You’ll have the most wonderful time enjoying family-friendly entertainment, holiday craft and make-and-take gift stations, and a special appearance by Santa. The evening also includes a delicious catered meal, sweet treats and drinks, and our signature hot cocoa bar, plus much more! </div>
+        <div class="padding-top-15 margin-bottom-5"><a href="https://www.eventbrite.com/e/a-storybook-holiday-reindeer-games-dinner-edition-tickets-123185112989?aff=storybookholiday" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$25 AGES 3+<br>
+          (Ages 0-2 free with paying adult)</div>
+      </div>
+      <div class="item">
+        <div class="mountain-font event">BrUNch EDitiOn</div>
+        <h4 class="black no-margin">Sunday, December 6<br>
+          9-11AM</h4>
+        <div>You’ll enjoy the same woodland-inspired festivities, crafts and entertainment as our evening event, with a scrumptious catered brunch, coffee, specialty drinks, and our signature hot cocoa bar, plus a special appearance by Santa.</div>
+        <div class="padding-top-15 margin-bottom-5"><a href="https://www.eventbrite.com/e/a-storybook-holiday-reindeer-games-brunch-edition-tickets-123190527183?aff=storybookholiday" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$21 Ages 3+<br>
+          (Ages 0-2 free with paying adult)</div>
       </div>
     </div>
   </div>
-  <div class="row bottom-row">
-    <div class="container text-center bottom white">
-      <div class="block-font white">Our Safety Precautions:</div>
-      DCL is committed to keeping our guests and staff safe. Choosing one of the wave-based time slots allows for capacity limits, social distancing, and surface cleaning. The building will be cleared and surfaces cleaned every 90 minutes; we appreciate your help in adhering to this timeline. DCL complies with the guidelines of government and health authorities regarding masks. </div>
+  <div class="row">
+    <div class="container margin-lg-200 margin-md-50">
+      <div class="padding-top-10">An additional alcohol beverage ticket is $12 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages.</div>
+    </div>
+  </div>
+  <div class="row safety">
+    <div class="container tree-wrapper text-center black">
+      <div><img class="hidden-xs" src="trees-one.png" alt="Trees"></div>
+      <div class="padding-left-30 padding-right-30">
+        <h4 class="black margin-bottom-5">Our Safety Precautions</h4>
+        DCL is committed to keeping our guests and staff safe. Both events allow for capacity limits and social distancing. Choosing one of the wave-based time slots for our Dinner Edition also allows for surface cleaning; the building will be cleared and surfaces cleaned between waves. We appreciate your help in adhering to the evening timeline. DCL complies with the guidelines of government and health authorities regarding masks.</div>
+      <div><img class="hidden-xs" src="trees-two.png" alt="Trees"></div>
+    </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
