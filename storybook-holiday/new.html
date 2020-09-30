@@ -104,19 +104,68 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .bella-font {
     font-family: "BellaNotte", sans-serif;
-    font-size: 100px;
+    font-size: 90px;
+    line-height: .7em;
 }
 .mountain-font {
     font-family: "Mighty Mountain", sans-serif;
-    font-size: 100px;
+}
+.mountain-font.big {
+    font-family: "Mighty Mountain", sans-serif;
+    font-size: 150px;
+    color: #be1e2d;
+    text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
+    letter-spacing: 0.02em;
+    line-height: .8;
+    margin-top: 10px;
+}
+.mountain-font.event {
+    font-size: 50px;
+    line-height: 1;
+}
+a.btn.btn-primary.custom {
+    color: #fff;
+    text-transform: uppercase;
+    border: 3px dotted red;
+    background: #fff;
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 14px 18px;
 }
 .content-row {
-    background: #9ecad1;
+}
+.container.custom {
+    padding-bottom: 45px;
+}
+.rudolph {
+    margin-bottom: -5px;
 }
 .tree-row {
-    background: #9ecad1 url("tree-line.png") bottom center repeat-x;
-    height: 368px;
-    border-bottom: 100px solid #fff;
+    background: transparent url("tree-line.png") bottom center repeat-x;
+    height: 268px;
+}
+.snow {
+    background: #9ecad1 url("snow.png") bottom center repeat;
+    -webkit-animation: slide 28s linear infinite;
+    animation: slide 28s linear infinite;
+
+}
+@-webkit-keyframes slide {
+from {
+background-position: 0 -2100px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes slide {
+from {
+background-position: 0 -2100px;
+}
+to {
+background-position: 0 0;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -301,17 +350,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row content-row">
-    <div class="container">
-      <div class="bella-font">Storybook Holiday</div>
-      <div class="mountain-font">rEINDEEr<br>
-        GAMEs</div>
+  <div class="row snow">
+    <div class="black">
+      <div class="container text-center padding-top-30">
+        <div class="text-center bella-font">Storybook Holiday</div>
+        <div class="text-center mountain-font big">rEINDEEr<br>
+          GAMEs</div>
+        <h4 class="black text-center">Join us for our annual holiday celebration! Our Lone Tree location will transform into a woodsy winter wonderland with delightful entertainment, spirited festivities, and fun for the whole family. </h4>
+        <img class="rudolph" src="rudolph.png" alt="Rudolph"> </div>
     </div>
+    <div class="tree-row"></div>
   </div>
-  <div class="row tree-row">
-    <div class="container">
-      <div class=""></div>
-    </div>
+  <div class="row">
+    <div class="container custom text-center">
+      <div>
+        <div class="mountain-font event">Evening Event</div>
+        <h4 class="black no-margin">Saturday, December 5<br>
+          4-6PM OR 6:30-8:30PM</h4>
+        <div>You’ll have the most wonderful time enjoying family-friendly entertainment, holiday craft and make-and-take gift stations, and a special appearance by Santa. The evening also includes a delicious catered meal, sweet treats and drinks, and our signature hot cocoa bar, plus much more! </div>
+        <div class="padding-top-15 margin-bottom-5"><a href="#" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$25 AGES 3+<br>
+          (Ages 0-2 free with paying adult)</div>
+      </div>
+      <div>
+        <div class="mountain-font event">BrUNch Event</div>
+        <h4 class="black no-margin">Sunday, December 6<br>
+          9-11AM</h4>
+        <div>You’ll enjoy the same woodland-inspired festivities, crafts and entertainment as our evening event, with a scrumptious catered brunch, coffee, specialty drinks, and our signature hot cocoa bar, plus a special appearance by Santa.</div>
+        <div class="padding-top-15 margin-bottom-5"><a href="#" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$21 Ages 3+<br>
+          (Ages 0-2 free with paying adult)</div>
+        <div class="padding-top-10">An additional alcohol beverage ticket is $12 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages.</div>
+      </div>
+      <h4 class="black no-margin-bottom">Our Safety Precautions</h4>
+      DCL is committed to keeping our guests and staff safe. Both events allow for capacity limits and social distancing. Choosing one of the wave-based time slots for our Evening Event also allows for surface cleaning; the building will be cleared and surfaces cleaned between waves. We appreciate your help in adhering to the evening timeline. DCL complies with the guidelines of government and health authorities regarding masks. </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
