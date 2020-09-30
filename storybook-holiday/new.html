@@ -124,24 +124,27 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     line-height: 1;
 }
 a.btn.btn-primary.custom {
-    color: #fff;
     text-transform: uppercase;
-    border: 3px dotted red;
-    background: #fff;
-    color: red;
-    font-weight: 700;
+    border: 0;
+    background: #be1e2d;
+    color: #fff;
+    font-weight: 400;
     font-size: 18px;
     padding: 14px 18px;
 }
+    a.btn.btn-primary.custom:hover, a.btn.btn-primary.custom:focus {
+    background: red;
+
+}
 .item-wrapper {
     display: flex;
-    padding: 45px 0;
+    padding: 45px 0 0 0;
 }
 .item {
     flex: 1;
-	margin: 10px;
-	padding: 25px;
-	border: 5px dotted #be1e2d;
+    margin: 10px;
+    padding: 25px;
+    border: 5px dotted #be1e2d;
 }
 .deer {
     margin-bottom: -53px;
@@ -149,10 +152,18 @@ a.btn.btn-primary.custom {
 .tree-row {
     background: transparent url("tree-line.png") bottom center repeat-x;
 }
+.safety {
+    padding: 30px 0 40px;
+    background: linear-gradient(#c4dce0,#ffffff);
+    margin-top: 40px;
+}
 .snow {
     background: #9ecad1 url("snow.png") bottom center repeat;
     -webkit-animation: slide 8s linear infinite;
     animation: slide 8s linear infinite;
+}
+.tree-wrapper {
+    display: flex;
 }
 @-webkit-keyframes slide {
 from {
@@ -170,15 +181,15 @@ to {
 background-position: 0 0;
 }
 }
-    @media (max-width: 768px) {
-        .item-wrapper {
-flex-direction: column;
-}
-    }
-    @media (max-width: 480px) {
-        
-    .bella-font {
 
+@media (max-width: 768px) {
+.item-wrapper {
+    flex-direction: column;
+}
+}
+
+@media (max-width: 480px) {
+.bella-font {
     font-size: 50px;
     line-height: .7em;
 }
@@ -186,15 +197,10 @@ flex-direction: column;
     font-family: "Mighty Mountain", sans-serif;
 }
 .mountain-font.big {
-
     font-size: 100px;
-
     line-height: .8;
-
-}    
-        
-        
-    }
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -409,11 +415,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>$21 Ages 3+<br>
           (Ages 0-2 free with paying adult)</div>
       </div>
-    </div> </div>
-    <div class="row"><div class="container margin-lg-200 margin-md-50"><div class="padding-top-10">An additional alcohol beverage ticket is $12 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages.</div></div></div>
- 
- <div class="row safety"><div class="container"><h4 class="black no-margin-bottom">Our Safety Precautions</h4>
-  DCL is committed to keeping our guests and staff safe. Both events allow for capacity limits and social distancing. Choosing one of the wave-based time slots for our Evening Event also allows for surface cleaning; the building will be cleared and surfaces cleaned between waves. We appreciate your help in adhering to the evening timeline. DCL complies with the guidelines of government and health authorities regarding masks.</div></div><!-- InstanceEndEditable --> </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container margin-lg-200 margin-md-50">
+      <div class="padding-top-10">An additional alcohol beverage ticket is $12 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages.</div>
+    </div>
+  </div>
+  <div class="row safety">
+    <div class="container tree-wrapper text-center black">
+      <div><img class="hidden-xs" src="trees-one.png" alt="Trees"></div>
+      <div class="padding-left-30 padding-right-30">
+        <h4 class="black margin-bottom-5">Our Safety Precautions</h4>
+        DCL is committed to keeping our guests and staff safe. Both events allow for capacity limits and social distancing. Choosing one of the wave-based time slots for our Evening Event also allows for surface cleaning; the building will be cleared and surfaces cleaned between waves. We appreciate your help in adhering to the evening timeline. DCL complies with the guidelines of government and health authorities regarding masks.</div>
+      <div><img class="hidden-xs" src="trees-two.png" alt="Trees"></div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
     <div class="col-sm-6">
