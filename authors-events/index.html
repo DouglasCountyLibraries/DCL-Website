@@ -105,45 +105,90 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     }]);
   </script> 
 <!-- Push Notifications End - Do Not Remove -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"> 
 <style>
-.orbitron {
-    font-family: 'Orbitron', sans-serif;
+/* @license
+ * MyFonts Webfont Build ID 3957951, 2020-10-07T18:45:25-0400
+*/
+@font-face {
+    font-family: 'Sundowners';
+    src: url('webFonts/Sundowners/font.woff2') format('woff2'), url('webFonts/Sundowners/font.woff') format('woff');
 }
-h1.orbitron {
-	font-size: 70px;
-	color: #000;
-	line-height: 60px;
-	letter-spacing: .05em;
-	text-transform: uppercase;
+h1.sundowners {
+    font-family: 'Sundowners', sans-serif;
+    font-size: 130px;
+    color: #fff;
+    line-height: 120px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 4px #c7972b;
+    -webkit-text-fill-color: #fff;
+    font-feature-settings: "liga1" on;
     margin: 0;
 }
-h2.orbitron {
-	font-size: 35px;
-	color: #000;
-	line-height: 30px;
-	letter-spacing: .02em;
-	text-transform: uppercase;
-	margin-top: 5px;
+h2.sundowners {
+    font-family: 'Sundowners', sans-serif;
+    font-size: 85px;
+    color: #fff;
+    line-height: 75px;
+    -webkit-text-stroke: 3px #c7972b;
+    -webkit-text-fill-color: #fff;
+    font-feature-settings: "liga" 1;
+    font-feature-settings: "liga1" on;
+    margin: 0;
 }
-    h3.orbitron {
-    font-size: 22px;
-    color: #000;
-    line-height: 27px;
+h1.games {
+    font-size: 70px;
+    color: #c7972b;
+    line-height: 60px;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 500;
+}
+h2.games {
+    font-size: 40px;
+    color: #c7972b;
     letter-spacing: .02em;
     text-transform: uppercase;
+    margin: 0px;
+    font-weight: 500;
+}
+h3.games {
+    font-size: 24px;
+    color: #c7972b;
+    line-height: inherit;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 5px;
 }
 .quiz-show-row {
-    background: #1087a1 url("background-large.png") center center/cover;
+    background: #010101 url("fire.jpg") bottom center/cover;
+    padding-top: 30px;
+    padding-bottom: 40px;
 }
-.quiz-show-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.quiz {
+    transform: rotate(-2deg);
+    -webkit-backface-visibility: hidden;
 }
-    .btn.btn-primary.btn-custom.btn-lg {
-        background: #000;
-    }
+.quiz-details {
+    padding-top: 15px;
+}
+.btn.btn-primary.btn-custom.btn-lg {
+    background: #ffe180;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 1px 15px 0px #000;
+    -moz-box-shadow: 0px 1px 15px 0px #000;
+    box-shadow: 0px 1px 15px 0px #000;
+}
+.btn.btn-primary.btn-custom.btn-lg:hover, .btn.btn-primary.btn-custom.btn-lg:focus {
+    background: #b34a2a;
+    color: #fff;
+    -webkit-box-shadow: 0px 10px 25px 0px #000;
+    -moz-box-shadow: 0px 10px 25px 0px #000;
+    box-shadow: 0px 10px 25px 0px #000;
+}
 .events-active {
     background-color: #f5f5f5;
 }
@@ -187,9 +232,6 @@ h2.orbitron {
     min-width: 100%;
     padding: 15px;
 }
-.quiz-details {
-    padding-top: 60px;
-}
 
 @media (max-width: 480px) {
 .author-item h2 {
@@ -198,17 +240,13 @@ h2.orbitron {
 .author-item h4 {
     text-align: center;
 }
+h1.sundowners {
+    font-size: 100px;
+    line-height: 90px;
 }
-
-@media (max-width: 1200px) {
-.quiz-show-wrapper {
-    flex-direction: column;
-}
-.quiz-show-row {
-    background: #1087a1 url("background-small.png") center center/cover;
-}
-.quiz-details {
-    padding-top: 0px;
+h2.sundowners {
+    font-size: 60px;
+    line-height: 50px;
 }
 }
 
@@ -221,9 +259,6 @@ h2.orbitron {
 @media (min-width: 992px) {
 .event-item {
     max-width: 400px;
-}
-.quiz-image img {
-    min-width: 725px;
 }
 }
 </style>
@@ -433,13 +468,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row quiz-show-row">
-    <div class="container quiz-show-wrapper no-padding">
-      <div class="quiz-image"></div>
-      <img class="img-responsive" src="quiz-show.png" alt="Quarantine(ish) Quiz Show">
+    <div class="container text-center">
+      <div class="quiz">
+        <h2 class="sundowners">Quarantine(ish)</h2>
+        <h1 class="sundowners">Quiz Show</h1>
+      </div>
       <div class="quiz-details">
-        <h1 class="orbitron text-center padding-left-15 padding-right-15">Hunger Games</h1><h2 class="orbitron text-center padding-left-15 padding-right-15">Edition</h2>
-        <h3 class="orbitron text-center padding-left-15 padding-right-15">Friday, November 6, 7PM</h3>
-        <div class="text-center"> <a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=176353" target="_blank" class="btn btn-primary btn-custom btn-lg margin-top-15 margin-bottom-40">Register Now</a> </div>
+        <h1 class="games">Hunger Games</h1>
+        <h2 class="games">Edition</h2>
+        <h3 class="games">Friday, November 6, 7PM</h3>
+        <div class="text-center"> <a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=176353" target="_blank" class="btn btn-primary btn-custom btn-lg margin-top-15">Register Now</a> </div>
       </div>
     </div>
   </div>
@@ -460,7 +498,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=168896" target="_blank" class="btn btn-primary text-uppercase margin-15">Register Now</a></div>
           </div>
         </div>
-        </div>
+      </div>
     </div>
   </div>
   <div class="row bg-gray-5">
