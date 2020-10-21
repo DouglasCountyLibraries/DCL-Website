@@ -105,25 +105,28 @@ h1.pacifico span {
 	padding-left: 14px;
 	letter-spacing: -18px;
 }
+.row-wrapper {
+	background: #dbd0d5;
+}
 .leaves-one {
 	height: 100vh;
-	background: #dbd0d5 url("leaves-one.png") bottom center repeat;
-	-webkit-animation: slide 15s linear infinite;
-	animation: slide 15s linear infinite;
+	background: transparent url("leaves-one.png") bottom center repeat;
+	-webkit-animation: fall 8s linear infinite;
+	animation: fall 8s linear infinite;
 }
 .leaves-two {
 	height: 100vh;
 	background: transparent url("leaves-two.png") bottom center repeat;
-	-webkit-animation: slide 10s linear infinite;
-	animation: slide 10s linear infinite;
+	-webkit-animation: fall 18s linear infinite;
+	animation: fall 18s linear infinite;
 }
 .leaves-three {
 	height: 100vh;
 	background: transparent url("leaves-three.png") bottom center repeat;
-	-webkit-animation: slide 25s linear infinite;
-	animation: slide 25s linear infinite;
+	-webkit-animation: fall 26s linear infinite;
+	animation: fall 26s linear infinite;
 }
-@-webkit-keyframes slide {
+@-webkit-keyframes fall {
 from {
 background-position: 0 -900px;
 }
@@ -131,7 +134,7 @@ to {
 background-position: 0 0;
 }
 }
-@keyframes slide {
+@keyframes fall {
 from {
 background-position: 0 -900px;
 }
@@ -322,13 +325,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="global-alert" class="container-md" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row leaves-one">
-    <div class="leaves-two">
-      <div class="leaves-three">
-        <div class="container text-center padding-top-30">
-          <h1 class="pacifico">Let<span>'</span>s Get Cozy</h1>
+  <div class="row row-wrapper">
+    <div class="leaves-one">
+      <div class="leaves-two">
+        <div class="leaves-three">
+          <div class="container text-center padding-top-30">
+            <h1 class="pacifico">Let<span>'</span>s Get Cozy</h1>
+          </div>
+          <div class="tree-row"></div>
         </div>
-        <div class="tree-row"></div>
       </div>
     </div>
   </div>
