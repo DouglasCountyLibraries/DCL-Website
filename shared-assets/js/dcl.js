@@ -12,7 +12,7 @@
 // pull the alert into the global-alert div
 /* ------------------------------------------------------------ */
 
-jQuery.get("https://s3.amazonaws.com/website.alert/alert.txt")
+jQuery.get("https://s3.amazonaws.com/website.alert/alert.txt?123")
   .done(function( data ) {
     /*alert( "Data Loaded: " + data );*/
 	if ( data !=null ){	jQuery("#global-alert").show().append( data );}
