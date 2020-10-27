@@ -7,7 +7,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-    opacity: 0 !important
+	opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -145,6 +145,13 @@ svg {
 <!-- InstanceEndEditable -->
 </head>
 <body>
+<!-- pull alert.txt into the global-alert div --> 
+<script>
+$.get("https://s3.amazonaws.com/website.alert/alert.txt")
+  .done(function( data ) {
+    if ( data !=null ){	$("#global-alert").show().append( data );}
+});
+</script> 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -341,8 +348,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="col-sm-6">
       <div class="text-center csn">
         <h4><a href="../../../safety-notice/">Community Safety Notice</a></h4>
-          <!--to add back, remove csn class above
-          <h4>2020&nbsp;Census: <span class="text-nowrap"><a href="https://2020census.gov/" target="_blank">Website</a> <span style="font-size:14px">&bull;</span> <a href="https://2020census.gov/content/dam/2020census/materials/partners/2019-10/census101.pdf" target="_blank">Quick Info</a> <span style="font-size:14px">&bull;</span> <a href="https://2020census.gov/content/dam/2020census/materials/languages/guides/English-Guide.pdf" target="_blank">Guide</a></span></h4>-->
+        <!--to add back, remove csn class above
+          <h4>2020&nbsp;Census: <span class="text-nowrap"><a href="https://2020census.gov/" target="_blank">Website</a> <span style="font-size:14px">&bull;</span> <a href="https://2020census.gov/content/dam/2020census/materials/partners/2019-10/census101.pdf" target="_blank">Quick Info</a> <span style="font-size:14px">&bull;</span> <a href="https://2020census.gov/content/dam/2020census/materials/languages/guides/English-Guide.pdf" target="_blank">Guide</a></span></h4>--> 
       </div>
     </div>
     <div class="col-sm-6">
