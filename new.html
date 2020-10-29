@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,7 +98,7 @@ h1.pacifico {
 	font-weight: 400;
 	font-style: normal;
 	color: #3c2e4f;
-	font-size: 140px;
+	font-size: 120px;
 	letter-spacing: .5px;
 }
 h1.pacifico span {
@@ -105,8 +106,16 @@ h1.pacifico span {
 	letter-spacing: -18px;
 }
 .row-wrapper {
-	background: #dbd0d5;
+	background: #dbd0d5 url("background-clouds.png") top center repeat-x;
+    	-webkit-animation: scroll 60s linear infinite;
+	animation: scroll 60s linear infinite;
 }
+/*.background-clouds {
+	height: 250px;
+	background: transparent url("background-clouds.png") bottom center repeat-x;
+	-webkit-animation: scroll 8s linear infinite;
+	animation: scroll 8s linear infinite;
+}*/
 .leaves-one {
 	height: 100vh;
 	background: transparent url("leaves-one.png") bottom center repeat;
@@ -136,6 +145,22 @@ background-position: 0 0;
 @keyframes fall {
 from {
 background-position: 0 -900px;
+}
+to {
+background-position: 0 0;
+}
+}
+@-webkit-keyframes scroll {
+from {
+background-position: -1730px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes scroll {
+from {
+background-position: -1730px 0;
 }
 to {
 background-position: 0 0;
@@ -327,15 +352,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-    <div id="global-alert" style="display:none;"></div>
+  <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row row-wrapper">
     <div class="leaves-one">
       <div class="leaves-two">
-        <div class="leaves-three">
-          <div class="container text-center padding-top-30">
-            <h1 class="pacifico">Let<span>'</span>s Get Cozy</h1>
-          </div>
+        <div class="leaves-three">    
+      <div class="container text-center padding-top-30">
+        <h1 class="pacifico">Let<span>'</span>s Get Cozy</h1>
+      </div>
+   
           <div class="tree-row"></div>
         </div>
       </div>
@@ -437,4 +463,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
