@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,6 +91,31 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
+    .item-wrapper {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .item {
+        flex: 1;
+        padding: 0 15px;
+    }
+    .item.one {
+        max-width: 330px;
+    }
+    .item.two {
+        max-width: 500px;
+    }
+    @media (max-width: 650px) {
+        .item-wrapper {
+            flex-direction: column;
+            text-align: center;
+        }
+        .item.two {
+            padding-top: 15px;
+        }
+    }
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -276,7 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-    <div id="global-alert" style="display:none;"></div>
+  <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row padding-bottom-20 border-top">
     <div class="container">
@@ -323,17 +349,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="book-sale-events" class="row padding-top-15 padding-bottom-40">
-    <div class="container no-padding margin-lg-200">
+    <div class="container">
       <div class="text-center">
         <h1 class="padding-bottom-15">Book Sale Events</h1>
       </div>
-      <div class="col-lg-5 col-md-3"> <img class="img-responsive center-block" alt="Used Book Sales" src="second-chapter-sale.png"> </div>
-      <div class="col-lg-7 col-md-9 text-center text-left-md">
-        <div class="margin-top-15">
-          <h4 class="roboto">In addition to ongoing sales in our stores, we host special sale events several times each year.</h4>
-          <div>
-            <div class="margin-top-15">Be sure to <a href="../newsletters/">sign up for our monthly newsletter</a> to be notified of special sales. For <a href="../foundation/#donate-materials">information about donating</a> or purchasing used books, call us at <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span>.</div>
-          </div>
+      <div class="item-wrapper">
+        <div class="item one"> <img alt="Used Book Sales" src="second-chapter-sale.png"> </div>
+        <div class="item two">
+          <h2 class="no-margin-top">Castle Rock Book Sale</h2>
+          <h3 class="no-margin-top">Don't miss our buy one, get one free deal!</h3>
+          <div class="large-text">Sunday, November 1-Monday, November 30.</div>
+          <div class="margin-top-5">While supplies last.</div>
         </div>
       </div>
     </div>
@@ -434,4 +460,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
