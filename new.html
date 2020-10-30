@@ -100,7 +100,7 @@ h1.pacifico {
 	color: #3c2e4f;
 	font-size: 120px;
 	letter-spacing: .5px;
-	padding-top: 70px;
+	padding-top: 90px;
 	margin: 0;
 	display: inline-block;
 	margin-right: 310px;
@@ -112,11 +112,17 @@ h1.pacifico span {
 .item-wrapper {
 	display: flex;
 	align-content: center;
-	margin-top: 75px;
+	justify-content: center;
+	margin-top: 60px;
 }
 .item {
-	margin: 0 5px;
-	flex: 1;
+	margin: 0 10px;
+}
+.item img:hover, .item img:focus {
+	box-shadow: 0px 15px 9px -15px #000;
+	transform: scale(1.02);
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
 .row-wrapper {
 	background: #dbd0d5 url("landscape.png") center top/cover;
@@ -157,8 +163,15 @@ background-position: 0 0;
 }
 }
 
+@media (min-width: 1475px) {
+.item {
+	margin: 0 10px;
+	flex: 1;
+}
+}
+
 @media (max-width: 1200px) {
-    h1.pacifico {
+h1.pacifico {
 	font-family: pacifico, sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -377,9 +390,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="container-md text-center">
             <h1 class="pacifico">Let<span>'</span>s Get Cozy</h1>
             <div class="item-wrapper">
-              <div class="item"><img class="img-responsive image-center" src="cloud-one.png"></div>
-              <div class="item"><img class="img-responsive image-center" src="cloud-three.png"></div>
-              <div class="item"><img class="img-responsive image-center" src="cloud-two.png"></div>
+              <div class="item"><a href="https://dcl.bibliocommons.com/list/share/692278051/1752396779"><img src="cloud-one.png" alt="Read and Relax" class="img-responsive image-center"></a></div>
+              <div class="item"><a href="donate/"><img src="cloud-three.png" alt="Season of Gratitude" class="img-responsive image-center"></a></div>
+              <div class="item"><a href="https://www.hoopladigital.com/genre/917231823" target="_blank"><img src="cloud-two.png" alt="Cooking to Warm Your Heart" class="img-responsive image-center"></a></div>
             </div>
           </div>
         </div>
