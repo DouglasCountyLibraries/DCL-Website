@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +48,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Donate | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
-<meta http-equiv="refresh" content="0;URL='https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788'" />
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -88,7 +88,107 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-
+@font-face {
+	font-family: 'ForeverGrateful';
+	src: url('../shared-assets/web-fonts/ForeverGrateful.woff') format('woff2'), url('../shared-assets/web-fonts/ForeverGrateful.woff') format('woff');
+}
+@font-face {
+	font-family: 'LittleDinosaurRegular';
+	src: url('../shared-assets/web-fonts/LittleDinosaurRegular.woff') format('woff2'), url('../shared-assets/web-fonts/LittleDinosaurRegular.woff2') format('woff');
+}
+h1.grateful {
+	font-family: 'ForeverGrateful', sans-serif;
+	font-size: 90px;
+	color: #333;
+	line-height: .9em;
+}
+h4.grateful {
+	font-family: 'ForeverGrateful', sans-serif;
+	font-size: 36px;
+	color: #333;
+	line-height: .9em;
+}
+h1.little {
+	font-family: 'LittleDinosaurRegular', sans-serif;
+	font-size: 50px;
+	color: #555;
+	font-weight: 600;
+	line-height: .9em;
+}
+h4.little, .little {
+	font-family: 'LittleDinosaurRegular', sans-serif;
+	font-size: 36px;
+	color: #555;
+	font-weight: 600;
+	line-height: .9em;
+}
+/*h4.little a {
+	color: #555;
+	text-decoration: underline dotted #666;
+}
+h4.little a:hover, h4.little a:focus {
+	color: #000;
+	text-decoration: underline solid #000;
+}*/
+.btn-default {
+	background-color: #e26155;
+}
+.btn-default:active, .btn-default:hover, .btn-default:focus {
+	background-color: #ce1b24;
+}
+.banner-wrapper {
+	margin: -120px auto -55px auto;
+	display: flex;
+	justify-content: center;
+}
+.house-row {
+	background: transparent url("houses.png") center bottom repeat-x;
+	height: 175px;
+}
+.cloud-row {
+	height: 202px;
+	margin-top: -30px;
+	background: transparent url("clouds.png") center center repeat;
+	-webkit-animation: float 150s linear infinite;
+	animation: float 150s linear infinite;
+}
+@-webkit-keyframes float {
+from {
+background-position: 1300px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes float {
+from {
+background-position: 1300px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+.hearts-row {
+	background: transparent url("hearts.png") center center repeat;
+	-webkit-animation: rise 10s linear infinite;
+	animation: rise 10s linear infinite;
+}
+@-webkit-keyframes rise {
+from {
+background-position: 0 200px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes rise {
+from {
+background-position: 0 200px;
+}
+to {
+background-position: 0 0;
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -275,8 +375,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-    <div id="global-alert" style="display:none;"></div>
+  <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="row">
+    <div class="container text-center">
+      <h1 class="grateful no-margin-bottom">Funding the Future</h1>
+      <h1 class="little">Giving Now for Generations to Come</h1>
+      <div class="text-center">Now more than ever, Douglas County Libraries is thankful to be part of a community that has generously supported and advocated for the Douglas County Libraries Foundation over the years. Let’s face it, 2020 hasn’t been easy. Yet, there is still much to be grateful for and much to look forward to. We hope you’ll look forward with us, as well, by helping fund the future on Colorado Gives Day, Tuesday, December 8. </div>
+      <div class="text-center padding-top-15">Your donation supports the work of the Foundation in funding programs that reach youth, adults and families in Douglas County and across Colorado—today and for generations to come. And when you schedule your donation for December 8, your gift gets a boost thanks to the $1 Million Incentive Fund. </div>
+      <div class="padding-top-15 text-center"><a class="btn btn-lg btn-default" href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Schedule Now</a></div>
+    </div>
+  </div>
+  <div class="hearts-row">
+    <div class="row cloud-row"></div>
+    <div class="banner-wrapper container"><img class="img-responsive" src="banner.png" alt="Notes on Gratitude"></div>
+    <div class="row house-row"></div>
+  </div>
+  <div class="row">
+    <div class="container margin-lg-100 padding-top-20">
+      <h4 class="little no-margin-top text-center">We love to sing the praises of the enriching programs and services that make an impact in our community. They wouldn’t be possible without your generous support! We’re especially grateful for:</h4>
+      <div>
+        <h4 class="grateful">Our Community</h4>
+        <div>Thank you for participating in the continuing tradition of <a href="../summer-reading/">Summer Reading</a>, encouraging kids to begin reading while young and to keep reading during school breaks, so they grow up with a strong foundation in literacy.</div>
+        <h4 class="grateful">New Services</h4>
+        <div>We were thrilled to serve our customers by delivering at-home experiences and celebrations through <a href="../delivers/">DCL Delivers</a> during our closure. And we’re delighted to continue that service today, even as DCL has reopened. </div>
+        <h4 class="grateful">Opportunities to Build Bright Futures</h4>
+        <div>Thank you for supporting our vision to inspire a love of reading and build bright futures through <a href="../cuddle-up-and-read/">Cuddle Up & Read</a>, <a href="../1000-books/">1000 Books Before Kindergarten</a>, <a href="../storytime/">Storytime</a>, <a href="../parents-teachers/#bark-for-books">Bark for Books</a>, and <a href="../parents-teachers/#reading-buddies">Reading Buddies</a>.</div>
+        <h4 class="grateful">Community Partnerships</h4>
+        <div>We’re thankful for the opportunity to inspire a love of discovery and connection in Douglas County through <a href="../foundation/#exploration-stations">Exploration Stations</a> with community partners. </div>
+        <h4 class="grateful">Scholarship Support</h4>
+        <div>Thanks to Foundation scholarships and financial support, kids in families facing financial hardship can play and learn at <a href="../camp-dcl/">Camp DCL</a>, and adults are able to achieve their high school graduation goals through <a href="../adult-education/#adult-tutoring">high school equivalency</a> and <a href="../cohs/">Career Online High School</a>.</div>
+      </div>
+      <blockquote class="text-center padding-top-15 padding-bottom-15"><span class="little">"Alone we can do so little; together we can do so much."</span> – Helen Keller</blockquote>
+      <div class="text-center">It takes a community to make an impact for generations to come. We need you! Schedule your donation today. </div>
+      <div class="padding-top-30 text-center"><a class="btn btn-lg btn-default" href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Schedule Now</a></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container padding-top-20 padding-bottom-40">
+      <h4 class="little text-center">What are you grateful for? Start your gratitude journal using <a href="colorado-gives-day-gratitiude-journal.pdf" target="_blank">these printable pages</a>.</h4>
+      <div class="text-center padding-top-15"><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank"><img src="cgd-logo.jpg" alt="Colorado Gives Day Logo"></a></div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
   <div class="bg-gray-10 clearfix">
@@ -334,8 +474,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" -->
-
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -371,7 +510,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"https:\/\/twitter.com\/DCLcolorado"
 	]
 }
-</script>
+</script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
