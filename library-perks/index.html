@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,82 +89,90 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .using-the-library-active {
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
+}
+.local-alert {
+	background: #d36a50;
+	color: #fff;
+	font-size: 18px;
+	padding: 3px 5px 5px;
+	font-weight: 400;
+	text-align: center;
 }
 .gradient-row {
-    background: rgb(255,255,255);
-    background: radial-gradient(ellipse at bottom center, #ffffff 0%, #ffffff 50%, #f5f5f5 100%);
+	background: rgb(255,255,255);
+	background: radial-gradient(ellipse at bottom center, #ffffff 0%, #ffffff 50%, #f5f5f5 100%);
 }
 .cb-box {
-    background: #fff;
-    padding: 50px 95px 0;
-    margin: 170px 0 0px;
+	background: #fff;
+	padding: 50px 95px 0;
+	margin: 170px 0 0px;
 }
 #online-learning, #activities {
-    padding: 45px 0 55px;
+	padding: 45px 0 55px;
 }
 .aaptiv-row {
-    background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	background: #f5f5f5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .aaptiv-box {
-    flex: 1 100%;
+	flex: 1 100%;
 }
 .aside {
-    padding: 15px 75px 15px 75px;
+	padding: 15px 75px 15px 75px;
 }
 .item-wrapper {
-    display: flex;
+	display: flex;
 }
 .item {
-    background: #f5f5f5 url(white-bar.jpg) top repeat-x;
-    margin: 5px;
-    padding: 40px 30px 45px 30px;
-    flex: 1;
+	background: #f5f5f5 url(white-bar.jpg) top repeat-x;
+	margin: 5px;
+	padding: 40px 30px 45px 30px;
+	flex: 1;
 }
 
 @media (max-width: 992px) {
 .staff-person.img-responsive.center-block {
-    max-height: 275px;
+	max-height: 275px;
 }
 .cb-box {
-    padding: 40px 30px 0;
-    margin: 165px 0 -3px;
+	padding: 40px 30px 0;
+	margin: 165px 0 -3px;
 }
 .item-wrapper {
-    flex-direction: column;
+	flex-direction: column;
 }
 .item {
-    padding: 35px 30px 45px 30px;
+	padding: 35px 30px 45px 30px;
 }
 }
 
 @media (max-width: 1475px) {
 .aside {
-    padding: 15px;
+	padding: 15px;
 }
 }
 
 @media (max-width: 1325px) {
 .aaptiv-row {
-    flex-flow: row wrap;
+	flex-flow: row wrap;
 }
 .aside {
-    padding: 60px 80px;
+	padding: 60px 80px;
 }
 .aside {
-    order: 2;
+	order: 2;
 }
 .main {
-    order: 1;
+	order: 1;
 }
 }
 
 @media (max-width: 778px) {
 .aside {
-    padding: 30px 15px;
+	padding: 30px 15px;
 }
 }
 </style>
@@ -352,7 +361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-    <div id="global-alert" style="display:none;"></div>
+  <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row gradient-row">
     <div class="container">
@@ -463,6 +472,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div id="lynda" class="col-md-4 text-center padding-bottom-30"> <img class="img-responsive image-center" src="lynda.jpg" alt="Lynda.com">
         <h2><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=lynda" target="_blank">Lynda.com</a></h2>
+        <!-- ###############################
+        remove when lynda.com is back up -->
+        <div class="local-alert">Lynda.com is currently unavailable</div>
+        <!-- ############################### -->
         <div>Learn software, creative, business and technology skills from thousands of video courses taught by industry experts.</div>
       </div>
       <div id="creativebug" class="col-md-4 text-center padding-bottom-30"> <img class="img-responsive image-center" src="creativebug.jpg" alt="Creativebug">
@@ -567,4 +580,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
