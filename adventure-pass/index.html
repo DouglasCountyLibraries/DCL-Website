@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,6 +88,14 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+.secondary-alert {
+	background: #d36a50;
+	color: #fff;
+	font-size: 18px;
+	padding: 12px 10px 13px;
+	font-weight: 400;
+	text-align: center;
+}
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
@@ -476,7 +485,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-    <div id="global-alert" style="display:none;"></div>
+  <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top padding-bottom-15">
     <div class="container">
@@ -489,6 +498,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h4 class="roboto text-center margin-lg-100">Use your library card to reserve a Douglas County Libraries <a href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Adventure Pass</a> to one of our local participating cultural institutions. Reserve free passes up to 14 days in advance. </h4>
     </div>
   </div>
+  <div class="secondary-alert row">Adventure Passes are currently unavailable.</div>
   <div class="row bg-teal">
     <div class="container-md item-wrapper no-padding">
       <div class="item" id="slideshow"> 
@@ -529,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div>
           <h4 class="no-margin-bottom"><a class="white" href="https://goo.gl/maps/hdpzfdcKg4s" target="_blank">Colorado Symphony<!--*--></a></h4>
-          <!--<div class="small white">*Passes available for <a href="#" data-toggle="modal" data-target="#symphony" class="white text-underline">these performances</a></div>-->
+          <!--<div class="small white">*Passes available for <a href="#" data-toggle="modal" data-target="#symphony" class="white text-underline">these performances</a></div>--> 
         </div>
         <div>
           <h4><a class="white" href="https://goo.gl/maps/nswiDYjXdYo" target="_blank">Denver Firefighters Museum</a></h4>
@@ -552,7 +562,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>
           <h4><a class="white" href="https://goo.gl/maps/jxLnGpwLNts" target="_blank">Wings Over the Rockies Air &amp; Space Museum</a></h4>
         </div>
-        <div> <a class="text-uppercase btn btn-primary margin-top-15" href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Reserve Now</a></div>
+        <!-- remove for now <div> <a class="text-uppercase btn btn-primary margin-top-15" href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Reserve Now</a></div>--> 
       </div>
     </div>
     <!-- Modal -->
@@ -703,8 +713,7 @@ function kbSlideshow() { // set .fx1 class on 1st img on page load
 	}
 setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" -->
-
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -740,7 +749,8 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 		"https:\/\/twitter.com\/DCLcolorado"
 	]
 }
-</script>
+</script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
