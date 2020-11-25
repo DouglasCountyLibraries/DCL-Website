@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,18 +88,80 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-.border-row {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+:focus {
+	outline: -webkit-focus-ring-color auto 0px;
+}
+.table-contents {
+	position: sticky;
+	top: 2rem;
+	margin-top: 25px;
+}
+.section-nav li.active > a {
+	color: #666;
+	font-weight: 400;
+}
+.section-nav a {
+	text-decoration: none;
+	display: block;
+	padding: .125rem 0;
+	color: #999;
+	transition: all 50ms ease-in-out;
+}
+.section-nav a:hover, .section-nav a:focus {
+	color: #333;
+}
+.sidebar-heading {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.safety-heading {
+	padding-top: 15px;
+}
+.light-gray {
+	color: #999;
+	white-space: nowrap;
+}
+.jumps li a {
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #666;
+	font-weight: 400;
+	margin-bottom: 0;
+	padding: 8px 0 5px 0;
+	font-size: 18px;
+	border-bottom: 2px solid #ededed;
+}
+.border-line {
+	border-bottom: 2px solid #ededed;
+}
+.find.form-control {
+	margin: 0 auto;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.form-control:focus {
+	border-color: #999;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+mark {
+	background: #ffc9aa;
+	color: #000;
+}
+.welcome-heading {
+	padding-top: 0;
+}
 }
 .logo-hover {
-    transition: transform .2s;
-    display: inline-block;
+	transition: transform .2s;
+	display: inline-block;
 }
 .logo-hover:hover {
-    -ms-transform: scale(1.03); /* IE 9 */
-    -webkit-transform: scale(1.03); /* Safari 3-8 */
-    transform: scale(1.03);
+	-ms-transform: scale(1.03); /* IE 9 */
+	-webkit-transform: scale(1.03); /* Safari 3-8 */
+	transform: scale(1.03);
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -286,160 +349,160 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-    <div id="global-alert" style="display:none;"></div>
+  <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Welcome Back!</h1>
-      <div class="separator-container padding-bottom-15">
-        <div class="separator line-separator"><i class="fas fa-star"></i></div>
+      <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Welcome!</h1>
+      <div class="separator-container">
+        <div class="separator line-separator"><i class="fas fa-door-open"></i></div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="container margin-lg-100 padding-bottom-30">
-      <h4 class="roboto no-margin-top text-center">All Douglas County Libraries locations are open and operating under state and local health department guidelines for <a href="https://covid19.colorado.gov/safer-at-home/indoor-events" target="_blank">operations and events</a>.</h4>
-      <div class="text-center-md margin-lg-50">Masks are required at all times in the library, and we recommend that customers wash hands frequently, especially after handling materials and/or touching surfaces. Several safety precautions and protocols have been implemented with our customers and staff in mind. Read on for important details.</div>
+    <div class="container margin-lg-100 border-line padding-bottom-15">
+      <h4 class="roboto margin-bottom-5 text-center">All Douglas County Libraries locations are open and operating under state and local health department guidelines for <a href="https://covid19.colorado.gov/safer-at-home/indoor-events" target="_blank">operations and events</a>.</h4><div class="text-center margin-lg-30 margin-bottom-5">Masks are required at all times in the library, and we recommend that customers wash hands frequently, especially after handling materials and/or touching surfaces. Disposable masks are available for customers.</div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="container text-center">
-      <h2>Library Operations</h2>
+  <div class="row hidden-sm hidden-md hidden-lg">
+    <div class="container no-padding text-center">
+      <ul class="jumps nav nav-pills nav-justified">
+        <li> <a href="#operations">Library Operations</a></li>
+        <li> <a href="#services">Library Services</a></li>
+        <li> <a href="#safety">Health & Safety</a></li>
+      </ul>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="container padding-bottom-30 margin-lg-200">
-      <h4 class="text-center no-margin-top">Modified services are available at all DCL locations during our current operating hours: </h4>
-      <ul>
-        <ul class="list-unstyled large-text text-center padding-bottom-15">
-          <li>MON-THU 9AM-7PM</li>
-          <li>FRI-SAT 9AM-5PM</li>
-          <li>SUN 12-5PM</li>
-          <li>Louviers only: TUE 3-7PM &amp; SAT 9AM-12PM</li>
+  <div class="container no-padding">
+    <div class="table-contents col-sm-3 padding-bottom-60 hidden-xs">
+      <div class="padding-bottom-15">
+        <input class="find form-control" type="text" placeholder="Find on Page »">
+      </div>
+      <nav class="section-nav">
+        <ul class="list-unstyled">
+          <li><a class="sidebar-heading" href="#operations">Library Operations</a>
+            <ul class="list-unstyled margin-left-10">
+              <li><a href="#hours">Hours</a></li>
+              <li><a href="#borrowing-holds-fines">Borrowing, Holds & Fines</a></li>
+              <li><a href="#book-drops-donations">Book Drops & Donations</a></li>
+              <li><a href="#storytime-events-playscapes">Storytime, Events & Playscapes</a></li>
+              <li><a href="#spaces">Spaces</a></li>
+            </ul>
+          </li>
+          <li><a class="sidebar-heading" href="#services">Library Services</a>
+            <ul class="list-unstyled margin-left-10">
+              <li><a href="#park-pickup">Park & Pick-Up Holds Service</a></li>
+              <li><a href="#digital-library">Digital Library</a></li>
+            </ul>
+          </li>
+          <li><a class="sidebar-heading" href="#safety">Health & Safety</a>
+            <ul class="list-unstyled margin-left-10">
+              <li><a href="#protect">Protect Yourself & Others</a></li>
+              <li><a href="#protocols">Safety Precautions & Protocols</a></li>
+            </ul>
+          </li>
         </ul>
-        <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a> services are available by appointment only; call <a class="text-nowrap" href="tel:+13036887730 ">(303) 688-7730</a>. </li>
-        <li>Enhanced in-library cleaning and disinfecting procedures are ongoing using <a href="https://www.epa.gov/pesticide-registration/list-n-disinfectants-use-against-sars-cov-2-covid-19" target="_blank">EPA-registered disinfectants</a>.</li>
-        <li>Common areas; hard surfaces such as stair rails, door handles, and elevator buttons;  reserved rooms; and restrooms are cleaned at least four times a day. Hard flooring is thoroughly cleaned once each day.</li>
-        <li>Protocols and systems are in place to increase air circulation in our buildings.</li>
-        <li>In-library modifications facilitate social distancing. Tables and individual seating are spaced at least 6 feet apart.</li>
-        <li>Food is currently not permitted in the library in keeping with the state's Level Red mandate prohibiting indoor dining. Beverages are acceptable, keeping in mind mask mandates.</li>
-		<li>The Holds section in each library closes for 15 minutes at the top of each hour to allow social distancing for DCL staff as they shelve.</li>
-        <li>Increased signage throughout all libraries encourages social distancing and hand hygiene.</li>
-        <li>Plexiglass partitions are in place at public service desks.</li>
-        <li>Hand sanitizer stations are set up at library entrances, public service desks, cash-handling points, and other heavily used areas.</li>
-        <li>Disposable masks are available for customers.</li>
-      </ul>
+      </nav>
     </div>
-  </div>
-  <div id="services" class="row">
-    <div class="container text-center">
-      <h2>Services & Spaces</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="container padding-bottom-30 margin-lg-200">
-      <ul>
-        <li>Curbside Park & Pick-Up holds service will continue during the hours stated below, under Park & Pick-Up Holds Service. Note that the service location in our parking lots has changed, and there may be a longer wait for delivery to your car. Book Club Express kits may also be picked up using this service.</li>
-        <li>Book donations are accepted on the following limited basis at our Castle Rock, Highlands Ranch, Lone Tree, and Parker locations only. We are currently accepting donations of only two 18”x14”x12” boxes or less. Your donation is important to us. Due to current restrictions and fewer volunteers to process donations, the following temporary changes are in place.</li>
-        <ul>
-          <li>Castle Rock: Wednesdays, 3-7PM</li>
-          <li>Highlands Ranch: Saturdays, 10AM-2PM</li>
-          <li>Lone Tree: Mondays, 10AM-2PM</li>
-          <li>Parker: Thursdays, 10AM-2PM</li>
-        </ul>
-        <li>Study rooms are available by reservation only and limited to one occupant per room.</li>
-		<li>Meeting rooms are currently unavailable for public use.</li>
-        <!-- <ul>
-          <li>Social distancing is required.</li>
-          <li>Operators, employees, and attendees must wear face coverings unless doing so would inhibit the individual's health, in which case reasonable accommodations should be pursued to maintain the health of all parties.</li>
-          <li>Each room's capacity is limited to 25% of fire department-stated capacity.</li>
-        </ul> -->
-        <li>Drop-in use of empty meeting and study rooms is not permitted.</li> 
-        <li>Food is currently not permitted in the library in keeping with the state's Level Red mandate prohibiting indoor dining. Beverages are acceptable, keeping in mind mask mandates.</li>
-		<li>Contact Event & Hospitality Services at <a href="tel:+13036887605" target="_blank">(303) 688-7605</a> for guidelines specific to DCL meeting rooms.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row bg-gray-5">
-    <div class="container text-center">
-      <h2>Storytime, Events & Playscapes</h2>
-    </div>
-  </div>
-  <div class="row bg-gray-5">
-    <div class="container padding-bottom-30 margin-lg-200">
-      <ul>
-        <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=virtual+storytime&lib=1008&nd=90" target="_blank">Virtual Storytime</a> will continue each weekday at 10:30AM.</li>
-        <li>In-person Storytimes and other library events remain unavailable.</li>
-        <li>Playscapes and other interactive features at all libraries remain closed, including Little Letters Post Office at Castle Pines, The Market at Highlands Ranch, Playful Pets at Lone Tree, the Dino Wall at Parker, and Mission Control at Roxborough.</li>
-      </ul>
-    </div>
-  </div>
-  <div id="curbside" class="row">
-    <div class="container text-center">
-      <h2>Park & Pick-Up Holds Service</h2>
-      <h4 class="no-margin-top">Pick-Up Hours:</h4>
-      <ul class="list-unstyled large-text">
-        <li>MON-SAT 9AM-5PM</li>
-        <li>SUN 12-5PM</li>
-       </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="container padding-bottom-30 margin-lg-200">
-      <h4 class="no-margin-top text-center">Use our curbside service to pick up holds at your preferred DCL location<span class="asterisk-space">*</span>, following these instructions:</h4>
-      <ul>
-        <li>Look for the flag denoting parking spaces set aside for this service. Note that the service location in our parking lots has changed, and there may be a longer wait for delivery to your car. Thank you for your patience and understanding.</li>
-        <li>If all marked spots are full, please wait in your car for a space to become available. We will work as quickly as possible to serve you, but there may be a wait during busy times. Please be prepared.</li>
-        <li>Keep your phone handy. Once you are parked in a numbered space, call or text the number on the sign with the required information.</li>
-        <li>Health regulations prevent us from touching your vehicle. Please be prepared to open and close your own trunk for delivery of held items.</li><div class="padding-top-15"><span class="asterisk-space">*</span>Not available at Louviers.</div>
-      </ul>
-    </div>
-  </div>
-  <div id="borrowing" class="row bg-gray-5">
-    <div class="container text-center">
-      <h2>Borrowing, Holds & Fines Updates</h2>
-    </div>
-  </div>
-  <div class="row bg-gray-5">
-    <div class="container padding-bottom-30 margin-lg-200">
-      <div>
-        <ul>
-          <li>Standard borrowing timelines and fines on late returns apply. Learn more about <a href="../fines-fees-borrowing/">fines, fees and borrowing.</a></li>
-          <li>All DCL book drops are open and accepting returns of checked-out items.</li>
-          <li>Our Park & Pick-Up <a href="#curbside">curbside service</a> is available for pick-up of holds at all DCL locations.</li>
-          <li>Interlibrary Loan is available.</li>
-          <li><a href="../request-title/">Materials Request</a> is available.</li>
-          <li>Book Club Express kits may be picked up using our Park & Pick-Up service.</li>
-          <li>Book donations are accepted on the following limited basis at our Castle Rock, Highlands Ranch, Lone Tree, and Parker locations only. We are currently accepting donations of only two 18”x14”x12” boxes or less. Your donation is important to us. Due to current restrictions and fewer volunteers to process donations, the following temporary changes are in place.</li>
-          <ul>
-            <li>Castle Rock: Wednesdays, 3-7PM</li>
-            <li>Highlands Ranch: Saturdays, 10AM-2PM</li>
-            <li>Lone Tree: Mondays, 10AM-2PM</li>
-            <li>Parker: Thursdays, 10AM-2PM</li>
-          </ul>
-        </ul>
+    <div id="context"> 
+      
+      <!--######-->
+      <div class="col-sm-9">
+        <section id="operations">
+          <h3 class="text-uppercase font-weight-400">Library Operations</h3>
+          <section id="hours">
+            <h4>Hours</h4>
+            <div class="padding-bottom-15">Modified services are available at all DCL locations during our current operating hours:</div>
+            <ul class="list-unstyled">
+              <li>Monday-Thursday, 9AM-7PM</li>
+              <li>Friday-Saturday, 9AM-5PM</li>
+              <li>Sunday, 12-5PM</li>
+              <li>Louviers only: Tuesday, 3-7PM &amp; Saturday 9AM-12PM</li>
+            </ul>
+            <div class="padding-bottom-15 border-line"> <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a> services are available by appointment only; call <a class="text-nowrap" href="tel:+13036887730 ">(303) 688-7730</a>.</div>
+          </section>
+          <section id="borrowing-holds-fines">
+            <h4>Borrowing, Holds & Fines</h4>
+            <div class="padding-bottom-15 border-line">Standard borrowing timelines and fines on late returns apply. <a href="../request-title/">Materials Request</a> and Interlibrary Loan (ILL) are available. Learn more about <a href="../fines-fees-borrowing/">fines, fees and borrowing</a>.</div>
+          </section>
+          <section id="book-drops-donations">
+            <h4>Book Drops & Donations</h4>
+            <div class="padding-bottom-15">All DCL book drops are open and accepting returns of checked-out items.</div>
+            <div class="padding-bottom-15">Book donations are important to us. Due to current restrictions and fewer volunteers to process donations, we've implemented some temporary changes. Book donations are accepted on a limited basis at our Castle Rock, Highlands Ranch, Lone Tree, and Parker locations during the times listed below. We are currently accepting donations of only two 18”x14”x12” boxes or less at a time.</div>
+            <div class="border-line padding-bottom-15">
+              <ul class="no-margin-bottom">
+                <li>Castle Rock: Wednesdays, 3-7PM</li>
+                <li>Highlands Ranch: Saturdays, 10AM-2PM</li>
+                <li>Lone Tree: Mondays, 10AM-2PM</li>
+                <li>Parker: Thursdays, 10AM-2PM</li>
+              </ul>
+            </div>
+          </section>
+          <section id="storytime-events-playscapes">
+            <h4>Storytime, Events & Playscapes</h4>
+            <div class="padding-bottom-15">In-person Storytimes and other library events remain unavailable.</div>
+            <div class="padding-bottom-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=virtual+storytime&lib=1008&nd=90" target="_blank">Virtual Storytime</a> will continue with Storytime fun and activities each weekday at 10:30AM. Library staff will lead songs, rhymes, reading and fingerplays to keep nurturing those all-important emerging reading skills. Virtual Storytime also is available through <a href="https://www.storyblocks.org/" target="_blank">Storyblocks</a>, a project of Colorado Libraries for Early Literacy (CLEL).</div>
+            <div class="padding-bottom-15 border-line">Playscapes and other interactive features at all libraries remain closed, including Little Letters Post Office at Castle Pines, The Market at Highlands Ranch, Playful Pets at Lone Tree, the Dino Wall at Parker, and Mission Control at Roxborough.</div>
+          </section>
+          <section id="spaces">
+            <h4>Spaces</h4>
+            <div class="padding-bottom-15">Meeting rooms are currently unavailable for public use. Study rooms are available by reservation only and limited to one occupant per room. Drop-in use of empty meeting and study rooms is not permitted.</div>
+            <div class="padding-bottom-15 border-line">Contact Event & Hospitality Services at <a href="tel:+13036887605" target="_blank">(303) 688-7605</a> for guidelines specific to DCL meeting rooms.</div>
+          </section>
+        </section>
+      </div>
+      
+      <!--######-->
+      <div class="col-sm-9 col-sm-push-3">
+        <section id="services">
+          <h3 class="text-uppercase font-weight-400">Library Services</h3>
+          <section id="park-pickup">
+            <h4>Park & Pick-Up Holds Service</h4>
+            <div class="padding-bottom-15">Pick-Up Hours: Monday-Saturday, 9AM-5PM & Sunday, 12-5PM. </div>
+            <div class="padding-bottom-15">Use our curbside service to pick up holds at your preferred DCL location<span class="asterisk-space">*</span>, following these instructions. Note that the service location in our parking lots has changed, and there may be a longer wait for delivery to your car. Book Club Express kits may also be picked up using this service:</div>
+            <div class="padding-bottom-15 border-line">
+              <ol class="no-margin-bottom">
+                <li>Look for the flag denoting parking spaces set aside for this service. Note that the service location in our parking lots has changed, and there may be a longer wait for delivery to your car. Thank you for your patience and understanding.</li>
+                <li>If all marked spots are full, please wait in your car for a space to become available. We will work as quickly as possible to serve you, but there may be a wait during busy times. Please be prepared.</li>
+                <li>Keep your phone handy. Once you are parked in a numbered space, call or text the number on the sign with the required information.</li>
+                <li>Health regulations prevent us from touching your vehicle. Please be prepared to open and close your own trunk for delivery of held items.</li>
+              </ol>
+              <div class="margin-top-5"><span class="asterisk-space">*</span>Not available at Louviers.</div>
+            </div>
+          </section>
+          <section id="digital-library">
+            <h4>Our Digital Library is Open</h4>
+            <div class="padding-bottom-15">Our <a href="../digital-media/">digital library</a> is always open—and it's been enhanced to accommodate more digital checkouts (now up to 12 borrows per month) and less wait time (decreased ratio of holds to copies, now just 3:1). You may Skip the Line on <a href="https://dcl.overdrive.com/" target="_blank">OverDrive</a> and through the <a href="https://www.overdrive.com/apps/libby/?utm_origin=lightning&utm_page_genre=tout&utm_list=meet_libby&utm_content=libby_tout_learnmore_06019018" target="_blank">Libby app</a> for instant checkout of items, similar to Your Lucky Day items in our branches. And you'll see that familiar shamrock.</div>
+            <div class="padding-bottom-15">Access a variety of digital <a href="../library-perks/">library perks</a>, from audio-guided workouts, to crafting classes, to online learning and more.</div>
+            <div class="padding-bottom-15 border-line">Check out <a href="../resources/">DCL Connect</a> for a digital world of Family & Community resources. </div>
+          </section>
+        </section>
+      </div>
+      
+      <!--######-->
+      <div class="col-sm-9 col-sm-push-3">
+        <section id="safety">
+          <h3 class="text-uppercase font-weight-400">Health & Safety</h3>
+          <section id="protect">
+            <h4>Protect Yourself & Others</h4>
+            <div class="padding-bottom-15">Masks are required at all times in the library, and we recommend that customers wash hands frequently, especially after handling materials and/or touching surfaces. Disposable masks are available for customers.</div>
+            <div class="padding-bottom-15">Food is currently not permitted in the library in keeping with the state's Level Red mandate prohibiting indoor dining. Beverages are acceptable, keeping in mind mask mandates.</div>
+            <div class="padding-bottom-15 border-line">Hand sanitizer stations are set up at library entrances, public service desks, cash-handling points, and other heavily used areas.</div>
+          </section>
+          <section id="protocols">
+            <h4>Safety Precautions & Protocols</h4>
+            <div class="padding-bottom-15">Enhanced in-library cleaning and disinfecting procedures are ongoing using <a href="https://www.epa.gov/pesticide-registration/list-n-disinfectants-use-against-sars-cov-2-covid-19" target="_blank">EPA-registered disinfectants</a>. Common areas; hard surfaces such as stair rails, door handles, and elevator buttons;  reserved rooms; and restrooms are cleaned at least four times a day. Hard flooring is thoroughly cleaned once each day.</div>
+            <div class="padding-bottom-15">The Holds section in each library closes for 15 minutes at the top of each hour to allow social distancing for DCL staff as they shelve.</div>
+            <div class="padding-bottom-15">In-library modifications facilitate social distancing. Tables and individual seating are spaced at least 6 feet apart. Plexiglass partitions are in place at public service desks.</div>
+            <div class="padding-bottom-15 border-line">Increased signage throughout all libraries encourages social distancing and hand hygiene. Protocols and systems are in place to increase air circulation in library buildings.</div>
+          </section>
+        </section>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="container text-center">
-      <h2>Our Digital Library is Open</h2>
-    </div>
+    <div class="container text-center padding-top-40 padding-bottom-40"> <a href="https://www.douglas.co.us/douglascovid19/" target="_blank"><img class="logo-hover" src="community-response-logo.jpg" alt="Douglas County Community Response Logo"></a> </div>
   </div>
-  <div class="row">
-    <div class="container padding-bottom-30 margin-lg-200">
-      <div>
-        <ul>
-          <li>Our <a href="../digital-media/">digital library</a> is always open—and it's been enhanced to accommodate more digital checkouts (now up to 12 borrows per month) and less wait time (decreased ratio of holds to copies, now just 3:1).</li>
-          <li>You may Skip the Line on <a href="https://dcl.overdrive.com/" target="_blank">OverDrive</a> and through the <a href="https://www.overdrive.com/apps/libby/?utm_origin=lightning&utm_page_genre=tout&utm_list=meet_libby&utm_content=libby_tout_learnmore_06019018" target="_blank">Libby app</a> for instant checkout of items, similar to Your Lucky Day items in our branches. And you'll see that familiar shamrock.</li>
-          <li>You may also access a variety of digital <a href="../library-perks/">library perks</a>, from audio-guided workouts, to crafting classes, to online learning and more.</li>
-          <li>Join us for <a href="../storytime/">Virtual Storytime</a> fun and activities! Library staff will lead songs, rhymes, reading and fingerplays to keep nurturing those all-important emerging reading skills.</li>
-          <li>Virtual Storytime also is available through <a href="https://www.storyblocks.org/" target="_blank">Storyblocks</a>, a project of Colorado Libraries for Early Literacy (CLEL).</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="container text-center padding-bottom-40"> <a href="https://www.douglas.co.us/douglascovid19/" target="_blank"><img class="logo-hover img-responsive" src="community-response-logo.jpg" alt="Douglas County Community Response Logo"></a> </div>
   <div class="row bg-teal">
     <div class="container padding-top-30 padding-bottom-40 white margin-lg-100 text-center">We're doing all we can to ensure the safety and health of DCL staff and our community. As the situation surrounding COVID-19 changes, we will continue to communicate with you via email and will post ongoing updates to this page and through our social media channels. Thank you for your support and understanding as we navigate this situation together. We wish you and your loved ones good health. </div>
   </div>
@@ -514,6 +577,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdn.jsdelivr.net/mark.js/7.0.0/jquery.mark.min.js"></script> 
+<script>
+$(function() {
+  $("input").on("input.highlight", function() {
+    // Determine specified search term
+    var searchTerm = $(this).val();
+    // Highlight search term inside a specific context
+    $("#context").unmark().mark(searchTerm);
+  }).trigger("input.highlight").focus();
+});</script> 
+<script>window.addEventListener('DOMContentLoaded', () => {
+
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			const id = entry.target.getAttribute('id');
+			if (entry.intersectionRatio > 0) {
+				document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+			} else {
+				document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+			}
+		});
+	});
+
+	// Track all sections that have an `id` applied
+	document.querySelectorAll('section[id]').forEach((section) => {
+		observer.observe(section);
+	});
+	
+});</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
