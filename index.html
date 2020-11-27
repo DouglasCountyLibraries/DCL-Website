@@ -89,7 +89,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<!-- pinterest - do not remove -->
+<!-- pinterest - do not remove --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('cgdpop') == null) {
+                     $('#cgdModal').modal('show');
+                     $.cookie('cgdpop', '1');
+                 }
+             });
+</script>
 <style>
 @font-face {
 	font-family: 'ForeverGrateful';
@@ -115,11 +124,56 @@ h1.little {
 	line-height: .8em;
 	margin-left: 150px;
 }
+.grateful-modal {
+	font-family: 'ForeverGrateful', sans-serif;
+	font-size: 46px;
+	color: #777;
+	line-height: 50px;
+	margin-bottom: 30px;
+}
+.little-modal {
+	font-family: 'LittleDinosaurRegular', sans-serif;
+	font-size: 40px;
+	color: #333;
+	font-weight: 600;
+	line-height: 50px;
+}
+.little-modal a {
+	color: #333;
+	text-decoration: underline;
+	text-decoration-color: rgba(0,98,113,.2);
+}
+.little-modal a:hover, .little-modal a:focus {
+	color: #000;
+	text-decoration-color: rgba(0,98,113,.6);
+}
 .btn-default {
 	background-color: #e26155;
 }
 .btn-default:active, .btn-default:hover, .btn-default:focus {
 	background-color: #ce1b24;
+}
+.cgd-background {
+	background: transparent url("modal-paper.png") top left repeat-y;
+	padding: 65px 60px 90px 85px;
+	box-shadow: 12px 12px 15px -8px rgba(0, 0, 0, 0.4);
+	transform: rotate(3deg);
+	-webkit-backface-visibility: hidden;
+}
+.modal-dialog {
+	margin: 15vh auto;
+}
+.modal-backdrop {
+	background-color: #fff;
+}
+.modal-backdrop.in {
+	opacity: 0.7;
+}
+.modal .close {
+	color: #666;
+	margin: 35px 27px 0 0;
+	z-index: 1000;
+	position: relative;
 }
 .banner-wrapper {
 	margin-bottom: -230px;
@@ -192,6 +246,9 @@ h1.little {
 }
 
 @media (max-width: 675px) {
+.modal-dialog {
+	margin: 30px auto;
+}
 h1.grateful {
 	font-family: 'ForeverGrateful', sans-serif;
 	font-size: 40px;
@@ -209,6 +266,16 @@ h1.little {
 	margin-left: 0;
 	line-height: .8em;
 	text-align: center;
+}
+.cgd-background {
+	transform: rotate(0);
+	-webkit-backface-visibility: hidden;
+}
+.modal .close {
+	color: #666;
+	margin: 15px 25px 0 0;
+	z-index: 1000;
+	position: relative;
 }
 .banner-wrapper {
 	margin-bottom: 15px;
@@ -453,6 +520,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="modal fade" id="cgdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog cgd-modal" role="document">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="text-center cgd-background">
+        <div class="grateful-modal">Colorado Gives Day is December 8!</div>
+        <div class="little-modal">Please support the DCL Foundation by <a href="donate/">scheduling your donation today</a>.</div>
+      </div>
+    </div>
+  </div>
   <div class="hearts-row">
     <div class="row cloud-row"></div>
     <div class="banner-wrapper container"><img class="img-responsive" src="banner.png" alt="Notes on Gratitude">
