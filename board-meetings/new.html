@@ -125,7 +125,7 @@ table.dataTable thead th, table.dataTable thead td {
 	margin: 15px auto 25px;
 }
 .table > thead > tr > th {
-	border-bottom: 2px solid #bbb;
+	border-bottom: 1px solid #bbb;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
 	vertical-align: middle;
@@ -134,10 +134,10 @@ table.dataTable thead th, table.dataTable thead td {
 	vertical-align: middle;
 }
 table.dataTable tbody th, table.dataTable tbody td {
-	padding: 20px 5px;
+	padding: 18px 5px;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
-	background-color: #eaeaea;
+	background-color: inherit;
 }
 .form-control.table-search {
 	min-width: 350px;
@@ -155,7 +155,7 @@ color: #333;
 color: #333;
 }
 .paginate_button.current {
-	border: 1px solid #333;
+	border: 2px solid #7fbac5;
 	border-radius: 50%;
 }
 .line-through {
@@ -169,17 +169,12 @@ table.dataTable thead th, table.dataTable tfoot th {
 	font-size: 1em;
 	text-transform: uppercase;
 }
-
-@media (max-width:992px) {
-table.dataTable thead th, table.dataTable tfoot th {
-	font-size: 1em;
+    .date-tab {
+	color: #888;
 }
-}
-
-@media (max-width: 768px) {
-.word-break {
-	display: none; /* <br class="insert-break" /> */
-}
+li.active > a.tab > h3 {
+	font-weight: 400;
+	color: #333;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -385,13 +380,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation"><a class="tab" href="#one" aria-controls="one" role="tab" data-toggle="tab">
-        <h2 class="no-margin text-uppercase">2021</h2>
+        <h3 class="date-tab no-margin text-uppercase">2021</h3>
         </a></li>
       <li role="presentation" class="active"><a class="tab" href="#two" aria-controls="two" role="tab" data-toggle="tab">
-        <h2 class="no-margin text-uppercase">2020</h2>
+        <h3 class="date-tab no-margin text-uppercase">2020</h3>
         </a></li>
       <li role="presentation"><a class="tab" href="#three" aria-controls="three" role="tab" data-toggle="tab">
-        <h2 class="no-margin text-uppercase">2019</h2>
+        <h3 class="date-tab no-margin text-uppercase">2019</h3>
         </a></li>
     </ul>
   </div>
@@ -407,7 +402,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     
     <div role="tabpanel" class="tab-pane fade in" id="one">
       <div class="row">
-        <div class="container no-padding margin-bottom-60">
+        <div class="container no-padding margin-bottom-80">
           <table id="table-one" class="display table table-striped" cellspacing="0" width="100%">
             <thead>
               <tr>
@@ -437,6 +432,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <td>JAN 15, 2021, 8:00 AM</td>
                 <td>Personnel Committee Meeting</td>
                 <td><a href="../castle-pines/">Castle Pines</a></td>
+                <td class="opacity-6">Agenda</td>
+                <td class="opacity-6">Record</td>
+              </tr>
+              <tr>
+                <td>JAN 27, 2021, 8:00 AM</td>
+                <td>Informal Board Breakfast Meeting</td>
+                <td class="opacity-6">TBD</td>
                 <td class="opacity-6">Agenda</td>
                 <td class="opacity-6">Record</td>
               </tr>
@@ -493,6 +495,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <td>MAR 19, 2021, 8:00 AM</td>
                 <td>Personnel Committee Meeting</td>
                 <td><a href="../castle-pines/">Castle Pines</a></td>
+                <td class="opacity-6">Agenda</td>
+                <td class="opacity-6">Record</td>
+              </tr>
+              <tr>
+                <td>MAR 31, 2021, 8:00 AM</td>
+                <td>Informal Board Breakfast Meeting</td>
+                <td class="opacity-6">TBD</td>
                 <td class="opacity-6">Agenda</td>
                 <td class="opacity-6">Record</td>
               </tr>
@@ -630,6 +639,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <td class="opacity-6">Record</td>
               </tr>
               <tr>
+                <td>JUL 28, 2021, 8:00 AM</td>
+                <td>Informal Board Breakfast Meeting</td>
+                <td class="opacity-6">TBD</td>
+                <td class="opacity-6">Agenda</td>
+                <td class="opacity-6">Record</td>
+              </tr>
+              <tr>
                 <td>AUG 5, 2021, 8:00 AM</td>
                 <td>Capital Planning Committee Meeting</td>
                 <td><a href="../castle-pines/">Castle Pines</a></td>
@@ -682,6 +698,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <td>SEP 17, 2021, 8:00 AM</td>
                 <td>Personnel Committee Meeting</td>
                 <td><a href="../castle-pines/">Castle Pines</a></td>
+                <td class="opacity-6">Agenda</td>
+                <td class="opacity-6">Record</td>
+              </tr>
+              <tr>
+                <td>SEP 29, 2021, 8:00 AM</td>
+                <td>Informal Board Breakfast Meeting</td>
+                <td class="opacity-6">TBD</td>
                 <td class="opacity-6">Agenda</td>
                 <td class="opacity-6">Record</td>
               </tr>
@@ -742,6 +765,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <td class="opacity-6">Record</td>
               </tr>
               <tr>
+                <td>NOV 17, 2021, 8:00 AM</td>
+                <td>Informal Board Breakfast Meeting</td>
+                <td class="opacity-6">TBD</td>
+                <td class="opacity-6">Agenda</td>
+                <td class="opacity-6">Record</td>
+              </tr>
+              <tr>
                 <td>NOV 19, 2021, 8:00 AM</td>
                 <td>Personnel Committee Meeting</td>
                 <td><a href="../castle-pines/">Castle Pines</a></td>
@@ -757,7 +787,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </tr>
               <tr>
                 <td>DEC 1, 2021, 7:00 PM</td>
-                <td>Budget Public Hearing & Board Meeting</td>
+                <td>Budget Public Hearing & Board Meeting<span class="asterisk-space">*</span></td>
                 <td><a href="./remote-call-in/2021/remote-call-in-instructions.pdf"><i class="fas fa-file-pdf margin-right-10"></i>Remote Call In</a></td>
                 <td class="opacity-6">Packet</td>
                 <td class="opacity-6">Minutes</td>
@@ -785,7 +815,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </tr>
             </tbody>
           </table>
-          <div class="margin-top-15 margin-left-15 margin-right-15">There are no regular board meetings in January, July and November 2021.</div>
+          <div class="text-center margin-top-15 margin-left-15 margin-right-15">There are no regular board meetings in January, July and November 2021. <br>
+            <span class="asterisk-space">*</span>The December 2021 board meeting will be held the first Wednesday of the month. This meeting is also the 2022 Budget Public Hearing meeting.</div>
         </div>
       </div>
     </div>
@@ -798,7 +829,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     
     <div role="tabpanel" class="tab-pane fade in active" id="two">
       <div class="row">
-        <div class="container no-padding margin-bottom-60">
+        <div class="container no-padding margin-bottom-80">
           <table id="table-two" class="display table table-striped" cellspacing="0" width="100%">
             <thead>
               <tr>
@@ -1092,7 +1123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </tr>
               <tr>
                 <td>DEC 2, 2020, 7:00 PM</td>
-                <td>Regular Board Meeting*</td>
+                <td>Regular Board Meeting<span class="asterisk-space">*</span></td>
                 <td><a href="remote-call-in/2020/remote-call-in-instructions.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Remote Call In</a></td>
                 <td><a href="packet/2020/12-02-2020-packet.pdf" target="_blank"><i class="fas fa-file-pdf margin-right-10"></i>Packet</a></td>
                 <td class="opacity-6">Minutes</td>
@@ -1113,8 +1144,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </tr>
             </tbody>
           </table>
-          <div class="margin-top-15 margin-left-15 margin-right-15">There are no meetings in July and November 2020.<br>
-            *The December 2020 board meeting will be held the first Wednesday of the month. This meeting is also the 2021 Budget Public Hearing meeting.</div>
+          <div class="text-center margin-top-15 margin-left-15 margin-right-15">There are no meetings in July and November 2020.<br>
+            <span class="asterisk-space">*</span>The December 2020 board meeting will be held the first Wednesday of the month. This meeting is also the 2021 Budget Public Hearing meeting.</div>
         </div>
       </div>
     </div>
@@ -1127,7 +1158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     
     <div role="tabpanel" class="tab-pane fade in" id="three">
       <div class="row">
-        <div class="container no-padding margin-bottom-60">
+        <div class="container no-padding margin-bottom-80">
           <table id="table-three" class="display table table-striped" cellspacing="0" width="100%">
             <thead>
               <tr>
@@ -1347,8 +1378,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </tr>
             </tbody>
           </table>
-          <div class="margin-top-15 margin-left-15 margin-right-15">There are no meetings in July and December 2019.<br>
-            *The November 2019 board meeting will be held the third Wednesday of the month due to the Thanksgiving holiday. This meeting is also the 2020 Budget Public Hearing meeting.</div>
+          <div class="text-center margin-top-15 margin-left-15 margin-right-15">There are no meetings in July and December 2019.<br>
+            <span class="asterisk-space">*</span>The November 2019 board meeting will be held the third Wednesday of the month due to the Thanksgiving holiday. This meeting is also the 2020 Budget Public Hearing meeting.</div>
         </div>
       </div>
     </div>
