@@ -118,84 +118,75 @@ h1.grateful {
 	font-size: 38px;
 	color: #777;
 	line-height: .9em;
-	margin: 20px auto 30px 150px;
-	padding-top: 60px;
 }
 h1.little {
 	font-family: 'LittleDinosaurRegular', sans-serif;
-	font-size: 46px;
+	font-size: 60px;
 	color: #000;
 	font-weight: 600;
 	line-height: .8em;
-	margin-left: 150px;
 }
-
 .house-row {
 	background: transparent url("houses.png") center bottom repeat-x;
 	height: 175px;
 }
-
 .btn-default {
-	background-color: #e26155;
+	background-color: #ed217c;
+	margin: 10px 0;
 }
 .btn-default:active, .btn-default:hover, .btn-default:focus {
-	background-color: #ce1b24;
+	background-color: #bd1a63;
 }
-    .cloud-row {
+.heart-list.list-unstyled {
+	display: inline-flex;
+}
+.goal-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cloud-row {
 	height: 202px;
-	background: transparent url("clouds.png") center top repeat-x;
-	-webkit-animation: float 150s linear infinite;
-	animation: float 150s linear infinite;
+	text-align: center;
+	background: transparent url("static-clouds.png") center top repeat-x;
 }
-    @-webkit-keyframes float {
-from {
-background-position: 1300px 0;
+.one.rise-up {
+	animation-delay: .5s;
 }
-to {
-background-position: 0 0;
+.two.rise-up {
+	animation-delay: 1s;
+}
+.three.rise-up {
+	animation-delay: 1.5s;
+}
+.rise-up {
+	-webkit-animation: rise-up 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	animation: rise-up 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+@-webkit-keyframes rise-up {
+0% {
+-webkit-transform: translateY(1000px);
+transform: translateY(1000px);
+opacity: 0;
+}
+100% {
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
 }
 }
-@keyframes float {
-from {
-background-position: 1300px 0;
+@keyframes rise-up {
+0% {
+-webkit-transform: translateY(1000px);
+transform: translateY(1000px);
+opacity: 0;
 }
-to {
-background-position: 0 0;
+100% {
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
 }
 }
-    
-    
-    
-.slide-in-bottom {
-	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-}
-
-@-webkit-keyframes slide-in-bottom {
-  0% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-bottom {
-  0% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -385,7 +376,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="hearts-row">
-      <div class="row cloud-row"></div><div class="goal-row"><img class="slide-in-bottom" src="one.png" alt="$3000"><img class="slide-in-bottom" src="two.png" alt="$6000"><img class="slide-in-bottom" src="three.png" alt="$9000"></div>
+    <div class="row cloud-row">
+      <div>
+        <h1 class="little">Today is Colorado Gives Day!</h1>
+        <h4>Please help us meet our goal of $30,000</h4>
+        <a class="btn btn-default btn-lg" href="https://www.coloradogives.org/index.php?section=organizations&amp;action=newDonation&amp;fwID=36788" target="_blank">Give Today!</a></div>
+    </div>
+    <div class="goal-row">
+    
+        
+          <div class="one rise-up"><img class="" src="one.png" alt="$3000"></div>
+          <div class="two rise-up"><img class="" src="two.png" alt="$6000"></div>
+          <div class="three rise-up"><img class="opacity-2" src="three.png" alt="$9000"></div>
+            <div class="ten rise-up"><img class="opacity-2" src="ten.png" alt="$30,000"></div>
+       
+      
+    </div>
     <div class="row house-row"></div>
   </div>
   <!-- InstanceEndEditable --> </div>
