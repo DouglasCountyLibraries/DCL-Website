@@ -126,6 +126,10 @@ h1.little {
 	font-weight: 600;
 	line-height: .8em;
 }
+    .callout {
+        background: #fff;
+        display: inline-block;
+    }
 .house-row {
 	background: transparent url("houses.png") center bottom repeat-x;
 	height: 175px;
@@ -218,6 +222,27 @@ opacity: 0;
 -webkit-transform: translateY(0);
 transform: translateY(0);
 opacity: 1;
+}
+}
+    .hearts-row {
+	background: transparent url("hearts.png") center center repeat;
+	-webkit-animation: rise 10s linear infinite;
+	animation: rise 10s linear infinite;
+}
+@-webkit-keyframes rise {
+from {
+background-position: 0 200px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes rise {
+from {
+background-position: 0 200px;
+}
+to {
+background-position: 0 0;
 }
 }
 </style>
@@ -410,7 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="hearts-row">
     <div class="row cloud-row">
-      <div>
+      <div class="callout">
         <h1 class="little">Today is Colorado Gives Day!</h1>
         <h4>Please help us meet our goal of $30,000</h4>
         <a class="btn btn-default btn-lg" href="https://www.coloradogives.org/index.php?section=organizations&amp;action=newDonation&amp;fwID=36788" target="_blank">Give Today!</a></div>
