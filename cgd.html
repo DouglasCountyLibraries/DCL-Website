@@ -124,7 +124,7 @@ h1.little {
 	font-size: 75px;
 	color: #000;
 	font-weight: 600;
-	line-height: .8em;
+	line-height: .9em;
 }
 .callout {
 	background: #fff;
@@ -140,11 +140,11 @@ h1.little {
 	margin: 10px 0;
 	border: 3px solid #555;
 	border-radius: 2px;
-    font-weight: 400;
+	font-weight: 400;
 }
 .btn-default:active, .btn-default:hover, .btn-default:focus {
 	background-color: #bd1a63;
-    	border: 3px solid #555;
+	border: 3px solid #555;
 	border-radius: 2px;
 }
 .heart-list.list-unstyled {
@@ -152,9 +152,10 @@ h1.little {
 }
 .goal-row {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-    padding: 35px 0 45px;
+	padding: 35px 0 45px;
 }
 .cloud-row {
 	height: 202px;
@@ -225,7 +226,7 @@ transform: translateY(0);
 opacity: 1;
 }
 }
-    .hearts-row {
+.hearts-row {
 	background: transparent url("hearts.png") center center repeat;
 	-webkit-animation: rise 10s linear infinite;
 	animation: rise 10s linear infinite;
@@ -246,19 +247,25 @@ to {
 background-position: 0 0;
 }
 }
-    @media (max-width: 650px) {
-        .goal-row {
-	flex-direction: column;
+
+@media (max-width: 768px) {
+.cloud-row {
+	height: 202px;
+	text-align: center;
+	background: none;
+}
+}
+
+@media (max-width: 650px) {
+.goal-row {
 	justify-content: center;
 	align-items: center;
-    padding: 55px 0 45px;
+	padding: 55px 0 45px;
 }
-        .callout {
-
+.callout {
 	padding: 0;
 }
-        
-    }
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
