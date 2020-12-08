@@ -113,13 +113,27 @@ h1.kari span {
 h2.badaboom {
 	font-family: 'badaboom-pro', sans-serif;
 	color: #000;
-	font-size: 38px;
+	font-size: 32px;
 	line-height: .9em;
 	font-weight: 400;
 	font-style: normal;
 	margin: 0;
 	word-spacing: -0.2em;
 	letter-spacing: .01em;
+}
+.focus-link:hover, .focus-link:focus {
+	text-decoration: none;
+	color: #DDF2F3;
+}
+.focus-link h2:hover, .focus-link h2:focus {
+	text-decoration: none;
+	color: #DDF2F3;
+	transition: all 0.6s ease-out 0s;
+}
+.item-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .item {
 	background: #519084;
@@ -325,19 +339,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row tree-row">
     <div class="container">
       <h1 class="kari text-center"><span>M</span>erry <span>&</span> Brig<span>h</span>t</h1>
-      <a href="#">
-      <div class="item">
-        <h2 class="badaboom">Giving That Gives Back</h2>
-      </div>
-      </a><a href="#">
-      <div class="item">
-        <h2 class="badaboom">Season's Readings</h2>
-      </div>
-      </a><a href="#">
-      <div class="item">
-        <h2 class="badaboom">Learning WonderLab</h2>
-      </div>
-      </a> </div>
+      <div class="item-wrapper"><a class="focus-link" href="donate/">
+        <div class="item">
+          <h2 class="badaboom">Giving That Gives Back</h2>
+        </div>
+        </a><a class="focus-link" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1039845827">
+        <div class="item">
+          <h2 class="badaboom">Season's Readings</h2>
+        </div>
+        </a><a class="focus-link" href="learning-lab/#camp-dcl">
+        <div class="item">
+          <h2 class="badaboom">Learning WonderLab</h2>
+        </div>
+        </a> </div>
+    </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
