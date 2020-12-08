@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,89 +88,337 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('cgdpop-up') == null) {
+                     $('#cgdModal-pop').modal('show');
+                     $.cookie('cgdpop-up', '0');
+                 }
+             });
+</script>
 <style>
+/* begin */   
+    
+@font-face {
+	font-family: 'ForeverGrateful';
+	src: url('../shared-assets/web-fonts/ForeverGrateful.woff') format('woff2'), url('../shared-assets/web-fonts/ForeverGrateful.woff') format('woff');
+}
+@font-face {
+	font-family: 'LittleDinosaurRegular';
+	src: url('../shared-assets/web-fonts/LittleDinosaurRegular.woff') format('woff2'), url('../shared-assets/web-fonts/LittleDinosaurRegular.woff2') format('woff');
+}
+div#global-alert {
+	position: relative;
+	z-index: 1;
+}
+h1.grateful {
+	font-family: 'ForeverGrateful', sans-serif;
+	font-size: 38px;
+	color: #777;
+	line-height: .9em;
+	margin: 20px auto 30px 150px;
+	padding-top: 60px;
+}
+h1.little {
+	font-family: 'LittleDinosaurRegular', sans-serif;
+	font-size: 46px;
+	color: #000;
+	font-weight: 600;
+	line-height: .8em;
+	margin-left: 150px;
+}
+.grateful-modal {
+	font-family: 'ForeverGrateful', sans-serif;
+	font-size: 46px;
+	color: #777;
+	line-height: 50px;
+	margin-bottom: 30px;
+}
+.little-modal {
+	font-family: 'LittleDinosaurRegular', sans-serif;
+	font-size: 40px;
+	color: #333;
+	font-weight: 600;
+	line-height: 50px;
+}
+.little-modal a {
+	color: #333;
+	text-decoration: underline;
+	text-decoration-color: rgba(0,98,113,.2);
+}
+.little-modal a:hover, .little-modal a:focus {
+	color: #000;
+	text-decoration-color: rgba(0,98,113,.6);
+}
+.btn-default {
+	background-color: #e26155;
+}
+.btn-default:active, .btn-default:hover, .btn-default:focus {
+	background-color: #ce1b24;
+}
+.cgd-background {
+	background: transparent url("modal-paper.png") top left repeat-y;
+	padding: 65px 60px 90px 85px;
+	box-shadow: 12px 12px 15px -8px rgba(0, 0, 0, 0.4);
+	transform: rotate(3deg);
+	-webkit-backface-visibility: hidden;
+}
+.modal-dialog {
+	margin: 15vh auto;
+}
+.modal-backdrop {
+	background-color: #fff;
+}
+.modal-backdrop.in {
+	opacity: 0.7;
+}
+.modal .close {
+	color: #666;
+	margin: 35px 27px 0 0;
+	z-index: 1000;
+	position: relative;
+}
+.banner-wrapper {
+	margin-bottom: -230px;
+	margin-top: -220px;
+	transform: rotate(-5deg);
+	-webkit-backface-visibility: hidden;
+}
+.banner-wrapper img {
+	margin: 0 auto -65px;
+}
+.notes {
+	background: transparent url("notes.png") top center no-repeat;
+	height: 511px;
+	max-width: 585px;
+	margin: 0 auto;
+}
+.notes > h1 > a {
+	color: #000;
+	display: inline-block;
+	position: relative;
+}
+.notes > h1 > a:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: -6px;
+	content: "";
+	display: block;
+	height: 4px;
+	left: 50%;
+	position: absolute;
+	background: rgba(0,98,113,.1);
+	transition: width 0.6s ease 0s, left 0.6s ease 0s;
+	width: 0;
+}
+.notes > h1 > a:hover {
+	color: #000;
+	text-decoration: none;
+	transform: scale(1.05);
+}
+.notes > h1 > a:hover:after {
+	width: 100%;
+	left: 0;
+}
+.house-row {
+	background: transparent url("houses.png") center bottom repeat-x;
+	height: 175px;
+}
+.cloud-row {
+	height: 202px;
+	background: transparent url("clouds.png") center top repeat-x;
+	-webkit-animation: float 150s linear infinite;
+	animation: float 150s linear infinite;
+}
+
+@media (max-width: 820px) {
+.banner-wrapper {
+	margin-bottom: -205px;
+	margin-top: -200px;
+	transform: rotate(0);
+	-webkit-backface-visibility: hidden;
+}
+.banner-wrapper img {
+	margin: 0 auto -75px;
+}
+.notes {
+	background: transparent url("notes.png") top center no-repeat;
+	height: 511px;
+	max-width: auto;
+	margin: 0 auto;
+}
+}
+
+@media (max-width: 675px) {
+.modal-dialog {
+	margin: 30px auto;
+}
+h1.grateful {
+	font-family: 'ForeverGrateful', sans-serif;
+	font-size: 40px;
+	color: #555;
+	line-height: .9em;
+	margin: 15px auto 30px auto;
+	padding-top: 75px;
+	text-align: center;
+}
+h1.little {
+	font-family: 'LittleDinosaurRegular', sans-serif;
+	font-size: 46px;
+	color: #000;
+	font-weight: 600;
+	margin-left: 0;
+	line-height: .8em;
+	text-align: center;
+}
+.cgd-background {
+	transform: rotate(0);
+	-webkit-backface-visibility: hidden;
+}
+.modal .close {
+	color: #666;
+	margin: 15px 25px 0 0;
+	z-index: 1000;
+	position: relative;
+}
+.banner-wrapper {
+	margin-bottom: 15px;
+	margin-top: -180px;
+	transform: rotate(0);
+	-webkit-backface-visibility: hidden;
+}
+.banner-wrapper img {
+	margin: 0 auto -90px;
+}
+.notes {
+	background: transparent url("modal-paper.png") top left repeat-y;
+	height: auto;
+	max-width: auto;
+	margin: 0 auto;
+	box-shadow: 12px 12px 15px -8px rgba(0, 0, 0, 0.4);
+	padding: 15px 15px 65px 30px;
+}
+}
+@-webkit-keyframes float {
+from {
+background-position: 1300px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes float {
+from {
+background-position: 1300px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+.hearts-row {
+	background: transparent url("hearts.png") center center repeat;
+	-webkit-animation: rise 10s linear infinite;
+	animation: rise 10s linear infinite;
+}
+@-webkit-keyframes rise {
+from {
+background-position: 0 200px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes rise {
+from {
+background-position: 0 200px;
+}
+to {
+background-position: 0 0;
+}
+}
+/* end */   
 .sub-list {
-    list-style-type: circle;
+	list-style-type: circle;
 }
 .giving-row {
-    background: #0289a7;
+	background: #0289a7;
 }
 .red-text {
-    color: #000;
-    font-weight: 400;
+	color: #000;
+	font-weight: 400;
 }
 .red-text a:active, .red-text a:hover, .red-text a:focus {
-    color: #873928;
-    text-decoration: none;
+	color: #873928;
+	text-decoration: none;
 }
 .photo-row {
-    background: #0289a7;
+	background: #0289a7;
 }
 .item-wrapper {
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
 }
 .item {
-    padding-bottom: 30px;
+	padding-bottom: 30px;
 }
 .carousel-cell {
-    text-align: center;
-    width: 100%;
+	text-align: center;
+	width: 100%;
 }
 .carousel-cell:before {
-    display: block;
-    text-align: center;
+	display: block;
+	text-align: center;
 }
 /* big buttons, no circle */
 .flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
+	width: 50px;
+	height: 50px;
+	background: transparent;
 }
 .flickity-prev-next-button:hover {
-    background: transparent;
+	background: transparent;
 }
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: #efeeed;
+	fill: #efeeed;
 }
 .flickity-prev-next-button.no-svg {
-    color: #efeeed;
+	color: #efeeed;
 }
 .flickity-prev-next-button {
-    top: 30%;
+	top: 30%;
 }
 .flickity-viewport {
-    transition: height 0.6s;
+	transition: height 0.6s;
 }
 
 @media (max-width: 1200px) {
 .text-center.headings {
-    position: relative;
-    top: -53px;
+	position: relative;
+	top: -53px;
 }
 .tree-background {
-    background: #0e74bc;
+	background: #0e74bc;
 }
 .feature-one {
-    font-size: 150px;
-    line-height: 175px;
+	font-size: 150px;
+	line-height: 175px;
 }
 .feature-two {
-    font-size: 90px;
-    line-height: 0px;
+	font-size: 90px;
+	line-height: 0px;
 }
 }
 
 @media (min-width: 480px) {
 #box-two, #box-three, #box-four {
-    border-left: none;
+	border-left: none;
 }
 }
 @media (min-width: 768px) {
 #box-two, #box-four {
-    border-left: 1px solid rgba(255,255,255,.6);
+	border-left: 1px solid rgba(255,255,255,.6);
 }
 @media (min-width: 992px) {
 .item {
@@ -372,8 +621,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-    <div id="global-alert" style="display:none;"></div>
+  <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="modal fade" id="cgdModal-pop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog cgd-modal" role="document">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="text-center cgd-background">
+        <div class="grateful-modal">Today is Colorado Gives Day!</div>
+        <div class="little-modal">Please support the DCL Foundation by <a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">donating today</a>.</div>
+      </div>
+    </div>
+  </div>
   <div class="row padding-bottom-20 border-top">
     <div class="container">
       <div class="text-center">
@@ -759,4 +1017,5 @@ for (var i = 0; i < cards.length; i++) {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
