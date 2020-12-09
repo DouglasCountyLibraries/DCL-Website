@@ -134,14 +134,14 @@ h2.badaboom {
 	margin: 35px 0 0 -40px;
 }
 .friends {
-	margin: -90px 0 0 260px;
+	margin: -100px 0 0 260px;
 }
 .item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 }
 .item {
 	background: rgba(81,144,132,.6);
@@ -151,10 +151,41 @@ h2.badaboom {
 	padding: 20px 40px 22px;
 	margin: 10px;
 }
+.item:hover, .item:focus {
+	background: rgba(81,144,132,1);
+	transition: all 0.6s ease-out 0s;
+}
 .tree-row {
 	background: #e1f0f0 url("trees.jpg") center top repeat-x;
 	height: 900px;
 	padding-top: 150px;
+}
+
+@media (max-width: 1205px) {
+.snowman {
+	margin: 0;
+}
+.friends {
+	margin: 0;
+}
+.tree-row {
+	height: auto;
+}
+}
+
+@media (max-width: 992px) {
+.tree-row {
+	padding-top: 105px;
+}
+h1.kari {
+	font-size: 60px;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+}
+h2.badaboom {
+	font-size: 28px;
+	line-height: .9em;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -345,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row tree-row">
-    <div class="container">
+    <div class="container no-padding">
       <h1 class="kari text-center"><span>M</span>erry <span>&</span> Brig<span>h</span>t</h1>
       <div class="item-wrapper"><a class="focus-link" href="donate/">
         <div class="item">
@@ -360,7 +391,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h2 class="badaboom">Learning WonderLab</h2>
         </div>
         </a> </div>
-      <div><img class="snowman" src="snowman.png" alt="Snowman"><img class="friends" src="friends.png" alt="Snowman's Friends"></div>
+      <div><img class="snowman hidden-xs hidden-sm" src="snowman.png" alt="Snowman"><img class="friends hidden-xs hidden-sm" src="friends.png" alt="Snowman's Friends"><img class="img-responsive hidden-md hidden-lg" src="snowman-friends.png" alt="Snowman and Friends"></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
