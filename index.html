@@ -90,174 +90,100 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
+<link rel="stylesheet" href="https://use.typekit.net/vik6vis.css">
 <style>
-@font-face {
-	font-family: 'ForeverGrateful';
-	src: url('shared-assets/web-fonts/ForeverGrateful.woff') format('woff2'), url('shared-assets/web-fonts/ForeverGrateful.woff') format('woff');
-}
-@font-face {
-	font-family: 'LittleDinosaurRegular';
-	src: url('shared-assets/web-fonts/LittleDinosaurRegular.woff') format('woff2'), url('shared-assets/web-fonts/LittleDinosaurRegular.woff2') format('woff');
-}
 div#global-alert {
 	position: relative;
 	z-index: 1;
 }
-h1.grateful {
-	font-family: 'ForeverGrateful', sans-serif;
-	font-size: 38px;
-	color: #777;
-	line-height: .9em;
-}
-h1.little {
-	font-family: 'LittleDinosaurRegular', sans-serif;
-	font-size: 75px;
-	color: #000;
-	font-weight: 600;
-	line-height: .9em;
-}
-.callout {
-	background: #fff;
-	display: inline-block;
-	padding: 20px 0 30px;
-}
-.house-row {
-	background: transparent url("houses.png") center bottom repeat-x;
-	height: 175px;
-}
-.btn-default {
-	background-color: #ed217c;
-	margin: 10px 0;
-	border: 3px solid #555;
-	border-radius: 2px;
+h1.kari {
+	font-family: 'kari-display-pro', sans-serif;
 	font-weight: 400;
+	font-style: normal;
+	color: #000;
+	font-size: 95px;
+	line-height: .9em;
+	margin-bottom: 20px;
+	font-feature-settings: 'calt', 'clig', 'kern', 'liga', 'locl', 'rlig';
 }
-.btn-default:active, .btn-default:hover, .btn-default:focus {
-	background-color: #bd1a63;
-	border: 3px solid #555;
-	border-radius: 2px;
+h1.kari span {
+	font-feature-settings: 'swsh';
 }
-.heart-list.list-unstyled {
-	display: inline-flex;
+h2.badaboom {
+	font-family: 'badaboom-pro', sans-serif;
+	color: #000;
+	font-size: 32px;
+	line-height: .9em;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+	word-spacing: -0.2em;
+	letter-spacing: .01em;
 }
-.goal-row {
+.focus-link:hover, .focus-link:focus {
+	text-decoration: none;
+	color: #DDF2F3;
+}
+.focus-link h2:hover, .focus-link h2:focus {
+	text-decoration: none;
+	color: #DDF2F3;
+	transition: all 0.6s ease-out 0s;
+}
+.snowman {
+	margin: 35px 0 0 -40px;
+}
+.friends {
+	margin: -100px 0 0 260px;
+}
+.item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
-	padding: 35px 0 45px;
+	position: relative;
+	z-index: 1;
 }
-.cloud-row {
-	height: 202px;
+.item {
+	background: rgba(81,144,132,.6);
+	border-radius: 50%;
 	text-align: center;
-	background: transparent url("logo-clouds.png") center top repeat-x;
+	width: 270px;
+	padding: 20px 40px 22px;
+	margin: 10px;
 }
-.one.rise-up {
-	animation-delay: .4s;
-	padding: 30px 5px 0 0;
+.item:hover, .item:focus {
+	background: rgba(81,144,132,1);
+	transition: all 0.6s ease-out 0s;
 }
-.two.rise-up {
-	animation-delay: .8s;
-	padding: 3px 0 0 0;
+.tree-row {
+	background: #e1f0f0 url("trees.jpg") center top repeat-x;
+	height: 900px;
+	padding-top: 150px;
 }
-.three.rise-up {
-	animation-delay: 1.2s;
-	padding: 22px 9px 0 0;
+
+@media (max-width: 1205px) {
+.snowman {
+	margin: 0;
 }
-.four.rise-up {
-	animation-delay: 1.6s;
-	padding: 4px 3px 0 0;
+.friends {
+	margin: 0;
 }
-.five.rise-up {
-	animation-delay: 2s;
-	padding: 30px 5px 0 0;
-}
-.six.rise-up {
-	animation-delay: 2.4s;
-	padding: 3px 0 0 0;
-}
-.seven.rise-up {
-	animation-delay: 2.8s;
-	padding: 22px 9px 0 0;
-}
-.eight.rise-up {
-	animation-delay: 3.2s;
-	padding: 4px 3px 0 0;
-}
-.nine.rise-up {
-	animation-delay: 3.6s;
-	padding: 30px 6px 0 0;
-}
-.ten.rise-up {
-	animation-delay: 4s;
-	padding: 0 2px 0 0;
-}
-.rise-up {
-	-webkit-animation: rise-up 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	animation: rise-up 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-}
-@-webkit-keyframes rise-up {
-0% {
--webkit-transform: translateY(1000px);
-transform: translateY(1000px);
-opacity: 0;
-}
-100% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: 1;
-}
-}
-@keyframes rise-up {
-0% {
--webkit-transform: translateY(1000px);
-transform: translateY(1000px);
-opacity: 0;
-}
-100% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: 1;
-}
-}
-.hearts-row {
-	background: transparent url("hearts.png") center center repeat;
-	-webkit-animation: rise 10s linear infinite;
-	animation: rise 10s linear infinite;
-}
-@-webkit-keyframes rise {
-from {
-background-position: 0 200px;
-}
-to {
-background-position: 0 0;
-}
-}
-@keyframes rise {
-from {
-background-position: 0 200px;
-}
-to {
-background-position: 0 0;
+.tree-row {
+	height: auto;
 }
 }
 
-@media (max-width: 935px) {
-.cloud-row {
-	height: 202px;
-	text-align: center;
-	background: none;
+@media (max-width: 992px) {
+.tree-row {
+	padding-top: 105px;
 }
+h1.kari {
+	font-size: 60px;
+	line-height: 1.2em;
+	margin-bottom: 10px;
 }
-
-@media (max-width: 650px) {
-.goal-row {
-	justify-content: center;
-	align-items: center;
-	padding: 105px 0 45px;/*padding: 55px 0 45px;*/
-}
-.callout {
-	padding: 0;
+h2.badaboom {
+	font-size: 28px;
+	line-height: .9em;
 }
 }
 </style>
@@ -448,26 +374,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="hearts-row">
-    <div class="row cloud-row">
-      <div class="callout">
-        <h1 class="little">Today is Colorado Gives Day!</h1>
-        <h4>Please help us meet our goal of $30,000</h4>
-        <a class="btn btn-default btn-lg" href="https://www.coloradogives.org/index.php?section=organizations&amp;action=newDonation&amp;fwID=36788" target="_blank">Give Today!</a></div>
+  <div class="row tree-row">
+    <div class="container no-padding">
+      <h1 class="kari text-center"><span>M</span>erry <span>&</span> Brig<span>h</span>t</h1>
+      <div class="item-wrapper"><a class="focus-link" href="donate/">
+        <div class="item">
+          <h2 class="badaboom">Giving That Gives Back</h2>
+        </div>
+        </a><a class="focus-link" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1039845827">
+        <div class="item">
+          <h2 class="badaboom">Season's Readings</h2>
+        </div>
+        </a><a class="focus-link" href="learning-lab/">
+        <div class="item">
+          <h2 class="badaboom">Learning WonderLab</h2>
+        </div>
+        </a> </div>
+      <div><img class="snowman hidden-xs hidden-sm" src="snowman.png" alt="Snowman"><img class="friends hidden-xs hidden-sm" src="friends.png" alt="Snowman's Friends"><img class="img-responsive hidden-md hidden-lg" src="snowman-friends.png" alt="Snowman and Friends"></div>
     </div>
-    <div class="goal-row">
-      <div class="one rise-up"><img src="one.png" alt="$3,000"></div>
-      <div class="two rise-up"><img  src="two.png" alt="$6,000"></div>
-      <div class="three rise-up"><img src="three.png" alt="$9,000"></div>
-      <div class="four rise-up"><img src="four.png" alt="$12,000"></div>
-      <div class="five rise-up"><img src="five.png" alt="$15,000"></div>
-      <div class="six rise-up"><img  src="six.png" alt="$18,000"></div>
-      <div class="seven rise-up"><img src="seven.png" alt="$21,000"></div>
-      <div class="eight rise-up"><img src="eight.png" alt="$24,000"></div>
-      <div class="nine rise-up"><img src="nine.png" alt="$27,000"></div>
-      <div class="ten rise-up"><img src="ten.png" alt="$30,000"></div>
-    </div>
-    <div class="row house-row"></div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
