@@ -91,10 +91,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <link rel="stylesheet" href="https://use.typekit.net/vik6vis.css">
 <style>
-div#global-alert {
-	position: relative;
-	z-index: 1;
-}
 h1.kari {
 	font-family: 'kari-display-pro', sans-serif;
 	font-weight: 400;
@@ -189,11 +185,11 @@ h2.badaboom {
 <!-- InstanceEndEditable -->
 </head>
 <body>
-<!-- pull alert.txt into the global-alert div --> 
+<!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
   .done(function( data ) {
-    if ( data !=null ){	$("#global-alert").show().append( data );}
+    if ( data !=null ){	$("#general-alert").show().append( data );}
 });
 </script> 
 <!-- Google Tag Manager (noscript) -->
@@ -372,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
-  <div id="global-alert" style="display:none;"></div>
+  <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row tree-row">
     <div class="container no-padding">
