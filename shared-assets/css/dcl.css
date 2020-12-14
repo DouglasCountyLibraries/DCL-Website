@@ -594,17 +594,57 @@ blockquote footer, blockquote small, blockquote .small {
 .alert {
   margin-bottom: 0;
 }
-.footer ul {
+.footer-nav {
+	display: flex;
+	padding: 60px 0 60px;
+	justify-content: space-between;
+}
+.footer-nav ul {
   list-style: outside none none;
   padding: 0;
 }
-.footer a, .footer a:active, .footer a:hover, .social-links-wrapper a, .social-footer a, .social-footer a:active, .social-footer a:hover {
+.footer-nav a, .footer-nav a:active, .footer-nav a:hover, .social-links-wrapper a, .social-footer a, .social-footer a:active, .social-footer a:hover {
   color: #444;
 }
-@media (min-width: 768px) {
-  .text-center.csn {
-    padding-top: 20px;
+.copyright, .copyright a, .copyright a:active, .copyright a:hover {
+  color: #eee;
+}
+.copyright {
+  display: flex;
+  padding: 15px 0 80px;
+}
+.social-footer {
+  display: flex;
+  padding: 15px 0 20px;
+  width: 100%;
+}
+.social-right, .copyright-right {
+  margin-left: auto;
+}
+@media (max-width: 992px) {
+  .copyright {
+    flex-direction: column;
   }
+  .copyright-right {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .social-footer {
+    flex-direction: column;
+  }
+  .social-right {
+    margin-left: 0;
+  }
+    .social-right h4 {
+	margin-top: 0;
+}
+}
+@media (max-width: 525px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+
 }
 /* ====== sub-menus ====== */
 .dropdown-sub-menu {
@@ -1428,33 +1468,33 @@ h6.responsive-text {
 }
 /* ====== alert color classes ====== */
 #perm-alert {
-	background: #e6e4e2;
-	color: #333;
-	font-size: 18px;
-	padding: 12px 10px 13px;
-	text-align: center;
+  background: #e6e4e2;
+  color: #333;
+  font-size: 18px;
+  padding: 12px 10px 13px;
+  text-align: center;
 }
 #perm-alert a {
-    color: #333;
-    text-decoration: underline;
+  color: #333;
+  text-decoration: underline;
 }
 #perm-alert a:hover, #perm-alert a:focus {
-    color: #000;
+  color: #000;
 }
 #secondary-alert {
-	background: #d36a50;
-	color: #fff;
-	font-size: 18px;
-	padding: 12px 10px 13px;
-	font-weight: 400;
-	text-align: center;
+  background: #d36a50;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 10px 13px;
+  font-weight: 400;
+  text-align: center;
 }
 #secondary-alert a {
-    color: #fff;
-    text-decoration: underline;
+  color: #fff;
+  text-decoration: underline;
 }
 #secondary-alert a:hover, #secondary-alert a:focus {
-    color: #eee;
+  color: #eee;
 }
 .alert-warning {
   background-color: #b1462c;
