@@ -100,8 +100,8 @@ h1.ribeye {
 	text-transform: uppercase;
 	font-style: normal;
 	color: #231f20;
-	font-size: 90px;
-	padding-top: 20px;
+	font-size: 100px;
+	padding-top: 50px;
 	margin: 0;
 	line-height: .95em;
 }
@@ -112,24 +112,22 @@ h2.badaboom, h2.badaboom a {
 	line-height: .9em;
 	font-weight: 400;
 	font-style: normal;
-	margin: 0;
-	word-spacing: -0.2em;
-	letter-spacing: .01em;
 }
 .row-wrapper {
 	background: #adbde1;
-	background-image: url("moguls.png") center bottom repeat-x; /* fallback */
-	background: url("moguls.png") center bottom repeat-x, linear-gradient(#adbde1, #bdd8f1);
-	min-height: 850px;
+	background-image: url("moguls-large.png") center bottom no-repeat; /* fallback */
+	background: url("moguls-large.png") center bottom no-repeat, linear-gradient(#adbde1, #bdd8f1);
+	min-height: 700px;
 }
 .item-wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-padding: 15px 0 60px;
+	padding: 15px 0 60px;
 }
 .item {
-	
+	text-align: center;
+	max-width: 275px;
 }
 .item img:hover, .item img:focus {
 	box-shadow: 0px 15px 9px -15px #000;
@@ -137,27 +135,27 @@ padding: 15px 0 60px;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 }
-.leaves-one {
-	min-height: 850px;
-	background: transparent url("leaves-one.png") center center repeat;
+.flakes-one {
+	min-height: 700px;
+	background: transparent url("flakes-one.png") center center repeat;
 	-webkit-animation: fall 8s linear infinite;
 	animation: fall 8s linear infinite;
 }
-.leaves-two {
-	min-height: 850px;
-	background: transparent url("leaves-two.png") center center repeat;
+.flakes-two {
+	min-height: 700px;
+	background: transparent url("flakes-two.png") center center repeat;
 	-webkit-animation: fall 18s linear infinite;
 	animation: fall 18s linear infinite;
 }
-.leaves-three {
-	min-height: 850px;
-	background: transparent url("leaves-three.png") center center repeat;
+.flakes-three {
+	min-height: 700px;
+	background: transparent url("flakes-three.png") center center repeat;
 	-webkit-animation: fall 26s linear infinite;
 	animation: fall 26s linear infinite;
 }
 @-webkit-keyframes fall {
 from {
-background-position: 0 -900px;
+background-position: 0 -700px;
 }
 to {
 background-position: 0 0;
@@ -165,7 +163,7 @@ background-position: 0 0;
 }
 @keyframes fall {
 from {
-background-position: 0 -900px;
+background-position: 0 -700px;
 }
 to {
 background-position: 0 0;
@@ -173,21 +171,15 @@ background-position: 0 0;
 }
 
 @media (min-width: 1475px) {
-
 }
 
 @media (max-width: 992px) {
 h1.ribeye {
-
-	
-
 }
 .item-wrapper {
 	flex-direction: column;
-
 }
 .item {
-	
 }
 }
 </style>
@@ -380,28 +372,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row row-wrapper">
-    <div class="leaves-one">
-      <div class="leaves-two">
-        <div class="leaves-three">
-          <div class="container-md text-center">
-            <h1 class="ribeye">Let&nbsp;it<br>Snow</h1>
+    <div class="flakes-one">
+      <div class="flakes-two">
+        <div class="flakes-three">
+          <div class="text-center">
+            <h1 class="ribeye">Let&nbsp;it<br>
+              Snow</h1>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row"><div class="container">
-    <div class="item-wrapper">
-      <div class="item">
-        <h2 class="badaboom"><a href="#">Top Checkouts of 2020</a></h2>
+  <div class="row">
+    <div class="container">
+      <div class="item-wrapper">
+        <div class="item">
+          <h2 class="badaboom"><a href="#">Top Checkouts of 2020</a></h2>
+        </div>
+        <div class="item">
+          <h2 class="badaboom"><a href="#">Take the DCL Reading Challenge</a></h2>
+        </div>
+        <div class="item">
+          <h2 class="badaboom"><a href="#">Some Other Links Goes Here</a></h2>
+        </div>
       </div>
-      <div class="item">
-        <h2 class="badaboom"><a href="#">Take the DCL Reading Challenge</a></h2>
-      </div>
-      <div class="item">
-        <h2 class="badaboom"><a href="#">Something Else</a></h2>
-      </div>
-      </div></div>
+    </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
