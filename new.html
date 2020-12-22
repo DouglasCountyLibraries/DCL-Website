@@ -115,10 +115,15 @@ h2.badaboom, h2.badaboom a {
 	word-spacing: -0.2em;
 	letter-spacing: .02em;
 }
+h2.badaboom a:hover, h2.badaboom a:focus {
+	color: #771b47;
+	text-decoration: none;
+	text-shadow: 0 3px 6px rgba(0,0,0,.3);
+}
 .row-wrapper {
-	background: #adbde1;
+	background: #a3b2d4;
 	background-image: url("moguls-large.png") center bottom no-repeat; /* fallback */
-	background: url("moguls-large.png") center bottom no-repeat, linear-gradient(#adbde1, #bdd8f1);
+	background: url("moguls-large.png") center bottom no-repeat, linear-gradient(#a3b2d4, #d9ebfa);
 	min-height: 700px;
 }
 .item-wrapper {
@@ -129,7 +134,6 @@ h2.badaboom, h2.badaboom a {
 }
 .item {
 	text-align: center;
-	max-width: 275px;
 }
 .item img:hover, .item img:focus {
 	box-shadow: 0px 15px 9px -15px #000;
@@ -138,10 +142,16 @@ h2.badaboom, h2.badaboom a {
 	transition-duration: 0.4s;
 }
 .snowflake {
-	margin: -264px 0 0 11px;
+	margin: -271px 0 0 11px;
 	text-align: center;
-	-webkit-animation: snowflake-fall 6s cubic-bezier(.89, .68, .95, .8) infinite both;
-	animation: snowflake-fall 6s cubic-bezier(.89, .68, .95, .8) infinite both;
+	-webkit-animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
+	animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
+}
+.snowflake-dog {
+	margin: -271px 0 0 11px;
+	text-align: center;
+	-webkit-animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
+	animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
 }
 .flakes-one {
 	min-height: 700px;
@@ -186,22 +196,32 @@ background-position: 0 0;
 transform: translateY(-420px);
 opacity: 0;
 }
-10% {
+30% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+32% {
 opacity: 1;
 }
-75% {
+80% {
 -webkit-transform: translateY(0) rotate(360deg);
 transform: translateY(0) rotate(360deg);
 opacity: 1;
 }
 90% {
--webkit-transform: rotate(20deg) translateY(0) skewY(0deg);
-transform: rotate(20deg) translateY(0) skewY(0deg);
+-webkit-transform: rotateX(90deg) translateY(0) rotate(360deg);
+transform: rotateX(90deg) translateY(0) rotate(360deg);
 opacity: 1;
 }
+98% {
+-webkit-transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+opacity: 0;
+}
 100% {
--webkit-transform: scale(.4);
-transform: scale(.4);
+-webkit-transform: rotateX(90deg) scale(.4);
+transform: rotateX(90deg) scale(.4);
 opacity: 0;
 }
 }
@@ -211,22 +231,32 @@ opacity: 0;
 transform: translateY(-420px);
 opacity: 0;
 }
-10% {
+30% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+32% {
 opacity: 1;
 }
-75% {
+80% {
 -webkit-transform: translateY(0) rotate(360deg);
 transform: translateY(0) rotate(360deg);
 opacity: 1;
 }
 90% {
--webkit-transform: rotate(20deg) translateY(0) skewY(0deg);
-transform: rotate(20deg) translateY(0) skewY(0deg);
+-webkit-transform: rotateX(90deg) translateY(0) rotate(360deg);
+transform: rotateX(90deg) translateY(0) rotate(360deg);
 opacity: 1;
 }
+98% {
+-webkit-transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+opacity: 0;
+}
 100% {
--webkit-transform: scale(.4);
-transform: scale(.4);
+-webkit-transform: rotateX(90deg) scale(.4);
+transform: rotateX(90deg) scale(.4);
 opacity: 0;
 }
 }
@@ -435,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="flakes-three">
           <div class="text-center">
             <h1 class="ribeye">Let&nbsp;it<br>
-              Snow</h1>
+              Snow!</h1>
           </div>
         </div>
       </div>
@@ -446,20 +476,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container">
       <div class="item-wrapper">
         <div class="item">
-          <h2 class="badaboom"><a href="#">Come Out to<br>
-            Learn</a></h2>
+          <h2 class="badaboom"><a href="learning-lab/"><span class="opacity-8">Come Out to</span><br>
+            <span style="font-size: 40px;">Learn</span></a></h2>
         </div>
         <div class="item">
-          <h2 class="badaboom"><a href="#">Spring <i>B</i><i style="font-size: 34px;">r</i><i style="font-size: 36px;">r</i><i style="font-size: 38px; padding-right: 4px;">r</i>eak<br>
-            Camps</a></h2>
+          <h2 class="badaboom"><a href="camp-dcl/"><span class="opacity-8">Spring <i>B</i><i style="font-size: 34px;">r</i><i style="font-size: 36px;">r</i><i style="font-size: 38px; padding-right: 4px;">r</i>eak</span><br>
+            <span style="font-size: 40px;">Camps</span></a></h2>
         </div>
         <div class="item">
-          <h2 class="badaboom"><a href="#">Happy New Reading<br>
-            Challenge!</a></h2>
+          <h2 class="badaboom"><a href="reading-challenge/"><span class="opacity-8">Happy New Reading</span><br>
+            <span style="font-size: 40px;">Challenge!</span></a></h2>
         </div>
         <div class="item">
-          <h2 class="badaboom"><a href="#">Top Checkouts of<br>
-            2020</a></h2>
+          <h2 class="badaboom"><a href="top-checkouts/"><span class="opacity-8">Top Checkouts of</span><br>
+            <span style="font-size: 40px;">2020</span></a></h2>
         </div>
       </div>
     </div>
