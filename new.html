@@ -137,6 +137,12 @@ h2.badaboom, h2.badaboom a {
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 }
+.snowflake {
+	margin: -270px 0 0 8px;
+	text-align: center;
+	-webkit-animation: snowflake-fall 6s cubic-bezier(.89, .68, .95, .8) infinite both;
+	animation: snowflake-fall 6s cubic-bezier(.89, .68, .95, .8) infinite both;
+}
 .flakes-one {
 	min-height: 700px;
 	background: transparent url("flakes-one.png") center center repeat;
@@ -146,8 +152,8 @@ h2.badaboom, h2.badaboom a {
 .flakes-two {
 	min-height: 700px;
 	background: transparent url("flakes-two.png") center center repeat;
-	-webkit-animation: fall 18s linear infinite;
-	animation: fall 18s linear infinite;
+	-webkit-animation: fall 14s linear infinite;
+	animation: fall 14s linear infinite;
 }
 .flakes-three {
 	min-height: 700px;
@@ -173,6 +179,56 @@ background-position: 0 0;
 }
 
 @media (min-width: 1475px) {
+}
+@-webkit-keyframes snowflake-fall {
+0% {
+-webkit-transform: rotateY(80deg) translateY(-420px) skewY(-30deg);
+transform: rotateY(80deg) translateY(-420px) skewY(-30deg);
+opacity: 0;
+}
+1% {
+opacity: 1;
+}
+70% {
+-webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+transform: rotateY(0deg) translateY(0) skewY(0deg);
+opacity: 1;
+}
+95% {
+-webkit-transform: rotate(20deg) translateY(0) skewY(0deg);
+transform: rotate(20deg) translateY(0) skewY(0deg);
+opacity: 1;
+}
+100% {
+-webkit-transform: rotateX(80deg) skewX(30deg) scale(.1);
+transform: rotateX(80deg) skewX(30deg) scale(.1);
+opacity: 0;
+}
+}
+@keyframes snowflake-fall {
+0% {
+-webkit-transform: rotateY(80deg) translateY(-420px) skewY(-30deg);
+transform: rotateY(80deg) translateY(-420px) skewY(-30deg);
+opacity: 0;
+}
+1% {
+opacity: 1;
+}
+70% {
+-webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+transform: rotateY(0deg) translateY(0) skewY(0deg);
+opacity: 1;
+}
+95% {
+-webkit-transform: rotate(20deg) translateY(0) skewY(0deg);
+transform: rotate(20deg) translateY(0) skewY(0deg);
+opacity: 1;
+}
+100% {
+-webkit-transform: rotateX(80deg) skewX(30deg) scale(.1);
+transform: rotateX(80deg) skewX(30deg) scale(.1);
+opacity: 0;
+}
 }
 
 @media (max-width: 992px) {
@@ -384,6 +440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
+    <div class="snowflake"><img src="snowflake.png" alt="Snowflake"></div>
   </div>
   <div class="row">
     <div class="container">
