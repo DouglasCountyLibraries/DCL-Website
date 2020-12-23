@@ -148,8 +148,14 @@ h2.badaboom:hover, h2.badaboom:focus {
 .snowflake {
 	margin: -271px 0 0 11px;
 	text-align: center;
-	-webkit-animation: snowflake-fall 5s cubic-bezier(.89, .68, .95, .8) 5 both;
-	animation: snowflake-fall 5s cubic-bezier(.89, .68, .95, .8) 5 both;
+	-webkit-animation: snowflake-fall 5s cubic-bezier(.89, .68, .95, .8) 3 both;
+	animation: snowflake-fall 5s cubic-bezier(.89, .68, .95, .8) 3 both;
+}
+.snowflake-boom {
+	margin: 42px 0 0 -424px;
+	text-align: center;
+	-webkit-animation: boom .2s cubic-bezier(.89, .68, .95, .8) 20s 1 both;
+	animation: boom .2s cubic-bezier(.89, .68, .95, .8) 20s 1 both;
 }
 .flakes-one {
 	min-height: 700px;
@@ -253,6 +259,46 @@ opacity: 0;
 -webkit-transform: rotateX(90deg) scale(.4);
 transform: rotateX(90deg) scale(.4);
 opacity: 0;
+}
+}
+@-webkit-keyframes boom {
+0% {
+-webkit-transform: translateY(-620px);
+transform: translateY(-620px);
+opacity: 0;
+}
+30% {
+-webkit-transform: translateY(-620px);
+transform: translateY(-620px);
+opacity: 0;
+}
+32% {
+opacity: 1;
+}
+100% {
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
+}
+}
+@keyframes boom {
+0% {
+-webkit-transform: translateY(-620px);
+transform: translateY(-620px);
+opacity: 0;
+}
+30% {
+-webkit-transform: translateY(-620px);
+transform: translateY(-620px);
+opacity: 0;
+}
+32% {
+opacity: 1;
+}
+100% {
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
 }
 }
 
@@ -471,6 +517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
     <div class="snowflake"><img src="snowflake.png" alt="Snowflake"></div>
+    <div class="snowflake-boom"><img src="snowflake-boom.png" alt="Snowflake Boom"></div>
   </div>
   <div class="row">
     <div class="container">
