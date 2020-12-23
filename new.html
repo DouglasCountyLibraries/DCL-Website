@@ -118,7 +118,11 @@ h2.badaboom, h2.badaboom a {
 h2.badaboom a:hover, h2.badaboom a:focus {
 	color: #771b47;
 	text-decoration: none;
-	text-shadow: 0 3px 6px rgba(0,0,0,.3);
+}
+h2.badaboom:hover, h2.badaboom:focus {
+	transform: scale(1.05);
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
 .row-wrapper {
 	background: #a3b2d4;
@@ -144,14 +148,8 @@ h2.badaboom a:hover, h2.badaboom a:focus {
 .snowflake {
 	margin: -271px 0 0 11px;
 	text-align: center;
-	-webkit-animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
-	animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
-}
-.snowflake-dog {
-	margin: -271px 0 0 11px;
-	text-align: center;
-	-webkit-animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
-	animation: snowflake-fall 10s cubic-bezier(.89, .68, .95, .8) infinite both;
+	-webkit-animation: snowflake-fall 5s cubic-bezier(.89, .68, .95, .8) 5 both;
+	animation: snowflake-fall 5s cubic-bezier(.89, .68, .95, .8) 5 both;
 }
 .flakes-one {
 	min-height: 700px;
@@ -186,9 +184,6 @@ background-position: 0 -700px;
 to {
 background-position: 0 0;
 }
-}
-
-@media (min-width: 1475px) {
 }
 @-webkit-keyframes snowflake-fall {
 0% {
@@ -262,12 +257,17 @@ opacity: 0;
 }
 
 @media (max-width: 992px) {
-h1.ribeye {
-}
 .item-wrapper {
 	flex-direction: column;
 }
-.item {
+}
+
+@media (max-width: 525px) {
+.row-wrapper {
+	background: #a3b2d4;
+	background-image: url("moguls-small.png") center bottom no-repeat; /* fallback */
+	background: url("moguls-small.png") center bottom no-repeat, linear-gradient(#a3b2d4, #d9ebfa);
+	min-height: 700px;
 }
 }
 </style>
