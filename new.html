@@ -152,10 +152,36 @@ h2.badaboom:hover, h2.badaboom:focus {
 	animation: snowflake-fall 5s cubic-bezier(.89, .68, .95, .8) 3 both;
 }
 .snowflake-boom {
+	position: relative;
 	margin: 42px 0 0 -424px;
 	text-align: center;
-	-webkit-animation: boom .1s cubic-bezier(.89, .68, .95, .8) 20s 1 both;
-	animation: boom .1s cubic-bezier(.89, .68, .95, .8) 20s 1 both;
+	-webkit-animation: boom .08s cubic-bezier(.89, .68, .95, .8) 18s 1 both;
+	animation: boom .08s cubic-bezier(.89, .68, .95, .8) 18s 1 both;
+}
+.dog {
+	position: absolute;
+	margin-left: 38px;
+	margin-top: -80px;
+}
+.dog {
+	-webkit-animation: dogfade 0s 18.5s 1 both;
+	animation: dogfade 0s 18.5s 1 both;
+}
+@keyframes dogfade {
+0% {
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+@-webkit-keyframes dogfade {
+0% {
+opacity:0;
+}
+100% {
+opacity:1;
+}
 }
 .flakes-one {
 	min-height: 700px;
@@ -263,13 +289,13 @@ opacity: 0;
 }
 @-webkit-keyframes boom {
 0% {
--webkit-transform: translateY(-620px);
-transform: translateY(-620px);
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
 opacity: 0;
 }
 30% {
--webkit-transform: translateY(-620px);
-transform: translateY(-620px);
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
 opacity: 0;
 }
 32% {
@@ -283,13 +309,13 @@ opacity: 1;
 }
 @keyframes boom {
 0% {
--webkit-transform: translateY(-620px);
-transform: translateY(-620px);
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
 opacity: 0;
 }
 30% {
--webkit-transform: translateY(-620px);
-transform: translateY(-620px);
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
 opacity: 0;
 }
 32% {
@@ -520,7 +546,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
     <div class="snowflake"><img src="snowflake.png" alt="Snowflake"></div>
-    <div class="snowflake-boom"><img src="snowflake-boom.png" alt="Snowflake Boom"></div>
+    <div class="snowflake-boom"><img class="dog" src="dog.png" alt="Dog"><img src="snowflake-boom.png" alt="Snowflake Boom"></div>
   </div>
   <div class="row">
     <div class="container">
