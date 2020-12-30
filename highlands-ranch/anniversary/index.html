@@ -93,10 +93,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background-color: #f5f5f5;
 }
 .flickity-page-dots .dot {
-	background-color: #fff;
+	background-color: #000;
 }
 .flickity-page-dots {
-	bottom: -30px;
+	bottom: -70px;
 	opacity: .5;
 }
 .flickity-prev-next-button {
@@ -105,26 +105,24 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .carousel-cell {
 	border-right: 1px solid rgba(255,255,255,.6);
 }
-.concierge .fa-check {
-	color: #13BBB2;
-}
+
 .fa.fa-star.fa-spin {
 	color: #d36a50;
 }
-.fa-ul > li {
-	position: inherit;
-	padding: 3px 0;
+
+.carousel {
+	background: #fff;
 }
-.fa-ul {
-	margin-left: 0;
+
+.caption {
+	background: #fff;
+	margin: 0;
+	padding: 10px 0 50px 0;
+	text-align: center;
+	font-size: 22px;
+	color: #333;
 }
-.fa-li {
-	left: 0;
-	position: inherit;
-	text-align: left;
-	top: 0;
-	width: 30px;
-}
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -316,23 +314,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top padding-bottom-30">
     <div class="container text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Happy Anniversary,</h1>
-        <h1 class="text-uppercase font-weight-400 no-margin-top">Highlands Ranch!</h1>
+      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Happy Anniversary,</h1>
+      <h1 class="text-uppercase font-weight-400 no-margin-top">Highlands Ranch!</h1>
       <div class="separator-container">
         <div class="separator line-separator"><i class="fa fa-star fa-spin"></i></div>
       </div>
       <div class="large-text margin-top-10">2021 marks the 40th anniversary of modern-day Highlands Ranch—but the history of this community dates back more than 100 years, to when it was first settled. In celebration of this anniversary year, enjoy a stroll back through time with some fun historical facts, articles, and photos curated by DCL’s own Archives & Local History department.</div>
     </div>
   </div>
-  <div style="padding-bottom:45px;" class="row bg-lavender padding-top-40">
+  <div style="padding-top-30 padding-bottom-30" class="row padding-top-40">
     <div class="container-lg no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
+      <div class="carousel" data-flickity='{ "wrapAround": true }'>
         <div class="carousel-cell"><img src="images/samuel-allen-long.jpg" alt="Samuel Allen Long"></div>
         <div class="carousel-cell"><img src="images/flyn-b-ranch.jpg" alt="Fly'n B Ranch"></div>
         <div class="carousel-cell"><img src="images/hr-mansion.jpg" alt="Highlands Ranch Mansion"></div>
         <div class="carousel-cell"><img src="images/scotts-steer.jpg" alt="The Scott Family"></div>
         <div class="carousel-cell"><img src="images/johann-welte.jpg" alt="Johann Welte"></div>
       </div>
+      <p class="caption">&nbsp;</p>
     </div>
   </div>
   <div class="row padding-bottom-40 padding-top-40">
@@ -407,6 +406,25 @@ for (var i = 0; i < cards.length; i++) {
   cards.eq(target1).before(cards.eq(target2));
 }
  </script> 
+<script>
+    // external js: flickity.pkgd.js
+
+var $carousel = $('.carousel').flickity({
+  cellSelector: 'img',
+  imagesLoaded: true,
+  percentPosition: false,
+    autoPlay: 4000
+});
+var $caption = $('.caption');
+// Flickity instance
+var flkty = $carousel.data('flickity');
+
+$carousel.on( 'select.flickity', function() {
+  // set image caption using img's alt
+  $caption.text( flkty.selectedElement.alt )
+});
+
+    </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
