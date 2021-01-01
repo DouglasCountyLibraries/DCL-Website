@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,95 +91,255 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <link rel="stylesheet" href="https://use.typekit.net/vik6vis.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
 <style>
-h1.kari {
-	font-family: 'kari-display-pro', sans-serif;
-	font-weight: 400;
+h1.ribeye {
+	font-family: 'Ribeye', cursive;
+	text-transform: uppercase;
 	font-style: normal;
-	color: #000;
-	font-size: 95px;
-	line-height: .9em;
-	margin-bottom: 20px;
-	font-feature-settings: 'calt', 'clig', 'kern', 'liga', 'locl', 'rlig';
-}
-h1.kari span {
-	font-feature-settings: 'swsh';
-}
-h2.badaboom {
-	font-family: 'badaboom-pro', sans-serif;
-	color: #000;
-	font-size: 32px;
-	line-height: .9em;
-	font-weight: 400;
-	font-style: normal;
+	color: #231f20;
+	font-size: 100px;
+	padding-top: 50px;
 	margin: 0;
+	line-height: .95em;
+}
+h2.badaboom, h2.badaboom a {
+	font-family: 'badaboom-pro', sans-serif;
+	color: #231f20;
+	font-size: 32px;
+	line-height: 1em;
+	font-weight: 400;
+	font-style: normal;
 	word-spacing: -0.2em;
-	letter-spacing: .01em;
+	letter-spacing: .02em;
 }
-.focus-link:hover, .focus-link:focus {
+h2.badaboom a:hover, h2.badaboom a:focus {
+	color: #771b47;
 	text-decoration: none;
-	color: #DDF2F3;
 }
-.focus-link h2:hover, .focus-link h2:focus {
-	text-decoration: none;
-	color: #DDF2F3;
-	transition: all 0.6s ease-out 0s;
+h2.badaboom:hover, h2.badaboom:focus {
+	transform: scale(1.05);
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
-.snowman {
-	margin: 35px 0 0 -40px;
-}
-.friends {
-	margin: -100px 0 0 260px;
+.row-wrapper {
+	background: #a3b2d4;
+	background-image: url("moguls-large.png") center bottom no-repeat; /* fallback */
+	background: url("moguls-large.png") center bottom no-repeat, linear-gradient(#a3b2d4, #d9ebfa);
+	min-height: 700px;
 }
 .item-wrapper {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	position: relative;
-	z-index: 1;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 0 60px;
 }
 .item {
-	background: rgba(81,144,132,.6);
-	border-radius: 50%;
 	text-align: center;
-	width: 270px;
-	padding: 20px 40px 22px;
-	margin: 10px;
 }
-.item:hover, .item:focus {
-	background: rgba(81,144,132,1);
-	transition: all 0.6s ease-out 0s;
+.item img:hover, .item img:focus {
+	box-shadow: 0px 15px 9px -15px #000;
+	transform: scale(1.02);
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
-.tree-row {
-	background: #e1f0f0 url("trees.jpg") center top repeat-x;
-	height: 900px;
-	padding-top: 150px;
+.snowflake {
+	margin: -271px 0 0 11px;
+	text-align: center;
+	-webkit-animation: snowflake-fall 4.2s cubic-bezier(.89, .68, .95, .8) 3 both;
+	animation: snowflake-fall 4.2s cubic-bezier(.89, .68, .95, .8) 3 both;
 }
-
-@media (max-width: 1205px) {
-.snowman {
-	margin: 0;
+.snowflake-boom {
+	position: relative;
+	margin: 42px 0 0 -424px;
+	text-align: center;
+	-webkit-animation: boom .07s cubic-bezier(.89, .68, .95, .8) 15.5s 1 both;
+	animation: boom .07s cubic-bezier(.89, .68, .95, .8) 15.5s 1 both;
 }
-.friends {
-	margin: 0;
+.dog {
+	position: absolute;
+	margin-left: 38px;
+	margin-top: -80px;
+	-webkit-animation: dogfade 0s 16s 1 both;
+	animation: dogfade 0s 16s 1 both;
 }
-.tree-row {
-	height: auto;
+@keyframes dogfade {
+0% {
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+@-webkit-keyframes dogfade {
+0% {
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+.flakes-one {
+	min-height: 700px;
+	background: transparent url("flakes-one.png") center center repeat;
+	-webkit-animation: fall 8s linear infinite;
+	animation: fall 8s linear infinite;
+}
+.flakes-two {
+	min-height: 700px;
+	background: transparent url("flakes-two.png") center center repeat;
+	-webkit-animation: fall 14s linear infinite;
+	animation: fall 14s linear infinite;
+}
+.flakes-three {
+	min-height: 700px;
+	background: transparent url("flakes-three.png") center center repeat;
+	-webkit-animation: fall 26s linear infinite;
+	animation: fall 26s linear infinite;
+}
+@-webkit-keyframes fall {
+from {
+background-position: 0 -700px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes fall {
+from {
+background-position: 0 -700px;
+}
+to {
+background-position: 0 0;
+}
+}
+@-webkit-keyframes snowflake-fall {
+0% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+30% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+32% {
+opacity: 1;
+}
+80% {
+-webkit-transform: translateY(0) rotate(360deg);
+transform: translateY(0) rotate(360deg);
+opacity: 1;
+}
+90% {
+-webkit-transform: rotateX(90deg) translateY(0) rotate(360deg);
+transform: rotateX(90deg) translateY(0) rotate(360deg);
+opacity: 0;
+}
+98% {
+-webkit-transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+opacity: 0;
+}
+100% {
+-webkit-transform: rotateX(90deg) scale(.4);
+transform: rotateX(90deg) scale(.4);
+opacity: 0;
+}
+}
+@keyframes snowflake-fall {
+0% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+30% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+32% {
+opacity: 1;
+}
+80% {
+-webkit-transform: translateY(0) rotate(360deg);
+transform: translateY(0) rotate(360deg);
+opacity: 1;
+}
+90% {
+-webkit-transform: rotateX(90deg) translateY(0) rotate(360deg);
+transform: rotateX(90deg) translateY(0) rotate(360deg);
+opacity: 0;
+}
+98% {
+-webkit-transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+transform: rotateX(90deg) translateY(0) skewY(0deg) scale(.4);
+opacity: 0;
+}
+100% {
+-webkit-transform: rotateX(90deg) scale(.4);
+transform: rotateX(90deg) scale(.4);
+opacity: 0;
+}
+}
+@-webkit-keyframes boom {
+0% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+30% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+32% {
+opacity: 1;
+}
+100% {
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
+}
+}
+@keyframes boom {
+0% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+30% {
+-webkit-transform: translateY(-420px);
+transform: translateY(-420px);
+opacity: 0;
+}
+32% {
+opacity: 1;
+}
+100% {
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
 }
 }
 
 @media (max-width: 992px) {
-.tree-row {
-	padding-top: 105px;
+.item-wrapper {
+	flex-direction: column;
 }
-h1.kari {
-	font-size: 60px;
-	line-height: 1.2em;
-	margin-bottom: 10px;
 }
-h2.badaboom {
-	font-size: 28px;
-	line-height: .9em;
+
+@media (max-width: 525px) {
+.row-wrapper {
+	background: #a3b2d4;
+	background-image: url("moguls-small.png") center bottom no-repeat; /* fallback */
+	background: url("moguls-small.png") center bottom no-repeat, linear-gradient(#a3b2d4, #d9ebfa);
+	min-height: 700px;
+}
+.snowflake-boom {
+	display: none;
 }
 }
 </style>
@@ -370,23 +531,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row tree-row">
-    <div class="container no-padding">
-      <h1 class="kari text-center"><span>M</span>erry <span>&</span> Brig<span>h</span>t</h1>
-      <div class="item-wrapper"><a class="focus-link" href="donate/">
-        <div class="item">
-          <h2 class="badaboom">Giving That Gives Back</h2>
+  <div class="row row-wrapper">
+    <div class="flakes-one">
+      <div class="flakes-two">
+        <div class="flakes-three">
+          <div class="text-center">
+            <h1 class="ribeye">Let&nbsp;it<br>
+              Snow!</h1>
+          </div>
         </div>
-        </a><a class="focus-link" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1039845827">
+      </div>
+    </div>
+    <div class="snowflake"><img src="snowflake.png" alt="Snowflake"></div>
+    <div class="snowflake-boom"><img class="dog" src="dog.png" alt="Dog"><img src="snowflake-boom.png" alt="Snowflake Boom"></div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <div class="item-wrapper">
         <div class="item">
-          <h2 class="badaboom">Season's Readings</h2>
+          <h2 class="badaboom"><a href="top-checkouts/"><span class="opacity-8">Top Checkouts of</span><br>
+            <span style="font-size: 40px;">2020</span></a></h2>
         </div>
-        </a><a class="focus-link" href="learning-lab/">
         <div class="item">
-          <h2 class="badaboom">Learning WonderLab</h2>
+          <h2 class="badaboom"><a href="reading-challenge/"><span class="opacity-8">Happy New Reading</span><br>
+            <span style="font-size: 40px;">Challenge!</span></a></h2>
         </div>
-        </a> </div>
-      <div><img class="snowman hidden-xs hidden-sm" src="snowman.png" alt="Snowman"><img class="friends hidden-xs hidden-sm" src="friends.png" alt="Snowman's Friends"><img class="img-responsive hidden-md hidden-lg" src="snowman-friends.png" alt="Snowman and Friends"></div>
+        <div class="item">
+          <h2 class="badaboom"><a href="learning-lab/"><span class="opacity-8">Come Out to</span><br>
+            <span style="font-size: 40px;">Learn</span></a></h2>
+        </div>
+        <div class="item">
+          <h2 class="badaboom"><a href="camp-dcl/"><span class="opacity-8">Spring <i>B</i><i style="font-size: 34px;">r</i><i style="font-size: 36px;">r</i><i style="font-size: 38px; padding-right: 4px;">r</i>eak</span><br>
+            <span style="font-size: 40px;">Camps</span></a></h2>
+        </div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -487,4 +665,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
