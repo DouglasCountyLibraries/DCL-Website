@@ -105,34 +105,88 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     }]);
   </script> 
 <!-- Push Notifications End - Do Not Remove -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/bvq6jlu.css">
 <style>
-.santa-row {
-	background: #fff url("santa-trees.jpg") bottom center repeat-x;
-	text-align: center;
-	padding: 50px 0 15px 0;
+@font-face {
+	font-family: 'Sundowners';
+	src: url('webFonts/Sundowners/font.woff2') format('woff2'), url('webFonts/Sundowners/font.woff') format('woff');
 }
-.santa-row h1, .santa-row h2 {
-	font-family: 'Zilla Slab', serif;
-	color: #ba2d25;
+h1.sundowners {
+	font-family: 'Sundowners', sans-serif;
+	font-size: 130px;
+	color: #fff;
+	line-height: 120px;
+	letter-spacing: 1px;
+	-webkit-text-stroke: 4px #ACAEAF;
+	-webkit-text-fill-color: #fff;
+	font-feature-settings: "liga1" on;
 	margin: 0;
+	word-spacing: -.1em;
+}
+h2.sundowners {
+	font-family: 'Sundowners', sans-serif;
+	font-size: 85px;
+	color: #fff;
+	line-height: 75px;
+	-webkit-text-stroke: 3px #ACAEAF;
+	-webkit-text-fill-color: #fff;
+	font-feature-settings: "liga" 1;
+	font-feature-settings: "liga1" on;
+	margin: 0;
+}
+h1.restore {
+	font-family: restore, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	font-size: 68px;
+	color: #ACAEAF;
+	background-color: #ACAEAF;
+	background-image: linear-gradient(#ACAEAF, #fff);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	/* line-height: 60px; */
+	/* letter-spacing: .01em; */
 	text-transform: uppercase;
-	line-height: .8em;
+	margin: 0;
 }
-.santa-row h1 {
-	font-size: 200px;
-	font-weight: 600;
+h2.games {
+	font-size: 32px;
+	color: rgba(255,255,255,.7);
+	/* letter-spacing: .02em; */
+	text-transform: uppercase;
+	margin: 0px;
+	font-weight: 500;
 }
-.santa-row h2 {
-	font-size: 55px;
+h3.games {
+	font-size: 24px;
+	color: rgba(255,255,255,.6);
+	line-height: inherit;
+	letter-spacing: .02em;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-top: 5px;
 }
-.santa-friends {
-	margin: -50px auto 0 auto;
+.quiz-show-row {
+	background: #300281;
+	background: -webkit-radial-gradient(bottom, #300281, #000000);
+	background: -moz-radial-gradient(bottom, #300281, #000000);
+	background: radial-gradient(to top, #300281, #000000);
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+.quiz {
+	transform: rotate(-2deg);
+	-webkit-backface-visibility: hidden;
+}
+.quiz-details {
+	padding-top: 15px;
 }
 .btn.btn-primary.btn-custom.btn-lg {
-	background: #921615;
-	color: #fff;
+	background: #fff;
+	color: #300281;
 	font-weight: 600;
 	text-transform: uppercase;
 	-webkit-box-shadow: 0px 1px 15px 0px #000;
@@ -140,8 +194,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	box-shadow: 0px 1px 15px 0px #000;
 }
 .btn.btn-primary.btn-custom.btn-lg:hover, .btn.btn-primary.btn-custom.btn-lg:focus {
-	background: #fff;
-	color: #921615;
+	background: linear-gradient(#fff, #ACAEAF);
+	color: #000;
 	-webkit-box-shadow: 0px 10px 25px 0px #000;
 	-moz-box-shadow: 0px 10px 25px 0px #000;
 	box-shadow: 0px 10px 25px 0px #000;
@@ -210,18 +264,6 @@ h2.sundowners {
 @media (min-width: 600px) {
 .author-item {
 	max-width: 600px;
-}
-}
-
-@media (max-width: 768px) {
-.santa-row h1 {
-	font-size: 100px;
-}
-.santa-row h2 {
-	font-size: 35px;
-}
-.santa-friends {
-	margin: 0 auto;
 }
 }
 
@@ -421,31 +463,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container">
-      <div class="text-center padding-bottom-15">
+      <div class="text-center padding-bottom-30">
         <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Authors & Events</h1>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fas fa-bookmark"></i></div>
         </div>
-        <h4 class="roboto text-center">New events coming soon!</h4>
       </div>
     </div>
   </div>
   <div class="row no-gutter sub-nav-row">
     <div class="sub-nav">
-      <div class="col-sm-4 sub-nav-item sub-nav-border-first equal-height">
+      <div class="col-sm-3 sub-nav-item sub-nav-border-first equal-height">
         <h5 class="no-margin text-uppercase"><a class="show" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank"><i class="fas fa-calendar"></i>Events Calendar</a></h5>
       </div>
-      <div class="col-sm-4 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="#author-events"><i class="fas fa-star"></i>Author Events</a></h5>
+      <div class="col-sm-3 sub-nav-item sub-nav-border equal-height">
+        <h5 class="no-margin text-uppercase"><a class="show" href="#featured-events"><i class="fas fa-star"></i>Featured Events</a></h5>
       </div>
-      <div class="col-sm-4 sub-nav-item sub-nav-border equal-height">
+      <div class="col-sm-3 sub-nav-item sub-nav-border equal-height">
+        <h5 class="no-margin text-uppercase"><a class="show" href="#author-events"><i class="fas fa-glass-martini-alt"></i>Author Events</a></h5>
+      </div>
+      <div class="col-sm-3 sub-nav-item sub-nav-border equal-height">
         <h5 class="no-margin text-uppercase"><a class="show" href="../past-authors/"><i class="fas fa-history"></i>Past Authors</a></h5>
       </div>
     </div>
   </div>
-  <div id="" class="row">
-    <div class="container text-center padding-top-60 padding-bottom-30 margin-lg-200"><img class="img-responsive" src="author-event.jpg" alt="Author Event">
-      <h4 class="roboto margin-top-30"><a href="../newsletters/">Become a DCL insider</a> and be the first to access ticket sales for our events! You'll also get the inside scoop on great reads and upcoming events.</h4>
+  <div class="row quiz-show-row">
+    <div class="container text-center">
+      <div class="quiz">
+        <h2 class="sundowners">Quarantine(ish)</h2>
+        <h1 class="sundowners">Quiz Show</h1>
+      </div>
+      <div class="quiz-details">
+        <h1 class="restore">Star Wars Edition</h1>
+        <h2 class="games">Original Trilogy, Episodes&nbsp;IV,&nbsp;V&nbsp;&&nbsp;VI</h2>
+        <h3 class="games">Friday, February 5, 7PM</h3>
+        <div class="text-center"> <a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=179790" target="_blank" class="btn btn-primary btn-custom btn-lg margin-top-15">Register Now</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured-events" class="row">
+    <div class="container">
+      <div class="text-center padding-top-15 padding-bottom-15">
+        <h1 class="jumbo-text text-uppercase font-weight-400">Featured Events</h1>
+        <h4 class="roboto margin-lg-200 text-center">Don't miss these special library events!</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-bottom-15">
+    <div class="container-md">
+      <div class="event-wrapper">
+        <div class="event-item"> <img class="img-responsive center-block" src="book-lovers.jpg" alt="Book Lovers">
+          <div class="text-center padding-top-15">Enjoy an evening of book talks with special guests from Penguin Random House, and find your next great read! <span class="text-uppercase">Adults.</span><br>
+            Virtual Event, Wednesday, February 17, 7:30PM.
+            <div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=170688" target="_blank" class="btn btn-primary text-uppercase margin-15">Register Now</a></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div id="author-events" class="row bg-gray-5 padding-bottom-30">
