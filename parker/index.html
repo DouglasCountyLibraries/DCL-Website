@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -170,6 +171,32 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .art-item {
 	flex-basis: 60%;
+}
+.sale-wrapper {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.sale {
+	flex: 1;
+	padding: 0 15px;
+}
+.sale.one {
+	max-width: 340px;
+}
+.sale.two {
+	max-width: 530px;
+}
+
+@media (max-width: 992px) {
+.sale-wrapper {
+	flex-direction: column;
+	text-align: center;
+}
+.sale.two {
+	padding-top: 15px;
+}
 }
 
 @media (max-width: 992px) {
@@ -446,6 +473,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <div id="book-sale-events" class="row padding-top-15 padding-bottom-40">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="text-uppercase text-center font-weight-400">Upcoming Events</h1>
+      </div>
+      <div class="sale-wrapper">
+        <div class="sale one"> <img alt="Used Book Sales" src="second-chapter-sale-small.png"> </div>
+        <div class="sale two">
+          <h2 class="roboto no-margin">Parker Book Sale</h2>
+          <h5 class="no-margin">January 11-24</h5>
+          <div class="large-text">Trade and mass-market paperbacks: Buy one, get one free.</div>
+          <div>While supplies last.</div>
+          <div class=""> 
+            <!--<h4 class="roboto">In addition to ongoing sales in our stores, we host special sale events several times each year.</h4>-->
+            <div class="margin-top-15">Be sure to <a href="../newsletters/">sign up for our monthly newsletter</a> to be notified of special sales. For <a href="../foundation/#donate-materials">information about donating</a> or purchasing used books, call us at <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="events" class="row location-events bg-lavender">
     <div class="container-md no-padding">
       <h1 class="white text-uppercase text-center font-weight-400">Featured Branch Events</h1>
@@ -595,4 +642,5 @@ $("#eventsinfo .item").click(function(){
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
