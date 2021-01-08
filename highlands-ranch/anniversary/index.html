@@ -91,35 +91,44 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
-.item {
-	padding: 10px 0 0;
+    .link-fix {
+        position: relative;
+        z-index: 100;
+    }
+    .flickity-enabled.is-draggable .flickity-viewport {
+	cursor: auto;
 }
 .flickity-page-dots .dot {
 	background-color: #000;
 }
 .flickity-page-dots {
-	bottom: -70px;
+	bottom: -25px;
 	opacity: .5;
 }
 .flickity-prev-next-button {
 	display: none;
 }
-.carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
-}
 .fa.fa-star.fa-spin {
 	color: #d36a50;
 }
-.carousel {
-	background: #fff;
+.carousel-cell {
+	text-align: center;
+	width: 100%;
+}
+.carousel-cell:before {
+	display: block;
+	text-align: center;
 }
 .caption {
 	background: #fff;
 	margin: 0;
-	padding: 10px 0 50px 0;
+	padding: 30px 0 0px 0;
 	text-align: center;
-	font-size: 22px;
+	font-size: 18px;
 	color: #333;
+}
+.flickity-viewport {
+	transition: height 0.6s;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -311,7 +320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
-    <div class="container text-center">
+    <div class="container text-center padding-bottom-30">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Happy Anniversary,</h1>
       <h1 class="text-uppercase font-weight-400 no-margin-top">Highlands Ranch!</h1>
       <div class="separator-container">
@@ -320,32 +329,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="large-text margin-top-10">2021 marks the 40th anniversary of modern-day Highlands Ranch—but the history of this community dates back more than 100 years, to when it was first settled. In celebration of this anniversary year, enjoy a stroll back through time with some fun historical facts, articles, and photos curated by DCL’s own <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a> department.</div>
     </div>
   </div>
-  <div class="row">
-    <div class="container item-wrapper">
-      <h2 class="text-uppercase text-center font-weight-400">Fun Facts</h2>
-      <div class="item">What’s in a name? Employees of Kathi Brock’s advertising agency pulled an all-nighter with beer and pizza in order to name all of the communities and streets in the first phase of Highlands Ranch by a deadline of the following morning. </div>
-      <div class="item">The Scott family became the first residents of Highlands Ranch when they moved into the Groves in October 1981. The Mission Viejo Company gave the Scotts a 650-pound steer as a move-in gift. </div>
-      <div class="item">Cheers to Austrian immigrant Johann “John” Welte, who operated the Cheese Ranch from 1878 to 1910 producing Limburger and American cheeses as well as butter. His dry farming techniques were published in scientific journals of the day, and his ranch was also known as a beer hall. </div>
-      <div class="item">Following Prohibition, local gambling entrepreneur Ova Elijah “Smiling Charlie” Stephens purchased the Fly’n B Ranch from the Plews family, known today as Fly’n B Park. After serving time for attempted murder in the ‘40s, Smiling Charlie returned to the ranch and used it as a temporary location for illicit gambling operations until losing big in 1946. </div>
+  <div class="row bg-gray-5">
+    <div class="container margin-lg-200 margin-md-100 text-center padding-top-30 padding-bottom-60">
+      <h2 class="text-uppercase no-margin-top font-weight-400">Fun Facts</h2>
+      <div class="carousel" data-flickity='{ "fade": true, "imagesLoaded": true, "adaptiveHeight": true, "autoPlay": 7000 }'>
+        <div class="carousel-cell mix">
+          <div><a class="link-fix" href="https://archives.dcl.org/digital/collection/doh/id/1003/rec/1" target="_blank"><img alt="Highlands Ranch" src="facts/highlands-ranch.jpg" /></a>
+            <div class="padding-top-15">What’s in a name? Employees of Kathi Brock’s advertising agency <a class="link-fix" href="https://archives.dcl.org/digital/collection/doh/id/1003/rec/1" target="_blank">pulled an all-nighter</a> with beer and pizza in order to name all of the communities and streets in the first phase of Highlands Ranch by a deadline of the following morning. </div>
+          </div>
+        </div>
+        <div class="carousel-cell mix">
+          <div><a class="link-fix" href="https://archives.dcl.org/digital/collection/doh/id/1003/rec/1" target="_blank"><img alt="Scott Family with Steer" src="facts/scotts-steer.jpg" /></a>
+            <div class="padding-top-15">The Scott family became the first residents of Highlands Ranch when they moved into the Groves in October 1981. The Mission Viejo Company gave the Scotts a 650-pound steer as a move-in gift. </div>
+          </div>
+        </div>
+        <div class="carousel-cell mix">
+          <div><img alt="John Welte" src="facts/johann-welte.jpg" />
+            <div class="padding-top-15">Cheers to Austrian immigrant Johann “John” Welte (third from right-front), who operated the Cheese Ranch from 1878 to 1910 producing Limburger and American cheeses as well as butter. His dry farming techniques were published in scientific journals of the day, and his ranch was also known as a beer hall. </div>
+          </div>
+        </div>
+        <div class="carousel-cell mix">
+          <div><img alt="Fly'n B Ranch" src="facts/flyn-b-ranch.jpg" />
+            <div class="padding-top-15">Following Prohibition, local gambling entrepreneur Ova Elijah “Smiling Charlie” Stephens purchased the Fly’n B Ranch from the Plews family, known today as Fly’n B Park. After serving time for attempted murder in the ‘40s, Smiling Charlie returned to the ranch and used it as a temporary location for illicit gambling operations until losing big in 1946. </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row padding-top-40">
+  <div class="row">
+    <div class="container text-center padding-top-40">
+      <h2 class="text-uppercase no-margin font-weight-400">Highlands Ranch History Spotlight</h2>
+      <h4 class="text-center margin-top-5 no-margin-bottom padding-bottom-15"> Samuel Allen Long & the Highlands Ranch Mansion </h4>
+    </div>
+  </div>
+  <div class="row">
     <div class="container-lg no-padding">
       <div class="carousel bottom-carousel" data-flickity='{ "wrapAround": true }'>
-        <div class="carousel-cell mix"><img src="images/samuel-allen-long.jpg" alt="Samuel Allen Long"></div>
-        <div class="carousel-cell mix"><img src="images/flyn-b-ranch.jpg" alt="Fly'n B Ranch"></div>
-        <div class="carousel-cell mix"><img src="images/scotts-steer.jpg" alt="The Scott Family"></div>
-        <div class="carousel-cell mix"><img src="images/hr-mansion.jpg" alt="Highlands Ranch Mansion"></div>
-        <div class="carousel-cell mix"><img src="images/johann-welte.jpg" alt="Johann Welte (third from right-front)"></div>
+        <div class="carousel-cell"><img src="spotlight/samuel-allen-long.jpg" alt="Samuel Allen Long"></div>
+          <div class="carousel-cell"><img src="spotlight/hr-mansion-II.jpg" alt="Highlands Ranch Mansion"></div>
+        <div class="carousel-cell"><img src="spotlight/homestead.jpg" alt="Example of a late 19th-century Homestead"></div>
+        <div class="carousel-cell"><img src="spotlight/hr-mansion-I.jpg" alt="Highlands Ranch Mansion"></div>
+        <div class="carousel-cell"><img src="spotlight/hr-mansion-gate.jpg" alt="Highlands Ranch Mansion"></div>
       </div>
       <p class="caption">&nbsp;</p>
     </div>
   </div>
   <div class="row">
-    <div class="container item-wrapper padding-bottom-40">
-      <h2 class="text-uppercase text-center font-weight-400">Highlands Ranch History Spotlight:</h2>
-      <h4 class="text-center no-margin-top"> Samuel Allen Long & the Highlands Ranch Mansion </h4>
-      <div class="item">The historic Highlands Ranch Mansion has quite a long history in what is today Highlands Ranch. For many years, John Springer was thought to be the mansion's first owner, but he was not. The site of the mansion originally passed from the United States government into the hands of Samuel Allen Long in the late 1800s. Even though Long spent almost four years trying to meet the requirements for free land under the Homestead Act, he ended up buying the 160-acre property outright in a $200 cash transaction. <a class="small text-uppercase font-weight-400" href="https://blogs.douglascountylibraries.org/cabinet-thirteen/highlands-ranch-history-spotlight-samuel-allen-long-the-highlands-ranch-mansion/" target="_blank">Read More &raquo;</a></div>
+    <div class="container text-center padding-top-15 padding-bottom-40">
+      <h4 class="roboto no-margin-top">The historic Highlands Ranch Mansion has quite a long history in what is today Highlands Ranch.</h4><div>For many years, John Springer was thought to be the mansion's first owner, but he was not. The site of the mansion originally passed from the United States government into the hands of Samuel Allen Long in the late 1800s. Even though Long spent almost four years trying to meet the requirements for free land under the Homestead Act, he ended up buying the 160-acre property outright in a $200 cash transaction. <a class="small text-uppercase font-weight-400" href="https://blogs.douglascountylibraries.org/cabinet-thirteen/highlands-ranch-history-spotlight-samuel-allen-long-the-highlands-ranch-mansion/" target="_blank">Read More &raquo;</a></div>
     </div>
   </div>
   <div class="row bg-lavender">
@@ -413,7 +444,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script src="https://unpkg.com/flickity@2.2/dist/flickity.pkgd.js"></script> 
+<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script> 
 <script>
 	var cards = $(".mix");
 for (var i = 0; i < cards.length; i++) {
@@ -429,7 +461,7 @@ var $carousel = $('.bottom-carousel').flickity({
   cellSelector: 'img',
   imagesLoaded: true,
   percentPosition: false,
-    autoPlay: 4000
+    autoPlay: 7000
 });
 var $caption = $('.caption');
 // Flickity instance
