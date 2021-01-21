@@ -69,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css" integrity="sha256-qQHUQX+gGGYfpC7Zdni08sr+h0ymXr0avmIASucY4FM=" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css">
+<link type="text/css" rel="stylesheet" href="https://d73711rp9gy8.cloudfront.net/shared-assets/css/dcl.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
 <!--[if lt IE 9]>
@@ -82,7 +82,7 @@ e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?143"></script> 
+<script src="https://d73711rp9gy8.cloudfront.net/shared-assets/js/dcl.js"></script> 
 <!-- Start of Zendesk Widget script --> 
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
@@ -103,11 +103,12 @@ h1.playfair {
 h2.playfair, h3.playfair {
 	font-family: 'Playfair Display', serif;
 	color: #000;
+    line-height: 1.2em;
 }
 a.btn.btn-primary.custom {
 	text-transform: uppercase;
 	border: 0;
-	background: #be1e2d;
+	background: #EC663E;
 	color: #fff;
 	font-weight: 400;
 	font-size: 18px;
@@ -118,52 +119,37 @@ a.btn.btn-primary.custom:hover, a.btn.btn-primary.custom:focus {
 }
 .item-wrapper {
 	display: flex;
-	padding: 0 0 0 0;
+	justify-content: center;
+	align-items: center;
 }
 .item {
-	flex: 1;
-	margin: 10px;
-	padding: 0 0 0 0;
-}
-.peter {
+	padding: 10px;
 }
 .rabbit-background {
 	background: #fff url("rabbit-row.jpg") bottom center/cover;
 }
 .safety {
-	padding: 30px 0 45px;
-	margin-top: 40px;
-	background: #fff url("rabbit-row.jpg") bottom center/cover;
+	padding: 20px 0 75px;
+	background: #fff url("safety-row.jpg") top center/cover;
 }
 
 @media (max-width: 768px) {
 .item-wrapper {
 	flex-direction: column;
 }
-}
-
-@media (max-width: 480px) {
-.bella-font {
-	font-size: 50px;
-	line-height: .7em;
-}
-.mountain-font {
-	font-family: "Mighty Mountain", sans-serif;
-}
-.mountain-font.big {
-	font-size: 100px;
-	line-height: .8;
+h1.playfair {
+	font-size: 60px;
 }
 }
 </style>
 <!-- InstanceEndEditable -->
 </head>
 <body>
-<!-- pull alert.txt into the global-alert div --> 
+<!-- pull alert.txt into the general-alert div --> 
 <script>
-$.get("https://s3.amazonaws.com/website.alert/alert.txt?459")
+$.get("https://s3.amazonaws.com/website.alert/alert.txt")
   .done(function( data ) {
-    if ( data !=null ){	$("#global-alert").show().append( data );}
+    if ( data !=null ){	$("#general-alert").show().append( data );}
 });
 </script> 
 <!-- Google Tag Manager (noscript) -->
@@ -341,11 +327,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </nav>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
-  <div id="global-alert" style="display:none;"></div>
+  <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
+  <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row rabbit-background">
     <div class="container text-center padding-bottom-30">
-      <h1 class="playfair">A Storybook Holiday</h1>
+      <h1 class="playfair">A&nbsp;Storybook Holiday</h1>
       <div><img class="peter center-block img-responsive" src="peter.png" alt="Peter Rabbit"></div>
       <h2 class="playfair margin-lg-200 margin-md-50">Join us as we welcome the start of spring with everyone's favorite naughty rabbit! </h2>
       <div class="black">This interactive event will feature beloved characters from Beatrix Potter's classic tales. Participate in an egg hunt, take a walk through Mr. McGregor's market, and take away some crafts and treats for more fun at home. This event is a walking tour through the world of Peter Rabbit; exact entry times will be emailed to attendees two weeks prior to the event. Please plan on 30-40 minutes to enjoy this event.</div>
@@ -357,78 +344,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <h2 class="playfair no-margin">Sunday, March 21</h2>
         <h3 class="playfair no-margin">9-11AM, Castle Pines</h3>
         <div class="padding-top-15 margin-bottom-10"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
-        <div>$15 Adults 14+; $10 Ages 3-13<br>
-          (Ages 0-2 free with paying adult) </div>
-      </div>
+        <h4 class="playfair no-margin-bottom">$15 Adults 14+; $10 Ages 3-13</h4>
+        (Ages 0-2 free with paying adult) </div>
+      <div class="item flower"><img src="flower.png" alt=""></div>
       <div class="item">
         <h2 class="playfair no-margin">Sunday, March 28</h2>
         <h3 class="playfair no-margin">8:30-11:30AM, Parker</h3>
         <div class="padding-top-15 margin-bottom-10"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
-        <div>$15 Adults 14+; $10 Ages 3-13<br>
-          (Ages 0-2 free with paying adult) </div>
-      </div>
+        <h4 class="playfair no-margin-bottom">$15 Adults 14+; $10 Ages 3-13</h4>
+        (Ages 0-2 free with paying adult) </div>
     </div>
   </div>
   <div class="row safety">
     <div class="container black text-center margin-lg-100 margin-md-50">
-      <h4 class="black margin-bottom-5">Our Safety Precautions</h4>
-      DCL is committed to keeping our guests and staff safe. Both events allow for capacity limits and social distancing; additional tickets may become available if COVID-19 status or restrictions change. Choosing one of the wave-based time slots for our Dinner Edition also allows for surface cleaning; the building will be cleared and surfaces cleaned between waves. We appreciate your help in adhering to the evening timeline. DCL complies with the guidelines of government and health authorities regarding masks. </div>
+      <h3 class="playfair">Our Safety Precautions</h3>
+      DCL is committed to keeping our guests and staff safe. Both events allow for capacity limits and social distancing; additional tickets may become available if COVID-19 status or restrictions change. We appreciate your help in adhering to the evening timeline. DCL complies with the guidelines of government and health authorities regarding masks. </div>
   </div>
   <!-- InstanceEndEditable --> </div>
-<div class="social-footer bg-gray-10 padding-top-15 padding-bottom-20">
-  <div class="bg-gray-10 clearfix">
-    <div class="col-sm-6">
-      <div class="text-center csn">
+<div class="row no-margin bg-gray-10">
+  <div class="container text-center">
+    <div class="social-footer">
+      <div class="social-left">
         <h4><a href="../safety-notice/">Community Safety Notice</a></h4>
-        <!--to add back, remove csn class above
-          <h4>2020&nbsp;Census: <span class="text-nowrap"><a href="https://2020census.gov/" target="_blank">Website</a> <span style="font-size:14px">&bull;</span> <a href="https://2020census.gov/content/dam/2020census/materials/partners/2019-10/census101.pdf" target="_blank">Quick Info</a> <span style="font-size:14px">&bull;</span> <a href="https://2020census.gov/content/dam/2020census/materials/languages/guides/English-Guide.pdf" target="_blank">Guide</a></span></h4>--> 
+        <h4><a href="../taxes/">Tax Information</a></h4>
       </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="text-center">
+      <div class="social-right">
         <h4>Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h4>
+        <div class="social-links-wrapper"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fab fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fab fa-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fab fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fab fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fab fa-flickr fa-2x"></i></a> </div>
       </div>
-      <div class="social-links-wrapper text-center"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fab fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fab fa-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fab fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fab fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="http://www.flickr.com/photos/douglascountylibraries/" target="_blank"> <i class="fab fa-flickr fa-2x"></i></a> </div>
     </div>
   </div>
 </div>
-<footer class="footer bg-gray-20 padding-top-60 padding-bottom-60">
+<footer class="row no-margin bg-gray-20">
   <div class="container">
-    <div class="col-sm-3">
-      <h5 class="font-weight-500 no-margin">About</h5>
-      <ul>
-        <li><a href="../who-we-are/">Who We Are</a></li>
-        <li><a href="../join-our-team/">Join Our Team</a></li>
-        <li><a href="../press-kit/">Press Kit</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-2 col-md-3">
-      <h5 class="font-weight-500 no-margin">Contact</h5>
-      <ul>
-        <li><a href="https://help.dcl.org/" target="_blank">Help</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-4 col-md-3">
-      <h5 class="font-weight-500 no-margin">Connect</h5>
-      <ul>
-        <li><a href="../newsletters/">eNews Sign-Up</a></li>
-        <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-        <li><a href="https://blogs.douglascountylibraries.org">DCL Blog</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-3">
-      <h5 class="font-weight-500 no-margin">Support</h5>
-      <ul>
-        <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
-        <li><a href="../foundation/">Foundation</a></li>
-        <li><a href="../volunteer/">Volunteer</a></li>
-      </ul>
+    <div class="footer-nav">
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="../who-we-are/">Who We Are</a></li>
+          <li><a href="../join-our-team/">Join Our Team</a></li>
+          <li><a href="../press-kit/">Press Kit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="https://help.dcl.org/" target="_blank">Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="../newsletters/">eNews Sign-Up</a></li>
+          <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
+          <li><a href="https://blogs.douglascountylibraries.org">DCL Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate</a></li>
+          <li><a href="../foundation/">Foundation</a></li>
+          <li><a href="../volunteer/">Volunteer</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
-<div class="copyright bg-gray-90">
-  <div class="container padding-top-15 padding-bottom-80">
-    <div class="eee"> <span class="pull-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank" class="wheat">Use the Classic Catalog &raquo;</a></span><span class="pull-right"> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="wheat text-nowrap" href="tel:+13037917323">(303) 791-7323</a></span> </div>
+<div class="row no-margin bg-gray-90">
+  <div class="container">
+    <div class="copyright">
+      <div class="copyright-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank">Use the Classic Catalog &raquo;</a></div>
+      <div class="copyright-right">&copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a></div>
+    </div>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
