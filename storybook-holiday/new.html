@@ -87,41 +87,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 <style>
-@font-face {
-	font-family: 'BellaNotte';
-	src: url('BellaNotteRegular.woff2') format('woff2'), url('BellaNotteRegular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+.playfair {
+	font-family: 'Playfair Display', serif;
+	color: #000;
 }
-@font-face {
-	font-family: 'Mighty Mountain';
-	src: url('MightyMountainRegular.woff2') format('woff2'), url('MightyMountainRegular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+h1.playfair {
+	font-family: 'Playfair Display', serif;
+	color: #ffce3f;
+	font-size: 80px;
+	text-shadow: 1px 3px 2px #000;
 }
-.bella-font {
-	font-family: "BellaNotte", sans-serif;
-	font-size: 90px;
-	line-height: .7em;
-}
-.mountain-font {
-	font-family: "Mighty Mountain", sans-serif;
-}
-.mountain-font.big {
-	font-family: "Mighty Mountain", sans-serif;
-	font-size: 150px;
-	color: #be1e2d;
-	text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
-	letter-spacing: 0.02em;
-	line-height: .8;
-	margin-top: 10px;
-}
-.mountain-font.event {
-	font-size: 50px;
-	line-height: 1;
+h2.playfair, h3.playfair {
+	font-family: 'Playfair Display', serif;
+	color: #000;
 }
 a.btn.btn-primary.custom {
 	text-transform: uppercase;
@@ -137,29 +118,22 @@ a.btn.btn-primary.custom:hover, a.btn.btn-primary.custom:focus {
 }
 .item-wrapper {
 	display: flex;
-	padding: 45px 0 0 0;
+	padding: 0 0 0 0;
 }
 .item {
 	flex: 1;
 	margin: 10px;
-	padding: 25px;
-	border: 5px dotted #be1e2d;
+	padding: 0 0 0 0;
 }
 .peter {
 }
-.tree-row {
-	background: transparent url("tree-row.png") bottom center repeat-x;
+.rabbit-background {
+	background: #fff url("rabbit-row.jpg") bottom center/cover;
 }
 .safety {
 	padding: 30px 0 45px;
 	margin-top: 40px;
-	background: radial-gradient(ellipse at bottom, #fff 40%, #89B4BB 100%);
-}
-.snow {
-	background: #9ecad1 url("snow.png") bottom center repeat;
-}
-.tree-wrapper {
-	display: flex;
+	background: #fff url("rabbit-row.jpg") bottom center/cover;
 }
 
 @media (max-width: 768px) {
@@ -369,43 +343,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="global-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row snow">
-    <div class="black">
-      <div class="container text-center padding-top-30">
-        <div class="text-center">Storybook Holiday</div>
-        <h4 class="black text-center">Join us as we welcome the start of spring with everyone's favorite naughty rabbit! </h4>
-      </div>
+  <div class="row rabbit-background">
+    <div class="container text-center padding-bottom-30">
+      <h1 class="playfair">A Storybook Holiday</h1>
+      <div><img class="peter center-block img-responsive" src="peter.png" alt="Peter Rabbit"></div>
+      <h2 class="playfair margin-lg-200 margin-md-50">Join us as we welcome the start of spring with everyone's favorite naughty rabbit! </h2>
+      <div class="black">This interactive event will feature beloved characters from Beatrix Potter's classic tales. Participate in an egg hunt, take a walk through Mr. McGregor's market, and take away some crafts and treats for more fun at home. This event is a walking tour through the world of Peter Rabbit; exact entry times will be emailed to attendees two weeks prior to the event. Please plan on 30-40 minutes to enjoy this event.</div>
     </div>
-    <div class="tree-row text-center"><img class="peter" src="peter.png" alt="Peter Rabbit"></div>
   </div>
   <div class="row">
     <div class="container item-wrapper text-center">
       <div class="item">
-        <div class="mountain-font event">Castle Pines Edition</div>
-        <h4 class="black no-margin">Sunday, March 21<br>
-          9AM-11AM</h4>
-        <div>This interactive event will feature beloved characters from Beatrix Potter's classic tales. Participate in an egg hunt, take a walk through Mr. McGregor's market, and take away some crafts and treats for more fun at home. This event is a walking tour through the world of Peter Rabbit; exact entry times will be emailed to attendees two weeks prior to the event. Please plan on 30-40 minutes to enjoy this event.</div>
-        <div class="padding-top-15 margin-bottom-5"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
-        <div>Adult-$15, Child-$10 AGES 3+<br>
-        </div>
+        <h2 class="playfair no-margin">Sunday, March 21</h2>
+        <h3 class="playfair no-margin">9-11AM, Castle Pines</h3>
+        <div class="padding-top-15 margin-bottom-10"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$15 Adults 14+; $10 Ages 3-13<br>
+          (Ages 0-2 free with paying adult) </div>
       </div>
       <div class="item">
-        <div class="mountain-font event">Castle Pines Edition</div>
-        <h4 class="black no-margin">Sunday, March 21<br>
-          9AM-11AM</h4>
-        <div>This interactive event will feature beloved characters from Beatrix Potter's classic tales. Participate in an egg hunt, take a walk through Mr. McGregor's market, and take away some crafts and treats for more fun at home. This event is a walking tour through the world of Peter Rabbit; exact entry times will be emailed to attendees two weeks prior to the event. Please plan on 30-40 minutes to enjoy this event.</div>
-        <div class="padding-top-15 margin-bottom-5"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
-        <div>Adult-$15, Child-$10 AGES 3+<br>
-        </div>
+        <h2 class="playfair no-margin">Sunday, March 28</h2>
+        <h3 class="playfair no-margin">8:30-11:30AM, Parker</h3>
+        <div class="padding-top-15 margin-bottom-10"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$15 Adults 14+; $10 Ages 3-13<br>
+          (Ages 0-2 free with paying adult) </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="container margin-lg-100 margin-md-30">
-      <div class="padding-top-10 text-center">An additional alcohol beverage ticket is $12 for adults 21-plus. Your purchase of a beverage wristband supports the DCL Foundation. No taxpayer funds will be used for the purchase of alcoholic beverages.</div>
-    </div>
-  </div>
-  <div class="row snow safety">
+  <div class="row safety">
     <div class="container black text-center margin-lg-100 margin-md-50">
       <h4 class="black margin-bottom-5">Our Safety Precautions</h4>
       DCL is committed to keeping our guests and staff safe. Both events allow for capacity limits and social distancing; additional tickets may become available if COVID-19 status or restrictions change. Choosing one of the wave-based time slots for our Dinner Edition also allows for surface cleaning; the building will be cleared and surfaces cleaned between waves. We appreciate your help in adhering to the evening timeline. DCL complies with the guidelines of government and health authorities regarding masks. </div>
