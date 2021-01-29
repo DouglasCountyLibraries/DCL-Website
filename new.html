@@ -93,10 +93,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
-    .background-row {
-        background: #e8e8e8 url("pattern.jpg");
-        padding: 30px 0 40px;
-    }
+#perm-alert {
+	background: #efeeed!important;
+}
+.background-row {
+	background: #e8e8e8 url("pattern.jpg");
+	padding: 30px 0 40px;
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,.1) inset;
+	border-top: 2px solid rgba(255,255,255,.7);
+	border-bottom: 2px solid rgba(255,255,255,.7);
+}
 .item-wrapper {
 	display: flex;
 	justify-content: center;
@@ -105,9 +111,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .item.one {
 	font-family: 'Bebas Neue', cursive;
-	font-size: 40px;
+	font-size: 34px;
+	line-height: 30px;
 }
-    .item.two {
+.item.two {
 	width: 100%;
 }
 .intro {
@@ -118,11 +125,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	color: #020202;
 }
 .squeeze {
-	font-size: 160px;
+	font-size: 190px;
 	margin: 0;
 }
 .day {
-	font-size: 118px;
+	font-size: 140px;
 	margin: 0;
 	line-height: 50px;
 }
@@ -133,11 +140,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	align-content: center;
 	align-items: center;
 	text-align: center;
+	padding: 30px 0;
 }
-    #link-one, #link-two, #link-three, #link-four, #link-five {
-        width: 300px;
-        background: #ff5f5a;
-    }
+#link-one, #link-two, #link-three, #link-four, #link-five {
+	width: 260px;
+	background: #ff5f5a;
+	color: #fff;
+	margin: 10px;
+	padding: 15px 5px 11px;
+	box-shadow: 5px 6px 0px -1px rgba(0,0,0,.15);
+}
+#link-one:hover, #link-two:hover, #link-three:hover, #link-four:hover, #link-five:hover {
+	background: #ff383c;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 5px 6px 0px -1px rgba(0,0,0,.3);
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -334,14 +352,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h1 class="squeeze">Squeeze</h1>
           <h2 class="day">The Day</h2>
         </div>
-        <div class="links">
-          <div id="link-one"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1816092049_books_for_living_well">Live Well</a></div>
-          <div id="link-two"><a href="https://www.hoopladigital.com/collection/4514" target="_blank">Laugh Often</a></div>
-          <div id="link-three"><a href="learning-lab/#study-halls">Learn Plenty</a></div>
-          <div id="link-four"><a href="say-i-do/">Love More</a></div>
-          <div id="link-five"><a href="storybook-holiday">Celebrate!<br>
-            Storybook Holiday</a></div>
-        </div>
+        <div class="links"> <a id="link-one" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1816092049_books_for_living_well">Live Well</a> <a id="link-two" href="https://www.hoopladigital.com/collection/4514" target="_blank">Laugh Often</a> <a id="link-three" href="learning-lab/#study-halls">Learn Plenty</a> <a id="link-four" href="say-i-do/">Love More</a> <a id="link-five" href="storybook-holiday">Celebrate!<br>
+          Storybook Holiday</a> </div>
       </div>
       <div class="item two">
         <div class="theme"><img class="img-responsive" src="squeeze-one.png" alt=""></div>
