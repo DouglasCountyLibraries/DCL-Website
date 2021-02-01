@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,9 +88,35 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
+<!-- modal popup everytime with delay --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+$(document).ready(function () {
+    if (document.cookie.indexOf("shown=true")<1) {
+        var show = function(){
+                $('#offerModal').modal('show');
+        };
+        $(window).load(function(){
+            var timer = window.setTimeout(show,2000);
+        });
+    }
+    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+});
+</script>
 <style>
 .reserve-a-space-active {
 	background-color: #f5f5f5;
+}
+.modal-background {
+	background: #fff url("modal-background.jpg") top center no-repeat;
+	padding: 40px 40px 80px 40px;
+	color: #000;
+	border: 30px solid #fff;
+	text-align: center;
+}
+.larger-text {
+	font-size: 1.4em;
+	padding-bottom: 15px;
 }
 .find-text {
 	margin: 35px 0 0;
@@ -315,6 +342,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="offerModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close margin-40" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-background">
+          <h1 class="black">Limited Time Offer!</h1>
+          <div>
+            <div class="larger-text">Book now to receive complimentary use of centerpiece décor (glassware, mirrors, votive holders), as well as complimentary space for the bride and attendants on the wedding day.</div>
+            <div class="large-text">Minimum 4-hour Concierge booking required.</div>
+            <div class="margin-top-10">Offer valid on new 2021 bookings only; not valid on previously booked events. Offer expires June 30, 2021.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="row border-top padding-bottom-30">
     <div class="container">
       <h1 class="jumbo-text margin-lg-100 text-center text-uppercase font-weight-400">Weddings, Rehearsal Dinners & Showers at DCL</h1>
@@ -488,4 +530,5 @@ for (var i = 0; i < cards.length; i++) {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
