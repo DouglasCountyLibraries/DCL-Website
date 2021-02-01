@@ -89,27 +89,20 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <!-- modal popup everytime with delay --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+
 <script type="text/javascript">
-$(document).ready(function () {
-    if (document.cookie.indexOf("shown=true")<1) {
-        var show = function(){
-                $('#offerModal').modal('show');
-        };
-        $(window).load(function(){
-            var timer = window.setTimeout(show,1000);
-        });
-    }
-    document.cookie = "shown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-});
+    $(window).on('load', function() {
+        $('#modal-offer').modal('show');
+    });
 </script>
+
 <style>
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
 .modal-background {
 	background: #fff url("modal-background.jpg") top center no-repeat;
-	padding: 40px 40px 80px 40px;
+	padding: 40px 40px 45px 40px;
 	color: #000;
 	border: 30px solid #fff;
 }
@@ -341,12 +334,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="offerModal">
+  <div class="modal fade" id="modal-offer" tabindex="-1" role="dialog" aria-labelledby="modal-offer">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <button type="button" class="close margin-40" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="modal-background">
-          <h1 class="black">Limited Time Offer!</h1>
+          <h1 class="black no-margin-top">Limited Time Offer!</h1>
           <div>
             <div class="larger-text">Book now to receive complimentary use of centerpiece décor (glassware, mirrors, votive holders), as well as complimentary space for the bride and attendants on the wedding day.</div>
             <div class="large-text">Minimum 4-hour Concierge booking required.</div>
