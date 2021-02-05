@@ -92,19 +92,14 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.carousel-cell {
-	text-align: center;
-	height: 265px;
-	width: 200px;
-	margin: 0 40px;
+.item-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
-.carousel-cell:before {
-	display: block;
+.item {
+	padding: 20px 30px;
 	text-align: center;
-}
-.flickity-page-dots {
-	bottom: -75px;
-	opacity: .5;
 }
 .front {
 	background-color: rgba(255,255,255,.65)
@@ -134,9 +129,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin-right: 5px;
 	padding: 7px 14px;
 	border: 2px solid #666;
-}
-.flickity-prev-next-button {
-	display: none;
 }
 .business-frame {
 	height: 1000px;
@@ -469,47 +461,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row padding-top-30">
-    <div class="container text-center padding-bottom-15 margin-lg-200">
+    <div class="container text-center margin-lg-200">
       <h2 class="roboto">Our specially trained business librarians are here to help you with your research.</h2>
     </div>
   </div>
   <div class="row">
-    <div class="container margin-lg-150">
-      <div class="carousel" data-flickity='{ "groupCells": true, "wrapAround": true, "autoPlay": 6000 }'>
-        <div class="carousel-cell">
-          <div><img alt="Angie Brown, Highlands Ranch" class="img-circle" src="angie.jpg" />
-            <h4 class="no-margin-bottom">Angie Brown</h4>
-          </div>
-        </div>
-        <div class="carousel-cell">
+    <div class="container">
+      <div class="item-wrapper">
+        <div class="item">
           <div><img alt="Colbe Galston, Highlands Ranch" class="img-circle" src="colbe.jpg" />
             <h4 class="no-margin-bottom">Colbe Galston</h4>
           </div>
         </div>
-        <div class="carousel-cell">
-          <div><img alt="Andrew Roth, Parker" class="img-circle" src="andrew.jpg" />
-            <h4 class="no-margin-bottom">Andrew Roth</h4>
-          </div>
-        </div>
-        <div class="carousel-cell">
+        <div class="item">
           <div><img alt="Patty Van Eysden, Castle Rock" class="img-circle" src="patty.jpg" />
             <h4 class="no-margin-bottom">Patty Van Eysden</h4>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div><img alt="Izabela Brodzinska, Roxborough" class="img-circle" src="izabela.jpg" />
-            <h4 class="no-margin-bottom">Izabela Brodzinska</h4>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div><img alt="Jennifer Yadav, Castle Pines" class="img-circle" src="jen.jpg" />
-            <h4 class="no-margin-bottom">Jennifer Yadav</h4>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="text-center padding-bottom-80"> <!-- Button trigger modal --> 
+  <div class="text-center padding-top-15 padding-bottom-60"> <!-- Button trigger modal --> 
     <a href="#" class="btn btn-primary text-uppercase" data-toggle="modal" data-target="#modal-one">Ask Us Your Business Question</a> </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
@@ -574,15 +546,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 	  $(".card-grid").flip();
 		</script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
