@@ -802,7 +802,14 @@ summer tab ends
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" -->
+<script>
+$(function(){
+  var hash = window.location.hash;
+  hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+});
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
