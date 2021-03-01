@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,18 +91,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Aleo&family=Oleo+Script&display=swap" rel="stylesheet">
 <style>
-#perm-alert {
-	background: #efeeed!important;
-}
-.background-row {
-	background: #e8e8e8 url("pattern.jpg");
-	padding: 30px 0 40px;
-	box-shadow: 0px 0px 50px 0px rgba(0,0,0,.1) inset;
-	border-top: 2px solid rgba(255,255,255,.7);
-	border-bottom: 2px solid rgba(255,255,255,.7);
-}
 .item-wrapper {
 	display: flex;
 	justify-content: center;
@@ -109,30 +100,24 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	align-items: center;
 }
 .item.one {
-	font-family: 'Bebas Neue', cursive;
-	font-size: 34px;
-	line-height: 30px;
-}
-.item.two {
 	width: 100%;
 }
-.intro {
-	text-align: center;
+.item.two {
+	padding-top: 40px;
 }
-.squeeze, .day {
-	font-family: 'Bebas Neue', cursive;
-	color: #020202;
-}
-.squeeze {
-	font-size: 190px;
+.oleo {
+	font-family: 'Oleo Script', cursive;
+	font-size: 210px;
 	margin: 0;
+	line-height: 170px;
 }
-.day {
-	font-size: 140px;
+.aleo {
+	font-family: 'Aleo', serif;
+	font-size: 65px;
 	margin: 0;
-	line-height: 50px;
 }
 .links {
+	font-family: 'Aleo', serif;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -140,41 +125,115 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	align-items: center;
 	text-align: center;
 	padding: 30px 0;
+	font-size: 16px;
+	text-transform: uppercase;
 }
-#link-one, #link-two, #link-three, #link-four, #link-five {
+#link-one, #link-two, #link-three, #link-four {
 	width: 260px;
-	background: #ff5f5a;
-	color: #fff;
+	background: rgba(255,255,255,.9);
+	color: #183242;
 	margin: 10px;
 	padding: 15px 5px 11px;
-	box-shadow: 5px 6px 0px -1px rgba(0,0,0,.15);
-	border-radius: 3px;
+	border-radius: 2px;
 }
-#link-one:hover, #link-two:hover, #link-three:hover, #link-four:hover, #link-five:hover {
-	background: #ff383c;
-	color: #fff;
+#link-one:hover, #link-two:hover, #link-three:hover, #link-four:hover {
+	background: #fff;
+	color: #000;
 	text-decoration: none;
-	box-shadow: 5px 6px 0px -1px rgba(0,0,0,.3);
+	box-shadow: 0px 0px 10px 0px #fff;
 }
 
 @media (max-width:992px) {
 .item-wrapper {
 	flex-direction: column;
 }
-.item.two {
-	order: 1;
-}
-.item.one {
-	order: 2;
-}
 }
 
 @media (max-width:575px) {
-.squeeze {
+.oleo {
 	font-size: 140px;
+	line-height: 130px;
 }
-.day {
-	font-size: 100px;
+.aleo {
+	font-size: 40px;
+}
+}
+.rabbit {
+	-webkit-animation: vibrate 50s linear infinite both;
+	animation: vibrate 50s linear infinite both;
+}
+@-webkit-keyframes vibrate {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+20% {
+-webkit-transform: translate(-25px, 25px);
+transform: translate(-25px, 25px);
+}
+40% {
+-webkit-transform: translate(-25px, -25px);
+transform: translate(-25px, -25px);
+}
+60% {
+-webkit-transform: translate(25px, 25px);
+transform: translate(25px, 25px);
+}
+80% {
+-webkit-transform: translate(25px, -25px);
+transform: translate(25px, -25px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
+@keyframes vibrate {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+20% {
+-webkit-transform: translate(-25px, 25px);
+transform: translate(-25px, 25px);
+}
+40% {
+-webkit-transform: translate(-25px, -25px);
+transform: translate(-25px, -25px);
+}
+60% {
+-webkit-transform: translate(25px, 25px);
+transform: translate(25px, 25px);
+}
+80% {
+-webkit-transform: translate(25px, -25px);
+transform: translate(25px, -25px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
+.background-row {
+	background: #183242 url("clouds.jpg") top center;
+	padding: 50px 0 70px;
+	-webkit-animation: slide 12s linear infinite;
+	animation: slide 12s linear infinite;
+}
+@-webkit-keyframes slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: -600px 0;
+}
+}
+@keyframes slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: -600px 0;
 }
 }
 </style>
@@ -365,22 +424,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="container item-wrapper">
-      <div class="item one">
-        <div class="intro">
-          <h1 class="squeeze">Squeeze</h1>
-          <h2 class="day">The Day</h2>
-        </div>
-        <div class="links"> <a id="link-one" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1816092049_books_for_living_well">Live Well</a> <a id="link-two" href="https://www.hoopladigital.com/collection/4514" target="_blank">Laugh Often</a> <a id="link-three" href="learning-lab/#study-hall">Learn Plenty</a> <a id="link-four" href="say-i-do/">Love More</a> <a id="link-five" href="storybook-holiday">Celebrate!<br>
-          Storybook Holiday</a> </div>
+    <div class="container item-wrapper rabbit">
+      <div class="item one text-center">
+        <div><img src="lucky-rabbit.png" class="img-responsive center-block" alt="Lucky Rabbit"></div>
       </div>
-      <div class="item two">
-        <div class="theme"><img class="img-responsive center-block" src="squeeze-one.png" alt=""></div>
-        <div class="theme"><img class="img-responsive center-block" src="squeeze-two.png" alt=""></div>
-        <div class="theme"><img class="img-responsive center-block" src="squeeze-three.png" alt=""></div>
-        <div class="theme"><img class="img-responsive center-block" src="squeeze-four.png" alt=""></div>
-        <div class="theme"><img class="img-responsive center-block" src="squeeze-five.png" alt=""></div>
-        <div class="theme"><img class="img-responsive center-block" src="squeeze-six.png" alt=""></div>
+      <div class="item two text-center">
+        <h1 style="color: rgba(255,255,255,.9);" class="oleo">Luck</h1>
+        <h2 style="color: rgba(255,255,255,.9);" class="aleo text-uppercase">is in the Air</h2>
+        <div class="links"> <a id="link-one" href="storybook-holiday/">Rabbit (Peter) Rabbit</a> <a id="link-two" href="camp-dcl/">Lucky Break Camps</a> <a id="link-three" href="library-perks/#alltrails">Happy AllTrails</a> <a id="link-four" href="birthday-parties/">Make a Birthday Wish</a></div>
       </div>
     </div>
   </div>
@@ -488,4 +539,5 @@ $('.theme').hide().eq(random).show();
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
