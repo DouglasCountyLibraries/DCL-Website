@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,7 +103,7 @@ h1.playfair {
 h2.playfair, h3.playfair {
 	font-family: 'Playfair Display', serif;
 	color: #000;
-    line-height: 1.2em;
+	line-height: 1.2em;
 }
 a.btn.btn-primary.custom {
 	text-transform: uppercase;
@@ -115,6 +116,16 @@ a.btn.btn-primary.custom {
 }
 a.btn.btn-primary.custom:hover, a.btn.btn-primary.custom:focus {
 	background: red;
+}
+a.btn.btn-primary.soldout, a.btn.btn-primary.custom:hover {
+	text-transform: uppercase;
+	border: 0;
+	background: #EC663E;
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 14px 18px;
+    cursor: not-allowed;
 }
 .item-wrapper {
 	display: flex;
@@ -340,7 +351,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="item">
         <h2 class="playfair no-margin">Sunday, March 21</h2>
         <h3 class="playfair no-margin">9-11AM, Castle Pines</h3>
-        <div class="padding-top-15 margin-bottom-10"><a href="https://www.eventbrite.com/e/a-storybook-holiday-the-tale-of-peter-rabbit-tickets-137430282675?aff=storybookholiday" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div class="padding-top-15 margin-bottom-10"><a class="btn btn-primary soldout">Sold Out</a></div>
         <h4 class="playfair no-margin-bottom">$15 Adults 14+; $10 Ages 3-13</h4>
         (Ages 0-2 free with paying adult) </div>
       <div class="item flower"><img src="flower.png" alt=""></div>
@@ -455,4 +466,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 }
 	</script><!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
