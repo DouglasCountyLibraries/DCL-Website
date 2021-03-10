@@ -89,14 +89,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+.white-top-bkg {
+	background: #fff url(white-top.gif) center center repeat-x;
+}
+.white-bottom-bkg {
+	background: #fff url(white-bottom.gif) center center repeat-x;
+}
 .give-row {
-	background: #c6e6dc url("row-background.gif") top center repeat-x;
 }
-.row.blue, .blue, .container-fluid {
-	background: #fff;
-
+.gala-row {
 }
-
 .box-wrapper, .item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -108,17 +110,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin: 15px;
 	min-width: 400px;
 }
-.box-item {
-	flex: 1;
+.gala-item {
+	border: 1px solid red;
 	padding: 5px 30px 35px;
 	margin: 5px 35px;
-	background: #fff url("box-background.gif") top center repeat-x;
-	max-width: 325px;
-	border-radius: 3px;
 }
-.icon-circle-gray-lg {
-	border: 6px solid #078e9f;
-	border-radius: 50%;
+
+.gray-circle {
+	border: 6px solid #f5f5f5;
+    	border-radius: 50%;
 	box-sizing: border-box;
 	color: #078e9f;
 	background-color: #fff;
@@ -129,9 +129,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-align: center;
 	width: 150px;
 }
+.white-circle {
+	border: 6px solid #fff;
+    	border-radius: 50%;
+	box-sizing: border-box;
+	color: #078e9f;
+	background-color: #f5f5f5;
+	font-size: 70px;
+	height: 150px;
+	line-height: 135px;
+	margin: 0 auto;
+	text-align: center;
+	width: 150px;
+}
 
 @media (max-width: 992px) {
-.box-item {
+.gala-item {
 	flex-direction: column;
 	min-width: 100%;
 	margin: 5px;
@@ -332,79 +345,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="blue">
-    <div class="row blue border-top">
-      <div class="container">
-        <div class="text-center">
-          <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Foundation</h1>
-          <div class="separator-container">
-            <div class="separator line-separator"><i class="fas fa-bookmark"></i></div>
-          </div>
-          <h4 class="roboto margin-lg-185">The Douglas County Libraries Foundation delivers funding and resources to help sustain the Douglas County Libraries to positively impact our community members so they can grow and thrive.</h4>
+  <div class="row border-top">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Foundation</h1>
+        <div class="separator-container">
+          <div class="separator line-separator"><i class="fas fa-bookmark"></i></div>
+        </div>
+        <h4 class="roboto margin-lg-185">The Douglas County Libraries Foundation delivers funding and resources to help sustain the Douglas County Libraries to positively impact our community members so they can grow and thrive.</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="white-top-bkg">
+      <div class="gray-circle"><i class="fas fa-hands-helping"></i></div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container text-center">
+      <h1 class="margin-top-10 margin-bottom-5 text-uppercase font-weight-400">Ways to Give</h1>
+      <h5 class="no-margin-top margin-lg-100">Your <a href="../donate/">support of the Foundation</a> helps fund programs that reach youth, adults and families in Douglas County and across Colorado, and helps ensure the long-term success of our outstanding libraries. </h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="white-bottom-bkg">
+      <div class="white-circle"><i class="fas fa-fish"></i></div>
+    </div>
+  </div>
+  <div class="row give-row">
+    <div class="container">
+      <h1 class="text-center margin-top-10 margin-bottom-5 text-uppercase font-weight-400">Save the Date!</h1>
+      <h4 class="text-center">Sixth Annual<span class="asterisk-space">*</span> Fete des Fables</h4>
+      <div class="item-wrapper gala">
+        <div class="gala-item">
+          <div>The Little Mermaid: Dive Back In!</div>
+          <div>Friday, September 24, 2021</div>
+          <div>Denver Marriott South at Park Meadows</div>
+        </div>
+        <div class="gala-item">
+          <div>The Little Mermaid: A Family Shellabration</div>
+          <div>Saturday, August 28, 2021</div>
+          <div>Douglas County Libraries in Lone Tree</div>
+        </div>
+      </div>
+      <div class="text-center">All event proceeds benefit the Douglas County Libraries Foundation.</div>
+      <div class="text-center"><span class="asterisk-space">*</span>We're excited to dive back in after our 2020 event was canceled, and are so grateful for your support.</div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container text-center padding-top-30">
+      <h1 class="no-margin text-uppercase font-weight-400">Funding the Future</h1>
+      <h4 class="no-margin-top">Giving Now for Generations to Come</h4>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container">
+      <div class="item-wrapper">
+        <div class="item">
+          <div id="box-one"></div>
+          <h3 class="text-center font-weight-400">Scholarships & Support</h3>
+          <div>The Foundation provides scholarships and financial support for customers attending various DCL programs with associated small fees, such as <a href="../camp-dcl/">Camp DCL</a> for kids and <a href="../adult-education/#adult-tutoring">high school equivalency</a> testing for adults. Thanks to these scholarships, kids in families facing financial hardship get the chance to play and learn at our weeklong spring and summer day camps, and adults are able to achieve their high school graduation goals. For more information on accessing support for a fee-based program or service, please contact our Foundation at <a href="tel:+13037643311" class="text-nowrap">(303) 764-3311</a>.</div>
+        </div>
+        <div class="item">
+          <div id="box-two"></div>
+          <h3 class="text-center font-weight-400">Cuddle Up & Read</h3>
+          <div>Through partnerships with area hospitals, <a href="../cuddle-up-and-read/">Cuddle Up & Read</a> provides new parents with a fun and meaningful introduction to the library and our early literacy services. The program includes small gifts for mom and baby and an invitation to get baby a library card. We also distribute DCL growth charts, complete with reading suggestions and library service information, to parents through participating pediatricians’ offices across the county. </div>
+        </div>
+        <div class="item">
+          <div id="box-three"></div>
+          <h3 class="text-center font-weight-400">Summer Reading</h3>
+          <div>Each year, Douglas County Libraries' <a href="../summer-reading/">summer reading program</a> encourages kids to begin reading from a young age, and keeps them reading during school breaks, so they grow up with a strong foundation in literacy. Readers of all ages are encouraged to complete the reading program each year.</div>
+        </div>
+        <div id="exploration-stations" class="item">
+          <div id="box-four"></div>
+          <h3 class="text-center font-weight-400">Exploration Stations</h3>
+          <div>The Foundation supports exciting new ways to inspire a love of discovery and connection in our community, and one of those ways is through Exploration Stations. Located at both Parker Adventist and Castle Rock Adventist hospitals, these interactive areas for kids are located near the family birth centers. The stations include interactive software programs, books, puzzles, activities, and toys that provide learning opportunities as well as entertainment for children.</div>
         </div>
       </div>
     </div>
-    <div class="row give-row padding-bottom-40 margin-top-10">
-      <div class="container text-center">
-        <div class="icon-circle-gray-lg"><i class="fas fa-hands-helping"></i></div>
-        <h1 class="black margin-top-10 margin-bottom-5 text-uppercase font-weight-400">Ways to Give</h1>
-        <h5 class="no-margin-top margin-lg-100">Your <a href="../donate/">support of the Foundation</a> helps fund programs that reach youth, adults and families in Douglas County and across Colorado, and helps ensure the long-term success of our outstanding libraries. </h5>
-      </div>
-    </div>
-    <div class="row give-row padding-bottom-40 margin-top-30">
-      <div class="container">
-        <div class="icon-circle-gray-lg"><i class="fas fa-hands-helping"></i></div>
-        <h1 class="text-center margin-top-10 margin-bottom-5 text-uppercase font-weight-400">Save the Date!</h1>
-        <h4 class="text-center">Sixth Annual<span class="asterisk-space">*</span> Fete des Fables</h4>
-        <div class="item-wrapper gala">
-          <div class="gala-item">
-            <div>The Little Mermaid: Dive Back In!</div>
-            <div>Friday, September 24, 2021</div>
-            <div>Denver Marriott South at Park Meadows</div>
-          </div>
-          <div class="gala-item">
-            <div>The Little Mermaid: A Family Shellabration</div>
-            <div>Saturday, August 28, 2021</div>
-            <div>Douglas County Libraries in Lone Tree</div>
-          </div>
-        </div>
-        <div class="text-center">All event proceeds benefit the Douglas County Libraries Foundation.</div>
-        <div class="text-center"><span class="asterisk-space">*</span>We're excited to dive back in after our 2020 event was canceled, and are so grateful for your support.</div>
-      </div>
-    </div>
-    <div class="row giving-row">
-      <div class="container text-center padding-top-30">
-        <h1 class="no-margin text-uppercase font-weight-400">Funding the Future</h1>
-        <h4 class="no-margin-top">Giving Now for Generations to Come</h4>
-      </div>
-    </div>
-    <div class="row blue">
-      <div class="container">
-        <div class="item-wrapper">
-          <div class="item">
-            <div id="box-one"></div>
-            <h3 class="text-center font-weight-400">Scholarships & Support</h3>
-            <div>The Foundation provides scholarships and financial support for customers attending various DCL programs with associated small fees, such as <a href="../camp-dcl/">Camp DCL</a> for kids and <a href="../adult-education/#adult-tutoring">high school equivalency</a> testing for adults. Thanks to these scholarships, kids in families facing financial hardship get the chance to play and learn at our weeklong spring and summer day camps, and adults are able to achieve their high school graduation goals. For more information on accessing support for a fee-based program or service, please contact our Foundation at <a href="tel:+13037643311" class="text-nowrap">(303) 764-3311</a>.</div>
-          </div>
-          <div class="item">
-            <div id="box-two"></div>
-            <h3 class="text-center font-weight-400">Cuddle Up & Read</h3>
-            <div>Through partnerships with area hospitals, <a href="../cuddle-up-and-read/">Cuddle Up & Read</a> provides new parents with a fun and meaningful introduction to the library and our early literacy services. The program includes small gifts for mom and baby and an invitation to get baby a library card. We also distribute DCL growth charts, complete with reading suggestions and library service information, to parents through participating pediatricians’ offices across the county. </div>
-          </div>
-          <div class="item">
-            <div id="box-three"></div>
-            <h3 class="text-center font-weight-400">Summer Reading</h3>
-            <div>Each year, Douglas County Libraries' <a href="../summer-reading/">summer reading program</a> encourages kids to begin reading from a young age, and keeps them reading during school breaks, so they grow up with a strong foundation in literacy. Readers of all ages are encouraged to complete the reading program each year.</div>
-          </div>
-          <div id="exploration-stations" class="item">
-            <div id="box-four"></div>
-            <h3 class="text-center font-weight-400">Exploration Stations</h3>
-            <div>The Foundation supports exciting new ways to inspire a love of discovery and connection in our community, and one of those ways is through Exploration Stations. Located at both Parker Adventist and Castle Rock Adventist hospitals, these interactive areas for kids are located near the family birth centers. The stations include interactive software programs, books, puzzles, activities, and toys that provide learning opportunities as well as entertainment for children.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
+  </div>
+  <script>
     var images = ['camp-one.jpg', 'camp-two.jpg', 'camp-three.jpg', 'camp-four.jpg', 'camp-five.jpg', 'camp-six.jpg', 'camp-seven.jpg', 'camp-eight.jpg', 'graduation-one.jpg', 'graduation-two.jpg', 'graduation-three.jpg', 'graduation-four.jpg', 'graduation-five.jpg', 'graduation-six.jpg', 'graduation-seven.jpg'];
     $('<img alt="Scholarships" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
 	
@@ -417,15 +437,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	var images = ['station-one.jpg', 'station-two.jpg', 'station-three.jpg', 'station-four.jpg', 'station-five.jpg', 'station-six.jpg'];
     $('<img alt="Exploration Stations" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
 </script>
-    <div class="row bg-gray-5 give-row padding-bottom-40 margin-top-10">
-      <div class="container text-center">
-        <div class="icon-circle-gray-lg"><i class="fas fa-university"></i></div>
-        <h1 class="margin-top-10 margin-bottom-5 text-uppercase font-weight-400">Board of Directors</h1>
-        <div class="no-margin-top margin-lg-150">The <a href="../foundation-board/">Foundation’s Board of Directors</a> oversees the <a href="dcl-foundation-2020-annual-report.pdf" target="_blank">business and affairs</a> of the Foundation and the <a href="five-year-foundation-report.pdf" target="_blank">fundraising activities</a> that are vital to supporting all of the programs and services of the district. </div>
-        <h4 class="">Questions or comments?</h4>
-        <a href="#" type="button" class="btn btn-lg text-uppercase btn-primary" data-toggle="modal" data-target="#mediamodal">Contact the Foundation</a>
-        <div class="margin-top-10">or call <a href="tel:+13037643311" class="text-nowrap">(303) 764-3311</a></div>
-      </div>
+  <div class="row">
+    <div class="white-bottom-bkg">
+      <div class="white-circle"><i class="fas fa-university"></i></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container text-center">
+      <h1 class="margin-top-10 margin-bottom-5 text-uppercase font-weight-400">Board of Directors</h1>
+      <div class="no-margin-top margin-lg-150">The <a href="../foundation-board/">Foundation’s Board of Directors</a> oversees the <a href="dcl-foundation-2020-annual-report.pdf" target="_blank">business and affairs</a> of the Foundation and the <a href="five-year-foundation-report.pdf" target="_blank">fundraising activities</a> that are vital to supporting all of the programs and services of the district. </div>
+      <h4 class="">Questions or comments?</h4>
+      <a href="#" type="button" class="btn btn-lg text-uppercase btn-primary" data-toggle="modal" data-target="#mediamodal">Contact the Foundation</a>
+      <div class="margin-top-10">or call <a href="tel:+13037643311" class="text-nowrap">(303) 764-3311</a></div>
     </div>
   </div>
   
