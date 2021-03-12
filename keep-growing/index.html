@@ -88,17 +88,41 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+@font-face {
+	font-family: 'Quincy CF';
+	src: url('../shared-assets/web-fonts/QuincyCF-Bold.woff2') format('woff2'), url('../shared-assets/web-fonts/QuincyCF-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+h1.quincy, h3.quincy {
+	font-family: 'Quincy CF', serif;
+	color: #513125;
+	line-height: .9em;
+}
+.sky {
+	background: transparent url(earth-sky.jpg) bottom center repeat-x;
+	margin-left: -15px;
+	margin-right: -15px;
+    height: 600px;
+}
+.grass {
+	background: transparent url("grass-background.jpg") center center repeat-x;
+	height: 300px;
+	margin-top: -160px;
+}
+    .btn-primary {
+	background-color: #2b510c;
+}
+.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
+	background-color: #457a13;
+}
 .item-wrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
-}
-.intro {
-	text-align: center;
-	margin: 10px auto 20px auto;
-	max-width: 700px;
 }
 .item {
 	width: 275px;
@@ -108,17 +132,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding: 15px 5px;
 	border-radius: 2px;
 	text-align: center;
-}
-.item:hover {
-	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px 0;
-	box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px 0;
-}
-.item h5 {
-	color: #444;
-	margin: 0;
-}
-.item-wrapper > a:link, .item-wrapper > a:visited, .item-wrapper > a:hover, .item-wrapper > a:active {
-	text-decoration: none;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -307,26 +320,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Saturday Pick-me-up!</h1>
-        <div class="separator-container">
-          <div class="separator line-separator"><i class="fas fa-seedling"></i></div>
-        </div>
-      </div>
-      <h4 class="roboto intro">Saturdays in April, 10AM-2PM. All DCL Locations.</h4>
+  <div class="sky row black padding-top-60">
+    <div class="container text-center">
+      <h1 class="quincy no-margin">Saturday Pick-me-up!</h1>
+      <h3 class="quincy margin-top-10">Saturdays in April, 10AM-2PM. All DCL Locations.</h3>
     </div>
-  </div>
-  <div class="row">
-    <div class="container margin-lg-275">
-      <div>We love Saturdays, and what better way to brighten your day than with a springtime Pick-Me-Up! Visit any DCL location each Saturday this month from 10AM-2PM for fun activities and giveaways for all ages (while supplies last). We’ll also hold a grand prize random drawing each week to keep you growing and going—registration for each event automatically enters you into that week’s drawing. <a href="#" data-toggle="modal" data-target="#rules">Official Rules apply</a>.</div>
+    <div class="container margin-lg-300">
+      <div class="">We love Saturdays, and what better way to brighten your day than with a springtime Pick-Me-Up! Visit any DCL location each Saturday this month from 10AM-2PM for fun activities and giveaways for all ages (while supplies last).</div>
+      <div class="margin-top-15">We’ll also hold a grand prize random drawing each week to keep you growing and going—registration for each event automatically enters you into that week’s drawing. <a href="#" data-toggle="modal" data-target="#rules">Official Rules apply</a>.</div>
       <div class="text-center">
-        <h4 class="no-margin-bottom">We can’t wait to treat you!</h4>
+        <h3 class="quincy no-margin-bottom">We can’t wait to treat you!</h3>
         <div><a href="#" target="_blank" class="btn btn-primary btn-lg margin-top-15 margin-bottom-30">Register Now!</a></div>
       </div>
     </div>
   </div>
+
+  <!--- modal -->
   <div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog">
       <div class="modal-content">
