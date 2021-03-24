@@ -112,12 +112,11 @@ h3.quincy {
 }
 .sky {
 	background: transparent url("full-background.jpg") bottom center repeat-x;
+	padding-top: 80px;
 	margin-left: -15px;
 	margin-right: -15px;
 	height: 640px;
 }
-
-
 .links {
 	font-family: 'Quincy CF', serif;
 	display: flex;
@@ -126,7 +125,7 @@ h3.quincy {
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 30px 0;
+	padding: 20px 0;
 	font-size: 26px;
 	text-transform: uppercase;
 }
@@ -146,9 +145,26 @@ h3.quincy {
 	text-decoration: none;
 	box-shadow: 0px 0px 18px 0px rgba(255,255,255,.8);
 }
+.bubble {
+	position: relative;
+	bottom: 130px;
+	left: 115px;
+	-webkit-animation: fade-in-text .1s linear 3s both;
+	animation: fade-in-text .1s linear 3s both;
+	-webkit-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+}
+a .bubble:hover {
+	transform: scale(1.05);
+}
 
-@media (max-width:992px) {
-
+@media (max-width:575px) {
+h1.quincy {
+	font-size: 64px;
+}
+h3.quincy {
+	font-size: 46px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -337,16 +353,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="sky row padding-top-60">
+  <div class="sky row">
     <div class="container text-center">
       <h3 class="quincy no-margin text-uppercase">Keep On</h3>
       <h1 class="quincy no-margin text-uppercase">Growing</h1>
     </div>
     <div class="container item-wrapper">
-      <div>
-        <div class="links"> <a id="link-one" href="#">Fairytale Ball</a> <a id="link-two" href="camp-dcl/">Summer Camps</a> <a id="link-three" href="#">Earth Day</a> </div>
-      </div>
-    </div>
+      <div class="links"> <a id="link-one" href="#">Fairytale Ball</a> <a id="link-two" href="camp-dcl/">Summer Camps</a> <a id="link-three" href="#">Earth Day</a> </div>
+      <a href="keep-growing/"><img class="bubble" src="talk-bubble.png" alt="Sign up for Saturday fun and giveaways!"></a> </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
