@@ -94,7 +94,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 @font-face {
 	font-family: 'Quincy CF';
-	src: url('/shared-assets/web-fonts/QuincyCF-Bold.woff2') format('woff2'), url('/shared-assets/web-fonts/QuincyCF-Bold.woff') format('woff');
+	src: url('shared-assets/web-fonts/QuincyCF-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/QuincyCF-Bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -104,30 +104,51 @@ h1.quincy, h3.quincy {
 	color: #513125;
 	line-height: .9em;
 }
+h1.quincy {
+	font-size: 100px;
+}
+h3.quincy {
+	font-size: 60px;
+}
 .sky {
 	background: transparent url("full-background.jpg") bottom center repeat-x;
 	margin-left: -15px;
 	margin-right: -15px;
 	height: 640px;
 }
-.grass {
-	background: transparent url("grass-background.jpg") center center repeat-x;
-	height: 300px;
-	margin-top: -160px;
-}
-.btn-primary {
-	background-color: #2b510c;
-}
-.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
-	background-color: #457a13;
-}
-.item-wrapper {
+
+
+.links {
+	font-family: 'Quincy CF', serif;
 	display: flex;
 	flex-direction: column;
-	max-width: 600px;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
+	text-align: center;
+	padding: 30px 0;
+	font-size: 26px;
+	text-transform: uppercase;
+}
+#link-one, #link-two, #link-three, #link-four {
+	width: 325px;
+	background: #2b510c;
+	color: #fff;
+	margin: 10px;
+	padding: 15px 5px;
+	border-radius: 2px;
+	-webkit-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+}
+#link-one:hover, #link-two:hover, #link-three:hover, #link-four:hover {
+	background: #99371a;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0px 0px 18px 0px rgba(255,255,255,.8);
+}
+
+@media (max-width:992px) {
+
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -316,13 +337,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="sky row black padding-top-60">
+  <div class="sky row padding-top-60">
     <div class="container text-center">
-      <h1 class="quincy no-margin">Title goes here</h1>
-      <h3 class="quincy margin-top-10">Sub goes here</h3>
+      <h3 class="quincy no-margin text-uppercase">Keep On</h3>
+      <h1 class="quincy no-margin text-uppercase">Growing</h1>
     </div>
     <div class="container item-wrapper">
-      <div></div>
+      <div>
+        <div class="links"> <a id="link-one" href="#">Fairytale Ball</a> <a id="link-two" href="camp-dcl/">Summer Camps</a> <a id="link-three" href="#">Earth Day</a> </div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -385,13 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!--randomize div--> 
-<script>
-var random = Math.floor(Math.random() * $('.theme').length);
-$('.theme').hide().eq(random).show();
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
