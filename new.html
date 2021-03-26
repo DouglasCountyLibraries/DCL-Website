@@ -183,10 +183,9 @@ a .bubble:hover {
 }
 }
 
-
 @media (max-width:991px) {
-    .bubble {
-display: none;
+.bubble {
+	display: none;
 }
 .sky {
 	background: transparent url("small-background.jpg") bottom center no-repeat;
@@ -197,6 +196,7 @@ display: none;
 .links {
 	padding: 0;
 	margin-top: -70px;
+	margin-bottom: 40px;
 }
 }
 
@@ -206,6 +206,90 @@ h1.quincy {
 }
 h3.quincy {
 	font-size: 48px;
+}
+}
+/* Trish */
+    
+.slide:hover, .slide:focus {
+	bottom: 10px;
+}
+.slide {
+	position: fixed;
+	bottom: -2px;
+	left: 0;
+	width: 270px;
+	height: 222px;
+	-webkit-transition-duration: 0.1s;
+	transition-duration: 0.1s;
+}
+.slide {
+	-webkit-animation: slide 30s cubic-bezier(0, 0, 0, 0) 3s both;
+	animation: slide 30s cubic-bezier(0, 0, 0, 0) 3s both;
+}
+@-webkit-keyframes slide {
+0% {
+-webkit-transform: translateX(-100px);
+transform: translateX(-100px);
+}
+100% {
+-webkit-transform: translateX(100vw);
+transform: translateX(100vw);
+}
+}
+@keyframes slide {
+0% {
+-webkit-transform: translateX(-100px);
+transform: translateX(-100px);
+}
+100% {
+-webkit-transform: translateX(100vw);
+transform: translateX(100vw);
+}
+}
+.trish-bubble {
+	-webkit-animation: trish-bubble 6s cubic-bezier(0, 0, 0, 0) 12s both;
+	animation: trish-bubble 6s cubic-bezier(0, 0, 0, 0) 12s both;
+}
+@-webkit-keyframes trish-bubble {
+0% {
+opacity: 0;
+}
+1% {
+opacity: 1;
+}
+99% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
+@keyframes trish-bubble {
+0% {
+opacity: 0;
+}
+1% {
+opacity: 1;
+}
+99% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
+.trish {
+	width: 75px;
+	height: 40px;
+	background: url('trish.png') left center;
+	animation: play .1s steps(2) infinite;
+}
+@keyframes play {
+from {
+background-position: 0px 0px;
+}
+to {
+background-position: -150px 0px;
 }
 }
 </style>
@@ -406,13 +490,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row small-row hidden-md hidden-lg">
     <div class="container item-wrapper">
-      <div class="links"> <a class="link-one" href="#">Fairytale Ball</a> <a class="link-two" href="camp-dcl/">Summer Camps</a> <a class="link-three" href="#">Earth Day</a> </div>
-      <a href="keep-growing/"><img class="bubble" src="talk-bubble.png" alt="Sign up for Saturday fun and giveaways!"></a> </div>
+      <div class="links"> <a class="link-one" href="#">Fairytale Ball</a> <a class="link-two" href="camp-dcl/">Summer Camps</a> <a class="link-three" href="#">Earth Day</a></div>
+    </div>
   </div>
   <div class="row volunteers">
     <div class="vmonth">DCL volunteers are blooming great! Celebrate <a class="text-underline" href="#" target="_blank">National Volunteer Month</a> with us.</div>
   </div>
-  <!-- InstanceEndEditable --> </div>
+  <a href="https://www.dcl.org/keep-growing">
+  <div class="slide hidden-lg hidden-md"><img style="margin-left:50px;height:182px;width:220px;" class="trish-bubble" src="trish-bubble.png" alt="Sign up for Saturday fun and giveaways!">
+    <div class="trish"></div>
+  </div>
+  </a> <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
     <div class="social-footer">
