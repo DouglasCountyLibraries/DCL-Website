@@ -143,7 +143,7 @@ h3.quincy {
 	font-size: 26px;
 	text-transform: uppercase;
 }
-#link-one, #link-two, #link-three, #link-four {
+.link-one, .link-two, .link-three, .link-four {
 	width: 325px;
 	background: #2b510c;
 	color: #fff;
@@ -153,7 +153,7 @@ h3.quincy {
 	-webkit-transition-duration: 0.8s;
 	transition-duration: 0.8s;
 }
-#link-one:hover, #link-two:hover, #link-three:hover, #link-four:hover {
+.link-one:hover, .link-two:hover, .link-three:hover, .link-four:hover {
 	background: #99371a;
 	color: #fff;
 	text-decoration: none;
@@ -171,6 +171,9 @@ h3.quincy {
 a .bubble:hover {
 	transform: scale(1.05);
 }
+.small-row {
+	background: #abc059;
+}
 
 @media (max-width:1199px) {
 .bubble {
@@ -180,29 +183,29 @@ a .bubble:hover {
 }
 }
 
-@media (max-width:991px) {
-.bubble {
-	position: relative;
-	bottom: 130px;
-	left: 35px;
-}
-}
 
-@media (max-width:992px) {
+@media (max-width:991px) {
+    .bubble {
+display: none;
+}
 .sky {
 	background: transparent url("small-background.jpg") bottom center no-repeat;
 	padding: 35px 15px 705px;
 	margin-left: -15px;
 	margin-right: -15px;
 }
+.links {
+	padding: 0;
+	margin-top: -70px;
+}
 }
 
 @media (max-width:575px) {
 h1.quincy {
-	font-size: 64px;
+	font-size: 68px;
 }
 h3.quincy {
-	font-size: 46px;
+	font-size: 48px;
 }
 }
 </style>
@@ -397,8 +400,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h3 class="quincy no-margin text-uppercase">Keep On</h3>
       <h1 class="quincy no-margin text-uppercase">Growing</h1>
     </div>
+    <div class="container item-wrapper hidden-xs hidden-sm">
+      <div class="links"> <a class="link-one" href="#">Fairytale Ball</a> <a class="link-two" href="camp-dcl/">Summer Camps</a> <a class="link-three" href="#">Earth Day</a> </div>
+      <a href="keep-growing/"><img class="bubble" src="talk-bubble.png" alt="Sign up for Saturday fun and giveaways!"></a> </div>
+  </div>
+  <div class="row small-row hidden-md hidden-lg">
     <div class="container item-wrapper">
-      <div class="links"> <a id="link-one" href="#">Fairytale Ball</a> <a id="link-two" href="camp-dcl/">Summer Camps</a> <a id="link-three" href="#">Earth Day</a> </div>
+      <div class="links"> <a class="link-one" href="#">Fairytale Ball</a> <a class="link-two" href="camp-dcl/">Summer Camps</a> <a class="link-three" href="#">Earth Day</a> </div>
       <a href="keep-growing/"><img class="bubble" src="talk-bubble.png" alt="Sign up for Saturday fun and giveaways!"></a> </div>
   </div>
   <div class="row volunteers">
