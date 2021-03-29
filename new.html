@@ -91,6 +91,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
+<link type="text/css" rel="stylesheet" href="shared-assets/css/trish.css">
 <style>
 @font-face {
 	font-family: 'Quincy CF';
@@ -140,17 +141,20 @@ h3.quincy {
 	align-items: center;
 	text-align: center;
 	padding: 20px 0;
-	font-size: 22px;
+	font-size: 20px;
+	letter-spacing: .5px;
 }
-..link:visited, .link:active {
-width: 350px;
-background: #2b510c;
-color: #fff;
-margin: 10px;
-padding: 15px 5px;
-border-radius: 2px;
--webkit-transition-duration: 0.8s;
-transition-duration: 0.8s;
+.link, .link:visited, .link:active {
+	width: 360px;
+	background: #2b510c;
+	color: #fff;
+	margin: 10px;
+	padding: 15px 5px;
+	border-radius: 2px;
+	-webkit-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 .link:hover {
 	background: #99371a;
@@ -158,7 +162,7 @@ transition-duration: 0.8s;
 	text-decoration: none;
 	box-shadow: 0px 0px 18px 0px rgba(255,255,255,.8);
 }
-.bubble {
+.alt-bubble {
 	position: relative;
 	bottom: 130px;
 	left: 115px;
@@ -167,7 +171,7 @@ transition-duration: 0.8s;
 	-webkit-transition-duration: 0.8s;
 	transition-duration: 0.8s;
 }
-a .bubble:hover {
+a .alt-bubble:hover {
 	transform: scale(1.05);
 }
 .small-row {
@@ -175,7 +179,7 @@ a .bubble:hover {
 }
 
 @media (max-width:1199px) {
-.bubble {
+.alt-bubble {
 	position: relative;
 	bottom: 130px;
 	left: 35px;
@@ -183,7 +187,7 @@ a .bubble:hover {
 }
 
 @media (max-width:991px) {
-.bubble {
+.alt-bubble {
 	display: none;
 }
 .sky {
@@ -205,90 +209,6 @@ h1.quincy {
 }
 h3.quincy {
 	font-size: 48px;
-}
-}
-/* Trish */
-    
-.slide:hover, .slide:focus {
-	bottom: 10px;
-}
-.slide {
-	position: fixed;
-	bottom: -2px;
-	left: 0;
-	width: 270px;
-	height: 222px;
-	-webkit-transition-duration: 0.1s;
-	transition-duration: 0.1s;
-}
-.slide {
-	-webkit-animation: slide 30s cubic-bezier(0, 0, 0, 0) 3s both;
-	animation: slide 30s cubic-bezier(0, 0, 0, 0) 3s both;
-}
-@-webkit-keyframes slide {
-0% {
--webkit-transform: translateX(-100px);
-transform: translateX(-100px);
-}
-100% {
--webkit-transform: translateX(100vw);
-transform: translateX(100vw);
-}
-}
-@keyframes slide {
-0% {
--webkit-transform: translateX(-100px);
-transform: translateX(-100px);
-}
-100% {
--webkit-transform: translateX(100vw);
-transform: translateX(100vw);
-}
-}
-.trish-bubble {
-	-webkit-animation: trish-bubble 6s cubic-bezier(0, 0, 0, 0) 12s both;
-	animation: trish-bubble 6s cubic-bezier(0, 0, 0, 0) 12s both;
-}
-@-webkit-keyframes trish-bubble {
-0% {
-opacity: 0;
-}
-1% {
-opacity: 1;
-}
-99% {
-opacity: 1;
-}
-100% {
-opacity: 0;
-}
-}
-@keyframes trish-bubble {
-0% {
-opacity: 0;
-}
-1% {
-opacity: 1;
-}
-99% {
-opacity: 1;
-}
-100% {
-opacity: 0;
-}
-}
-.trish {
-	width: 75px;
-	height: 40px;
-	background: url('trish.png') left center;
-	animation: play .1s steps(2) infinite;
-}
-@keyframes play {
-from {
-background-position: 0px 0px;
-}
-to {
-background-position: -150px 0px;
 }
 }
 </style>
@@ -485,7 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="container item-wrapper hidden-xs hidden-sm">
       <div class="link-wrapper"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=fairy+tale+ball&lib=ALL&nd=55" target="_blank" class="link">Imagine a Fairytale Ball</a> <a class="link" href="camp-dcl/">Summer Camps for Sprouts</a> <a class="link" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1865380934">We Dig the Earth </a> </div>
-      <a href="keep-growing/"><img class="bubble" src="talk-bubble.png" alt="Sign up for Saturday fun and giveaways!"></a> </div>
+      <a href="keep-growing/"><img class="alt-bubble" src="alt-bubble.png" alt="Sign up for Saturday fun and giveaways!"></a> </div>
   </div>
   <div class="row small-row hidden-md hidden-lg">
     <div class="container item-wrapper">
@@ -495,8 +415,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row volunteers">
     <div class="vmonth">Our volunteers are blooming great! Celebrate National Volunteer Month with us.</div>
   </div>
-  <a href="https://www.dcl.org/keep-growing">
-  <div class="slide hidden-lg hidden-md"><img style="margin-left:50px;height:182px;width:220px;" class="trish-bubble" src="trish-bubble.png" alt="Sign up for Saturday fun and giveaways!">
+  <a href="keep-growing">
+  <div class="slide hidden-md hidden-lg"><img class="bubble" src="shared-assets/images/talk-bubble.png" alt="Sign up for Saturday fun and giveaways!">
     <div class="trish"></div>
   </div>
   </a> <!-- InstanceEndEditable --> </div>
