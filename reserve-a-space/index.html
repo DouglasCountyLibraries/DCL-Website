@@ -121,25 +121,28 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 	font-size: 1.4em;
 	padding-bottom: 15px;
 }
+    blockquote {
+        font-size: 16px;
+    }
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
 .fa-star {
 	color: #FFBE0C;
 }
-    .box-wrapper {
+.box-wrapper {
 	display: flex;
 	align-content: center;
 	justify-content: center;    
-    }
+}
 .box-item {
 	flex: 1;
 	flex-direction: column;
 	display: flex;
     padding-bottom: 30px;
 }
-    .box-inner {
-margin: 0 30px;
+.box-inner {
+    margin: 0 30px;
 }
 .bottom-button {
 	margin-top: auto;
@@ -164,12 +167,15 @@ margin: 0 30px;
 .flickity-viewport {
 	transition: height 0.6s;
 }
-
 .modal-background {
 	background: #fff url("modal-background.jpg") top center no-repeat;
 	padding: 40px 40px 45px 40px;
 	color: #000;
 	border: 30px solid #fff;
+}
+.material-icons.custom {
+	font-size: 80px;
+	line-height: 135px;
 }
 .icon-circle-custom-lg {
 	border: 6px solid #4f878c;
@@ -184,24 +190,22 @@ margin: 0 30px;
 	text-align: center;
 	width: 150px;
 }
-.wedding-row {
+.feature-row {
 	background: #4f878c url("row-background.gif") top center repeat-x;
-	padding-bottom: 65px;
+	padding-bottom: 60px;
 }
-
-    @media (max-width: 992px) {
-        .box-wrapper {
+@media (max-width: 992px) {
+.box-wrapper {
 	flex-direction: column;   
-    }
-        .box-item {
+}
+.box-item {
 	max-width: 800px;
 	align-self: center;
 }
-            .box-inner {
-margin: 0 15px;
+.box-inner {
+    margin: 0 15px;
 }
 }
-
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -389,7 +393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-20">
+  <div class="row border-top">
     <div class="container text-center margin-lg-125 margin-md-50">
       <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Reserve a Space</h1>
       <div class="separator-container">
@@ -399,12 +403,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-teal">
-    <div class="container text-center white margin-lg-225 margin-md-50 padding-top-30 padding-bottom-40">
-      <div class="large-text">DCL meeting rooms are open! Stop zooming and space out in person to get things done. Our meeting rooms are available at 50% of room capacity, with sanitizing practices in place.</div>
+  <div class="row feature-row">
+    <div class="container margin-top-10 white text-center margin-lg-225 margin-md-50">
+      <div class="icon-circle-custom-lg"><span class="material-icons custom">meeting_room</span></div>
+      <div class="large-text margin-top-10">DCL meeting rooms are open! Stop zooming and space out in person to get things done. Our meeting rooms are available at 50% of room capacity, with sanitizing practices in place.</div>
     </div>
   </div>
-  <div class="row">
+  <div class="row padding-bottom-30">
     <div class="box-wrapper container-md no-padding">
       <div class="box-item">
         <div id="box-one"></div>
@@ -490,11 +495,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     $('<img alt="Parker Recording Studio" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
 
 </script>
-  <div class="row wedding-row">
+  <div class="row feature-row">
     <div class="container white text-center margin-lg-150 margin-md-50">
       <div class="icon-circle-custom-lg"><i class="fas fa-spa"></i></div>
-      <h1 class="margin-top-10 margin-bottom-5 white text-uppercase font-weight-400">Say I do at DCL</h1>
-      <div class="large-text">Looking for a unique location as your wedding shower, rehearsal dinner, or wedding venue? Consider choosing one of our beautiful libraries. Our expert event coordinators can help with all the details of your special event, so you can celebrate. Start your <a class="white text-underline" href="../say-i-do/">happily ever after here</a>.</div>
+      <div class="large-text margin-top-10">Looking for a unique location as your wedding shower, rehearsal dinner, or wedding venue? Consider choosing one of our beautiful libraries. Our expert event coordinators can help with all the details of your special event, so you can celebrate. Start your <a class="white text-underline" href="../say-i-do/">happily ever after here</a>.</div>
       <div class="margin-top-5 white"><i>DCL adheres to all state and local health department guidelines for <a class="white text-underline" href="https://covid19.colorado.gov/safer-at-home/indoor-events" target="_blank">operations and events</a>.</i></div>
     </div>
   </div>
