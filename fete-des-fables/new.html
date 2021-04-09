@@ -124,6 +124,17 @@ h1.better-times {
 	padding-top: 125px;
 	margin-left: -15px;
 }
+h4.better-times {
+	font-family: 'Better Times', serif;
+	font-size: 65px;
+	line-height: .9em;
+	background: #c6e6dc;
+	background: -webkit-linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
+	background: -moz-linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
+	background: linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 h1.quentin {
 	font-family: 'Quentin Sonata', serif;
 	font-size: 120px;
@@ -148,8 +159,12 @@ h4.austral {
 	font-size: 24px;
 }
 .row.ocean {
-	background: linear-gradient(#003366, #000000);
 	padding: 60px 0 110px;
+}
+#spotlight {
+	background: rgb(0,0,0);
+	text-align: center;
+	height: 100vh;
 }
 .item-wrapper {
 	display: flex;
@@ -361,9 +376,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row ocean">
+  <div id="spotlight" class="row ocean">
     <div class="container white">
-      <h4 class="white text-center">Anything is possible when you believe.</h4>
+      <h4 class="better-times text-center">Anything is possible when you believe.</h4>
       <div class="padding-bottom-15">Join the Douglas County Libraries Foundation and explore the depths of Hans Christian Andersen’s imagination! You’re invited to dive into our first-ever Family Fête, The Little Mermaid: A Family Shellabration, on August 28. Our Lone Tree location will transform into the delightful undersea world of Ariel and friends for this unforgettable evening of entertainment and fun.</div>
       <div>Please also join us for our Sixth Annual* Fête des Fables gala on September 24. We’re diving back in to our annual gala, where adults can enjoy exceptional entertainment, fine dining and drinks, and our classic silent auction. </div>
     </div>
@@ -466,7 +481,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+    
+		// DOM Ready
+		$(function() {
+		
+			var originalBGspotlight = $("#spotlight").css("background-color"),
+			    x, y, xy, bgWebKit, bgMoz, 
+			    lightColor = "#004a93",
+			    gradientSize = 800;
+					
+				// Basic Demo
+				$('#spotlight').mousemove(function(e) {
+				
+					x  = e.pageX - this.offsetLeft;
+					y  = e.pageY - this.offsetTop;
+					xy = x + " " + y;
+					   
+					bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgb(0,0,0))), " + originalBGspotlight;
+					bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGspotlight + " " + gradientSize + "px)";
+										
+					$(this)
+						.css({ background: bgWebKit })
+						.css({ background: bgMoz });
+					
+				}).mouseleave(function() {			
+					$(this).css({ background: originalBGspotlight });
+				});
+
+				
+		});
+	</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
