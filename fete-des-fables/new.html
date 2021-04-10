@@ -89,6 +89,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+    .white {
+	color: rgba(255,255,255,.1);transition-duration: .8s;
+}
+    .white:hover {
+        color: rgba(255,255,255,1);
+    }
 @font-face {
 	font-family: 'Quentin Sonata';
 	src: url('../shared-assets/web-fonts/Quentin.woff2') format('woff2'), url('../shared-assets/web-fonts/Quentin.woff') format('woff');
@@ -141,11 +147,20 @@ h1.quentin {
 	color: #05afa5;
 	line-height: auto;
 	margin: 0 0 -22px;
+    opacity: .2;
+    transition-duration: .8s;
+}
+    h1.quentin:hover {
+opacity: 1;
+        cursor: pointer;
 }
 .little-box {
 	background: transparent url(tail.png) bottom center no-repeat;
 	height: 197px;
 	margin: 0 auto;
+
+}
+
 }
 .item-wrapper {
 	display: flex;
@@ -161,11 +176,8 @@ h4.austral {
 .row.ocean {
 	padding: 60px 0 110px;
 }
-#spotlight {
-	/*Fallback */
-	background: #000;
-	/*Linear gradient */
-	background: radial-gradient(at center, #004a93, #000);
+#playpen {
+	background-color: #000;
 	height: 100vh;
 }
 .item-wrapper {
@@ -378,7 +390,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div id="spotlight" class="row ocean">
+  <div id="playpen" class="row ocean">
     <div class="container white">
       <h4 class="better-times text-center">Anything is possible when you believe.</h4>
       <div class="padding-bottom-15">Join the Douglas County Libraries Foundation and explore the depths of Hans Christian Andersen’s imagination! You’re invited to dive into our first-ever Family Fête, The Little Mermaid: A Family Shellabration, on August 28. Our Lone Tree location will transform into the delightful undersea world of Ariel and friends for this unforgettable evening of entertainment and fun.</div>
@@ -485,31 +497,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-    
 		// DOM Ready
 		$(function() {
 		
-			var originalBGspotlight = $("#spotlight").css("background-color"),
+			var originalBGplaypen = $("#playpen").css("background-color"),
 			    x, y, xy, bgWebKit, bgMoz, 
 			    lightColor = "#004a93",
 			    gradientSize = 800;
 					
 				// Basic Demo
-				$('#spotlight').mousemove(function(e) {
+				$('#playpen').mousemove(function(e) {
 				
 					x  = e.pageX - this.offsetLeft;
 					y  = e.pageY - this.offsetTop;
 					xy = x + " " + y;
 					   
-					bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgb(0,0,0))), " + originalBGspotlight;
-					bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGspotlight + " " + gradientSize + "px)";
+					bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgb(0,0,0))), " + originalBGplaypen;
+					bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGplaypen + " " + gradientSize + "px)";
 										
 					$(this)
 						.css({ background: bgWebKit })
 						.css({ background: bgMoz });
 					
 				}).mouseleave(function() {			
-					$(this).css({ background: originalBGspotlight });
+					$(this).css({ background: "radial-gradient(center, #004a93, #000000)"});
 				});
 
 				
