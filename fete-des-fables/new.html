@@ -89,12 +89,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-    .white {
-	color: rgba(255,255,255,.1);transition-duration: .8s;
+.white {
+	color: rgba(255,255,255,1);
+	transition-duration: .8s;
 }
-    .white:hover {
-        color: rgba(255,255,255,1);
-    }
+.white:hover {
+	color: rgba(255,255,255,1);
+}
 @font-face {
 	font-family: 'Quentin Sonata';
 	src: url('../shared-assets/web-fonts/Quentin.woff2') format('woff2'), url('../shared-assets/web-fonts/Quentin.woff') format('woff');
@@ -127,8 +128,12 @@ h1.better-times {
 	font-size: 90px;
 	color: #c6e6dc;
 	word-spacing: 97px;
-	padding-top: 125px;
-	margin-left: -15px;
+    transition-duration: .8s;
+}
+    h1.better-times:hover {
+
+	color: #fff;
+
 }
 h4.better-times {
 	font-family: 'Better Times', serif;
@@ -147,23 +152,29 @@ h1.quentin {
 	color: #05afa5;
 	line-height: auto;
 	margin: 0 0 -22px;
-    opacity: .2;
-    transition-duration: .8s;
-}
-    h1.quentin:hover {
-opacity: 1;
-        cursor: pointer;
-}
-.little-box {
-	background: transparent url(tail.png) bottom center no-repeat;
-	height: 197px;
-	margin: 0 auto;
 
+	transition-duration: .8s;
 }
-
+h1.quentin:hover {
+	color: #07f3e5;
+	
+}
+.mermaid img {
+    opacity: .8;
+    	transition-duration: .8s;
+}
+.mermaid img:hover {
+    opacity: 1;
 }
 .item-wrapper {
 	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.item {
+	margin: 15px;
+	width: 400px;
 }
 .austral {
 	font-family: 'Austral Slab Blur Reg', serif;
@@ -179,20 +190,6 @@ h4.austral {
 #playpen {
 	background-color: #000;
 	height: 100vh;
-}
-.item-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
-}
-.item {
-	margin: 15px;
-	width: 400px;
-}
-.item.mermaid {
-	margin: 0;
-	width: 280px;
 }
 .btn-primary {
 	background-color: #1e4a72;
@@ -391,21 +388,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div id="playpen" class="row ocean">
-    <div class="container white">
-      <h4 class="better-times text-center">Anything is possible when you believe.</h4>
-      <div class="padding-bottom-15">Join the Douglas County Libraries Foundation and explore the depths of Hans Christian Andersen’s imagination! You’re invited to dive into our first-ever Family Fête, The Little Mermaid: A Family Shellabration, on August 28. Our Lone Tree location will transform into the delightful undersea world of Ariel and friends for this unforgettable evening of entertainment and fun.</div>
-      <div>Please also join us for our Sixth Annual* Fête des Fables gala on September 24. We’re diving back in to our annual gala, where adults can enjoy exceptional entertainment, fine dining and drinks, and our classic silent auction. </div>
-    </div>
+  <div class="container white">
+    <h4 class="better-times text-center">Anything is possible when you believe.</h4>
+  </div>
+  <div class="mermaid">
     <div class="text-center">
-      <div class="little-box">
-        <h1 class="better-times">The Little</h1>
-      </div>
-      <div class="">
-        <h1 class="quentin">Mermaid</h1>
-      </div>
+      <h1 class="better-times">The<img src="tail.png" alt="">Little</h1>
+      <h1 class="quentin">Mermaid</h1>
     </div>
     <div class="item-wrapper">
-      <div class="item white">
+      <div class="item white">Join the Douglas County Libraries Foundation and explore the depths of Hans Christian Andersen’s imagination! You’re invited to dive into our first-ever Family Fête, The Little Mermaid: A Family Shellabration, on August 28. Our Lone Tree location will transform into the delightful undersea world of Ariel and friends for this unforgettable evening of entertainment and fun.</div>
+      <img class="fade-in-background" src="mermaid.png" alt="">
+      <!--<div class="item white">
         <div>FAMILY FÊTE</div>
         <div>The Little Mermaid: A Family Shellabration</div>
         <div>DCL in Lone Tree</div>
@@ -413,19 +407,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>Saturday, August 28, 6-9PM</div>
         <div>Tickets: $50 per adult, $25 per child</div>
         <div>BUY TICKETS</div>
-      </div>
-      <div class="item mermaid"><img src="mermaid.png" alt=""></div>
-      <div class="item white">
-        <div>FÊTE DES FABLES GALA</div>
-        <div>The Little Mermaid: Dive Back In!</div>
-        <div>Denver Marriott South at Park Meadows</div>
-        <div>Come to our Sixth Annual* Fête des Fables gala in your finest—or a favorite themed outfit! Enjoy a signature cocktail, a delicious catered dinner, and a special dessert for the occasion. Talk with special guests, revel in remarkable entertainment, and experience the fun of a silent auction, where you just might find the treasure of your dreams.</div>
-        <div>Friday, September 24, 6PM</div>
-        <div>Tickets: $100</div>
-        <div>BUY TICKETS</div>
-      </div>
-    </div>
-    <div class="white text-center container padding-top-30 margin-lg-200">
+      </div>-->
+      
+      <div class="item white"> Please also join us for our Sixth Annual* Fête des Fables gala on September 24. We’re diving back in to our annual gala, where adults can enjoy exceptional entertainment, fine dining and drinks, and our classic silent auction. </div>
+      
+      <!-- <div class="white text-center container padding-top-30 margin-lg-200">
       <div>Thank you to our generous sponsors!</div>
       <div>LOGOS GO HERE</div>
       <div>Add your name to our list of sponsors.</div>
@@ -433,6 +419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div>Event proceeds from each event benefit the Douglas County Libraries Foundation.</div>
       <div>*We’re excited to dive back in after our 2020 event was canceled, and are so grateful for your support.</div>
       <div>DCL is committed to keeping our guests and staff safe by adhering to all state and local health department guidelines for operations and events.</div>
+    </div>--> 
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
