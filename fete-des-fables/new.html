@@ -128,12 +128,10 @@ h1.better-times {
 	font-size: 90px;
 	color: #c6e6dc;
 	word-spacing: 97px;
-    transition-duration: .8s;
+	transition-duration: .8s;
 }
-    h1.better-times:hover {
-
+h1.better-times:hover {
 	color: #fff;
-
 }
 h4.better-times {
 	font-family: 'Better Times', serif;
@@ -152,19 +150,30 @@ h1.quentin {
 	color: #05afa5;
 	line-height: auto;
 	margin: 0 0 -22px;
-
 	transition-duration: .8s;
 }
 h1.quentin:hover {
 	color: #07f3e5;
-	
 }
-.mermaid img {
-    opacity: .8;
-    	transition-duration: .8s;
+.fade-in-mermaid {
+	-webkit-animation: fade-in-mermaid 7s linear .8s both;
+	animation: fade-in-mermaid 7s linear .8s both;
 }
-.mermaid img:hover {
-    opacity: 1;
+@-webkit-keyframes fade-in-mermaid {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+@keyframes fade-in-mermaid {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
 }
 .item-wrapper {
 	display: flex;
@@ -174,7 +183,7 @@ h1.quentin:hover {
 }
 .item {
 	margin: 15px;
-	width: 400px;
+	width: 280px;
 }
 .austral {
 	font-family: 'Austral Slab Blur Reg', serif;
@@ -185,9 +194,9 @@ h4.austral {
 	font-size: 24px;
 }
 .row.ocean {
-	padding: 60px 0 110px;
+	padding: 60px 0 85px;
 }
-#playpen {
+#spotlight {
 	background-color: #000;
 	height: 100vh;
 }
@@ -387,19 +396,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div id="playpen" class="row ocean">
-  <div class="container white">
-    <h4 class="better-times text-center">Anything is possible when you believe.</h4>
-  </div>
-  <div class="mermaid">
-    <div class="text-center">
-      <h1 class="better-times">The<img src="tail.png" alt="">Little</h1>
-      <h1 class="quentin">Mermaid</h1>
+  <div id="spotlight" class="row ocean">
+    <div class="container text-center margin-lg-200">
+      <h4 class="better-times">Anything is possible when you believe.</h4>
+      <h5 class="white">Join the Douglas County Libraries Foundation and explore the depths of Hans Christian Andersen’s imagination!</h5>
     </div>
-    <div class="item-wrapper">
-      <div class="item white">Join the Douglas County Libraries Foundation and explore the depths of Hans Christian Andersen’s imagination! You’re invited to dive into our first-ever Family Fête, The Little Mermaid: A Family Shellabration, on August 28. Our Lone Tree location will transform into the delightful undersea world of Ariel and friends for this unforgettable evening of entertainment and fun.</div>
-      <img class="fade-in-background" src="mermaid.png" alt="">
-      <!--<div class="item white">
+    <div class="mermaid">
+      <div class="text-center">
+        <h1 class="better-times">The<img class="fade-in-mermaid" src="tail.png" alt="">Little</h1>
+        <h1 class="quentin">Mermaid</h1>
+      </div>
+      <div class="item-wrapper">
+        <div class="item white">You’re invited to dive into our first-ever Family Fête, The Little Mermaid: A Family Shellabration, on August 28. Our Lone Tree location will transform into the delightful undersea world of Ariel and friends for this unforgettable evening of entertainment and fun.</div>
+        <div class="item"><img class="fade-in-mermaid" src="mermaid.png" alt=""></div>
+        <!--<div class="item white">
         <div>FAMILY FÊTE</div>
         <div>The Little Mermaid: A Family Shellabration</div>
         <div>DCL in Lone Tree</div>
@@ -408,10 +418,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>Tickets: $50 per adult, $25 per child</div>
         <div>BUY TICKETS</div>
       </div>-->
-      
-      <div class="item white"> Please also join us for our Sixth Annual* Fête des Fables gala on September 24. We’re diving back in to our annual gala, where adults can enjoy exceptional entertainment, fine dining and drinks, and our classic silent auction. </div>
-      
-      <!-- <div class="white text-center container padding-top-30 margin-lg-200">
+        <div class="item white"> Please also join us for our Sixth Annual* Fête des Fables gala on September 24. We’re diving back in to our annual gala, where adults can enjoy exceptional entertainment, fine dining and drinks, and our classic silent auction. </div>
+        <!-- <div class="white text-center container padding-top-30 margin-lg-200">
       <div>Thank you to our generous sponsors!</div>
       <div>LOGOS GO HERE</div>
       <div>Add your name to our list of sponsors.</div>
@@ -420,6 +428,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div>*We’re excited to dive back in after our 2020 event was canceled, and are so grateful for your support.</div>
       <div>DCL is committed to keeping our guests and staff safe by adhering to all state and local health department guidelines for operations and events.</div>
     </div>--> 
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -487,20 +496,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		// DOM Ready
 		$(function() {
 		
-			var originalBGplaypen = $("#playpen").css("background-color"),
+			var originalBGspotlight = $("#spotlight").css("background-color"),
 			    x, y, xy, bgWebKit, bgMoz, 
 			    lightColor = "#004a93",
 			    gradientSize = 800;
 					
 				// Basic Demo
-				$('#playpen').mousemove(function(e) {
+				$('#spotlight').mousemove(function(e) {
 				
 					x  = e.pageX - this.offsetLeft;
 					y  = e.pageY - this.offsetTop;
 					xy = x + " " + y;
 					   
-					bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgb(0,0,0))), " + originalBGplaypen;
-					bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGplaypen + " " + gradientSize + "px)";
+					bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgb(0,0,0))), " + originalBGspotlight;
+					bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGspotlight + " " + gradientSize + "px)";
 										
 					$(this)
 						.css({ background: bgWebKit })
