@@ -91,21 +91,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 @font-face {
 	font-family: 'Quentin Sonata';
-	src: url('../shared-assets/web-fonts/Quentin.woff2') format('woff2'), url('../shared-assets/web-fonts/Quentin.woff') format('woff');
+	src: url('../../shared-assets/web-fonts/Quentin.woff2"/shared-assets/web-fonts/Quentin.woff2') format('woff2'), url('../../shared-assets/web-fonts/Quentin.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Better Times';
-	src: url('../shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../shared-assets/web-fonts/BetterTimes.woff') format('woff');
+	src: url('../../shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../../shared-assets/web-fonts/BetterTimes.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Austral Slab Blur Reg';
-	src: url('../shared-assets/web-fonts/AustralSlabBlur-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/AustralSlabBlur-Regular.woff') format('woff');
+	src: url('../../shared-assets/web-fonts/AustralSlabBlur-Regular.woff2') format('woff2'), url('../../shared-assets/web-fonts/AustralSlabBlur-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -115,40 +115,32 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .better-times {
 	font-family: 'Better Times', serif;
+	font-size: 40px;
+	line-height: .9em;
+}
+.austral {
+	font-family: 'Austral Slab Blur Reg', serif;
 }
 h1.better-times {
 	font-family: 'Better Times', serif;
 	font-size: 90px;
-	color: #c6e6dc;
-	line-height: auto;
-	margin: 0;
-	line-height: 41px;
-	transition-duration: 1s;
-}
-h1.better-times:hover {
-	color: #fff;
-}
-h4.better-times {
-	font-family: 'Better Times', serif;
-	font-size: 65px;
+	color: #a273ad;
+	margin: 0 10px;
 	line-height: .9em;
-	background: #c6e6dc;
-	background: -webkit-linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
-	background: -moz-linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
-	background: linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 h1.quentin {
 	font-family: 'Quentin Sonata', serif;
 	font-size: 120px;
-	color: #05afa5;
-	line-height: auto;
-	margin: 0 0 -33px;
-	transition-duration: 1s;
+	color: #663f6f;
+	line-height: .9em;
+	margin: 0 10px;
 }
-h1.quentin:hover {
-	color: #07f3e5;
+h4.austral {
+	text-transform: uppercase;
+	margin: 0;
+	font-size: 51px;
+	color: #028ea1;
+	line-height: .9em;
 }
 .wave-background {
 	background: #c4f4f2 url("waves.png") center bottom repeat-x;
@@ -156,7 +148,6 @@ h1.quentin:hover {
 }
 .page-background {
 	background: linear-gradient(#b3e8e1, #27b5ae);
-	height: 100vh;
 }
 .fade-in-mermaid {
 	-webkit-animation: fade-in-mermaid 7s linear .3s both;
@@ -202,14 +193,6 @@ opacity: 1;
 }
 .tail-item {
 	width: 110px;
-}
-.austral {
-	font-family: 'Austral Slab Blur Reg', serif;
-}
-h4.austral {
-	text-transform: uppercase;
-	margin: 0;
-	font-size: 24px;
 }
 .row.ocean {
 	padding: 60px 0 85px;
@@ -415,17 +398,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row wave-background"></div>
   <div class="row page-background">
-    <div class="container">
-      <div class="">
-        <div>FAMILY FÊTE</div>
-        <div>The Little Mermaid: A Family Shellabration</div>
-        <div>DCL in Lone Tree</div>
+    <div class="container padding-bottom-80">
+      <div class="text-center">
+        <h1 class="better-times">The Little</h1>
+        <h1 class="quentin">Mermaid</h1>
+        <h4 class="austral">A Family Shellabration</h4>
+      </div>
+      <div class="black">
+        
         <div>Bring the little ones to our very first Family Fête in their favorite Little Mermaid-inspired costumes (you can dress up, too)! Meet and mingle with mermaids, and enjoy fun food and drinks, games, activities, crafts and more. We’ll also have a special mermaid Storytime and a fintastic silent auction the whole family will enjoy.</div>
+          <div class="better-times">Douglas County Libraries in Lone Tree</div>
         <div>Saturday, August 28, 6-9PM</div>
         <div>Tickets: $50 per adult, $25 per child</div>
-        <div>BUY TICKETS</div>
+        <div class="align-bottom padding-top-15 text-center"><a href="#" class="btn btn-lg btn-primary">Buy Tickets</a></div>
       </div>
-      <div class="">
+      <div class="black">
         <div>Event proceeds from each event benefit the Douglas County Libraries Foundation.</div>
         <div>DCL is committed to keeping our guests and staff safe by adhering to all state and local health department guidelines for operations and events.</div>
       </div>
