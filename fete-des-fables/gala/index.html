@@ -91,21 +91,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 @font-face {
 	font-family: 'Quentin Sonata';
-	src: url('../shared-assets/web-fonts/Quentin.woff2') format('woff2'), url('../shared-assets/web-fonts/Quentin.woff') format('woff');
+	src: url('../../shared-assets/web-fonts/Quentin.woff2"/shared-assets/web-fonts/Quentin.woff2') format('woff2'), url('../../shared-assets/web-fonts/Quentin.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Better Times';
-	src: url('../shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../shared-assets/web-fonts/BetterTimes.woff') format('woff');
+	src: url('../../shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../../shared-assets/web-fonts/BetterTimes.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Austral Slab Blur Reg';
-	src: url('../shared-assets/web-fonts/AustralSlabBlur-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/AustralSlabBlur-Regular.woff') format('woff');
+	src: url('../../shared-assets/web-fonts/AustralSlabBlur-Regular.woff2') format('woff2'), url('../../shared-assets/web-fonts/AustralSlabBlur-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -115,108 +115,97 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .better-times {
 	font-family: 'Better Times', serif;
+	font-size: 58px;
+	line-height: .9em;
+	color: #663f6f;
+}
+.austral {
+	font-family: 'Austral Slab Blur Reg', serif;
 }
 h1.better-times {
 	font-family: 'Better Times', serif;
-	font-size: 90px;
-	color: #c6e6dc;
-	line-height: auto;
-	margin: 0;
-	line-height: 41px;
-	transition-duration: 1s;
-}
-h1.better-times:hover {
-	color: #fff;
-}
-h4.better-times {
-	font-family: 'Better Times', serif;
-	font-size: 65px;
+	font-size: 110px;
+	margin: 0 10px;
 	line-height: .9em;
-	background: #c6e6dc;
-	background: -webkit-linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
-	background: -moz-linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
-	background: linear-gradient(to bottom, #c6e6dc 20%, #05afa5 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #fff;
 }
 h1.quentin {
 	font-family: 'Quentin Sonata', serif;
 	font-size: 120px;
 	color: #05afa5;
-	line-height: auto;
-	margin: 0 0 -33px;
-	transition-duration: 1s;
+	line-height: .9em;
+	margin: 0 10px;
 }
-h1.quentin:hover {
-	color: #07f3e5;
-}
-.fade-in-mermaid {
-	-webkit-animation: fade-in-mermaid 7s linear .3s both;
-	animation: fade-in-mermaid 7s linear .3s both;
-}
-@-webkit-keyframes fade-in-mermaid {
-0% {
-opacity: 0;
-}
-100% {
-opacity: 1;
-}
-}
-@keyframes fade-in-mermaid {
-0% {
-opacity: 0;
-}
-100% {
-opacity: 1;
-}
-}
-.mermaid-item-wrapper {
-	display: flex;
-	align-content: center;
-	justify-content: center;
-}
-.mermaid-item {
-	color: #fff;
-	width: 300px;
-}
-.fade-in-mermaid.adjust {
-	margin-left: 30px;
-	padding: 15px 0 0;
-}
-.mermaid-item.placement {
-	padding: 30px 0 0;
-}
-.tail-item-wrapper {
-	display: flex;
-	align-content: bottom;
-	justify-content: center;
-	align-items: flex-end;
-}
-.tail-item {
-	width: 110px;
-}
-.austral {
-	font-family: 'Austral Slab Blur Reg', serif;
+h4.better-times {
+	font-family: 'Better Times', serif;
+	font-size: 75px;
+	line-height: 44px;
+	color: #c6e6dc;
 }
 h4.austral {
-	text-transform: uppercase;
-	margin: 0;
-	font-size: 24px;
+	font-family: 'Austral Slab Blur Reg', serif;
+	font-size: 36px;
+	color: #c6e6dc;
+	line-height: .9em;
 }
-.row.ocean {
-	padding: 60px 0 85px;
+.underline {
+	margin-top: -15px;
 }
-#spotlight {
-	background-color: #000;
+.wave-background {
+	background: #c4f4f2 url("waves.png") center bottom repeat-x;
+	height: 175px;
 }
-.btn-primary {
-	background-color: #1e4a72;
+.page-background {
+	background: linear-gradient(#004a93, #000000);
 }
-.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
-	background-color: #265e91;
+.mermaid-background {
+	padding: 30px 0 85px;
+}
+.item {
+	padding: 30px 0 25px;
+}
+.btn-sponsor {
+	background-color: #663f6f;
+}
+.btn-sponsor:active, .btn-sponsor:hover, .btn-sponsor:focus {
+	background-color: #a060a0;
 }
 
-@media (max-width: 992px) {
+    .btn-custom {
+	background-color: #05afa5;
+}
+.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
+	background-color: #a060a0;
+}
+
+@media (max-width: 725px) {
+h1.better-times {
+	font-size: 60px;
+}
+h1.quentin {
+	font-size: 90px;
+}
+h4.austral {
+	font-size: 30px;
+}
+.better-times {
+	font-size: 40px;
+}
+}
+
+@media (max-width: 525px) {
+h1.better-times {
+	font-size: 50px;
+}
+h1.quentin {
+	font-size: 60px;
+}
+h4.austral {
+	font-size: 26px;
+}
+.better-times {
+	font-size: 38px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -405,24 +394,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row">
-    <div class="container">
-      <div class="">
-        <div>FÊTE DES FABLES GALA</div>
-        <div>The Little Mermaid: Dive Back In! </div>
-        <div>Denver Marriott South at Park Meadows</div>
-        <div>Come to our Sixth Annual* Fête des Fables gala in your finest—or a favorite themed outfit! Enjoy a signature cocktail, a delicious catered dinner, and a special dessert for the occasion. Talk with special guests, revel in remarkable entertainment, and experience the fun of a silent auction, where you just might find the treasure of your dreams.</div>
-        <div>Friday, September 24, 6PM</div>
-        <div>Tickets: $100</div>
-        <div>BUY TICKETS</div>
-      </div>
-      <div class="">
-        <div>Thank you to our generous sponsors! Name & Logos here. </div>
-        <div>Add your name to our list of sponsors.</div>
-        <div><a href="fete-de-fables-gala-sponsorship.pdf">SPONSORSHIP PACKAGES</a></div>
-        <div>Event proceeds from each event benefit the Douglas County Libraries Foundation.</div>
-        <div><i>*We’re excited to dive back in after our 2020 event was canceled, and are so grateful for your support. </i></div>
-        <div>DCL is committed to keeping our guests and staff safe by adhering to all state and local health department guidelines for operations and events.</div>
+  <div class="row page-background">
+    <div class="mermaid-background">
+      <div class="container margin-lg-150">
+        <div class="text-center">
+          <h4 class="better-times">The Little</h4>
+          <h1 class="quentin">Mermaid</h1>
+          <h1 class="better-times">Dive Back In!</h1>
+          <div class="underline"><img src="underline.png" alt=""></div>
+        </div>
+        <div class="white text-center">
+          <div class="item">
+            <h5 class="white">Come to our Sixth Annual<span class="asterisk-space">*</span> Fête des Fables gala in your finest—or a favorite themed outfit! Enjoy a signature cocktail, a delicious catered dinner, and a special dessert for the occasion. Talk with special guests, revel in remarkable entertainment, and experience the fun of a silent auction, where you just might find the treasure of your dreams.</h5>
+          </div>
+          <h4 class="austral">Denver Marriott South at Park Meadows</h4>
+          <h5 class="no-margin white">Friday, September 24, 6PM</h5>
+          <h5 class="no-margin white">Tickets: $100</h5>
+          <div class="padding-top-15 padding-bottom-30 text-center"><a href="https://www.eventbrite.com/e/fete-des-fables-the-little-mermaid-tickets-146787604677?aff=gala" target="_blank" class="btn btn-lg btn-primary btn-custom">Buy Tickets</a></div>
+        </div>
+        <div class="white text-center">
+          <h5 class="no-margin white">Event proceeds from each event benefit the Douglas County Libraries Foundation.</h5>
+          <h5 class="no-margin white">Add your name to our list of sponsors.</h5>
+          <div class="padding-top-15 padding-bottom-30 text-center"><a href="fete-de-fables-gala-sponsorship.pdf" target="_blank" class="btn btn-lg btn-primary btn-sponsor">Sponsorship Packages</a></div>
+          <div><span class="asterisk-space">*</span>We’re excited to dive back in after our 2020 event was canceled, and are so grateful for your support. </div>
+          <div class="margin-lg-150"><i>DCL is committed to keeping our guests and staff safe by adhering to all state and local health department guidelines for <a class="text-underline white" href="https://covid19.colorado.gov/safer-at-home/indoor-events" target="_blank">operations and events</a>.</i></div>
+        </div>
       </div>
     </div>
   </div>
