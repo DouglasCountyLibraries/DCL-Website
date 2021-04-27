@@ -106,8 +106,26 @@ h1.ultima {
 	font-size: 90px;
 	margin-top: 0;
 }
-.sky {
-	background: #040012 url("background.jpg") top center/cover;
+.planet-row {
+	background: transparent url("planets.jpg") top center repeat;
+	-webkit-animation: float 320s linear infinite;
+	animation: float 320s linear infinite;
+}
+    @-webkit-keyframes float {
+from {
+background-position: 1736px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes float {
+from {
+background-position: 1736px 0;
+}
+to {
+background-position: 0 0;
+}
 }
 .row.health {
 	background: #c4337c;
@@ -794,7 +812,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row sky">
+  <div class="row planet-row">
     <div class="container-md no-padding text-center">
       <div class="item-wrapper">
         <div class="item earth-background">
