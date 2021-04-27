@@ -111,7 +111,7 @@ h1.ultima {
 	-webkit-animation: float 320s linear infinite;
 	animation: float 320s linear infinite;
 }
-    @-webkit-keyframes float {
+@-webkit-keyframes float {
 from {
 background-position: 1736px 0;
 }
@@ -190,12 +190,12 @@ background-position: 0 0;
 	background: transparent url(earth.png) center bottom no-repeat;
 }
 .ping {
-	-webkit-animation: ping 1s ease-in-out infinite both;
-	animation: ping 1s ease-in-out infinite both;
+	-webkit-animation: ping 2s ease-in-out infinite both;
+	animation: ping 2s ease-in-out infinite both;
 }
-    .alt {
-	-webkit-animation: ping 1.2s ease-in-out infinite both;
-	animation: ping 1.2s ease-in-out infinite both;
+.alt {
+	-webkit-animation: ping 1.5s ease-in-out infinite both;
+	animation: ping 1.5s ease-in-out infinite both;
 }
 .plume {
 	background: transparent url("static-plume.png") center bottom no-repeat;
@@ -211,8 +211,8 @@ background-position: 0 0;
 	animation: flicker 3s linear .2s both;
 }
 .flicker.alt {
-	-webkit-animation: flicker 3s linear both;
-	animation: flicker 3s linear both;
+	-webkit-animation: flicker 3.5s linear 2.2s both;
+	animation: flicker 3.5s linear 2.2s both;
 }
 @-webkit-keyframes flicker {
 0% {
@@ -470,15 +470,20 @@ text-shadow: none;
 transform: scale(0.9);
 opacity: 1;
 }
-95% {
+50% {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+opacity: .6;
+}
+70% {
 -webkit-transform: scale(1.2);
 transform: scale(1.2);
-opacity: 0;
+opacity: .9;
 }
 100% {
--webkit-transform: scale(2);
-transform: scale(2);
-opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(0.9);
+opacity: .2;
 }
 }
 @keyframes ping {
@@ -487,15 +492,20 @@ opacity: 0;
 transform: scale(0.9);
 opacity: 1;
 }
-95% {
+50% {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+opacity: .6;
+}
+70% {
 -webkit-transform: scale(1.2);
 transform: scale(1.2);
-opacity: 0;
+opacity: .9;
 }
 100% {
--webkit-transform: scale(2);
-transform: scale(2);
-opacity: 0;
+-webkit-transform: scale(1);
+transform: scale(0.9);
+opacity: .2;
 }
 }
 .blastoff {
