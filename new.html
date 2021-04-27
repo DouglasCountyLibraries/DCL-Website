@@ -174,17 +174,17 @@ h1.ultima {
 .ping {
 	-webkit-animation: ping 0.8s ease-in-out infinite both;
 	animation: ping 0.8s ease-in-out infinite both;
-
 }
-    .plume {
-     
-    }
+.plume {
+	background: transparent url("static-plume.png") center bottom no-repeat;
+	z-index: 100;
+	position: relative;
+}
 .rocket {
-
 	margin-bottom: -60px;
 	margin-top: 56px;
 }
-    }
+}
 @-webkit-keyframes ping {
 0% {
 -webkit-transform: scale(0.9);
@@ -219,104 +219,102 @@ transform: scale(2);
 opacity: 0;
 }
 }
-    .vibrate-3 {
-	-webkit-animation: vibrate-3 0.5s linear infinite both;
-	        animation: vibrate-3 0.5s linear infinite both;
+.blastoff {
+	-webkit-animation: blastoff 0.5s linear infinite both;
+	animation: blastoff 0.5s linear infinite both;
 }
-
-@-webkit-keyframes vibrate-3 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  10% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  20% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  30% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  50% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  70% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  90% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
+@-webkit-keyframes blastoff {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
 }
-@keyframes vibrate-3 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  10% {
-    -webkit-transform: translate(-1px, -1px);
-            transform: translate(-1px, -1px);
-  }
-  20% {
-    -webkit-transform: translate(1px, -1px);
-            transform: translate(1px, -1px);
-  }
-  30% {
-    -webkit-transform: translate(-1px, 1px);
-            transform: translate(-1px, 1px);
-  }
-  40% {
-    -webkit-transform: translate(1px, 1px);
-            transform: translate(1px, 1px);
-  }
-  50% {
-    -webkit-transform: translate(-1px, -1px);
-            transform: translate(-1px, -1px);
-  }
-  60% {
-    -webkit-transform: translate(1px, -1px);
-            transform: translate(1px, -1px);
-  }
-  70% {
-    -webkit-transform: translate(-1px, 1px);
-            transform: translate(-1px, 1px);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px);
-            transform: translate(-1px, -1px);
-  }
-  90% {
-    -webkit-transform: translate(1px, -1px);
-            transform: translate(1px, -1px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
+10% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
 }
-
+20% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+30% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+40% {
+-webkit-transform: translate(1px, 1px);
+transform: translate(1px, 1px);
+}
+50% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+60% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+70% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+80% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+90% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
+@keyframes blastoff {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+10% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+20% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+30% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+40% {
+-webkit-transform: translate(1px, 1px);
+transform: translate(1px, 1px);
+}
+50% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+60% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+70% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+80% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+90% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -508,7 +506,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container-md text-center">
       <div class="item-wrapper">
         <div class="item earth-background">
-            <div class="blast-off"><div class="rocket"><img class="vibrate-3" src="rocket.png" alt=""></div><div class="plume"><img class="ping" src="flume.png" alt=""></div></div>
+          <div class="blast-off">
+            <div class="rocket"><img class="blastoff" src="rocket.png" alt=""></div>
+            <div class="plume"><img class="ping" src="plume.png" alt=""></div>
+          </div>
         </div>
         <div class="item content">
           <h1 class="ultima text-uppercase">Countdown<br>
