@@ -108,7 +108,6 @@ h1.ultima {
 }
 .sky {
 	background: #040012 url("background.jpg") top center/cover;
-
 }
 .row.volunteers {
 	background: #c4337c;
@@ -129,29 +128,28 @@ h1.ultima {
 	align-items: center;
 	text-align: center;
 	padding: 20px 0;
-	font-size: 18px;
+	font-size: 16px;
 }
 .item-wrapper {
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
 	align-items: center;
 	text-align: center;
 }
-    .item.content {
-        width: 800px;
-    }
+.item.content {
+	width: 650px;
+}
 .item.earth-background {
-	width: 800px;
-	height: 600px;
+	width: 700px;
+	height: 700px;
 }
 .fade-in-text {
 	-webkit-animation: fade-in-text 3s linear both;
 	animation: fade-in-text 3s linear both;
 }
 .link, .link:visited, .link:active {
-	width: 375px;
+	width: 300px;
 	background: #fff;
 	color: #040012;
 	margin: 10px;
@@ -170,29 +168,37 @@ h1.ultima {
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
 }
-    .earth-background {
-        background: transparent url(earth.png) center bottom no-repeat;
-    }
+.earth-background {
+	background: transparent url(earth.png) center bottom no-repeat;
+}
 .ping {
 	-webkit-animation: ping 0.8s ease-in-out infinite both;
 	animation: ping 0.8s ease-in-out infinite both;
-	position: relative;
-	top: 315px;
+
 }
+    .plume {
+     
+    }
+.rocket {
+
+	margin-bottom: -60px;
+	margin-top: 56px;
+}
+    }
 @-webkit-keyframes ping {
 0% {
 -webkit-transform: scale(0.9);
 transform: scale(0.9);
-opacity: 0.9;
+opacity: 1;
 }
-90% {
+95% {
 -webkit-transform: scale(1.2);
 transform: scale(1.2);
 opacity: 0;
 }
 100% {
--webkit-transform: scale(2.2);
-transform: scale(2.2);
+-webkit-transform: scale(2);
+transform: scale(2);
 opacity: 0;
 }
 }
@@ -200,19 +206,117 @@ opacity: 0;
 0% {
 -webkit-transform: scale(0.9);
 transform: scale(0.9);
-opacity: 0.9;
+opacity: 1;
 }
-90% {
+95% {
 -webkit-transform: scale(1.2);
 transform: scale(1.2);
 opacity: 0;
 }
 100% {
--webkit-transform: scale(2.2);
-transform: scale(2.2);
+-webkit-transform: scale(2);
+transform: scale(2);
 opacity: 0;
 }
 }
+    .vibrate-3 {
+	-webkit-animation: vibrate-3 0.5s linear infinite both;
+	        animation: vibrate-3 0.5s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-3 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  10% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  20% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  30% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  50% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  70% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  90% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-3 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px);
+            transform: translate(-1px, -2px);
+  }
+  20% {
+    -webkit-transform: translate(1px, -2px);
+            transform: translate(1px, -2px);
+  }
+  30% {
+    -webkit-transform: translate(-1px, 2px);
+            transform: translate(-1px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(1px, 2px);
+            transform: translate(1px, 2px);
+  }
+  50% {
+    -webkit-transform: translate(-1px, -2px);
+            transform: translate(-1px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(1px, -2px);
+            transform: translate(1px, -2px);
+  }
+  70% {
+    -webkit-transform: translate(-1px, 2px);
+            transform: translate(-1px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -2px);
+            transform: translate(-1px, -2px);
+  }
+  90% {
+    -webkit-transform: translate(1px, -2px);
+            transform: translate(1px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -403,7 +507,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row sky">
     <div class="container-md text-center">
       <div class="item-wrapper">
-        <div class="item earth-background"><img class="ping" src="flume.png" alt=""></div>
+        <div class="item earth-background">
+            <div class="blast-off"><div class="rocket"><img class="vibrate-3" src="rocket.png" alt=""></div><div class="plume"><img class="ping" src="flume.png" alt=""></div></div>
+        </div>
         <div class="item content">
           <h1 class="ultima text-uppercase">Countdown<br>
             to Summer</h1>
