@@ -90,124 +90,548 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/trish.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:600" rel="stylesheet">
 <style>
 @font-face {
-	font-family: 'Quincy CF';
-	src: url('shared-assets/web-fonts/QuincyCF-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/QuincyCF-Bold.woff') format('woff');
+	font-family: 'Ultima';
+	src: url('shared-assets/web-fonts/MBFUltima.woff2') format('woff2'), url('shared-assets/web-fonts/MBFUltima.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
-h1.quincy, h3.quincy {
-	font-family: 'Quincy CF', serif;
-	color: #513125;
-	line-height: .9em;
+h1.ultima {
+	font-family: 'Ultima', sans-serif;
+	color: #fff;
+	font-size: 90px;
+	margin-top: 0;
 }
-h1.quincy {
-	font-size: 100px;
+.planet-row {
+	background: transparent url("planets.jpg") top center repeat;
+	-webkit-animation: float 320s linear infinite;
+	animation: float 320s linear infinite;
 }
-h3.quincy {
-	font-size: 60px;
+@-webkit-keyframes float {
+from {
+background-position: 1736px 0;
 }
-.sky {
-	background: transparent url("full-background.jpg") bottom center repeat-x;
-	padding-top: 80px;
-	margin-left: -15px;
-	margin-right: -15px;
-	height: 640px;
+to {
+background-position: 0 0;
 }
-.row.volunteers {
-	background: #e15435;
+}
+@keyframes float {
+from {
+background-position: 1736px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+.row.health {
+	background: #c4337c;
 	text-align: center;
 }
-.vmonth {
+.month {
 	padding: 15px;
-	font-family: 'Quincy CF', serif;
 	font-size: 22px;
-	color: #513125;
 	line-height: 1.1em;
 }
-.vmonth a {
-	color: #513125;
-}
 .link-wrapper {
-	font-family: 'Quincy CF', serif;
+	font-family: 'Roboto', serif;
+	font-weight: 600;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	text-align: center;
 	padding: 20px 0;
-	font-size: 20px;
-	letter-spacing: .5px;
+	font-size: 16px;
+}
+.item-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.item.content {
+	width: 650px;
+}
+.item.earth-background {
+	width: 700px;
+	height: 700px;
+}
+.fade-in-text {
+	-webkit-animation: fade-in-text 3s linear .1s both;
+	animation: fade-in-text 3s linear .1s both;
 }
 .link, .link:visited, .link:active {
-	width: 360px;
-	background: #2b510c;
-	color: #fff;
+	width: 300px;
+	background: #fff;
+	color: #040012;
 	margin: 10px;
 	padding: 15px 5px;
 	border-radius: 2px;
-	-webkit-transition-duration: 0.8s;
-	transition-duration: 0.8s;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
 	text-transform: uppercase;
 	text-decoration: none;
+	font-weight: 600;
 }
 .link:hover {
-	background: #99371a;
+	background: #35226f;
 	color: #fff;
 	text-decoration: none;
-	box-shadow: 0px 0px 18px 0px rgba(255,255,255,.8);
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
 }
-.alt-bubble {
+.earth-background {
+	background: transparent url(earth.png) center bottom no-repeat;
+}
+.ping {
+	-webkit-animation: ping 2s ease-in-out infinite both;
+	animation: ping 2s ease-in-out infinite both;
+}
+.alt {
+	-webkit-animation: ping 1.5s ease-in-out infinite both;
+	animation: ping 1.5s ease-in-out infinite both;
+}
+.plume {
+	background: transparent url("static-plume.png") center bottom no-repeat;
+	z-index: 100;
 	position: relative;
-	bottom: 130px;
-	left: 115px;
-	-webkit-animation: fade-in-text .1s linear 3s both;
-	animation: fade-in-text .1s linear 3s both;
-	-webkit-transition-duration: 0.8s;
-	transition-duration: 0.8s;
 }
-a .alt-bubble:hover {
-	transform: scale(1.05);
+.rocket {
+	margin-bottom: -60px;
+	margin-top: 56px;
 }
-.small-row {
-	background: #abc059;
+.flicker {
+	-webkit-animation: flicker 3s linear .2s both;
+	animation: flicker 3s linear .2s both;
+}
+.flicker.alt {
+	-webkit-animation: flicker 3.5s linear 2.2s both;
+	animation: flicker 3.5s linear 2.2s both;
+}
+@-webkit-keyframes flicker {
+0% {
+opacity: 0;
+}
+10% {
+opacity: 0;
+text-shadow: none;
+}
+10.1% {
+opacity: 1;
+text-shadow: none;
+}
+10.2% {
+opacity: 0;
+text-shadow: none;
+}
+20% {
+opacity: 0;
+text-shadow: none;
+}
+20.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+}
+20.6% {
+opacity: 0;
+text-shadow: none;
+}
+30% {
+opacity: 0;
+text-shadow: none;
+}
+30.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+30.5% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+30.6% {
+opacity: 0;
+text-shadow: none;
+}
+45% {
+opacity: 0;
+text-shadow: none;
+}
+45.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+50% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+55% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+55.1% {
+opacity: 0;
+text-shadow: none;
+}
+57% {
+opacity: 0;
+text-shadow: none;
+}
+57.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+}
+60% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+}
+60.1% {
+opacity: 0;
+text-shadow: none;
+}
+65% {
+opacity: 0;
+text-shadow: none;
+}
+65.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+75% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+75.1% {
+opacity: 0;
+text-shadow: none;
+}
+77% {
+opacity: 0;
+text-shadow: none;
+}
+77.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+85% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+85.1% {
+opacity: 0;
+text-shadow: none;
+}
+86% {
+opacity: 0;
+text-shadow: none;
+}
+86.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+100% {
+opacity: 1;
+text-shadow: none;
+}
+}
+@keyframes flicker {
+0% {
+opacity: 0;
+}
+10% {
+opacity: 0;
+text-shadow: none;
+}
+10.1% {
+opacity: 1;
+text-shadow: none;
+}
+10.2% {
+opacity: 0;
+text-shadow: none;
+}
+20% {
+opacity: 0;
+text-shadow: none;
+}
+20.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+}
+20.6% {
+opacity: 0;
+text-shadow: none;
+}
+30% {
+opacity: 0;
+text-shadow: none;
+}
+30.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+30.5% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+30.6% {
+opacity: 0;
+text-shadow: none;
+}
+45% {
+opacity: 0;
+text-shadow: none;
+}
+45.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+50% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+55% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+}
+55.1% {
+opacity: 0;
+text-shadow: none;
+}
+57% {
+opacity: 0;
+text-shadow: none;
+}
+57.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+}
+60% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+}
+60.1% {
+opacity: 0;
+text-shadow: none;
+}
+65% {
+opacity: 0;
+text-shadow: none;
+}
+65.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+75% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+75.1% {
+opacity: 0;
+text-shadow: none;
+}
+77% {
+opacity: 0;
+text-shadow: none;
+}
+77.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+85% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+85.1% {
+opacity: 0;
+text-shadow: none;
+}
+86% {
+opacity: 0;
+text-shadow: none;
+}
+86.1% {
+opacity: 1;
+text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+}
+100% {
+opacity: 1;
+text-shadow: none;
+}
+}
+@-webkit-keyframes ping {
+0% {
+-webkit-transform: scale(0.9);
+transform: scale(0.9);
+opacity: 1;
+}
+50% {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+opacity: .6;
+}
+70% {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+opacity: .9;
+}
+100% {
+-webkit-transform: scale(1);
+transform: scale(0.9);
+opacity: .2;
+}
+}
+@keyframes ping {
+0% {
+-webkit-transform: scale(0.9);
+transform: scale(0.9);
+opacity: 1;
+}
+50% {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+opacity: .6;
+}
+70% {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+opacity: .9;
+}
+100% {
+-webkit-transform: scale(1);
+transform: scale(0.9);
+opacity: .2;
+}
+}
+.blastoff {
+	-webkit-animation: blastoff 0.5s linear infinite both;
+	animation: blastoff 0.5s linear infinite both;
+}
+@-webkit-keyframes blastoff {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+10% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+20% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+30% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+40% {
+-webkit-transform: translate(1px, 1px);
+transform: translate(1px, 1px);
+}
+50% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+60% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+70% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+80% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+90% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
+@keyframes blastoff {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+10% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+20% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+30% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+40% {
+-webkit-transform: translate(1px, 1px);
+transform: translate(1px, 1px);
+}
+50% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+60% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+70% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+80% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+90% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
 }
 
-@media (max-width:1199px) {
-.alt-bubble {
-	position: relative;
-	bottom: 130px;
-	left: 35px;
+@media (max-width: 1349px) {
+.item.content {
+	order: 1;
+	padding-top: 60px;
+}
+.item.earth-background {
+	order: 2;
 }
 }
 
-@media (max-width:991px) {
-.alt-bubble {
-	display: none;
+@media (max-width: 700px) {
+.item.content {
+	order: 1;
+	padding-top: 60px;
+	width: 100%;
 }
-.sky {
-	background: transparent url("small-background.jpg") bottom center no-repeat;
-	padding: 35px 15px 705px;
-	margin-left: -15px;
-	margin-right: -15px;
+.item.earth-background {
+	order: 2;
+	width: 100%;
 }
-.link-wrapper {
-	padding: 0;
-	margin-top: -70px;
-	margin-bottom: 40px;
+h1.ultima {
+	font-size: 70px;
 }
 }
 
-@media (max-width:575px) {
-h1.quincy {
-	font-size: 68px;
-}
-h3.quincy {
-	font-size: 48px;
+@media (max-width: 525px) {
+h1.ultima {
+	font-size: 46px;
 }
 }
 </style>
@@ -397,22 +821,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="perm-alert" class="row">All Douglas County Libraries locations are open with modified <a class="text-underline" href="https://www.dcl.org/safety-notice/">hours, services, and safety protocols</a>.</div>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="sky row">
-    <div class="container text-center">
-      <h3 class="quincy no-margin text-uppercase">Keep On</h3>
-      <h1 class="quincy no-margin text-uppercase">Growing</h1>
-    </div>
-    <div class="container item-wrapper hidden-xs hidden-sm">
-      <div class="link-wrapper"> <a class="link" href="camp-dcl/">Summer Camps for Sprouts</a> <a class="link" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1865380934">We Dig the Earth </a> <a href="library-perks/#alltrails" class="link">Hike with AllTrails</a> </div>
+  <div class="row planet-row">
+    <div class="container-md no-padding text-center">
+      <div class="item-wrapper">
+        <div class="item earth-background">
+          <div class="blast-off">
+            <div class="rocket"><img class="blastoff" src="rocket.png" alt=""></div>
+            <div class="plume alt"><img class="ping" src="plume.png" alt=""></div>
+          </div>
+        </div>
+        <div class="item content">
+          <h1 class="ultima text-uppercase">Countdown<br>
+            to Su<span class="flicker alt">m</span>me<span class="flicker">r</span></h1>
+          <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Get Set for Summer Reading</a><a href="camp-dcl" class="link">Can't Wait! Camp DCL</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1885759229" class="link">Me Time for Moms</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor&ag=724&lib=ALL&nd=90" target="_blank" class="link">Storytime in Outer Spaces</a></div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row small-row hidden-md hidden-lg">
-    <div class="container item-wrapper">
-      <div class="link-wrapper"> <a class="link" href="camp-dcl/">Summer Camps for Sprouts</a> <a class="link" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1865380934">We Dig the Earth</a><a href="library-perks/#alltrails" class="link">Hike with AllTrails</a></div>
-    </div>
-  </div>
-  <div class="row volunteers">
-    <div class="vmonth"><a class="text-underline" href="volunteer/">Our volunteers</a> are blooming great! Celebrate National Volunteer Month with us.</div>
+  <div class="row health">
+    <div class="month white"><a class="white text-underline" href="https://www.allhealthnetwork.org/colorado-spirit/" target="_blank">Talk About It!</a> May is Mental Health Awareness Month. Check out our <a class="white text-underline" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1886303919">adult</a>, <a class="white text-underline" href="https://dcl.bibliocommons.com/list/share/692285487/1886179979">teen</a> and <a class="white text-underline" href="https://dcl.bibliocommons.com/list/share/692283576/1886958439">youth</a> resources.</div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
