@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,10 +117,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .table-bordered > thead > tr > th {
 	border-bottom: 0px;
 }
-.planet-row, .minutes-row, .item-row {
+.planet-row, .minutes-row, .item-row, .shirt-row {
 	font-family: roboto, sans-serif;
 	font-weight: 400;
 	font-style: normal;
+}
+.shirt-item.two {
+	max-width: 600px;
 }
 .logo-wrapper {
 	margin: 0 auto;
@@ -204,12 +208,39 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .item-row {
 	background: linear-gradient(#030011 1%, #14045c 100%);
-	padding: 45px 15px 75px;
+	padding: 45px 15px;
 }
 .item-wrapper {
 	max-width: 725px;
 	margin: 0 auto;
 	padding: 10px 0;
+}
+.shirt-row {
+	background: linear-gradient(#14045c 99%, #030011 100%);
+}
+.shirt-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 20px 0 65px;
+}
+.shirt-item {
+	padding: 15px;
+}
+.btn-custom {
+	background: #fff;
+}
+a.btn.btn-custom {
+	color: #030011;
+}
+a.btn.btn-custom:hover {
+	color: #fff;
+}
+.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
+	background-color: #ea3f18;
+	color: #fff;
 }
 .planet-row {
 	background: transparent url("../planets.jpg") top center repeat;
@@ -306,6 +337,31 @@ transform:  translate(60px, 0px) scaleX(1.00) scaleY(1.00);
 }
 100% {
 transform:  translate(60px, 0px) scaleX(1.00) scaleY(1.00);
+}
+}
+
+@media (max-width: 954px) {
+.shirt-item.one {
+	order: 2;
+}
+.shirt-item.two {
+	order: 1;
+    max-width: 755px;
+}
+    .galaxy-item {
+	max-width: 755px;
+}
+.button-one {
+	display: none;
+}
+.minutes-wrapper {
+	padding: 50px 0 0;
+}
+}
+
+@media (min-width: 955px) {
+.button-two {
+	display: none;
 }
 }
 
@@ -559,6 +615,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div></div>
     </div>
   </div>
+  <div class="row shirt-row">
+    <div class="shirt-wrapper">
+      <div class="shirt-item one"><img src="t-shirt.png" alt="">
+        <div class="button-two text-center padding-top-30 padding-bottom-15"><a href="../t-shirts/" class="futura-bold btn btn-primary btn-custom btn-lg">Order Now</a></div>
+      </div>
+      <div class="shirt-item two white">
+        <h5 class="futura-bold white text-uppercase no-margin">Summer Reading Tees</h5>
+        <h3 class="futura-bold white text-uppercase no-margin-top">On Sale Now!</h3>
+        Sport one of our summery tees to support the <a class="white text-underline" href="../../foundation/">Douglas County Libraries Foundation</a>. Our unisex t-shirts come in kids sizes S-M for $12 plus tax, and adult sizes S-XL for $15 plus tax. Pre-order by May 31 for pickup and payment at Summer Reading kickoff on June 5 or your preferred library after that, while supplies last; limited supplies available. Net proceeds benefit the DCL Foundation. Thank you for your support.
+        <div class="button-one padding-top-15 padding-bottom-15"><a href="../t-shirts/" class="futura-bold btn btn-primary btn-custom btn-lg">Order Now</a></div>
+      </div>
+      <div></div>
+    </div>
+  </div>
   
   <!-- Modal -->
   <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -611,7 +681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </tbody>
             </table>
           </div>
-            <div class="text-center padding-bottom-15"><span class="asterisk-space">*</span>Leader board will be updated each Monday through August 2, 2021.</div>
+          <div class="text-center padding-bottom-15"><span class="asterisk-space">*</span>Leader board will be updated each Monday through August 2, 2021.</div>
         </div>
       </div>
     </div>
@@ -715,4 +785,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
