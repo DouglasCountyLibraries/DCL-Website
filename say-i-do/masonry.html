@@ -99,7 +99,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background-color: #f5f5f5;
 }
 .item {
-	border: 1px solid #000;
+	border: 1px solid #fff;
 	border-radius: 2px;
 }
 .author {
@@ -120,7 +120,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin: 1px;
 	border: 2px solid rgba(255,192,203,.8);
 	border-radius: 2px;
-	width: 400px;
 }
 .author-inner {
 	padding: 30px 50px 35px;
@@ -160,11 +159,29 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .fa-check {
 	line-height: 22px;
 }
-.grid-item {
-	width: 25%;
+</style>
+<style>
+.outer-wrapper {
+	display: flex;
+	flex-wrap: wrap;
 }
-.grid-item--width2 {
-	width: 50%;
+.left-column {
+	width: 60%;
+}
+.right-column {
+	width: 40%;
+}
+.two-up {
+	display: flex;
+}
+
+@media (max-width: 992px) {
+.left-column {
+	width: 100%;
+}
+.right-column {
+	width: 100%;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -380,34 +397,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="grid">
-      <div class="grid-item imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="thumbnails/one.jpg" alt=""> </a> </div>
-      <div class="grid-item grid-item--width2 imageGallery1"> <a href="images/two.jpg"> <img class="img-responsive" src="thumbnails/two.jpg" alt=""> </a> </div>
-      <!--  <div class="grid-item">
-        <div class="author-intro">
-          <div class="author-inner">
-            <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
-            <h5 class="text-left">Receive full event planning services with our Concierge-level package: </h5>
-            <ul class="fa-ul concierge text-left">
-              <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
-              <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
-              <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
-              <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
-              <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
-              <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
-              <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
-            </ul>
-            <div class="text-center margin-top-30"> <!-- Button trigger modal --
-              <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-            <div><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
+  <div class="container-md">
+    <div class="outer-wrapper">
+      <div class="left-column">
+        <div class="two-up">
+          <div class="item one imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="images/one.jpg" alt=""> </a> </div>
+          <div class="item one imageGallery1"> <a href="images/two.jpg"> <img class="img-responsive" src="images/two.jpg" alt=""> </a> </div>
+        </div>
+        <div class="item two imageGallery1">
+          <div class="author-intro">
+            <div class="author-inner">
+              <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
+              <h5 class="text-left">Receive full event planning services with our Concierge-level package: </h5>
+              <ul class="fa-ul concierge text-left">
+                <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
+              </ul>
+              <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
+                <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
+              <div><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
+            </div>
           </div>
         </div>
+        <div class="item three imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="images/three.jpg" alt=""> </a> </div>
       </div>
-      
-    </div>-->
-    <div class="grid-item imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="thumbnails/three.jpg" alt=""> </a> </div>
-      </div></div>
+      <div class="right-column">
+        <div class="item one imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="images/one.jpg" alt=""> </a> </div>
+        <div class="item two imageGallery1"> <a href="images/two.jpg"> <img class="img-responsive" src="images/two.jpg" alt=""> </a> </div>
+        <div class="item three imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="images/three.jpg" alt=""> </a> </div>
+      </div>
+    </div>
+  </div>
   
   <!--
   <div class="row masonry" data-target=".item" data-col-xs="12" data-col-sm="4" data-col-md="3">
@@ -500,21 +525,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 $('.imageGallery1 a').simpleLightbox();
 </script> 
-<script src="packery.pkgd.min.js"></script> 
-<script>
-    var elem = document.querySelector('.grid');
-var pckry = new Packery( elem, {
-  // options
-  itemSelector: '.grid-item',
-  gutter: 10
-});
-
-// element argument can be a selector string
-//   for an individual element
-var pckry = new Packery( '.grid', {
-  // options
-});
-    </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
