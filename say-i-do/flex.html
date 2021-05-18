@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+
+<!-- baguette Box CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<!-- Custom CSS -->
+<style>
+polyline, g {
+	stroke: #666;
+}
+#baguetteBox-overlay .full-image figcaption {
+	font-family: "Ubuntu", arial, sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	display: block;
+	position: absolute;
+	bottom: auto;
+	width: 100%;
+	text-align: center;
+	line-height: inherit;
+	white-space: normal;
+	color: #333;
+	background-color: transparent;
+	padding: 10px 10%;
+}
+#baguetteBox-overlay .full-image img {
+	margin-top: -5%;
+}
+.author {
+	color: #fff;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.author a {
+	color: #fff;
+}
+.author a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.author-intro {
+	background-color: rgba(255,192,203,.2);
+	margin: 1px;
+	border: 2px solid rgba(255,192,203,.8);
+	border-radius: 2px;
+}
+.author-inner {
+	padding: 30px 50px 35px;
+}
+
+@media (max-width: 415px) {
+.author {
+	font-size: 48px;
+}
+#baguetteBox-overlay .full-image figcaption {
+	font-size: 18px;
+	padding: 10px;
+}
+#baguetteBox-overlay .full-image img {
+	margin-top: -25%;
+}
+}
+/* Use Grid on the container */
+.galleryContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+/* Aligns the items within the galleryContainer so they are in the center */
+.gallery {
+	
+}
+.box-item {
+	
+}
+    
+.gallery div {
+  width: 400px;
+background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+    margin: 2px;
+}
+
+.gallery .item1 { height: 267px; }
+.gallery .item2 { height: inherit; padding: 20px;}
+.gallery .item6 { height: 300px; }
+.gallery .item11 { height: 100px; }
+
+</style>
+</head>
+<body>
+<div class="galleryContainer">
+  <div class="gallery"> <div class="item1"><a href="images/one.jpg"> <img src="thumbnails/one.jpg" class="thumbnails" alt=""> </a> </div></div>
+  <div class="gallery"><div class="item2">
+    <div class="box-item"> Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div></div>
+  </div>
+  <div class="gallery"> <div class="item3"><a href="images/one.jpg"> <img src="thumbnails/one.jpg" class="thumbnails" alt=""> </a> </div></div>
+</div>
+<footer></footer>
+<!-- baguette box Javascript --> 
+<script src="baguetteBox.min.js" async></script> 
+<script> 
+    
+    </script> 
+<!-- Custom Javascript --> 
+<script>    //   load baguette box
+    window.addEventListener('load', function() {
+        baguetteBox.run('.galleryContainer', {
+         // baguette box Custom options
+         // https://github.com/feimosi/baguetteBox.js/#customization
+     buttons: true,
+        overlayBackgroundColor: 'rgba(255,255,255,0.8)'
+         }); 
+     }); </script>
+    <script>let magicGrid = new MagicGrid({
+  container: ".galley",
+  animate: true,
+  gutter: 2,
+  static: true,
+  useMin: true
+});
+
+magicGrid.listen();
+</script>
+</body>
+</html>
