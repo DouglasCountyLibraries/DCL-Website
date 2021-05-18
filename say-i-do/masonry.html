@@ -89,11 +89,82 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="simpleLightbox.min.css">
-<script src="simpleLightbox.min.js"></script>
+<!--<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#modal-offer').modal('show');
+    });
+</script>-->
 <style>
+.reserve-a-space-active {
+	background-color: #f5f5f5;
+}
 .item {
-	border: 1px solid #fff;
+	border: 1px solid #000;
 	border-radius: 2px;
+}
+.author {
+	color: #fff;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.author a {
+	color: #fff;
+}
+.author a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.author-intro {
+	background-color: rgba(255,192,203,.2);
+	margin: 1px;
+	border: 2px solid rgba(255,192,203,.8);
+	border-radius: 2px;
+	width: 400px;
+}
+.author-inner {
+	padding: 30px 50px 35px;
+}
+.modal-background {
+	background: #fff url("modal-background.jpg") top center no-repeat;
+	padding: 40px 40px 45px 40px;
+	color: #000;
+	border: 30px solid #fff;
+}
+.package-box {
+	padding: 40px;
+}
+.larger-text {
+	font-size: 1.4em;
+	padding-bottom: 15px;
+}
+.find-text {
+	margin: 35px 0 0;
+}
+.find-text a {
+	color: #D36A50;
+	font-size: 22px;
+	text-decoration: none;
+}
+.find-text a:hover, .find-text a:focus {
+	color: #D36A50;
+	text-decoration: none;
+	opacity: .8;
+}
+.concierge .fa-check {
+	color: #D36A50;
+}
+.fa-ul > li {
+	margin-bottom: 15px;
+}
+.fa-check {
+	line-height: 22px;
+}
+.grid-item {
+	width: 25%;
+}
+.grid-item--width2 {
+	width: 50%;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -297,10 +368,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <div class="row border-top padding-bottom-30">
+    <div class="container text-center">
+      <h1 class="jumbo-text margin-lg-100 text-center text-uppercase font-weight-400">Say I Do at DCL</h1>
+      <div class="separator-container">
+        <div class="separator line-separator"><i class="fas fa-wine-glass-alt"></i></div>
+      </div>
+      <div class="margin-lg-200">
+        <h2 class="margin-top-15 text-uppercase font-weight-400">Weddings, Rehearsal Dinners & Showers</h2>
+        <h4 class="roboto">The premium event spaces in our beautiful libraries are the perfect setting for celebrating your love story.</h4>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid">
+      <div class="grid-item imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="thumbnails/one.jpg" alt=""> </a> </div>
+      <div class="grid-item grid-item--width2 imageGallery1"> <a href="images/two.jpg"> <img class="img-responsive" src="thumbnails/two.jpg" alt=""> </a> </div>
+      <!--  <div class="grid-item">
+        <div class="author-intro">
+          <div class="author-inner">
+            <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
+            <h5 class="text-left">Receive full event planning services with our Concierge-level package: </h5>
+            <ul class="fa-ul concierge text-left">
+              <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
+            </ul>
+            <div class="text-center margin-top-30"> <!-- Button trigger modal --
+              <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
+            <div><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>-->
+    <div class="grid-item imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="thumbnails/three.jpg" alt=""> </a> </div>
+      </div></div>
+  
+  <!--
   <div class="row masonry" data-target=".item" data-col-xs="12" data-col-sm="4" data-col-md="3">
     <div class="container-md no-padding">
       <div class="col-xs-12 col-sm-6 no-padding">
         <div class="item imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="images/three.jpg" alt=""> </a> </div>
+        <div class="item"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
         <div class="col-xs-6 no-padding">
           <div class="item imageGallery1"> <a href="images/six.jpg"> <img class="img-responsive" src="images/six.jpg" alt=""> </a> </div>
         </div>
@@ -309,7 +423,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 no-padding">
-        <div class="item"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
         <div class="col-sm-12 col-md-4 no-padding">
           <div class="item imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="thumbnails/three.jpg" alt=""> </a> </div>
         </div>
@@ -321,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-  </div>
+  </div>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
@@ -383,9 +496,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<script src="simpleLightbox.min.js"></script> 
 <script>
 $('.imageGallery1 a').simpleLightbox();
 </script> 
+<script src="packery.pkgd.min.js"></script> 
+<script>
+    var elem = document.querySelector('.grid');
+var pckry = new Packery( elem, {
+  // options
+  itemSelector: '.grid-item',
+  gutter: 10
+});
+
+// element argument can be a selector string
+//   for an individual element
+var pckry = new Packery( '.grid', {
+  // options
+});
+    </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
