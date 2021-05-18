@@ -98,6 +98,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
+.fas.fa-wine-glass-alt {
+	color: #d2005a;
+}
 .item {
 	border: 1px solid #fff;
 	border-radius: 2px;
@@ -130,26 +133,25 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	color: #000;
 	border: 30px solid #fff;
 }
-
 .larger-text {
 	font-size: 1.4em;
 	padding-bottom: 15px;
 }
 .find-text {
-	margin: 35px 0 0;
+	margin: 10px 0 0;
 }
 .find-text a {
-	color: #D36A50;
+	color: #d2005a;
 	font-size: 22px;
 	text-decoration: none;
 }
 .find-text a:hover, .find-text a:focus {
-	color: #D36A50;
+	color: #d2005a;
 	text-decoration: none;
 	opacity: .8;
 }
 .concierge .fa-check {
-	color: #D36A50;
+	color: #d2005a;
 }
 .fa-ul > li {
 	margin-bottom: 15px;
@@ -157,7 +159,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .fa-check {
 	line-height: 22px;
 }
-
 .outer-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -171,6 +172,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .two-up {
 	display: flex;
 }
+.two-stacked {
+	flex-direction: column;
+}
+.one, .two {
+	width: 50%;
+}
+.contact-one, .contact-two {
+	padding: 30px 15px;
+}
 
 @media (max-width: 992px) {
 .left-column {
@@ -178,6 +188,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .right-column {
 	width: 100%;
+}
+.custom-container {
+	padding: 0;
+}
+}
+
+@media (max-width: 1375px) {
+.contact-one {
+	display: none;
+}
+}
+
+@media (min-width: 1376px) {
+.contact-two {
+	display: none;
 }
 }
 </style>
@@ -394,53 +419,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="container-md">
-    <div class="outer-wrapper">
-      <div class="left-column">
-        <div class="two-up">
-          <div class="item one imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="images/one.jpg" alt=""> </a> </div>
-          <div class="item one imageGallery1"> <a href="images/two.jpg"> <img class="img-responsive" src="images/two.jpg" alt=""> </a> </div>
-        </div>
-        <div class="item two">
-          <div class="author-intro">
-            <div class="author-inner">
-              <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
-              <h5 class="text-left">Receive full event planning services with our Concierge-level package: </h5>
-              <ul class="fa-ul concierge text-left">
-                <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
-                <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
-                <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
-                <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
-                <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
-                <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
-                <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
-              </ul>
-              <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-                <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-              <div><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
+  <div class="row">
+    <div class="container-md custom-container">
+      <div class="outer-wrapper">
+        <div class="left-column">
+          <div class="two-up">
+            <div class="item imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="images/one.jpg" alt=""> </a> </div>
+            <div class="item imageGallery1"> <a href="images/two.jpg"> <img class="img-responsive" src="images/two.jpg" alt=""> </a> </div>
+          </div>
+          <div class="item">
+            <div class="author-intro">
+              <div class="author-inner">
+                <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
+                <div class="text-center margin-bottom-10">Receive full event planning services with our Concierge-level package: </div>
+                <ul class="fa-ul concierge text-left">
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
+                </ul>
+                <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
+                  <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
+                <div class="text-center"><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
+              </div>
             </div>
           </div>
+          <div class="two-up">
+            <div class="item two imageGallery1"> <a href="images/twenty.jpg"> <img class="img-responsive" src="images/twenty.jpg" alt=""> </a> </div>
+            <div class="two-stacked one">
+              <div class="item imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="images/three.jpg" alt=""> </a> </div>
+              <div class="item imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="images/three.jpg" alt=""> </a> </div>
+            </div>
+          </div>
+          <div class="item contact-one">
+            <div class="text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+            <h5 class="text-center margin-top-5 no-margin-bottom"><a href="../event-spaces/">View Event Spaces</a></h5>
+          </div>
         </div>
-        <div class="item three imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="images/three.jpg" alt=""> </a> </div>
-      </div>
-      <div class="right-column">
-        <div class="item one imageGallery1"> <a href="images/four.jpg"> <img class="img-responsive" src="images/four.jpg" alt=""> </a> </div>
-        <div class="item two imageGallery1"> <a href="images/five.jpg"> <img class="img-responsive" src="images/five.jpg" alt=""> </a> </div>
-        <div class="item three imageGallery1"> <a href="images/six.jpg"> <img class="img-responsive" src="images/six.jpg" alt=""> </a> </div>
+        <div class="right-column">
+          <div class="item imageGallery1"> <a href="images/four.jpg"> <img class="img-responsive" src="images/four.jpg" alt=""> </a> </div>
+          <div class="two-up">
+            <div class="item imageGallery1"> <a href="images/twenty-one.jpg"> <img class="img-responsive" src="images/twenty-one.jpg" alt=""> </a> </div>
+            <div class="item imageGallery1"> <a href="images/twenty-two.jpg"> <img class="img-responsive" src="images/twenty-two.jpg" alt=""> </a> </div>
+          </div>
+          <div class="item">
+            <div class="author-intro">
+              <div class="author-inner">
+                <h4 class="roboto no-margin-top text-center">Heading</h4>
+                <ul class="list-unstyled">
+                  <li>content goes here</li>
+                  <li>content goes here</li>
+                  <li>content goes here</li>
+                  <li>content goes here</li>
+                  <li>content goes here</li>
+                </ul>
+                <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="item imageGallery1"> <a href="images/six.jpg"> <img class="img-responsive" src="images/six.jpg" alt=""> </a> </div>
+          <div class="item contact-two">
+            <div class="text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+            <h5 class="text-center margin-top-5 no-margin-bottom"><a href="../event-spaces/">View Event Spaces</a></h5>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-    <div class="row padding-bottom-40 padding-top-40">
-    <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-      <a href="#" class="btn text-uppercase btn-lg btn-primary" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-    <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
-  </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-40">
-    <div class="container">
-      <div class="white text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a class="white" href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      <h2 class="text-center margin-top-5 no-margin-bottom"><a class="white" href="../event-spaces/">View Event Spaces</a></h2>
-    </div>
-  </div>
+  
   <!-- Modal -->
   <div id="concierge-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -455,7 +504,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
