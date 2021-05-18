@@ -88,28 +88,19 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<link rel="stylesheet" href="simpleLightbox.min.css">
+<!--<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#modal-offer').modal('show');
+    });
+</script>-->
 <style>
-polyline, g {
-	stroke: #666;
+.reserve-a-space-active {
+	background-color: #f5f5f5;
 }
-#baguetteBox-overlay .full-image figcaption {
-	font-family: "Ubuntu", arial, sans-serif;
-	font-size: 20px;
-	font-weight: 400;
-	display: block;
-	position: absolute;
-	bottom: auto;
-	width: 100%;
-	text-align: center;
-	line-height: inherit;
-	white-space: normal;
-	color: #333;
-	background-color: transparent;
-	padding: 10px 10%;
-}
-#baguetteBox-overlay .full-image img {
-	margin-top: -5%;
+.item {
+	border: 1px solid #fff;
+	border-radius: 2px;
 }
 .author {
 	color: #fff;
@@ -133,54 +124,13 @@ polyline, g {
 .author-inner {
 	padding: 30px 50px 35px;
 }
-
-@media (max-width: 415px) {
-.author {
-	font-size: 48px;
-}
-#baguetteBox-overlay .full-image figcaption {
-	font-size: 18px;
-	padding: 10px;
-}
-#baguetteBox-overlay .full-image img {
-	margin-top: -25%;
-}
-}
-
-@media (min-width: 992px) {
-.author-intro {
-}
-}
-
-@media (min-width: 1020px) {
-.author-intro {
-}
-}
-
-@media (min-width: 1895px) {
-.author-intro {
-}
-}
-</style>
-<!-- modal popup everytime 
-<script type="text/javascript">
-    $(window).on('load', function() {
-        $('#modal-offer').modal('show');
-    });
-</script> -->
-<style>
-.reserve-a-space-active {
-	background-color: #f5f5f5;
-}
 .modal-background {
 	background: #fff url("modal-background.jpg") top center no-repeat;
 	padding: 40px 40px 45px 40px;
 	color: #000;
 	border: 30px solid #fff;
 }
-.package-box {
-	padding: 40px;
-}
+
 .larger-text {
 	font-size: 1.4em;
 	padding-bottom: 15px;
@@ -207,14 +157,27 @@ polyline, g {
 .fa-check {
 	line-height: 22px;
 }
-.equal-background {
-	background: url(images/four.jpg) top right/cover;
-	border: 1px solid #fff;
+
+.outer-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+.left-column {
+	width: 60%;
+}
+.right-column {
+	width: 40%;
+}
+.two-up {
+	display: flex;
 }
 
-@media (max-width: 1200px) {
-.equal-background {
-	background: url(images/four-alt.jpg) top center/cover;
+@media (max-width: 992px) {
+.left-column {
+	width: 100%;
+}
+.right-column {
+	width: 100%;
 }
 }
 </style>
@@ -431,67 +394,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="">
-    <div class="container-md no-padding">
-      <div class="tz-gallery">
-        <div class="text-center">
-          <div class="row"><div class="col-md-6">
-            <div class="col-xs-9"> <a class="lightbox" href="images/one.jpg"> <img src="images/one.jpg" alt=""> </a> </div>
-            <div class="col-xs-6 col-md-4"> <a class="lightbox" href="images/two.jpg"> <img src="images/two.jpg" alt=""> </a> </div>
-            <div class="col-xs-6 col-md-4"> <a class="lightbox" href="images/three.jpg"> <img src="images/three.jpg" alt=""> </a> </div>
-              </div></div>
-          <div class="row">
-            <div class="col-md-6 equal-height">
-              <div class="author-intro">
-                <div class="author-inner">
-                  <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
-                  <h5 class="text-left">Receive full event planning services with our Concierge-level package: </h5>
-                  <ul class="fa-ul concierge text-left">
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
-                  </ul>
-                  <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-                    <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-                  <div><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 equal-height equal-background hidden-sm"> <a class="lightbox" href="images/four.jpg"> <img src="#four" alt=""> </a> </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 equal-height equal-background hidden-sm"> <a class="lightbox" href="images/four.jpg"> <img src="#four" alt=""> </a> </div>
-            <div class="col-md-4 equal-height equal-background hidden-sm"> <a class="lightbox" href="images/four.jpg"> <img src="#four" alt=""> </a> </div>
-            <div class="col-md-4 equal-height">
-              <div class="author-intro">
-                <div class="author-inner">
-                  <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
-                  <h5 class="text-left">Receive full event planning services with our Concierge-level package: </h5>
-                  <ul class="fa-ul concierge text-left">
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
-                    <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
-                  </ul>
-                  <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-                    <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-                  <div><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
-                </div>
-              </div>
+  <div class="container-md">
+    <div class="outer-wrapper">
+      <div class="left-column">
+        <div class="two-up">
+          <div class="item one imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="images/one.jpg" alt=""> </a> </div>
+          <div class="item one imageGallery1"> <a href="images/two.jpg"> <img class="img-responsive" src="images/two.jpg" alt=""> </a> </div>
+        </div>
+        <div class="item two">
+          <div class="author-intro">
+            <div class="author-inner">
+              <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
+              <h5 class="text-left">Receive full event planning services with our Concierge-level package: </h5>
+              <ul class="fa-ul concierge text-left">
+                <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
+                <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
+              </ul>
+              <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
+                <a href="#" class="btn btn-lg btn-primary margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
+              <div><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
             </div>
           </div>
         </div>
+        <div class="item three imageGallery1"> <a href="images/three.jpg"> <img class="img-responsive" src="images/three.jpg" alt=""> </a> </div>
+      </div>
+      <div class="right-column">
+        <div class="item one imageGallery1"> <a href="images/four.jpg"> <img class="img-responsive" src="images/four.jpg" alt=""> </a> </div>
+        <div class="item two imageGallery1"> <a href="images/five.jpg"> <img class="img-responsive" src="images/five.jpg" alt=""> </a> </div>
+        <div class="item three imageGallery1"> <a href="images/six.jpg"> <img class="img-responsive" src="images/six.jpg" alt=""> </a> </div>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-40 padding-top-40">
+    <div class="row padding-bottom-40 padding-top-40">
     <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
       <a href="#" class="btn text-uppercase btn-lg btn-primary" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
     <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
@@ -516,6 +455,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
@@ -577,12 +517,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script> 
+<script src="simpleLightbox.min.js"></script> 
 <script>
-    baguetteBox.run('.tz-gallery', {
-        buttons: true,
-        overlayBackgroundColor: 'rgba(255,255,255,0.8)'
-    });
+$('.imageGallery1 a').simpleLightbox();
 </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
