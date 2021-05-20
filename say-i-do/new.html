@@ -89,11 +89,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="simpleLightbox.min.css">
-<!--<script type="text/javascript">
+<script type="text/javascript">
     $(window).on('load', function() {
         $('#modal-offer').modal('show');
     });
-</script>-->
+</script>
 <style>
 .reserve-a-space-active {
 	background-color: #f5f5f5;
@@ -127,20 +127,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	color: #fff;
 	text-decoration: none;
 }
-.author-intro {
+.content-outer {
 	background-color: rgba(255,192,203,.2);
 	margin: 1px;
 	border: 2px solid rgba(255,192,203,.8);
 	border-radius: 2px;
 }
-.author-inner {
+.content-inner {
 	padding: 30px 50px 35px;
 }
 .modal-background {
-	background: #fff url("modal-background.jpg") top center no-repeat;
 	padding: 40px 40px 45px 40px;
 	color: #000;
-	border: 30px solid #fff;
+	border: 25px solid rgba(255,192,203,.8);
+	background-color: rgba(255,192,203,.2);
+	border-radius: 2px;
 }
 .larger-text {
 	font-size: 1.4em;
@@ -174,6 +175,14 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .fa-check {
 	line-height: 22px;
 }
+.flex-inner {
+	display: flex;
+	flex-direction: column;
+}
+.flex-list {
+	flex-direction: column;
+	align-self: center;
+}
 .outer-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -184,8 +193,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .right-column {
 	width: 40%;
 }
-.two-up {
+.two-up, .two-wide {
 	display: flex;
+}
+.two-wide {
+	align-items: center;
 }
 .two-stacked {
 	flex-direction: column;
@@ -205,7 +217,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding: 0;
 }
 }
-
+/*
 @media (max-width: 1375px) {
 .contact-one {
 	display: none;
@@ -216,7 +228,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .contact-two {
 	display: none;
 }
-}
+}*/
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -440,8 +452,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="item imageGallery1"> <a href="images/thirteen.jpg"> <img class="img-responsive" src="images/thirteen.jpg" alt=""> </a> </div>
           </div>
           <div class="item">
-            <div class="author-intro">
-              <div class="author-inner">
+            <div class="content-outer">
+              <div class="content-inner">
                 <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
                 <div class="text-center margin-bottom-10">Receive full event planning services with our Concierge-level package: </div>
                 <ul class="fa-ul concierge text-left">
@@ -466,13 +478,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="item imageGallery1"> <a href="images/fourteen.jpg"> <img class="img-responsive" src="images/fourteen.jpg" alt=""> </a> </div>
             </div>
           </div>
-          <div class="item contact-one">
-            <div class="author-intro">
-              <div class="author-inner">
-                <div class="text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-                <h5 class="text-center margin-top-5 no-margin-bottom"><a href="../event-spaces/">View Event Spaces</a></h5>
+          <div class="item">
+            <div class="content-outer">
+              <div class="content-inner text-center">
+                <div><i>All Douglas County Libraries locations are open and operating under county and <a href="../safety-notice/D 2021 103 Face Covering Order.pdf" target="_blank">state guidelines</a>.</i></div>
+                <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
               </div>
             </div>
+          </div>
+          <div class="two-up">
+            <div class="two-stacked one">
+              <div class="item imageGallery1"> <a href="images/six.jpg"> <img class="img-responsive" src="images/six.jpg" alt=""> </a> </div>
+              <div class="item imageGallery1"> <a href="images/five.jpg"> <img class="img-responsive" src="images/five.jpg" alt=""> </a> </div>
+            </div>
+            <div class="item two imageGallery1"> <a href="images/twenty-six.jpg"> <img class="img-responsive" src="images/twenty-six.jpg" alt=""> </a> </div>
           </div>
         </div>
         <div class="right-column">
@@ -482,24 +501,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="item imageGallery1"> <a href="images/twenty-two.jpg"> <img class="img-responsive" src="images/twenty-two.jpg" alt=""> </a> </div>
           </div>
           <div class="item">
-            <div class="author-intro">
-              <div class="author-inner">
-                <h4 class="roboto no-margin-top text-center">Styled Shoot</h4>
-                <ul class="list-unstyled">
-                  <li>Florist: <a href="https://www.abloomhighlandsranch.com/" target="_blank">Abloom</a></li>
-                  <li>Cake: <a href="https://www.sugamesweet.com/" target="_blank">Suga Me Sweet</a></li>
-                  <li>Rentals: <a href="https://eventrents.com/" target="_blank">Event Rents</a></li>
-                  <li>Hair & Makeup: <a href="https://kbjbeauty.com/" target="_blank">Kelsey Bailey Beauty</a></li>
-                  <li>Photographer: <a href="https://jewelsgray.com/" target="_blank">Photography by Jewels</a></li>
-                </ul>
-                <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
+            <div class="content-outer">
+              <div class="content-inner flex-inner">
+                <div class="flex-list">
+                  <h4 class="roboto no-margin-top text-center">Styled Shoot</h4>
+                  <ul class="list-unstyled">
+                    <li>Florist: <a href="https://www.abloomhighlandsranch.com/" target="_blank">Abloom</a></li>
+                    <li>Cake: <a href="https://www.sugamesweet.com/" target="_blank">Suga Me Sweet</a></li>
+                    <li>Rentals: <a href="https://eventrents.com/" target="_blank">Event Rents</a></li>
+                    <li>Hair & Makeup: <a href="https://kbjbeauty.com/" target="_blank">Kelsey Bailey Beauty</a></li>
+                    <li>Photographer: <a href="https://jewelsgray.com/" target="_blank">Photography by Jewels</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+          <div class="item imageGallery1"> <a href="images/nine.jpg"> <img class="img-responsive" src="images/nine.jpg" alt=""> </a> </div>
           <div class="item imageGallery1"> <a href="images/eight.jpg"> <img class="img-responsive" src="images/eight.jpg" alt=""> </a> </div>
-          <div class="item contact-two">
-            <div class="author-intro">
-              <div class="author-inner">
+          <div class="two-up">
+            <div class="item imageGallery1"> <a href="images/one.jpg"> <img class="img-responsive" src="images/twenty-seven.jpg" alt=""> </a> </div>
+            <div class="item imageGallery1"> <a href="images/twelve.jpg"> <img class="img-responsive" src="images/twelve.jpg" alt=""> </a> </div>
+          </div>
+          <div class="item">
+            <div class="content-outer">
+              <div class="content-inner">
                 <div class="text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
                 <h5 class="text-center margin-top-5 no-margin-bottom"><a href="../event-spaces/">View Event Spaces</a></h5>
               </div>
