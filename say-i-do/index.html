@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,9 +87,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
-<!-- modal popup everytime with delay --> 
-
+<link rel="stylesheet" href="simpleLightbox.min.css">
 <script type="text/javascript">
     $(window).on('load', function() {
         $('#modal-offer').modal('show');
@@ -98,44 +97,76 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
+.fas.fa-wine-glass-alt {
+	color: #d2005a;
+}
+.item {
+	border: 1px solid #fff;
+	border-radius: 2px;
+}
+.image-gallery {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.image-gallery:hover {
+	opacity: .6;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.author {
+	color: #fff;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.author a {
+	color: #fff;
+}
+.author a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.content-outer {
+	background-color: rgba(255,192,203,.2);
+	margin: 1px;
+	border: 2px solid rgba(255,192,203,.8);
+	border-radius: 2px;
+}
+.content-inner {
+	padding: 30px 50px 35px;
+}
 .modal-background {
-	background: #fff url("modal-background.jpg") top center no-repeat;
 	padding: 40px 40px 45px 40px;
 	color: #000;
-	border: 30px solid #fff;
+	border: 25px solid rgba(255,192,203,.8);
+	background-color: rgba(255,192,203,.2);
+	border-radius: 2px;
 }
 .larger-text {
 	font-size: 1.4em;
 	padding-bottom: 15px;
 }
 .find-text {
-	margin: 35px 0 0;
+	margin: 10px 0 0;
 }
 .find-text a {
-	color: #D36A50;
+	color: #d2005a;
 	font-size: 22px;
 	text-decoration: none;
 }
 .find-text a:hover, .find-text a:focus {
-	color: #D36A50;
+	color: #d2005a;
 	text-decoration: none;
 	opacity: .8;
 }
-.flickity-page-dots .dot {
-	background-color: #fff;
+.btn-custom {
+	background-color: #9e0044;
 }
-.flickity-page-dots {
-	bottom: -30px;
-	opacity: .5;
-}
-.flickity-prev-next-button {
-	display: none;
-}
-.carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
+.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
+	background-color: #750032;
 }
 .concierge .fa-check {
-	color: #D36A50;
+	color: #d2005a;
 }
 .fa-ul > li {
 	margin-bottom: 15px;
@@ -143,6 +174,60 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .fa-check {
 	line-height: 22px;
 }
+.flex-inner {
+	display: flex;
+	flex-direction: column;
+}
+.flex-list {
+	flex-direction: column;
+	align-self: center;
+}
+.outer-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+.left-column {
+	width: 60%;
+}
+.right-column {
+	width: 40%;
+}
+.two-up, .two-wide {
+	display: flex;
+}
+.two-wide {
+	align-items: center;
+}
+.two-stacked {
+	flex-direction: column;
+}
+.one, .two {
+	width: 50%;
+}
+
+@media (max-width: 992px) {
+.left-column {
+	width: 100%;
+}
+.right-column {
+	width: 100%;
+}
+.custom-container {
+	padding: 0;
+}
+}
+/*
+@media (max-width: 1375px) {
+.contact-one {
+	display: none;
+}
+}
+
+@media (min-width: 1376px) {
+.contact-two {
+	display: none;
+}
+}*/
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -335,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="modal-content">
         <button type="button" class="close margin-40" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="modal-background">
-          <h1 class="black no-margin-top">Limited Time Offer!</h1>
+          <h3 class="black text-uppercase no-margin-top">Limited Time Offer!</h3>
           <div>
             <div class="larger-text">Book now to receive complimentary use of centerpiece décor (glassware, mirrors, votive holders), as well as complimentary space for the bride and attendants on the wedding day.</div>
             <div class="large-text">Minimum 4-hour Concierge booking required.</div>
@@ -346,57 +431,109 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row border-top padding-bottom-30">
-    <div class="container">
-      <h1 class="jumbo-text margin-lg-100 text-center text-uppercase font-weight-400">Weddings, Rehearsal Dinners & Showers at DCL</h1>
+    <div class="container text-center">
+      <h1 class="jumbo-text margin-lg-100 text-center text-uppercase font-weight-400">Say I Do at DCL</h1>
       <div class="separator-container">
         <div class="separator line-separator"><i class="fas fa-wine-glass-alt"></i></div>
       </div>
-      <h4 class="roboto text-center">The premium event spaces in our beautiful libraries are the perfect setting for celebrating your love story. Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life. Say I Do at DCL! </h4>
-      <div class="text-center"><i>All Douglas County Libraries locations are open and operating under county and <a href="../safety-notice/D 2021 103 Face Covering Order.pdf" target="_blank">state guidelines</a>.</i></div>
-    </div>
-  </div>
-  <div style="padding-bottom:45px;" class="row bg-lavender padding-top-40">
-    <div class="container-lg no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="seven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="eight.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="nine.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="ten.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="eleven.jpg" alt=""></div>
+      <div class="margin-lg-200">
+        <h2 class="margin-top-15 text-uppercase font-weight-400">Weddings, Rehearsal Dinners & Showers</h2>
+        <h4 class="roboto">The premium event spaces in our beautiful libraries are the perfect setting for celebrating your love story.</h4>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-40 padding-top-40">
-    <div class="container">
-      <h1 class="roboto padding-bottom-15 text-center">Receive full event planning services with our Concierge-level package: </h1>
-      <div class="col-lg-6 col-lg-push-3 col-md-8 col-md-push-2">
-        <ul class="fa-ul concierge">
-          <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
-        </ul>
+  <div class="row">
+    <div class="container-md custom-container">
+      <div class="outer-wrapper">
+        <div class="left-column">
+          <div class="two-up">
+            <div class="item image-gallery"> <a href="images/one.jpg"> <img class="img-responsive" src="images/one.jpg" alt=""> </a> </div>
+            <div class="item image-gallery"> <a href="images/thirteen.jpg"> <img class="img-responsive" src="images/thirteen.jpg" alt=""> </a> </div>
+          </div>
+          <div class="item">
+            <div class="content-outer">
+              <div class="content-inner">
+                <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
+                <div class="text-center margin-bottom-10">Receive full event planning services with our Concierge-level package: </div>
+                <ul class="fa-ul concierge text-left">
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
+                  <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
+                </ul>
+                <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
+                  <a href="#" class="btn btn-lg btn-primary btn-custom margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
+                <div class="text-center"><a href="dcl-pricing-estimates.pdf" target="_blank">Download pricing</a> for sample services and estimates.</div>
+              </div>
+            </div>
+          </div>
+          <div class="two-up">
+            <div class="item two image-gallery"> <a href="images/twenty.jpg"> <img class="img-responsive" src="images/twenty.jpg" alt=""> </a> </div>
+            <div class="two-stacked one">
+              <div class="item image-gallery"> <a href="images/eleven.jpg"> <img class="img-responsive" src="images/eleven.jpg" alt=""> </a> </div>
+              <div class="item image-gallery"> <a href="images/fourteen.jpg"> <img class="img-responsive" src="images/fourteen.jpg" alt=""> </a> </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content-outer">
+              <div class="content-inner text-center">
+                <div><i>All Douglas County Libraries locations are open and operating under county and <a href="../safety-notice/D 2021 103 Face Covering Order.pdf" target="_blank">state guidelines</a>.</i></div>
+                <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="two-up">
+            <div class="two-stacked one">
+              <div class="item image-gallery"> <a href="images/six.jpg"> <img class="img-responsive" src="images/six.jpg" alt=""> </a> </div>
+              <div class="item image-gallery"> <a href="images/five.jpg"> <img class="img-responsive" src="images/five.jpg" alt=""> </a> </div>
+            </div>
+            <div class="item two image-gallery"> <a href="images/twenty-six.jpg"> <img class="img-responsive" src="images/twenty-six.jpg" alt=""> </a> </div>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="item image-gallery"> <a href="images/four.jpg"> <img class="img-responsive" src="images/four.jpg" alt=""> </a> </div>
+          <div class="two-up">
+            <div class="item image-gallery"> <a href="images/twenty-four.jpg"> <img class="img-responsive" src="images/twenty-four.jpg" alt=""> </a> </div>
+            <div class="item image-gallery"> <a href="images/twenty-two.jpg"> <img class="img-responsive" src="images/twenty-two.jpg" alt=""> </a> </div>
+          </div>
+          <div class="item">
+            <div class="content-outer">
+              <div class="content-inner flex-inner">
+                <div class="flex-list">
+                  <h4 class="roboto no-margin-top text-center">Styled Shoot</h4>
+                  <ul class="list-unstyled">
+                    <li>Florist: <a href="https://www.abloomhighlandsranch.com/" target="_blank">Abloom</a></li>
+                    <li>Cake: <a href="https://www.sugamesweet.com/" target="_blank">Suga Me Sweet</a></li>
+                    <li>Rentals: <a href="https://eventrents.com/" target="_blank">Event Rents</a></li>
+                    <li>Hair & Makeup: <a href="https://kbjbeauty.com/" target="_blank">Kelsey Bailey Beauty</a></li>
+                    <li>Photographer: <a href="https://jewelsgray.com/" target="_blank">Photography by Jewels</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item image-gallery"> <a href="images/nine.jpg"> <img class="img-responsive" src="images/nine.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="images/eight.jpg"> <img class="img-responsive" src="images/eight.jpg" alt=""> </a> </div>
+          <div class="two-up">
+            <div class="item image-gallery"> <a href="images/one.jpg"> <img class="img-responsive" src="images/twenty-seven.jpg" alt=""> </a> </div>
+            <div class="item image-gallery"> <a href="images/twelve.jpg"> <img class="img-responsive" src="images/twelve.jpg" alt=""> </a> </div>
+          </div>
+          <div class="item">
+            <div class="content-outer">
+              <div class="content-inner">
+                <div class="text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+                <h5 class="text-center margin-top-5 no-margin-bottom"><a href="../event-spaces/">View Event Spaces</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-      <a href="#" class="btn text-uppercase btn-lg btn-primary" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-    <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
   </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-40">
-    <div class="container">
-      <div class="white text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a class="white" href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      <h2 class="text-center margin-top-5 no-margin-bottom"><a class="white" href="../event-spaces/">View Event Spaces</a></h2>
-    </div>
-  </div>
+  
   <!-- Modal -->
   <div id="concierge-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -471,15 +608,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script src="simpleLightbox.min.js"></script> 
 <script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
+$('.image-gallery a').simpleLightbox();
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
@@ -519,4 +651,5 @@ for (var i = 0; i < cards.length; i++) {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
