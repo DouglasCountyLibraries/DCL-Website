@@ -36,6 +36,78 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?31621"></script>
 <meta name="robots" content="noindex, nofollow">
+<style>
+.custom-container {
+	max-width: 1500px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.box-wrapper-alt {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.box-item-alt {
+	padding: 5px 30px 40px;
+	margin: 35px;
+	background: #fff;
+	width: 490px;
+	border-radius: 3px;
+	border: 2px solid #ddd;
+}
+.icon-circle-gray-alt {
+	/* border: 2px solid #ddd; */
+	border-radius: 50%;
+	/* box-sizing: border-box; */
+	color: #4e3b59;
+	background: #f5f5f5 url("icon-background.png") bottom center no-repeat;
+	font-size: 42px;
+	height: 85px;
+	line-height: 85px;
+	margin: 0 auto;
+	text-align: center;
+	width: 85px;
+	margin-top: -60px;/* box-shadow: 0px 3px 0px 0px #ddd; */
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.box-item {
+	flex: 1;
+	padding: 5px 30px 35px;
+	margin: 5px 35px;
+	background: #fff url("box-background.gif") top center repeat-x;
+	min-width: 490px;
+	border-radius: 3px;
+}
+.print-item {
+	flex: 1;
+	padding: 5px 30px 35px;
+	margin: 5px 35px;
+	background: #fff url("box-background.gif") top center repeat-x;
+	max-width: 325px;
+	border-radius: 3px;
+}
+.icon-circle-gray {
+	border: 6px solid #f5f5f5;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #4f878c;
+	background-color: #fff;
+	font-size: 42px;
+	height: 100px;
+	line-height: 90px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+}
+</style>
 </head>
 <body>
 <div class="container-fluid">
@@ -59,7 +131,7 @@ document.write(lastModified());
         <div class="col-md-8 margin-top-60">
           <ul class="nav nav-pills">
             <li> <a href="#typography">Typography</a></li>
-            <li> <a href="#buttons">Buttons</a></li>
+            <li> <a href="#callouts">Callouts/Containers</a></li>
             <li> <a href="#icons">Font Icons</a></li>
             <li> <a href="#colors">Colors</a></li>
             <li> <a href="#alerts">Alerts</a></li>
@@ -146,69 +218,53 @@ document.write(lastModified());
             <h4 class="text-muted">Emphasis and color classes</h4>
             <div class="col-lg-6">
               <p class="text-primary">text-primary</p>
-              <p class="text-success">text-success</p>
-              <p class="text-info">text-info</p>
-              <p class="text-warning">text-warning</p>
-              <p class="text-danger">text-danger</p>
               <p class="text-muted">text-muted</p>
             </div>
             <div class="col-lg-6">
               <p class="salmon">salmon</p>
-              <p class="wheat">wheat</p>
-              <p class="moss">moss</p>
-              <p class="teal">teal</p>
-              <p class="lavendar">lavendar</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- Blockquotes -->
-      <div class="row margin-top-30">
-        <div class="col-lg-6">
-          <h4 class="text-muted">Blockquote class (Lobster Two)</h4>
-          <div class="bs-component">
-            <blockquote>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>Someone shared this on <cite title="Twitter">Twitter</cite></small> </blockquote>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h4 class="text-muted text-right">Blockquote-reverse class</h4>
-          <div class="bs-component">
-            <blockquote class="blockquote-reverse">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>Someone shared this on <cite title="Twitter">Twitter</cite></small> </blockquote>
-          </div>
-        </div>
-      </div>
+      <!-- Blockquotes --> 
+      
     </div>
     
-    <!-- Buttons
+    <!-- Callouts/Containers
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="buttons">
+    <div class="bs-docs-section margin-bottom-160" id="callouts">
       <div class="page-header">
         <div class="row">
           <div class="col-lg-12">
-            <h1>Buttons</h1>
+            <h1>Callouts</h1>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-7">
-          <p class="bs-component"> <a href="#buttons" class="btn btn-default">default</a> <a href="#buttons" class="btn btn-primary">primary</a> <a href="#buttons" class="btn btn-success">success</a> <a href="#buttons" class="btn btn-info">Info</a> <a href="#buttons" class="btn btn-warning">warning</a> <a href="#buttons" class="btn btn-danger">danger</a> </p>
-          <p class="bs-component"> <a href="#buttons" class="btn btn-default">large button</a> <a href="#buttons" class="btn btn-default">default button</a> <a href="#buttons" class="btn btn-default btn-sm">small button</a> <a href="#buttons" class="btn btn-link">link button</a></p>
-        </div>
-        <div class="col-lg-5">
-          <p class="bs-component"> <a href="#buttons" class="btn btn-default btn-lg btn-block">block level button</a> </p>
-          <div class="bs-component" style="margin-bottom: 15px;">
-            <div class="btn-group btn-group-justified"> <a href="#buttons" class="btn btn-default">left</a> <a href="#buttons" class="btn btn-default">middle</a> <a href="#buttons" class="btn btn-default">right</a> </div>
+      <div class="row bg-gray-5 padding-bottom-40">
+        <div class="container box-wrapper">
+          <div class="box-item">
+            <div class="icon-circle-gray"><i class="far fa-credit-card"></i></div>
+            <h3 class="text-center margin-top-10 font-weight-400">Get a Library Card</h3>
+            <div><a href="http://getacard.org/v2/index.html" target="_blank">Register here</a> to get a DCL library card, or to recover your <a href="http://getacard.org/v2/index.html#recoverBarcodeTab" target="_blank">library card number</a> or <a href="http://getacard.org/v2/index.html#recoverPasswordTab" target="_blank">PIN</a>. <a href="../library-perks/">See some of the perks</a> that come with your new card!</div>
           </div>
-          <div class="bs-component" style="margin-bottom: 15px;">
-            <div class="btn-toolbar">
-              <div class="btn-group"> <a href="#buttons" class="btn btn-default">1</a> <a href="#buttons" class="btn btn-default">2</a> <a href="#buttons" class="btn btn-default">3</a> <a href="#buttons" class="btn btn-default">4</a> </div>
-              <div class="btn-group"> <a href="#buttons" class="btn btn-default">5</a> <a href="#buttons" class="btn btn-default">6</a> <a href="#buttons" class="btn btn-default">7</a> </div>
-              <div class="btn-group"> <a href="#buttons" class="btn btn-default">8</a> </div>
-            </div>
+          <div class="box-item">
+            <div class="icon-circle-gray"><i class="fas fa-search"></i></div>
+            <h3 class="text-center margin-top-10 font-weight-400">Request a Title</h3>
+            <div>Can't find what you're looking for in the catalog? Here are a <a href="../request-title/">few more options</a>.</div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-gray-5 padding-top-40">
+        <div class="box-wrapper-alt custom-container">
+          <div class="box-item-alt">
+            <div class="icon-circle-gray-alt"><i class="far fa-credit-card"></i></div>
+            <h3 class="text-center margin-top-10 font-weight-400">Get a Library Card</h3>
+            <div><a href="http://getacard.org/v2/index.html" target="_blank">Register here</a> to get a DCL library card, or to recover your <a href="http://getacard.org/v2/index.html#recoverBarcodeTab" target="_blank">library card number</a> or <a href="http://getacard.org/v2/index.html#recoverPasswordTab" target="_blank">PIN</a>. <a href="../library-perks/">See some of the perks</a> that come with your new card!</div>
+          </div>
+          <div class="box-item-alt">
+            <div class="icon-circle-gray-alt"><i class="fas fa-search"></i></div>
+            <h3 class="text-center margin-top-10 font-weight-400">Request a Title</h3>
+            <div>Can't find what you're looking for in the catalog? Here are a <a href="../request-title/">few more options</a>.</div>
           </div>
         </div>
       </div>
