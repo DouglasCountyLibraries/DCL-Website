@@ -122,14 +122,12 @@ a:focus, a:active, .active:focus {
 a:hover, a:focus {
   color: #004654;
   text-decoration: underline;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
 a {
   color: #00758c;
   outline: 0;
+    text-decoration: none;
 }
 a:visited, a:hover, a:focus {
   outline: 0;
@@ -277,31 +275,28 @@ blockquote footer, blockquote small, blockquote .small {
   font-size: 14px;
 }
 .navbar.navbar-expand-lg.navbar-light {
-	padding-top: 0;
-	padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .navbar-light .navbar-nav .custom-nav-link.nav-link {
-	color: rgba(0,0,0,1);
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+  color: rgba(0, 0, 0, 1);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
-
 .custom-nav-link:hover, .custom-nav-link:focus {
   background-color: #f5f5f5;
   color: #000;
-    text-decoration: none;
+  text-decoration: none;
 }
-
-
-
-
+.nav-link {
+  transition: none;
+}
 .navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus {
   background-color: #ffff;
   cursor: pointer;
 }
-
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #f5f5f5;
   color: #000;
@@ -1391,28 +1386,49 @@ h6.responsive-text {
 .show .fas {
   margin-right: 5px;
 }
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	z-index: 1000;
+	display: none;
+	min-width: 10rem;
+	padding: .5rem 0;
+	margin: 0;
+	font-size: inherit;
+	color: #000;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16);
+	border-radius: 2px;
+}
 .dropdown-menu > li > a {
   font-weight: 300;
   padding: 8px 25px;
 }
-.dropdown-menu li:hover, .dropdown-menu li:focus {
+.dropdown-menu li:focus, .dropdown-menu li:hover {
   outline: 0 none;
   text-decoration: underline;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+	color: inherit;
+	background-color: #efefef;
+    transition: none;
 }
 .dropdown-menu-center {
   left: 50%;
   right: auto;
   transform: translate(-50%, 0);
 }
-
 .dropdown-toggle::after {
-	display: none;
+  display: none;
 }
 .dropdown-toggle > .material-icons {
-	font-size: 18px;
-	vertical-align: middle;
+  font-size: 18px;
+  vertical-align: middle;
 }
-
 .btn-database {
   color: #fff;
   background-color: #456e70;
