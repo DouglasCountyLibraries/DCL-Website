@@ -276,27 +276,32 @@ blockquote footer, blockquote small, blockquote .small {
   font-family: "Open Sans", arial, sans-serif;
   font-size: 14px;
 }
-.navbar {
-  margin-bottom: 0;
-  border-bottom: 0px;
+.navbar.navbar-expand-lg.navbar-light {
+	padding-top: 0;
+	padding-bottom: 0;
 }
-.navbar-default {
-  background-color: #fff;
-  border-color: #fff;
+.navbar-light .navbar-nav .custom-nav-link.nav-link {
+	color: rgba(0,0,0,1);
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
-.navbar-default .navbar-nav > li > a {
+
+.custom-nav-link:hover, .custom-nav-link:focus {
+  background-color: #f5f5f5;
   color: #000;
-  padding-left: 14px;
-  padding-right: 14px;
+    text-decoration: none;
 }
+
+
+
+
 .navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus {
   background-color: #ffff;
   cursor: pointer;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  background-color: #f5f5f5;
-  color: #000;
-}
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #f5f5f5;
   color: #000;
@@ -379,7 +384,7 @@ blockquote footer, blockquote small, blockquote .small {
 }
 /* ====== navbar, search and login ====== */
 .navbar-nav {
-  font-size: 15px;
+  font-size: 14px;
 }
 .dcl-search {
   margin: 25px 10px 0;
@@ -1403,8 +1408,10 @@ h6.responsive-text {
 .dropdown-toggle::after {
 	display: none;
 }
-
-
+.dropdown-toggle > .material-icons {
+	font-size: 18px;
+	vertical-align: middle;
+}
 
 .btn-database {
   color: #fff;
