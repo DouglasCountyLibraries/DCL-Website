@@ -32,8 +32,8 @@ function getBiblioHref(keyName) {
 function createPreShelf(title, keyName, seq) {
   var hr = getBiblioHref(keyName);
   var x = [
-    '<div class="row shelf">',
-    '<div id="covers-outer" class ="container shelf-container text-center">',
+    '<div class="shelf">',
+    '<div id="covers-outer" class ="shelf-container text-center">',
     '<ul id="covers-' + keyName + '">'
   ].join('\n');
   return x;
