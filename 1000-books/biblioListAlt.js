@@ -108,9 +108,9 @@ function doBiblioList(val) {
     $('#YoungAdult').append(createPostShelves(title));
   }
   if (val.KeyName == 'StorytimeFavorites') {
-    var myel = $('#StorytimeFavoritesOne').append(createPreShelf(title, val.KeyName, '1'));
+    var myel = $('#StorytimeFavoritesOne').append(createPreShelf(title, val.KeyName, '10'));
     console.log('val', val.KeyName)
-    getRandomCollectionList(val.KeyName, '1');
+    getRandomCollectionList(val.KeyName, '10');
     $('#StorytimeFavoritesOne').append(createPostShelves(title));
   }
   if (val.KeyName == 'EpicReads') {
