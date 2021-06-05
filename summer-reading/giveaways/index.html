@@ -147,9 +147,6 @@ h1.ultima {
 	background: transparent url(wave-top.jpg) center center repeat-x;
 	height: 115px;
 }
-.details {
-	margin-top: 279px;
-}
 .modal-content {
 	color: #17144b;
 	padding: 30px 25px 25px 25px;
@@ -208,13 +205,22 @@ button.close {
 	color: #fff;
 	text-align: center;
 	font-size: 24px;
-	margin: 15px auto;
 }
-.item h1.details {
-	margin-top: 272px;
+.prize-hover {
+	box-shadow: rgba(255, 255, 255, .8) 0 0 40px 0px;
+	transition: all .4s ease-out;
+	border-radius: 50%;
+    border: 3px solid #fff;
+    background: #fff;
+}
+.prize-hover:hover {
+	box-shadow: rgba(8, 137, 195, 1) 0 0 80px 40px;
+	transition: all .4s ease-out;
+	border-radius: 50%;
+ 
+    background: #fff;
 }
 .item.one {
-	background: url(one.png) center center no-repeat;
 }
 .item.two {
 	background: url(two.png) center center no-repeat;
@@ -309,9 +315,6 @@ h1.ultima {
 @media (max-width: 768px) {
 .large-img {
 	display: none;
-}
-.item {
-	margin: 10px;
 }
 }
 </style>
@@ -508,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h4 class="white futura text-uppercase no-margin-top">Sign Up to Win!</h4>
       <div class="white large-text">Is your name written in the stars? We’re giving away 95 awesome prizes to Summer Reading participants who sign up for the program June 5-14. What could you win? Launch into Summer Reading and find out!</div>
       <div class="white margin-top-10"> Each day features a random drawing for that day's prize. Everyone registered May 1-June 14 will be entered into the prize drawings. If you are chosen as a winner, we will contact you to arrange prize delivery. Winners will also be announced via DCL’s digital channels (first name, last initial). No purchase necessary, and registration is free. </div>
-      <div class="futura text-center"> <a href="../registration/" class="reg-link">Registration</a> </div>
+      <div class="futura text-center"> <a href="../registration/" class="reg-link">Register / Sign In</a> </div>
     </div>
   </div>
   <div class="row wave-row-top"></div>
@@ -517,8 +520,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="container">
         <div class="prizes-wrapper">
           <div class="item one">
-            <h1 style="margin-bottom: 0px;" class="text-uppercase no-margin-bottom">Day 1 Giveaway!</h1>
-            <div class="white">Prize Revealed June 5</div>
+            <h1 class="text-uppercase no-margin-top no-margin-bottom">Day 1 Giveaway!</h1>
+            <h5 class="no-margin-top margin-bottom-10 white">June 5</h5>
+            <a class="white" href="#one" data-toggle="modal" data-target="#one"><img class="prize-hover" src="prizes/one.jpg" alt=""></a>
+            <h1><a class="white" href="#one" data-toggle="modal" data-target="#one">Details</a></h1>
           </div>
           <div class="item two"> 
             <!--<h1 class="details"><a href="#two" data-toggle="modal" data-target="#two">Details</a></h1>--> 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,6 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
+<meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -107,8 +107,8 @@ h1.ultima {
 }
 .planet-row {
 	background: transparent url("planets.jpg") top center repeat;
-	-webkit-animation: float 200s linear infinite;
-	animation: float 200s linear infinite;
+	-webkit-animation: float 320s linear infinite;
+	animation: float 320s linear infinite;
 }
 @-webkit-keyframes float {
 from {
@@ -156,15 +156,14 @@ background-position: 0 0;
 }
 .item.content {
 	width: 650px;
-	padding: 140px 0 200px;
 }
 .item.earth-background {
 	width: 700px;
 	height: 700px;
 }
 .fade-in-text {
-	-webkit-animation: fade-in-text 2s linear .1s both;
-	animation: fade-in-text 2s linear .1s both;
+	-webkit-animation: fade-in-text 3s linear .1s both;
+	animation: fade-in-text 3s linear .1s both;
 }
 .link, .link:visited, .link:active {
 	width: 300px;
@@ -186,8 +185,8 @@ background-position: 0 0;
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
 }
-.planets {
-	background: transparent url("planet-background.png") center top/cover;
+.earth-background {
+	background: transparent url(earth.png) center bottom no-repeat;
 }
 .ping {
 	-webkit-animation: ping 2s ease-in-out infinite both;
@@ -197,13 +196,22 @@ background-position: 0 0;
 	-webkit-animation: ping 1.5s ease-in-out infinite both;
 	animation: ping 1.5s ease-in-out infinite both;
 }
+.plume {
+	background: transparent url("static-plume.png") center bottom no-repeat;
+	z-index: 100;
+	position: relative;
+}
+.rocket {
+	margin-bottom: -60px;
+	margin-top: 56px;
+}
 .flicker {
-	-webkit-animation: flicker 3s linear 0s both;
-	animation: flicker 2s linear 0s both;
+	-webkit-animation: flicker 3s linear .2s both;
+	animation: flicker 3s linear .2s both;
 }
 .flicker.alt {
-	-webkit-animation: flicker 3.5s linear .1s both;
-	animation: flicker 3s linear .1s both;
+	-webkit-animation: flicker 3.5s linear 2.2s both;
+	animation: flicker 3.5s linear 2.2s both;
 }
 @-webkit-keyframes flicker {
 0% {
@@ -455,21 +463,166 @@ opacity: 1;
 text-shadow: none;
 }
 }
+@-webkit-keyframes ping {
+0% {
+-webkit-transform: scale(0.9);
+transform: scale(0.9);
+opacity: 1;
+}
+50% {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+opacity: .6;
+}
+70% {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+opacity: .9;
+}
+100% {
+-webkit-transform: scale(1);
+transform: scale(0.9);
+opacity: .2;
+}
+}
+@keyframes ping {
+0% {
+-webkit-transform: scale(0.9);
+transform: scale(0.9);
+opacity: 1;
+}
+50% {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+opacity: .6;
+}
+70% {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+opacity: .9;
+}
+100% {
+-webkit-transform: scale(1);
+transform: scale(0.9);
+opacity: .2;
+}
+}
+.blastoff {
+	-webkit-animation: blastoff 0.5s linear infinite both;
+	animation: blastoff 0.5s linear infinite both;
+}
+@-webkit-keyframes blastoff {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+10% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+20% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+30% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+40% {
+-webkit-transform: translate(1px, 1px);
+transform: translate(1px, 1px);
+}
+50% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+60% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+70% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+80% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+90% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
+@keyframes blastoff {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+10% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+20% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+30% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+40% {
+-webkit-transform: translate(1px, 1px);
+transform: translate(1px, 1px);
+}
+50% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+60% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+70% {
+-webkit-transform: translate(-1px, 1px);
+transform: translate(-1px, 1px);
+}
+80% {
+-webkit-transform: translate(-1px, -1px);
+transform: translate(-1px, -1px);
+}
+90% {
+-webkit-transform: translate(1px, -1px);
+transform: translate(1px, -1px);
+}
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
 
 @media (max-width: 1349px) {
 .item.content {
+	order: 1;
+	padding-top: 60px;
 }
 .item.earth-background {
+	order: 2;
 }
 }
 
 @media (max-width: 700px) {
 .item.content {
-	width: 650px;
-	padding: 90px 0 145px;
+	order: 1;
+	padding-top: 60px;
+	width: 100%;
 }
-.planets {
-	background: transparent url("planet-background.png") left center/cover;
+.item.earth-background {
+	order: 2;
+	width: 100%;
 }
 h1.ultima {
 	font-size: 70px;
@@ -478,7 +631,7 @@ h1.ultima {
 
 @media (max-width: 525px) {
 h1.ultima {
-	font-size: 55px;
+	font-size: 46px;
 }
 }
 </style>
@@ -669,13 +822,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row planet-row">
-    <div class="planets">
-      <div class="container-md no-padding text-center">
-        <div class="item-wrapper">
-          <div class="item content">
-            <h1 class="ultima text-uppercase">10 Days of Giv<span class="flicker">e</span>away<span class="flicker alt">s</span></h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading/giveaways/" class="link">Galactic Giveaways</a><a href="summer-reading/" class="link">Launch into Summer Reading</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=kickoff&et=35&&ag=724&lib=ALL&nd=180" target="_blank" class="link">Awesome Kickoff Events</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor&ag=724&lib=ALL&nd=90" target="_blank" class="link">Storytime in Outer Spaces</a></div>
+    <div class="container-md no-padding text-center">
+      <div class="item-wrapper">
+        <div class="item earth-background">
+          <div class="blast-off">
+            <div class="rocket"><img class="blastoff" src="rocket.png" alt=""></div>
+            <div class="plume alt"><img class="ping" src="plume.png" alt=""></div>
           </div>
+        </div>
+        <div class="item content">
+          <h1 class="ultima text-uppercase">Countdown<br>
+            to Su<span class="flicker alt">m</span>me<span class="flicker">r</span></h1>
+          <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Get Set for Summer Reading</a><a href="camp-dcl" class="link">Can't Wait! Camp DCL</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor&ag=724&lib=ALL&nd=90" target="_blank" class="link">Storytime in Outer Spaces</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=kickoff&et=35&&ag=724&lib=ALL&nd=180" target="_blank" class="link">Galaxy DCL Kickoff Events</a></div>
         </div>
       </div>
     </div>
@@ -778,5 +936,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
