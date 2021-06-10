@@ -137,8 +137,6 @@ input.mauticform-checkboxgrp-checkbox {
 	transition-duration: 0.4s;
 	cursor: pointer;
 }
-</style>
-<style>
 .mauticform_wrapper {
 	max-width: 700px;
 	margin: 0 auto;
@@ -166,15 +164,13 @@ input.mauticform-checkboxgrp-checkbox {
 .radio-row {
 	display: flex;
 	flex-wrap: wrap;
-	/* justify-content: center; */
 	padding-top: 10px;
 }
-.mauticform-label {
-}
-.mauticform-row.mauticform-required .mauticform-label:after {
+.mauticform-row.mauticform-required .mauticform-label::after {
 	color: #b1462c;
 	content: " *";
 	display: inline;
+	white-space: nowrap;
 }
 .mauticform-helpmessage {
 	display: block;
@@ -185,8 +181,6 @@ input.mauticform-checkboxgrp-checkbox {
 	display: block;
 	color: #b1462c;
 	margin-top: 2px;
-}
-.mauticform-selectbox, .mauticform-input, .mauticform-textarea {
 }
 .mauticform-checkboxgrp-row {
 	clear: both;
@@ -213,6 +207,29 @@ input.mauticform-checkboxgrp-checkbox {
 }
 .mauticform-button.btn.btn-primary.btn-lg {
 	padding: 15px 50px;
+}
+.label-alt {
+	font-weight: 400;
+}
+
+@media (max-width: 725px) {
+.radio-row {
+	display: flex;
+	flex-direction: column;
+	padding-top: 10px;
+}
+.remove-sm {
+	display: none;
+}
+}
+
+@media (min-width: 726px) {
+.break-here {
+	display: none;
+}
+.remove-lg {
+	display: none;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -424,8 +441,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <label class="mauticform-label" for="mauticform_radiogrp_radio_how_likely_is_it_that_you_0Notatalllikely1">How likely is it that you would recommend Douglas County Libraries to a friend or colleague?</label>
                 <div class="radio-row">
                   <div class="mauticform-radiogrp-row">
-                    <label id="mauticform_radiogrp_label_how_likely_is_it_that_you_00" for="mauticform_radiogrp_radio_how_likely_is_it_that_you_00" class="mauticform-radiogrp-label">Not at all likely &mdash; </label>
-                    <input name="mauticform[how_likely_is_it_that_you]" class="mauticform-radiogrp-radio" id="mauticform_radiogrp_radio_how_likely_is_it_that_you_00" type="radio" value="0"> <label id="mauticform_radiogrp_label_how_likely_is_it_that_you_01" for="mauticform_radiogrp_radio_how_likely_is_it_that_you_01" class="mauticform-radiogrp-label">0</label>
+                    <label id="mauticform_radiogrp_label_how_likely_is_it_that_you_00" for="mauticform_radiogrp_radio_how_likely_is_it_that_you_00" class="mauticform-radiogrp-label">Not at all likely<span class="remove-sm"> &mdash; </span></label>
+                    <span class="break-here"><br/>
+                    </span>
+                    <input name="mauticform[how_likely_is_it_that_you]" class="mauticform-radiogrp-radio" id="mauticform_radiogrp_radio_how_likely_is_it_that_you_00" type="radio" value="0">
+                    <label id="mauticform_radiogrp_label_how_likely_is_it_that_you_01" for="mauticform_radiogrp_radio_how_likely_is_it_that_you_01" class="mauticform-radiogrp-label">0</label>
                   </div>
                   <div class="mauticform-radiogrp-row">
                     <input name="mauticform[how_likely_is_it_that_you]" class="mauticform-radiogrp-radio" id="mauticform_radiogrp_radio_how_likely_is_it_that_you_11" type="radio" value="1">
@@ -465,8 +485,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                   </div>
                   <div class="mauticform-radiogrp-row">
                     <input name="mauticform[how_likely_is_it_that_you]" class="mauticform-radiogrp-radio" id="mauticform_radiogrp_radio_how_likely_is_it_that_you_1010" type="radio" value="10">
+                    <span class="remove-sm">
                     <label id="mauticform_radiogrp_label_how_likely_is_it_that_you_1010" for="mauticform_radiogrp_radio_how_likely_is_it_that_you_1010" class="mauticform-radiogrp-label">10 &mdash; Extremely likely</label>
-                  </div>
+                    </span> <span class="remove-lg">
+                    <label id="mauticform_radiogrp_label_how_likely_is_it_that_you_1011" for="mauticform_radiogrp_radio_how_likely_is_it_that_you_1010" class="mauticform-radiogrp-label">10</label>
+                    <div class="label-alt">Extremely likely</div>
+                    </span> </div>
                 </div>
                 <span class="mauticform-errormsg" style="display: none;">This is required.</span> </div>
               <div id="mauticform_npssurveycampaign_what_changes_would_dougla" data-mautic-form-show-on="how_likely_is_it_that_you:0|1|2|3|4|5|6" data-mautic-form-expr="in" data-validate="what_changes_would_dougla" data-validation-type="textarea" class="mauticform-row mauticform-text mauticform-field-1  mauticform-field-hidden mauticform-required">
