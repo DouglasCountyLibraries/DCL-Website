@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,8 +103,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 h1.ultima {
 	font-family: 'Ultima', sans-serif;
 	color: #fff;
-	font-size: 90px;
+	font-size: 110px;
 	margin-top: 0;
+}
+.saturn-row {
+	background: transparent url("saturn-background.png") top left no-repeat;
 }
 .planet-row {
 	background: transparent url("planets.jpg") top center repeat;
@@ -149,14 +153,14 @@ background-position: 0 0;
 }
 .item-wrapper {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	flex-direction: row;
 }
 .item.content {
-	width: 650px;
-	padding: 140px 0 200px;
+	width: 700px;
+	padding-bottom: 30px;
 }
 .item.earth-background {
 	width: 700px;
@@ -167,11 +171,11 @@ background-position: 0 0;
 	animation: fade-in-text 3s linear .1s both;
 }
 .link, .link:visited, .link:active {
-	width: 300px;
+	width: 325px;
 	background: #fff;
 	color: #040012;
 	margin: 10px;
-	padding: 15px 5px;
+	padding: 15px 0;
 	border-radius: 2px;
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
@@ -186,290 +190,16 @@ background-position: 0 0;
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
 }
-.planets {
-	background: transparent url("planet-background.png") center top/cover;
-}
-.ping {
-	-webkit-animation: ping 2s ease-in-out infinite both;
-	animation: ping 2s ease-in-out infinite both;
-}
-.alt {
-	-webkit-animation: ping 1.5s ease-in-out infinite both;
-	animation: ping 1.5s ease-in-out infinite both;
-}
-.flicker {
-	-webkit-animation: flicker 3s linear .2s both;
-	animation: flicker 3s linear .2s both;
-}
-.flicker.alt {
-	-webkit-animation: flicker 3.5s linear 2.2s both;
-	animation: flicker 3.5s linear 2.2s both;
-}
-@-webkit-keyframes flicker {
-0% {
-opacity: 0;
-}
-10% {
-opacity: 0;
-text-shadow: none;
-}
-10.1% {
-opacity: 1;
-text-shadow: none;
-}
-10.2% {
-opacity: 0;
-text-shadow: none;
-}
-20% {
-opacity: 0;
-text-shadow: none;
-}
-20.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-}
-20.6% {
-opacity: 0;
-text-shadow: none;
-}
-30% {
-opacity: 0;
-text-shadow: none;
-}
-30.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-30.5% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-30.6% {
-opacity: 0;
-text-shadow: none;
-}
-45% {
-opacity: 0;
-text-shadow: none;
-}
-45.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-50% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-55% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-55.1% {
-opacity: 0;
-text-shadow: none;
-}
-57% {
-opacity: 0;
-text-shadow: none;
-}
-57.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-}
-60% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-}
-60.1% {
-opacity: 0;
-text-shadow: none;
-}
-65% {
-opacity: 0;
-text-shadow: none;
-}
-65.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-75% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-75.1% {
-opacity: 0;
-text-shadow: none;
-}
-77% {
-opacity: 0;
-text-shadow: none;
-}
-77.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-85% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-85.1% {
-opacity: 0;
-text-shadow: none;
-}
-86% {
-opacity: 0;
-text-shadow: none;
-}
-86.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-100% {
-opacity: 1;
-text-shadow: none;
-}
-}
-@keyframes flicker {
-0% {
-opacity: 0;
-}
-10% {
-opacity: 0;
-text-shadow: none;
-}
-10.1% {
-opacity: 1;
-text-shadow: none;
-}
-10.2% {
-opacity: 0;
-text-shadow: none;
-}
-20% {
-opacity: 0;
-text-shadow: none;
-}
-20.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-}
-20.6% {
-opacity: 0;
-text-shadow: none;
-}
-30% {
-opacity: 0;
-text-shadow: none;
-}
-30.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-30.5% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-30.6% {
-opacity: 0;
-text-shadow: none;
-}
-45% {
-opacity: 0;
-text-shadow: none;
-}
-45.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-50% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-55% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-}
-55.1% {
-opacity: 0;
-text-shadow: none;
-}
-57% {
-opacity: 0;
-text-shadow: none;
-}
-57.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-}
-60% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-}
-60.1% {
-opacity: 0;
-text-shadow: none;
-}
-65% {
-opacity: 0;
-text-shadow: none;
-}
-65.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-75% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-75.1% {
-opacity: 0;
-text-shadow: none;
-}
-77% {
-opacity: 0;
-text-shadow: none;
-}
-77.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-85% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-85.1% {
-opacity: 0;
-text-shadow: none;
-}
-86% {
-opacity: 0;
-text-shadow: none;
-}
-86.1% {
-opacity: 1;
-text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-}
-100% {
-opacity: 1;
-text-shadow: none;
-}
-}
-
-@media (max-width: 1349px) {
-.item.content {
-}
-.item.earth-background {
-}
+.galaxy-logo {
+	padding: 25px 15px;
+}
+.astronaut {
+	padding: 185px 0 60px;
 }
 
 @media (max-width: 700px) {
 .item.content {
-	width: 650px;
-	padding: 90px 0 145px;
-}
-.planets {
-	background: transparent url("planet-background.png") left center/cover;
+	width: 100%;
 }
 h1.ultima {
 	font-size: 70px;
@@ -479,6 +209,24 @@ h1.ultima {
 @media (max-width: 525px) {
 h1.ultima {
 	font-size: 46px;
+}
+}
+
+@media (max-width: 1188px) {
+.item.image-content {
+	display: none;
+}
+.item-wrapper {
+	flex-direction: column;
+}
+.item.content {
+	padding-top: 30px;
+}
+}
+
+@media (min-width: 1189px) {
+.item.image-content-alt {
+	display: none;
 }
 }
 </style>
@@ -668,12 +416,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row planet-row">
-    <div class="planets">
+    <div class="saturn-row">
       <div class="container-md no-padding text-center">
         <div class="item-wrapper">
+          <div class="item image-content">
+            <div class="astronaut"><img class="img-responsive center-block" src="astronaut.png" alt=""></div>
+          </div>
           <div class="item content">
-            <h1 class="ultima text-uppercase">10 Days of Giv<span class="flicker">e</span>away<span class="flicker alt">s</span></h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading/giveaways/" class="link">Galactic Giveaways</a><a href="summer-reading/" class="link">Launch into Summer Reading</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=kickoff&et=35&&ag=724&lib=ALL&nd=180" target="_blank" class="link">Awesome Kickoff Events</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor&ag=724&lib=ALL&nd=90" target="_blank" class="link">Storytime in Outer Spaces</a></div>
+            <h1 class="ultima text-uppercase">5 Days of Giveaways</h1>
+            <div class="link-wrapper fade-in-text"> <a href="summer-reading/giveaways/" class="link">Five Galactic Giveaways</a> <a href="summer-reading" class="link">Summer Reading for Earthlings</a> <a href="fete-des-fables/family-fete/" class="link">Fintastic Family Fête</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1898512829" class="link">Stargazer’s Guide to Summer Reads</a></div>
+          </div>
+          <div class="item image-content-alt">
+            <div class="astronaut-alt"><img class="center-block" src="astronaut-alt.png" alt=""></div>
           </div>
         </div>
       </div>
@@ -776,4 +530,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
