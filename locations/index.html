@@ -94,7 +94,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .hours-wrapper {
 	display: flex;
 	align-items: center;
-	flex-direction: column;
+	justify-content: center;
+}
+.new-hours {
+	padding: 15px 25px;
 }
 .message.white {
 	background: #b1462c;
@@ -310,16 +313,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row padding-bottom-20">
     <div class="container">
-      <h3 class="text-center no-margin gray-90">New hours in effect Monday, July 5</h3>
+      <h3 class="text-center no-margin gray-90"> New hours in effect <span class="text-nowrap">Monday, July 5</span> </h3>
       <div class="hours-wrapper">
-        <div class="new-hours margin-top-5">Mon-Thu: 8AM-8PM<br>
+        <div class="new-hours">Mon-Thu: 8AM-8PM<br>
           Fri: 8AM-6PM<br>
           Sat-Sun: 10AM-4PM </div>
-        <h4 class="text-center no-margin-bottom gray-90">Louviers</h4>
-        <div class="new-hours">Tue: 3-8PM<br>
+        <div class="new-hours">
+          <div class="font-weight-400">LOUVIERS:</div>
+          Tue: 3-8PM<br>
           Sat: 10AM-4PM </div>
-        <h3 class="margin-top-10 text-center text-uppercase font-weight-400"><a href="#" data-toggle="modal" data-target="#closings">Holiday Closures</a></h3>
       </div>
+      <h3 class="margin-top-10 text-center text-uppercase font-weight-400"><a href="#" data-toggle="modal" data-target="#closings">Holiday Closures</a></h3>
     </div>
   </div>
   <div class="row">
