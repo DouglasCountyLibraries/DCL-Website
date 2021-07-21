@@ -112,11 +112,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 h4.heading-one {
 	font-family: "P22MichelangeloRegular", sans-serif;
 	color: #ec1c24;
-	background: linear-gradient(to bottom, #ec1c24, #660000);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+
 	font-size: 60px;
 	font-weight: 900;
+	padding-top: 230px;
 }
 h1.heading-two {
 	color: #ec1c24;
@@ -133,21 +132,76 @@ h1.heading-two {
 .cape {
 	background: transparent url("cape.png") top center/cover;
 	margin: 0 auto;
-max-width: 950px;
-	height: 1097px;
-	position: relative;
-	top: -753px;
+	max-width: 950px;
+	height: 793px;
 }
 .dracula {
 	background: transparent url("dracula.png") top center/cover;
 	margin: 0 auto;
-	/* margin-top: 355px; */
-max-width: 950px;
-	height: 1097px;
-	/* margin-top: 470px; */
-	position: relative;
-	top: 435px;
+	max-width: 950px;
+	height: 485px;
+	margin-top: 348px;
 }
+      .appear {
+	-webkit-animation: appear .3s cubic-bezier(0, 0, 1, 1) 3s both;
+	        animation: appear .3s cubic-bezier(0, 0, 1, 1) 3s both;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+            
+
+  }
+  100% {
+    opacity: 1;
+
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+            
+
+  }
+  100% {
+    opacity: 1;
+
+  }
+}  
+    
+    
+    
+    .slide-in-top {
+	-webkit-animation: slide-in-top 3s cubic-bezier(0, 0, 1, 1) 0s both;
+	        animation: slide-in-top 3s cubic-bezier(0, 0, 1, 1) 0s both;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-720px);
+            transform: translateY(-720px);
+opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(-190px);
+            transform: translateY(-190px);
+opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-720px);
+            transform: translateY(-720px);
+opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translateY(-190px);
+            transform: translateY(-190px);
+opacity: 1;
+  }
+}
+
 .btn.btn-custom {
 	background: #a9283a;
 	font-size: 24px;
@@ -175,7 +229,7 @@ max-width: 950px;
 	height: 100%;
 	width: 100%;
 	background: #fff;
-	animation: lighting .8s linear 2;
+    animation: lighting .8s 3s linear 2;
 	opacity: 1;
 }
 @keyframes lighting {
@@ -520,22 +574,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="flash">
     <div class="row moon-row text-center">
       <div class="">
-       
-          <div class="dracula"> 
-            
-            <!--<h4 class="heading-one">A Storybook Holiday Halloween</h4>
-            <h1 class="heading-two">Welcome to<br>
-              Transylvania</h1>--> 
-            
-          </div> <div class="cape">     </div>
+        <div class="dracula appear"> 
+          
+ 
+          
         </div>
-
-      <div class="bat one hidden-xs"><img src="bat.png" alt="Bat"></div>
+        <div class="cape slide-in-top">         <h4 class="heading-one">A Storybook Holiday Halloween</h4>
+            <h1 class="heading-two">Welcome to<br>
+              Transylvania</h1>  </div>
+      </div>
+     <!-- <div class="bat one hidden-xs"><img src="bat.png" alt="Bat"></div>
       <div class="bat two hidden-xs hidden-sm"><img src="bat.png" alt="Bat"></div>
       <div class="bat three hidden-xs"><img src="bat.png" alt="Bat"></div>
       <div class="bat four hidden-xs hidden-sm"><img src="bat.png" alt="Bat"></div>
       <div class="bat five hidden-xs"><img src="bat.png" alt="Bat"></div>
-      <div class="bat six hidden-xs"><img src="bat.png" alt="Bat"></div>
+      <div class="bat six hidden-xs"><img src="bat.png" alt="Bat"></div>-->
       <div class="container">
         <div class="item-wrapper">
           <div class="white">Saturday, October 16, 6PM | Saturday, October 23, 6PM</div>
