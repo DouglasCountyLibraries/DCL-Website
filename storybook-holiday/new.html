@@ -129,6 +129,7 @@ h1.heading-two {
 	background: #000 url("graveyard.jpg") top center no-repeat;
 	-webkit-animation: image_blur 4s;
 	animation: image_blur 4s;
+	padding-bottom: 165px;
 }
 @-webkit-keyframes image_blur {
 0% {
@@ -154,7 +155,7 @@ filter: blur(0px);
 	background: transparent url("cape.png") top center/cover;
 	margin: 0 auto;
 	max-width: 950px;
-	height: 565px;
+	height: 700px;
 }
 .dracula {
 	background: transparent url("dracula.png") top center/cover;
@@ -222,27 +223,18 @@ opacity: 1;
 }
 }
 .btn.btn-custom {
-	background: #a9283a;
-	font-size: 24px;
-	letter-spacing: 1.5px;
-	color: #fff;
+	background: #ec1c24;
+	color: #000;
 	border-radius: 2px;
 }
 .btn-custom:active, .btn-custom:hover, .btn-custom:focus {
-	background: #ef6971;
-	font-size: 24px;
-	letter-spacing: 1.5px;
+	background: #7d0f13;
 	color: #fff;
-	border-radius: 2px;
-	-webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
-	-moz-box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
-	box-shadow: rgba(255, 255, 255, 0.3) 0 4px 8px 0;
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease-out;
-	-ms-transition: all .4s ease-out;
-	-o-transition: all .4s ease-out;
-	transition: all .4s ease-out;
-	opacity: 1;
+}
+a.btn.btn-default {
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 500;
 }
 .flash {
 	height: 100%;
@@ -298,6 +290,52 @@ h1.block-font {
 }
 .monster-row {
 	height: 650px;
+}
+}
+.item-wrapper {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin: 0 10px;
+	align-items: center;
+}
+.item {
+	color: #fff;
+	width: 300px;
+	padding: 15px 0;
+}
+.align-bottom {
+	margin-top: auto;
+}
+
+@media (max-width: 725px) {
+.item-wrapper {
+	flex-direction: column;
+}
+.moon-row {
+	padding-bottom: 500px;
+}
+    h1.heading-two {
+	font-size: 100px;
+	line-height: .9em;
+}
+}
+
+@media (max-width: 600px) {
+h1.heading-two {
+	font-size: 65px;
+	line-height: .9em;
+}
+    h4.heading-one {
+	font-size: 50px;
+	line-height: .7em;
+}
+    .dracula {
+
+	margin-top: 40px;
+}
+    .moon-row {
+	padding-bottom: 390px;
 }
 }
 </style>
@@ -487,15 +525,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="flash">
-  <div class="row moon-row text-center">
-    <div class="dracula appear"> </div>
-    <div class="cape slide-in-top">
-      <h4 class="heading-one">A Storybook Holiday Halloween</h4>
-      <h1 class="heading-two">Welcome to<br>
-        Transylvania</h1>
-      <div class="padding-top-30 white">
-        <div class="large-text margin-top-10">Join us for a <i>bite</i> of ghastly good fun at our Castle Rock and Highlands Ranch locations.</div>
-        <div class="text-left">Dress up for the full experience! Visit Dracula’s coffin room (if you dare!) and decorate your Halloween bucket for trick-or-treating through the vampire bat cave. Sink your teeth into delicious catered snacks, sip the special witches’ brew, and do the Monster Mash. Your fangtastic evening also includes lively entertainment, make and takes, and crafts. Ideal for ages 7-11, but all ages are welcome. </div>
+    <div class="row moon-row text-center">
+      <div class="dracula appear"> </div>
+      <div class="cape slide-in-top">
+        <h4 class="heading-one">A Storybook Holiday Halloween</h4>
+        <h1 class="heading-two">Welcome to<br>
+          Transylvania</h1>
+        <div class="padding-top-30 margin-left-10 margin-right-10 white">
+          <div class="large-text margin-bottom-10">Join us for a <i>bite</i> of ghastly good fun at our Castle Rock and Highlands Ranch locations.</div>
+          <div>Dress up for the full experience! Visit Dracula’s coffin room (if you dare!) and decorate your Halloween bucket for trick-or-treating through the vampire bat cave. Sink your teeth into delicious catered snacks, sip the special witches’ brew, and do the Monster Mash. Your fangtastic evening also includes lively entertainment, make and takes, and crafts. Ideal for ages 7-11, but all ages are welcome. </div>
+          <div>
+            <h3 class="white no-margin-bottom">$20&nbsp;Adults*, $15 Ages&nbsp;3-13</h3>
+            (Ages 0-2 free with paying adult)</div>
+          <div class="item-wrapper">
+            <div class="item">
+              <h4 class="white"><span class="text-uppercase">Castle Rock</span><br>
+                Saturday,&nbsp;October&nbsp;16<br>
+                6-9PM</h4>
+              <div class="align-bottom padding-top-15 text-center"><a href="https://www.eventbrite.com/e/a-storybook-holiday-halloween-welcome-to-transylvania-tickets-160611466219" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
+            </div>
+            <div class="item">
+              <h4 class="white"><span class="text-uppercase">Highlands Ranch</span><br>
+                Saturday,&nbsp;October&nbsp;23<br>
+                6-9PM</h4>
+              <div class="align-bottom padding-top-15 text-center"><a href="https://www.eventbrite.com/e/a-storybook-holiday-halloween-welcome-to-transylvania-tickets-160613125181" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
+            </div>
+          </div>
+          <div class="large-text white padding-top-15">* An additional alcohol beverage ticket is $12 for adults 21-plus.</div>
+        </div>
       </div>
     </div>
   </div>
