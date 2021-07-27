@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,9 +97,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	justify-content: center;
 }
 .storytime-box {
-	max-width: 450px;
+	display: flex;
+	flex-direction: column;
+	max-width: 350px;
 	text-align: center;
 	padding: 15px;
+}
+.align-bottom {
+	margin-top: auto;
+	text-align: center;
+}
+.flower-background {
+	background: transparent url("flowers.png") center bottom repeat-x;
 }
 .large-text {
 	font-size: 18px;
@@ -309,21 +319,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
-    <div class="container padding-bottom-15 margin-lg-125">
+    <div class="container padding-bottom-15">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Storytime</h1>
         <div class="separator-container">
           <div class="separator line-separator"><i class="fas fa-comment fa-flip-horizontal"></i></div>
         </div>
-        <h4 class="roboto">Join us each weekday for Storytime fun and activities! Library staff will lead songs, rhymes, reading and fingerplays to keep nurturing those all-important emerging reading skills. </h4>
+        <h4 class="roboto margin-lg-100">Join us each weekday for Storytime fun and activities! Library staff will lead songs, rhymes, reading and fingerplays to keep nurturing those all-important emerging reading skills. </h4>
       </div>
       <div class="box-wrapper">
-        <div class="storytime-box"><img class="img-responsive image-center" src="virtual-storytime.jpg" alt="Virtual Storytime">
-          <div class="padding-bottom-15">Visit our Virtual Storytime calendar to join the fun from any connected device.</div>
-          <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=virtual&ag=724&lib=ALL&nd=90" target="_blank" class="btn btn-primary text-uppercase">Virtual Storytime</a></div>
-        <div class="storytime-box"><img class="img-responsive image-center" src="outdoor-storytime.jpg" alt="Outdoor Storytime">
+        <div class="storytime-box">
+          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="zebra.png" alt="Virtual Storytime"></div>
           <div class="padding-bottom-15">Register for Outdoor Storytime for kids ages 0-5; space is limited. Thank you for keeping Storytime allergen-free.</div>
-          <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor&ag=724&lib=ALL&nd=90" target="_blank" class="btn btn-primary text-uppercase">Outdoor Storytime</a></div>
+          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor&ag=724&lib=ALL&nd=90" target="_blank" class="btn btn-primary text-uppercase">Outdoor Storytime</a></div>
+        </div>
+        <div class="storytime-box">
+          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="tiger.png" alt="Virtual Storytime"></div>
+          <div class="padding-bottom-15">Visit our Virtual Storytime calendar to join the fun from any connected device.</div>
+          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=virtual&ag=724&lib=ALL&nd=90" target="_blank" class="btn btn-primary text-uppercase">Virtual Storytime</a></div>
+        </div>
+        <div class="storytime-box">
+          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="giraffe.png" alt="Virtual Storytime"></div>
+          <div class="padding-bottom-15">Indoor Storytime returns August 16! View the schedule to find a Storytime at your library. Thank you for keeping Storytime allergen-free.</div>
+          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&ds=2021-8-14&ag=724&lib=ALL&nd=180" target="_blank" class="btn btn-primary text-uppercase">Indoor Storytime</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -438,4 +457,5 @@ $(function () {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
