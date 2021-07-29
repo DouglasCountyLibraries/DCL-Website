@@ -93,13 +93,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 
 <style>
-@font-face {
-	font-family: 'Quentin Sonata';
-	src: url('shared-assets/web-fonts/Quentin.woff2"/shared-assets/web-fonts/Quentin.woff2') format('woff2'), url('../../shared-assets/web-fonts/Quentin.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
+
 @font-face {
 	font-family: 'Better Times';
 	src: url('shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../../shared-assets/web-fonts/BetterTimes.woff') format('woff');
@@ -107,51 +101,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-style: normal;
 	font-display: swap;
 }
-@font-face {
-	font-family: 'Austral Slab Blur Reg';
-	src: url('shared-assets/web-fonts/AustralSlabBlur-Regular.woff2') format('woff2'), url('../../shared-assets/web-fonts/AustralSlabBlur-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-.quentin {
-	font-family: 'Quentin Sonata', serif;
-}
-.better-times {
-	font-family: 'Better Times', serif;
-	font-size: 58px;
-	line-height: .9em;
-	color: #663f6f;
-}
-.austral {
-	font-family: 'Austral Slab Blur Reg', serif;
-}
+
+
 h1.better-times {
 	font-family: 'Better Times', serif;
-	font-size: 110px;
+	font-size: 130px;
 	color: #663f6f;
 	margin: 0;
 	line-height: .9em;
 }
-h1.quentin {
-	font-family: 'Quentin Sonata', serif;
-	font-size: 80px;
-	color: #663f6f;
-	line-height: .9em;
-	margin: 0 10px;
-}
-h4.austral {
-	text-transform: uppercase;
-	margin: 0;
-	font-size: 40px;
-	color: #028ea1;
-	line-height: .9em;
-}
+
 .wave-background {
 	background: transparent url("waves.png") center top repeat-x;
 	height: 150px;
-	-webkit-animation: wave 60s linear infinite;
-	animation: wave 60s linear infinite;
+	-webkit-animation: wave 40s linear infinite;
+	animation: wave 40s linear infinite;
 }
 .page-background {
 	background: linear-gradient(#b3e8e1, #27b5ae);
@@ -160,36 +124,31 @@ h4.austral {
 	background: url("mermaid.png") center top no-repeat;
 	padding: 30px 0 50px;
 }
-h1.ultima {
-	font-family: 'Ultima', sans-serif;
-	color: #fff;
-	font-size: 52px;
-	margin-top: 0;
+    .item-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
 }
+
 .link-wrapper {
 	font-weight: 500;
 	display: flex;
-	flex-wrap: wrap;
+flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 20px 0 0;
+
 	font-size: 18px;
 }
-.item-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	flex-direction: row;
-}
-.item.content {
-	width: 700px;
-	padding-top: 15px;
+
+.item {
+	padding: 0 10px;
 }
 .link, .link:visited, .link:active {
-	width: 325px;
+	width: 340px;
 	background: rgba(255,255,255,1);
 	color: #000;
 	margin: 10px;
@@ -209,8 +168,7 @@ h1.ultima {
 	transition-duration: .5s;
 	box-shadow: 0 0 0px 2px rgba(255,255,255,.6);
 }
-.mermaid-wrapper img {
-}
+
 .sea-floor {
 	background: transparent url("sea-floor.png") center center no-repeat;
 	height: 527px;
@@ -279,28 +237,22 @@ background-position: 0 0;
 .item.content {
 	width: 100%;
 }
-h1.ultima {
+h1.better-times {
 	font-size: 50px;
 }
 }
 
 @media (max-width: 525px) {
-h1.ultima {
+h1.better-times {
 	font-size: 38px;
-	letter-spacing: -3px;
+
 }
 }
 
 @media (max-width: 1188px) {
-.item.image-content {
-	display: none;
-}
-.item-wrapper {
-	flex-direction: column;
-}
-.item.content {
-	padding-top: 30px;
-}
+
+
+
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -492,14 +444,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="wave-background"></div>
     <div class="page-background">
       <div class="fish-row">
-        <div class="bubbles-row">
-          <div class="item-wrapper">
-            <div class="item content">
-              <h1 class="better-times">Diving Back In</h1>
+        <div class="bubbles-row"><div class="text-center"><h1 class="better-times">Diving Back In</h1></div>
+          <div class="item-wrapper"><div class="item mermaid-wrapper"><img class="" src="mermaid.png" alt=""></div>
+            <div class="item">
+              
               <div class="link-wrapper"> <a href="fete-des-fables/" class="link">Fête des Fables Fundraisers</a> <a href="storytime/" class="link">Indoor Storytime Returns</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1939314239" class="link">Sea Reads</a> <a href="birthday-parties/" class="link">Splashy Birthday! </a><a href="storybook-holiday/" class="link">Storybook Holiday Halloween</a></div>
             </div>
           </div>
-          <div class="mermaid-wrapper text-center"><img class="" src="mermaid.png" alt=""></div>
+          
           <div class="sea-floor"></div>
         </div>
       </div>
