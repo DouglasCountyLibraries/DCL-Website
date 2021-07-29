@@ -153,6 +153,7 @@ h4.austral {
 }
 .page-background {
 	background: linear-gradient(#b3e8e1, #27b5ae);
+	padding-bottom: 60px;
 }
 .mermaid-background {
 	background: url("mermaid.png") center top no-repeat;
@@ -165,7 +166,6 @@ h1.ultima {
 	margin-top: 0;
 }
 .link-wrapper {
-	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	display: flex;
 	flex-wrap: wrap;
@@ -173,8 +173,8 @@ h1.ultima {
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 20px 0;
-	font-size: 16px;
+	padding: 20px 0 0;
+	font-size: 18px;
 }
 .item-wrapper {
 	display: flex;
@@ -185,11 +185,9 @@ h1.ultima {
 }
 .item.content {
 	width: 700px;
-	padding-bottom: 30px;
+	padding-top: 15px;
 }
 .link, .link:visited, .link:active {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
 	width: 325px;
 	background: rgba(255,255,255,.9);
 	color: #000;
@@ -202,12 +200,35 @@ h1.ultima {
 	text-decoration: none;
 }
 .link:hover {
-	background: rgba(255,255,255,.1);
-	color: #fff;
+	background: rgba(255,255,255,.3);
+	color: #000;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	box-shadow: 0 0 0px 2px rgba(255,255,255,.6);
+}
+.mermaid-wrapper img {
+}
+.fish-row {
+	background: transparent url("fish.png") center top repeat-x;
+	-webkit-animation: slide 90s linear infinite;
+	animation: slide 90s linear infinite;
+}
+@-webkit-keyframes slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 1920px 0;
+}
+}
+@keyframes slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 1920px 0;
+}
 }
 
 @media (max-width: 700px) {
@@ -428,10 +449,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="page-background">
       <div class="fish-row">
         <div class="item-wrapper">
-          <div class="item content"><h1 class="quentin">Heading goes here</h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Summer Reading for Earthlings</a> <a href="fete-des-fables/family-fete/" class="link">Family Fête Fundraiser</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1898512829" class="link">Stargazer’s Guide to Summer Reads</a> <a href="locations/" class="link">New Library Hours!</a></div>
+          <div class="item content">
+            <h1 class="quentin">Heading goes here</h1>
+            <div class="link-wrapper"> <a href="#" class="link">Fairy Tale Ball</a> <a href="#" class="link">Fete des Fables </a> <a href="#" class="link">Sea Reads</a> <a href="#" class="link">Indoor Storytime</a><a href="#" class="link">Birthday Parties</a></div>
           </div>
         </div>
+        <div class="mermaid-wrapper text-center opacity-5"><img class="" src="mermaid.png" alt=""></div>
       </div>
     </div>
   </div>
