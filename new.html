@@ -93,7 +93,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 
 <style>
-
 @font-face {
 	font-family: 'Better Times';
 	src: url('shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../../shared-assets/web-fonts/BetterTimes.woff') format('woff');
@@ -101,8 +100,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-style: normal;
 	font-display: swap;
 }
-
-
 h1.better-times {
 	font-family: 'Better Times', serif;
 	font-size: 130px;
@@ -110,7 +107,6 @@ h1.better-times {
 	margin: 0;
 	line-height: .9em;
 }
-
 .wave-background {
 	background: transparent url("waves.png") center top repeat-x;
 	height: 150px;
@@ -124,35 +120,36 @@ h1.better-times {
 	background: url("mermaid.png") center top no-repeat;
 	padding: 30px 0 50px;
 }
-    .item-wrapper {
+.item-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-
 }
-
 .link-wrapper {
 	font-weight: 500;
 	display: flex;
-flex-direction: column;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	text-align: center;
-
 	font-size: 18px;
 }
-
+.item.mermaid {
+	margin-right: -45px;
+	z-index: 100;
+}
 .item {
-	padding: 0 10px;
 }
 .link, .link:visited, .link:active {
 	width: 340px;
-	background: rgba(255,255,255,1);
+	background: rgba(255,255,255,.3);
 	color: #000;
 	margin: 10px;
 	padding: 15px 0;
+	border: 2px solid rgba(255,255,255,.6);
 	border-radius: 2px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
@@ -161,14 +158,13 @@ flex-direction: column;
 	box-shadow: 0 3px 6px rgba(0,0,0,.3);
 }
 .link:hover {
-	background: rgba(255,255,255,.3);
+	background: rgba(255,255,255,.0);
 	color: #000;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	box-shadow: 0 0 0px 2px rgba(255,255,255,.6);
 }
-
 .sea-floor {
 	background: transparent url("sea-floor.png") center center no-repeat;
 	height: 527px;
@@ -233,26 +229,26 @@ background-position: 0 0;
 }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 935px) {
 .item.content {
-	width: 100%;
+	order: 1;
 }
+.item.mermaid {
+	order: 2;
+	margin-right: 0;
+}
+}
+
+@media (max-width: 565px) {
 h1.better-times {
-	font-size: 50px;
+	font-size: 100px;
 }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 425px) {
 h1.better-times {
-	font-size: 38px;
-
+	font-size: 80px;
 }
-}
-
-@media (max-width: 1188px) {
-
-
-
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -444,15 +440,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="wave-background"></div>
     <div class="page-background">
       <div class="fish-row">
-        <div class="bubbles-row"><div class="text-center"><h1 class="better-times">Diving Back In</h1></div>
-          <div class="item-wrapper"><div class="item mermaid-wrapper"><img class="" src="mermaid.png" alt=""></div>
-            <div class="item">
-              
+        <div class="bubbles-row">
+          <div class="text-center">
+            <h1 class="better-times">Diving Back In</h1>
+          </div>
+          <div class="item-wrapper padding-bottom-100">
+            <div class="item mermaid"><img class="img-responsive" src="mermaid.png" alt=""></div>
+            <div class="item content">
               <div class="link-wrapper"> <a href="fete-des-fables/" class="link">Fête des Fables Fundraisers</a> <a href="storytime/" class="link">Indoor Storytime Returns</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1939314239" class="link">Sea Reads</a> <a href="birthday-parties/" class="link">Splashy Birthday! </a><a href="storybook-holiday/" class="link">Storybook Holiday Halloween</a></div>
             </div>
           </div>
-          
-          <div class="sea-floor"></div>
+          <!--<div class="sea-floor"></div>--> 
         </div>
       </div>
     </div>
