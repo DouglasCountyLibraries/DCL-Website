@@ -148,8 +148,10 @@ h4.austral {
 	line-height: .9em;
 }
 .wave-background {
-	background: #c4f4f2 url("waves.png") center bottom repeat-x;
-	height: 175px;
+	background: transparent url("waves.png") center top repeat-x;
+	height: 150px;
+    	-webkit-animation: wave 90s linear infinite;
+	animation: wave 90s linear infinite;
 }
 .page-background {
 	background: linear-gradient(#b3e8e1, #27b5ae);
@@ -233,6 +235,23 @@ background-position: 0 0;
 }
 to {
 background-position: 1920px 0;
+}
+}
+    
+@-webkit-keyframes wave {
+from {
+background-position: 423px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes wave {
+from {
+background-position: 423px 0;
+}
+to {
+background-position: 0 0;
 }
 }
 
