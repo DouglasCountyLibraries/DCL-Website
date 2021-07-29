@@ -150,8 +150,8 @@ h4.austral {
 .wave-background {
 	background: transparent url("waves.png") center top repeat-x;
 	height: 150px;
-    	-webkit-animation: wave 90s linear infinite;
-	animation: wave 90s linear infinite;
+	-webkit-animation: wave 60s linear infinite;
+	animation: wave 60s linear infinite;
 }
 .page-background {
 	background: linear-gradient(#b3e8e1, #27b5ae);
@@ -237,7 +237,6 @@ to {
 background-position: 1920px 0;
 }
 }
-    
 @-webkit-keyframes wave {
 from {
 background-position: 423px 0;
@@ -249,6 +248,27 @@ background-position: 0 0;
 @keyframes wave {
 from {
 background-position: 423px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+.bubbles-row {
+	background: transparent url("bubbles.png") center center repeat;
+	-webkit-animation: rise 15s linear infinite;
+	animation: rise 15s linear infinite;
+}
+@-webkit-keyframes rise {
+from {
+background-position: 0 1200px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes rise {
+from {
+background-position: 0 1200px;
 }
 to {
 background-position: 0 0;
@@ -472,14 +492,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="wave-background"></div>
     <div class="page-background">
       <div class="fish-row">
-        <div class="item-wrapper">
-          <div class="item content">
-            <h1 class="better-times">Heading Goes Here</h1>
-            <div class="link-wrapper"> <a href="#" class="link">Fairy Tale Ball</a> <a href="#" class="link">Fete des Fables </a> <a href="#" class="link">Sea Reads</a> <a href="#" class="link">Indoor Storytime</a><a href="#" class="link">Birthday Parties</a></div>
+        <div class="bubbles-row">
+          <div class="item-wrapper">
+            <div class="item content">
+              <h1 class="better-times">Heading Goes Here</h1>
+              <div class="link-wrapper"> <a href="#" class="link">Fairy Tale Ball</a> <a href="#" class="link">Fete des Fables </a> <a href="#" class="link">Sea Reads</a> <a href="#" class="link">Indoor Storytime</a><a href="#" class="link">Birthday Parties</a></div>
+            </div>
           </div>
+          <div class="mermaid-wrapper text-center"><img class="" src="mermaid.png" alt=""></div>
+          <div class="sea-floor"></div>
         </div>
-        <div class="mermaid-wrapper text-center"><img class="" src="mermaid.png" alt=""></div>
-        <div class="sea-floor"></div>
       </div>
     </div>
   </div>
