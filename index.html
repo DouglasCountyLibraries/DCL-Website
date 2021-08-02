@@ -90,131 +90,176 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
 <style>
 @font-face {
-	font-family: 'Ultima';
-	src: url('shared-assets/web-fonts/MBFUltima.woff2') format('woff2'), url('shared-assets/web-fonts/MBFUltima.woff') format('woff');
+	font-family: 'Better Times';
+	src: url('shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../../shared-assets/web-fonts/BetterTimes.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
-h1.ultima {
-	font-family: 'Ultima', sans-serif;
-	color: #fff;
-	font-size: 52px;
-	margin-top: 0;
+h1.better-times {
+	font-family: 'Better Times', serif;
+	font-size: 150px;
+	color: #663f6f;
+	margin: 0;
+	line-height: .9em;
+	padding: 20px 0 20px;
 }
-.planet-row {
-	background: transparent url("planets.jpg") top center repeat;
-	-webkit-animation: float 200s linear infinite;
-	animation: float 200s linear infinite;
+.wave-background {
+	background: transparent url("waves.png") center top repeat-x;
+	height: 150px;
+	-webkit-animation: wave 40s linear infinite;
+	animation: wave 40s linear infinite;
 }
-@-webkit-keyframes float {
-from {
-background-position: 1736px 0;
+.page-background {
+	background: linear-gradient(#b3e8e1, #27b5ae);
 }
-to {
-background-position: 0 0;
+.mermaid-background {
+	background: url("mermaid.png") center top no-repeat;
+	padding: 30px 0 50px;
 }
-}
-@keyframes float {
-from {
-background-position: 1736px 0;
-}
-to {
-background-position: 0 0;
-}
-}
-.link-wrapper {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
+.item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.link-wrapper {
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 20px 0;
-	font-size: 16px;
+	font-size: 18px;
 }
-.item-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	flex-direction: row;
+.item.mermaid {
+	margin-right: 25px;
+	z-index: 100;
 }
 .item.content {
-	width: 700px;
-	padding-bottom: 30px;
-}
-.fade-in-text {
-	-webkit-animation: fade-in-text 1s linear .1s both;
-	animation: fade-in-text 1s linear .1s both;
+	margin-top: -60px;
 }
 .link, .link:visited, .link:active {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	width: 325px;
-	background: rgba(255,255,255,.9);
+	width: 340px;
+	background: rgba(255,255,255,.8);
 	color: #000;
 	margin: 10px;
 	padding: 15px 0;
+	border: 2px solid rgba(255,255,255,1);
 	border-radius: 2px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	text-transform: uppercase;
 	text-decoration: none;
+	box-shadow: 0 3px 6px rgba(0,0,0,.3);
 }
 .link:hover {
-	background: rgba(255,255,255,.1);
-	color: #fff;
+	background: rgba(255,255,255,.0);
+	color: #000;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	box-shadow: 0 0 0px 2px rgba(255,255,255,.6);
 }
-.galaxy-logo {
-	padding: 25px 15px;
+.sea-floor {
+	background: transparent url("sea-floor.png") center bottom repeat-x;
+	height: 350px;
+	margin-top: -350px;
 }
-.astronaut {
-	padding: 185px 0 60px;
+.sea-bottom {
+	background: #513e65;
+	height: 120px;
+}
+.fish-row {
+	background: transparent url("fish.png") center top repeat-x;
+	-webkit-animation: slide 90s linear infinite;
+	animation: slide 90s linear infinite;
+}
+@-webkit-keyframes slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 1920px 0;
+}
+}
+@keyframes slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 1920px 0;
+}
+}
+@-webkit-keyframes wave {
+from {
+background-position: 423px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes wave {
+from {
+background-position: 423px 0;
+}
+to {
+background-position: 0 0;
+}
+}
+.bubbles-row {
+	background: transparent url("bubbles.png") center center repeat;
+	-webkit-animation: rise 15s linear infinite;
+	animation: rise 15s linear infinite;
+}
+@-webkit-keyframes rise {
+from {
+background-position: 0 1200px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes rise {
+from {
+background-position: 0 1200px;
+}
+to {
+background-position: 0 0;
+}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 985px) {
 .item.content {
-	width: 100%;
+	order: 1;
 }
-h1.ultima {
-	font-size: 50px;
-}
-}
-
-@media (max-width: 525px) {
-h1.ultima {
-	font-size: 38px;
-	letter-spacing: -3px;
-}
-}
-
-@media (max-width: 1188px) {
-.item.image-content {
-	display: none;
-}
-.item-wrapper {
-	flex-direction: column;
+.item.mermaid {
+	order: 2;
+	margin-right: 0;
 }
 .item.content {
-	padding-top: 30px;
+	margin-top: 0;
 }
 }
 
-@media (min-width: 1189px) {
-.item.image-content-alt {
-	display: none;
+@media (max-width: 615px) {
+h1.better-times {
+	font-size: 100px;
+}
+.sea-bottom {
+	background: #513e65;
+	height: 20px;
+}
+}
+
+@media (max-width: 425px) {
+h1.better-times {
+	font-size: 80px;
 }
 }
 </style>
@@ -403,89 +448,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row planet-row">
-    <div class="saturn-row" style="background: url(planet-one.png) left top no-repeat transparent; display: block;">
-      <div class="container-md no-padding text-center">
-        <div class="item-wrapper">
-          <div class="item image-content">
-            <div class="astronaut"><img class="img-responsive center-block" src="astronaut-one.png" alt=""></div>
+  <div class="row">
+    <div class="wave-background"></div>
+    <div class="page-background">
+      <div class="fish-row">
+        <div class="bubbles-row">
+          <div class="text-center">
+            <h1 class="better-times">Diving Back In</h1>
           </div>
-          <div class="item content">
-            <div class="galaxy-logo"><img class="img-responsive center-block" src="galaxy-logo.svg" alt="Galaxy DCL"></div>
-            <h1 class="ultima text-uppercase no-margin">To Books and Beyond!</h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Summer Reading for Earthlings</a> <a href="fete-des-fables/family-fete/" class="link">Family Fête Fundraiser</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1898512829" class="link">Stargazer’s Guide to Summer Reads</a> <a href="locations/" class="link">New Library Hours!</a></div>
+          <div class="item-wrapper">
+            <div class="item mermaid"><img class="img-responsive" src="mermaid.png" alt=""></div>
+            <div class="item content">
+              <div class="link-wrapper"> <a href="fete-des-fables/" class="link">Fête des Fables Fundraisers</a> <a href="storytime/" class="link">Indoor Storytime Returns</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1939314239" class="link">Sea Reads</a> <a href="birthday-parties/" class="link">Splashy Birthday! </a><a href="storybook-holiday/" class="link">Storybook Holiday Halloween</a></div>
+            </div>
           </div>
-          <div class="item image-content-alt">
-            <div class="astronaut-alt"><img class="center-block" src="astronaut-alt.png" alt=""></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="saturn-row" style="background: url(planet-two.png) left top no-repeat transparent; display: block;">
-      <div class="container-md no-padding text-center">
-        <div class="item-wrapper">
-          <div class="item image-content">
-            <div class="astronaut"><img class="img-responsive center-block" src="astronaut-two.png" alt=""></div>
-          </div>
-          <div class="item content">
-            <div class="galaxy-logo"><img class="img-responsive center-block" src="galaxy-logo.svg" alt="Galaxy DCL"></div>
-            <h1 class="ultima text-uppercase no-margin">To Books and Beyond!</h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Summer Reading for Earthlings</a> <a href="fete-des-fables/family-fete/" class="link">Family Fête Fundraiser</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1898512829" class="link">Stargazer’s Guide to Summer Reads</a> <a href="locations/" class="link">New Library Hours!</a></div>
-          </div>
-          <div class="item image-content-alt">
-            <div class="astronaut-alt"><img class="center-block" src="astronaut-alt.png" alt=""></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="saturn-row" style="background: url(planet-three.png) left bottom no-repeat transparent; display: block;">
-      <div class="container-md no-padding text-center">
-        <div class="item-wrapper">
-          <div class="item image-content">
-            <div class="astronaut"><img class="img-responsive center-block" src="astronaut-three.png" alt=""></div>
-          </div>
-          <div class="item content">
-            <div class="galaxy-logo"><img class="img-responsive center-block" src="galaxy-logo.svg" alt="Galaxy DCL"></div>
-            <h1 class="ultima text-uppercase no-margin">To Books and Beyond!</h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Summer Reading for Earthlings</a> <a href="fete-des-fables/family-fete/" class="link">Family Fête Fundraiser</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1898512829" class="link">Stargazer’s Guide to Summer Reads</a> <a href="locations/" class="link">New Library Hours!</a></div>
-          </div>
-          <div class="item image-content-alt">
-            <div class="astronaut-alt"><img class="center-block" src="astronaut-alt.png" alt=""></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="saturn-row" style="background: url(planet-four.png) left bottom no-repeat transparent; display: block;">
-      <div class="container-md no-padding text-center">
-        <div class="item-wrapper">
-          <div class="item image-content">
-            <div class="astronaut"><img class="img-responsive center-block" src="astronaut-four.png" alt=""></div>
-          </div>
-          <div class="item content">
-            <div class="galaxy-logo"><img class="img-responsive center-block" src="galaxy-logo.svg" alt="Galaxy DCL"></div>
-            <h1 class="ultima text-uppercase no-margin">To Books and Beyond!</h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Summer Reading for Earthlings</a> <a href="fete-des-fables/family-fete/" class="link">Family Fête Fundraiser</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1898512829" class="link">Stargazer’s Guide to Summer Reads</a> <a href="locations/" class="link">New Library Hours!</a></div>
-          </div>
-          <div class="item image-content-alt">
-            <div class="astronaut-alt"><img class="center-block" src="astronaut-alt.png" alt=""></div>
-          </div>
-        </div>
-      </div>
-    </div>
-          <div class="saturn-row" style="background: url(planet-five.png) left top no-repeat transparent; display: block;">
-      <div class="container-md no-padding text-center">
-        <div class="item-wrapper">
-          <div class="item image-content">
-            <div class="astronaut"><img class="img-responsive center-block" src="astronaut-five.png" alt=""></div>
-          </div>
-          <div class="item content">
-            <div class="galaxy-logo"><img class="img-responsive center-block" src="galaxy-logo.svg" alt="Galaxy DCL"></div>
-            <h1 class="ultima text-uppercase no-margin">To Books and Beyond!</h1>
-            <div class="link-wrapper fade-in-text"> <a href="summer-reading" class="link">Summer Reading for Earthlings</a> <a href="fete-des-fables/family-fete/" class="link">Family Fête Fundraiser</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1898512829" class="link">Stargazer’s Guide to Summer Reads</a> <a href="locations/" class="link">New Library Hours!</a></div>
-          </div>
-          <div class="item image-content-alt">
-            <div class="astronaut-alt"><img class="center-block" src="astronaut-alt.png" alt=""></div>
-          </div>
+          <div class="sea-floor"></div>
+          <div class="sea-bottom"></div>
         </div>
       </div>
     </div>
@@ -548,13 +526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!--randomize div--> 
-<script>
-var random = Math.floor(Math.random() * $('.saturn-row').length);
-$('.saturn-row').hide().eq(random).show();
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
