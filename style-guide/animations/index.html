@@ -27,22 +27,61 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css" integrity="sha256-qQHUQX+gGGYfpC7Zdni08sr+h0ymXr0avmIASucY4FM=" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="../../shared-assets/css/dcl.css">
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <![endif]--> 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
 <script src="../../shared-assets/js/dcl.js"></script>
 <meta name="robots" content="noindex, nofollow">
+<style>
+.stage {
+	border: 2px solid #ddd;
+	border-radius: 3px;
+	padding: 30px;
+}
+.fade {
+	animation: fade 5s ease-in-out infinite both;
+}
+@keyframes fade {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+.spin-in {
+	animation: spin-in 10s ease-out infinite both;
+}
+@keyframes spin-in {
+0% {
+transform: rotate(-540deg) scale(0);
+opacity: 0;
+}
+25% {
+transform: rotate(-540deg) scale(0);
+opacity: 0;
+}
+35% {
+transform: rotate(0) scale(1);
+opacity: 1;
+}
+100% {
+transform: rotate(0) scale(1);
+opacity: 1;
+}
+}
+</style>
 </head>
 <body>
 <div class="container-fluid">
   <div class="container margin-bottom-100">
     <div class="margin-top-100 margin-bottom-80">
-      <div class="row">
+      <div class="row no-gutter">
         <div class="col-md-4">
           <h1 class="text-muted font-weight-400">DCL Animations</h1>
           <h3 class="roboto text-muted"> 
@@ -59,670 +98,78 @@ document.write(lastModified());
         </div>
         <div class="col-md-8 margin-top-60">
           <ul class="nav nav-pills">
-            <li> <a href="#typography">Typography</a></li>
-            <li> <a href="#buttons">Buttons</a></li>
-            <li> <a href="#icons">Font Icons</a></li>
-            <li> <a href="#colors">Colors</a></li>
-            <li> <a href="#alerts">Alerts</a></li>
-            <li> <a href="#blocks">Blocks</a></li>
-            <li> <a href="#tabs">Tabs</a></li>
-            <li> <a href="#containers">Containers</a></li>
+            <li> <a href="#entrance">Entrances</a></li>
+            <li> <a href="#background">Backgrounds</a></li>
+            <li> <a href="#hover">Hover</a></li>
+            <li> <a href="#attention">Attention</a></li>
+            <li> <a href="#sprites">Sprites</a></li>
           </ul>
         </div>
       </div>
     </div>
     
-    <!-- Typography
+    <!-- Entrances
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="typography">
+    <div class="margin-bottom-160" id="entrance">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Typography</h1>
-          </div>
+        <div class="page-header">
+          <h3>Entrances</h3>
         </div>
       </div>
-      <!-- Headings -->
       <div class="row">
-        <div class="col-lg-3">
-          <div class="bs-component">
-            <h4 class="text-muted">Ubuntu (default)</h4>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            <p>Paragraph</p>
-          </div>
-          <div class="bs-component">
-            <h4 class="text-muted">Weight classes</h4>
-            <p class="font-weight-400">font-weight-400</p>
-            <p class="font-weight-500">font-weight-500</p>
-          </div>
+        <div class="col-md-6">
+          <div class="stage text-center"><img class="fade" src="placeholder.jpg" alt=""></div>
+          <div class="text-center">Fade In</div>
         </div>
-        <div class="col-lg-3">
-          <div class="bs-component">
-            <h4 class="text-muted">Roboto (roboto class)</h4>
-            <h1 class="roboto">Heading 1</h1>
-            <h2 class="roboto">Heading 2</h2>
-            <h3 class="roboto">Heading 3</h3>
-            <h4 class="roboto">Heading 4</h4>
-            <h5 class="roboto">Heading 5</h5>
-            <h6 class="roboto">Heading 6</h6>
-            <p class="roboto">Paragraph</p>
-          </div>
-          <div class="bs-component">
-            <h4 class="text-muted">Weight classes</h4>
-            <p class="roboto">font-weight-600</p>
-            <p class="roboto font-weight-700">font-weight-700</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h4 class="text-muted">Example body text</h4>
-          <p>Nullam quis risus eget <a href="#typography">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-          <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-          <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-          <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-          <div class="col-lg-5">
-            <h4 class="text-muted">Links</h4>
-            <div class="col-lg-6">
-              <div style="background-color:#b0852e;width:70px;height:70px;margin-bottom:5px;padding-top:23px;" class="white img-circle text-center">
-                <div>link</div>
-              </div>
-              <div style="background-color:#8a6824;width:70px;height:70px;margin-bottom:5px;padding-top:23px;" class="white img-circle text-center">
-                <div>hover</div>
-              </div>
-              <div style="background-color:#8a6824;width:70px;height:70px;padding-top:23px;" class="white img-circle text-center">
-                <div>active</div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <h1><a href="#typography">H1</a></h1>
-              <h1 class="roboto"><a href="#typography">H1</a></h1>
-              <p><a href="#typography">paragraph</a></p>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <h4 class="text-muted">Emphasis and color classes</h4>
-            <div class="col-lg-6">
-              <p class="text-primary">text-primary</p>
-              <p class="text-success">text-success</p>
-              <p class="text-info">text-info</p>
-              <p class="text-warning">text-warning</p>
-              <p class="text-danger">text-danger</p>
-              <p class="text-muted">text-muted</p>
-            </div>
-            <div class="col-lg-6">
-              <p class="salmon">salmon</p>
-              <p class="wheat">wheat</p>
-              <p class="moss">moss</p>
-              <p class="teal">teal</p>
-              <p class="lavendar">lavendar</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Blockquotes -->
-      <div class="row margin-top-30">
-        <div class="col-lg-6">
-          <h4 class="text-muted">Blockquote class (Lobster Two)</h4>
-          <div class="bs-component">
-            <blockquote>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>Someone shared this on <cite title="Twitter">Twitter</cite></small> </blockquote>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h4 class="text-muted text-right">Blockquote-reverse class</h4>
-          <div class="bs-component">
-            <blockquote class="blockquote-reverse">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>Someone shared this on <cite title="Twitter">Twitter</cite></small> </blockquote>
-          </div>
+        <div class="col-md-6">
+          <div class="stage text-center"><img class="spin-in" src="placeholder.jpg" alt=""></div>
+          <div class="text-center">Spin In</div>
         </div>
       </div>
     </div>
     
-    <!-- Buttons
+    <!-- Backgrounds
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="buttons">
-      <div class="page-header">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Buttons</h1>
-          </div>
-        </div>
-      </div>
+    <div class="margin-bottom-160" id="background">
       <div class="row">
-        <div class="col-lg-7">
-          <p class="bs-component"> <a href="#buttons" class="btn btn-default">default</a> <a href="#buttons" class="btn btn-primary">primary</a> <a href="#buttons" class="btn btn-success">success</a> <a href="#buttons" class="btn btn-info">Info</a> <a href="#buttons" class="btn btn-warning">warning</a> <a href="#buttons" class="btn btn-danger">danger</a> </p>
-          <p class="bs-component"> <a href="#buttons" class="btn btn-default">large button</a> <a href="#buttons" class="btn btn-default">default button</a> <a href="#buttons" class="btn btn-default btn-sm">small button</a> <a href="#buttons" class="btn btn-link">link button</a></p>
-        </div>
-        <div class="col-lg-5">
-          <p class="bs-component"> <a href="#buttons" class="btn btn-default btn-lg btn-block">block level button</a> </p>
-          <div class="bs-component" style="margin-bottom: 15px;">
-            <div class="btn-group btn-group-justified"> <a href="#buttons" class="btn btn-default">left</a> <a href="#buttons" class="btn btn-default">middle</a> <a href="#buttons" class="btn btn-default">right</a> </div>
-          </div>
-          <div class="bs-component" style="margin-bottom: 15px;">
-            <div class="btn-toolbar">
-              <div class="btn-group"> <a href="#buttons" class="btn btn-default">1</a> <a href="#buttons" class="btn btn-default">2</a> <a href="#buttons" class="btn btn-default">3</a> <a href="#buttons" class="btn btn-default">4</a> </div>
-              <div class="btn-group"> <a href="#buttons" class="btn btn-default">5</a> <a href="#buttons" class="btn btn-default">6</a> <a href="#buttons" class="btn btn-default">7</a> </div>
-              <div class="btn-group"> <a href="#buttons" class="btn btn-default">8</a> </div>
-            </div>
-          </div>
+        <div class="page-header">
+          <h3>Backgrounds</h3>
         </div>
       </div>
+      <div class="row"> </div>
     </div>
     
-    <!-- Background color classes
+    <!-- Hover
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-100" id="colors">
+    <div class="margin-bottom-160" id="hover">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Colors</h1>
-          </div>
-        </div>
-        <h4 class="text-muted">Background color classes</h4>
-        <div class="row no-gutter">
-          <div class="col-sm-4">
-            <div class="bs-component bg-gray-5 padding-60 text-center">
-              <h4>bg-gray-5</h4>
-              #f5f5f5 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-gray-10 padding-60 text-center">
-              <h4>bg-gray-10</h4>
-              #efeeed </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-gray-20 padding-60 text-center">
-              <h4>bg-gray-20</h4>
-              #e6e4e2 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-gray-30 padding-60 text-center">
-              <h4>bg-gray-30</h4>
-              #cccac8 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-white padding-60 text-center">
-              <h4>bg-white</h4>
-              #ffffff </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-gray-40 padding-60 text-center">
-              <h4>bg-gray-40</h4>
-              #bfbdbb </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-gray-50 padding-60 text-center">
-              <h4>bg-gray-50</h4>
-              #b3b1af </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-gray-80 padding-60 text-center">
-              <h4 class="white">bg-gray-80</h4>
-              #807e7d </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-gray-90 padding-60 text-center">
-              <h4 class="white">bg-gray-90</h4>
-              #4d4c4b </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-gray-95 padding-60 text-center">
-              <h4 class="white">bg-gray-95</h4>
-              #333231 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-black padding-60 text-center">
-              <h4 class="white">bg-black</h4>
-              #000000 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-salmon padding-60 text-center">
-              <h4 class="white">bg-salmon</h4>
-              #d36a50 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-pink-salmon padding-60 text-center">
-              <h4 class="">bg-pink-salmon</h4>
-              #ff9966 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-dead-salmon padding-60 text-center">
-              <h4 class="">bg-dead-salmon</h4>
-              #e29f81 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-wheat padding-60 text-center">
-              <h4 class="white">bg-wheat</h4>
-              #f5c875 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-light-wheat padding-60 text-center">
-              <h4 class="">bg-light-wheat</h4>
-              #f9d782 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-almond padding-60 text-center">
-              <h4 class="">bg-almond</h4>
-              #F4E1B8 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-moss padding-60 text-center">
-              <h4 class="white">bg-moss</h4>
-              #90ad63 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="bs-component bg-lichen padding-60 text-center">
-              <h4 class="">bg-lichen</h4>
-              #a7ba86 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-teal padding-60 text-center">
-              <h4 class="white">bg-teal</h4>
-              #4f878c </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-light-teal padding-60 text-center">
-              <h4 class="white">bg-light-teal</h4>
-              #669999 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-lavender padding-60 text-center">
-              <h4 class="white">bg-lavender</h4>
-              #65587b </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-gray-lavender padding-60 text-center">
-              <h4 class="white">bg-gray-lavender</h4>
-              #666072 </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-dead-lavender padding-60 text-center">
-              <h4 class="white">bg-dead-lavender</h4>
-              #7f788e </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-loquacious padding-60 text-center">
-              <h4 class="white">bg-loquacious</h4>
-              #B0852E </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="white bs-component bg-dead-loquacious padding-60 text-center">
-              <h4 class="white">bg-dead-loquacious</h4>
-              #cca869 </div>
-          </div>
+        <div class="page-header">
+          <h3>Hover</h3>
         </div>
       </div>
+      <div class="row"> </div>
     </div>
     
-    <!-- Font Icons
+    <!-- Attention
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="icons">
+    <div class="margin-bottom-160" id="attention">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Font Icons</h1>
-          </div>
+        <div class="page-header">
+          <h3>Attention</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-3">
-          <h4 class="text-muted">Font Awesome</h4>
-          <ul class="font-awesome list-inline">
-            <li><i class="fas fa-user"></i></li>
-            <li><i class="fas fa-square"></i> </li>
-            <li><i class="fas fa-wrench"></i></li>
-            <li><i class="fas fa-star"></i></li>
-            <li><i class="fas fa-truck"></i></li>
-            <li><i class="fas fa-plane"></i></li>
-            <li><i class="fas fa-wifi"></i></li>
-            <li><i class="fas fa-spinner"></i></li>
-            <li><i class="fas fa-arrows"></i></li>
-            <li><i class="fas fa-pause"></i></li>
-            <li><i class="fas fa-sticky-note"></i></li>
-            <li><i class="fas fa-street-view"></i></li>
-            <li><i class="fas fa-suitcase"></i></li>
-            <li><i class="fas fa-sun"></i></li>
-            <li><i class="fas fa-support"></i></li>
-            <li><i class="fas fa-tablet"></i></li>
-            <li><i class="fas fa-tachometer"></i></li>
-            <li><i class="fas fa-tag"></i></li>
-            <li><i class="fas fa-bar-chart"></i></li>
-            <li><i class="fas fa-tasks"></i></li>
-            <li><i class="fas fa-taxi"></i></li>
-          </ul>
-          <a class="btn btn-primary margin-top-30" href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">library</a> <a class="btn btn-primary margin-top-30" href="https://fontawesome.com/cheatsheet" target="_blank">Cheat Sheat</a></div>
-        <div class="col-md-3 col-md-push-1">
-          <h4 class="text-muted">Bootstrap Glyphicons</h4>
-          <ul class="bootstrap list-inline">
-            <li> <span class="glyphicon glyphicon-pencil"></span></li>
-            <li> <span class="glyphicon glyphicon-glass"></span></li>
-            <li> <span class="glyphicon glyphicon-music"></span></li>
-            <li> <span class="glyphicon glyphicon-search"></span></li>
-            <li> <span class="glyphicon glyphicon-heart"></span></li>
-            <li> <span class="glyphicon glyphicon-star"></span></li>
-            <li> <span class="glyphicon glyphicon-star-empty"></span></li>
-            <li> <span class="glyphicon glyphicon-user"></span></li>
-            <li> <span class="glyphicon glyphicon-film"></span></li>
-            <li> <span class="glyphicon glyphicon-th-large"></span></li>
-            <li> <span class="glyphicon glyphicon-th"></span></li>
-            <li> <span class="glyphicon glyphicon-th-list"></span></li>
-            <li> <span class="glyphicon glyphicon-ok"></span></li>
-            <li> <span class="glyphicon glyphicon-list-alt"></span></li>
-            <li> <span class="glyphicon glyphicon-lock"></span></li>
-            <li> <span class="glyphicon glyphicon-flag"></span></li>
-            <li> <span class="glyphicon glyphicon-headphones"></span></li>
-            <li> <span class="glyphicon glyphicon-volume-off"></span></li>
-            <li> <span class="glyphicon glyphicon-volume-down"></span></li>
-            <li> <span class="glyphicon glyphicon-volume-up"></span></li>
-            <li> <span class="glyphicon glyphicon-qrcode"></span></li>
-          </ul>
-          <a class="btn btn-primary margin-top-30" href="http://getbootstrap.com/components/#glyphicons" target="_blank">library</a> </div>
-        <div class="col-md-3 col-md-push-2">
-          <h4 class="text-muted">Material Design Icons</h4>
-          <ul class="list-inline">
-            <li><i class="material-icons">face</i></li>
-            <li><i class="material-icons">dashboard</i></li>
-            <li><i class="material-icons">favorite</i></li>
-            <li><i class="material-icons">accessibility</i></li>
-            <li><i class="material-icons">eject</i></li>
-            <li><i class="material-icons">credit_card</i></li>
-            <li><i class="material-icons">info</i></li>
-            <li><i class="material-icons">motorcycle</i></li>
-            <li><i class="material-icons">language</i></li>
-            <li><i class="material-icons">lightbulb_outline</i></li>
-            <li><i class="material-icons">invert_colors</i></li>
-            <li><i class="material-icons">store</i></li>
-            <li><i class="material-icons">update</i></li>
-            <li><i class="material-icons">remove_from_queue</i></li>
-            <li><i class="material-icons">fiber_smart_record</i></li>
-            <li><i class="material-icons">av_timer</i></li>
-            <li><i class="material-icons">all_out</i></li>
-            <li><i class="material-icons">build</i></li>
-            <li><i class="material-icons">donut_large</i></li>
-            <li><i class="material-icons">done</i></li>
-            <li><i class="material-icons">change_history</i></li>
-          </ul>
-          <a class="btn btn-primary margin-top-30" href="https://design.google.com/icons/" target="_blank">library</a> </div>
-      </div>
+      <div class="row"> </div>
     </div>
     
-    <!-- Alerts
+    <!-- Sprites
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="alerts">
+    <div class="margin-bottom-160" id="sprites">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Alerts</h1>
-          </div>
+        <div class="page-header">
+          <h3>Sprites</h3>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-success margin-bottom-15">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Success</span> - Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-info margin-bottom-15">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Info</span> - Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-warning margin-bottom-15">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Warning</span> - Nunc posuere, magna ut <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-danger">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Danger</span> - Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Blocks
-      ================================================== -->
-    <div class="bs-docs-section margin-bottom-160">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1 id="blocks">Blocks</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row bg-gray-10 margin-bottom-40 bs-component">
-        <div class="col-md-4 padding-top-30 padding-bottom-40 margin-top-40">
-          <div class="bg-gray-80 shadow-low hover-shadow text-center">
-            <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15">
-              <h2 class="roboto white">Block Feature One</h2>
-              <div class="white font-weight-400">Linked container. Add background image inline.</div>
-              <a href="#"><span class="link-spanner"></span></a> </div>
-          </div>
-        </div>
-        <div class="col-md-4 padding-top-30 padding-bottom-40">
-          <div class="bg-white shadow-low hover-shadow default-block-container">
-            <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15">
-              <h4>Generic Block</h4>
-              <div>Generic linked container smiliar to datasebase containers. Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula.</div>
-              <a href="#blocks"><span class="link-spanner"></span></a> </div>
-          </div>
-        </div>
-        <div class="col-md-4 padding-top-30 padding-bottom-40 margin-top-40">
-          <div class="bg-white shadow-low text-center">
-            <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15">
-              <h2 class="roboto">Block Feature Two</h2>
-              <div><a href="#blocks">Links within</a> container. Nunc posuere, magna ut <a href="#blocks">auctor</a>. Add background image inline.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Tabs
-      ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="tabs">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Tabs</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row padding-top-30 padding-bottom-30">
-        <div class="col-md-4">
-          <h4 class="text-muted text-center">Default tabs</h4>
-          <div class="bs-component"> 
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-              <li role="presentation" class="active"><a class="tab" href="#one" aria-controls="one" role="tab" data-toggle="tab">
-                <h5 class="text-uppercase">One</h5>
-                </a></li>
-              <li role="presentation"><a class="tab" href="#two" aria-controls="two" role="tab" data-toggle="tab">
-                <h5 class="text-uppercase">Two</h5>
-                </a></li>
-              <li role="presentation"><a class="tab" href="#three" aria-controls="three" role="tab" data-toggle="tab">
-                <h5 class="text-uppercase">Three</h5>
-                </a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="padding-30 tab-pane fade in active" id="one">
-                <p>Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</p>
-              </div>
-              <div role="tabpanel" class="padding-30 tab-pane fade" id="two">
-                <p>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</p>
-              </div>
-              <div role="tabpanel" class="padding-30 tab-pane fade" id="three">
-                <p>Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h4 class="text-muted text-center padding-bottom-30">Pills</h4>
-          <div class="bs-component"> 
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills nav-justified" role="tablist">
-              <li role="presentation" class="active"><a class="tab" href="#four" aria-controls="four" role="tab" data-toggle="tab">
-                <div class="text-uppercase">Four</div>
-                </a></li>
-              <li role="presentation"><a class="tab" href="#five" aria-controls="five" role="tab" data-toggle="tab">
-                <div class="text-uppercase">Five</div>
-                </a></li>
-              <li role="presentation"><a class="tab" href="#six" aria-controls="six" role="tab" data-toggle="tab">
-                <div class="text-uppercase">Six</div>
-                </a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="padding-30 tab-pane fade in active" id="four">
-                <p>Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</p>
-              </div>
-              <div role="tabpanel" class="padding-30 tab-pane fade" id="five">
-                <p>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</p>
-              </div>
-              <div role="tabpanel" class="padding-30 tab-pane fade" id="six">
-                <p>Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h4 class="text-muted text-center">Stacked pills</h4>
-          <div class="bs-component"> 
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills nav-stacked" role="tablist">
-              <li role="presentation" class="active"><a class="tab text-center" href="#seven" aria-controls="seven" role="tab" data-toggle="tab">
-                <div class="text-uppercase">Seven</div>
-                </a></li>
-              <li role="presentation"><a class="tab text-center" href="#eight" aria-controls="eight" role="tab" data-toggle="tab">
-                <div class="text-uppercase">Eight</div>
-                </a></li>
-              <li role="presentation"><a class="tab text-center" href="#nine" aria-controls="nine" role="tab" data-toggle="tab">
-                <div class="text-uppercase">Nine</div>
-                </a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="padding-30 tab-pane fade in active" id="seven">
-                <p>Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</p>
-              </div>
-              <div role="tabpanel" class="padding-30 tab-pane fade" id="eight">
-                <p>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</p>
-              </div>
-              <div role="tabpanel" class="padding-30 tab-pane fade" id="nine">
-                <p>Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Containers
-      ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="containers">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Containers</h1>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h4 class="text-muted">Modals</h4>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary margin-right-15" data-toggle="modal" data-target="#myModal">default modal</button>
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-              </div>
-            </div>
-          </div>
-          <!-- Large modal -->
-          <button type="button" class="btn btn-primary margin-right-15" data-toggle="modal" data-target=".bs-example-modal-lg">large modal</button>
-          <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-              </div>
-            </div>
-          </div>
-          <!-- Small modal -->
-          <button type="button" class="btn btn-primary margin-right-15" data-toggle="modal" data-target=".bs-example-modal-sm">small modal</button>
-          <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h4 class="text-muted">Accordian</h4>
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel-group">
-              <div class="panel">
-                <div data-target="#collapseOne" data-parent="#accordion" data-toggle="collapse" class="panel-heading collapsed">
-                  <p class="panel-title accordion-toggle">collapse one</p>
-                </div>
-                <div class="panel-collapse collapse" id="collapseOne">
-                  <div class="panel-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</div>
-                </div>
-              </div>
-              <div class="panel">
-                <div data-target="#collapseTwo" data-parent="#accordion" data-toggle="collapse" class="panel-heading collapsed">
-                  <p class="panel-title accordion-toggle">collapse two</p>
-                </div>
-                <div class="panel-collapse collapse" id="collapseTwo">
-                  <div class="panel-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</div>
-                </div>
-              </div>
-              <div class="panel">
-                <div data-target="#collapseThree" data-parent="#accordion" data-toggle="collapse" class="panel-heading collapsed">
-                  <p class="panel-title accordion-toggle">collapse three</p>
-                </div>
-                <div class="panel-collapse collapse" id="collapseThree">
-                  <div class="panel-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row"> </div>
     </div>
   </div>
 </div>
