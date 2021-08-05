@@ -230,6 +230,32 @@ transform: translate(2px, -2px);
 transform: translate(0);
 }
 }
+.rubber {
+	animation: rubber 1.6s infinite both;
+}
+@keyframes rubber {
+0% {
+transform: scale3d(1, 1, 1);
+}
+30% {
+transform: scale3d(1.25, 0.75, 1);
+}
+40% {
+transform: scale3d(0.75, 1.25, 1);
+}
+50% {
+transform: scale3d(1.15, 0.85, 1);
+}
+65% {
+transform: scale3d(0.95, 1.05, 1);
+}
+75% {;
+transform: scale3d(1.05, 0.95, 1);
+}
+100% {
+transform: scale3d(1, 1, 1);
+}
+}
 </style>
 </head>
 <body>
@@ -332,6 +358,10 @@ document.write(lastModified());
         <div class="col-md-6">
           <div class="stage text-center"><img class="jiggle" src="placeholder.jpg" alt=""></div>
           <div class="stage-label">jiggle</div>
+        </div>
+        <div class="col-md-6">
+          <div class="stage text-center"><img class="rubber" src="placeholder.jpg" alt=""></div>
+          <div class="stage-label">rubber</div>
         </div>
       </div>
     </div>
