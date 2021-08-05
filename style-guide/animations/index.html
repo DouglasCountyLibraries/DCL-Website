@@ -207,6 +207,29 @@ background-color: blue;
 background-color: red;
 }
 }
+.jiggle {
+	animation: jiggle 0.6s linear infinite both;
+}
+@keyframes jiggle {
+0% {
+transform: translate(0);
+}
+20% {
+transform: translate(-2px, 2px);
+}
+40% {
+transform: translate(-2px, -2px);
+}
+60% {
+transform: translate(2px, 2px);
+}
+80% {
+transform: translate(2px, -2px);
+}
+100% {
+transform: translate(0);
+}
+}
 </style>
 </head>
 <body>
@@ -233,7 +256,6 @@ document.write(lastModified());
             <li> <a href="#entrance">Entrances</a></li>
             <li> <a href="#background">Backgrounds</a></li>
             <li> <a href="#hover">Hover</a></li>
-            <li> <a href="#attention">Attention</a></li>
             <li> <a href="#sprites">Sprites</a></li>
           </ul>
         </div>
@@ -298,17 +320,6 @@ document.write(lastModified());
       </div>
     </div>
     
-    <!-- Hover
-      ================================================== -->
-    <div class="margin-bottom-160" id="hover">
-      <div class="row">
-        <div class="page-header">
-          <h3>Hover</h3>
-        </div>
-      </div>
-      <div class="row"> </div>
-    </div>
-    
     <!-- Attention
       ================================================== -->
     <div class="margin-bottom-160" id="attention">
@@ -317,7 +328,12 @@ document.write(lastModified());
           <h3>Attention</h3>
         </div>
       </div>
-      <div class="row"> </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="stage text-center"><img class="jiggle" src="placeholder.jpg" alt=""></div>
+          <div class="stage-label">jiggle</div>
+        </div>
+      </div>
     </div>
     
     <!-- Sprites
