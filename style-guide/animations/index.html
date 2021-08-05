@@ -43,6 +43,12 @@
 	border-radius: 3px;
 	padding: 30px;
 }
+.stage-label {
+	font-size: 18px;
+	font-weight: 300;
+	padding: 5px 0 20px;
+	text-align: center;
+}
 .fade {
 	animation: fade 10s ease-in-out infinite both;
 }
@@ -153,9 +159,32 @@ to {
 background-position: 0 200px;
 }
 }
-    .color-change-overlay {
-        background: transparent url("canvas-transparent.png");
-    }
+.ken-burns-wrapper {
+	border: 2px solid #ddd;
+	border-radius: 3px;
+	height: 264px;
+}
+.ken-burns {
+	background: transparent url("canvas-transparent.png") no-repeat;
+	animation: pan-zoom 8s infinite both;
+	height: 264px;
+	overflow: hidden;
+}
+@keyframes pan-zoom {
+0% {
+background-position: top left;
+transform: scale(.6);
+opacity: 0.6;
+}
+100% {
+background-position: bottom center;
+transform: scale(1);
+opacity: 1;
+}
+}
+.color-change-overlay {
+	background: transparent url("canvas-transparent.png");
+}
 .color-change {
 	background: red;
 	animation: color 20s linear infinite;
@@ -222,19 +251,19 @@ document.write(lastModified());
       <div class="row">
         <div class="col-md-6">
           <div class="stage text-center"><img class="fade" src="placeholder.jpg" alt=""></div>
-          <div class="text-center">Fade In</div>
+          <div class="stage-label">Fade In</div>
         </div>
         <div class="col-md-6">
           <div class="stage text-center"><img class="spin-in" src="placeholder.jpg" alt=""></div>
-          <div class="text-center">Spin In</div>
+          <div class="stage-label">Spin In</div>
         </div>
         <div class="col-md-6">
           <div class="stage text-center"><img class="roll-in" src="placeholder.jpg" alt=""></div>
-          <div class="text-center">Off-screen Roll In</div>
+          <div class="stage-label">Off-screen Roll In</div>
         </div>
         <div class="col-md-6">
           <div class="stage text-center"><img class="fly-in" src="placeholder.jpg" alt=""></div>
-          <div class="text-center">Off-screen Fly In</div>
+          <div class="stage-label">Off-screen Fly In</div>
         </div>
       </div>
     </div>
@@ -250,15 +279,21 @@ document.write(lastModified());
       <div class="row">
         <div class="col-md-6">
           <div class="stage horizontal-scroll"></div>
-          <div class="text-center">Horizontal Scroll</div>
+          <div class="stage-label">Horizontal Scroll</div>
         </div>
         <div class="col-md-6">
           <div class="stage vertical-scroll"></div>
-          <div class="text-center">Vertical Scroll</div>
+          <div class="stage-label">Vertical Scroll</div>
         </div>
         <div class="col-md-6">
-            <div class="stage color-change text-center"><img src="canvas-transparent.png" alt=""></div>
-          <div class="text-center">Color Transition</div>
+          <div class="ken-burns-wrapper">
+            <div class="ken-burns"></div>
+          </div>
+          <div class="stage-label">Ken Burns Effect</div>
+        </div>
+        <div class="col-md-6">
+          <div class="stage color-change text-center"><img src="canvas-transparent.png" alt=""></div>
+          <div class="stage-label">Color Transition</div>
         </div>
       </div>
     </div>
