@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Animations</title>
+<title>Keyframe Animations</title>
 <link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.png">
@@ -127,6 +127,32 @@ transform-origin: 50% 1400px;
 opacity: 1;
 }
 }
+.horizontal-scroll {
+	background: transparent url("canvas.png") top center repeat;
+	animation: slide 10s linear infinite;
+	height: 264px;
+}
+@keyframes slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 200px 0;
+}
+}
+.vertical-scroll {
+	background: transparent url("canvas.png") top center repeat;
+	animation: fall 10s linear infinite;
+	height: 264px;
+}
+@keyframes fall {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 0 200px;
+}
+}
 </style>
 </head>
 <body>
@@ -135,7 +161,7 @@ opacity: 1;
     <div class="margin-top-100 margin-bottom-80">
       <div class="row no-gutter">
         <div class="col-md-4">
-          <h1 class="text-muted font-weight-400">DCL Animations</h1>
+          <h1 class="text-muted font-weight-400">Keyframe Animations</h1>
           <h3 class="roboto text-muted"> 
             <script>
 function lastModified() {
@@ -196,7 +222,16 @@ document.write(lastModified());
           <h3>Backgrounds</h3>
         </div>
       </div>
-      <div class="row"> </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="stage horizontal-scroll text-center"></div>
+          <div class="text-center">Horizontal Scroll</div>
+        </div>
+        <div class="col-md-6">
+          <div class="stage vertical-scroll text-center"></div>
+          <div class="text-center">Vertical Scroll</div>
+        </div>
+      </div>
     </div>
     
     <!-- Hover
