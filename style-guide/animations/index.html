@@ -256,6 +256,62 @@ transform: scale3d(1.05, 0.95, 1);
 transform: scale3d(1, 1, 1);
 }
 }
+.flicker {
+	animation: flicker 2s linear infinite both;
+}
+@keyframes flicker {
+0%, 100% {
+opacity: 1;
+}
+40% {
+opacity: 1;
+}
+40.5% {
+opacity: 0;
+}
+43% {
+opacity: 0;
+}
+43.01% {
+opacity: 1;
+}
+47.99% {
+opacity: 1;
+}
+48% {
+opacity: 0;
+}
+49% {
+opacity: 0;
+}
+49.01% {
+opacity: 1;
+}
+}
+.wobble {
+	animation: wobble 1.5s infinite both;
+}
+@keyframes wobble {
+0%, 70%, 100% {
+transform: translateX(0%);
+transform-origin: 50% 50%;
+}
+5% {
+transform: translateX(-30px) rotate(-6deg);
+}
+15% {
+transform: translateX(15px) rotate(6deg);
+}
+25% {
+transform: translateX(-15px) rotate(-3.6deg);
+}
+40% {
+transform: translateX(9px) rotate(2.4deg);
+}
+60% {
+transform: translateX(-6px) rotate(-1.2deg);
+}
+}
 </style>
 </head>
 <body>
@@ -277,11 +333,11 @@ document.write(lastModified());
 </script> 
           </h3>
         </div>
-        <div class="col-md-8 margin-top-60">
+        <div class="col-md-6 col-md-push-1 margin-top-60">
           <ul class="nav nav-pills">
             <li> <a href="#entrance">Entrances</a></li>
             <li> <a href="#background">Backgrounds</a></li>
-            <li> <a href="#hover">Hover</a></li>
+            <li> <a href="#attention">Attention</a></li>
             <li> <a href="#sprites">Sprites</a></li>
           </ul>
         </div>
@@ -357,11 +413,19 @@ document.write(lastModified());
       <div class="row">
         <div class="col-md-6">
           <div class="stage text-center"><img class="jiggle" src="placeholder.jpg" alt=""></div>
-          <div class="stage-label">jiggle</div>
+          <div class="stage-label">Jiggle</div>
         </div>
         <div class="col-md-6">
           <div class="stage text-center"><img class="rubber" src="placeholder.jpg" alt=""></div>
-          <div class="stage-label">rubber</div>
+          <div class="stage-label">Rubber</div>
+        </div>
+        <div class="col-md-6">
+          <div class="stage text-center"><img class="flicker" src="placeholder.jpg" alt=""></div>
+          <div class="stage-label">Flicker</div>
+        </div>
+        <div class="col-md-6">
+          <div class="stage text-center"><img class="wobble" src="placeholder.jpg" alt=""></div>
+          <div class="stage-label">Wobble</div>
         </div>
       </div>
     </div>
