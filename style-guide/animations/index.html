@@ -153,6 +153,31 @@ to {
 background-position: 0 200px;
 }
 }
+    .color-change-overlay {
+        background: transparent url("canvas-transparent.png");
+    }
+.color-change {
+	background: red;
+	animation: color 20s linear infinite;
+	height: 264px;
+}
+@keyframes color {
+0% {
+background-color: red;
+}
+25% {
+background-color: yellow;
+}
+50% {
+background-color: green;
+}
+75% {
+background-color: blue;
+}
+100% {
+background-color: red;
+}
+}
 </style>
 </head>
 <body>
@@ -224,12 +249,16 @@ document.write(lastModified());
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="stage horizontal-scroll text-center"></div>
+          <div class="stage horizontal-scroll"></div>
           <div class="text-center">Horizontal Scroll</div>
         </div>
         <div class="col-md-6">
-          <div class="stage vertical-scroll text-center"></div>
+          <div class="stage vertical-scroll"></div>
           <div class="text-center">Vertical Scroll</div>
+        </div>
+        <div class="col-md-6">
+            <div class="stage color-change text-center"><img src="canvas-transparent.png" alt=""></div>
+          <div class="text-center">Color Transition</div>
         </div>
       </div>
     </div>
