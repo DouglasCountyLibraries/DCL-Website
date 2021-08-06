@@ -335,7 +335,7 @@ transform: translateX(-6px) rotate(-1.2deg);
 	width: 200px;
 	background-image: url("sprite.jpg");
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 0 50%;
 	animation: simple-sprite .2s steps(2) infinite;
 }
 @keyframes simple-sprite {
@@ -343,7 +343,21 @@ to {
 background-position: -400px 0;
 }
 }
-
+.complex-sprite {
+	height: 264px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	background-image: url("complex-sprite.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	animation: complex-sprite 1.3s steps(10) infinite;
+}
+@keyframes complex-sprite {
+to {
+background-position: -1037px 0;
+}
+}
 </style>
 </head>
 <body>
@@ -429,7 +443,7 @@ document.write(lastModified());
         </div>
         <div class="col-md-6">
           <div class="stage color-change text-center"><img src="canvas-transparent.png" alt=""></div>
-          <div class="stage-label">Color Transition</div>
+          <div class="stage-label">Color Transitions</div>
         </div>
       </div>
     </div>
@@ -482,7 +496,18 @@ document.write(lastModified());
           <div class="stage-label">Source Image (Sprite)</div>
         </div>
       </div>
-
+      <div class="row">
+        <div class="col-md-6">
+          <div class="stage text-center">
+            <div class="complex-sprite"></div>
+          </div>
+          <div class="stage-label">10 Steps</div>
+        </div>
+        <div class="col-md-6">
+          <div class="sprite-stage text-center"><img class="img-responsive" src="complex-sprite.jpg" alt=""> </div>
+          <div class="stage-label">Source Image (Sprite)</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
