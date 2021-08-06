@@ -49,6 +49,12 @@
 	padding: 5px 0 20px;
 	text-align: center;
 }
+.sprite-stage {
+	border: 2px solid #ddd;
+	border-radius: 3px;
+	padding: 92px 0;
+	min-height: 328px;
+}
 .fade {
 	animation: fade 10s ease-in-out infinite both;
 }
@@ -322,6 +328,22 @@ transform: translateX(9px) rotate(2.4deg);
 transform: translateX(-6px) rotate(-1.2deg);
 }
 }
+    .simple-sprite {
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	background-image: url("sprite.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	animation: simple-sprite .2s steps(2) infinite;
+}
+@keyframes simple-sprite {
+to {
+background-position: -400px 0;
+}
+}
+
 </style>
 </head>
 <body>
@@ -348,7 +370,7 @@ document.write(lastModified());
             <li> <a href="#entrance">Entrances</a></li>
             <li> <a href="#background">Backgrounds</a></li>
             <li> <a href="#attention">Attention</a></li>
-            <li> <a href="#sprites">Sprites</a></li>
+            <li> <a href="#sprites">Animations Using Sprites</a></li>
           </ul>
         </div>
       </div>
@@ -445,10 +467,22 @@ document.write(lastModified());
     <div class="margin-bottom-160" id="sprites">
       <div class="row">
         <div class="page-header">
-          <h3>Sprites</h3>
+          <h3>Animations Using Sprites</h3>
         </div>
       </div>
-      <div class="row"> </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="stage text-center">
+            <div class="simple-sprite"></div>
+          </div>
+          <div class="stage-label">2 Steps</div>
+        </div>
+        <div class="col-md-6">
+          <div class="stage text-center"><img src="sprite.jpg" alt=""> </div>
+          <div class="stage-label">Source Image (Sprite)</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
