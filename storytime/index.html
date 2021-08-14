@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -98,7 +99,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .storytime-box {
 	display: flex;
 	flex-direction: column;
-	max-width: 350px;
+	max-width: 675px;
 	text-align: center;
 	padding: 15px;
 }
@@ -330,20 +331,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="box-wrapper">
         <div class="storytime-box">
-          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="tiger.png" alt="Virtual Storytime"></div>
-          <div class="padding-bottom-15">Visit our Virtual Storytime calendar to join the fun from any connected device.</div>
-          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=virtual&ag=724&lib=ALL&nd=90" target="_blank" class="btn btn-primary text-uppercase">Virtual Storytime</a></div>
-        </div>
-        <div class="storytime-box">
-          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="giraffe.png" alt="Indoor Storytime"></div>
-          <div class="padding-bottom-15">Indoor Storytime returns August 16! View the schedule to find a Storytime at your library. Thank you for keeping Storytime allergen-free.</div>
-          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&ds=2021-8-14&ag=724&lib=ALL&nd=180" target="_blank" class="btn btn-primary text-uppercase">Indoor Storytime</a></div>
+          <div class="flower-background">
+            <div id="box-one"></div>
+            <script>
+    var images = ['giraffe.png', 'tiger.png', 'zebra.png'];
+    $('<img alt="Storytime" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');</script> 
+          </div>
+          <div class="padding-bottom-15 margin-lg-50">Indoor Storytime returns August 16! View the calendar to find a Storytime at your library. Thank you for keeping Storytime allergen-free.</div>
+          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&ag=724&lib=ALL&nd=180" target="_blank" class="btn btn-primary text-uppercase">Storytime Calendar</a></div>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="container padding-bottom-40 margin-lg-50">
+    <div class="container padding-bottom-40 margin-lg-150">
       <div class="large-text padding-bottom-15">Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills: <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tell Me a Story">narrative skills</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Take Time to Rhyme">phonological awareness</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Look for Letters">letter knowledge</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Books Are Fun">print motivation</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Explore New Words">vocabulary</a>, and <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Words Are Everywhere">print awareness</a>.</div>
       <div>
         <div class="">Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing&mdash;that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well. A great way to do this (and earn fun prizes along the way) is to sign up for <a href="https://dclibraries.beanstack.org/reader365" target="_blank">1000 Books Before Kindergarten</a> and <a href="../1000-books/1k-bbk-reading-log.pdf" target="_blank">print your reading log</a>. Exposure to lots of books is a great predictor of reading readiness and school success.</div>
@@ -453,4 +454,5 @@ $(function () {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
