@@ -91,13 +91,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background: #fff url("one-background.jpg");
 	padding: 60px 0;
 }
+.two-background {
+	background: #fff url("two-background.jpg");
+	padding: 60px 0;
+}
 .item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 40px 0 10px;
 	justify-content: center;
 }
-.item {
+.item-one {
 	margin: 10px;
 	padding: 25px;
 	border: 2px dotted #666;
@@ -105,6 +109,14 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	display: flex;
 	flex-direction: column;
 	max-width: 500px;
+}
+.item-two {
+	margin: 10px;
+	padding: 25px;
+	background: rgba(213,234,167,.3);
+	display: flex;
+	flex-direction: column;
+	max-width: 375px;
 }
 .align-bottom {
 	margin-top: auto;
@@ -331,7 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="text-center margin-lg-200">Introduction goes here...vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus purus euismod justo, vel mollis leo massa ut massa.</div>
           </div>
           <div class="item-wrapper text-center">
-            <div class="item">
+            <div class="item-one">
               <h2 class="no-margin-top margin-bottom-5">First Edition</h2>
               <h4 class="no-margin">Saturday, January 1<br>
                 6:30-8:30PM</h4>
@@ -340,7 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div>$20 AGES 3+<br>
                 (Ages 0-2 free with paying adult)</div>
             </div>
-            <div class="item">
+            <div class="item-one">
               <h2 class="no-margin-top margin-bottom-5">Second Edition</h2>
               <h4 class="no-margin">Sunday, January 2<br>
                 4:30-6:30PM</h4>
@@ -355,9 +367,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
         </div>
       </div>
-      <div role="tabpanel" class="tab-pane fade" id="two">
-        <div class="one-background">
-          <div class="container">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</div>
+      <div role="tabpanel" class="tab-pane fade in" id="two">
+        <div class="two-background">
+          <div class="container">
+            <div class="text-center">
+              <h4 class="no-margin">Custom font H4 subheading goes here</h4>
+              <h1 class="no-margin padding-bottom-15">Custom font H1 goes here</h1>
+              <img class="img-responsive center-block" src="https://source.unsplash.com/1024x425/?trees" alt=""> </div>
+            <div class="text-center margin-lg-150 padding-top-30">Content goes here...vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus purus euismod justo, vel mollis leo massa ut massa.</div>
+          </div>
+          <div class="item-wrapper text-center">
+            <div class="item-two">
+              <h2 class="no-margin-top margin-bottom-5">First Edition</h2>
+              <h4 class="no-margin">Saturday, January 1<br>
+                6:30-8:30PM</h4>
+              <div class="padding-bottom-15">Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit.</div>
+              <div class="align-bottom margin-bottom-5"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+              <div>$20 AGES 3+<br>
+                (Ages 0-2 free with paying adult)</div>
+            </div>
+            <div class="item-two">
+              <h2 class="no-margin-top margin-bottom-5">Second Edition</h2>
+              <h4 class="no-margin">Sunday, January 2<br>
+                4:30-6:30PM</h4>
+              <div class="padding-bottom-15">Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
+              <div class="align-bottom margin-bottom-5"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+              <div>$20 AGES 3+<br>
+                (Ages 0-2 free with paying adult)</div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="text-center margin-lg-200">Additional information or disclaimer goes here...vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu.</div>
+          </div>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="three">
