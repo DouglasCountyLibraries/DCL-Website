@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -94,24 +95,14 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-size: 18px;
 	color: #666;
 }
-.teachables-box {
-	background: #fff;
-	padding: 40px 30px 40px;
-	margin: 60px 0;
-	border: 2px solid #ddd;
-	border-radius: 3px;
-}
-.teachables-background {
-	background: url("teachables.jpg") repeat top center;
-}
-.teacher-box {
-	background-color: #fff;
-	padding: 15px 30px 40px;
-}
 .item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	margin: 0 auto;
+}
+.custom-container {
+	max-width: 1600px;
 	margin: 0 auto;
 }
 .item {
@@ -160,11 +151,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	min-width: 400px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 .box-item {
 	flex-direction: column;
-	min-width: 100%;
-	margin: 15px 5px;
+	padding: 0;
 }
 }
 </style>
@@ -368,7 +358,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5 padding-top-20 padding-bottom-30">
-    <div class="container">
+    <div class="custom-container">
       <div class="item-wrapper">
         <div id="bark-for-books" class="box-item">
           <div id="box-two"></div>
@@ -398,6 +388,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div>This unique program matches trained teen Big Buddies with struggling readers, Little Buddies, in grades 1-3. Buddies meet weekly for two months to read and enjoy literacy-based games. Does your child struggle with motivation, confidence and skill when it comes to reading?</div>
           <div class="align-bottom"> <a href="../reading-buddies/" class="btn btn-primary margin-top-15">Get Started</a></div>
         </div>
+        <div id="slick-science" class="box-item">
+          <div id="box-six"></div>
+          <h3 class="text-center">Slick Science</h3>
+          <div>Fun science activities for kids ages 8-12 exploring the topics of chemical reactions, the science of art, and the science of sound.</div>
+          <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=724&kw=slick+science&df=list&cn=0&lib=all&nd=365" target="_blank" class="btn btn-primary margin-top-15">Register Now</a></div>
+        </div>
+        <div id="botb" class="box-item">
+          <div id="box-five"><img class="img-responsive" src="images/botb-winners.jpg" alt="Battle of the Books Winners"></div>
+          <h3 class="text-center">Battle of the Books</h3>
+          <div>Battle of the Books is a bowl-style trivia tournament that’s all about books, engaging hundreds of young minds every year. Congratulations to the 2019-20 winners! Battles will return soon for the 2021-22 school year.</div>
+        </div>
         <div id="1000-books" class="box-item">
           <div id="box-one"></div>
           <h3 class="text-center"><a href="../1000-books/">1000 Books Before Kindergarten</a></h3>
@@ -413,16 +414,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <script>
     var images = ['1kbook-one.jpg', '1kbook-two.jpg', '1kbook-three.jpg'];
-    $('<img alt="Scholarships" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+    $('<img alt="1000 Books Before Kindergarten" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
 	
 	var images = ['bark-one.jpg', 'bark-two.jpg', 'bark-three.jpg', 'bark-four.jpg', 'bark-five.jpg'];
-    $('<img alt="Cuddle Up and Read" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+    $('<img alt="Bark for Books" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
 	
 	var images = ['buddies-one.jpg', 'buddies-two.jpg', 'buddies-three.jpg', 'buddies-four.jpg', 'buddies-five.jpg'];
-    $('<img alt="Cause an Effect" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
+    $('<img alt="Reading Buddies" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
 	
 	var images = ['levels-one.jpg', 'levels-two.jpg', 'levels-three.jpg'];
-    $('<img alt="Exploration Stations" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
+    $('<img alt="Reading Levels" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
+      
+     var images = ['science-one.jpg'];
+    $('<img alt="Slick Science" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-six'); 
+      
+      
 </script>
   <div class="row bg-teal padding-top-30 padding-bottom-40">
     <div class="container">
@@ -430,31 +436,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5 padding-top-60 padding-bottom-60">
-    <div class="container-md">
-      <div class="item-wrapper">
-        <div id="curriculum-kits" class="item">
-          <div class="icon-circle-gray"><i class="fas fa-shopping-bag"></i></div>
-          <h3 class="text-center margin-top-10"><a href="https://dcl.bibliocommons.com/v2/search?query=%22curriculum+kit%22&searchType=smart">Curriculum Kits</a></h3>
-          <div>Self-contained kits for K-6 students provide manipulatives and ideas for helping students during remote learning or home schooling. Kits on the subjects of Literacy/Language Arts, Math, Art, Social Studies, and Science can be checked out using your library card. </div>
-        </div>
-        <div id="slick-science" class="item">
-          <div class="icon-circle-gray"><i class="fas fa-atom"></i></div>
-          <h3 class="text-center margin-top-10">Slick Science</h3>
-          <div>Fun science activities for kids ages 8-12 exploring the topics of chemical reactions, the science of art, and the science of sound.</div>
-          <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=724&kw=slick+science&df=list&cn=0&lib=all&nd=365" target="_blank" class="btn btn-primary margin-top-15">Register Now</a></div>
-        </div>
-        <div id="book-club-express" class="item">
-          <div class="icon-circle-gray"><i class="fas fa-layer-group"></i></div>
-          <h3 class="text-center margin-top-10"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h3>
-          <div>It’s easy to <a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">reserve reading materials</a> for kids and teens! Multiple copies of the book, an author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit, so students are all on the same page. </div>
-        </div>
+    <div class="item-wrapper">
+      <div id="curriculum-kits" class="item">
+        <div class="icon-circle-gray"><i class="fas fa-shopping-bag"></i></div>
+        <h3 class="text-center margin-top-10"><a href="https://dcl.bibliocommons.com/v2/search?query=%22curriculum+kit%22&searchType=smart">Curriculum Kits</a></h3>
+        <div>Self-contained kits for K-6 students provide manipulatives and ideas for helping students during remote learning or home schooling. Kits on the subjects of Literacy/Language Arts, Math, Art, Social Studies, and Science can be checked out using your library card. </div>
+      </div>
+      <div id="book-club-express" class="item">
+        <div class="icon-circle-gray"><i class="fas fa-layer-group"></i></div>
+        <h3 class="text-center margin-top-10"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h3>
+        <div>It’s easy to <a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">reserve reading materials</a> for kids and teens! Multiple copies of the book, an author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit, so students are all on the same page. </div>
       </div>
     </div>
   </div>
   <div class="row bg-teal padding-top-30 padding-bottom-40">
     <div class="container">
       <h4 class="white text-center">Did you know we offer many other services for parents and children?</h4>
-      <div class="white padding-bottom-15 margin-lg-200 text-center">Stream instructional films and lessons from <a class="white text-underline" href="../digital-media/#kanopy">Kanopy</a>. Explore great research and learning resources in our <a class="white text-underline"  href="../research/">research databases</a>. Improve cognitive skills while learning chess with Expert Help and live tutoring through <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank" class="white text-underline">Homework HelpNow</a>.</div>
+      <div class="white padding-bottom-15 margin-lg-125 text-center">Stream instructional films and lessons from <a class="white text-underline" href="../digital-media/#kanopy">Kanopy</a>. Explore great research and learning resources in our <a class="white text-underline"  href="../research/">research databases</a>. Improve cognitive skills while learning chess with Expert Help and live tutoring through <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank" class="white text-underline">Homework HelpNow</a>.</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -554,4 +552,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
