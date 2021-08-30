@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -112,7 +113,7 @@ h1.delius {
 	justify-content: center;
 }
 .item.one {
-	padding-bottom: 15px;
+	border-bottom: 15px solid #b2cc4f;
 }
 .item.two {
 	margin-left: -7%;
@@ -204,12 +205,28 @@ h1.delius {
 .page-background {
 	background: #b2cc4f url("small-background.jpg") top center repeat-x;
 }
+.vertical-scroll {
+	background: none !important;
+	animation: none !important;
+}
 }
 
 @media (max-width: 425px) {
 h1.delius {
 	font-size: 60px;
 	letter-spacing: inherit;
+}
+}
+.vertical-scroll {
+	background: transparent url("leaves.png") top center repeat-y;
+	animation: fall 10s linear infinite;
+}
+@keyframes fall {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 0 700px;
 }
 }
 </style>
@@ -401,17 +418,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row page-background">
-    <div class="item-wrapper">
-      <div class="item one"><img class="img-responsive" src="tree.png" alt=""></div>
-      <div class="item two">
-        <h1 class="delius text-center">The<br>
-          Harvest Life</h1>
-        <div class="squirrel"><img class="img-responsive center-block" src="squirrel.png" alt=""></div>
-        <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Welcome to<br>
-          Transylvania</a> <a href="fete-des-fables/gala/" class="link">Fête des Fables<br>
-          Gala</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1953748119" class="link">Fall<br>
-          Canning</a> <a href="library-perks/#online-learning" class="link">Online Learning<br>
-          Picks</a> </div>
+    <div class="vertical-scroll">
+      <div class="item-wrapper">
+        <div class="item one"><img class="img-responsive" src="tree.png" alt=""></div>
+        <div class="item two">
+          <h1 class="delius text-center">The<br>
+            Harvest Life</h1>
+          <div class="squirrel"><img class="img-responsive center-block" src="squirrel.png" alt=""></div>
+          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Welcome to<br>
+            Transylvania</a> <a href="fete-des-fables/gala/" class="link">Fête des Fables<br>
+            Gala</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1953748119" class="link">Fall<br>
+            Canning</a> <a href="library-perks/#online-learning" class="link">Online Learning<br>
+            Picks</a> </div>
+        </div>
       </div>
     </div>
   </div>
@@ -512,4 +531,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
