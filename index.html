@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,177 +90,142 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&family=Itim&display=swap" rel="stylesheet">
 <style>
-@font-face {
-	font-family: 'Better Times';
-	src: url('shared-assets/web-fonts/BetterTimes.woff2') format('woff2'), url('../../shared-assets/web-fonts/BetterTimes.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-h1.better-times {
-	font-family: 'Better Times', serif;
-	font-size: 150px;
-	color: #663f6f;
+h1.delius {
+	font-family: 'Delius Unicase', cursive;
+	font-size: 96px;
+	color: #6b6a11;
 	margin: 0;
-	line-height: .9em;
-	padding: 20px 0 20px;
-}
-.wave-background {
-	background: transparent url("waves.png") center top repeat-x;
-	height: 150px;
-	-webkit-animation: wave 40s linear infinite;
-	animation: wave 40s linear infinite;
-	margin-top: 10px;
+	padding: 0 0 20px;
+	text-transform: uppercase;
+	letter-spacing: .9rem;
 }
 .page-background {
-	background: linear-gradient(#b3e8e1, #27b5ae);
-}
-.mermaid-background {
-	background: url("mermaid.png") center top no-repeat;
-	padding: 30px 0 50px;
+	background: #b2cc4f url("tree-background.jpg") bottom center repeat-x;
 }
 .item-wrapper {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	align-items: center;
-	text-align: center;
+	justify-content: center;
+}
+.item.one {
+	border-bottom: 15px solid #b2cc4f;
+}
+.item.two {
+	margin-left: -7%;
+	padding: 15px 5px 30px;
 }
 .link-wrapper {
-	font-weight: 500;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	text-align: center;
 	font-size: 18px;
-}
-.item.mermaid {
-	margin-right: 25px;
-	z-index: 100;
-}
-.item.content {
-	margin-top: -60px;
+	margin: 0 auto;
 }
 .link, .link:visited, .link:active {
-	width: 340px;
-	background: rgba(255,255,255,.8);
-	color: #000;
+	font-family: 'Itim', cursive;
+	width: 200px;
+	background: #ed6306;
+	color: #fff;
 	margin: 10px;
-	padding: 15px 0;
-	border: 2px solid rgba(255,255,255,1);
+	padding: 15px;
 	border-radius: 2px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	text-transform: uppercase;
 	text-decoration: none;
-	box-shadow: 0 3px 6px rgba(0,0,0,.3);
 }
-.link:hover {
-	background: rgba(255,255,255,.0);
-	color: #000;
+.link:hover, .link:focus {
+	background: #cd5605;
+	color: #fff;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
-	box-shadow: 0 0 0px 2px rgba(255,255,255,.6);
+	box-shadow: 0 2px 10px rgba(0,0,0,.5);
 }
-.sea-floor {
-	background: transparent url("sea-floor.png") center bottom repeat-x;
-	height: 350px;
-	margin-top: -350px;
-}
-.sea-bottom {
-	background: #4a3e62;
-	height: 120px;
-}
-.fish-row {
-	background: transparent url("fish.png") center top repeat-x;
-	-webkit-animation: slide 90s linear infinite;
-	animation: slide 90s linear infinite;
-}
-@-webkit-keyframes slide {
-from {
-background-position: 0 0;
-}
-to {
-background-position: 1920px 0;
-}
-}
-@keyframes slide {
-from {
-background-position: 0 0;
-}
-to {
-background-position: 1920px 0;
-}
-}
-@-webkit-keyframes wave {
-from {
-background-position: 423px 0;
-}
-to {
-background-position: 0 0;
-}
-}
-@keyframes wave {
-from {
-background-position: 423px 0;
-}
-to {
-background-position: 0 0;
-}
-}
-.bubbles-row {
-	background: transparent url("bubbles.png") center center repeat;
-	-webkit-animation: rise 15s linear infinite;
-	animation: rise 15s linear infinite;
-}
-@-webkit-keyframes rise {
-from {
-background-position: 0 1200px;
-}
-to {
-background-position: 0 0;
-}
-}
-@keyframes rise {
-from {
-background-position: 0 1200px;
-}
-to {
-background-position: 0 0;
+
+@media (max-width: 1690px) {
+.link-wrapper {
+	max-width: 500px;
 }
 }
 
-@media (max-width: 985px) {
-.item.content {
-	order: 1;
+@media (max-width: 1625px) {
+h1.delius {
+	font-size: 80px;
 }
-.item.mermaid {
-	order: 2;
-	margin-right: 0;
-}
-.item.content {
-	margin-top: 0;
+.item.two {
+	min-width: 65%;
 }
 }
 
-@media (max-width: 615px) {
-h1.better-times {
-	font-size: 100px;
+@media (max-width: 1625px) {
+.item.two {
+	min-width: 65%;
 }
-.sea-bottom {
-	background: #513e65;
-	height: 20px;
+}
+
+@media (max-width: 1360px) {
+.item.two {
+	min-width: 50%;
+}
+h1.delius {
+	font-size: 60px;
+}
+}
+
+@media (min-width: 1051px) {
+.squirrel {
+	display: none;
+}
+}
+
+@media (max-width: 1050px) {
+h1.delius {
+	font-size: 65px;
+	padding: 25px 10px 0;
+}
+.item.one {
+	display: none;
+}
+.item.two {
+	min-width: 100%;
+	margin-left: 0;
+}
+.link-wrapper {
+	padding: 25px 10px 30px;
+}
+.page-background {
+	background: #b2cc4f url("small-background.jpg") top center repeat-x;
+}
+.vertical-scroll {
+	background: none !important;
+	animation: none !important;
 }
 }
 
 @media (max-width: 425px) {
-h1.better-times {
-	font-size: 80px;
+h1.delius {
+	font-size: 60px;
+	letter-spacing: inherit;
+}
+}
+.vertical-scroll {
+	background: transparent url("leaves.png") top center repeat-y;
+	animation: fall 10s linear infinite;
+}
+@keyframes fall {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 0 700px;
 }
 }
 </style>
@@ -450,22 +416,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row">
-    <div class="wave-background"></div>
-    <div class="page-background">
-      <div class="fish-row">
-        <div class="bubbles-row">
-          <div class="text-center">
-            <h1 class="better-times">Diving Back In</h1>
-          </div>
-          <div class="item-wrapper">
-            <div class="item mermaid"><img class="img-responsive" src="mermaid.png" alt=""></div>
-            <div class="item content">
-              <div class="link-wrapper"> <a href="fete-des-fables/gala/" class="link">Fête des Fables Fundraiser</a> <a href="storytime/" class="link">Indoor Storytime Returns</a> <a href="https://dcl.bibliocommons.com/list/share/692278051/1939314239" class="link">Sea Reads</a> <a href="birthday-parties/" class="link">Splashy Birthday! </a><a href="storybook-holiday/" class="link">Storybook Holiday Halloween</a></div>
-            </div>
-          </div>
-          <div class="sea-floor"></div>
-          <div class="sea-bottom"></div>
+  <div class="row page-background">
+    <div class="vertical-scroll">
+      <div class="item-wrapper">
+        <div class="item one"><img class="img-responsive" src="tree.png" alt=""></div>
+        <div class="item two">
+          <h1 class="delius text-center">The<br>
+            Harvest Life</h1>
+          <div class="squirrel"><img class="img-responsive center-block" src="squirrel.png" alt=""></div>
+          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Welcome to<br>
+            Transylvania</a> <a href="fete-des-fables/gala/" class="link">Fête des Fables<br>
+            Gala</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1953748119" class="link">Fall<br>
+            Canning</a> <a href="library-perks/#online-learning" class="link">Online Learning<br>
+            Picks</a> </div>
         </div>
       </div>
     </div>
@@ -567,4 +530,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
