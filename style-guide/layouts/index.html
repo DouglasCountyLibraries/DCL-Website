@@ -109,7 +109,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .item-one {
 	margin: 10px;
 	padding: 25px;
-	border: 2px dotted #666;
+	border: 2px solid #ddd;
 	background: #fff;
 	display: flex;
 	flex-direction: column;
@@ -126,6 +126,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .align-bottom {
 	margin-top: auto;
 	text-align: center;
+}
+.flickity-page-dots .dot {
+	background-color: #fff;
+}
+.flickity-page-dots {
+	bottom: -30px;
+	opacity: .5;
+}
+.flickity-prev-next-button {
+	display: none;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -327,13 +337,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container">
       <ul class="nav nav-tabs nav-justified" role="tablist">
         <li role="presentation" class="active"><a class="tab" href="#one" aria-controls="one" role="tab" data-toggle="tab">
-          <h4>One</h4>
+          <h4>One-up</h4>
           </a></li>
         <li role="presentation"><a class="tab" href="#two" aria-controls="two" role="tab" data-toggle="tab">
-          <h4>Two</h4>
+          <h4>Two-up</h4>
           </a></li>
         <li role="presentation"><a class="tab" href="#three" aria-controls="three" role="tab" data-toggle="tab">
-          <h4>Three</h4>
+          <h4>SBH Screenshots</h4>
           </a></li>
       </ul>
     </div>
@@ -344,9 +354,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="container">
             <div class="text-center">
               <h4 class="no-margin">Custom subheading font goes here</h4>
-              <h1 class="no-margin-top">Custom heading font goes here</h1>
+              <h1 class="no-margin padding-bottom-15">Custom heading font goes here</h1>
+              <img class="img-responsive center-block" src="https://source.unsplash.com/1024x425/?sunset" alt=""> </div>
+            <div class="text-center margin-lg-150 padding-top-30 padding-bottom-30">Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus purus euismod justo, vel mollis leo massa ut massa magna ut auctor fermentum, elit velit venenatis er.</div>
+          </div>
+          <div class="text-center">
+            <div class=""><img class="img-responsive center-block" src="https://source.unsplash.com/600x400/?ocean" alt="">
+              <h2 class="margin-bottom-5">Heading goes here</h2>
+              <h4 class="no-margin">Saturday, January 1<br>
+                6:30-8:30PM</h4>
+              <div class="padding-top-15"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
             </div>
-            <div class="text-center margin-lg-200">Introduction goes here...vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus purus euismod justo, vel mollis leo massa ut massa.</div>
+          </div>
+          <div class="container">
+            <div class="text-center margin-lg-200 padding-top-15">Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu.</div>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="two">
+        <div class="one-background">
+          <div class="container">
+            <div class="text-center">
+              <h4 class="no-margin">Custom subheading font goes here</h4>
+              <h1 class="no-margin-top">Custom heading font goes here</h1>
+              <img class="img-responsive center-block" src="https://source.unsplash.com/1024x425/?sky" alt=""> </div>
+            <div class="text-center padding-top-20 margin-lg-175">Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus purus euismod justo, vel mollis leo massa ut massa.</div>
           </div>
           <div class="item-wrapper text-center">
             <div class="item-one">
@@ -369,36 +401,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
           <div class="container">
-            <div class="text-center margin-lg-200">Additional information or disclaimer goes here...vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu.</div>
-          </div>
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane fade in" id="two">
-        <div class="one-background">
-          <div class="container">
-            <div class="text-center">
-              <h4 class="no-margin">Custom subheading font goes here</h4>
-              <h1 class="no-margin padding-bottom-15">Custom heading font goes here</h1>
-              <img class="img-responsive center-block" src="https://source.unsplash.com/1024x425/?trees" alt=""> </div>
-            <div class="text-center margin-lg-150 padding-top-30 padding-bottom-30">Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus purus euismod justo, vel mollis leo massa ut massa magna ut auctor fermentum, elit velit venenatis er.</div>
-          </div>
-          <div class="text-center">
-            <div class=""><img class="img-responsive center-block" src="https://source.unsplash.com/600x400/?grass" alt="">
-              <h2 class="margin-bottom-5">Heading goes here</h2>
-              <h4 class="no-margin">Saturday, January 1<br>
-                6:30-8:30PM</h4>
-              <div class="padding-top-15"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="text-center margin-lg-200 padding-top-15">Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu.</div>
+            <div class="text-center margin-lg-200 padding-top-30">Vestibulum ac erat quis risus hendrerit vestibulum. Semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus purus euismod justo, vel mollis leo massa ut massa magna ut auctor fermentum, elit velit venenatis er.</div>
           </div>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane fade" id="three">
-        <div class="one-background">
-          <div class="container">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut hendrerit ante turpis, tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis er.</div>
-        </div>
+        <div class="padding-top-15 padding-bottom-15"><img class="img-responsive center-block" src="storybook-holiday.jpg" alt=""> </div>
       </div>
     </div>
   </div>
@@ -460,7 +468,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="scripts" --><script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
 </html>
