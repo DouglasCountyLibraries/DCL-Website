@@ -95,10 +95,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	justify-content: center;
 	margin: 0 auto;
 }
-.custom-container {
-	max-width: 1600px;
-	margin: 0 auto;
-}
+
 .item {
 	display: flex;
 	flex-direction: column;
@@ -348,7 +345,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <div class="bg-gray-5 padding-top-20 padding-bottom-30">
-  <div class="custom-container">
+  <div class="container-xxl">
     <div class="item-wrapper">
       <div id="cohs" class="box-item">
         <div id="box-one"></div>
@@ -401,22 +398,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <script>
     var images = ['cohs-one.jpg'];
-    $('<img alt="Career Online High School" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+    $('<img alt="Career Online High School" class="img-fluid" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
 	
 	var images = ['usc-one.jpg'];
-    $('<img alt="U.S. Citizenship" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+    $('<img alt="U.S. Citizenship" class="img-fluid" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
 	
 	var images = ['esl-one.jpg'];
-    $('<img alt="Practice Your English" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
+    $('<img alt="Practice Your English" class="img-fluid" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
     
-    var images = ['proctoring.jpg'];
-    $('<img alt="Proctoring" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
+    var images = ['proctoring-one.jpg'];
+    $('<img alt="Proctoring" class="img-fluid" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
 	
-	var images = ['adult-tutoring.jpg'];
-    $('<img alt="Adult Tutoring" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-five');
+	var images = ['adult-tutoring-one.jpg'];
+    $('<img alt="Adult Tutoring" class="img-fluid" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-five');
       
-    var images = ['tech-tutoring.jpg'];
-    $('<img alt="Tech Tutoring" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-six'); 
+    var images = ['tech-tutoring-one.jpg'];
+    $('<img alt="Tech Tutoring" class="img-fluid" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-six'); 
 </script>
 <div class="row bg-teal padding-top-30 padding-bottom-40">
   <div class="container">
@@ -524,7 +521,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --><script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+ </script> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
