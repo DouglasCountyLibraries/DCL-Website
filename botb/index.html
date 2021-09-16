@@ -48,7 +48,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Battle of the Books | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks, BOTB, Battle of the Books">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
-<meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -82,31 +81,32 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-.item {
+.listen, .pause {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 14px;
 }
-.link-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	font-size: 20px;
+.pause {
+	margin-left: 6px;
 }
-.link {
-	width: 17rem;
-	background: #fff;
-	color: #333;
-	border: 2px solid #ddd;
-	margin: 0.75rem;
-	padding: 1rem 0;
-	border-radius: 3px;
-	text-align: center;
-	transition-duration: .5s;
-}
-.link:hover {
-	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px 0;
-	border-color: #ccc;
-}
-.link:link, .link:visited, .link:hover, .link:active {
+.listen:hover, .listen:focus, .pause:hover, .pause:focus {
+	cursor: pointer;
 	text-decoration: none;
+}
+.fas.fa-play {
+	margin-left: 7px;
+}
+.author-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 1210px) {
+.author-wrapper {
+	flex-direction: column;
+	max-width: 670px;
+	margin: 0 auto;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -324,57 +324,126 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<div class="">
-  <div class="container-xxl padding-top-40 padding-bottom-40">
-    <h2 class="text-center">Author Pronunciation List</h2>
-    <div class="d-flex max-width-70 mx-auto justify-content-lg-evenly flex-wrap">
-      <div class="padding-12">
-        <ul class="list-unstyled">
-          <h4>3rd & 4th Grade</h4>
-          <li>Katherine Applegate: "Kath_eh_rinn" "Ah_pull_gate"</li>
-          <li>Jack Chabert: "Jack" "Chay_bert"</li>
-          <li>Roald Dahl: "Roll" "Doll"</li>
-          <li>Kate DiCamillo: "Kay_t" "Dee_ka_mih_loh" (<i>millo</i> sounds like mellow)</li>
-          <li>Dan Gutman: "Dan" "Gut_men"</li>
-          <li>Wendy Mass: "Wen_dee" "Mass" (<i>Mass</i> like the start of the word <i>massive</i>)</li>
-          <li>Rebecca Stead: "Reh_beck_ka" "Sted" (<i>Stead</i> rhymes with red)</li>
-          <li>Lauren Tarshis: "Lo_ren" "Tarr_shiz"</li>
-          <li>Raina Telgemeier: "Rain_a" "Tel_guh_my_er"</li>
-          <li>Tom Watson: "Tom" "Wat_sen"</li>
-          <li>E.B. White: "Ee_Bee" "Why_t" (<i>White</i> like the color)</li>
-        </ul>
-      </div>
-      <div class="padding-12">
-        <ul class="list-unstyled">
-          <h4>5th & 6th Grade</h4>
-          <li>Kwame Alexander: "Kwa_mee" "Ah_lex_an_der"</li>
-          <li>Veera Hiranandani: "Vee_rah" "Hee_rah_nahn_dah_nee"</li>
-          <li>Erin Entrada Kelly: "Eh_rin" "Ehn_traw_dah" "Keh_lee"</li>
-          <li>Gordon Korman: "Gor_don" "Kor_min"</li>
-          <li>Grace Lin: "Gray_s" "Lin"</li>
-          <li>Linda Sue Park: "Lin_dah" "Soo" "Park"</li>
-          <li>Celia C. Perez: "Seh_lee_ah" "Cee" "Peh-rezz"</li>
-          <li>Barbara O’Connor: "Bar_bah_rah" "O_koh_nerr"</li>
-          <li>Louis Sachar: "Loo_is" "Sa_kerr" (<i>Sachar</i> rhymes with slacker)</li>
-          <li>Victoria Schwab: "Vick_toh_ree_ah" "Shh_wab"</li>
-        </ul>
-      </div>
+<div class="container-xxl padding-top-40 padding-bottom-40">
+  <h2 class="text-center">Author Pronunciation List</h2>
+  <div class="author-wrapper">
+    <div class="author-item padding-12">
+      <ul class="list-unstyled">
+        <h4>3rd & 4th Grade</h4>
+        <li>Katherine Applegate: "Kath_eh_rinn" "Ah_pull_gate" |&nbsp;<span class="text-nowrap">
+          <audio id="play1">
+            <source src="authors/katherine-applegate.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play1').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play1').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Jack Chabert: "Jack" "Chay_bert" |&nbsp;<span class="text-nowrap">
+          <audio id="play2">
+            <source src="authors/jack-chabert.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play2').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play2').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Roald Dahl: "Roll" "Doll" |&nbsp;<span class="text-nowrap">
+          <audio id="play3">
+            <source src="authors/roald-dahl.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play3').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play3').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Kate DiCamillo: "Kay_t" "Dee_ka_mih_loh" (<i>millo</i> sounds like mellow) |&nbsp;<span class="text-nowrap">
+          <audio id="play4">
+            <source src="authors/kate-dicamillo.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play4').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play4').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Dan Gutman: "Dan" "Gut_men" |&nbsp;<span class="text-nowrap">
+          <audio id="play5">
+            <source src="authors/dan-gutman.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play5').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play5').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Wendy Mass: "Wen_dee" "Mass" (<i>Mass</i> like the start of the word <i>massive</i>) |&nbsp;<span class="text-nowrap">
+          <audio id="play6">
+            <source src="authors/wendy-mass.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play6').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play6').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Rebecca Stead: "Reh_beck_ka" "Sted" (<i>Stead</i> rhymes with red) |&nbsp;<span class="text-nowrap">
+          <audio id="play7">
+            <source src="authors/rebecca-stead.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play7').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play7').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Lauren Tarshis: "Lo_ren" "Tarr_shiz" |&nbsp;<span class="text-nowrap">
+          <audio id="play8">
+            <source src="authors/lauren-tarshis.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play8').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play8').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Raina Telgemeier: "Rain_a" "Tel_guh_my_er" |&nbsp;<span class="text-nowrap">
+          <audio id="play9">
+            <source src="authors/raina-telgemeier.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play9').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play9').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Tom Watson: "Tom" "Wat_sen" |&nbsp;<span class="text-nowrap">
+          <audio id="play10">
+            <source src="authors/tom-watson.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play10').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play10').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>E.B. White: "Ee_Bee" "Why_t" (<i>White</i> like the color) |&nbsp;<span class="text-nowrap">
+          <audio id="play11">
+            <source src="authors/e-b-white.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play11').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play11').pause()"><i class="fas fa-pause"></i></a></span></li>
+      </ul>
+    </div>
+    <div class="author-item padding-12">
+      <ul class="list-unstyled">
+        <h4>5th & 6th Grade</h4>
+        <li>Kwame Alexander: "Kwa_mee" "Ah_lex_an_der" |&nbsp;<span class="text-nowrap">
+          <audio id="play12">
+            <source src="authors/kwame-alexander.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play12').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play12').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Veera Hiranandani: "Vee_rah" "Hee_rah_nahn_dah_nee" |&nbsp;<span class="text-nowrap">
+          <audio id="play13">
+            <source src="authors/vera-hiranandani.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play13').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play13').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Erin Entrada Kelly: "Eh_rin" "Ehn_traw_dah" "Keh_lee" |&nbsp;<span class="text-nowrap">
+          <audio id="play14">
+            <source src="authors/erin-kelly.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play14').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play14').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Gordon Korman: "Gor_don" "Kor_min" |&nbsp;<span class="text-nowrap">
+          <audio id="play15">
+            <source src="authors/gordon-korman.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play15').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play15').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Grace Lin: "Gray_s" "Lin" |&nbsp;<span class="text-nowrap">
+          <audio id="play16">
+            <source src="authors/grace-lin.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play16').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play16').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Linda Sue Park: "Lin_dah" "Soo" "Park" |&nbsp;<span class="text-nowrap">
+          <audio id="play17">
+            <source src="authors/linda-park.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play17').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play17').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Celia C. Perez: "Seh_lee_ah" "Cee" "Peh-rezz" |&nbsp;<span class="text-nowrap">
+          <audio id="play18">
+            <source src="authors/celia-perez.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play18').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play18').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Barbara O’Connor: "Bar_bah_rah" "O_koh_nerr" |&nbsp;<span class="text-nowrap">
+          <audio id="play19">
+            <source src="authors/barbara-oconnor.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play19').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play19').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Louis Sachar: "Loo_is" "Sa_kerr" (<i>Sachar</i> rhymes with slacker) |&nbsp;<span class="text-nowrap">
+          <audio id="play20">
+            <source src="authors/louis-sachar.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play20').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play20').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Victoria Schwab: "Vick_toh_ree_ah" "Shh_wab" |&nbsp;<span class="text-nowrap">
+          <audio id="play21">
+            <source src="authors/victoria-schwab.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play21').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play21').pause()"><i class="fas fa-pause"></i></a></span></li>
+      </ul>
     </div>
   </div>
 </div>
-<!-- working audio player    
-<div>
-  <div>
-    <audio id="play1" src="https://www.dcl.org/botb/audio/Grace-Lin.mp3"></audio>
-    <div> <a class="listen" onclick="document.getElementById('play1').play()">Play</a> | <a class="listen" onclick="document.getElementById('play1').pause()">Pause</a> </div>
-  </div>
-  <div>
-    <audio id="play2" src="https://www.dcl.org/botb/audio/E.B.-White.mp3"></audio>
-    <div> <a class="listen" onclick="document.getElementById('play2').play()">Play</a> | <a class="listen" onclick="document.getElementById('play2').pause()">Pause</a> </div>
-  </div>
-</div>
-    
-    --> 
 <!-- InstanceEndEditable -->
 <div class="bg-gray-10">
   <div class="container-xxl text-center">
