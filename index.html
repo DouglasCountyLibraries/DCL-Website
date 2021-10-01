@@ -92,31 +92,35 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&family=Itim&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 <style>
-h1.delius {
-	font-family: 'Delius Unicase', cursive;
+@font-face {
+	font-family: 'RolliyhRegular';
+	src: url('../shared-assets/web-fonts/RolliyhRegular.woff2') format('woff2'), url('../shared-assets/web-fonts/RolliyhRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+h1.rolliyh {
+	font-family: 'Rolliyh', cursive;
 	font-size: 96px;
-	color: #6b6a11;
+	color: #fff;
 	margin: 0;
 	padding: 0 0 20px;
 	text-transform: uppercase;
-	letter-spacing: .9rem;
+	letter-spacing: .2rem;
+	text-shadow: 10px 12px 15px rgba(0,0,0,.8);
+	line-height: .9em;
 }
 .page-background {
-	background: #b2cc4f url("tree-background.jpg") bottom center repeat-x;
+	background: #f37a21 linear-gradient(#fbaa15, #f37a21);
 }
 .item-wrapper {
+	background: url("background.jpg") top center no-repeat;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-.item.one {
-	border-bottom: 15px solid #b2cc4f;
-}
-.item.two {
-	margin-left: -7%;
-	padding: 15px 5px 30px;
+	padding: 260px 10px 50px;
 }
 .link-wrapper {
 	display: flex;
@@ -125,13 +129,15 @@ h1.delius {
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 18px;
+	font-size: 22px;
+	line-height: 27px;
 	margin: 0 auto;
+	max-width: 600px;
 }
 .link, .link:visited, .link:active {
 	font-family: 'Itim', cursive;
-	width: 200px;
-	background: #ed6306;
+	width: 275px;
+	background: #42296d;
 	color: #fff;
 	margin: 10px;
 	padding: 15px;
@@ -142,90 +148,29 @@ h1.delius {
 	text-decoration: none;
 }
 .link:hover, .link:focus {
-	background: #cd5605;
+	background: #42296d;
 	color: #fff;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
-	box-shadow: 0 2px 10px rgba(0,0,0,.5);
+	box-shadow: 10px 12px 15px rgba(0,0,0,.5);
+	text-shadow: 0 0 50px rgba(255,255,255,.7);
 }
 
-@media (max-width: 1690px) {
-.link-wrapper {
-	max-width: 500px;
-}
-}
-
-@media (max-width: 1625px) {
-h1.delius {
-	font-size: 80px;
-}
-.item.two {
-	min-width: 65%;
-}
-}
-
-@media (max-width: 1625px) {
-.item.two {
-	min-width: 65%;
-}
-}
-
-@media (max-width: 1360px) {
-.item.two {
-	min-width: 50%;
-}
-h1.delius {
-	font-size: 60px;
-}
-}
-
-@media (min-width: 1051px) {
-.squirrel {
+@media (max-width: 670px) {
+.break {
 	display: none;
 }
 }
 
-@media (max-width: 1050px) {
-h1.delius {
-	font-size: 65px;
-	padding: 25px 10px 0;
+@media (max-width: 610px) {
+.item-wrapper {
+	background: url("background-small.jpg") top center no-repeat;
+	padding: 445px 10px 50px;
 }
-.item.one {
-	display: none;
-}
-.item.two {
-	min-width: 100%;
-	margin-left: 0;
-}
-.link-wrapper {
-	padding: 25px 10px 30px;
-}
-.page-background {
-	background: #b2cc4f url("small-background.jpg") top center repeat-x;
-}
-.vertical-scroll {
-	background: none !important;
-	animation: none !important;
-}
-}
-
-@media (max-width: 425px) {
-h1.delius {
-	font-size: 60px;
-	letter-spacing: inherit;
-}
-}
-.vertical-scroll {
-	background: transparent url("leaves.png") top center repeat-y;
-	animation: fall 10s linear infinite;
-}
-@keyframes fall {
-from {
-background-position: 0 0;
-}
-to {
-background-position: 0 700px;
+h1.rolliyh {
+	font-size: 90px;
+	line-height: .9em;
 }
 }
 </style>
@@ -417,18 +362,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row page-background">
-    <div class="vertical-scroll">
-      <div class="item-wrapper">
-        <div class="item one"><img class="img-responsive" src="tree.png" alt=""></div>
-        <div class="item two">
-          <h1 class="delius text-center">The<br>
-            Harvest Life</h1>
-          <div class="squirrel"><img class="img-responsive center-block" src="squirrel.png" alt=""></div>
-          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Welcome to<br>
-            Transylvania</a> <a href="https://www.hoopladigital.com/publisher/craftsy/10388313910/titles" target="_blank" class="link">Get <br>Craftsy</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1953748119" class="link">Fall<br>
-            Canning</a> <a href="library-perks/#online-learning" class="link">Online Learning<br>
-            Picks</a> </div>
-        </div>
+    <div class="item-wrapper">
+      <div class="item one">
+        <h1 class="rolliyh text-center">Batty<br class="break">
+          to the Bone</h1>
+        <div class="link-wrapper"> <a href="https://www.eventbrite.com/e/a-storybook-holiday-halloween-welcome-to-transylvania-tickets-160613125181" target="_blank" class="link">Last Train to<br>
+          Transylvania </a> <a href="storybook-holiday/#reindeer-games" class="link">Scary Good<br>
+          Reindeer Games </a> <a href="camp-dcl/" class="link">Eerie-sistible<br>
+          Camp DCL</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1973975259" class="link">Spooky<br>
+          Stories</a> </div>
       </div>
     </div>
   </div>
