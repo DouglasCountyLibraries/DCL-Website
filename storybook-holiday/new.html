@@ -48,6 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Storybook Holiday | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
+<meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -111,236 +112,156 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 h4.heading-one {
 	font-family: "P22MichelangeloRegular", sans-serif;
 	color: #ec1c24;
-	font-size: 60px;
+	font-size: 48px;
 	font-weight: 900;
-	padding-top: 230px;
+	margin: 0;
+	line-height: .8;
 }
 h1.heading-two {
 	color: #ec1c24;
-	text-shadow: 1px 3px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #3c8097, 8px 8px 1px #3c8097;
-	font-size: 120px;
+	text-shadow: 1px 3px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #3c8097, 4px 5px 1px #3c8097;
+	font-size: 55px;
 	text-transform: uppercase;
 	margin: 0;
-	line-height: .8em;
-	letter-spacing: .8px;
 }
-.moon-row {
-	background: #000 url("graveyard.jpg") top center no-repeat;
-	-webkit-animation: image_blur 4s;
-	animation: image_blur 4s;
-	padding-bottom: 165px;
+@font-face {
+	font-family: 'BellaNotte';
+	src: url("../shared-assets/web-fonts/BellaNotteRegular.woff2"') format('woff2'), url('"../shared-assets/web-fonts/BellaNotteRegular.woff") format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
-@-webkit-keyframes image_blur {
-0% {
--webkit-filter: blur(5px);
-filter: blur(5px);
+@font-face {
+	font-family: 'Mighty Mountain';
+	src: url("../shared-assets/web-fonts/MightyMountainRegular.woff2") format('woff2'), url("../shared-assets/web-fonts/MightyMountainRegular.woff") format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
-100% {
--webkit-filter: blur(0px);
-filter: blur(0px);
+.bella-font {
+	font-family: "BellaNotte", sans-serif;
+	font-size: 90px;
+	line-height: .7em;
 }
+.mountain-font {
+	font-family: "Mighty Mountain", sans-serif;
 }
-@keyframes image_blur {
-0% {
--webkit-filter: blur(5px);
-filter: blur(5px);
+.mountain-font.big {
+	font-family: "Mighty Mountain", sans-serif;
+	font-size: 150px;
+	color: #be1e2d;
+	text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
+	letter-spacing: 0.02em;
+	line-height: .8;
+	margin-top: 10px;
 }
-100% {
--webkit-filter: blur(0px);
-filter: blur(0px);
+.mountain-font.event {
+	font-size: 50px;
+	line-height: 1;
 }
-}
-.cape {
-	background: transparent url("cape.png") top center/cover;
-	margin: 0 auto;
-	max-width: 950px;
-	height: 700px;
-}
-.dracula {
-	background: transparent url("dracula.png") top center/cover;
-	margin: 0 auto;
-	max-width: 950px;
-	height: 485px;
-	margin-top: 260px;
-}
-.appear {
-	-webkit-animation: appear .1s cubic-bezier(0, 0, 1, 1) 1s both;
-	animation: appear .1s cubic-bezier(0, 0, 1, 1) 1s both;
-}
-@-webkit-keyframes appear {
-0% {
-opacity: 0;
-}
-100% {
-opacity: 1;
-}
-}
-@keyframes appear {
-0% {
-opacity: 0;
-}
-100% {
-opacity: 1;
-}
-}
-.slide-in-top {
-	-webkit-animation: slide-in-top 3s cubic-bezier(0, 0, 1, 1) 1s both;
-	animation: slide-in-top 3s cubic-bezier(0, 0, 1, 1) 1s both;
-}
-@-webkit-keyframes slide-in-top {
-0% {
--webkit-transform: translateY(-300px);
-transform: translateY(-300px);
-opacity: 0;
-}
-1% {
--webkit-transform: translateY(-300px);
-transform: translateY(-300px);
-opacity: 1;
-}
-100% {
--webkit-transform: translateY(-196px);
-transform: translateY(-196px);
-opacity: 1;
-}
-}
-@keyframes slide-in-top {
-0% {
--webkit-transform: translateY(-300px);
-transform: translateY(-300px);
-opacity: 0;
-}
-1% {
--webkit-transform: translateY(-300px);
-transform: translateY(-300px);
-opacity: 1;
-}
-100% {
--webkit-transform: translateY(-196px);
-transform: translateY(-196px);
-opacity: 1;
-}
-}
-.btn.btn-custom {
-	background: #ec1c24;
-	color: #000;
-	border-radius: 2px;
-}
-.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
-	background: #7d0f13;
-	color: #fff;
-}
-a.btn.btn-default {
-	color: #000;
+a.btn.btn-primary.custom {
 	text-transform: uppercase;
-	font-weight: 500;
+	border: 0;
+	background: #be1e2d;
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 14px 18px;
 }
-.flash {
-	height: 100%;
-	width: 100%;
-	background: #fff;
-	animation: lighting .6s 0s linear 3;
-	opacity: 1;
-}
-@keyframes lighting {
-0% {
-opacity: 0;
-}
-10% {
-opacity: 0;
-}
-11% {
-opacity: 1;
-}
-14% {
-opacity: 0;
-}
-20% {
-opacity: 0;
-}
-21% {
-opacity: 1;
-}
-24% {
-opacity: 0;
-}
-104% {
-opacity: 0;
-}
-}
-
-@media (max-width: 650px) {
-h1.block-font {
-	font-size: 70px;
-}
-.script-heading-one {
-	font-size: 26px;
-	line-height: 32px;
-}
-.script-heading-two {
-	font-size: 60px;
-	line-height: auto;
-}
-.block-font.date {
-	display: none;
-}
-.tree-row {
-	height: 604px;
-}
-.monster-row {
-	height: 650px;
-}
+a.btn.btn-primary.custom:hover, a.btn.btn-primary.custom:focus {
+	background: red;
 }
 .item-wrapper {
 	display: flex;
-	align-content: center;
-	justify-content: center;
-	margin: 0 10px;
-	align-items: center;
+	padding: 45px 0 0 0;
 }
 .item {
-	color: #fff;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 10px;
+	padding: 25px;
+	border: 5px dotted #be1e2d;
 }
 .align-bottom {
 	margin-top: auto;
+	text-align: center;
 }
-.save-date {
-	background: #1b3f57;
+.teaser {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.teaser-background {
+	background: #000;
+}
+.deer {
+	margin-bottom: -53px;
+}
+.deer-small {
+	margin-bottom: -44px;
+}
+.tree-row {
+	background: transparent url("tree-row.png") bottom center repeat-x;
+}
+.safety {
+	padding: 30px 0 40px;
+	margin-top: 40px;
+	background: radial-gradient(ellipse at bottom, #fff 40%, #89B4BB 100%);
+}
+.snow {
+	background: #9ecad1 url("snow.png") bottom center repeat;
+	-webkit-animation: slide 8s linear infinite;
+	animation: slide 8s linear infinite;
+}
+.tree-wrapper {
+	display: flex;
+}
+@-webkit-keyframes slide {
+from {
+background-position: 0 -631px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes slide {
+from {
+background-position: 0 -631px;
+}
+to {
+background-position: 0 0;
+}
 }
 
-@media (max-width: 725px) {
+@media (max-width: 768px) {
 .item-wrapper {
 	flex-direction: column;
 }
-.moon-row {
-	padding-bottom: 500px;
-}
-h1.heading-two {
-	font-size: 100px;
-	line-height: .9em;
-}
 }
 
-@media (max-width: 600px) {
-h1.heading-two {
-	font-size: 65px;
-	line-height: .9em;
-}
-h4.heading-one {
+@media (max-width: 500px) {
+.bella-font {
 	font-size: 50px;
 	line-height: .7em;
 }
-.dracula {
-	margin-top: 40px;
+.mountain-font {
+	font-family: "Mighty Mountain", sans-serif;
 }
-.moon-row {
-	padding-bottom: 390px;
+.mountain-font.big {
+	font-size: 100px;
+	line-height: .8;
 }
 }
 
-@media (max-width: 400px) {
-.moon-row {
-	padding-bottom: 450px;
+@media (min-width: 406px) {
+.deer-small {
+	display: none;
+}
+}
+
+@media (max-width: 405px) {
+.deer {
+	display: none;
 }
 }
 </style>
@@ -531,39 +452,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="flash">
-    <div class="row moon-row text-center">
-      <div class="dracula appear"> </div>
-      <div class="cape slide-in-top">
-        <h4 class="heading-one">A Storybook Holiday Halloween</h4>
-        <h1 class="heading-two">Welcome to<br>
-          Transylvania</h1>
-        <div class="padding-top-30 margin-left-5 margin-right-5 white">
-          <div class="large-text margin-bottom-10">Join us for a <i>bite</i> of ghastly good fun at our Highlands Ranch location.</div>
-          <div>Dress up for the full experience! Visit Dracula’s coffin room (if you dare!) and decorate your Halloween bucket for trick-or-treating through the vampire bat cave. Sink your teeth into delicious catered snacks, sip the special witches’ brew, and do the Monster Mash. Your fangtastic evening also includes lively entertainment, make and takes, and crafts. Ideal for ages 7-11, but all ages are welcome. </div>
-          <div class="item-wrapper">
-            <div class="item">
-              <h3 class="white no-margin-bottom"><span class="text-uppercase">Highlands Ranch</span></h3>
-              <h4 class="white no-margin">Saturday,&nbsp;October&nbsp;23,&nbsp;6-9PM</h4>
-              <div class="align-bottom padding-top-20 padding-bottom-20 text-center"><a href="https://www.eventbrite.com/e/a-storybook-holiday-halloween-welcome-to-transylvania-tickets-160613125181" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
-              <div>
-                <h5 class="white no-margin">$20&nbsp;Adults*, $15 Ages&nbsp;3-13</h5>
-                (Ages 0-2 free with paying adult)</div>
-            </div>
-          </div>
-          <div class="large-text white padding-top-15">* An additional alcohol beverage ticket is $12 for adults <span class="text-nowrap">21-plus.</span></div>
-        </div>
+  <div id="halloween" class="row teaser-background">
+    <div class="container teaser white text-center">
+      <h4 class="heading-one">Don't miss: A Storybook Holiday Halloween!</h4>
+      <h1 class="heading-two">Welcome to Transylvania</h1>
+      <div>Highlands&nbsp;Ranch, Saturday, October&nbsp;23, 6-9PM</div>
+      <div class="margin-top-10"><a href="https://www.eventbrite.com/e/a-storybook-holiday-halloween-welcome-to-transylvania-tickets-160613125181" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+    </div>
+  </div>
+  <div id="reindeer-games" class="row snow">
+    <div class="black">
+      <div class="container text-center padding-top-30">
+        <div class="text-center bella-font">Storybook Holiday</div>
+        <div class="text-center mountain-font big">rEINDEEr<br>
+          GAMEs</div>
+        <h4 class="black text-center margin-lg-50">Join us for our annual holiday celebration! Our Lone Tree location will transform into a woodsy winter wonderland with delightful entertainment, spirited festivities, and fun for the whole family. </h4>
+      </div>
+    </div>
+    <div class="tree-row text-center"><img class="deer" src="reindeer.png" alt="Reindeer"><img class="deer-small" src="reindeer-small.png" alt="Reindeer"></div>
+  </div>
+  <div class="row">
+    <div class="container item-wrapper text-center">
+      <div class="item">
+        <div class="mountain-font event">DinNEr EDitiOn</div>
+        <h4 class="black no-margin">Saturday, December 4, 5-8:30PM</h4>
+        <div>You’ll have the most wonderful time enjoying family-friendly entertainment, holiday craft and make-and-take gift stations, and a special appearance by Santa. The evening also includes a delicious catered meal, sweet treats and drinks, and our signature hot cocoa bar, plus much more! </div>
+        <div class="align-bottom padding-top-20 margin-bottom-15"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$25 AGES 3-11, $30 Ages 12+<br>
+          (Ages 0-2 free with paying adult)</div>
+      </div>
+      <div class="item">
+        <div class="mountain-font event">BrUNch EDitiOn</div>
+        <h4 class="black no-margin">Sunday, December 5, 8-11AM</h4>
+        <div>You’ll enjoy the same woodland-inspired festivities, crafts and entertainment as our evening event, with a scrumptious catered brunch, coffee, specialty drinks, and our signature hot cocoa bar, plus a special appearance by Santa.</div>
+        <div class="align-bottom padding-top-20 margin-bottom-15"><a href="#" target="_blank" class="btn btn-primary custom">Buy Tickets</a></div>
+        <div>$20 AGES 3-11, $25 Ages 12+<br>
+          (Ages 0-2 free with paying adult)</div>
       </div>
     </div>
   </div>
-  <div class="row save-date">
-    <div class="container white text-center padding-top-50 padding-bottom-60">
-      <h4 class="white no-margin">Save the Date!</h4>
-      <h3 class="white margin-top-5 margin-bottom-15">A Storybook Holiday: Reindeer Games</h3>
-      <div>Saturday, December 4, 2021 – Dinner</div>
-      <div>Sunday, December 5, 2021 – Brunch</div>
-      <h4 class="white">Tickets on sale this fall! </h4>
-      <div><a class="white text-underline" href="../newsletters/">Sign up for our eNewsletter</a> for inside access to ticket sales and other library events and happenings. </div>
+  <div class="row">
+    <div class="container margin-lg-125 padding-bottom-60">
+      <div class="padding-top-15 text-center">An additional alcohol beverage ticket is $15 for adults 21-plus.</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
