@@ -86,6 +86,35 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+    <style>
+.listen, .pause {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 14px;
+}
+.pause {
+	margin-left: 6px;
+}
+.listen:hover, .listen:focus, .pause:hover, .pause:focus {
+	cursor: pointer;
+	text-decoration: none;
+}
+.fas.fa-play {
+	margin-left: 7px;
+}
+.author-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 1210px) {
+.author-wrapper {
+	flex-direction: column;
+	max-width: 670px;
+	margin: 0 auto;
+}
+}
+</style>
 <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -273,22 +302,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row text-center bg-gray-5 padding-top-100 padding-bottom-100">
-    <audio controls>
-      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mp3">
-    </audio>
-    <div>from w3schools.com</div>
-  </div>
-  <div class="row text-center bg-gray-5 padding-top-100 padding-bottom-100">
-    <audio controls>
-      <source src="audio/katherine-applegate.mp3" type="audio/mp3">
-    </audio>
-    <div>from Venessa</div>
-  </div>
-  <div class="row text-center bg-gray-5 padding-top-100 padding-bottom-100">
-    <audio controls>
-      <source src="authors/dale-test.mp3" type="audio/mp3"></audio>
-      <div>from Dale</div>
+  <div class="row text-center border-top padding-top-100 padding-bottom-100">
+<li>Katherine Applegate: "Kath_eh_rinn" "Ah_pull_gate" |&nbsp;<span class="text-nowrap">
+          <audio id="play1">
+            <source src="authors/katherine-applegate.mp3" type="audio/mp3">
+            <source src="authors/katherine-applegate.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play1').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play1').pause()"><i class="fas fa-pause"></i></a></span></li>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
