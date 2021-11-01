@@ -89,37 +89,53 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 <style>
 @font-face {
-	font-family: 'RolliyhRegular';
-	src: url('../shared-assets/web-fonts/RolliyhRegular.woff2') format('woff2'), url('../shared-assets/web-fonts/RolliyhRegular.woff') format('woff');
+	font-family: 'AustralSlabBlur-Regular';
+	src: url('../shared-assets/web-fonts/AustralSlabBlur-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/AustralSlabBlur-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
-h1.rolliyh {
-	font-family: 'RolliyhRegular', cursive;
+@font-face {
+	font-family: 'Gratuitous-Regular';
+	src: url('../shared-assets/web-fonts/Gratuitous-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/Gratuitous-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+h1.austral {
+	font-family: 'AustralSlabBlur-Regular', serif;
 	font-size: 96px;
-	color: #fff;
+	color: #fff3db;
 	margin: 0;
 	padding: 0 0 20px;
-	text-transform: uppercase;
 	letter-spacing: .2rem;
-	text-shadow: 10px 12px 15px rgba(0,0,0,.8);
 	line-height: .9em;
 }
+#general-alert {
+	background: #F4502D;
+}
+.amazon {
+	background: #742E46;
+	color: #fff;
+	font-size: 18px;
+	padding: 12px 10px 13px;
+	font-weight: 400;
+	text-align: center;
+	margin-left: -15px;
+	margin-right: -15px;
+}
 .page-background {
-	background: #f37a21 linear-gradient(#fbaa15, #f37a21);
+	background: #ff9602 url("nov-bkg.jpg") left center no-repeat;
+	height: 600px;
+	display: flex;
+	justify-content: center;
 }
 .item-wrapper {
-	background: url("background.jpg") top center no-repeat;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	padding: 260px 10px 50px;
+	padding-bottom: 45px;
 }
 .link-wrapper {
 	display: flex;
@@ -128,15 +144,15 @@ h1.rolliyh {
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 22px;
-	line-height: 27px;
+	font-size: 18px;
+	line-height: 25px;
 	margin: 0 auto;
-	max-width: 600px;
+	max-width: 625px;
 }
 .link, .link:visited, .link:active {
-	font-family: 'Itim', cursive;
-	width: 275px;
-	background: #42296d;
+	font-family: 'Gratuitous-Regular', sans-serif;
+	width: 290px;
+	background: #a62755;
 	color: #fff;
 	margin: 10px;
 	padding: 15px;
@@ -147,29 +163,67 @@ h1.rolliyh {
 	text-decoration: none;
 }
 .link:hover, .link:focus {
-	background: #42296d;
+	background: #742e46;
 	color: #fff;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
-	box-shadow: 10px 12px 15px rgba(0,0,0,.5);
-	text-shadow: 0 0 50px rgba(255,255,255,.7);
+	box-shadow: 0px 5px 15px rgba(0,0,0,.4);
 }
 
-@media (max-width: 670px) {
-.break {
-	display: none;
+@media (max-width: 1800px) {
+.page-background {
+	background: #ff9602 url("nov-bkg.jpg") -100px center no-repeat;
 }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 1600px) {
+.page-background {
+	background: #ff9602 url("nov-bkg.jpg") -200px center no-repeat;
+}
+}
+
+@media (max-width: 1450px) {
+.page-background {
+	background: #ff9602 url("nov-bkg.jpg") -150px center no-repeat;
+	height: 600px;
+	display: flex;
+	justify-content: right;
+	padding-right: 18%;
+}
+}
+
+@media (max-width: 1300px) {
+.page-background {
+	background: #ff9602 url("nov-bkg.jpg") -150px center no-repeat;
+	height: 600px;
+	display: flex;
+	justify-content: right;
+	padding-right: 5%;
+}
+}
+
+@media (max-width: 1120px) {
+.page-background {
+	background: #ff9602 url("nov-bkg.jpg") -250px center no-repeat;
+	height: 600px;
+	display: flex;
+	justify-content: right;
+	padding-right: 2%;
+}
+}
+
+@media (max-width: 980px) {
+.page-background {
+	background: #ff9602 url("nov-bkg-sm.jpg") top center no-repeat;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+}
 .item-wrapper {
-	background: url("background-small.jpg") top center no-repeat;
-	padding: 445px 10px 50px;
-}
-h1.rolliyh {
-	font-size: 90px;
-	line-height: .9em;
+	display: flex;
+	align-items: center;
+	padding: 550px 0 50px;
 }
 }
 </style>
@@ -363,16 +417,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row page-background">
     <div class="item-wrapper">
       <div class="item one">
-        <h1 class="rolliyh text-center">Batty<br class="break">
-          to the Bone</h1>
-        <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Scary Good<br>
-          Reindeer Games </a> <a href="camp-dcl/" class="link">Eerie-sistible<br>
-          Camp DCL</a> <a href="donate/" class="link">Giving<br>
-          Goosebumps</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1973975259" class="link">Spooky<br>
-          Stories</a> </div>
+        <h1 class="austral text-center">Warm &&nbsp;Cozy</h1>
+        <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Reindeer<br>
+          Games Night!</a> <a href="camp-dcl/" class="link">No Place<br>
+          Like Camp</a> <a href="reading-challenge/" class="link">Get Comfy:<br>
+          Reading Challenge</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1989780129" class="link">Home Cooked<br>
+          Tastes Good</a> </div>
       </div>
     </div>
   </div>
+  <div class="amazon">Support the DCL Foundation <a class="text-underline white" href="donate/#everyday-giving">when shopping online</a> for the holidays. </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
