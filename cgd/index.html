@@ -88,54 +88,76 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-/*@font-face {
-	font-family: 'ForeverGrateful';
-	src: url('../shared-assets/web-fonts/ForeverGrateful.woff') format('woff2'), url('../shared-assets/web-fonts/ForeverGrateful.woff') format('woff');
+@font-face {
+	font-family: 'HankLight';
+	src: url('../shared-assets/web-fonts/HankRnd-Light.woff2') format('woff2'), url('../shared-assets/web-fonts/HankRnd-Light.woff') format('woff');
 }
 @font-face {
-	font-family: 'LittleDinosaurRegular';
-	src: url('../shared-assets/web-fonts/LittleDinosaurRegular.woff') format('woff2'), url('../shared-assets/web-fonts/LittleDinosaurRegular.woff2') format('woff');
+	font-family: 'HankReg';
+	src: url('../shared-assets/web-fonts/HankRnd-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/HankRnd-Regular.woff') format('woff');
 }
-h1.grateful {
-	font-family: 'ForeverGrateful', sans-serif;
+@font-face {
+	font-family: 'HankBold';
+	src: url('../shared-assets/web-fonts/HankRnd-Bold.woff2') format('woff2'), url('../shared-assets/web-fonts/HankRnd-Bold.woff') format('woff');
+}
+.hanklight {
+	font-family: 'HankLight', sans-serif;
+}
+.hankreg {
+	font-family: 'HankReg', sans-serif;
+}
+.hankbold {
+	font-family: 'HankBold', sans-serif;
+}
+h1 > .hankbold, h1 > .hanklight {
 	font-size: 90px;
-	color: #333;
-	line-height: .9em;
+	line-height: .8em;
 }
-h4.grateful {
-	font-family: 'ForeverGrateful', sans-serif;
-	font-size: 36px;
-	color: #333;
-	line-height: .9em;
+h3.hankbold {
+	font-size: 40px;
+	margin: 0;
 }
-h1.little {
-	font-family: 'LittleDinosaurRegular', sans-serif;
-	font-size: 50px;
-	color: #555;
-	font-weight: 600;
-	line-height: .9em;
+.btn-default {
+	background-color: #fff;
+	color: #216d60;
 }
-h4.little, .little {
-	font-family: 'LittleDinosaurRegular', sans-serif;
-	font-size: 36px;
-	color: #555;
-	font-weight: 600;
-	line-height: .9em;
-}*/
-
-/*.btn-default {
-	background-color: #e26155;
+a.btn.btn-default {
+	color: #216d60;
+	text-transform: uppercase;
+	font-weight: 400;
 }
 .btn-default:active, .btn-default:hover, .btn-default:focus {
-	background-color: #ce1b24;
-}*/
+	background-color: #fff;
+	color: #216d60;
+}
+.btn-primary {
+	background-color: #216d60;
+}
+.btn-primary:active, .btn-primary:hover, .btn-p:focus {
+	background-color: #216d60;
+}
+.door-row {
+	background: #216d60;
+	color: #fff;
+	padding: 30px 0 40px;
+}
 .material-icons.keyicon {
-	/* color: #999; */
 	font-size: 30px;
 	vertical-align: center;
 	padding-right: 6px;
-	color: #4f878c;
+	color: #216d60;
 	vertical-align: -9px;
+}
+
+@media (max-width: 675px) {
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 50px;
+	line-height: .8em;
+}
+h3.hankbold {
+	font-size: 20px;
+	margin: 0;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -325,17 +347,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row">
-    <div class="container margin-lg-100 text-center">
-      <h1 class="text-uppercase font-weight-400">Opening Doors for the Future</h1>
-      <div class="large-text">Please join Douglas County Libraries (DCL) Foundation on Colorado Gives Day to help open doors for the future. When you schedule your donation for Tuesday, December&nbsp;7, your gift goes further thanks to the $1.6 Million Incentive Fund made possible by Community First Foundation and other community members. </div>
-      <div class="padding-top-30 text-center"><a class="btn btn-lg btn-primary" href="https://www.coloradogives.org/DouglasCountyLibrariesFoundation/overview" target="_blank">Schedule Donation</a></div>
+  <div class="row door-row">
+    <div class="container margin-lg-100">
+      <h3 class="hankbold text-center white text-uppercase">You are the key to</h3>
+      <h1 class="white text-center no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors...</span></h1>
+      <div class="large-text padding-top-15">Please join Douglas County Libraries (DCL) Foundation on Colorado Gives Day to help open doors for the future. When you schedule your donation for Tuesday, December&nbsp;7, your gift goes further thanks to the $1.6 Million Incentive Fund made possible by Community First Foundation and other community members. </div>
+      <div class="padding-top-30 text-center"><a class="btn btn-lg btn-default" href="https://www.coloradogives.org/DouglasCountyLibrariesFoundation/overview" target="_blank">Schedule Donation</a></div>
     </div>
   </div>
   <div class="row">
     <div class="container margin-lg-100 padding-top-30 padding-bottom-60">
-      <div class="">The DCL Foundation works to open doors through its support of vital library programs and services that reach youth, adults and families in Douglas County and across Colorado. DCL served our community during the pandemic by remaining open, providing vital connections to residents in senior living communities, continuing the Summer Reading tradition, delivering library materials and services to customers, and supporting the education goals of our neighbors. Our generous donors are key to making these and other programs and services possible. </div>
-      <h2 class="text-center text-uppercase font-weight-400">You are the key to opening doors</h2>
+      <div class="">The DCL Foundation works to open doors through its support of vital library programs and services that reach youth, adults and families in Douglas County and across Colorado. DCL served our community during the pandemic by remaining open, providing vital connections to residents in senior living communities, continuing the Summer Reading tradition, delivering library materials and services to customers, and supporting the education goals of our neighbors. Our generous donors are key to making these and other programs and services possible. You are the key to opening doors...</div>
       <div class="">
         <h4 class="no-margin-bottom font-weight-400 margin-top-15">To Opportunity</h4>
         <div>DCL <a href="../summer-reading/">Summer Reading</a> and <a href="../parents/#reading-buddies">Reading Buddies</a> give kids the opportunity to build a strong foundation in literacy and achieve school success</div>
