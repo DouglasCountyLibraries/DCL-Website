@@ -127,6 +127,7 @@ h1.bella {
 	background: transparent url("snow.png") bottom center repeat;
 	-webkit-animation: slide 8s linear infinite;
 	animation: slide 8s linear infinite;
+	margin: 0 15px;
 }
 .item-wrapper {
 	display: flex;
@@ -146,7 +147,7 @@ h1.bella {
 	line-height: 25px;
 	margin: 0 auto;
 	max-width: 625px;
-    padding-bottom: 45px;
+	padding-bottom: 45px;
 }
 .link, .link:visited, .link:active {
 	font-family: 'Open Sans', sans-serif;
@@ -184,6 +185,38 @@ to {
 background-position: 0 0;
 }
 }
+
+@media (max-width: 1050px) {
+h1.bella {
+	font-family: 'BellaNotte', serif;
+	font-size: 50px;
+	color: #000;
+	margin: 0;
+	padding: 0 0 20px;
+	line-height: .75em;
+}
+}
+
+@media (max-width: 875px) {
+.item-wrapper {
+	flex-direction: column;
+}
+.item.one {
+	order: 2;
+}
+.item.two {
+	order: 1;
+}
+.link-wrapper {
+	padding-bottom: 0;
+	margin-bottom: -30px;
+}
+}
+    @media (max-width: 400px) {
+        .deer {
+            max-width: 350px;
+        }
+    }
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -376,7 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="snow">
       <div class="item-wrapper">
         <div class="item one">
-          <div><img class="" src="deer.png" alt="Storybook Holiday: Reindeer Games"></div>
+          <div><img class="deer" src="deer.png" alt="Storybook Holiday: Reindeer Games"></div>
         </div>
         <div class="item two">
           <h1 class="bella text-center">Oh Deer, the Holidays are Here!</h1>
