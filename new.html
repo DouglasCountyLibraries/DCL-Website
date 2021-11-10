@@ -99,27 +99,19 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-style: normal;
 	font-display: swap;
 }
-@font-face {
-	font-family: 'Gratuitous-Regular';
-	src: url('../shared-assets/web-fonts/Gratuitous-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/Gratuitous-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
 h1.bella {
 	font-family: 'BellaNotte', serif;
-	font-size: 96px;
+	font-size: 70px;
 	color: #000;
 	margin: 0;
 	padding: 0 0 20px;
-	letter-spacing: .2rem;
-	line-height: .9em;
+	line-height: .75em;
 }
 #general-alert {
-	background: #F4502D;
+	background: #be1e2d;
 }
 .amazon {
-	background: #742E46;
+	background: #67852d;
 	color: #fff;
 	font-size: 18px;
 	padding: 12px 10px 13px;
@@ -128,8 +120,11 @@ h1.bella {
 	margin-left: -15px;
 	margin-right: -15px;
 }
+.page {
+	background: linear-gradient(#b5e8f0 15%, #9ecad1 100%);
+}
 .snow {
-	background: #9ecad1 url("snow.png") bottom center repeat;
+	background: transparent url("snow.png") bottom center repeat;
 	-webkit-animation: slide 8s linear infinite;
 	animation: slide 8s linear infinite;
 }
@@ -146,57 +141,47 @@ h1.bella {
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 18px;
+	font-size: 21px;
+	font-weight: 400;
 	line-height: 25px;
 	margin: 0 auto;
 	max-width: 625px;
+    padding-bottom: 45px;
 }
 .link, .link:visited, .link:active {
-	font-family: 'Gratuitous-Regular', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	width: 290px;
-	background: #a62755;
-	color: #fff;
+	background: rgba(255,255,255,.7);
+	color: #000;
 	margin: 10px;
 	padding: 15px;
-	border-radius: 2px;
+	outline: 5px dotted #be1e2d;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 .link:hover, .link:focus {
-	background: #742e46;
-	color: #fff;
+	background: #fff;
+	color: #000;
+	outline: 5px dotted #be1e2d;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
-	transition-duration: .5s;
-	box-shadow: 0px 5px 15px rgba(0,0,0,.4);
 }
-
-@media (max-width: 1800px) {
-.page-background {
+@-webkit-keyframes slide {
+from {
+background-position: 0 -631px;
 }
-}
-
-@media (max-width: 1600px) {
-.page-background {
+to {
+background-position: 0 0;
 }
 }
-@media (max-width: 1450px) {
-.page-background {
+@keyframes slide {
+from {
+background-position: 0 -631px;
 }
-@media (max-width: 1300px) {
-.page-background {
-}
-}
-@media (max-width: 1120px) {
-.page-background {
-}
-}
-@media (max-width: 980px) {
-.page-background {
-}
-.item-wrapper {
+to {
+background-position: 0 0;
 }
 }
 </style>
@@ -387,18 +372,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row snow">
-    <div class="item-wrapper">
-      <div class="item one">
-        <div><img class="" src="deer.png" alt="Storybook Holiday: Reindeer Games"></div>
-      </div>
-      <div class="item two">
-        <h1 class="bella text-center">Oh Deer, the Holidays are Here!</h1>
-        <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Storybook Holiday:<br>
-          Reindeer Games!</a> <a href="camp-dcl/" class="link">No Place<br>
-          Like Camp</a> <a href="reading-challenge/" class="link">Get Comfy:<br>
-          Reading Challenge</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1989780129" class="link">Home Cooked<br>
-          Tastes Good</a> </div>
+  <div class="row page">
+    <div class="snow">
+      <div class="item-wrapper">
+        <div class="item one">
+          <div><img class="" src="deer.png" alt="Storybook Holiday: Reindeer Games"></div>
+        </div>
+        <div class="item two">
+          <h1 class="bella text-center">Oh Deer, the Holidays are Here!</h1>
+          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Storybook Holiday:<br>
+            Reindeer Games!</a> <a href="camp-dcl/" class="link">No Place<br>
+            Like Camp</a> <a href="reading-challenge/" class="link">Get Comfy:<br>
+            Reading Challenge</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1989780129" class="link">Home Cooked<br>
+            Tastes Good</a> </div>
+        </div>
       </div>
     </div>
   </div>
