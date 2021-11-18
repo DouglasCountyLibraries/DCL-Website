@@ -48,6 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
+<meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
@@ -92,25 +93,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <style>
 @font-face {
-	font-family: 'BellaNotte';
-	src: url("shared-assets/web-fonts/BellaNotteRegular.woff2") format('woff2'), url("shared-assets/web-fonts/BellaNotteRegular.woff") format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+	font-family: 'HankLight';
+	src: url('shared-assets/web-fonts/HankRnd-Light.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Light.woff') format('woff');
 }
-h1.bella {
-	font-family: 'BellaNotte', serif;
-	font-size: 70px;
-	color: #000;
-	margin: 0;
-	padding: 0 0 20px;
-	line-height: .75em;
+@font-face {
+	font-family: 'HankReg';
+	src: url('shared-assets/web-fonts/HankRnd-Regular.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Regular.woff') format('woff');
 }
-#general-alert {
+@font-face {
+	font-family: 'HankBold';
+	src: url('shared-assets/web-fonts/HankRnd-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Bold.woff') format('woff');
+}
+/*#general-alert {
 	background: #be1e2d;
-}
+}*/
 .amazon {
-	background: #67852d;
+	background: #497638;
 	color: #fff;
 	font-size: 18px;
 	padding: 12px 10px 13px;
@@ -119,24 +117,9 @@ h1.bella {
 	margin-left: -15px;
 	margin-right: -15px;
 }
-.page {
-	background: linear-gradient(#b5e8f0 15%, #9ecad1 100%);
-}
-.snow {
-	background: transparent url("snow.png") bottom center repeat;
-	-webkit-animation: slide 8s linear infinite;
-	animation: slide 8s linear infinite;
-	margin: 0 15px;
-}
-.item-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 20px;
-}
 .link-wrapper {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
@@ -151,70 +134,136 @@ h1.bella {
 .link, .link:visited, .link:active {
 	font-family: 'Open Sans', sans-serif;
 	width: 290px;
-	background: rgba(255,255,255,.7);
+	background: rgba(255,255,255,1);
 	color: #000;
 	margin: 10px;
 	padding: 15px;
-	outline: 5px dotted #be1e2d;
+	border-radius: 3px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 .link:hover, .link:focus {
-	background: #fff;
+	background: #CDDE58;
 	color: #000;
-	outline: 5px dotted #be1e2d;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 }
-@-webkit-keyframes slide {
-from {
-background-position: 0 -631px;
-}
-to {
-background-position: 0 0;
-}
-}
-@keyframes slide {
-from {
-background-position: 0 -631px;
-}
-to {
-background-position: 0 0;
-}
-}
-
-@media (max-width: 1050px) {
-h1.bella {
-	font-family: 'BellaNotte', serif;
-	font-size: 50px;
-	color: #000;
-	margin: 0;
-	padding: 0 0 20px;
-	line-height: .75em;
-}
-}
 
 @media (max-width: 875px) {
-.item-wrapper {
-	flex-direction: column;
-}
-.item.one {
-	order: 2;
-}
-.item.two {
-	order: 1;
-}
 .link-wrapper {
 	padding-bottom: 0;
 	margin-bottom: -30px;
 }
 }
+.door-item-wrapper {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 0;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.door-item {
+	padding: 15px;
+}
+.door {
+	width: 493px;
+}
+.door-row {
+	background: #216d60;
+	color: #fff;
+	padding: 30px 0 40px;
+}
+.grass-row {
+	background: transparent url("grass.png") center top repeat-x;
+	height: 145px;
+	margin-top: -145px;
+	position: relative;
+	z-index: 100;
+}
+.hanklight {
+	font-family: 'HankLight', sans-serif;
+}
+.hankreg {
+	font-family: 'HankReg', sans-serif;
+}
+.hankbold {
+	font-family: 'HankBold', sans-serif;
+}
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 90px;
+}
+h3.hankbold {
+	font-size: 56px;
+	line-height: .8em;
+	margin: 8px 0 30px;
+}
+.btn-default {
+	background-color: #fff;
+	color: #216d60;
+}
+a.btn.btn-default {
+	color: #333;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.btn-default:active, .btn-default:hover, .btn-default:focus {
+	background-color: #CDDE58;
+	color: #000;
+}
+.btn-primary {
+	background-color: #216d60;
+}
+.btn-primary:active, .btn-primary:hover, .btn-p:focus {
+	background-color: #113831;
+}
 
-@media (max-width: 400px) {
-.deer {
-	max-width: 350px;
+@media (max-width: 1175px) {
+.door {
+	width: 400px;
+}
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 66px;
+}
+h3.hankbold {
+	font-size: 40px;
+	line-height: .8em;
+	margin: 8px 0 30px;
+}
+}
+
+@media (max-width: 920px) {
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 60px;
+}
+h3.hankbold {
+	font-size: 30px;
+	line-height: .8em;
+	margin: 8px 0 15px;
+}
+}
+
+@media (max-width: 860px) {
+.door-item-wrapper {
+	background: #799e4a url("opening-doors-small.jpg") top center no-repeat;
+	display: inherit;
+	padding: 455px 0 30px;
+}
+.door, .grass-row {
+	display: none;
+}
+.door-row {
+	background: #799e4a;
+	color: #fff;
+	padding: 0 0 10px;
+}
+}
+
+@media (max-width: 450px) {
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 48px;
 }
 }
 </style>
@@ -405,23 +454,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row page">
-    <div class="snow">
-      <div class="item-wrapper">
-        <div class="item one">
-          <div><img class="deer" src="deer.png" alt="Storybook Holiday: Reindeer Games"></div>
-        </div>
-        <div class="item two">
-          <h1 class="bella text-center">Oh Deer, the Holidays are Here!</h1>
-          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Storybook Holiday:<br>
-            Reindeer Games!</a> <a href="cgd/" class="link">Giving Opens<br>
-            Doors</a> <a href="reading-challenge/" class="link">Get Comfy:<br>
-            Reading Challenge</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1989780129" class="link">Home Cooked<br>
-            Tastes Good</a> </div>
-        </div>
+  <div class="row door-row">
+    <div class="door-item-wrapper">
+      <div class="door-item"><img class="door" src="opening-doors.jpg" alt="Opening Doors"></div>
+      <div class="door-item">
+        <h1 class="white text-center no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors</span></h1>
+        <h3 class="hankbold text-center white text-uppercase">For the Future</h3>
+        <div class="link-wrapper"> <a href="cgd/" class="link">Giving<br>
+          Is the Key</a> <a href="camp-dcl/" class="link">Discover<br>
+          Camp DCL</a> <a href="storybook-holiday/" class="link">A Storybook<br>
+          Holiday</a> </div>
       </div>
     </div>
   </div>
+  <div class="row grass-row"></div>
   <div class="amazon">Support the DCL Foundation <a class="text-underline white" href="donate/#everyday-giving">when shopping online</a> for the holidays. </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
