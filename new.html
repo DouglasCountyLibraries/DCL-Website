@@ -91,6 +91,25 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<!-- modal popup once per session, expires after 60 days --> 
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('camppop') == null) {
+                     $('#campModal').modal('show');
+                     $.cookie('camppop', '60');
+                 }
+             });
+</script>--> 
+
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#testmodal').modal('show');
+    });
+</script>
 <style>
 @font-face {
 	font-family: 'HankLight';
@@ -218,6 +237,45 @@ a.btn.btn-default {
 }
 .btn-primary:active, .btn-primary:hover, .btn-p:focus {
 	background-color: #113831;
+}
+.cgd-background {
+	background: #fff url("modal-background.jpg") bottom center no-repeat;
+	padding: 125px 25px 150px;
+	box-shadow: -2px 5px 30px 0px rgba(0, 0, 0, 0.6);
+	border: 20px solid #fff;
+	border-radius: 3px;
+}
+.rock-salt {
+	font-family: 'Rock Salt', cursive;
+	color: #444;
+	font-size: 30px;
+	line-height: 50px;
+	text-rendering: optimizeLegibility;
+}
+.rock-salt a {
+	color: #000;
+	text-decoration: underline;
+}
+.modal-dialog {
+	margin: 15vh auto;
+}
+.modal-backdrop {
+	background-color: #fff;
+}
+.modal-backdrop.in {
+	opacity: 0.7;
+}
+.modal .close {
+	color: #666;
+	margin: 35px 40px 0 0;
+	z-index: 1000;
+	position: relative;
+}
+
+@media (max-width: 675px) {
+.modal-dialog {
+	margin: 130px auto;
+}
 }
 
 @media (max-width: 1175px) {
@@ -469,6 +527,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row grass-row"></div>
   <div class="amazon">Support the DCL Foundation <a class="text-underline white" href="donate/#everyday-giving">when shopping online</a> for the holidays. </div>
+  <div class="modal fade" id="testmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog cgd-modal" role="document">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="text-center cgd-background">
+        <div class="rock-salt">Colorado Gives Day is December 7. Please help the DCL Foundation to keep opening doors.<br>
+          <a href="https://www.coloradogives.org/DouglasCountyLibrariesFoundation/overview" target="_blank">Schedule your donation today</a>!</div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
