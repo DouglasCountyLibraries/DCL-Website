@@ -148,7 +148,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	line-height: 25px;
 	margin: 0 auto;
 	max-width: 625px;
-	padding-bottom: 45px;
+	padding-top: 15px;
 }
 .link, .link:visited, .link:active {
 	font-family: 'Open Sans', sans-serif;
@@ -185,20 +185,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin: 0 auto;
 }
 .door-item {
-	padding: 15px;
-}
-.door {
-	width: 493px;
+	padding: 10px;
 }
 .door-row {
 	background: #594764;
 	color: #fff;
-	padding: 30px 0 40px;
+	padding-top: 30px;
 }
 .grass-row {
 	background: transparent url("ground.png") center top repeat-x;
-	height: 145px;
-	margin-top: -145px;
+	height: 150px;
+	margin-top: -100px;
 	position: relative;
 	z-index: 100;
 }
@@ -217,26 +214,7 @@ h1 > .hankbold, h1 > .hanklight {
 h3.hankbold {
 	font-size: 56px;
 	line-height: .8em;
-	margin: 8px 0 30px;
-}
-.btn-default {
-	background-color: #fff;
-	color: #216d60;
-}
-a.btn.btn-default {
-	color: #333;
-	text-transform: uppercase;
-	font-weight: 400;
-}
-.btn-default:active, .btn-default:hover, .btn-default:focus {
-	background-color: #CDDE58;
-	color: #000;
-}
-.btn-primary {
-	background-color: #216d60;
-}
-.btn-primary:active, .btn-primary:hover, .btn-p:focus {
-	background-color: #113831;
+margin-top: 8px;
 }
 .cgd-background {
 	background: #fff url("modal-background.jpg") bottom center no-repeat;
@@ -286,6 +264,47 @@ to {
 background-position: -5280px 0;
 }
 }
+@keyframes small-sprite {
+to {
+background-position: -3960px 0;
+}
+}
+
+@media (max-width: 992px) {
+.sprite {
+	height: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 369px;
+	background-image: url("small-sprite.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	animation: small-sprite 2s steps(11) infinite;
+}
+.door-row {
+	padding-top: 0;
+}
+    .link-wrapper {
+        padding-top: 0;
+    }
+.link, .link:visited, .link:active {
+	padding: 10px;
+}
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 60px;
+}
+h3.hankbold {
+	font-size: 30px;
+	line-height: .8em;
+
+}
+}
+    
+    @media (max-width: 840px) {
+        .door-item-wrapper {
+            flex-direction: column;
+        }
+}
 
 @media (max-width: 675px) {
 .modal-dialog {
@@ -294,49 +313,26 @@ background-position: -5280px 0;
 }
 
 @media (max-width: 1175px) {
-.door {
-	width: 400px;
-}
 h1 > .hankbold, h1 > .hanklight {
 	font-size: 66px;
 }
 h3.hankbold {
 	font-size: 40px;
 	line-height: .8em;
-	margin: 8px 0 30px;
+
 }
 }
 
 @media (max-width: 920px) {
-h1 > .hankbold, h1 > .hanklight {
-	font-size: 60px;
 }
-h3.hankbold {
-	font-size: 30px;
-	line-height: .8em;
-	margin: 8px 0 15px;
-}
-}
-
 @media (max-width: 860px) {
 .door-item-wrapper {
-	background: #799e4a url("opening-doors-small.jpg") top center no-repeat;
-	display: inherit;
-	padding: 455px 0 30px;
-}
-.door, .grass-row {
-	display: none;
 }
 .door-row {
-	background: #799e4a;
-	color: #fff;
-	padding: 0 0 10px;
 }
-}
-
 @media (max-width: 450px) {
 h1 > .hankbold, h1 > .hanklight {
-	font-size: 48px;
+font-size: 48px;
 }
 }
 </style>
