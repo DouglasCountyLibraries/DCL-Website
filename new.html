@@ -127,7 +127,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background: #be1e2d;
 }*/
 .amazon {
-	background: #497638;
+	background: #59501f;
 	color: #fff;
 	font-size: 18px;
 	padding: 12px 10px 13px;
@@ -191,12 +191,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	width: 493px;
 }
 .door-row {
-	background: #216d60;
+	background: #594764;
 	color: #fff;
 	padding: 30px 0 40px;
 }
 .grass-row {
-	background: transparent url("grass.png") center top repeat-x;
+	background: transparent url("ground.png") center top repeat-x;
 	height: 145px;
 	margin-top: -145px;
 	position: relative;
@@ -270,6 +270,21 @@ a.btn.btn-default {
 	margin: 35px 40px 0 0;
 	z-index: 1000;
 	position: relative;
+}
+.sprite {
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 480px;
+	background-image: url("large-sprite.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	animation: sprite 2s steps(11) infinite;
+}
+@keyframes sprite {
+to {
+background-position: -5280px 0;
+}
 }
 
 @media (max-width: 675px) {
@@ -514,7 +529,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row door-row">
     <div class="door-item-wrapper">
-      <div class="door-item"><img class="door" src="opening-doors.jpg" alt="Opening Doors"></div>
+      <div class="door-item">
+        <div class="sprite"></div>
+      </div>
       <div class="door-item">
         <h1 class="white text-center no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors</span></h1>
         <h3 class="hankbold text-center white text-uppercase">For the Future</h3>
