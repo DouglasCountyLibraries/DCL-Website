@@ -116,16 +116,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	src: url('shared-assets/web-fonts/HankRnd-Light.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Light.woff') format('woff');
 }
 @font-face {
-	font-family: 'HankReg';
-	src: url('shared-assets/web-fonts/HankRnd-Regular.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Regular.woff') format('woff');
-}
-@font-face {
 	font-family: 'HankBold';
 	src: url('shared-assets/web-fonts/HankRnd-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Bold.woff') format('woff');
 }
 /*#general-alert {
 	background: #be1e2d;
 }*/
+.hanklight {
+	font-family: 'HankLight', sans-serif;
+}
+.hankbold {
+	font-family: 'HankBold', sans-serif;
+}
 .amazon {
 	background: #59501f;
 	color: #fff;
@@ -169,13 +171,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 }
-
-@media (max-width: 875px) {
-.link-wrapper {
-	padding-bottom: 0;
-	margin-bottom: -30px;
-}
-}
 .door-item-wrapper {
 	display: flex;
 	justify-content: center;
@@ -199,22 +194,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	position: relative;
 	z-index: 100;
 }
-.hanklight {
-	font-family: 'HankLight', sans-serif;
-}
-.hankreg {
-	font-family: 'HankReg', sans-serif;
-}
-.hankbold {
-	font-family: 'HankBold', sans-serif;
-}
 h1 > .hankbold, h1 > .hanklight {
 	font-size: 90px;
 }
 h3.hankbold {
 	font-size: 56px;
 	line-height: .8em;
-margin-top: 8px;
+	margin-top: 8px;
 }
 .cgd-background {
 	background: #fff url("modal-background.jpg") bottom center no-repeat;
@@ -270,6 +256,16 @@ background-position: -3960px 0;
 }
 }
 
+@media (max-width: 1175px) {
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 66px;
+}
+h3.hankbold {
+	font-size: 40px;
+	line-height: .8em;
+}
+}
+
 @media (max-width: 992px) {
 .sprite {
 	height: 450px;
@@ -284,9 +280,10 @@ background-position: -3960px 0;
 .door-row {
 	padding-top: 0;
 }
-    .link-wrapper {
-        padding-top: 0;
-    }
+.link-wrapper {
+	padding-top: 0;
+	margin-bottom: 0;
+}
 .link, .link:visited, .link:active {
 	padding: 10px;
 }
@@ -296,14 +293,21 @@ h1 > .hankbold, h1 > .hanklight {
 h3.hankbold {
 	font-size: 30px;
 	line-height: .8em;
+}
+}
 
+@media (max-width: 840px) {
+.door-item-wrapper {
+	flex-direction: column;
 }
+.grass-row {
+	display: none;
 }
-    
-    @media (max-width: 840px) {
-        .door-item-wrapper {
-            flex-direction: column;
-        }
+.door-item.open {
+	background: transparent url("ground-small.png") center top no-repeat;
+	padding: 55px 0 40px;
+	margin-top: -75px;
+}
 }
 
 @media (max-width: 675px) {
@@ -312,27 +316,9 @@ h3.hankbold {
 }
 }
 
-@media (max-width: 1175px) {
-h1 > .hankbold, h1 > .hanklight {
-	font-size: 66px;
-}
-h3.hankbold {
-	font-size: 40px;
-	line-height: .8em;
-
-}
-}
-
-@media (max-width: 920px) {
-}
-@media (max-width: 860px) {
-.door-item-wrapper {
-}
-.door-row {
-}
 @media (max-width: 450px) {
 h1 > .hankbold, h1 > .hanklight {
-font-size: 48px;
+	font-size: 48px;
 }
 }
 </style>
@@ -528,7 +514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="door-item">
         <div class="sprite"></div>
       </div>
-      <div class="door-item">
+      <div class="door-item open">
         <h1 class="white text-center no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors</span></h1>
         <h3 class="hankbold text-center white text-uppercase">For the Future</h3>
         <div class="link-wrapper"> <a href="cgd/" class="link">Giving<br>
