@@ -90,27 +90,45 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<!-- modal popup once per session, expires after 60 days --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('cgdpop') == null) {
+                     $('#givesModal').modal('show');
+                     $.cookie('cgdpop', '60');
+                 }
+             });
+</script>
+
+<!--<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#testmodal').modal('show');
+    });
+</script>-->
 <style>
 @font-face {
-	font-family: 'BellaNotte';
-	src: url("shared-assets/web-fonts/BellaNotteRegular.woff2") format('woff2'), url("shared-assets/web-fonts/BellaNotteRegular.woff") format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+	font-family: 'HankLight';
+	src: url('shared-assets/web-fonts/HankRnd-Light.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Light.woff') format('woff');
 }
-h1.bella {
-	font-family: 'BellaNotte', serif;
-	font-size: 70px;
-	color: #000;
-	margin: 0;
-	padding: 0 0 20px;
-	line-height: .75em;
+@font-face {
+	font-family: 'HankBold';
+	src: url('shared-assets/web-fonts/HankRnd-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Bold.woff') format('woff');
 }
-#general-alert {
+/*#general-alert {
 	background: #be1e2d;
+}*/
+.hanklight {
+	font-family: 'HankLight', sans-serif;
+}
+.hankbold {
+	font-family: 'HankBold', sans-serif;
 }
 .amazon {
-	background: #67852d;
+	background: #59501f;
 	color: #fff;
 	font-size: 18px;
 	padding: 12px 10px 13px;
@@ -119,24 +137,9 @@ h1.bella {
 	margin-left: -15px;
 	margin-right: -15px;
 }
-.page {
-	background: linear-gradient(#b5e8f0 15%, #9ecad1 100%);
-}
-.snow {
-	background: transparent url("snow.png") bottom center repeat;
-	-webkit-animation: slide 8s linear infinite;
-	animation: slide 8s linear infinite;
-	margin: 0 15px;
-}
-.item-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 20px;
-}
 .link-wrapper {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
@@ -146,75 +149,175 @@ h1.bella {
 	line-height: 25px;
 	margin: 0 auto;
 	max-width: 625px;
-	padding-bottom: 45px;
+	padding-top: 15px;
 }
 .link, .link:visited, .link:active {
 	font-family: 'Open Sans', sans-serif;
 	width: 290px;
-	background: rgba(255,255,255,.7);
+	background: rgba(255,255,255,1);
 	color: #000;
 	margin: 10px;
 	padding: 15px;
-	outline: 5px dotted #be1e2d;
+	border-radius: 40px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 .link:hover, .link:focus {
-	background: #fff;
+	background: #CDDE58;
 	color: #000;
-	outline: 5px dotted #be1e2d;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 }
-@-webkit-keyframes slide {
-from {
-background-position: 0 -631px;
+.door-item-wrapper {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 0;
+	max-width: 1170px;
+	margin: 0 auto;
 }
-to {
-background-position: 0 0;
+.door-item {
+	padding: 10px;
 }
+.door-row {
+	background: #594764;
+	color: #fff;
+	padding-top: 30px;
 }
-@keyframes slide {
-from {
-background-position: 0 -631px;
+.grass-row {
+	background: transparent url("ground-alt.png") center top repeat-x;
+	height: 150px;
+	margin-top: -120px;
+	position: relative;
+	z-index: 100;
 }
-to {
-background-position: 0 0;
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 90px;
 }
+h3.hankbold {
+	font-size: 56px;
+	line-height: .8em;
+	margin-top: 8px;
 }
-
-@media (max-width: 1050px) {
-h1.bella {
-	font-family: 'BellaNotte', serif;
-	font-size: 50px;
+.cgd-background {
+	background: #fff url("modal-background.jpg") bottom center no-repeat;
+	padding: 125px 25px 150px;
+	box-shadow: -2px 5px 30px 0px rgba(0, 0, 0, 0.6);
+	border: 20px solid #fff;
+	border-radius: 3px;
+}
+.rock-salt {
+	font-family: 'Rock Salt', cursive;
+	color: #444;
+	font-size: 30px;
+	line-height: 50px;
+	text-rendering: optimizeLegibility;
+}
+.rock-salt a {
 	color: #000;
-	margin: 0;
-	padding: 0 0 20px;
-	line-height: .75em;
+	text-decoration: underline;
+}
+.modal-dialog {
+	margin: 15vh auto;
+}
+.modal-backdrop {
+	background-color: #fff;
+}
+.modal-backdrop.in {
+	opacity: 0.85;
+}
+.modal .close {
+	color: #666;
+	margin: 35px 40px 0 0;
+	z-index: 1000;
+	position: relative;
+}
+.sprite {
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 480px;
+	background-image: url("large-sprite.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	animation: sprite 2s steps(11) infinite;
+}
+@keyframes sprite {
+to {
+background-position: -5280px 0;
+}
+}
+@keyframes small-sprite {
+to {
+background-position: -3960px 0;
 }
 }
 
-@media (max-width: 875px) {
-.item-wrapper {
-	flex-direction: column;
+@media (max-width: 1175px) {
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 66px;
 }
-.item.one {
-	order: 2;
+h3.hankbold {
+	font-size: 40px;
+	line-height: .8em;
 }
-.item.two {
-	order: 1;
+}
+
+@media (max-width: 992px) {
+.sprite {
+	height: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 369px;
+	background-image: url("small-sprite.jpg");
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	animation: small-sprite 2s steps(11) infinite;
+}
+.door-row {
+	padding-top: 0;
 }
 .link-wrapper {
-	padding-bottom: 0;
-	margin-bottom: -30px;
+	padding-top: 0;
+	margin-bottom: 0;
+}
+.link, .link:visited, .link:active {
+	padding: 10px;
+}
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 60px;
+}
+h3.hankbold {
+	font-size: 30px;
+	line-height: .8em;
 }
 }
 
-@media (max-width: 400px) {
-.deer {
-	max-width: 350px;
+@media (max-width: 840px) {
+.door-item-wrapper {
+	flex-direction: column;
+}
+.grass-row {
+	display: none;
+}
+.door-item.open {
+	background: transparent url("ground-small.png") center top no-repeat;
+	padding: 55px 0 40px;
+	margin-top: -75px;
+}
+}
+
+@media (max-width: 675px) {
+.modal-dialog {
+	margin: 130px auto;
+}
+}
+
+@media (max-width: 450px) {
+h1 > .hankbold, h1 > .hanklight {
+	font-size: 48px;
 }
 }
 </style>
@@ -405,24 +508,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row page">
-    <div class="snow">
-      <div class="item-wrapper">
-        <div class="item one">
-          <div><img class="deer" src="deer.png" alt="Storybook Holiday: Reindeer Games"></div>
-        </div>
-        <div class="item two">
-          <h1 class="bella text-center">Oh Deer, the Holidays are Here!</h1>
-          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Storybook Holiday:<br>
-            Reindeer Games!</a> <a href="cgd/" class="link">Giving Opens<br>
-            Doors</a> <a href="reading-challenge/" class="link">Get Comfy:<br>
-            Reading Challenge</a> <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1989780129" class="link">Home Cooked<br>
-            Tastes Good</a> </div>
-        </div>
+  <div class="row door-row">
+    <div class="door-item-wrapper">
+      <div class="door-item">
+        <div class="sprite"></div>
+      </div>
+      <div class="door-item open">
+        <h1 class="white text-center no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors</span></h1>
+        <h3 class="hankbold text-center white text-uppercase">For the Future</h3>
+        <div class="link-wrapper"> 
+            <a href="cgd/" class="link">Giving<br>Is the Key</a> 
+            <a href="storybook-holiday/" class="link">A Storybook<br>Holiday</a> 
+            <a href="https://www.creativebug.com/lib/dcl" target="_blank" class="link">Create Warm<br>Holidays</a>
+          </div>
       </div>
     </div>
   </div>
+  <div class="row grass-row"></div>
   <div class="amazon">Support the DCL Foundation <a class="text-underline white" href="donate/#everyday-giving">when shopping online</a> for the holidays. </div>
+  <div class="modal fade" id="givesModal" tabindex="-1" role="dialog" aria-labelledby="givesModal">
+    <div class="modal-dialog cgd-modal" role="document">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="text-center cgd-background">
+        <div class="rock-salt">Colorado Gives Day is December 7. Please help the DCL Foundation to keep opening doors.<br>
+          <a href="https://www.coloradogives.org/DouglasCountyLibrariesFoundation/overview" target="_blank">Schedule your donation today</a>!</div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
