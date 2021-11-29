@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,6 +60,107 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .fa-check {
 	color: #D36A50;
+}
+/* Timeline Container */
+.timeline {
+	margin: 10px auto;
+	padding: 0 5px;
+}
+/* Card container */
+.card {
+	position: relative;
+	max-width: 100%;
+}
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+	padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+	padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+	content: "";
+	position: absolute;
+	width: 50%;
+	border: solid #d36a50;
+}
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+	left: 0px;
+	top: -5px;
+	bottom: -5px;
+	border-width: 5px 0 5px 5px;
+	border-radius: 50px 0 0 50px;
+}
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-width: 5px 5px 5px 0;
+	border-radius: 0 50px 50px 0;
+}
+/* Removing the border if it is the first card */
+.card:first-child::before {
+	border-top: 0;
+	border-top-left-radius: 0;
+	top: 30px;
+}
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+	border-bottom: 0;
+	border-bottom-left-radius: 0;
+	bottom: 30px;
+}
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+	border-bottom: 0;
+	border-bottom-right-radius: 0;
+	bottom: 30px;
+}
+/* Information about the timeline */
+.info {
+	display: flex;
+	flex-direction: column;
+	background: #f5f5f5;
+	border-radius: 3px;
+	padding: 30px;
+}
+/* Title of the card */
+.title {
+	color: #666;
+	position: relative;
+}
+/* Timeline dot  */
+.title::before {
+	content: "";
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 999px;
+	border: 5px solid #d36a50;
+}
+/* text right if the card is even  */
+.card:nth-child(even) > .info, .card:nth-child(even) > .info > .title {
+	text-align: right;
+}
+.card:nth-child(even) > .info {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+.card:nth-child(odd) > .info {
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+	left: -73px;
+}
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+	right: -72px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -320,6 +422,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="padding-bottom-15">In 2012, we conducted a large-scale community-wide survey seeking community input and feedback. Library users and non-users rated the library very high for value. In addition to what we already provide, they told us they wanted more meeting rooms, drive-up book drops, indoor/outdoor spaces, study rooms, creative common spaces, family spaces, and contemplative spaces for quiet reflection. We will use findings from this data, along with more recent data and input, to help us inform the design process and ensure that renovations are built upon community needs.</div>
         <h4>Finances & Funding</h4>
         <div class="padding-bottom-15">Through use of our capital reserve and strong stewardship of our resources, Douglas County Libraries hopes to build new libraries in our community without asking citizens for support through tax increases. </div>
+        
+        <!-- timeline begins
+          
+        <div class="timeline">
+          <div class="outer">
+            <div class="card">
+              <div class="info">
+                <h3 class="title no-margin-top">Heading goes here</h3>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="info">
+                <h3 class="title no-margin-top">Heading goes here</h3>
+                <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui. Integer ac lacus vitae neque pulvinar scelerisque.</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="info">
+                <h3 class="title no-margin-top">Heading goes here</h3>
+                <div>Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="info">
+                <h3 class="title no-margin-top">Heading goes here</h3>
+                <div>Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl.</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="info">
+                <h3 class="title no-margin-top">Heading goes here</h3>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+          timeline ends --> 
+        
       </div>
       <div class="col-md-6">
         <h4>Frequently Asked Questions</h4>
@@ -442,4 +584,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
