@@ -138,7 +138,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin-left: -15px;
 	margin-right: -15px;
 }
-
+.custom-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 .link-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -174,20 +177,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .item-wrapper {
 	display: flex;
-    flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
 .item {
 	padding: 10px;
 }
-    .item.one {
-        width: 550px;
-    }
-    .item.two {
-	width: 730px;
+.item.one {
 }
-
+.item.two {
+	width: 700px;
+}
 .door-row {
 	background: #6a2554;
 	color: #fff;
@@ -202,37 +202,45 @@ h3.hankbold {
 	margin: 25px 0 0;
 }
 
-    @media (max-width: 1280px){
-    .item.one {
-        width: 400px;
-    }
-    .item.two {
-
-}        
-    }
-
-@media (max-width: 992px) {
-.door-row {
-
-}
-.link-wrapper {
-}
-.link, .link:visited, .link:active {
-}
+@media (max-width: 1070px) {
 h1 > .hankbold, h1 > .hanklight {
+	font-size: 60px;
 }
 h3.hankbold {
+	font-size: 30px;
+}
+h1.hanklight {
+	font-size: 34px;
 }
 }
 
-@media (max-width: 840px) {
+@media (min-width: 826px) {
+.link-wrapper.two {
+	display: none;
+}
+}
+
+@media (max-width: 825px) {
 .item-wrapper {
-
+	flex-direction: column;
+}
+.item.one {
+	order: 2;
+	max-width: 475px;
+	padding-bottom: 40px;
+}
+.item.two {
+	order: 1;
+	width: inherit;
+}
+.link-wrapper.one {
+	display: none;
 }
 }
 
 @media (max-width: 450px) {
 h1 > .hankbold, h1 > .hanklight {
+	font-size: 50px;
 }
 }
 </style>
@@ -424,19 +432,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row door-row">
-    <div class="item-wrapper">
-      <div class="item one">
-        <div class=""><img class="img-responsive" src="key.jpg" alt="Colorado Gives Day Progress Meter"></div>
-      </div>
-      <div class="item two text-center">
-        <h1 class="hanklight white no-margin">Today is Colorado Gives Day!</h1>
-        <h3 class="hankbold white text-uppercase">You are the key to</h3>
-        <h1 class="white no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors...</span></h1>
-          
+    <div class="custom-container">
+      <div class="item-wrapper">
+        <div class="item one"> <img class="img-responsive" src="key.jpg" alt="Colorado Gives Day Progress Meter">
+          <div class="link-wrapper two"> <a href="https://www.creativebug.com/lib/dcl" target="_blank" class="link">Please Donate<br>
+            Today</a> </div>
+        </div>
+        <div class="item two text-center">
+          <h1 class="hanklight white no-margin">Today is Colorado Gives Day!</h1>
+          <h3 class="hankbold white text-uppercase">You are the key to</h3>
+          <h1 class="white no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors...</span></h1>
           <h4 class="hanklight white padding-top-15">$40,000 goal curabitur at est et risus vestibulum pharetra nulla sed orci risus, vel volutpat dui integer ac lacus vitae neque pulvinar scelerisque.</h4>
-          
-          
-        <div class="link-wrapper"> <a href="https://www.creativebug.com/lib/dcl" target="_blank" class="link">Please Donate<br>Today</a> </div>
+          <div class="link-wrapper one"> <a href="https://www.creativebug.com/lib/dcl" target="_blank" class="link">Please Donate<br>
+            Today</a> </div>
+        </div>
       </div>
     </div>
   </div>
