@@ -119,9 +119,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	max-width: 1200px;
 	margin: 0 auto;
 }
+.door-row {
+	background: #231225 url("background.jpg") top center repeat-x;
+	height: 800px;
+	color: #fff;
+}
+.item-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .link-wrapper {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
@@ -129,45 +138,36 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-size: 21px;
 	font-weight: 400;
 	line-height: 25px;
-	margin: 0 auto;
-	max-width: 625px;
-	padding-top: 15px;
+	margin-top: auto;
+	padding-bottom: 125px;
 }
 .link, .link:visited, .link:active {
 	font-family: 'Open Sans', sans-serif;
 	background: rgba(255,255,255,1);
 	color: #000;
-	margin: 10px 0;
-	padding: 20px 50px;
+	padding: 20px 0;
 	border-radius: 35px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	text-transform: uppercase;
 	text-decoration: none;
+	width: 300px;
+	margin: 0 10px;
+	display: block;
+	box-shadow: 0px -1px 20px rgba(0,0,0,.7);
 }
 .link:hover, .link:focus {
-	background: #f4d586;
+	background: #feca54;
 	color: #000;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
 }
-.item-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 .item {
+	display: flex;
+	margin-top: auto;
+	flex-direction: column;
 	padding: 10px;
-}
-.item.one {
-}
-.item.two {
-	width: 700px;
-}
-.door-row {
-	background: #6a2554;
-	color: #fff;
-	padding: 25px 0 20px;
+	height: 800px;
 }
 h1 > .hankbold, h1 > .hanklight {
 	font-size: 90px;
@@ -182,7 +182,17 @@ h2.hanklight {
 	margin-top: 20px;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 980px) {
+.link-wrapper {
+	flex-direction: column;
+	padding-bottom: 10px;
+}
+.link {
+	margin: 15px 0;
+}
+}
+
+@media (max-width: 625px) {
 h1 > .hankbold, h1 > .hanklight {
 	font-size: 60px;
 }
@@ -197,34 +207,9 @@ h2.hanklight {
 }
 }
 
-@media (min-width: 826px) {
-.link-wrapper.two {
-	display: none;
-}
-}
-
-@media (max-width: 825px) {
-.item-wrapper {
-	flex-direction: column;
-}
-.item.one {
-	order: 2;
-	max-width: 475px;
-	padding-bottom: 20px;
-}
-.item.two {
-	order: 1;
-	width: inherit;
-	padding-bottom: 25px;
-}
-.link-wrapper.one, h2.hanklight.one {
-	display: none;
-}
-}
-
 @media (max-width: 450px) {
 h1 > .hankbold, h1 > .hanklight {
-	font-size: 50px;
+	font-size: 54px;
 }
 }
 </style>
@@ -418,18 +403,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row door-row">
     <div class="custom-container">
       <div class="item-wrapper">
-        <div class="item one"> <img class="img-responsive" src="40K.jpg" alt="Colorado Gives Day Progress Meter">
-          <div class="link-wrapper two">
-            <h2 class="hanklight white two">Thank you for helping us reach our goal!</h2>
-            <a href="https://www.coloradogives.org/DouglasCountyLibrariesFoundation/overview" target="_blank" class="link">Please Donate</a> </div>
-        </div>
-        <div class="item two text-center">
-          <h1 class="hanklight white no-margin">Today is Colorado&nbsp;Gives&nbsp;Day</h1>
-          <h3 class="hankbold white text-uppercase opacity-7">You are the key to</h3>
-          <h1 class="white no-margin"><span class="hankbold">Opening</span><span class="hanklight">Doors</span></h1>
-          <h3 class="hankbold white text-uppercase opacity-7">For the Future</h3>
-          <h2 class="hanklight white no-margin one">Thank you for helping us reach our goal!</h2>
-          <div class="link-wrapper one"> <a href="https://www.coloradogives.org/DouglasCountyLibrariesFoundation/overview" target="_blank" class="link">Please Donate</a> </div>
+        <div class="item text-center">
+          <h1 class="white no-margin padding-top-15"><span class="hankbold">Opening</span><span class="hanklight">Doors</span></h1>
+          <h3 class="hankbold white text-uppercase">For the Future</h3>
+          <div class="link-wrapper"> <a href="donate/" target="_blank" class="link">Giving is the Key</a> <a href="https://www.hoopladigital.com/collection/7545" target="_blank" class="link">Best of Holiday Films</a><a href="https://www.creativebug.com/lib/dcl" target="_blank" class="link">Hand-made Holidays</a></div>
         </div>
       </div>
     </div>
