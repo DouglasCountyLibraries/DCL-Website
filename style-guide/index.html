@@ -56,12 +56,12 @@
 	justify-content: center;
 }
 .box-item-alt {
-	padding: 5px 30px 40px;
-	margin: 35px;
-	background: #fff;
-	width: 490px;
+	flex: 1;
+	padding: 30px 30px 35px;
+	margin: 5px 35px;
+	min-width: 490px;
+    border: 2px solid #eee;
 	border-radius: 3px;
-	border: 2px solid #ddd;
 }
 .icon-circle-gray-alt {
 	/* border: 2px solid #ddd; */
@@ -140,7 +140,7 @@ document.write(lastModified());
             <li> <a href="#containers">Containers</a></li>
             <li> <a href="#icons">Font Icons</a></li>
             <li> <a href="#colors">Colors</a></li>
-            <li> <a href="#alerts">Alerts</a></li>
+            <li> <a href="#alerts">Alerts & Callouts</a></li>
             <li> <a href="#blocks">Blocks</a></li>
           </ul>
         </div>
@@ -198,11 +198,11 @@ document.write(lastModified());
           <p>Nullam quis risus eget <a href="#typography">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
           <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-          <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
-          <div class="col-lg-5">
+          
+          <div class="col-lg-4 no-padding">
             <h4 class="text-muted">Links</h4>
-            <div class="col-lg-6">
-              <div style="background-color:#00758c;width:70px;height:70px;margin-bottom:5px;padding-top:23px;" class="white img-circle text-center">
+            <div class="col-lg-6 no-padding">
+              <div style="background-color:#00758c;width:70px;height:70px;margin-bottom:10px;padding-top:23px;" class="white img-circle text-center">
                 <div>link</div>
               </div>
               <div style="background-color:#004654;width:70px;height:70px;margin-bottom:5px;padding-top:23px;" class="white img-circle text-center">
@@ -212,20 +212,21 @@ document.write(lastModified());
                 <div>active</div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 no-padding">
               <h1><a href="#typography">H1</a></h1>
               <h1 class="roboto"><a href="#typography">H1</a></h1>
               <p><a href="#typography">paragraph</a></p>
             </div>
           </div>
-          <div class="col-lg-7">
+          <div class="col-lg-8 no-padding">
             <h4 class="text-muted">Emphasis and color classes</h4>
             <div class="col-lg-6">
               <p class="text-primary">text-primary</p>
               <p class="text-muted">text-muted</p>
             </div>
-            <div class="col-lg-6">
-              <p class="salmon">salmon</p>
+            <div class="col-lg-6 no-padding">
+              <p class="font-weight-400">font-weight-400</p>
+            <p class="font-weight-500">font-weight-500</p>
             </div>
           </div>
         </div>
@@ -236,7 +237,7 @@ document.write(lastModified());
     
     <!-- Containers
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="containers">
+    <div class="bs-docs-section margin-bottom-60" id="containers">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
@@ -245,40 +246,43 @@ document.write(lastModified());
         </div>
       </div>
         
-         <div class="row margin-bottom-30">
-        <div class="col-lg-12">
-      <div id="general-alert" style="">Alert&mdash;Curabitur at est et risus <a class="text-underline white" href="#">vestibulum pharetra</a>. Nulla sed orci risus, vel volutpat dui. </div>  
-           </div></div>
+             <div class="row padding-top-30 padding-bottom-60">
+        <div class="container box-wrapper">
+          <div class="box-item-alt">
+            
+            <h3 class="text-center no-margin-top font-weight-400">Heading</h3>
+            <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
+          </div>
+          <div class="box-item-alt">
+            
+            <h3 class="text-center no-margin-top font-weight-400">Heading</h3>
+            <div>
+
+Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
+          </div>
+        </div>
+      </div>        
         
         
-      <div class="row bg-gray-5 padding-bottom-40">
+      <div class="row bg-gray-5 padding-bottom-40 margin-bottom-60">
         <div class="container box-wrapper">
           <div class="box-item">
             <div class="icon-circle-gray"><i class="far fa-credit-card"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Get a Library Card</h3>
-            <div><a href="http://getacard.org/v2/index.html" target="_blank">Register here</a> to get a DCL library card, or to recover your <a href="http://getacard.org/v2/index.html#recoverBarcodeTab" target="_blank">library card number</a> or <a href="http://getacard.org/v2/index.html#recoverPasswordTab" target="_blank">PIN</a>. <a href="../library-perks/">See some of the perks</a> that come with your new card!</div>
+            <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
+            <div>Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci.</div>
           </div>
           <div class="box-item">
             <div class="icon-circle-gray"><i class="fas fa-search"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Request a Title</h3>
-            <div>Can't find what you're looking for in the catalog? Here are a <a href="../request-title/">few more options</a>.</div>
+            <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu. Integer pellentesque sem non turpis gravida mollis. Duis vel libero vel felis lacinia convallis in in justo. Phasellus est magna, porta id facilisis non, ultricies fringilla enim.</div>
           </div>
         </div>
       </div>
-      <div class="row bg-gray-5 padding-top-40 padding-bottom-40 margin-bottom-40">
-        <div class="box-wrapper-alt custom-container">
-          <div class="box-item-alt">
-            <div class="icon-circle-gray-alt"><i class="far fa-credit-card"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Get a Library Card</h3>
-            <div><a href="http://getacard.org/v2/index.html" target="_blank">Register here</a> to get a DCL library card, or to recover your <a href="http://getacard.org/v2/index.html#recoverBarcodeTab" target="_blank">library card number</a> or <a href="http://getacard.org/v2/index.html#recoverPasswordTab" target="_blank">PIN</a>. <a href="../library-perks/">See some of the perks</a> that come with your new card!</div>
-          </div>
-          <div class="box-item-alt">
-            <div class="icon-circle-gray-alt"><i class="fas fa-search"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Request a Title</h3>
-            <div>Can't find what you're looking for in the catalog? Here are a <a href="../request-title/">few more options</a>.</div>
-          </div>
-        </div>
-      </div>
+        
+        
+ 
+        
+
       <div class="row">
         <div class="col-lg-4">
           <h4 class="text-muted">Modals</h4>
@@ -385,11 +389,7 @@ document.write(lastModified());
         </div>
       </div>
         
-        <div class="row bg-teal text-center padding-top-30 padding-bottom-40">
-    <div class="container">
-        <h4 class="white no-margin-top">Heading</h4><div class="white">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius <a class="white text-underline" href="#">suscipit non vulputate</a> eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. <a class="white text-underline" href="#">Fusce a dui urna</a>, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
-    </div>
-  </div>
+
         
         
     </div>
@@ -653,47 +653,19 @@ document.write(lastModified());
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1>Alerts</h1>
+            <h1>Alert & Callouts</h1>
           </div>
         </div>
       </div>
-      <div class="row">
+ <div class="row margin-bottom-30">
         <div class="col-lg-12">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-success margin-bottom-15">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Success</span> - Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-info margin-bottom-15">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Info</span> - Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-warning margin-bottom-15">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Warning</span> - Nunc posuere, magna ut <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="bs-component">
-            <div class="alert alert-dismissible alert-danger">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <p><span class="text-uppercase">Danger</span> - Nunc posuere, magna ut auctor fermentum, elit velit venenatis er. Donec a luctus lorem <a href="#alerts" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="general-alert" style="">Alert! Curabitur at est et risus <a class="text-underline white" href="#">vestibulum pharetra</a>. Nulla sed orci risus, vel volutpat dui. </div>  
+           </div></div>
+              <div class="row bg-teal text-center padding-top-30 padding-bottom-40">
+    <div class="container">
+        <h4 class="white no-margin-top">Heading</h4><div class="white">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius <a class="white text-underline" href="#">suscipit non vulputate</a> eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. <a class="white text-underline" href="#">Fusce a dui urna</a>, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
     </div>
+  </div>
     
     <!-- Blocks
       ================================================== -->
