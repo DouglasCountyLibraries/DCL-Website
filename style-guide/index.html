@@ -202,10 +202,7 @@
 .flickity-prev-next-button {
 	display: none;
 }
-.carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
-}
-    .carousel-cell.testimonial {
+.carousel-cell.testimonial {
 	text-align: center;
 	width: 100%;
 }
@@ -216,6 +213,13 @@
 .flickity-viewport {
 	transition: height 0.6s;
 }
+.col-lg-6.flex-item {
+	padding: 35px 35px 60px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
 @media (max-width: 1200px) {
 .two-up-wrapper, .two-up-container {
 	flex-direction: column;
@@ -748,7 +752,7 @@ document.write(lastModified());
           </div>
         </div>
       </div>
-      <div class="row padding-bottom-60">
+      <div class="row">
         <div class="col-lg-4">
           <h4 class="text-muted">Modals</h4>
           <button type="button" class="btn btn-lg btn-primary text-uppercase margin-right-15" data-toggle="modal" data-target="#myModal">default</button>
@@ -816,52 +820,67 @@ document.write(lastModified());
           </div>
         </div>
       </div>
-        
-        
-        
-        
-    <div class="row">
-    <div class="container margin-lg-200 text-center padding-top-15 padding-bottom-15">
-      <h1 class="no-margin-bottom jumbo-text text-uppercase font-weight-400">Funding the Future</h1>
-      <h4 class="no-margin-top">Giving Now for Generations to Come</h4>
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
-        <div class="carousel-cell testimonial">
-          <div><img alt="Niki Weninger" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
-            <div class="padding-top-15">
-              <blockquote>"Some children came out of a classroom, and they were so full of joy! The library so inspired these kids! If we could capture that magic and take it into our workplace, or home, or community, how different would this world be?" <small>Niki Weninger</small></blockquote>
+      <div class="row">
+        <h4 class="text-muted">Content Carousels</h4>
+        <div class="col-lg-6 text-center padding-top-15 padding-bottom-100">
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
+            <div class="carousel-cell testimonial">
+              <div><img alt="" class="img-circle" src="https://source.unsplash.com/200x200/?grin" />
+                <div class="padding-top-15">
+                  <blockquote>"Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum." <small>Person One</small></blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell testimonial">
+              <div><img alt="" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
+                <div class="padding-top-15">
+                  <blockquote>"Vestibulum ac erat quis risus hendrerit vestibulum suspendisse ante turpis." <small>Person Two</small></blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell testimonial">
+              <div><img alt="" class="img-circle" src="https://source.unsplash.com/200x200/?happy" />
+                <div class="padding-top-15">
+                  <blockquote>"Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auct." <small>Person Three</small></blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-cell testimonial">
+              <div><img alt="" class="img-circle" src="https://source.unsplash.com/200x200/?laugh" />
+                <div class="padding-top-15">
+                  <blockquote>"Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac." <small>Person Four</small></blockquote>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="carousel-cell testimonial">
-          <div><img alt="Joe Henry" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
-            <div class="padding-top-15">
-              <blockquote>"A library is so important to the growth of our children, and to us, as individuals." <small>Joe Henry</small></blockquote>
+        <div class="col-lg-6 flex-item bg-teal text-center margin-bottom-100">
+          <h1 class="no-margin jumbo-text white text-uppercase font-weight-400">Heading</h1>
+          <h4 class="no-margin-top white">Subheading</h4>
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
+            <div class="carousel-cell testimonial">
+              <div class="">
+                <blockquote class="white">"Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum. Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl." <small class="white opacity-8">Person Five</small></blockquote>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="carousel-cell testimonial">
-          <div><img alt="Opp Slawson" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
-            <div class="padding-top-15">
-              <blockquote>"The library's literacy program helped me interact with people and, more importantly, gave me the opportunity to teach. When I came to this country, I didn't speak English. Someone took the time to teach me. That's how the library adds magic to my life." <small>Opp Slawson</small></blockquote>
+            <div class="carousel-cell testimonial">
+              <div class="">
+                <blockquote class="white">"Vestibulum ac erat quis risus hendrerit vestibulum suspendisse ante turpis. Praesent consequat eros ut arcu commodo sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas." <small class="white opacity-8">Person Six</small></blockquote>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="carousel-cell testimonial">
-          <div><img alt="Suresh Damle" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
-            <div class="padding-top-15">
-              <blockquote>"People, whether they are young or old, can all get involved in libraries. The library is not something that's only limited to certain age groups." <small>Suresh Damle</small></blockquote>
+            <div class="carousel-cell testimonial">
+              <div class="">
+                <blockquote class="white">"Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auct." <small class="white opacity-8">Person Seven</small></blockquote>
+              </div>
+            </div>
+            <div class="carousel-cell testimonial">
+              <div class="">
+                <blockquote class="white">"Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac. Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl." <small class="white opacity-8">Person Eight</small></blockquote>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>     
-        
-        
-        
-        
-        
-        
     </div>
     
     <!-- Blocks
@@ -947,7 +966,6 @@ document.write(lastModified());
     </div>
   </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script>
 </body>
 </html>
