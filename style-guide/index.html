@@ -44,10 +44,39 @@
 	padding-left: 15px;
 	padding-right: 15px;
 }
-.style-nav a {
+.nav.nav-pills {
+	display: inline-block;
+}
+.nav.nav-pills > li > a {
+	font-size: 20px;
+}
+.page-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	text-transform: uppercase;
-	color: #999;
+}
+.page-nav-item a {
+	color: #000;
 	font-weight: 400;
+	border: 2px solid #eee;
+	padding: 10px 0;
+	display: inline-block;
+	width: 275px;
+	white-space: nowrap;
+	background: #f5f5f5;
+	text-align: center;
+	margin: 5px;
+}
+.page-nav-item a:hover, .page-nav-item a:focus {
+	color: #000;
+	background: #fff;
+	border: 2px solid #ddd;
+	text-decoration: none;
+}
+.pagenav-icon {
+	margin-right: 8px;
+	color: #4f878c;
 }
 .box-wrapper-alt {
 	display: flex;
@@ -176,34 +205,37 @@
 </head>
 <body>
 <div class="container-fluid">
-  <div class="container margin-bottom-100">
-    <div class="margin-top-100 margin-bottom-80">
-      <div class="row">
-        <div class="col-md-4">
-          <h1 class="text-muted font-weight-400 margin-bottom-5">DCL Style Guide</h1>
-          <div class="style-nav text-muted"><a href="animations/">Animations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="layouts/">Layouts</a></div>
-          <h4 class="roboto text-muted"> 
-            <script>
+  <div class="container margin-bottom-30">
+    <div class="margin-top-30 margin-bottom-60">
+      <div class="row text-center">
+        <h1 class="jumbo-text font-weight-400 text-uppercase">DCL Style Guide</h1>
+        <div class="row">
+          <div class="page-nav padding-bottom-15">
+            <div class="page-nav-item"><a href="animations/"><i class="pagenav-icon fas fa-frog"></i>Animations</a></div>
+            <div class="page-nav-item"><a href="layouts/"><i class="pagenav-icon fas fa-align-right"></i>Layouts</a></div>
+          </div>
+        </div>
+        <h4 class="roboto no-margin-top margin-lg-150 padding-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu.<br>
+          <script>
 function lastModified() {
     var modiDate = new Date(document.lastModified);
     var showAs = (modiDate.getMonth() + 1) + "/" + modiDate.getDate() + "/" + modiDate.getFullYear();
     return showAs
 }
-document.write("Updated ")
+document.write("Last updated—")
 document.write(lastModified());
 </script> 
-          </h4>
-        </div>
-        <div class="col-md-8 margin-top-60">
-          <ul class="nav nav-pills">
-            <li> <a href="#typography">Typography</a></li>
-            <li> <a href="#colors">Colors</a></li>
-            <li> <a href="#containers">Containers</a></li>
-            <li> <a href="#alerts">Alerts & Sections</a></li>
-            <li> <a href="#icons">Font Icons</a></li>
-            <li> <a href="#utilities">Utilities</a></li>
-          </ul>
-        </div>
+        </h4>
+      </div>
+      <div class="row border-top text-center">
+        <ul class="nav nav-pills">
+          <li> <a href="#typography">Typography</a></li>
+          <li> <a href="#colors">Colors</a></li>
+          <li> <a href="#containers">Containers</a></li>
+          <li> <a href="#alerts">Alerts & Sections</a></li>
+          <li> <a href="#icons">Font Icons</a></li>
+          <li> <a href="#utilities">Utilities</a></li>
+        </ul>
       </div>
     </div>
     
