@@ -25,7 +25,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css" integrity="sha256-qQHUQX+gGGYfpC7Zdni08sr+h0ymXr0avmIASucY4FM=" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?51921">
+<link type="text/css" rel="stylesheet" href="../shared-assets/css/dcl.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
 <!--[if lt IE 9]>
@@ -34,8 +34,9 @@
     <![endif]--> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?31621"></script>
+<script src="../shared-assets/js/dcl.js"></script>
 <meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .custom-container {
 	max-width: 1500px;
@@ -191,6 +192,18 @@
 }
 .two-up-item.two {
 	padding: 15px;
+}
+.flickity-page-dots .dot {
+	background-color: #fff;
+}
+.flickity-page-dots {
+	bottom: 15px;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+.carousel-cell {
+	border-right: 1px solid rgba(255,255,255,.6);
 }
 
 @media (max-width: 1200px) {
@@ -706,46 +719,9 @@ document.write(lastModified());
       <div class="row">
         <div class="col-lg-4">
           <h4 class="text-muted">Modals</h4>
-          <!-- Button trigger modal -->
           <button type="button" class="btn btn-lg btn-primary text-uppercase margin-right-15" data-toggle="modal" data-target="#myModal">default</button>
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title text-center" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-              </div>
-            </div>
-          </div>
-          <!-- Large modal -->
           <button type="button" class="btn btn-lg btn-primary text-uppercase margin-right-15" data-toggle="modal" data-target=".bs-example-modal-lg">large </button>
-          <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title text-center" id="myLargeModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-              </div>
-            </div>
-          </div>
-          <!-- Small modal -->
           <button type="button" class="btn btn-lg btn-primary text-uppercase margin-right-15" data-toggle="modal" data-target=".bs-example-modal-sm">small </button>
-          <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title text-center" id="mySmallModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="col-lg-4">
           <h4 class="text-muted">Accordian</h4>
@@ -809,6 +785,27 @@ document.write(lastModified());
         </div>
       </div>
     </div>
+    <div class="row no-margin">
+      <div class="no-padding">
+        <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+          <div class="carousel-cell"><img src="../storybook-holiday/one.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/two.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/three.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/four.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/five.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/six.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/seven.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/eight.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/nine.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/ten.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/eleven.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/twelve.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/thirteen.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/fourteen.jpg" alt=""></div>
+          <div class="carousel-cell"><img src="../storybook-holiday/fifteen.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
     
     <!-- Blocks
       ================================================== 
@@ -856,5 +853,51 @@ document.write(lastModified());
     </div>
   </div>
 </div>
+<!-- Defalut modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Large modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myLargeModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
+    </div>
+  </div>
+</div>
+<!-- Small modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="mySmallModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script>
 </body>
 </html>
