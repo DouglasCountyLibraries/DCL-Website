@@ -60,7 +60,7 @@
 	flex: 1;
 	flex-direction: column;
 	padding: 30px 30px 35px;
-	margin: 5px 35px;
+	margin: 35px;
 	min-width: 490px;
 	border: 2px solid #eee;
 	border-radius: 3px;
@@ -150,6 +150,26 @@
 	margin: 0 auto;
 	text-align: center;
 	width: 100px;
+}
+.two-up-container {
+	display: flex;
+}
+.two-up-wrapper {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+}
+.two-up-item.two {
+	padding: 15px;
+}
+
+@media (max-width: 1200px) {
+.two-up-wrapper, .two-up-container {
+	flex-direction: column;
+}
+.two-up-item h3 {
+	text-align: center;
+}
 }
 </style>
 </head>
@@ -316,6 +336,28 @@ document.write(lastModified());
             <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
             <div> Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero.</div>
             <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Get Started</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row padding-bottom-60">
+        <div class="container no-padding two-up-container">
+          <div class="two-up-wrapper">
+            <div class="two-up-item one">
+              <div class="icon-circle-teal"><i class="fas fa-balance-scale"></i></div>
+            </div>
+            <div class="two-up-item two">
+              <h3 class="no-margin-top font-weight-400">Heading</h3>
+              <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</div>
+            </div>
+          </div>
+          <div class="two-up-wrapper">
+            <div class="two-up-item one">
+              <div class="icon-circle-teal"><i class="fas fa-balance-scale"></i></div>
+            </div>
+            <div class="two-up-item two">
+              <h3 class="no-margin-top font-weight-400">Heading</h3>
+              <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</div>
+            </div>
           </div>
         </div>
       </div>
