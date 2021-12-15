@@ -205,7 +205,17 @@
 .carousel-cell {
 	border-right: 1px solid rgba(255,255,255,.6);
 }
-
+    .carousel-cell.testimonial {
+	text-align: center;
+	width: 100%;
+}
+.carousel-cell.testimonial:before {
+	display: block;
+	text-align: center;
+}
+.flickity-viewport {
+	transition: height 0.6s;
+}
 @media (max-width: 1200px) {
 .two-up-wrapper, .two-up-container {
 	flex-direction: column;
@@ -806,6 +816,52 @@ document.write(lastModified());
           </div>
         </div>
       </div>
+        
+        
+        
+        
+    <div class="row">
+    <div class="container margin-lg-200 text-center padding-top-15 padding-bottom-15">
+      <h1 class="no-margin-bottom jumbo-text text-uppercase font-weight-400">Funding the Future</h1>
+      <h4 class="no-margin-top">Giving Now for Generations to Come</h4>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
+        <div class="carousel-cell testimonial">
+          <div><img alt="Niki Weninger" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
+            <div class="padding-top-15">
+              <blockquote>"Some children came out of a classroom, and they were so full of joy! The library so inspired these kids! If we could capture that magic and take it into our workplace, or home, or community, how different would this world be?" <small>Niki Weninger</small></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell testimonial">
+          <div><img alt="Joe Henry" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
+            <div class="padding-top-15">
+              <blockquote>"A library is so important to the growth of our children, and to us, as individuals." <small>Joe Henry</small></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell testimonial">
+          <div><img alt="Opp Slawson" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
+            <div class="padding-top-15">
+              <blockquote>"The library's literacy program helped me interact with people and, more importantly, gave me the opportunity to teach. When I came to this country, I didn't speak English. Someone took the time to teach me. That's how the library adds magic to my life." <small>Opp Slawson</small></blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell testimonial">
+          <div><img alt="Suresh Damle" class="img-circle" src="https://source.unsplash.com/200x200/?smile" />
+            <div class="padding-top-15">
+              <blockquote>"People, whether they are young or old, can all get involved in libraries. The library is not something that's only limited to certain age groups." <small>Suresh Damle</small></blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>     
+        
+        
+        
+        
+        
+        
     </div>
     
     <!-- Blocks
@@ -892,13 +948,6 @@ document.write(lastModified());
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script>
+
 </body>
 </html>
