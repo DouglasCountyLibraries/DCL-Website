@@ -156,6 +156,7 @@
 }
 .two-up-wrapper {
 	display: flex;
+	flex: 1;
 	align-items: center;
 	padding: 15px;
 }
@@ -167,7 +168,7 @@
 .two-up-wrapper, .two-up-container {
 	flex-direction: column;
 }
-.two-up-item h3 {
+.two-up-item h3, .align-two-up {
 	text-align: center;
 }
 }
@@ -196,10 +197,10 @@ document.write(lastModified());
         <div class="col-md-8 margin-top-60">
           <ul class="nav nav-pills">
             <li> <a href="#typography">Typography</a></li>
-            <li> <a href="#containers">Containers</a></li>
-            <li> <a href="#icons">Font Icons</a></li>
             <li> <a href="#colors">Colors</a></li>
-            <li> <a href="#alerts">Alerts & Callouts</a></li>
+            <li> <a href="#containers">Containers</a></li>
+            <li> <a href="#alerts">Alerts & Sections</a></li>
+            <li> <a href="#icons">Font Icons</a></li>
             <li> <a href="#utilities">Utilities</a></li>
           </ul>
         </div>
@@ -208,7 +209,7 @@ document.write(lastModified());
     
     <!-- Typography
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="typography">
+    <div class="margin-bottom-160" id="typography">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
@@ -219,7 +220,7 @@ document.write(lastModified());
       <!-- Headings -->
       <div class="row">
         <div class="col-lg-3">
-          <div class="bs-component">
+          <div class="">
             <h4 class="text-muted">Ubuntu (default)</h4>
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
@@ -231,7 +232,7 @@ document.write(lastModified());
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="bs-component">
+          <div class="">
             <h4 class="text-muted">Roboto Slab (roboto class)</h4>
             <h1 class="roboto">Heading 1</h1>
             <h2 class="roboto">Heading 2</h2>
@@ -282,13 +283,240 @@ document.write(lastModified());
           </div>
         </div>
       </div>
-      <!-- Blockquotes --> 
-      
+    </div>
+    
+    <!-- Colors
+      ================================================== -->
+    <div class="margin-bottom-100" id="colors">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1>Colors</h1>
+          </div>
+        </div>
+        <div class=""> 
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li role="presentation"><a class="tab" href="#tab-one" aria-controls="tab" role="tab" data-toggle="tab">
+              <h5 class="text-uppercase">Current</h5>
+              </a></li>
+            <li role="presentation" class="active"><a class="tab" href="#tab-two" aria-controls="tab" role="tab" data-toggle="tab">
+              <h5 class="text-uppercase">Updated</h5>
+              </a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in" id="tab-one">
+              <div class="no-gutter">
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-white padding-30 text-center">
+                    <div>bg-white</div>
+                    #ffffff </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-5 padding-30 text-center">
+                    <div>bg-gray-5</div>
+                    #f5f5f5 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-10 padding-30 text-center">
+                    <div>bg-gray-10</div>
+                    #efeeed </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-20 padding-30 text-center">
+                    <div>bg-gray-20</div>
+                    #e6e4e2 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-30 padding-30 text-center">
+                    <div>bg-gray-30</div>
+                    #cccac8 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-40 padding-30 text-center">
+                    <div>bg-gray-40</div>
+                    #bfbdbb </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-50 padding-30 text-center">
+                    <div>bg-gray-50</div>
+                    #b3b1af </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-gray-80 padding-30 text-center">
+                    <div class="white">bg-gray-80</div>
+                    #807e7d </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-gray-90 padding-30 text-center">
+                    <div class="white">bg-gray-90</div>
+                    #4d4c4b </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-gray-95 padding-30 text-center">
+                    <div class="white">bg-gray-95</div>
+                    #333231 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-black padding-30 text-center">
+                    <div class="white">bg-black</div>
+                    #000000 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-salmon padding-30 text-center">
+                    <div class="white">bg-salmon</div>
+                    #d36a50 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-pink-salmon padding-30 text-center">
+                    <div class="">bg-pink-salmon</div>
+                    #ff9966 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-dead-salmon padding-30 text-center">
+                    <div class="">bg-dead-salmon</div>
+                    #e29f81 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-wheat padding-30 text-center">
+                    <div class="white">bg-wheat</div>
+                    #f5c875 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-light-wheat padding-30 text-center">
+                    <div class="">bg-light-wheat</div>
+                    #f9d782 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-almond padding-30 text-center">
+                    <div class="">bg-almond</div>
+                    #F4E1B8 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-moss padding-30 text-center">
+                    <div class="white">bg-moss</div>
+                    #90ad63 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-lichen padding-30 text-center">
+                    <div class="">bg-lichen</div>
+                    #a7ba86 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-teal padding-30 text-center">
+                    <div class="white">bg-teal</div>
+                    #4f878c </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-light-teal padding-30 text-center">
+                    <div class="white">bg-light-teal</div>
+                    #669999 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-lavender padding-30 text-center">
+                    <div class="white">bg-lavender</div>
+                    #65587b </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-gray-lavender padding-30 text-center">
+                    <div class="white">bg-gray-lavender</div>
+                    #666072 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-dead-lavender padding-30 text-center">
+                    <div class="white">bg-dead-lavender</div>
+                    #7f788e </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-loquacious padding-30 text-center">
+                    <div class="white">bg-loquacious</div>
+                    #B0852E </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-dead-loquacious padding-30 text-center">
+                    <div class="white">bg-dead-loquacious</div>
+                    #cca869 </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="tab-two">
+              <div class="no-gutter">
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-white padding-30 text-center">
+                    <div>bg-white</div>
+                    #ffffff </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-5 padding-30 text-center">
+                    <div>bg-gray-5</div>
+                    #f5f5f5 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-10 padding-30 text-center">
+                    <div>bg-gray-10</div>
+                    #efeeed </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-20 padding-30 text-center">
+                    <div>bg-gray-20</div>
+                    #e6e4e2 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-30 padding-30 text-center">
+                    <div>bg-gray-30</div>
+                    #cccac8 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-40 padding-30 text-center">
+                    <div>bg-gray-40</div>
+                    #bfbdbb </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class=" bg-gray-50 padding-30 text-center">
+                    <div>bg-gray-50</div>
+                    #b3b1af </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-gray-80 padding-30 text-center">
+                    <div class="white">bg-gray-80</div>
+                    #807e7d </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-gray-90 padding-30 text-center">
+                    <div class="white">bg-gray-90</div>
+                    #4d4c4b </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-black padding-30 text-center">
+                    <div class="white">bg-black</div>
+                    #000000 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-salmon padding-30 text-center">
+                    <div class="white">bg-salmon</div>
+                    #d36a50 </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-teal padding-30 text-center">
+                    <div class="white">bg-teal</div>
+                    #4f878c </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                  <div class="white  bg-lavender padding-30 text-center">
+                    <div class="white">bg-lavender</div>
+                    #65587b </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     
     <!-- Containers
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-60" id="containers">
+    <div class="margin-bottom-60" id="containers">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
@@ -343,7 +571,7 @@ document.write(lastModified());
         <div class="container no-padding two-up-container">
           <div class="two-up-wrapper">
             <div class="two-up-item one">
-              <div class="icon-circle-teal"><i class="fas fa-balance-scale"></i></div>
+              <div class="icon-circle-teal"><i class="fas fa-pepper-hot"></i></div>
             </div>
             <div class="two-up-item two">
               <h3 class="no-margin-top font-weight-400">Heading</h3>
@@ -352,277 +580,25 @@ document.write(lastModified());
           </div>
           <div class="two-up-wrapper">
             <div class="two-up-item one">
-              <div class="icon-circle-teal"><i class="fas fa-balance-scale"></i></div>
+              <div class="icon-circle-teal"><i class="fas fa-hiking"></i></div>
             </div>
             <div class="two-up-item two">
               <h3 class="no-margin-top font-weight-400">Heading</h3>
-              <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</div>
+              <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
+              <div class="align-two-up"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Get Started</a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
     
-    <!-- Background color classes
+    <!-- Alerts & Sections
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-100" id="colors">
+    <div class="margin-bottom-160" id="alerts">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1>Background Color Classes</h1>
-          </div>
-        </div>
-        <div class="bs-component"> 
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs nav-justified" role="tablist">
-            <li role="presentation"><a class="tab" href="#tab-one" aria-controls="tab" role="tab" data-toggle="tab">
-              <h5 class="text-uppercase">Current</h5>
-              </a></li>
-            <li role="presentation" class="active"><a class="tab" href="#tab-two" aria-controls="tab" role="tab" data-toggle="tab">
-              <h5 class="text-uppercase">Updated</h5>
-              </a></li>
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in" id="tab-one">
-              <div class="no-gutter">
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-white padding-30 text-center">
-                    <div>bg-white</div>
-                    #ffffff </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-5 padding-30 text-center">
-                    <div>bg-gray-5</div>
-                    #f5f5f5 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-10 padding-30 text-center">
-                    <div>bg-gray-10</div>
-                    #efeeed </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-20 padding-30 text-center">
-                    <div>bg-gray-20</div>
-                    #e6e4e2 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-30 padding-30 text-center">
-                    <div>bg-gray-30</div>
-                    #cccac8 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-40 padding-30 text-center">
-                    <div>bg-gray-40</div>
-                    #bfbdbb </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-50 padding-30 text-center">
-                    <div>bg-gray-50</div>
-                    #b3b1af </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-gray-80 padding-30 text-center">
-                    <div class="white">bg-gray-80</div>
-                    #807e7d </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-gray-90 padding-30 text-center">
-                    <div class="white">bg-gray-90</div>
-                    #4d4c4b </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-gray-95 padding-30 text-center">
-                    <div class="white">bg-gray-95</div>
-                    #333231 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-black padding-30 text-center">
-                    <div class="white">bg-black</div>
-                    #000000 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-salmon padding-30 text-center">
-                    <div class="white">bg-salmon</div>
-                    #d36a50 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-pink-salmon padding-30 text-center">
-                    <div class="">bg-pink-salmon</div>
-                    #ff9966 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-dead-salmon padding-30 text-center">
-                    <div class="">bg-dead-salmon</div>
-                    #e29f81 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-wheat padding-30 text-center">
-                    <div class="white">bg-wheat</div>
-                    #f5c875 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-light-wheat padding-30 text-center">
-                    <div class="">bg-light-wheat</div>
-                    #f9d782 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-almond padding-30 text-center">
-                    <div class="">bg-almond</div>
-                    #F4E1B8 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-moss padding-30 text-center">
-                    <div class="white">bg-moss</div>
-                    #90ad63 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-lichen padding-30 text-center">
-                    <div class="">bg-lichen</div>
-                    #a7ba86 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-teal padding-30 text-center">
-                    <div class="white">bg-teal</div>
-                    #4f878c </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-light-teal padding-30 text-center">
-                    <div class="white">bg-light-teal</div>
-                    #669999 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-lavender padding-30 text-center">
-                    <div class="white">bg-lavender</div>
-                    #65587b </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-gray-lavender padding-30 text-center">
-                    <div class="white">bg-gray-lavender</div>
-                    #666072 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-dead-lavender padding-30 text-center">
-                    <div class="white">bg-dead-lavender</div>
-                    #7f788e </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-loquacious padding-30 text-center">
-                    <div class="white">bg-loquacious</div>
-                    #B0852E </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-dead-loquacious padding-30 text-center">
-                    <div class="white">bg-dead-loquacious</div>
-                    #cca869 </div>
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in active" id="tab-two">
-              <div class="no-gutter">
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-white padding-30 text-center">
-                    <div>bg-white</div>
-                    #ffffff </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-5 padding-30 text-center">
-                    <div>bg-gray-5</div>
-                    #f5f5f5 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-10 padding-30 text-center">
-                    <div>bg-gray-10</div>
-                    #efeeed </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-20 padding-30 text-center">
-                    <div>bg-gray-20</div>
-                    #e6e4e2 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-30 padding-30 text-center">
-                    <div>bg-gray-30</div>
-                    #cccac8 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-40 padding-30 text-center">
-                    <div>bg-gray-40</div>
-                    #bfbdbb </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="bs-component bg-gray-50 padding-30 text-center">
-                    <div>bg-gray-50</div>
-                    #b3b1af </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-gray-80 padding-30 text-center">
-                    <div class="white">bg-gray-80</div>
-                    #807e7d </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-gray-90 padding-30 text-center">
-                    <div class="white">bg-gray-90</div>
-                    #4d4c4b </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-black padding-30 text-center">
-                    <div class="white">bg-black</div>
-                    #000000 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-salmon padding-30 text-center">
-                    <div class="white">bg-salmon</div>
-                    #d36a50 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-teal padding-30 text-center">
-                    <div class="white">bg-teal</div>
-                    #4f878c </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white bs-component bg-lavender padding-30 text-center">
-                    <div class="white">bg-lavender</div>
-                    #65587b </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Font Icons
-      ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="icons">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Font Icons</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h4 class="text-muted">Font Awesome Icons</h4>
-          <img class="img-responsive" src="fontawesome.jpg" alt="">
-          <div class="text-center"><a class="btn btn-lg btn-primary margin-top-15" href="https://fontawesome.com/icons?d=gallery&p=2&m=free" target="_blank">library</a> </div>
-        </div>
-        <div class="col-md-6">
-          <h4 class="text-muted">Material Design Icons</h4>
-          <img class="img-responsive" src="material-icons.jpg" alt="">
-          <div class="text-center"><a class="btn btn-lg btn-primary margin-top-15" href="https://fonts.google.com/icons?selected=Material+Icons" target="_blank">library</a> </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Alerts
-      ================================================== -->
-    <div class="bs-docs-section margin-bottom-160" id="alerts">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Alerts & Callouts</h1>
+            <h1>Alerts & Sections</h1>
           </div>
         </div>
       </div>
@@ -661,9 +637,33 @@ document.write(lastModified());
       </div>
     </div>
     
+    <!-- Font Icons
+      ================================================== -->
+    <div class="margin-bottom-160" id="icons">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1>Font Icons</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="text-muted">Font Awesome Icons</h4>
+          <img class="img-responsive" src="fontawesome.jpg" alt="">
+          <div class="text-center"><a class="btn btn-lg btn-primary margin-top-15" href="https://fontawesome.com/icons?d=gallery&p=2&m=free" target="_blank">library</a> </div>
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-muted">Material Design Icons</h4>
+          <img class="img-responsive" src="material-icons.jpg" alt="">
+          <div class="text-center"><a class="btn btn-lg btn-primary margin-top-15" href="https://fonts.google.com/icons?selected=Material+Icons" target="_blank">library</a> </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- Utilities
       ================================================== -->
-    <div class="bs-docs-section margin-bottom-60" id="utilities">
+    <div class="margin-bottom-60" id="utilities">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
@@ -748,7 +748,7 @@ document.write(lastModified());
         </div>
         <div class="col-md-4">
           <h4 class="text-muted text-center">Tabs</h4>
-          <div class="bs-component"> 
+          <div class=""> 
             <!-- Nav tabs -->
             <ul class="nav nav-tabs nav-justified" role="tablist">
               <li role="presentation" class="active"><a class="tab" href="#one" aria-controls="one" role="tab" data-toggle="tab">
@@ -780,7 +780,7 @@ document.write(lastModified());
     
     <!-- Blocks
       ================================================== 
-    <div class="bs-docs-section margin-bottom-160">
+    <div class="margin-bottom-160">
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
@@ -788,7 +788,7 @@ document.write(lastModified());
           </div>
         </div>
       </div>
-      <div class="row bg-gray-10 margin-bottom-40 bs-component">
+      <div class="row bg-gray-10 margin-bottom-40 ">
         <div class="col-md-4 padding-top-30 padding-bottom-40 margin-top-40">
           <div class="bg-gray-80 shadow-low hover-shadow text-center">
             <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15">
