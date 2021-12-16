@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,7 +107,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- Push Notifications End - Do Not Remove -->
 <style>
 .custom-container {
-	max-width: 1775px;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 .btn.btn-primary.btn-custom.btn-lg {
 	background: linear-gradient(#fff, #ACAEAF);
@@ -173,10 +175,42 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	min-width: 100%;
 	padding: 15px;
 }
+.cj-row {
+	color: #fff;
+	background: #243243;
+}
+.cj-wrapper {
+	display: flex;
+	align-items: center;
+	background: #243243;
+	justify-content: center;
+}
+.cj-item.two {
+	padding: 30px 30px 40px;
+	width: 525px;
+}
 
-@media (max-width: 1750px) {
-.custom-container {
-	max-width: 1300px;
+@media (max-width: 1700px) {
+.cj-item.three {
+	display: none;
+}
+}
+
+@media (max-width: 1200px) {
+.cj-wrapper {
+	flex-direction: column;
+	background: #fff;
+}
+.cj-item.two {
+	background: #243243;
+	width: 891px;
+	text-align: center;
+}
+}
+
+@media (max-width: 891px) {
+.cj-item.two {
+	width: 100%;
 }
 }
 
@@ -186,6 +220,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .author-item h4 {
 	text-align: center;
+}
+.cj-item.two {
+	padding: 30px 10px 40px;
 }
 }
 
@@ -411,7 +448,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div id="featured-events" class="row">
+  <div class="row cj-row">
+    <div class="container-md no-padding">
+      <div class="cj-wrapper">
+        <div class="cj-item one"> <img class="img-responsive" src="cj-box.jpg" alt="C.J. Box"> </div>
+        <div class="cj-item two">
+          <h5 class="no-margin white">DCL Presents:</h5>
+          <h1 class="no-margin-top white text-uppercase font-weight-400">C.J. Box</h1>
+          <div>Douglas County Libraries is pleased to host <i>New York Times</i> bestselling author C.J. Box. The award-winning author will talk about his new thriller in the Joe Pickett series, <i><a class="white text-underline" href="https://dcl.bibliocommons.com/v2/record/S114C1724969">Shadows Reel</a></i>.</div>
+          <div class="padding-top-15"> The $35 ticket purchase includes a reserved seat at the author’s presentation, one complimentary drink, a hardcover copy of Shadows Reel, and a place in the signing line.</div>
+          <h4 class="text-uppercase white no-margin-bottom padding-top-15 font-weight-400"><a class="white" href="https://goo.gl/maps/Efotsu9CD8SwPmm97" target="_blank">Lone Tree Arts Center</a></h4>
+          <div>Thursday, March 10, 2022, 7PM</div>
+          <div>Save the Date – Tickets on Sale Soon!</div>
+        </div>
+        <div class="cj-item three"><img climg-responsiveass="" src="shadows-reel.jpg" alt="C.J. Box"> </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured-events" class="row bg-gray-5">
     <div class="container">
       <div class="text-center padding-top-15 padding-bottom-15">
         <h1 class="jumbo-text text-uppercase font-weight-400">Featured Events</h1>
@@ -419,7 +473,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-15">
+  <div class="row bg-gray-5 padding-bottom-15">
     <div class="container-md">
       <div class="event-wrapper">
         <div class="event-item"> <img class="img-responsive center-block" src="visit-with-santa.jpg" alt="A Visit with Santa">
@@ -436,15 +490,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-teal">
-    <div class="container text-center padding-top-30 padding-bottom-30 margin-lg-200">
-      <h4 class="roboto white no-margin-top"><a href="../newsletters/" class="white text-underline">Become a DCL insider</a> and be the first to access ticket sales for our events! You’ll also get the inside scoop on great reads and upcoming events.</h4>
+    <div class="container text-center padding-top-40 padding-bottom-40 margin-lg-200">
+      <h4 class="white no-margin-top"><a href="../newsletters/" class="white text-underline">Become a DCL insider</a> and be the first to access ticket sales for our events! You’ll also get the inside scoop on great reads and upcoming events.</h4>
     </div>
   </div>
-  <div id="other-author-events" class="row bg-gray-5 padding-bottom-30">
+  <div id="other-author-events" class="row padding-bottom-60">
     <div class="container">
       <div class="text-center padding-top-15">
         <h1>Author Events</h1>
-        <h4 class="roboto margin-lg-200 text-center"> <!-- Spend an evening with these diverse authors and hear the stories behind their stories. --> We regularly host bestsellers, local authors, children's writers, and more. Check back for more author events coming soon!</h4>
+        <h4 class="margin-lg-200 text-center"> <!-- Spend an evening with these diverse authors and hear the stories behind their stories. --> We regularly host bestsellers, local authors, children's writers, and more. Check back for more author events coming soon!</h4>
+        <div class="">Are you a local author interested in adding your work to our collection?<br>
+          <a class="text-underline" href="collection-consideration/">Apply now to be considered</a>.</div>
       </div>
     </div>
   </div>
@@ -461,13 +517,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <div id="collection-consideration" class="row bg-teal">
     <div class="container text-center padding-top-30 padding-bottom-30 margin-lg-200">
       <h5 class="white no-margin-top">Are you a local author interested in adding your work to our collection?<br>
         <a class="white text-underline" href="collection-consideration/">Apply now to be considered</a>.</h5>
     </div>
-  </div>
+  </div> --> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container text-center">
@@ -567,4 +623,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
