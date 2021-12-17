@@ -45,11 +45,21 @@
 	padding-left: 15px;
 	padding-right: 15px;
 }
-.nav.nav-pills {
-	display: inline-block;
+#general-alert {
+	margin-left: 0;
+	margin-right: 0;
 }
+
 .nav.nav-pills > li > a {
-	font-size: 20px;
+	font-size: 18px;
+	color: #000;
+}
+.nav-row {
+	border-bottom: 2px solid #eee;
+	border-top: 2px solid #eee;
+}
+.page-header {
+	border-bottom: 2px solid #eee;
 }
 .page-nav {
 	display: flex;
@@ -256,18 +266,15 @@
 </head>
 <body>
 <div class="container-fluid">
-  <div class="container margin-bottom-30">
-    <div class="margin-top-30 margin-bottom-60">
-      <div class="row text-center">
-        <h1 class="jumbo-text font-weight-400 text-uppercase">DCL Style Guide</h1>
-        <div class="row">
-          <div class="page-nav padding-bottom-15">
-            <div class="page-nav-item"><a href="animations/"><i class="pagenav-icon fas fa-frog"></i>Animations</a></div>
-            <div class="page-nav-item"><a href="layouts/"><i class="pagenav-icon fas fa-align-right"></i>Layouts</a></div>
-          </div>
-        </div>
-        <h4 class="roboto no-margin-top margin-lg-150 padding-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu.<br>
-          <script>
+  <div class="row text-center">
+    <div class="container">
+      <h1 class="jumbo-text font-weight-400 text-uppercase">DCL Style Guide</h1>
+      <div class="page-nav padding-bottom-15">
+        <div class="page-nav-item"><a href="animations/"><i class="pagenav-icon fas fa-frog"></i>Animations</a></div>
+        <div class="page-nav-item"><a href="layouts/"><i class="pagenav-icon fas fa-align-right"></i>Layouts</a></div>
+      </div>
+      <h4 class="roboto no-margin-top margin-lg-100 padding-bottom-60">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu.<br>
+        <script>
 function lastModified() {
     var modiDate = new Date(document.lastModified);
     var showAs = (modiDate.getMonth() + 1) + "/" + modiDate.getDate() + "/" + modiDate.getFullYear();
@@ -276,32 +283,35 @@ function lastModified() {
 document.write("Last updated—")
 document.write(lastModified());
 </script> 
-        </h4>
-      </div>
-      <div class="row border-top text-center">
-        <ul class="nav nav-pills">
-          <li> <a href="#typography">Typography</a></li>
-          <li> <a href="#colors">Colors</a></li>
-          <li> <a href="#containers">Containers</a></li>
-          <li> <a href="#alerts">Alerts & Sections</a></li>
-          <li> <a href="#icons">Font Icons</a></li>
-          <li> <a href="#utilities">Utilities</a></li>
-        </ul>
-      </div>
+      </h4>
     </div>
-    
-    <!-- Typography
+  </div>
+  <div class="row nav-row margin-bottom-60">
+    <div class="container">
+      <ul class="nav nav-pills">
+        <li> <a href="#typography">Typography</a></li>
+        <li> <a href="#colors">Colors</a></li>
+        <li> <a href="#containers">Containers</a></li>
+        <li> <a href="#alerts">Alerts & Sections</a></li>
+        <li> <a href="#icons">Font Icons</a></li>
+        <li> <a href="#utilities">Utilities</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Typography
       ================================================== -->
-    <div class="margin-bottom-160" id="typography">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Typography</h1>
-          </div>
+  <div class="margin-bottom-160" id="typography">
+    <div class="row">
+      <div class="container">
+        <div class="page-header">
+          <h1>Typography</h1>
         </div>
       </div>
-      <!-- Headings -->
-      <div class="row">
+    </div>
+    <!-- Headings -->
+    <div class="row">
+      <div class="container">
         <div class="col-lg-3">
           <div class="">
             <h4 class="text-muted">Ubuntu (default)</h4>
@@ -367,386 +377,384 @@ document.write(lastModified());
         </div>
       </div>
     </div>
-    
-    <!-- Colors
+  </div>
+  
+  <!-- Colors
       ================================================== -->
-    <div class="margin-bottom-100" id="colors">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Colors</h1>
-          </div>
-        </div>
-        <div class=""> 
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs nav-justified" role="tablist">
-            <li role="presentation"><a class="tab" href="#tab-one" aria-controls="tab" role="tab" data-toggle="tab">
-              <h5 class="text-uppercase">Current</h5>
-              </a></li>
-            <li role="presentation" class="active"><a class="tab" href="#tab-two" aria-controls="tab" role="tab" data-toggle="tab">
-              <h5 class="text-uppercase">Updated</h5>
-              </a></li>
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in" id="tab-one">
-              <div class="no-gutter">
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-white padding-30 text-center">
-                    <div>bg-white</div>
-                    #ffffff </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-5 padding-30 text-center">
-                    <div>bg-gray-5</div>
-                    #f5f5f5 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-10 padding-30 text-center">
-                    <div>bg-gray-10</div>
-                    #efeeed </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-20 padding-30 text-center">
-                    <div>bg-gray-20</div>
-                    #e6e4e2 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-30 padding-30 text-center">
-                    <div>bg-gray-30</div>
-                    #cccac8 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-40 padding-30 text-center">
-                    <div>bg-gray-40</div>
-                    #bfbdbb </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-50 padding-30 text-center">
-                    <div>bg-gray-50</div>
-                    #b3b1af </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-gray-80 padding-30 text-center">
-                    <div class="white">bg-gray-80</div>
-                    #807e7d </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-gray-90 padding-30 text-center">
-                    <div class="white">bg-gray-90</div>
-                    #4d4c4b </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-gray-95 padding-30 text-center">
-                    <div class="white">bg-gray-95</div>
-                    #333231 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-black padding-30 text-center">
-                    <div class="white">bg-black</div>
-                    #000000 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-salmon padding-30 text-center">
-                    <div class="white">bg-salmon</div>
-                    #d36a50 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-pink-salmon padding-30 text-center">
-                    <div class="">bg-pink-salmon</div>
-                    #ff9966 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-dead-salmon padding-30 text-center">
-                    <div class="">bg-dead-salmon</div>
-                    #e29f81 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-wheat padding-30 text-center">
-                    <div class="white">bg-wheat</div>
-                    #f5c875 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-light-wheat padding-30 text-center">
-                    <div class="">bg-light-wheat</div>
-                    #f9d782 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-almond padding-30 text-center">
-                    <div class="">bg-almond</div>
-                    #F4E1B8 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-moss padding-30 text-center">
-                    <div class="white">bg-moss</div>
-                    #90ad63 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-lichen padding-30 text-center">
-                    <div class="">bg-lichen</div>
-                    #a7ba86 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-teal padding-30 text-center">
-                    <div class="white">bg-teal</div>
-                    #4f878c </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-light-teal padding-30 text-center">
-                    <div class="white">bg-light-teal</div>
-                    #669999 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-lavender padding-30 text-center">
-                    <div class="white">bg-lavender</div>
-                    #65587b </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-gray-lavender padding-30 text-center">
-                    <div class="white">bg-gray-lavender</div>
-                    #666072 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-dead-lavender padding-30 text-center">
-                    <div class="white">bg-dead-lavender</div>
-                    #7f788e </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-loquacious padding-30 text-center">
-                    <div class="white">bg-loquacious</div>
-                    #B0852E </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-dead-loquacious padding-30 text-center">
-                    <div class="white">bg-dead-loquacious</div>
-                    #cca869 </div>
-                </div>
+  <div class="row margin-bottom-160" id="colors">
+    <div class="container">
+      <div class="page-header">
+        <h1>Colors</h1>
+      </div>
+      <div class=""> 
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li role="presentation"><a class="tab" href="#tab-one" aria-controls="tab" role="tab" data-toggle="tab">
+            <h5 class="text-uppercase">Current</h5>
+            </a></li>
+          <li role="presentation" class="active"><a class="tab" href="#tab-two" aria-controls="tab" role="tab" data-toggle="tab">
+            <h5 class="text-uppercase">Updated</h5>
+            </a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in" id="tab-one">
+            <div class="no-gutter">
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-white padding-30 text-center">
+                  <div>bg-white</div>
+                  #ffffff </div>
               </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in active" id="tab-two">
-              <div class="no-gutter">
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-white padding-30 text-center">
-                    <div>bg-white</div>
-                    #ffffff </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-5 padding-30 text-center">
-                    <div>bg-gray-5</div>
-                    #f5f5f5 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-10 padding-30 text-center">
-                    <div>bg-gray-10</div>
-                    #efeeed </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-20 padding-30 text-center">
-                    <div>bg-gray-20</div>
-                    #e6e4e2 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-30 padding-30 text-center">
-                    <div>bg-gray-30</div>
-                    #cccac8 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-40 padding-30 text-center">
-                    <div>bg-gray-40</div>
-                    #bfbdbb </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class=" bg-gray-50 padding-30 text-center">
-                    <div>bg-gray-50</div>
-                    #b3b1af </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-gray-80 padding-30 text-center">
-                    <div class="white">bg-gray-80</div>
-                    #807e7d </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-gray-90 padding-30 text-center">
-                    <div class="white">bg-gray-90</div>
-                    #4d4c4b </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-black padding-30 text-center">
-                    <div class="white">bg-black</div>
-                    #000000 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-salmon padding-30 text-center">
-                    <div class="white">bg-salmon</div>
-                    #d36a50 </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-teal padding-30 text-center">
-                    <div class="white">bg-teal</div>
-                    #4f878c </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                  <div class="white  bg-lavender padding-30 text-center">
-                    <div class="white">bg-lavender</div>
-                    #65587b </div>
-                </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-5 padding-30 text-center">
+                  <div>bg-gray-5</div>
+                  #f5f5f5 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-10 padding-30 text-center">
+                  <div>bg-gray-10</div>
+                  #efeeed </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-20 padding-30 text-center">
+                  <div>bg-gray-20</div>
+                  #e6e4e2 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-30 padding-30 text-center">
+                  <div>bg-gray-30</div>
+                  #cccac8 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-40 padding-30 text-center">
+                  <div>bg-gray-40</div>
+                  #bfbdbb </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-50 padding-30 text-center">
+                  <div>bg-gray-50</div>
+                  #b3b1af </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-gray-80 padding-30 text-center">
+                  <div class="white">bg-gray-80</div>
+                  #807e7d </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-gray-90 padding-30 text-center">
+                  <div class="white">bg-gray-90</div>
+                  #4d4c4b </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-gray-95 padding-30 text-center">
+                  <div class="white">bg-gray-95</div>
+                  #333231 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-black padding-30 text-center">
+                  <div class="white">bg-black</div>
+                  #000000 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-salmon padding-30 text-center">
+                  <div class="white">bg-salmon</div>
+                  #d36a50 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-pink-salmon padding-30 text-center">
+                  <div class="">bg-pink-salmon</div>
+                  #ff9966 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-dead-salmon padding-30 text-center">
+                  <div class="">bg-dead-salmon</div>
+                  #e29f81 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-wheat padding-30 text-center">
+                  <div class="white">bg-wheat</div>
+                  #f5c875 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-light-wheat padding-30 text-center">
+                  <div class="">bg-light-wheat</div>
+                  #f9d782 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-almond padding-30 text-center">
+                  <div class="">bg-almond</div>
+                  #F4E1B8 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-moss padding-30 text-center">
+                  <div class="white">bg-moss</div>
+                  #90ad63 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-lichen padding-30 text-center">
+                  <div class="">bg-lichen</div>
+                  #a7ba86 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-teal padding-30 text-center">
+                  <div class="white">bg-teal</div>
+                  #4f878c </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-light-teal padding-30 text-center">
+                  <div class="white">bg-light-teal</div>
+                  #669999 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-lavender padding-30 text-center">
+                  <div class="white">bg-lavender</div>
+                  #65587b </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-gray-lavender padding-30 text-center">
+                  <div class="white">bg-gray-lavender</div>
+                  #666072 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-dead-lavender padding-30 text-center">
+                  <div class="white">bg-dead-lavender</div>
+                  #7f788e </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-loquacious padding-30 text-center">
+                  <div class="white">bg-loquacious</div>
+                  #B0852E </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-dead-loquacious padding-30 text-center">
+                  <div class="white">bg-dead-loquacious</div>
+                  #cca869 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Containers
-      ================================================== -->
-    <div class="margin-bottom-60" id="containers">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Containers</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row padding-top-30 padding-bottom-60">
-        <div class="container box-wrapper">
-          <div class="box-item-alt">
-            <h3 class="text-center no-margin-top font-weight-400">Heading</h3>
-            <div> Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
-          </div>
-          <div class="box-item-alt">
-            <h3 class="text-center no-margin-top font-weight-400">Heading</h3>
-            <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
-            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="row bg-gray-5 padding-bottom-40 margin-bottom-60">
-        <div class="container box-wrapper">
-          <div class="box-item">
-            <div class="icon-circle-gray"><i class="far fa-credit-card"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
-            <div>Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci.</div>
-          </div>
-          <div class="box-item">
-            <div class="icon-circle-gray"><i class="fas fa-dog"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu.</div>
-            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="row padding-top-30 padding-bottom-60">
-        <div class="container box-wrapper">
-          <div class="box-item-alt">
-            <div class="icon-circle-gray-alt"><i class="fas fa-dove"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
-            <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci.</div>
-          </div>
-          <div class="box-item-alt">
-            <div class="icon-circle-gray-alt"><i class="fas fa-clipboard-list"></i></div>
-            <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
-            <div> Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero.</div>
-            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="row padding-bottom-30">
-        <div class="container no-padding two-up-container">
-          <div class="two-up-wrapper">
-            <div class="two-up-item one">
-              <div class="icon-circle-teal"><i class="fas fa-pepper-hot"></i></div>
-            </div>
-            <div class="two-up-item two">
-              <h3 class="no-margin-top font-weight-400">Heading</h3>
-              <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</div>
-            </div>
-          </div>
-          <div class="two-up-wrapper">
-            <div class="two-up-item one">
-              <div class="icon-circle-teal"><i class="fas fa-hiking"></i></div>
-            </div>
-            <div class="two-up-item two">
-              <h3 class="no-margin-top font-weight-400">Heading</h3>
-              <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
-              <div class="align-two-up"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row padding-bottom-60">
-        <div class="container no-padding">
-          <div class="photo-wrapper">
-            <div class="photo-item"> <img class="img-responsive center-block" src="https://source.unsplash.com/800x500/?sunset" alt="">
-              <h3 class="text-center font-weight-400">Heading</h3>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu. Integer pellentesque sem non turpis gravida mollis. Duis vel libero vel felis lacinia convallis in in justo. Phasellus est magna, porta id facilisis non, ultricies fringilla enim. Curabitur ultricies erat sit amet ipsum malesuada vitae ultricies diam pulvinar. Nunc dapibus ullamcorper nisl, ut fermentum elit vulputate vitae. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
-              <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
-            </div>
-            <div class="photo-item bg-gray-5"> <img class="img-responsive center-block" src="https://source.unsplash.com/800x500/?storm" alt="">
-              <h3 class="text-center font-weight-400">Heading</h3>
-              <div class="padding-left-30 padding-right-30">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo.</div>
-              <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+          <div role="tabpanel" class="tab-pane fade in active" id="tab-two">
+            <div class="no-gutter">
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-white padding-30 text-center">
+                  <div>bg-white</div>
+                  #ffffff </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-5 padding-30 text-center">
+                  <div>bg-gray-5</div>
+                  #f5f5f5 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-10 padding-30 text-center">
+                  <div>bg-gray-10</div>
+                  #efeeed </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-20 padding-30 text-center">
+                  <div>bg-gray-20</div>
+                  #e6e4e2 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-30 padding-30 text-center">
+                  <div>bg-gray-30</div>
+                  #cccac8 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-40 padding-30 text-center">
+                  <div>bg-gray-40</div>
+                  #bfbdbb </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class=" bg-gray-50 padding-30 text-center">
+                  <div>bg-gray-50</div>
+                  #b3b1af </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-gray-80 padding-30 text-center">
+                  <div class="white">bg-gray-80</div>
+                  #807e7d </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-gray-90 padding-30 text-center">
+                  <div class="white">bg-gray-90</div>
+                  #4d4c4b </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-black padding-30 text-center">
+                  <div class="white">bg-black</div>
+                  #000000 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-salmon padding-30 text-center">
+                  <div class="white">bg-salmon</div>
+                  #d36a50 </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-teal padding-30 text-center">
+                  <div class="white">bg-teal</div>
+                  #4f878c </div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="white  bg-lavender padding-30 text-center">
+                  <div class="white">bg-lavender</div>
+                  #65587b </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    <!-- Alerts & Sections
+  </div>
+  
+  <!-- Containers
       ================================================== -->
-    <div class="margin-bottom-160" id="alerts">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Alerts & Sections</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row margin-bottom-30">
-        <div class="col-lg-12">
-          <div id="general-alert" style="">Alert! Curabitur at est et risus <a class="text-underline white" href="#">vestibulum pharetra</a>. Nulla sed orci risus, vel volutpat dui. </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="white-top-bkg">
-          <div class="gray-circle"><i class="fas fa-crow"></i></div>
-        </div>
-      </div>
-      <div class="row bg-gray-5 padding-bottom-60 margin-bottom-30">
-        <div class="container text-center margin-lg-175">
-          <h2 class="margin-top-10 margin-bottom-5">Heading</h2>
-          <div>Nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. <a href="#">Fusce a dui urna</a>, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="white-top-bkg">
-          <div id="lone-tree"><img src="lone-tree-summer.jpg" alt="Lone Tree Camps" class="gray-circle img-circle img-responsive center-block"></div>
-        </div>
-      </div>
-      <div class="row bg-gray-5 padding-bottom-60 margin-bottom-60">
-        <div class="container text-center">
-          <h2 class="margin-top-10 margin-bottom-5">Heading</h2>
-          <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, <a href="#">leo non iaculis vehicula</a>, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, <a href="#">vel mollis leo</a> massa ut massa.</div>
-        </div>
-      </div>
-      <div class="row bg-teal text-center padding-top-30 padding-bottom-40">
-        <div class="container">
-          <h4 class="white no-margin-top">Heading</h4>
-          <div class="white">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius <a class="white text-underline" href="#">suscipit non vulputate</a> eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. <a class="white text-underline" href="#">Fusce a dui urna</a>, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
+  <div class="margin-bottom-160" id="containers">
+    <div class="row">
+      <div class="container">
+        <div class="page-header">
+          <h1>Containers</h1>
         </div>
       </div>
     </div>
-    
-    <!-- Font Icons
-      ================================================== -->
-    <div class="margin-bottom-160" id="icons">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Font Icons</h1>
+    <div class="row padding-top-30 padding-bottom-60">
+      <div class="container box-wrapper">
+        <div class="box-item-alt">
+          <h3 class="text-center no-margin-top font-weight-400">Heading</h3>
+          <div> Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
+        </div>
+        <div class="box-item-alt">
+          <h3 class="text-center no-margin-top font-weight-400">Heading</h3>
+          <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
+          <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-gray-5 padding-bottom-100 padding-top-60 margin-bottom-60">
+      <div class="container box-wrapper">
+        <div class="box-item">
+          <div class="icon-circle-gray"><i class="far fa-credit-card"></i></div>
+          <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
+          <div>Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci.</div>
+        </div>
+        <div class="box-item">
+          <div class="icon-circle-gray"><i class="fas fa-dog"></i></div>
+          <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu.</div>
+          <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="row padding-top-60 padding-bottom-80">
+      <div class="container box-wrapper">
+        <div class="box-item-alt">
+          <div class="icon-circle-gray-alt"><i class="fas fa-dove"></i></div>
+          <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
+          <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci.</div>
+        </div>
+        <div class="box-item-alt">
+          <div class="icon-circle-gray-alt"><i class="fas fa-clipboard-list"></i></div>
+          <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
+          <div> Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero.</div>
+          <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="row padding-bottom-100">
+      <div class="container no-padding two-up-container">
+        <div class="two-up-wrapper">
+          <div class="two-up-item one">
+            <div class="icon-circle-teal"><i class="fas fa-pepper-hot"></i></div>
+          </div>
+          <div class="two-up-item two">
+            <h3 class="no-margin-top font-weight-400">Heading</h3>
+            <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti.</div>
+          </div>
+        </div>
+        <div class="two-up-wrapper">
+          <div class="two-up-item one">
+            <div class="icon-circle-teal"><i class="fas fa-hiking"></i></div>
+          </div>
+          <div class="two-up-item two">
+            <h3 class="no-margin-top font-weight-400">Heading</h3>
+            <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
+            <div class="align-two-up"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
           </div>
         </div>
       </div>
-      <div class="row">
+    </div>
+    <div class="row padding-bottom-30">
+      <div class="container no-padding">
+        <div class="photo-wrapper">
+          <div class="photo-item"> <img class="img-responsive center-block" src="https://source.unsplash.com/800x500/?sunset" alt="">
+            <h3 class="text-center font-weight-400">Heading</h3>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu. Integer pellentesque sem non turpis gravida mollis. Duis vel libero vel felis lacinia convallis in in justo. Phasellus est magna, porta id facilisis non, ultricies fringilla enim. Curabitur ultricies erat sit amet ipsum malesuada vitae ultricies diam pulvinar. Nunc dapibus ullamcorper nisl, ut fermentum elit vulputate vitae. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
+            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+          </div>
+          <div class="photo-item bg-gray-5"> <img class="img-responsive center-block" src="https://source.unsplash.com/800x500/?storm" alt="">
+            <h3 class="text-center font-weight-400">Heading</h3>
+            <div class="padding-left-30 padding-right-30">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo.</div>
+            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Alerts & Sections
+      ================================================== -->
+  <div class="margin-bottom-160" id="alerts">
+    <div class="row">
+      <div class="container">
+        <div style="margin-bottom: 0" class="page-header">
+          <h1>Alerts & Sections</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row margin-bottom-30">
+      <div id="general-alert" style="">Alert! Curabitur at est et risus <a class="text-underline white" href="#">vestibulum pharetra</a>. Nulla sed orci risus, vel volutpat dui. </div>
+    </div>
+    <div class="row">
+      <div class="white-top-bkg">
+        <div class="gray-circle"><i class="fas fa-crow"></i></div>
+      </div>
+    </div>
+    <div class="row bg-gray-5 padding-bottom-40">
+      <div class="container text-center margin-lg-175">
+        <h2 class="margin-top-10 margin-bottom-5">Heading</h2>
+        <div>Nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. <a href="#">Fusce a dui urna</a>, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
+      </div>
+    </div>
+    <div class="row bg-gray-5">
+      <div class="white-bottom-bkg">
+        <div id="lone-tree"><img src="lone-tree-summer.jpg" alt="Lone Tree Camps" class="white-circle img-circle img-responsive center-block"></div>
+      </div>
+    </div>
+    <div class="row padding-bottom-60">
+      <div class="container text-center margin-lg-175">
+        <h2 class="margin-top-10 margin-bottom-5">Heading</h2>
+        <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, <a href="#">leo non iaculis vehicula</a>, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, <a href="#">vel mollis leo</a> massa ut massa.</div>
+      </div>
+    </div>
+    <div class="row bg-teal text-center padding-top-30 padding-bottom-40">
+      <div class="container">
+        <h2 class="white no-margin-top">Heading</h2>
+        <div class="white">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius <a class="white text-underline" href="#">suscipit non vulputate</a> eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. <a class="white text-underline" href="#">Fusce a dui urna</a>, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Font Icons
+      ================================================== -->
+  <div class="margin-bottom-160" id="icons">
+    <div class="row">
+      <div class="container">
+        <div class="page-header">
+          <h1>Font Icons</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
         <div class="col-md-6">
           <h4 class="text-muted">Font Awesome Icons</h4>
           <img class="img-responsive" src="fontawesome.jpg" alt="">
@@ -759,40 +767,46 @@ document.write(lastModified());
         </div>
       </div>
     </div>
-    
-    <!-- Utilities
+  </div>
+  
+  <!-- Utilities
       ================================================== -->
-    <div class="" id="utilities">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1>Utilities</h1>
-          </div>
+  <div class="margin-bottom-160" id="utilities">
+    <div class="row">
+      <div class="container">
+        <div class="page-header">
+          <h1>Utilities</h1>
         </div>
       </div>
-      <div class="row no-margin padding-bottom-30">
-        <div class="no-padding">
-          <h4 class="text-muted">Photo Carousel</h4>
-          <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?dog" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?cat" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?woman" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?man" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?child" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?baby" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?tree" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?ocean" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?moon" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?earth" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?cake" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?pie" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?food" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?cars" alt=""></div>
-            <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?trucks" alt=""></div>
-          </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <h4 class="text-muted">Photo Carousel</h4>
+      </div>
+    </div>
+    <div class="row padding-bottom-100">
+      <div class="no-padding">
+        <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?dog" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?cat" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?woman" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?man" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?child" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?baby" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?tree" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?ocean" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?moon" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?earth" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?cake" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?pie" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?food" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?cars" alt=""></div>
+          <div class="carousel-cell"><img src="https://source.unsplash.com/800x400/?trucks" alt=""></div>
         </div>
       </div>
-      <div class="row">
+    </div>
+    <div class="row padding-bottom-60">
+      <div class="container">
         <div class="col-lg-4">
           <h4 class="text-muted">Accordian</h4>
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -864,9 +878,11 @@ document.write(lastModified());
           </div>
         </div>
       </div>
-      <div class="row">
+    </div>
+    <div class="row">
+      <div class="container">
         <h4 class="text-muted">Content Carousels</h4>
-        <div class="col-lg-6 text-center padding-top-15 padding-bottom-100">
+        <div class="col-lg-6 text-center padding-top-15 padding-bottom-60">
           <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
             <div class="carousel-cell testimonial">
               <div><img alt="" class="img-circle" src="https://source.unsplash.com/200x200/?grin" />
@@ -898,7 +914,7 @@ document.write(lastModified());
             </div>
           </div>
         </div>
-        <div class="col-lg-6 flex-item bg-teal text-center margin-bottom-100">
+        <div class="col-lg-6 flex-item bg-teal text-center margin-bottom-60">
           <h1 class="no-margin jumbo-text white text-uppercase font-weight-400">Heading</h1>
           <h4 class="no-margin-top white">Subheading</h4>
           <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
@@ -926,50 +942,12 @@ document.write(lastModified());
         </div>
       </div>
     </div>
-    
-    <!-- Blocks
-      ================================================== 
-    <div class="margin-bottom-160">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="page-header">
-            <h1 id="blocks">Blocks</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row bg-gray-10 margin-bottom-40 ">
-        <div class="col-md-4 padding-top-30 padding-bottom-40 margin-top-40">
-          <div class="bg-gray-80 shadow-low hover-shadow text-center">
-            <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15">
-              <h2 class="roboto white">Block Feature One</h2>
-              <div class="white font-weight-400">Linked container. Add background image inline.</div>
-              <a href="#"><span class="link-spanner"></span></a> </div>
-          </div>
-        </div>
-        <div class="col-md-4 padding-top-30 padding-bottom-40">
-          <div class="bg-white shadow-low hover-shadow default-block-container">
-            <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15">
-              <h4>Generic Block</h4>
-              <div>Generic linked container smiliar to datasebase containers. Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula.</div>
-              <a href="#blocks"><span class="link-spanner"></span></a> </div>
-          </div>
-        </div>
-        <div class="col-md-4 padding-top-30 padding-bottom-40 margin-top-40">
-          <div class="bg-white shadow-low text-center">
-            <div class="padding-top-15 padding-right-15 padding-bottom-40 padding-left-15">
-              <h2 class="roboto">Block Feature Two</h2>
-              <div><a href="#blocks">Links within</a> container. Nunc posuere, magna ut <a href="#blocks">auctor</a>. Add background image inline.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>--> 
   </div>
-</div>
-<div class="copyright bg-gray-90">
-  <div class="container padding-top-30 padding-bottom-30">
-    <div class="text-right eee">
-      <div> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></div>
+  <div class="copyright row bg-gray-90">
+    <div class="container padding-top-30 padding-bottom-30">
+      <div class="text-center eee">
+        <div> &copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a class="wheat" href="https://www.google.com/maps/place/Philip+S.+Miller+Library/@39.3682405,-104.8612646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x61032512ce3a96db" target="_blank">100 S. Wilcox Street, Castle Rock, CO</a> | <a class="wheat" href="tel:+13037917323">(303) 791-7323</a></div>
+      </div>
     </div>
   </div>
 </div>
