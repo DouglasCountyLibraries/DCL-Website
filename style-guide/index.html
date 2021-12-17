@@ -193,6 +193,12 @@
 .two-up-item.two {
 	padding: 15px 15px 15px 30px;
 }
+.photo-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+}
 .flickity-page-dots .dot {
 	background-color: #fff;
 }
@@ -218,6 +224,26 @@
 	display: flex;
 	flex-direction: column;
 	align-content: center;
+}
+.photo-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 30px 15px;
+	min-width: 400px;
+}
+.photo-item-border {
+	padding: 30px 30px 35px;
+	border: 2px solid #eee;
+	border-top: 0;
+	border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+.photo-item {
+	flex-direction: column;
+	padding: 0;
+}
 }
 
 @media (max-width: 1200px) {
@@ -595,7 +621,7 @@ document.write(lastModified());
           <div class="box-item-alt">
             <h3 class="text-center no-margin-top font-weight-400">Heading</h3>
             <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
-            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Get Started</a></div>
+            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
           </div>
         </div>
       </div>
@@ -610,7 +636,7 @@ document.write(lastModified());
             <div class="icon-circle-gray"><i class="fas fa-dog"></i></div>
             <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu.</div>
-            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Get Started</a></div>
+            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
           </div>
         </div>
       </div>
@@ -625,11 +651,11 @@ document.write(lastModified());
             <div class="icon-circle-gray-alt"><i class="fas fa-clipboard-list"></i></div>
             <h3 class="text-center margin-top-10 font-weight-400">Heading</h3>
             <div> Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero.</div>
-            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Get Started</a></div>
+            <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
           </div>
         </div>
       </div>
-      <div class="row padding-bottom-60">
+      <div class="row padding-bottom-30">
         <div class="container no-padding two-up-container">
           <div class="two-up-wrapper">
             <div class="two-up-item one">
@@ -647,7 +673,29 @@ document.write(lastModified());
             <div class="two-up-item two">
               <h3 class="no-margin-top font-weight-400">Heading</h3>
               <div>Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl.</div>
-              <div class="align-two-up"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Get Started</a></div>
+              <div class="align-two-up"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row padding-bottom-60">
+        <div class="container no-padding">
+          <div class="photo-wrapper">
+            <div class="photo-item">
+              <div><img class="img-responsive center-block" src="https://source.unsplash.com/800x500/?sunset" alt=""></div>
+              <div class="photo-item-border no">
+                <h3 class="text-center font-weight-400">Heading</h3>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu. Integer pellentesque sem non turpis gravida mollis. Duis vel libero vel felis lacinia convallis in in justo. Phasellus est magna, porta id facilisis non, ultricies fringilla enim. Curabitur ultricies erat sit amet ipsum malesuada vitae ultricies diam pulvinar. Nunc dapibus ullamcorper nisl, ut fermentum elit vulputate vitae. Quisque convallis dui a sapien lacinia nec porta nunc hendrerit. Vestibulum lacinia elit eu mauris vehicula id fermentum orci tincidunt.</div>
+                <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+              </div>
+            </div>
+            <div class="photo-item">
+              <div><img class="img-responsive center-block" src="https://source.unsplash.com/800x500/?storm" alt=""></div>
+              <div class="photo-item-border yes">
+                <h3 class="text-center font-weight-400">Heading</h3>
+                <div>Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa.</div>
+                <div class="align-bottom"> <a href="#" class="btn btn-lg btn-primary margin-top-15">Action Item</a></div>
+              </div>
             </div>
           </div>
         </div>
