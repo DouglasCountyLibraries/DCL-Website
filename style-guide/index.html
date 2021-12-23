@@ -261,8 +261,8 @@
 	text-align: center;
 }
 }
-  /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-    .slideshow-item-wrapper {
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-item-wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -270,7 +270,7 @@
 .slideshow-item-list {
 	padding: 30px;
 }
-    .slideshow-item {
+.slideshow-item {
 	flex: 1;
 	color: #fff;
 }
@@ -392,16 +392,16 @@
 	bottom: 0;
 	right: 0;
 	display: inline-block;
-	padding: 2% 3%;
+	padding: 1% 2%;
 	margin: 5%;
-	font-size: 2.5vw;
+	font-size: 16px;
 	color: transparent
 }
 #slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
 	z-index: 1
 }
 #slideshow .fx + span, #slideshow .fx1 + span {
-	color: #fff;
+	color: #000;
 	-webkit-animation: caption 5s 1s both;
 	animation: caption 5s 1s both
 }
@@ -436,14 +436,15 @@ opacity:0;
 
 @media(min-width:42em) { /* bigger than 672px */
 #slideshow span {
-	padding: 1em 1.5em;
-	margin: 2em;
-	font-size: .9em
+	padding: .5em;
+	margin: .5em;
+	font-size: 18px;
+	font-weight: 400;
 }
 }
 
 @media (max-width: 1200px) {
-.item-wrapper {
+.slideshow-item-wrapper {
 	flex-direction: column;
 }
 #slideshow {
@@ -456,7 +457,7 @@ opacity:0;
 	text-align: center;
 	padding: 30px 15px 35px 15px;
 }
-}  
+}
 </style>
 </head>
 <body>
@@ -1137,66 +1138,52 @@ document.write(lastModified());
         </div>
       </div>
     </div>
-      
-      
-      
-      
-      
-    <div class="row bg-teal">
-    <div class="container slideshow-item-wrapper no-padding">
-      <div class="slideshow-item" id="slideshow"> 
-        <!-- define each background-image in CSS -->
-        <div></div>
-        <!-- #slideshow div:nth-of-type(1) --> 
-        <span>&copy; Butterfly Pavilion</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(2) --> 
-        <span>&copy; Clyfford Still Museum</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(3) --> 
-        <span>&copy; Jedediah Liddell</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(4) --> 
-        <span>&copy; Denver Firefighters Museum</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(5) --> 
-        <span>&copy; Denver Museum of Nature & Science</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(6) --> 
-        <span>&copy; History Colorado Center</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(7) --> 
-        <span>&copy; Paul Brokering Photography</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(8) --> 
-        <span>&copy; MCA Denver</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(9) --> 
-        <span>&copy; Wings Over the Rockies Air & Space Museum</span> </div>
-      <div class="slideshow-item slideshow-item-list">
-        <div>
-                    <h1 class="no-margin jumbo-text white text-uppercase font-weight-400">Heading</h1>
-            <h4 class="no-margin-top white">Subheading</h4><div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros, et consequat arcu. Integer pellentesque sem non turpis gravida mollis.</div><div class="padding-top-15">Duis vel libero vel felis lacinia convallis in in justo. Phasellus est magna, porta id facilisis non, ultricies fringilla enim. Curabitur ultricies erat sit amet ipsum malesuada vitae ultricies diam pulvinar. Nunc dapibus ullamcorper nisl, ut fermentum elit vulputate vitae.</div>
-        </div>
-
+    <div class="row padding-top-30">
+      <div class="container">
+        <h4 class="text-muted">Pan & Zoom Slideshow with Captions</h4>
       </div>
-    </div>    
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    </div>
+    <div class="row">
+      <div class="container slideshow-item-wrapper no-padding bg-teal">
+        <div class="slideshow-item" id="slideshow"> 
+          <!-- define each background-image in CSS -->
+          <div></div>
+          <!-- #slideshow div:nth-of-type(1) --> 
+          <span>Phasellus est magna</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(2) --> 
+          <span>Etiam ut tellus eros</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(3) --> 
+          <span>Phasellus est magna ultricies fringilla enim</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(4) --> 
+          <span>Nunc dapibus ullamcorper</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(5) --> 
+          <span>Vel felis lacinia convallis in justa</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(6) --> 
+          <span>A Integer pellentesqu</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(7) --> 
+          <span>Sem sed massa</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(8) --> 
+          <span>Elit vulputate vitae</span>
+          <div></div>
+          <!-- #slideshow div:nth-of-type(9) --> 
+          <span>Curabitur ultricies erat sit</span> </div>
+        <div class="slideshow-item slideshow-item-list">
+          <div>
+            <h1 class="no-margin jumbo-text white text-uppercase font-weight-400">Heading</h1>
+            <h4 class="no-margin-top white">Subheading</h4>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at turpis est. Duis tincidunt sem sed massa faucibus pharetra. Etiam ut tellus eros.</div>
+            <div class="padding-top-15">Duis vel libero vel felis lacinia convallis in in justo. Phasellus est magna, porta id facilisis non, ultricies fringilla enim. Curabitur ultricies erat sit amet ipsum malesuada vitae ultricies diam pulvinar.</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="copyright row bg-gray-90">
     <div class="container padding-top-30 padding-bottom-30">
@@ -1205,46 +1192,47 @@ document.write(lastModified());
       </div>
     </div>
   </div>
-</div>
-<!-- Defalut modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title text-center" id="myModalLabel">Modal title</h4>
+  
+  <!-- Defalut modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title text-center" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
       </div>
-      <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
+    </div>
+  </div>
+  
+  <!-- Large modal -->
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title text-center" id="myLargeModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
+      </div>
+    </div>
+  </div>
+  <!-- Small modal -->
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title text-center" id="mySmallModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- Large modal -->
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title text-center" id="myLargeModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-    </div>
-  </div>
-</div>
-<!-- Small modal -->
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title text-center" id="mySmallModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl. Sed pulvinar pharetra volutpat. Sed egestas congue rhoncus. Vivamus ut tortor eget risus convallis auctor. Nunc posuere, magna ut auctor fermentum, elit velit venenatis eros, quis gravida tortor urna non felis. Ut velit quam, tincidunt id placerat a, mattis a libero. Nunc sit amet felis ac purus sagittis ornare gravida at dui. Nam mauris arcu, iaculis id imperdiet a, iaculis sit amet urna. Nulla condimentum scelerisque odio, ut aliquet arcu euismod ac.</div>
-    </div>
-  </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script>
-    <script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
 /* http://cssmojo.com/ken-burns-effect/ */
 function kbSlideshow() { // set .fx1 class on 1st img on page load
 	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
