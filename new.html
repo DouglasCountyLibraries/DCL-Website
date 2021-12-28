@@ -186,16 +186,56 @@ h1 > .hankbold, h1 > .hanklight {
 	font-size: 54px;
 }
 }
+.content {
+	background: #104068;
+}
 .skater {
 	text-align: center;
+	-webkit-animation: moveupdown 12s linear infinite;
+	animation: moveupdown 12s linear infinite;
+}
+@-webkit-keyframes moveupdown {
+0% {
+transform: translateY(0);
+}
+33% {
+transform: translateY(30px);
+}
+66% {
+transform: translateY(-10px);
+}
+100% {
+transform: translateY(0);
+}
+}
+@keyframes moveupdown {
+0% {
+transform: translateY(0);
+}
+33% {
+transform: translateY(30px);
+}
+66% {
+transform: translateY(-10px);
+}
+100% {
+transform: translateY(0);
+}
+}
+.far-lane {
+	min-height: 300px;
+	background: transparent url("far-lane.png") repeat-x bottom center;
+	-webkit-animation: left-slide 8s linear infinite;
+	animation: left-slide 8s linear infinite;
+	margin-bottom: -140px;
 }
 .near-lane {
-	min-height: 150px;
+	min-height: 180px;
 	background: transparent url("near-lane.png") repeat-x bottom center;
 	-webkit-animation: left-slide 8s linear infinite;
 	animation: left-slide 8s linear infinite;
 	position: relative;
-	margin-top: -90px;
+	margin-top: -110px;
 	margin-bottom: 60px;
 	z-index: 1000;
 }
@@ -403,6 +443,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="row content">
+    <div class="container">
+      <h1 class="white text-center">Chill Zone</h1>
+    </div>
+  </div>
   <div class="row far-lane"></div>
   <div class="skater"><img src="skater.png" alt=""></div>
   <div class="row near-lane"></div>
