@@ -95,7 +95,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
 <style>
-.leckerli {
+.lecker {
 	font-family: 'Leckerli One', cursive;
 }
 .item-wrapper {
@@ -109,48 +109,39 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 21px;
-	font-weight: 400;
-	line-height: 25px;
-	padding-top: 40px;
+	padding-top: 60px;
 }
 .link, .link:visited, .link:active {
-	font-family: 'Open Sans', sans-serif;
-	background: rgba(255,255,255,1);
-	color: #000;
-	padding: 20px 0;
-	border-radius: 50px;
+	background: rgba(255,255,255,.8);
+	color: #104068;
+	padding: 14px 0;
+	border-radius: 75px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
-	text-transform: uppercase;
+	line-height: 28px;
 	text-decoration: none;
 	width: 275px;
 	margin: 0 10px;
 	display: block;
-	box-shadow: 0px -1px 20px rgba(0,0,0,.7);
+	font-size: 26px;
 }
 .link:hover, .link:focus {
-	background: rgba(255,255,255,.8);
-	color: #000;
+	background: rgba(255,255,255,1);
+	color: #104068;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
+	box-shadow: 0px -1px 20px rgba(255,255,255,.7);
 }
 .item {
 	display: flex;
 	flex-direction: column;
 	padding-top: 100px;
 }
-h1 > .hankbold, h1 > .hanklight {
-	font-size: 90px;
+.lecker {
+	font-size: 110px;
 	line-height: .8em;
-}
-h3.hankbold {
-	font-size: 45px;
-	margin: 20px 0 0;
-}
-h2.hanklight {
-	font-size: 28px;
-	margin-top: 20px;
+	text-shadow: 0px -1px 10px rgba(255,255,255,.7);
+	opacity: .95;
 }
 
 @media (max-width: 980px) {
@@ -164,27 +155,21 @@ h2.hanklight {
 }
 
 @media (max-width: 625px) {
-h1 > .hankbold, h1 > .hanklight {
+.lecker {
 	font-size: 60px;
-}
-h3.hankbold {
-	font-size: 30px;
-}
-h1.hanklight {
-	font-size: 32px;
-}
-h2.hanklight {
-	font-size: 28px;
 }
 }
 
 @media (max-width: 450px) {
-h1 > .hankbold, h1 > .hanklight {
+.lecker {
 	font-size: 54px;
 }
 }
 .content {
 	background: #104068;
+	background: -webkit-radial-gradient(farthest-corner at bottom center, #2287db 0%, #104068 40%);
+	background: -moz-radial-gradient(farthest-corner at bottom center, #2287db 0%, #104068 40%);
+	background: radial-gradient(farthest-corner at bottom center, #2287db 0%, #104068 40%);
 }
 .skater {
 	text-align: center;
@@ -258,8 +243,22 @@ background-position: 2150px 0;
 .flakes-one {
 	min-height: 700px;
 	background: transparent url("flakes-one.png") center center repeat;
-	-webkit-animation: fall 9s linear infinite;
-	animation: fall 9s linear infinite;
+	-webkit-animation: fall 12s linear infinite;
+	animation: fall 12s linear infinite;
+	margin-bottom: -375px;
+}
+.flakes-two {
+	min-height: 700px;
+	background: transparent url("flakes-two.png") center center repeat;
+	-webkit-animation: fall 14s linear infinite;
+	animation: fall 14s linear infinite;
+	margin-bottom: -375px;
+}
+.flakes-three {
+	min-height: 700px;
+	background: transparent url("flakes-three.png") center center repeat;
+	-webkit-animation: fall 16s linear infinite;
+	animation: fall 16s linear infinite;
 	margin-bottom: -375px;
 }
 @-webkit-keyframes fall {
@@ -468,14 +467,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row content">
     <div class="flakes-one">
-      <div class="container">
-        <div class="item-wrapper">
-          <div class="item text-center">
-            <h1 class="white no-margin">Chill Zone</h1>
-            <div class="link-wrapper"> <a href="top-checkouts/" target="_blank" class="link">Top Checkouts<br>
-              of 2021</a> <a href="reading-challenge/" class="link">New Reading<br>
-              Challenge</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=fairy+tale+ball&lib=ALL&nd=90" target="_blank" class="link">Fairy Tale Ball<br>
-              in Wonderland</a></div>
+      <div class="flakes-two">
+        <div class="flakes-three">
+          <div class="container">
+            <div class="item-wrapper">
+              <div class="item text-center">
+                <h1 class="lecker white no-margin">Chill Zone</h1>
+                <div class="link-wrapper"> <a href="top-checkouts/" target="_blank" class="link">Top Checkouts<br>
+                  of 2021</a> <a href="reading-challenge/" class="link">New Reading<br>
+                  Challenge</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=fairy+tale+ball&lib=ALL&nd=90" target="_blank" class="link">Fairy Tale Ball<br>
+                  in Wonderland</a></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
