@@ -89,40 +89,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
+<link rel="stylesheet" href="https://use.typekit.net/vik6vis.css">
 <style>
-@font-face {
-	font-family: 'HankLight';
-	src: url('shared-assets/web-fonts/HankRnd-Light.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Light.woff') format('woff');
-}
-@font-face {
-	font-family: 'HankBold';
-	src: url('shared-assets/web-fonts/HankRnd-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/HankRnd-Bold.woff') format('woff');
-}
-.hanklight {
-	font-family: 'HankLight', sans-serif;
-}
-.hankbold {
-	font-family: 'HankBold', sans-serif;
-}
-.amazon {
-	background: #502133;
-	color: #fff;
-	font-size: 18px;
-	padding: 12px 10px 13px;
-	font-weight: 400;
-	text-align: center;
-	margin-left: -15px;
-	margin-right: -15px;
-	border-top: 4px solid #544a53;
-}
-.custom-container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-.door-row {
-	background: #231225 url("background.jpg") top center repeat-x;
-	height: 800px;
-	color: #fff;
+.bello {
+	font-family: bello-pro, sans-serif;
+	font-size: 130px;
 }
 .item-wrapper {
 	display: flex;
@@ -135,81 +106,166 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 21px;
-	font-weight: 400;
-	line-height: 25px;
-	margin-top: auto;
-	padding-bottom: 125px;
+	padding-top: 60px;
 }
 .link, .link:visited, .link:active {
-	font-family: 'Open Sans', sans-serif;
-	background: rgba(255,255,255,1);
-	color: #000;
-	padding: 20px 0;
-	border-radius: 35px;
+	background: #fff;
+	color: #104068;
+	padding: 14px 0;
+	border-radius: 75px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
-	text-transform: uppercase;
+	line-height: 28px;
 	text-decoration: none;
-	width: 300px;
+	width: 275px;
 	margin: 0 10px;
 	display: block;
-	box-shadow: 0px -1px 20px rgba(0,0,0,.7);
+	font-size: 26px;
 }
 .link:hover, .link:focus {
-	background: #feca54;
-	color: #000;
+	background: #cce8ff;
+	color: #104068;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
+	box-shadow: 0px -1px 20px rgba(255,255,255,.9);
 }
 .item {
 	display: flex;
-	margin-top: auto;
 	flex-direction: column;
-	padding: 10px;
-	height: 800px;
+	padding-top: 70px;
 }
-h1 > .hankbold, h1 > .hanklight {
-	font-size: 90px;
-	line-height: .8em;
+.content {
+	background: #104068;
+	background: -webkit-radial-gradient(farthest-corner at bottom center, #2287db 0%, #104068 40%);
+	background: -moz-radial-gradient(farthest-corner at bottom center, #2287db 0%, #104068 40%);
+	background: radial-gradient(farthest-corner at bottom center, #2287db 0%, #104068 40%);
 }
-h3.hankbold {
-	font-size: 45px;
-	margin: 20px 0 0;
+.skater {
+	text-align: center;
+	-webkit-animation: moveupdown 10s linear infinite;
+	animation: moveupdown 10s linear infinite;
+	margin-bottom: -460px;
+	position: relative;
+	bottom: 350px;
 }
-h2.hanklight {
-	font-size: 28px;
-	margin-top: 20px;
+@-webkit-keyframes moveupdown {
+0% {
+transform: translateY(0);
+}
+42% {
+transform: translateY(50px);
+    
+}
+95% {
+transform: translateY(-10px);
+}
+100% {
+transform: translateY(0);
+}
+}
+@keyframes moveupdown {
+0% {
+transform: translateY(0);
+}
+42% {
+transform: translateY(50px);
+    
+}
+95% {
+transform: translateY(-10px);
+}
+100% {
+transform: translateY(0);
+}
+}
+.far-lane {
+	min-height: 500px;
+	background: transparent url("far-lane.png") repeat-x bottom center;
+	-webkit-animation: left-slide 10s linear infinite;
+	animation: left-slide 10s linear infinite;
+	margin-top: -325px;
+}
+.near-lane {
+	min-height: 180px;
+	background: transparent url("near-lane.png") repeat-x bottom center;
+	-webkit-animation: left-slide 10s linear infinite;
+	animation: left-slide 10s linear infinite;
+	position: relative;
+	margin-top: -110px;
+	margin-bottom: 110px;
+	z-index: 1000;
+}
+@-webkit-keyframes left-slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 2150px 0;
+}
+}
+@keyframes left-slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 2150px 0;
+}
+}
+.flakes-one {
+	min-height: 700px;
+	background: transparent url("flakes-one.png") center center repeat;
+	-webkit-animation: fall 12s linear infinite;
+	animation: fall 12s linear infinite;
+	margin-bottom: -375px;
+}
+.flakes-two {
+	min-height: 700px;
+	background: transparent url("flakes-two.png") center center repeat;
+	-webkit-animation: fall 14s linear infinite;
+	animation: fall 14s linear infinite;
+	margin-bottom: -375px;
+}
+.flakes-three {
+	min-height: 700px;
+	background: transparent url("flakes-three.png") center center repeat;
+	-webkit-animation: fall 16s linear infinite;
+	animation: fall 16s linear infinite;
+	margin-bottom: -375px;
+}
+@-webkit-keyframes fall {
+from {
+background-position: -1200px -700px;
+}
+to {
+background-position: 0 0;
+}
+}
+@keyframes fall {
+from {
+background-position: -1200px -700px;
+}
+to {
+background-position: 0 0;
+}
 }
 
-@media (max-width: 980px) {
+@media (max-width: 885px) {
 .link-wrapper {
 	flex-direction: column;
+	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.item {
+	padding-top: 30px;
+}
 .link {
-	margin: 15px 0;
+	margin: 10px 0;
 }
 }
 
-@media (max-width: 625px) {
-h1 > .hankbold, h1 > .hanklight {
-	font-size: 60px;
-}
-h3.hankbold {
-	font-size: 30px;
-}
-h1.hanklight {
-	font-size: 32px;
-}
-h2.hanklight {
-	font-size: 28px;
-}
-}
-
-@media (max-width: 450px) {
-h1 > .hankbold, h1 > .hanklight {
-	font-size: 54px;
+@media (max-width: 510px) {
+.bello {
+	font-size: 90px;
 }
 }
 </style>
@@ -400,18 +456,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row door-row">
-    <div class="custom-container">
-      <div class="item-wrapper">
-        <div class="item text-center">
-          <h1 class="white no-margin padding-top-15"><span class="hankbold">Opening</span><span class="hanklight">Doors</span></h1>
-          <h3 class="hankbold white text-uppercase">For the Future</h3>
-          <div class="link-wrapper"> <a href="donate/" target="_blank" class="link">Giving is the Key</a> <a href="https://www.creativebug.com/lib/dcl" target="_blank" class="link">Hand-made Holidays</a><a href="reading-challenge/" class="link">Reading Challenge</a></div>
+  <div class="row content">
+    <div class="flakes-one">
+      <div class="flakes-two">
+        <div class="flakes-three">
+          <div class="container">
+            <div class="item-wrapper">
+              <div class="item text-center">
+                <h1 class="bello white no-margin">Chill&nbsp;Zone</h1>
+                <div class="link-wrapper"> <a href="top-checkouts/" target="_blank" class="link">Top Checkouts<br>
+                  of 2021</a> <a href="reading-challenge/" class="link">New Reading<br>
+                  Challenge</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=fairy+tale+ball&lib=ALL&nd=90" target="_blank" class="link">Fairy Tale Ball<br>
+                  in Wonderland</a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="far-lane"></div>
+    <div class="skater"><img src="skater.png" alt=""></div>
+    <div class="near-lane"></div>
   </div>
-  <div class="amazon">Support the DCL Foundation <a class="text-underline white" href="donate/#everyday-giving">when shopping online</a> for the holidays. </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
