@@ -44,7 +44,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script> 
 <!-- End Patron Point -->
 <!-- InstanceBeginEditable name="title" -->
-<title>Student Databases | Douglas County Libraries</title>
+<title>Student Research Databases | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
 <!-- InstanceEndEditable -->
@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css" integrity="sha256-qQHUQX+gGGYfpC7Zdni08sr+h0ymXr0avmIASucY4FM=" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?122421">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?1522">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
 <!--[if lt IE 9]>
@@ -81,22 +81,42 @@ e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?122421"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?1522"></script> 
 <!-- Start of Zendesk Widget script --> 
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-		<script>
-  $(document).ready(function(){
-    $(".sticky-one").sticky({topSpacing:0});
-  });
-		</script>
-		<style>
+<style>
 .research-active {
 	background-color: #f5f5f5;
 }
-.bg-lavender {
-	padding: 15px 5px 30px;
+.page-nav {
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	align-items: center;
+}
+.page-nav-item a {
+	color: #000;
+	font-weight: 400;
+	border: 2px solid #eee;
+	padding: 10px 0;
+	display: inline-block;
+	width: 275px;
+	white-space: nowrap;
+	background: #f5f5f5;
+	text-align: center;
+	margin: 5px;
+}
+.page-nav-item a:hover, .page-nav-item a:focus {
+	color: #000;
+	background: #fff;
+	border: 2px solid #ddd;
+	text-decoration: none;
+}
+    .pagenav-icon {
+	margin-right: 8px;
+	color: #4f878c;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -194,12 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li><a href="../../kids-events/">Kids Events</a></li>
         </ul>
       </li>
-      <li class="dropdown research-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="../../research/">Research Databases</a></li>
-          <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-        </ul>
-      </li>
+      <li class="research-active"><a href="../../research/">Research</a></li>
     </ul>
   </div>
 </nav>
@@ -256,12 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                   <li><a href="../../kids-events/">Kids Events</a></li>
                 </ul>
               </li>
-              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#research">Research <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
-                <ul id="research" class="nav mobile-nav-list collapse">
-                  <li><a href="../../research/">Research Databases</a></li>
-                  <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-                </ul>
-              </li>
+              <li class="research-active mobile-nav-heading"><a href="../../research/">Research</a> </li>
             </ul>
           </div>
         </div>
@@ -286,68 +296,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row">
-    <div class="padding-bottom-30 border-top">
-      <div class="container text-center">
-        <h1 class="text-uppercase jumbo-text font-weight-400">Students</h1>
-        <div class="separator-container">
-          <div class="separator line-separator"><i class="fas fa-graduation-cap"></i></div>
-        </div>
-        <h4 class="roboto">Access all sorts of information for your studies using these database resources. There’s something for all ages and grades, including live tutoring and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank">homework HelpNow.</a></h4>
-      </div>
-    </div><!-- #BeginLibraryItem "/Library/database-dropdown.lbi" --><div class="sticky-one" style="z-index: 100; width: 100%;">
-  <div class="dropdown">
-    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-block btn-database dropdown-toggle"> Filter by Category <span class="caret"></span> </button>
-    <div class="no-gutter bg-salmon dropdown-menu database-dropdown" aria-labelledby="databasedropdown" style="margin:0; border: none;">
-      <div class="col-sm-6 col-md-4 col-lg-15 database-nav-first equal-height">
-        <h5 class="no-margin text-uppercase"><a href="https://www.dcl.org/research/all-databases/" class="show"><i class="fas fa-th-list"></i> All Databases</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-15 database-nav equal-height">
-        <h5 class="no-margin text-uppercase"><a href="https://www.dcl.org/research/students/" class="show"><i class="fas fa-graduation-cap"></i> Students</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-15 database-nav equal-height">
-        <h5 class="no-margin text-uppercase"><a href="https://www.dcl.org/research/business-finance/" class="show"><i class="fas fa-building"></i> Business & Finance</a></h5>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-15 database-nav equal-height">
-        <h5 class="no-margin text-uppercase"><a href="https://www.dcl.org/research/lifestyle/" class="show"><i class="fas fa-coffee"></i> Lifestyle</a></h5>
-      </div>
-      <div class="col-sm-12 col-md-8 col-lg-15 database-nav equal-height">
-        <h5 class="no-margin text-uppercase"><a href="https://www.dcl.org/research/history-genealogy/" class="show"><i class="fas fa-history"></i> History & Genealogy</a></h5>
-      </div>
+  <div class="row border-top">
+    <div class="container text-center">
+      <h1 class="text-uppercase jumbo-text font-weight-400 no-margin-bottom">Student Databases</h1>
     </div>
   </div>
-</div>
-<!-- #EndLibraryItem --></div>
-  <div class="row padding-top-40 padding-bottom-15">
-    <div class="container no-padding margin-lg-200">
-      <div class="col-md-6 padding-bottom-30">
-        <div class="shadow-low hover-shadow text-center">
-          <div class="bg-lavender">
-            <h2 class="roboto white">Elementary School</h2>
-            <a href="elementary-school/"><span class="link-spanner"></span></a> </div>
-        </div>
-      </div>
-      <div class="col-md-6 padding-bottom-30">
-        <div class="shadow-low hover-shadow text-center">
-          <div class="bg-lavender">
-            <h2 class="roboto white">Middle School</h2>
-            <a href="middle-school/"><span class="link-spanner"></span></a> </div>
-        </div>
-      </div>
-      <div class="col-md-6 padding-bottom-30">
-        <div class="shadow-low hover-shadow text-center">
-          <div class="bg-lavender">
-            <h2 class="roboto white">High School</h2>
-            <a href="high-school/"><span class="link-spanner"></span></a> </div>
-        </div>
-      </div>
-      <div class="col-md-6 padding-bottom-30">
-        <div class="shadow-low hover-shadow text-center">
-          <div class="bg-lavender">
-            <h2 class="roboto white">Academic Research</h2>
-            <a href="academic-research/"><span class="link-spanner"></span></a> </div>
-        </div>
-      </div>
+  <div class="row">
+    <div class="container text-center">
+      <h4 class="roboto margin-top-5 margin-lg-100">Access all sorts of information for your studies using these database resources.</h4>
+    </div>
+  </div>
+  <div class="row padding-bottom-15 padding-top-30">
+    <div class="page-nav">
+      <div class="page-nav-item"><a href="elementary-school/"><i class="pagenav-icon fas fa-child"></i>Elementary School</a></div>
+      <div class="page-nav-item"><a href="middle-school/"><i class="pagenav-icon fas fa-user"></i>Middle School</a></div>
+      <div class="page-nav-item"><a href="high-school/"><i class="pagenav-icon fas fa-user-graduate"></i>High School</a></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container text-center padding-bottom-40 margin-lg-200">
+      <div class="text-center padding-top-30 ">There’s something for all ages and grades, including live tutoring and <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank">homework HelpNow.</a> Access the databases for free either at the library or online using your personal or school library card.</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -356,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="social-footer">
       <div class="social-left">
         <h5 class="no-margin-bottom">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
-          <h5 class="margin-top-5"><a href="../../taxes/">Tax Resources</a>&nbsp;| <a href="https://cotaxaide.org/appt/" target="_blank">Tax Help for Seniors</a></h5>
+        <h5 class="margin-top-5"><a href="../../taxes/">Tax Resources</a>&nbsp;| <a href="https://cotaxaide.org/appt/" target="_blank">Tax Help for Seniors</a></h5>
       </div>
       <div class="social-right">
         <div class="social-links-wrapper"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fab fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fab fa-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fab fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fab fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="https://www.flickr.com/photos/douglascountylibraries/albums" target="_blank"> <i class="fab fa-flickr fa-2x"></i></a> </div>
@@ -409,7 +377,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" -->
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Library",
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Castle Rock",
+		"addressRegion": "CO",
+		"postalCode": "80104",
+		"streetAddress": "100 S. Wilcox Street"
+	},
+	"telephone": "(303) 791-7323",
+	"name": "Douglas County Libraries",
+	"url": "https://www.dcl.org/",
+	"image": "https://www.dcl.org/locations/castle-rock.jpg",
+	"description": "Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.",
+	"logo": "https://www.dcl.org/dcl-logo.png",
+	"priceRange": "Free",
+
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://dcl.bibliocommons.com/v2/search?query=search_term_string",
+		"query-input": "required name=search_term_string"
+	},
+	"sameAs": ["https:\/\/dcl.bibliocommons.com",
+		"https:\/\/www.blogs.douglascountylibraries.org",
+		"https:\/\/help.dcl.org/",
+		"https:\/\/www.douglascountylibraries.org/",
+		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
+		"https:\/\/www.instagram.com\/dclcolorado",
+		"https:\/\/www.youtube.com\/user\/dclwebteam",
+		"https:\/\/pinterest.com\/dougcolibraries",
+		"https:\/\/twitter.com\/DCLcolorado"
+	]
+}
+</script> 
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
