@@ -129,9 +129,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .events-active {
 	background-color: #f5f5f5;
 }
-.sub-nav-item a, .sub-nav-item a:hover {
-	padding: 19px 15px 15px 15px;
-}
 .author-wrapper, .event-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -232,6 +229,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .author-item {
 	max-width: 600px;
+}
+}
+
+@media (max-width: 1150px) {
+.page-nav {
+	max-width: 800px;
+	margin: 0 auto;
 }
 }
 </style>
@@ -424,28 +428,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container">
-      <div class="text-center padding-bottom-30">
-        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Authors & Events</h1>
-        <div class="separator-container">
-          <div class="separator line-separator"><i class="fas fa-bookmark"></i></div>
-        </div>
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase font-weight-400">Authors & Events</h1>
       </div>
     </div>
   </div>
-  <div class="row no-gutter sub-nav-row">
-    <div class="sub-nav">
-      <div class="col-sm-3 sub-nav-item sub-nav-border-first equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank"><i class="fas fa-calendar"></i>Events Calendar</a></h5>
-      </div>
-      <div class="col-sm-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="#featured-events"><i class="fas fa-star"></i>Featured Events</a></h5>
-      </div>
-      <div class="col-sm-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="#other-author-events"><i class="fas fa-glass-martini-alt"></i>Author Events</a></h5>
-      </div>
-      <div class="col-sm-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../past-authors/"><i class="fas fa-history"></i>Past Authors</a></h5>
-      </div>
+  <div class="row padding-bottom-30">
+    <div class="page-nav">
+      <div class="page-nav-item"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank"><i class="pagenav-icon fas fa-calendar"></i>Events Calendar</a></div>
+      <div class="page-nav-item"><a href="#featured-events"><i class="pagenav-icon fas fa-star"></i>Featured Events</a></div>
+      <div class="page-nav-item"><a href="#other-author-events"><i class="pagenav-icon fas fa-glass-martini-alt"></i>Author Events</a></div>
+      <div class="page-nav-item"><a href="../past-authors/"><i class="pagenav-icon fas fa-history"></i>Past Authors</a></div>
     </div>
   </div>
   <div class="row cj-row">
@@ -466,10 +459,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="featured-events" class="row ">
-    <div class="container">
-      <div class="text-center padding-top-15 padding-bottom-15">
-        <h1 class="jumbo-text text-uppercase font-weight-400">Featured Events</h1>
-        <h4 class="roboto margin-lg-200 text-center">Don't miss these special library events!</h4>
+    <div class="container text-center">
+      <div class="padding-top-15">
+        <h1>Featured Events</h1>
+        <h4>Don't miss these special library events!</h4>
       </div>
     </div>
   </div>

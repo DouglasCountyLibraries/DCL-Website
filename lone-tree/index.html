@@ -86,13 +86,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
-<script type="text/javascript">
-   $(function() {
-    var images = ['lone-tree-one.jpg', 'lone-tree-two.jpg', 'lone-tree-three.jpg', 'lone-tree-four.jpg', 'lone-tree-five.jpg', 'lone-tree-six.jpg'];
-    $('.location-background').css({'background-image': 'url(assets/images/' + images[Math.floor(Math.random() * images.length)] + ')'});
-   });
-  </script>
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
@@ -155,9 +148,15 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 #eventsinfo #noevent {
 	text-align: center;
-	color: white;
-	font-size: 20px;
-	margin-bottom: -10px;
+	font-size: 0px;
+    margin-bottom: -10px;
+}
+#eventsinfo #noevent::after {
+	content: "New featured events coming soon! For all events at this branch visit the Lone Tree calendar.";
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+    padding: 0 15px;
 }
 .location-events {
 	padding-bottom: 40px;
@@ -180,8 +179,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .item-wrapper img {
 	padding: 15px 0;
 }
-.location-events {
-	padding-bottom: 15px;
+}
+
+@media (max-width: 1150px) {
+.page-nav {
+	max-width: 800px;
+	margin: 0 auto;
 }
 }
 </style>
@@ -372,92 +375,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row location-background padding-top-15 padding-bottom-40">
+  <div class="row border-top">
     <div class="container text-center">
-      <h1 class="no-margin-bottom font-weight-400 white text-capitalize fade-in-text">Lone Tree</h1>
-      <div class="white font-weight-500 text-uppercase margin-bottom-10">Customer Service: <a href="tel:+13037917323" class="white margin-left-5">(303) 791-7323</a></div>
-      <h4 class="white font-weight-400 margin-lg-100"> <i style="font-size:18px;padding:5px 5px 0 0;vertical-align:top;" class="fas fa-home"></i> A Nextdoor Neighborhood <a class="white text-underline" href="https://nextdoor.com/pages/lone-tree-library-lone-tree-co/recommend/" target="_blank">Favorite</a>. The library is home to Playful Pets, sponsored by WellHaven Pet Health. The interactive play animal clinic and grooming spa features kid-size lab coats, stuffed animals, and veterinary and grooming products and tools.</h4>
-    </div>
-  </div>
-  <div class="row no-gutter sub-nav-row">
-    <div class="sub-nav">
-      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border-first equal-height">
-        <h5 class="no-margin text-uppercase"> <a href="../storytime/" class="show"><i class="fas fa-comment fa-flip-horizontal"></i>Storytime</a> </h5>
-      </div>
-      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../reserve-a-space/"><i class="fas fa-check-square"></i>Reserve a Space</a></h5>
-      </div>
-      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=1002&nd=180" target="_blank"><i class="fas fa-calendar"></i>Lone Tree Events Calendar</a></h5>
-      </div>
-      <div class="col-md-6 col-lg-3 sub-nav-item sub-nav-border equal-height">
-        <h5 class="no-margin text-uppercase"><a class="show" href="../used-book-sales/"><i class="fas fa-book"></i>Used Book Sales</a></h5>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade text-center" id="storytime-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content padding-bottom-60">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h2 class="modal-title" id="myModalLabel">Lone Tree Storytime</h2>
-        </div>
-        <div class="modal-body">
-          <div class="padding-bottom-30" style="border-bottom:1px solid #e5e5e5">
-            <ul class="list-unstyled">
-              <li>
-                <h5 class="text-uppercase">Monday, Wednesday &amp; Friday</h5>
-              </li>
-              <li>9:30AM-Baby</li>
-              <li>10:15AM-Toddler</li>
-              <li>11:15AM-Preschool</li>
-              <li>
-                <h5 class="text-uppercase">Tuesday &amp; Thursday</h5>
-              </li>
-              <li>9:30AM-Baby</li>
-              <li>11:15AM-Preschool</li>
-              <li>
-                <h5 class="text-uppercase">Tuesday</h5>
-              </li>
-              <li>7PM-All Ages</li>
-              <li>
-                <h5 class="text-uppercase">Saturday</h5>
-              </li>
-              <li>10AM-All Ages</li>
-            </ul>
-          </div>
-          <div class="padding-top-15">
-            <ul class="list-unstyled">
-              <li>
-                <h4 class="roboto">Special Storytime</h4>
-              </li>
-              <li>
-                <h5 class="text-uppercase">First Thursday of Each Month</h5>
-              </li>
-              <li>11:15AM-Storytime Presents</li>
-            </ul>
-          </div>
-        </div>
-        <a class="text-uppercase" href="../storytime/">View Storytime Hours at all Locations &raquo;</a> </div>
-    </div>
-  </div>
-  <div class="row bg-gray-10 padding-top-30 padding-bottom-30">
-    <div class="container">
-      <div class="text-center">
+      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Lone Tree</h1>
+      <div class="padding-bottom-15">
         <div itemscope itemtype="http://schema.org/PostalAddress">
-          <h1 class="roboto no-margin-top"> <a href="https://goo.gl/maps/iCAWeKh68Dr" target="_blank"><span itemprop="streetAddress">10055&nbsp;Library&nbsp;Way</span>, <span itemprop="addressLocality">Lone&nbsp;Tree</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80124</span></a></h1>
+          <h4 class="margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/iCAWeKh68Dr" target="_blank"><span itemprop="streetAddress">10055&nbsp;Library&nbsp;Way</span>, <span itemprop="addressLocality">Lone&nbsp;Tree</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80124</span></a></h4>
         </div>
-        <h4 class="text-uppercase no-margin-top"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;8AM-8PM</span><br class="insert-break">
+        <div class="text-uppercase"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;8AM-8PM</span><br class="insert-break">
           <span class="margin-left-10 margin-right-10">Fri:&nbsp;8AM-6PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Sat-Sun:&nbsp;10-4PM</span></h4>
+          <span class="margin-left-10 margin-right-10">Sat-Sun:&nbsp;10-4PM</span></div>
+        <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
       </div>
     </div>
   </div>
-  <div id="events" class="row location-events bg-lavender">
+  <div class="row padding-bottom-30">
+    <div class="page-nav">
+      <div class="page-nav-item"><a href="../storytime/"><i class="pagenav-icon fas fa-comment fa-flip-horizontal"></i>Storytime</a></div>
+      <div class="page-nav-item"><a href="../reserve-a-space/"><i class="pagenav-icon fas fa-check-square"></i>Reserve a Space</a></div>
+      <div class="page-nav-item"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=1002&nd=180" target="_blank"><i class="pagenav-icon fas fa-calendar"></i>Lone Tree Calendar</a></div>
+      <div class="page-nav-item"><a href="../used-book-sales/"><i class="pagenav-icon fas fa-book"></i>Used Book Sales</a></div>
+    </div>
+  </div>
+  <div class="row padding-bottom-40">
+    <div class="container text-center"><img class="img-responsive image-center" src="../locations/lone-tree.jpg" alt="Lone Tree">
+      <h4 class="roboto padding-top-15">The library is home to Playful Pets, sponsored by WellHaven Pet Health.</h4>
+      <div class="margin-lg-200">The interactive play animal clinic and grooming spa features kid-size lab coats, stuffed animals, and veterinary and grooming products and tools. <a href="https://nextdoor.com/pages/lone-tree-library-lone-tree-co/recommend/" target="_blank">A Nextdoor Neighborhood Favorite.</a></div>
+    </div>
+  </div>
+  <div id="events" class="row location-events bg-teal">
     <div class="container-md no-padding">
-      <h1 class="white text-uppercase text-center font-weight-400">Featured Branch Events</h1>
+      <h2 class="white text-center">Featured Branch Events</h2>
       <div id="eventsinfo"></div>
       <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Lone-Tree-Event&lib=ALL&nd=90&private=1&dm=html&IncludeDateHtml=1"></script> 
     </div>
@@ -476,10 +424,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>-->
-  <div class="row padding-top-15 padding-bottom-30">
+  <div class="row padding-top-40 padding-bottom-40">
     <div class="container text-center">
-      <h4 class="roboto margin-lg-200">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h4>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary text-uppercase margin-top-10" type="button">Exhibit Your Work</button>
+      <h4 class="no-margin-top margin-lg-200">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h4>
+      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-10" type="button">Exhibit Your Work</button>
       <!-- Modal -->
       <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
         <div role="document" class="modal-dialog">
