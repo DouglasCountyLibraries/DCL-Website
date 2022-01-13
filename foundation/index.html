@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,6 +88,20 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+@font-face {
+	font-family: 'Honey';
+	src: url('../shared-assets/web-fonts/HoneyButterScript.woff2') format('woff2'), url('../shared-assets/web-fonts/HoneyButterScript.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+h4.honey {
+	font-family: 'Honey', serif;
+	font-size: 70px;
+	line-height: .9em;
+	color: #666;
+	margin: 15px 0 -10px;
+}
 .white-top-bkg {
 	background: #fff url(white-top.gif) center center repeat-x;
 }
@@ -127,6 +142,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .item-wrapper.gala {
 	align-items: center;
+	padding: 0 0 20px 0;
 }
 .item {
 	flex: 1;
@@ -136,16 +152,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .gala-item {
 	padding: 15px;
 }
-.gala-item {
-	min-width: 425px;
+.custom-icon {
+	top: -12px;
+	position: relative;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 625px) {
 .gala-item {
 	flex-direction: column;
+	text-align: center;
 	min-width: 100%;
 	margin: 0;
-	padding: 15px;
+	padding: 5px;
 }
 }
 
@@ -354,13 +372,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div>Your <a href="../donate/">support of the Foundation</a> helps fund programs that reach youth, adults and families in Douglas County and across Colorado, and helps ensure the long-term success of our outstanding libraries. </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row bg-gray-5">
+    <div class="white-bottom-bkg">
+      <div class="white-circle"><img class="custom-icon" src="gingerbread.png" alt=""></div>
+    </div>
+  </div>
+  <div class="row padding-bottom-60">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="margin-top-10 margin-bottom-5">Save the Date!</h2>
+        <h4 class="honey">Hansel &amp; Gretel</h4>
+      </div>
+      <div class="item-wrapper gala">
+        <div class="gala-item">
+          <h4 class="black no-margin">Deep in the Forest</h4>
+          <div class="better-times">Seventh Annual Fête des Fables Gala</div>
+          <div>Friday, October 14, 2022</div>
+          <div>Highlands Ranch Mansion</div>
+        </div>
+        <div class="gala-item">
+          <h4 class="black no-margin">Gingerbread Cottage</h4>
+          <div class="better-times">Second Annual Family Fête Celebration</div>
+          <div>Saturday, August 27, 2022</div>
+          <div>Douglas County Libraries in Lone Tree</div>
+        </div>
+      </div>
+      <div class="text-center large-text">All event proceeds benefit the Douglas County Libraries Foundation.</div>
+      <div class="text-center">Join us as we bring another fabulous fable to life! We’re so grateful for your support. </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
     <div class="container text-center padding-top-40">
       <h2 class="margin-bottom-5">Funding the Future</h2>
       <h4 class="no-margin-top">Giving Now for Generations to Come</h4>
     </div>
   </div>
-  <div class="row padding-bottom-30">
+  <div class="row bg-gray-5 padding-bottom-30">
     <div class="container">
       <div class="item-wrapper">
         <div class="item">
@@ -400,11 +447,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     $('<img alt="Exploration Stations" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
 </script>
   <div id="support" class="row">
-    <div class="white-top-bkg">
+    <div class="white-bottom-bkg">
       <div class="gray-circle"><i class="fas fa-hands-helping"></i></div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-bottom-60">
+  <div class="row padding-bottom-60">
     <div class="container text-center margin-lg-150">
       <h2 class="margin-top-10 margin-bottom-5">We Can Help</h2>
       <h4 class="no-margin-top margin-lg-100">The Foundation supports other agencies and organizations in our community and across Colorado.</h4>
@@ -413,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="margin-lg-200">Please be aware that the application and approval process may take up to 8 weeks. Schedule your program accordingly.</div>
     </div>
   </div>
-  <div class="row padding-top-40 padding-bottom-60">
+  <div class="row bg-gray-5 padding-top-40 padding-bottom-60">
     <div class="container text-center margin-lg-175">
       <h2 class="margin-top-10 margin-bottom-5">Board of Directors</h2>
       <div>The <a href="../foundation-board/">Foundation’s Board of Directors</a> oversees the <a href="dcl-foundation-2020-annual-report.pdf" target="_blank">business and affairs</a> of the Foundation and the <a href="five-year-foundation-report.pdf" target="_blank">fundraising activities</a> that are vital to supporting all of the programs and services of the district. </div>
@@ -548,4 +595,5 @@ $(document).ready(function() {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
