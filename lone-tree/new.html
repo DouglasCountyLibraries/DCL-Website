@@ -92,6 +92,61 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
+.eventList.width {
+	font-family: "Ubuntu", arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+#eventsinfo .item {
+	font-size: 0px;
+}
+#eventsinfo .location, #eventsinfo .branch, .description br {
+	display: none;
+}
+#eventsinfo .item {
+	max-width: 500px;
+	text-align: center;
+}
+#eventsinfo .item .title {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: -0.8px;
+}
+#eventsinfo .item .title a, #eventsinfo .item .title a:hover, #eventsinfo .item .title a:focus {
+	text-decoration: none;
+}
+#eventsinfo #eventdate {
+	font-size: 16px;
+	padding-left: 20px;
+}
+#eventsinfo .description {
+	font-size: 16px;
+	margin: 8px 0;
+}
+#eventsinfo .description > a {
+	word-break: break-word;
+}
+#eventsinfo .time {
+	font-size: 16px;
+}
+#eventsinfo #noevent {
+	text-align: center;
+	font-size: 0px;
+	margin-bottom: -10px;
+}
+#eventsinfo #noevent::after {
+	content: "New featured events coming soon! For all events at this branch visit the Lone Tree calendar.";
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	padding: 0 15px;
+}
 .red-text a:hover {
 	color: darkred;
 }
@@ -125,8 +180,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	width: 385px;
 }
 .item {
-	margin: 15px;
-	width: 555px;
 }
 .card-content {
 	background: #fff;
@@ -544,6 +597,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <div id="events" class="row location-events">
+    <div class="container-md no-padding">
+      <h2 class="text-center">Featured Branch Events</h2>
+      <div id="eventsinfo"></div>
+      <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Lone-Tree-Event&lib=ALL&nd=90&private=1&dm=html&IncludeDateHtml=1"></script> 
+    </div>
+  </div>
   <div id="check-out" class="row padding-top-60 padding-bottom-60">
     <div class="box-item-wrapper">
       <div id="check-out-colorado" class="box-item">
@@ -689,6 +749,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <!--[if gte IE 9]><!--> 
+<script>
+function OpenInNewTab(url ){
+  var win=window.open(url, '_blank');
+  win.focus();
+}
+$("#eventsinfo .item").click(function(){
+     var url = $(this).find("a").attr("href");
+     OpenInNewTab(url);
+     return false;
+});
+	</script> 
 <script>
 /* http://cssmojo.com/ken-burns-effect/ */
 function kbSlideshow() { // set .fx1 class on 1st img on page load
