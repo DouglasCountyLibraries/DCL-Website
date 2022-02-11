@@ -268,26 +268,32 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background-image: url("slideshow/nine.jpg")
 }
 
-@media (max-width: 1000px) {
-.slideshow-row {
-	flex-flow: row wrap;
+@media (max-width: 1150px) {
+.slideshow-image.main {
+	min-height: 400px;
 }
-#slideshow {
-	width: 100%;
+.page-nav {
+	max-width: 800px;
+	margin: 0 auto;
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-row {
+	flex-direction: column;
 }
 .slideshow-content {
 	padding: 30px 20px 40px;
 	text-align: center;
 }
+#slideshow {
+	width: 100%;
+}
 }
 
-@media (max-width: 1150px) {
-.page-nav {
-	max-width: 800px;
-	margin: 0 auto;
-}
-#slideshow {
-	width: 55%;
+@media (max-width: 575px) {
+.slideshow-image.main {
+	min-height: 300px;
 }
 }
 </style>
