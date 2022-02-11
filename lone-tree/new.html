@@ -143,29 +143,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 #eventsinfo #noevent::after {
 	content: "New featured events coming soon! For all events at this branch visit the Lone Tree calendar.";
 	text-align: center;
-	color: #fff;
-	font-size: 18px;
+	font-size: 20px;
 	padding: 0 15px;
+	max-width: 550px;
+	display: inline-block;
 }
 .red-text a:hover {
 	color: darkred;
-}
-.alltrails-row {
-	background: #f5f5f5 url("../shared-assets/images/fabric.jpg");
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 2000px;
-	margin: 0 auto;
-}
-.alltrails-box {
-	flex: 1 100%;
-}
-.alltrails-box.main {
-	min-height: 475px;
-}
-.aside-margin {
-	margin: 0 5%;
 }
 .item-wrapper {
 	display: flex;
@@ -201,12 +185,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 
-@media (max-width: 992px) {
-.alltrails-box.main {
-	min-height: 375px;
-}
-}
-
 @media (max-width: 1475px) {
 .aside {
 	padding: 15px;
@@ -231,15 +209,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 
-@media (max-width: 1200px) {
-#slideshow {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 45%;
-	width: 100%;
-}
-}
-
 @media (max-width: 1620px) {
 .custom-container {
 	max-width: 1200px;
@@ -260,12 +229,35 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.alltrails-row {
+	background: #f5f5f5 url("../shared-assets/images/fabric.jpg");
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1680px;
+	margin: 0 auto;
+}
+.alltrails-box.aside {
+	flex-shrink: 20;
+}
+.alltrails-box.main {
+	min-height: 500px;
+}
+.aside-margin {
+	margin: 0 5%;
+}
 #slideshow {
 	position: relative;
 	overflow: hidden;
-	padding-bottom: 30%;
-	width: 54%;
+	padding-bottom: 0%;
+	width: 67%;
 } /* (img px height / img px width x 100) = padding-bottom % */
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}
 #slideshow div {
 	position: absolute;
 	z-index: 2;
