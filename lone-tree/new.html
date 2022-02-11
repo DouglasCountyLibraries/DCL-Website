@@ -93,7 +93,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background-color: #f5f5f5;
 }
 .location-events {
-	padding: 50px 0 60px;
+	padding: 50px 15px;
 }
 .eventList.width {
 	font-family: "Ubuntu", arial, sans-serif;
@@ -102,8 +102,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-rendering: optimizeLegibility;
 	display: flex;
 	flex-wrap: wrap;
-	align-content: center;
 	justify-content: center;
+}
+#eventsinfo {
+	max-width: 650px;
+	margin: 0 auto;
 }
 #eventsinfo .item {
 	font-size: 0px;
@@ -112,14 +115,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	display: none;
 }
 #eventsinfo .item {
-	max-width: 500px;
+	border-bottom: 2px solid #f5f5f5;
 	text-align: center;
+	padding: 15px 0;
+}
+#eventsinfo .item:last-of-type {
+	border-bottom: 0;
 }
 #eventsinfo .item .title {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 300;
-	line-height: 1.2;
-	letter-spacing: -0.8px;
 }
 #eventsinfo .item .title a, #eventsinfo .item .title a:hover, #eventsinfo .item .title a:focus {
 	text-decoration: none;
@@ -131,6 +136,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 #eventsinfo .description {
 	font-size: 16px;
 	margin: 8px 0;
+	text-align: left;
 }
 #eventsinfo .description > a {
 	word-break: break-word;
@@ -147,7 +153,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	content: "New featured events coming soon! For all events at this branch visit the Lone Tree calendar.";
 	text-align: center;
 	font-size: 20px;
-	padding: 0 15px;
+	padding: 15px;
 	max-width: 550px;
 	display: inline-block;
 }
@@ -266,6 +272,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 #slideshow div:nth-of-type(9) {
 	background-image: url("slideshow/nine.jpg")
+}
+
+@media (max-width: 1500px) {
 }
 
 @media (max-width: 1150px) {
@@ -531,12 +540,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div>Informal and formal meeting and event spaces are also available to the public, as well as laptop borrowing. <a href="https://nextdoor.com/pages/lone-tree-library-lone-tree-co/recommend/" target="_blank">A Nextdoor Neighborhood Favorite.</a></div>
     </div>
   </div>
-  <div id="events" class="row location-events">
-    <div class="container-md no-padding">
-      <h2 class="text-center no-margin-top">Featured Branch Events</h2>
-      <div id="eventsinfo"></div>
-      <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Lone-Tree-Event&lib=ALL&nd=90&private=1&dm=html&IncludeDateHtml=1"></script> 
-    </div>
+  <div id="events" class="row text-center location-events">
+    <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
+    <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=1002&nd=180" target="_blank" class="text-uppercase font-weight-400">Lone Tree Calendar »</a>
+    <div id="eventsinfo"></div>
+    <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Lone-Tree-Event&lib=ALL&nd=90&private=1&dm=html&IncludeDateHtml=1"></script> 
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
