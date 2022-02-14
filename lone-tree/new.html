@@ -114,6 +114,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .location-events {
 	padding: 50px 15px;
 }
+.item-wrapper {
+	display: flex;
+	align-items: center;
+}
+.item-wrapper img {
+	padding: 0 15px;
+}
+.art-item {
+	flex-basis: 60%;
+}
 .eventList.width {
 	font-family: "Ubuntu", arial, sans-serif;
 	font-size: 16px;
@@ -266,7 +276,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 
 @media (max-width: 925px) {
-.slideshow-row {
+.slideshow-row, .item-wrapper {
 	flex-direction: column;
 }
 .slideshow-content {
@@ -275,6 +285,12 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 #slideshow {
 	width: 100%;
+}
+.item-wrapper img {
+	padding-bottom: 15px;
+}
+.art-item {
+	text-align: center;
 }
 }
 
@@ -552,6 +568,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <h5 class="no-margin-top margin-bottom-5">Kids can discover, create, and act out various aspects of veterinary-style pet care using provided tools, devices, and their imaginations.</h5>
       </div>
       <div class="margin-lg-200">In the Animal Clinic, kid vets can don lab coats to examine stuffed animal patients using play veterinary devices and equipment. They can also groom the stuffed animals in the Animal Grooming Spa using provided brushes, combs, and other tools.</div>
+    </div>
+  </div>
+  <div class="row padding-top-60">
+    <div class="container no-padding item-wrapper margin-lg-150 margin-md-50">
+      <div class="art-item text-center"><img class="img-responsive center-block" alt="Pamela Martin Photography" src="martin.jpg"> </div>
+      <div class="art-item">
+        <div class="margin-left-10 margin-right-10">
+          <h2 class="no-margin text-uppercase font-weight-400">Pamela Martin</h2>
+          <h3 class="no-margin-top margin-bottom-5">Photography</h3>
+          <div class="large-text margin-bottom-10">January 6-February 24</div>
+          <div>Pamela Martin works in the ever-changing world of education and stays grounded by taking pictures during her hikes. She hopes viewers will enjoy some of her recent favorites and looks forward to sharing more pictures in the future.</div>
+          <div class="margin-top-5">More information <i>@friluftsliv_photography</i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-top-30 padding-bottom-60">
+    <div class="container text-center">
+      <h5 class="no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h5>
+      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-10" type="button">Exhibit Your Work</button>
+      <!-- Modal -->
+      <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
+        <div role="document" class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+              <h4 id="artModalLabel" class="modal-title">Interested in Exhibiting Your Work?</h4>
+            </div>
+            <div class="modal-body">
+              <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
