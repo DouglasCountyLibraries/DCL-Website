@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="title" -->
 <title>Lone Tree | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
-<meta name="description" content="DCL in Lone Tree is home to Playful Pets, a kid-size interactive animal clinic and grooming spa, as well as event and meeting spaces and laptop borrowing.">
+<meta name="description" content="Our light-filled Lone Tree library includes a spacious Kids Corner area with dedicated Storytime space and Everbright, a Lite-Brite-inspired interactive wall.">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -86,9 +87,41 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
+}
+.carousel-cell {
+	margin-right: 10px;
+}
+.flickity-prev-next-button {
+	width: 50px;
+	height: 50px;
+	background: transparent;
+}
+.flickity-prev-next-button:hover {
+	background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+	fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+	color: #efeeed;
+}
+.location-events {
+	padding: 50px 15px;
+}
+.item-wrapper {
+	display: flex;
+	align-items: center;
+}
+.item-wrapper img {
+	padding: 0 15px;
+}
+.art-item {
+	flex-basis: 60%;
 }
 .eventList.width {
 	font-family: "Ubuntu", arial, sans-serif;
@@ -97,8 +130,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	text-rendering: optimizeLegibility;
 	display: flex;
 	flex-wrap: wrap;
-	align-content: center;
 	justify-content: center;
+}
+#eventsinfo {
+	max-width: 650px;
+	margin: 0 auto;
 }
 #eventsinfo .item {
 	font-size: 0px;
@@ -107,38 +143,29 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	display: none;
 }
 #eventsinfo .item {
-	background-color: rgba(255,255,255,.9);
-	margin: 5px;
-	padding: 30px;
-	max-width: 450px;
+	border-bottom: 2px solid #f5f5f5;
+	text-align: center;
+	padding: 15px 0;
 }
-#eventsinfo .item:hover, #eventsinfo .item:focus {
-	cursor: pointer;
-	background-color: rgba(255,255,255,1);
-	box-shadow: rgba(0, 0, 0, 0.5) 0 8px 16px 0;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 8px 16px 0;
-	transition: all .4s ease-out;
-	-webkit-transition: all .4s ease;
+#eventsinfo .item:last-of-type {
+	border-bottom: 0;
+	padding-bottom: 10px;
 }
 #eventsinfo .item .title {
 	font-size: 24px;
 	font-weight: 300;
-	line-height: 1.2;
-	letter-spacing: -0.8px;
 }
 #eventsinfo .item .title a, #eventsinfo .item .title a:hover, #eventsinfo .item .title a:focus {
-	color: #666;
 	text-decoration: none;
 }
 #eventsinfo #eventdate {
 	font-size: 16px;
-	text-align: left;
-	padding-right: 20px;
-	float: left;
+	padding-left: 20px;
 }
 #eventsinfo .description {
 	font-size: 16px;
 	margin: 8px 0;
+	text-align: left;
 }
 #eventsinfo .description > a {
 	word-break: break-word;
@@ -154,37 +181,124 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 #eventsinfo #noevent::after {
 	content: "New featured events coming soon! For all events at this branch visit the Lone Tree calendar.";
 	text-align: center;
-	color: #fff;
-	font-size: 18px;
-	padding: 0 15px;
+	font-size: 20px;
+	padding: 15px;
+	max-width: 550px;
+	display: inline-block;
 }
-.location-events {
-	padding-bottom: 40px;
-}
-.item-wrapper {
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-row {
+	background: #f5f5f5 url("../shared-assets/images/fabric.jpg");
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	max-width: 1680px;
+	margin: 0 auto;
 }
-.item-wrapper img {
-	padding: 0 15px;
+.slideshow-content {
+	flex: 1 1 36%;
+	padding: 0 30px 20px;
 }
-.art-item {
-	flex-basis: 60%;
+.slideshow-image.main {
+	min-height: 600px;
 }
-
-@media (max-width: 992px) {
-.eventList.width, .item-wrapper {
-	flex-direction: column;
+#slideshow {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 0%;
+	width: 67%;
+	border-right: 15px solid #fff;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+	position: absolute;
+	z-index: 2;
+	width: 105%;
+	height: 105%;
+	top: -5%;
+	left: -5%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	-webkit-transition: opacity 3s, -webkit-transform 8s;
+	transition: opacity 3s, transform 8s;
 }
-.item-wrapper img {
-	padding: 15px 0;
+#slideshow div:nth-of-type(9n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
 }
+#slideshow div {
+	-webkit-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(2n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+}
+#slideshow div:nth-of-type(3n+1) {
+	-webkit-transform-origin: bottom left;
+	transform-origin: bottom left;
+}
+#slideshow div:nth-of-type(4n+1) {
+	-webkit-transform-origin: top right;
+	transform-origin: top right;
+}
+#slideshow div:nth-of-type(5n+1) {
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+#slideshow div:nth-of-type(6n+1) {
+	-webkit-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(7n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+}
+/* slide one */
+#slideshow div:nth-of-type(8n+1) {
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+#slideshow .fx, #slideshow .fx1 {
+	-webkit-transform: scale(1.1) translate(1.5%);
+	transform: scale(1.1) translate(1.5%);
+	opacity: 1
 }
 
 @media (max-width: 1150px) {
+.slideshow-image.main {
+	min-height: 400px;
+}
 .page-nav {
 	max-width: 800px;
 	margin: 0 auto;
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-row, .item-wrapper {
+	flex-direction: column;
+}
+.slideshow-content {
+	padding: 30px 20px 40px;
+	text-align: center;
+}
+#slideshow {
+	width: 100%;
+	border-right: 0;
+}
+.item-wrapper img {
+	padding-bottom: 15px;
+}
+.art-item {
+	text-align: center;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-image.main {
+	min-height: 300px;
 }
 }
 </style>
@@ -365,7 +479,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-	<div class="row border-top">
+  <div class="row border-top">
     <div class="container text-center">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Lone Tree</h1>
       <div class="padding-bottom-15">
@@ -387,49 +501,107 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="page-nav-item"><a href="../used-book-sales/"><i class="pagenav-icon fas fa-book"></i>Used Book Sales</a></div>
     </div>
   </div>
-  <div class="row padding-bottom-40">
-    <div class="container text-center"><img class="img-responsive image-center" src="../locations/lone-tree.jpg" alt="Lone Tree">
-      <h4 class="roboto padding-top-15">The library is home to Playful Pets, sponsored by WellHaven Pet Health.</h4>
-      <div class="margin-lg-200">The interactive play animal clinic and grooming spa features kid-size lab coats, stuffed animals, and veterinary and grooming products and tools. <a href="https://nextdoor.com/pages/lone-tree-library-lone-tree-co/recommend/" target="_blank">A Nextdoor Neighborhood Favorite.</a></div>
+  <div class="row slideshow-row">
+    <div id="slideshow" class="slideshow-image main"> 
+      <!-- define each background-image in CSS -->
+      <div class="" style="background-image: url('slideshow/one.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(1) -->
+      <div class="random-slide" style="background-image: url('slideshow/two.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(2) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/three.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(3) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/four.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(4) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/five.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(5) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/six.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(6) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/seven.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(7) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/eight.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(8) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/nine.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(9) --> 
+    </div>
+    <div class="slideshow-content">
+      <h4 class="no-margin-top">Our light-filled library includes a spacious Kids Corner area with dedicated Storytime space and Everbright—a Lite-Brite-inspired interactive wall. </h4>
+      <div>Informal and formal meeting and <a href="../event-services/">event spaces</a> are also available to the public, as well as laptop borrowing. <a href="https://nextdoor.com/pages/lone-tree-library-lone-tree-co/recommend/" target="_blank">A Nextdoor Neighborhood Favorite.</a></div>
     </div>
   </div>
-  <div id="events" class="row location-events bg-teal">
-    <div class="container-md no-padding">
-      <h2 class="white text-center">Featured Branch Events</h2>
-      <div id="eventsinfo"></div>
-      <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Lone-Tree-Event&lib=ALL&nd=90&private=1&dm=html&IncludeDateHtml=1"></script> 
+  <div id="events" class="row text-center location-events">
+    <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
+    <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=1002&nd=180" target="_blank" class="text-uppercase font-weight-400">Lone Tree Calendar »</a>
+    <div id="eventsinfo"></div>
+    <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Lone-Tree-Event&lib=ALL&nd=90&private=1&dm=html&IncludeDateHtml=1"></script> 
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container padding-top-50 padding-bottom-20 text-center">
+      <h2 class="no-margin-top margin-bottom-5">Kid-friendly Fun: Playful Pets</h2>
+      <h4 class="no-margin">Playful Pets Animal Clinic & Grooming Spa</h4>
+      <div class="margin-top-5">Sponsored by WellHaven Pet Health</div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container-lg no-padding">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container text-center padding-top-20 padding-bottom-60">
+      <div class="margin-lg-150">
+        <h5 class="no-margin-top margin-bottom-5">Kids can discover, create, and act out various aspects of veterinary-style pet care using provided tools, devices, and their imaginations.</h5>
+      </div>
+      <div class="margin-lg-200">In the Animal Clinic, kid vets can don lab coats to examine stuffed animal patients using play veterinary devices and equipment. They can also groom the stuffed animals in the Animal Grooming Spa using provided brushes, combs, and other tools.</div>
     </div>
   </div>
   <div class="row padding-top-60">
-    <div class="container item-wrapper margin-lg-150 margin-md-50">
+    <div class="container no-padding item-wrapper margin-lg-150 margin-md-50">
       <div class="art-item text-center"><img class="img-responsive center-block" alt="Pamela Martin Photography" src="martin.jpg"> </div>
-      <div class="art-item text-center text-left-md">
-        <div style="margin: 0 10px;">
+      <div class="art-item">
+        <div class="margin-left-10 margin-right-10">
           <h2 class="no-margin text-uppercase font-weight-400">Pamela Martin</h2>
-          <h4 class="no-margin-top">Photography</h4>
+          <h3 class="no-margin-top margin-bottom-5">Photography</h3>
           <div class="large-text margin-bottom-10">January 6-February 24</div>
           <div>Pamela Martin works in the ever-changing world of education and stays grounded by taking pictures during her hikes. She hopes viewers will enjoy some of her recent favorites and looks forward to sharing more pictures in the future.</div>
-          <div class="margin-top-5"><i>More information @friluftsliv_photography</i></div>
+          <div class="margin-top-5">More information <i>@friluftsliv_photography</i></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row padding-top-15 padding-bottom-60">
+  <div class="row padding-top-30 padding-bottom-60">
     <div class="container text-center">
-      <h4 class="no-margin-top margin-lg-200">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h4>
+      <h5 class="no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h5>
       <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-10" type="button">Exhibit Your Work</button>
-      <!-- Modal -->
-      <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
-        <div role="document" class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-              <h4 id="artModalLabel" class="modal-title">Interested in Exhibiting Your Work?</h4>
-            </div>
-            <div class="modal-body">
-              <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
-            </div>
-          </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
+    <div role="document" class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+          <h3 id="artModalLabel" class="text-center modal-title">Interested in Exhibiting Your Work?</h3>
+        </div>
+        <div class="modal-body">
+          <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
         </div>
       </div>
     </div>
@@ -494,6 +666,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<!--[if gte IE 9]><!--> 
 <script>
 function OpenInNewTab(url ){
   var win=window.open(url, '_blank');
@@ -505,6 +678,42 @@ $("#eventsinfo .item").click(function(){
      return false;
 });
 	</script> 
+<script>
+	var cards = $(".random-slide");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
@@ -512,10 +721,10 @@ $("#eventsinfo .item").click(function(){
 	"@type": "Library",
 	"address": {
 		"@type": "PostalAddress",
-		"addressLocality": "Lone Tree",
+		"addressLocality": "Castle Rock",
 		"addressRegion": "CO",
-		"postalCode": "80124",
-		"streetAddress": "10055 Library Way"
+		"postalCode": "80104",
+		"streetAddress": "100 S. Wilcox Street"
 	},
 	"telephone": "(303) 791-7323",
 	"name": "Douglas County Libraries",
@@ -544,4 +753,5 @@ $("#eventsinfo .item").click(function(){
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
