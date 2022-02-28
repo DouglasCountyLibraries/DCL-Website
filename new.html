@@ -122,6 +122,7 @@ h1.brother {
 }
 .item-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	padding: 60px 0;
@@ -134,6 +135,7 @@ h1.brother {
 }
 .bee-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 60px 0;
 }
@@ -155,7 +157,7 @@ h1.brother {
 	width: 275px;
 	margin: 0 10px;
 	display: block;
-	font-size: 26px;
+	font-size: 24px;
 	letter-spacing: .5px;
 	box-shadow: 0 10px 8px -3px rgba(0,0,0,.3);
 	font-weight: 400;
@@ -168,6 +170,33 @@ h1.brother {
 	box-shadow: 0 10px 8px -3px rgba(0,0,0,.6);
 }
 
+@media (max-width: 1135px) {
+.item.one {
+	order: 1;
+}
+.item.two {
+	order: 3;
+}
+.item.three {
+	order: 2;
+}
+.item > h1 {
+	padding-top: 0;
+	line-height: .6em;
+	padding-bottom: 25px;
+}
+.bee.one {
+	display: none;
+}
+
+.bee.two {
+	margin: 0 auto;
+}
+    .bee-wrapper {
+        padding-top: 0;
+    }
+}
+    
 @media (max-width: 925px) {
 .link-wrapper {
 	flex-wrap: wrap;
@@ -185,6 +214,13 @@ h1.brother {
 .link-wrapper {
 	flex-direction: column;
 	width: inherit;
+}
+}
+    @media (max-width: 500px) {
+h1.brother {
+	font-size: 100px;
+    padding-bottom: 0;
+    padding-top: 25px;
 }
 }
 </style>
@@ -370,11 +406,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="honey-drip">
         <div class="container-md">
           <div class="item-wrapper">
-            <div class="item"><img src="alone.png" alt=""></div>
-            <div class="item">
+            <div class="item one"><img src="alone.png" alt=""></div>
+            <div class="item two">
               <h1 class="brother no-margin text-nowrap">Oh, Honey!</h1>
             </div>
-            <div class="item"><img src="together.png" alt=""></div>
+            <div class="item three"><img src="together.png" alt=""></div>
           </div>
         </div>
         <div class="container-md">
@@ -386,8 +422,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="custom-container">
           <div class="bee-wrapper">
-            <div class="bee"><img src="nothing.png" alt=""></div>
-            <div class="bee"><img src="helen.png" alt=""></div>
+            <div class="bee one"><img src="nothing.png" alt=""></div>
+            <div class="bee two"><img src="helen.png" alt=""></div>
           </div>
         </div>
       </div>
