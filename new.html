@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -92,19 +93,30 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 
 <style>
-    .page {
-background: #f9cf01;
-background: -webkit-radial-gradient(center, ellipse cover,  #f9cf01 60%,#e08f00 100%);
-background: radial-gradient(ellipse at center,  #f9cf01 60%,#e08f00 100%);
-    }
-    
-    .honeycomb {
-        background: transparent url("honeycomb.png") top center repeat;
-        height: 50vh;
-    }
-        .honey-drip {
-        background: transparent url("honey.png") top center repeat-x;
-    }
+@font-face {
+	font-family: 'Brother';
+	src: url('shared-assets/web-fonts/BROTHER-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/BROTHER-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+h1.brother {
+	font-family: 'Brother', serif;
+	color: #5e2f00;
+	font-size: 125px;
+}
+.page {
+	background: #f9cf01;
+	background: -webkit-radial-gradient(center, ellipse cover, #f9cf01 60%, #e08f00 100%);
+	background: radial-gradient(ellipse at center, #f9cf01 60%, #e08f00 100%);
+}
+.honeycomb {
+	background: transparent url("honeycomb.png") top center repeat;
+	height: 50vh;
+}
+.honey-drip {
+	background: transparent url("honey.png") top center repeat-x;
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -283,11 +295,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row page"><div class="honeycomb"><div class="honey-drip">
-      <div class="container"><div class=""><img src="earny.png" alt=""></div>
-        <div class=""><h1>Oh, Honey!</h1></div>
+  <div class="row page">
+    <div class="honeycomb">
+      <div class="honey-drip">
+        <div class="container">          <div class="text-center">
+            <h1 class="brother">Oh, Honey!</h1>
+          </div>
+          <div class=""><img src="earny.png" alt=""></div>
+
+        </div>
+      </div>
     </div>
-      </div></div></div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -386,4 +405,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
