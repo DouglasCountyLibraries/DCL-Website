@@ -120,13 +120,61 @@ h1.brother {
 .item-wrapper {
 	display: flex;
 	justify-content: center;
-
 	align-items: center;
-    padding: 60px 0;
+	padding: 60px 0;
 }
-    .item {
-        
-    }
+.item {
+}
+.link-wrapper {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+}
+.link, .link:visited, .link:active {
+	background: linear-gradient(#f1f1f2, #d0d2d3);
+	border-radius: 10px;
+	color: #5e2f00;
+	padding: 20px 5px;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
+	text-decoration: none;
+	width: 275px;
+	margin: 0 10px;
+	display: block;
+	font-size: 26px;
+	letter-spacing: .5px;
+	box-shadow: 0 10px 8px -3px rgba(0,0,0,.3);
+	font-weight: 400;
+	line-height: 1.1em;
+}
+.link:hover, .link:focus {
+	color: #000;
+	text-decoration: none;
+	-webkit-transition-duration: .5s;
+	box-shadow: 0 10px 8px -3px rgba(0,0,0,.6);
+}
+
+@media (max-width: 925px) {
+.link-wrapper {
+	flex-wrap: wrap;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 600px;
+	margin: 0 auto;
+}
+.link {
+	margin: 10px;
+}
+}
+
+@media (max-width: 620px) {
+.link-wrapper {
+	flex-direction: column;
+	width: inherit;
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -309,12 +357,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="honeycomb">
       <div class="honey-drip">
         <div class="container-md">
-          <div class="item-wrapper"><div class="item"><img src="alone.png" alt=""></div>
+          <div class="item-wrapper">
+            <div class="item"><img src="alone.png" alt=""></div>
             <div class="item">
               <h1 class="brother">Oh, Honey!</h1>
             </div>
             <div class="item"><img src="together.png" alt=""></div>
           </div>
+        </div>
+        <div class="container-md">
+          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Sweet Storybook<br>
+            Holiday</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=fairy+tale+ball&lib=ALL&nd=90" target="_blank" class="link">Bee There:<br>
+            Fairy Tale Ball</a> <a href="camp-dcl/" class="link">All Abuzz for<br>
+            Summer Camp</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=coffee+chat+tuesday&lib=ALL&nd=90" target="_blank" class="link">Join the<br>
+            Coffee Chat</a></div>
         </div>
       </div>
     </div>
