@@ -1,16 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 .slide:hover, .slide:focus {
-  bottom: 10px;
+  bottom: 5px;
+      -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .slide {
   position: fixed;
-  bottom: -3px;
+  bottom: 0;
   left: 0;
   width: 270px;
-  height: 275px;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+  height: 300px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .slide {
   -webkit-animation: slide 30s cubic-bezier(0, 0, 0, 0) both;
@@ -37,13 +39,13 @@
   }
 }
 .bubble {
-  position: relative;
-  left: 310px;
-  bottom: -48px;
-  height: 182px;
-  width: 186px;
-  -webkit-animation: bubble 100s cubic-bezier(0, 0, 0, 0) 3s both;
-  animation: bubble 100s cubic-bezier(0, 0, 0, 0) 3s both;
+	position: relative;
+	left: 345px;
+	bottom: -48px;
+	height: 182px;
+	width: 186px;
+	-webkit-animation: bubble 100s cubic-bezier(0, 0, 0, 0) 3s both;
+	animation: bubble 100s cubic-bezier(0, 0, 0, 0) 3s both;
 }
 @-webkit-keyframes bubble {
   0% {
@@ -74,8 +76,8 @@
   }
 }
 .trish {
-  width: 330px;
-  height: 105px;
+  width: 368px;
+  height: 110px;
   background: url('../images/trish.png') left center;
 }
 @media (max-width: 992px) {
