@@ -89,37 +89,53 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Leckerli+One&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="shared-assets/css/trish.css">
 <style>
-.bebas {
-	font-family: 'Bebas Neue', sans-serif;
+@font-face {
+	font-family: 'Brother';
+	src: url('shared-assets/web-fonts/BROTHER-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/BROTHER-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
-h1.bebas {
-	color: #000;
-	font-size: 250px;
-	line-height: .8em;
+h1.brother {
+	font-family: 'Brother', serif;
+	color: #5e2f00;
+	font-size: 125px;
 }
-.leckerli {
-	font-family: 'Leckerli One', cursive;
+.custom-container {
+	max-width: 900px;
+	margin: 0 auto;
 }
-h2.leckerli {
-	font-size: 120px;
-	color: #000;
-	line-height: .8em;
+.page {
+	background: #f9cf01;
+	background: -webkit-radial-gradient(center, ellipse cover, #f9cf01 60%, #e08f00 100%);
+	background: radial-gradient(ellipse at center, #f9cf01 60%, #e08f00 100%);
 }
-.squeeze-row {
-	background: #ffeb8c url("background.jpg");
-	padding-top: 40px;
+.honeycomb {
+	background: transparent url("honeycomb.png") top center repeat;
 }
-.content-row {
-	background: #92b386;
-	padding: 30px 0 40px;
+.honey-drip {
+	background: transparent url("honey.png") top center repeat-x;
 }
-.squeeze-wrapper {
+.item-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
+	padding: 60px 0;
+}
+.item {
+	padding: 0 10px;
+}
+.item > h1 {
+	padding-top: 60px;
+}
+.bee-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 60px 0 35px;
 }
 .link-wrapper {
 	display: flex;
@@ -129,46 +145,51 @@ h2.leckerli {
 	text-align: center;
 }
 .link, .link:visited, .link:active {
-	font-family: 'Bebas Neue', sans-serif;
-	background: transparent url("red-tape.png") top center no-repeat;
-	color: #000;
-	text-transform: uppercase;
-	padding: 32px 0 12px;
+	background: linear-gradient(#f1f1f2, #d0d2d3);
+	border-radius: 10px;
+	color: #5e2f00;
+	padding: 20px 5px;
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
-	line-height: 28px;
 	text-decoration: none;
 	width: 275px;
 	margin: 0 10px;
 	display: block;
-	font-size: 26px;
+	font-size: 24px;
 	letter-spacing: .5px;
-	box-shadow: 0 10px 0px -4px rgba(0,0,0,.15);
+	box-shadow: 0 10px 8px -3px rgba(0,0,0,.3);
+	font-weight: 400;
+	line-height: 1.1em;
 }
 .link:hover, .link:focus {
-	background: transparent url("red-tape.png") top center no-repeat;
 	color: #000;
 	text-decoration: none;
 	-webkit-transition-duration: .5s;
-	box-shadow: 0 10px 8px -3px rgba(0,0,0,.3);
-}
-.link:nth-of-type(odd) {
-	background: transparent url("yellow-tape.png") top center no-repeat;
-}
-.squeeze.two {
-	margin-bottom: -26px;
-	padding-top: 60px;
-}
-.squeeze.one {
-	padding-top: 10px;
+	box-shadow: 0 10px 8px -3px rgba(0,0,0,.6);
 }
 
-@media (max-width: 1225px) {
-.squeeze-wrapper {
-	flex-direction: column;
-	align-items: center;
+@media (max-width: 1135px) {
+.item.one {
+	order: 1;
 }
-.squeeze-row, .squeeze.two {
+.item.two {
+	order: 3;
+}
+.item.three {
+	order: 2;
+}
+.item > h1 {
+	padding-top: 0;
+	line-height: .6em;
+	padding-bottom: 25px;
+}
+.bee.one {
+	display: none;
+}
+.bee.two {
+	margin: 0 auto;
+}
+.bee-wrapper {
 	padding-top: 0;
 }
 }
@@ -186,12 +207,10 @@ h2.leckerli {
 }
 }
 
-@media (max-width: 700px) {
-h1.bebas {
-	font-size: 160px;
-}
-h2.leckerli {
-	font-size: 100px;
+@media (max-width: 670px) {
+h1.brother {
+	padding-bottom: 0;
+	padding-top: 25px;
 }
 }
 
@@ -200,17 +219,17 @@ h2.leckerli {
 	flex-direction: column;
 	width: inherit;
 }
-.squeeze > img {
-	max-width: 350px;
+}
+
+@media (max-width: 500px) {
+h1.brother {
+	font-size: 100px;
 }
 }
 
 @media (max-width: 425px) {
-h1.bebas {
-	font-size: 140px;
-}
-h2.leckerli {
-	font-size: 80px;
+h1.brother {
+	font-size: 85px;
 }
 }
 </style>
@@ -391,23 +410,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row squeeze-row">
-    <div class="squeeze-wrapper">
-      <div class="squeeze one text-center">
-        <h2 class="leckerli">main</h2>
-        <h1 class="bebas">Squeeze</h1>
+  <div class="row page">
+    <div class="honeycomb">
+      <div class="honey-drip">
+        <div class="container-md">
+          <div class="item-wrapper">
+            <div class="item one"><img src="alone.png" alt=""></div>
+            <div class="item two">
+              <h1 class="brother no-margin text-nowrap">Oh, Honey!</h1>
+            </div>
+            <div class="item three"><img src="together.png" alt=""></div>
+          </div>
+        </div>
+        <div class="container-md">
+          <div class="link-wrapper"> <a href="storybook-holiday/" class="link">Sweet Storybook<br>
+            Holiday</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=fairy+tale+ball&lib=ALL&nd=90" target="_blank" class="link">Bee There:<br>
+            Fairy Tale Ball</a> <a href="camp-dcl/" class="link">All Abuzz for<br>
+            Summer Camp</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=coffee+chat+tuesday&lib=ALL&nd=90" target="_blank" class="link">Join the<br>
+            Coffee Chat</a></div>
+        </div>
+        <div class="custom-container">
+          <div class="bee-wrapper">
+            <div class="bee one"><img src="nothing.png" alt=""></div>
+            <div class="bee two"><img src="helen.png" alt=""></div>
+          </div>
+        </div>
       </div>
-      <div class="squeeze two"><img src="cirtus.png" alt=""></div>
     </div>
   </div>
-  <div class="row content-row">
-    <div class="link-wrapper"> <a href="authors-events/" class="link">An Evening with<br>
-      C.J. Box</a> <a href="camp-dcl/" class="link">Irresistible<br>
-      Summer Camps</a> <a href="storybook-holiday/" class="link">Storybook Holiday<br>
-      Spring</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2043640129" class="link">Couples We<br>
-      Love</a></div>
+  <a href="storybook-holiday/">
+  <div class="slide"><img class="bubble" src="shared-assets/images/talk-bubble.png" alt="Sign up for Saturday fun and giveaways!">
+    <div class="trish"></div>
   </div>
-  <!-- InstanceEndEditable --> </div>
+  </a> <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
     <div class="social-footer">
