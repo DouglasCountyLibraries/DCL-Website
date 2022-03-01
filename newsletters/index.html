@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -105,7 +106,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     }else if (typeof MauticSDK != 'undefined') {
         MauticSDK.onLoad();
     }
-</script>
+</script> 
+<script type="text/javascript">
+    function verifyCallback_5b565ee920b5f511ff03a83d4a591993( response ) {
+        document.getElementById("mauticform_input_newslettersegmentsignup_recaptcha").value = response;
+    }
+</script> 
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <style>
 .mauticform-row {
 	margin-bottom: 10px;
@@ -415,10 +422,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                     <label id="mauticform_label_newslettersegmentsignup_email" for="mauticform_input_newslettersegmentsignup_email" class="mauticform-label">Email:</label>
                     <input id="mauticform_input_newslettersegmentsignup_email" name="mauticform[email]" value="" class="mauticform-input form-control" type="email">
                     <span class="mauticform-errormsg" style="display: none;">Please enter a valid email address</span> </div>
-                  <div id="mauticform_newslettersegmentsignup_captcha" send-now data-validate="captcha" data-validation-type="captcha" class="mauticform-row mauticform-text mauticform-field-7 mauticform-required">
-                    <label id="mauticform_label_newslettersegmentsignup_captcha" for="mauticform_input_newslettersegmentsignup_captcha" class="mauticform-label">3 + 2 = ?</label>
-                    <input id="mauticform_input_newslettersegmentsignup_captcha" name="mauticform[captcha]" value="" class="mauticform-input form-control" type="text">
-                    <span class="mauticform-errormsg" style="display: none;">This is required.</span> </div>
                 </div>
                 <div id="mauticform_newslettersegmentsignup_newsletter_signup" class="mauticform-row mauticform-checkboxgrp mauticform-field-4">
                   <div class="mauticform-checkboxgrp-row">
@@ -446,6 +449,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                   <span class="mauticform-errormsg" style="display: none;"></span>
                   <div>Learn about upcoming educational experiences and events for adults ages 50-plus that can provide personal enrichment. You’ll also get curated book recommendations from DCL staff in this monthly newsletter.</div>
                 </div>
+                <div id="mauticform_newslettersegmentsignup_recaptcha" class="mauticform-row mauticform-div-wrapper mauticform-field-7">
+                  <div class="g-recaptcha" data-sitekey="6Lfy_6ceAAAAADb0B0uCTG09105pcRzqUrDIcUtK" data-callback="verifyCallback_5b565ee920b5f511ff03a83d4a591993"></div>
+                  <input id="mauticform_input_newslettersegmentsignup_recaptcha" name="mauticform[recaptcha]" value="" class="mauticform-input" type="hidden">
+                  <span class="mauticform-errormsg" style="display: none;"></span> </div>
                 <div id="mauticform_newslettersegmentsignup_submit" class="text-center padding-top-20 mauticform-row mauticform-button-wrapper mauticform-field-8">
                   <button type="submit" name="mauticform[submit]" id="mauticform_input_newslettersegmentsignup_submit" value="" class="mauticform-button btn btn-primary btn-lg text-uppercase">Subscribe</button>
                 </div>
@@ -557,4 +564,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
