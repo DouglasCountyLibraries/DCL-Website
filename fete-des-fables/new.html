@@ -127,6 +127,11 @@ h2.amarante {
 	margin: 0 auto;
 	padding: 75px 10px 55px;
 }
+.content-container {
+	max-width: 825px;
+	margin: 0 auto;
+	padding: 0 10px 80px;
+}
 .intro {
 	background: #0a2421;
 }
@@ -145,7 +150,7 @@ h2.amarante {
 	display: flex;
 	flex-direction: column;
 	width: 400px;
-	padding: 0 30px 30px;
+	margin: 0 30px 30px;
 }
 .btn-custom {
 	background: #99c1bf;
@@ -161,6 +166,29 @@ a.btn.btn-custom:hover, a.btn.btn-custom:focus {
 }
 .align-bottom {
 	margin-top: auto;
+}
+
+@media (max-width: 750px) {
+.item-wrapper {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+}
+
+@media (max-width: 600px) {
+h1.honey {
+	font-size: 100px;
+}
+.item {
+	width: 100%;
+}
+}
+    @media (max-width: 450px) {
+h1.honey {
+	font-size: 78px;
+}
+
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -347,8 +375,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="intro row white">
-    <div class="container padding-bottom-80">
-      <h4 class="margin-lg-200 padding-bottom-15 white text-center">Join the Douglas County Libraries Foundation as we wander deep in the forest of the classic story by the Brothers Grimm!</h4>
+    <div class="content-container">
+      <h4 class="padding-bottom-15 white text-center">Join the Douglas County Libraries Foundation as we wander deep in the forest of the classic story by the Brothers Grimm!</h4>
       <div class="item-wrapper">
         <div class="item">
           <h2 class="amarante text-center">Gingerbread Cottage</h2>
@@ -365,7 +393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
         </div>
       </div>
-      <div class="text-center padding-top-30">
+      <div class="text-center padding-top-15">
         <h5 class="white">Event proceeds benefit the Douglas County Libraries Foundation.</h5>
       </div>
     </div>
