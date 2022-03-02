@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,6 +107,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .item-list {
 	padding: 30px;
 }
+.item-list > h4 {
+	font-size: 20px;
+}
 .date-list li {
 	padding-bottom: 15px;
 }
@@ -115,11 +119,27 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	-webkit-backface-visibility: hidden;
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-row {
+	background: #f5f5f5 url("../shared-assets/images/fabric.jpg");
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1610px;
+	margin: 0 auto;
+}
+.slideshow-content {
+	flex: 1 1 36%;
+	padding: 0 30px 20px;
+}
+.slideshow-image.main {
+	min-height: 600px;
+}
 #slideshow {
 	position: relative;
 	overflow: hidden;
-	padding-bottom: 30%;
-	width: 54%;
+	padding-bottom: 0%;
+	width: 67%;
+	border-right: 15px solid #fff;
 } /* (img px height / img px width x 100) = padding-bottom % */
 #slideshow div {
 	position: absolute;
@@ -133,7 +153,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background-size: cover;
 	opacity: 0;
 	-webkit-transition: opacity 3s, -webkit-transform 8s;
-	-ms-transition: opacity 3s, -ms-transform 8s;
 	transition: opacity 3s, transform 8s;
 }
 /* slide two */
@@ -205,26 +224,28 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 #slideshow div:nth-of-type(2) {
 	background-image: url("clifford-still-museum.jpg")
 }
-
 #slideshow div:nth-of-type(3) {
-	background-image: url("denver-firefighters-museum.jpg")
+	background-image: url("colorado-railroad-museum.jpg")
 }
 #slideshow div:nth-of-type(4) {
+	background-image: url("denver-firefighters-museum.jpg")
+}
+#slideshow div:nth-of-type(5) {
 	background-image: url("denver-museum-of-nature-and-science.jpg")
 }
-    #slideshow div:nth-of-type(5) {
+#slideshow div:nth-of-type(6) {
 	background-image: url("dinosaur-ridge.jpg")
 }
-#slideshow div:nth-of-type(6) {
+#slideshow div:nth-of-type(7) {
 	background-image: url("history-colorado-center.jpg")
 }
-#slideshow div:nth-of-type(7) {
+#slideshow div:nth-of-type(8) {
 	background-image: url("molly-brown-house-museum.jpg")
 }
-#slideshow div:nth-of-type(8) {
+#slideshow div:nth-of-type(9) {
 	background-image: url("museum-of-contemporary-art.jpg")
 }
-#slideshow div:nth-of-type(9) {
+#slideshow div:nth-of-type(10) {
 	background-image: url("wings-over-the-rockies.jpg")
 }
 /* captions */
@@ -284,19 +305,29 @@ opacity:0;
 }
 }
 
-@media (max-width: 1200px) {
-.item-wrapper {
+@media (max-width: 925px) {
+.slideshow-row, .item-wrapper {
 	flex-direction: column;
 }
-#slideshow {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 65%;
-	width: 100%;
-}
-.item-list {
+.slideshow-content {
+	padding: 30px 20px 40px;
 	text-align: center;
-	padding: 30px 15px 35px 15px;
+}
+#slideshow {
+	width: 100%;
+	border-right: 0;
+}
+.item-wrapper img {
+	padding-bottom: 15px;
+}
+.art-item {
+	text-align: center;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-image.main {
+	min-height: 300px;
 }
 }
 </style>
@@ -488,78 +519,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h4 class="roboto text-center margin-lg-100">Use your library card to reserve a Douglas County Libraries <a href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Adventure Pass</a> to one of our local participating cultural institutions. Reserve free passes up to 14 days in advance. </h4>
     </div>
   </div>
-  <div class="row bg-teal">
-    <div class="container-md item-wrapper no-padding">
-      <div class="item" id="slideshow"> 
-        <!-- define each background-image in CSS -->
-        <div></div>
-        <!-- #slideshow div:nth-of-type(1) --> 
-        <span>&copy; Butterfly Pavilion</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(2) --> 
-        <span>&copy; Clyfford Still Museum</span>
-        <div></div>
-
-        <!-- #slideshow div:nth-of-type(3) --> 
-        <span>&copy; Denver Firefighters Museum</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(4) --> 
-        <span>&copy; Denver Museum of Nature & Science</span>
-        <div></div>
-                  <!-- #slideshow div:nth-of-type(5) --> 
-        <span>&copy; Dinosaur Ridge</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(6) --> 
-        <span>&copy; History Colorado Center</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(7) --> 
-        <span>&copy; Paul Brokering Photography</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(8) --> 
-        <span>&copy; MCA Denver</span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(9) --> 
-        <span>&copy; Wings Over the Rockies Air & Space Museum</span> </div>
-      <div class="item item-list">
-        <div>
-          <h4 class="no-margin-top"><a class="white" href="https://goo.gl/maps/VJiUS4pxFem" target="_blank">Butterfly Pavilion</a></h4>
-        </div>
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/1SZaYEK3cv52" target="_blank">Clyfford Still Museum</a></h4>
-        </div>
-        <!--<div>
-          <h4 class="no-margin-bottom"><a class="white" href="https://goo.gl/maps/hdpzfdcKg4s" target="_blank">Colorado Symphony*</a></h4>
+  <div class="row slideshow-row">
+    <div id="slideshow" class="slideshow-image main"> 
+      <!-- define each background-image in CSS -->
+      <div></div>
+      <!-- #slideshow div:nth-of-type(1) --> 
+      <span>&copy; Butterfly Pavilion</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(2) --> 
+      <span>&copy; Clyfford Still Museum</span>
+      <div></div>
+      
+      <!-- #slideshow div:nth-of-type(3) --> 
+      <span>&copy; Colorado Railroad Museum</span>
+      <div></div>
+      
+      <!-- #slideshow div:nth-of-type(4) --> 
+      <span>&copy; Denver Firefighters Museum</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(5) --> 
+      <span>&copy; Denver Museum of Nature & Science</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(6) --> 
+      <span>&copy; Dinosaur Ridge</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(7) --> 
+      <span>&copy; History Colorado Center</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(8) --> 
+      <span>&copy; Paul Brokering Photography</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(9) --> 
+      <span>&copy; MCA Denver</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(10) --> 
+      <span>&copy; Wings Over the Rockies Air & Space Museum</span> </div>
+    <div class="slideshow-content">
+      <h5 class="no-margin-top"><a href="https://goo.gl/maps/VJiUS4pxFem" target="_blank">Butterfly Pavilion</a></h5>
+      <h5><a href="https://goo.gl/maps/1SZaYEK3cv52" target="_blank">Clyfford Still Museum</a></h5>
+      <h5><a href="https://g.page/corailroadmuseum" target="_blank">Colorado Railroad Museum</a></h5>
+      
+      <!--<div>
+          <h5 class="no-margin-bottom"><a href="https://goo.gl/maps/hdpzfdcKg4s" target="_blank">Colorado Symphony*</a></h5>
           <div class="small white">*Passes available for <a href="#" data-toggle="modal" data-target="#symphony" class="white text-underline">these performances</a></div>
         </div>-->
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/nswiDYjXdYo" target="_blank">Denver Firefighters Museum</a></h4>
-        </div>
-        <!-- removed until they re-open <div>
-         <h4><a href="https://goo.gl/maps/gB4iKfbCsXx" target="_blank">Denver Museum of Miniatures, Dolls and Toys</a></h4>
+      
+      <h5><a href="https://goo.gl/maps/nswiDYjXdYo" target="_blank">Denver Firefighters Museum</a></h5>
+      
+      <!-- removed until they re-open <div>
+         <h5><a href="https://goo.gl/maps/gB4iKfbCsXx" target="_blank">Denver Museum of Miniatures, Dolls and Toys</a></h5>
         </div>-->
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/wDgZGzgiLct" target="_blank">Denver Museum of Nature & Science</a></h4>
-        </div>
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/HTqhvcNt1Hz6DN5YA" target="_blank">Dinosaur Ridge</a></h4>
-        </div>
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/DC8LFDAHJLo" target="_blank">History Colorado Center</a></h4>
-        </div>
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/nSdLFauthwT2" target="_blank">Molly Brown House Museum</a></h4>
-        </div>
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/ZH2Vas4RAYt" target="_blank">Museum of Contemporary Art Denver</a></h4>
-        </div>
-        <div>
-          <h4><a class="white" href="https://goo.gl/maps/jxLnGpwLNts" target="_blank">Wings Over the Rockies Air &amp; Space Museum</a></h4>
-        </div>
-        <div> <a class="text-uppercase btn btn-lg btn-primary margin-top-15" href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Reserve Now</a></div>
-      </div>
+      
+      <h5><a href="https://goo.gl/maps/wDgZGzgiLct" target="_blank">Denver Museum of Nature & Science</a></h5>
+      <h5><a href="https://goo.gl/maps/HTqhvcNt1Hz6DN5YA" target="_blank">Dinosaur Ridge</a></h5>
+      <h5><a href="https://goo.gl/maps/DC8LFDAHJLo" target="_blank">History Colorado Center</a></h5>
+      <h5><a href="https://goo.gl/maps/nSdLFauthwT2" target="_blank">Molly Brown House Museum</a></h5>
+      <h5><a href="https://goo.gl/maps/ZH2Vas4RAYt" target="_blank">Museum of Contemporary Art Denver</a></h5>
+      <h5><a href="https://goo.gl/maps/jxLnGpwLNts" target="_blank">Wings Over the Rockies Air &amp; Space Museum</a></h5>
+      <div> <a class="text-uppercase btn btn-lg btn-primary margin-top-15" href="http://www.eventkeeper.com/code/events.cfm?curOrg=dclibs&curapp=passes" target="_blank">Reserve Now</a></div>
     </div>
   </div>
-  <div class="row text-center padding-top-60 padding-bottom-40">
+  <div class="row text-center padding-top-100 padding-bottom-60">
     <div class="container">
       <div class="padding-bottom-30"><img class="img-responsive image-center library-card" src="../shared-assets/images/library-card.jpg" alt="Get a Library Card"></div>
       <h5>To enjoy all the benefits of being a DCL cardholder, <a href="http://getacard.org/v2/index.html" target="_blank">sign up here</a>.</h5>
@@ -723,4 +743,5 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
