@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -544,6 +545,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="eventsinfo"></div>
     <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Roxborough-Event&lib=ALL&nd=90&private=1&dm=html&IncludeDateHtml=1"></script> 
   </div>
+  <div class="row bg-gray-5">
+    <div class="container padding-top-50 padding-bottom-20 text-center">
+      <h4 class="no-margin">Kid-friendly Fun:</h4>
+      <h2 class="no-margin">Mission Control</h2>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="custom-container no-padding">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="container text-center padding-top-30 padding-bottom-60">
+      <div class="margin-lg-100">3-2-1&hellip;Blast off to an out-of-this-world play experience here! Our interactive space-themed play space features a standalone rocket and other playful facets of a mission control room where imaginations can soar. Kids can dress up in spacesuits, climb aboard the rocket, run a "systems check," and prepare for blast-off using their imaginations and the provided play materials, equipment, and devices. The sky's the limit!</div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -642,6 +670,15 @@ function kbSlideshow() { // set .fx1 class on 1st img on page load
 	}
 setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
@@ -681,4 +718,5 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
