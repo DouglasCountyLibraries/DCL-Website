@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,8 +102,22 @@ h4.honey {
 	color: #666;
 	margin: 15px 0 -10px;
 }
+.white-top-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
+	background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
+	background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0 );
+}
+.white-bottom-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff', GradientType=0 );
+}
 .gray-circle {
-	border: 6px solid #f5f5f5;
+	border: 6px solid #e6e4e2;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #4f878c;
@@ -114,18 +129,13 @@ h4.honey {
 	text-align: center;
 	width: 150px;
 }
-.white-circle {
-	border: 6px solid #fff;
+.white-circle-wrapper {
+	border: 8px solid #fff;
 	border-radius: 50%;
 	box-sizing: border-box;
-	color: #4f878c;
-	background-color: #f5f5f5;
-	font-size: 70px;
-	height: 150px;
-	line-height: 135px;
+	height: 166px;
 	margin: 0 auto;
-	text-align: center;
-	width: 150px;
+	width: 166px;
 }
 .box-wrapper, .item-wrapper {
 	display: flex;
@@ -348,12 +358,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row border-top">
     <div class="container text-center margin-lg-175 padding-bottom-15">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Foundation</h1>
-
       <h4 class="roboto margin-top-5">The Douglas County Libraries Foundation delivers funding and resources to help sustain the Douglas County Libraries to positively impact our community members so they can grow and thrive.</h4>
     </div>
   </div>
-  <div class="row">
-    <div class="white-top-bkg">
+  <div class="row white-top-row">
+    <div class="white-circle-wrapper">
       <div class="gray-circle"><i class="fas fa-dove"></i></div>
     </div>
   </div>
@@ -363,9 +372,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div>Your <a href="../donate/">support of the Foundation</a> helps fund programs that reach youth, adults and families in Douglas County and across Colorado, and helps ensure the long-term success of our outstanding libraries. </div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="white-bottom-bkg">
-      <div class="white-circle"><img class="custom-icon" src="gingerbread.png" alt=""></div>
+  <div class="row white-bottom-row">
+    <div class="white-circle-wrapper">
+      <div style="padding:2px 0 0 1px;" class="gray-circle"><img class="custom-icon" src="gingerbread-house.png" alt=""></div>
     </div>
   </div>
   <div class="row padding-bottom-60">
@@ -440,9 +449,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	var images = ['station-one.jpg', 'station-two.jpg', 'station-three.jpg', 'station-four.jpg', 'station-five.jpg', 'station-six.jpg'];
     $('<img alt="Exploration Stations" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
 </script>
-  <div id="support" class="row">
-    <div class="white-bottom-bkg">
-      <div class="gray-circle"><i class="fas fa-hands-helping"></i></div>
+  <div id="support" class="row white-bottom-row">
+    <div class="white-circle-wrapper">
+      <div class="gray-circle"><i style="position:relative;left:1px;top:2px;" class="fas fa-hands-helping"></i></div>
     </div>
   </div>
   <div class="row padding-bottom-60">
@@ -588,4 +597,5 @@ $(document).ready(function() {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
