@@ -122,11 +122,29 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .gray-row.last, .white-row.last {
 	border-bottom: 1px solid #ddd;
 }
-.gray-circle {
-	border: 6px solid #f5f5f5;
+    .white-top-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
+	background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
+	background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
 }
-.white-circle {
-	border: 6px solid #fff;
+.white-bottom-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+}
+.gray-circle {
+	border: 6px solid #e6e4e2;
+}
+.white-circle-wrapper {
+	border: 8px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+width: 178px;
+    height: 178px;
+	margin: 0 auto;
+
 }
 .library-card {
 	transform: rotate(-5deg);
@@ -352,9 +370,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <!----################################### -->
   
-  <div class="row padding-top-15">
-    <div class="white-top-bkg">
-      <div id="e-books"><img src="e-books.png" alt="E-Books" class="gray-circle img-circle img-responsive center-block"></div>
+  <div class="row white-top-row padding-top-15">
+    <div class="white-circle-wrapper">
+      <div id="e-books"><img src="e-books.jpg" alt="E-Books" class="gray-circle img-circle img-responsive center-block"></div>
     </div>
   </div>
   <div class="row bg-gray-5 text-center">
@@ -427,9 +445,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <!----################################### -->
   
-  <div class="row bg-gray-5 padding-top-15">
-    <div class="white-bottom-bkg">
-      <div id="audiobooks"><img src="audiobooks.png" alt="Audiobooks" class="white-circle img-circle img-responsive center-block"></div>
+  <div class="row white-bottom-row padding-top-30">
+    <div class="white-circle-wrapper">
+      <div id="audiobooks"><img src="audiobooks.jpg" alt="Audiobooks" class="gray-circle img-circle img-responsive center-block"></div>
     </div>
   </div>
   <div class="row text-center">
@@ -502,9 +520,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <!----################################### -->
   
-  <div class="row  padding-top-15">
-    <div class="white-top-bkg">
-      <div id="magazines"><img src="magazines.png" alt="Magazines" class="gray-circle img-circle img-responsive center-block"></div>
+  <div class="row white-top-row padding-top-30">
+    <div class="white-circle-wrapper">
+      <div id="magazines"><img src="magazines.jpg" alt="Magazines" class="gray-circle img-circle img-responsive center-block"></div>
     </div>
   </div>
   <div class="row bg-gray-5 text-center">
@@ -543,9 +561,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <!----################################### -->
   
-  <div class="row bg-gray-5 padding-top-15">
-    <div class="white-bottom-bkg">
-      <div id="videos"><img src="movies.png" alt="Movies, TV & Kids Videos" class="white-circle img-circle img-responsive center-block"></div>
+  <div class="row white-bottom-row padding-top-30">
+    <div class="white-circle-wrapper">
+      <div id="videos"><img src="movies.jpg" alt="Movies, TV & Kids Videos" class="gray-circle img-circle img-responsive center-block"></div>
     </div>
   </div>
   <div class="row text-center">
@@ -602,9 +620,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
   <!----################################### -->
   
-  <div class="row padding-top-15">
-    <div class="white-top-bkg">
-      <div id="music"><img src="music.png" alt="Music" class="gray-circle img-circle img-responsive center-block"></div>
+  <div class="row white-top-row padding-top-30">
+    <div class="white-circle-wrapper">
+      <div id="music"><img src="music.jpg" alt="Music" class="gray-circle img-circle img-responsive center-block"></div>
     </div>
   </div>
   <div class="row bg-gray-5 text-center">
