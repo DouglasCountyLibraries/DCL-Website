@@ -88,6 +88,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+    	
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
@@ -95,6 +96,26 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 <style>
+    
+      .bee-one
+            {
+                position: absolute;
+                left: 200px;
+                width: 48px;
+                height: 50px;
+                margin: 5px;
+            }   
+    
+        
+      .bee-two
+            {
+                position: absolute;
+                right: 200px;
+                width: 48px;
+                height: 50px;
+                margin: 5px;
+            } 
+    
 h1.nerko {
 	font-family: 'Nerko One', cursive;
 	color: #fff;
@@ -105,27 +126,10 @@ h1.nerko {
 	margin: 0 auto;
 }
 .page {
-	background: #003e59;
+	background: #003e59 url("background.jpg") center top repeat-x;
+	height: 600px;
 	padding: 100px 0 120px;
-}
-.item-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	padding: 60px 0;
-}
-.item {
-	padding: 0 10px;
-}
-.item > h1 {
-	padding-top: 60px;
-}
-.bee-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: 60px 0 35px;
+    position: relative;
 }
 .link-wrapper {
 	display: flex;
@@ -133,6 +137,7 @@ h1.nerko {
 	align-content: center;
 	align-items: center;
 	text-align: center;
+	padding: 30px 0 30px;
 }
 .link, .link:visited, .link:active {
 	color: #fff;
@@ -155,32 +160,6 @@ h1.nerko {
 	box-shadow: 0 10px 8px -3px rgba(0,0,0,.2);
 }
 
-@media (max-width: 1135px) {
-.item.one {
-	order: 1;
-}
-.item.two {
-	order: 3;
-}
-.item.three {
-	order: 2;
-}
-.item > h1 {
-	padding-top: 0;
-	line-height: .6em;
-	padding-bottom: 25px;
-}
-.bee.one {
-	display: none;
-}
-.bee.two {
-	margin: 0 auto;
-}
-.bee-wrapper {
-	padding-top: 0;
-}
-}
-
 @media (max-width: 925px) {
 .link-wrapper {
 	flex-wrap: wrap;
@@ -192,37 +171,12 @@ h1.nerko {
 .link {
 	margin: 10px;
 }
-.item-wrapper {
-	padding: 30px 0 40px;
-}
-}
-
-@media (max-width: 670px) {
-h1.brother {
-	padding-bottom: 0;
-	padding-top: 25px;
-}
-.item-wrapper {
-	padding: 10px 0 60px;
-}
 }
 
 @media (max-width: 620px) {
 .link-wrapper {
 	flex-direction: column;
 	width: inherit;
-}
-}
-
-@media (max-width: 500px) {
-h1.brother {
-	font-size: 100px;
-}
-}
-
-@media (max-width: 425px) {
-h1.brother {
-	font-size: 85px;
 }
 }
 </style>
@@ -403,7 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row page">
+  <div class="row page"><img class="bee-one" src="marsha.png" alt="">
     <div class="container-md">
       <h1 class="nerko no-margin text-center">Splish, Splash, Bloom</h1>
     </div>
@@ -412,7 +366,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         Reading Challenge</a> <a href="volunteer/" class="link">It's National<br>
         Volunteer Month</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2074168319" class="link">Flowers<br>
         for You</a></div>
-    </div>
+      </div><img class="bee-two" src="marsha.png" alt="">
   </div>
   <!-- <a href="storybook-holiday/">
   <div class="slide"><img class="bubble" src="shared-assets/images/talk-bubble.png" alt="Sign up for Saturday fun and giveaways!">
@@ -476,7 +430,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" -->
+
+     <script type="text/javascript">
+            $(".bee-one").mouseover(function () {
+                $(".bee-one").animate({ 
+                        left:(Math.random()*500),
+                        top:(Math.random()*500),
+                 }, "slow");
+            });
+        </script>
+         <script type="text/javascript">
+            $(".bee-two").mouseover(function () {
+                $(".bee-two").animate({ 
+                        right:(Math.random()*500),
+                        bottom:(Math.random()*500),
+                 }, "slow");
+            });
+        </script>
+
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
