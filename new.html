@@ -96,13 +96,25 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 <style>
-  .static-marsha {
+.page {
+	background: #005b4e url("background.jpg") center top repeat-x;
+	height: 700px;
+	padding: 60px 0 0;
+	position: relative;
+    border-top: 30px solid #003d59;
+}
+h1.nerko {
+	font-family: 'Nerko One', cursive;
+	color: #fff;
+	font-size: 100px;
+}
+.static-marsha {
 	background: url("marsha.png");
 	width: 48px;
 	height: 50px;
-      margin: 0 auto;
+	margin: 0 auto;
 	animation: marsha-sprite .1s steps(2) infinite;
-}  
+}
 .bee-one {
 	background: url("marsha.png");
 	position: absolute;
@@ -118,31 +130,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	width: 58px;
 	height: 60px;
 	animation: jim-sprite .1s steps(2) infinite;
-}
-@keyframes jim-sprite {
-to {
-background-position: -116px 0;
-}
-}
-@keyframes marsha-sprite {
-to {
-background-position: -96px 0;
-}
-}
-h1.nerko {
-	font-family: 'Nerko One', cursive;
-	color: #fff;
-	font-size: 100px;
-}
-.custom-container {
-	max-width: 900px;
-	margin: 0 auto;
-}
-.page {
-	background: #005b4e url("background.jpg") center top repeat-x;
-	height: 660px;
-	padding: 60px 0 0;
-	position: relative;
 }
 .link-wrapper {
 	display: flex;
@@ -188,34 +175,43 @@ h1.nerko {
 	height: inherit;
 	padding: 60px 0 0;
 	position: relative;
+    border-top: 0;
 }
 .link-wrapper {
 	padding: 50px 0 325px;
 }
-
-    .bee-two {
-        display: none;
-    }
+.bee-two {
+	display: none;
 }
-    
-    @media (min-width: 624px) {
-        .static-marsha {
-            display: none;
-        }
-    }   
-    
+}
+
+@media (min-width: 624px) {
+.static-marsha {
+	display: none;
+}
+}
+
 @media (max-width: 625px) {
 .link-wrapper {
 	flex-direction: column;
 	width: inherit;
 }
 .bee-one {
-    display: none;
+	display: none;
 }
-    .page {
-
+.page {
 	padding: 10px 0 0;
-	
+}
+}
+@keyframes jim-sprite {
+to {
+background-position: -116px 0;
+}
+}
+@keyframes marsha-sprite {
+to {
+background-position: -96px 0;
+}
 }
 @-webkit-keyframes heartbeat {
 from {
@@ -464,17 +460,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row page">
-    <div class="bee-one"></div>
-      <div class="container-md"><div class="static-marsha"></div>
-      <h1 class="nerko no-margin text-center">Splish, Splash, Bloom</h1>
-    </div>
     <div class="container-md">
+      <div class="bee-one"></div>
+      <div class="static-marsha"></div>
+      <h1 class="nerko no-margin text-center">Splish, Splash, Bloom</h1>
       <div class="link-wrapper"> <a href="reading-challenge/" class="link">Keep Growing:<br>
         Reading Challenge</a> <a href="volunteer/" class="link">It's National<br>
-        Volunteer Month</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2074168319" class="link">Flowers<br>
+        Volunteer Month!</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2074168319" class="link">Flowers<br>
         for You</a></div>
+      <div class="bee-two"></div>
     </div>
-    <div class="bee-two"></div>
   </div>
   <!-- <a href="storybook-holiday/">
   <div class="slide"><img class="bubble" src="shared-assets/images/talk-bubble.png" alt="Sign up for Saturday fun and giveaways!">
