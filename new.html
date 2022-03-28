@@ -88,7 +88,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-    	
+
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
@@ -96,26 +96,32 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 <style>
-    
-      .bee-one
-            {
-                position: absolute;
-                left: 200px;
-                width: 48px;
-                height: 50px;
-                margin: 5px;
-            }   
-    
-        
-      .bee-two
-            {
-                position: absolute;
-                right: 200px;
-                width: 48px;
-                height: 50px;
-                margin: 5px;
-            } 
-    
+.bee-one {
+	background: url("marsha.png");
+	position: absolute;
+	left: 20%;
+	width: 48px;
+	height: 50px;
+	animation: marsha-sprite .1s steps(2) infinite;
+}
+.bee-two {
+	background: url("jim.png");
+	position: absolute;
+	right: 20%;
+	width: 63px;
+	height: 65px;
+	animation: jim-sprite .1s steps(2) infinite;
+}
+@keyframes jim-sprite {
+to {
+background-position: -126px 0;
+}
+}
+@keyframes marsha-sprite {
+to {
+background-position: -96px 0;
+}
+}
 h1.nerko {
 	font-family: 'Nerko One', cursive;
 	color: #fff;
@@ -129,7 +135,7 @@ h1.nerko {
 	background: #003e59 url("background.jpg") center top repeat-x;
 	height: 600px;
 	padding: 100px 0 120px;
-    position: relative;
+	position: relative;
 }
 .link-wrapper {
 	display: flex;
@@ -357,7 +363,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row page"><img class="bee-one" src="marsha.png" alt="">
+  <div class="row page">
+    <div class="bee-one"></div>
     <div class="container-md">
       <h1 class="nerko no-margin text-center">Splish, Splash, Bloom</h1>
     </div>
@@ -366,7 +373,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         Reading Challenge</a> <a href="volunteer/" class="link">It's National<br>
         Volunteer Month</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2074168319" class="link">Flowers<br>
         for You</a></div>
-      </div><img class="bee-two" src="marsha.png" alt="">
+    </div>
+    <div class="bee-two"></div>
   </div>
   <!-- <a href="storybook-holiday/">
   <div class="slide"><img class="bubble" src="shared-assets/images/talk-bubble.png" alt="Sign up for Saturday fun and giveaways!">
@@ -430,25 +438,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" -->
-
-     <script type="text/javascript">
+<!-- InstanceBeginEditable name="scripts" --> 
+<script type="text/javascript">
             $(".bee-one").mouseover(function () {
                 $(".bee-one").animate({ 
                         left:(Math.random()*500),
                         top:(Math.random()*500),
                  }, "slow");
             });
-        </script>
-         <script type="text/javascript">
+        </script> 
+<script type="text/javascript">
             $(".bee-two").mouseover(function () {
                 $(".bee-two").animate({ 
                         right:(Math.random()*500),
                         bottom:(Math.random()*500),
                  }, "slow");
             });
-        </script>
-
+        </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
