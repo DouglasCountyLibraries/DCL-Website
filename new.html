@@ -96,6 +96,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 <style>
+  .static-marsha {
+	background: url("marsha.png");
+	width: 48px;
+	height: 50px;
+      margin: 0 auto;
+	animation: marsha-sprite .1s steps(2) infinite;
+}  
 .bee-one {
 	background: url("marsha.png");
 	position: absolute;
@@ -185,14 +192,30 @@ h1.nerko {
 .link-wrapper {
 	padding: 50px 0 325px;
 }
+
+    .bee-two {
+        display: none;
+    }
 }
+    
+    @media (min-width: 624px) {
+        .static-marsha {
+            display: none;
+        }
+    }   
+    
 @media (max-width: 625px) {
 .link-wrapper {
 	flex-direction: column;
 	width: inherit;
 }
-.bee-two {
+.bee-one {
     display: none;
+}
+    .page {
+
+	padding: 10px 0 0;
+	
 }
 @-webkit-keyframes heartbeat {
 from {
@@ -442,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row page">
     <div class="bee-one"></div>
-    <div class="container-md">
+      <div class="container-md"><div class="static-marsha"></div>
       <h1 class="nerko no-margin text-center">Splish, Splash, Bloom</h1>
     </div>
     <div class="container-md">
