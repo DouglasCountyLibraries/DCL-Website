@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,14 +87,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<script src="biblioList.js"></script>
+<script src="biblioList.js?4722"></script>
 <style>
 .kids-teens-active {
 	background-color: #f5f5f5;
 }
+.shelf-container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
 .shelf-container img {
-	margin: 15px 15px 17px 15px;
+	margin: 15px 15px 8px 15px;
 	vertical-align: bottom;
+}
+.shelf > ul {
+	padding: 0;
 }
 .cover-image-alt {
 	height: 275px;
@@ -111,39 +119,136 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	background: #fff;
 	margin: 15px 15px 17px 15px;
 	border: 1px solid #ddd;
+	text-align: center;
 }
 .epic-item:hover, .epic-item:focus {
 	top: 2px;
 	transition: all 0.4s ease-in-out;
 	transform: scale(1.05);
 }
+.epic-row {
+	max-width: 1170px;
+	margin: 0 auto;
+}
 .epic-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	border-bottom: 20px solid transparent;
+	border-image: url("shelf.jpg") 30 round;
+	margin: 0 5px;
 }
 .epic-title {
 	text-transform: uppercase;
 	font-size: 18px;
 	margin-bottom: -15px;
 	margin-top: 6px;
-    font-weight: 400;
+	font-weight: 400;
 }
 #covers-outer > ul {
 	margin: 0;
 	padding: 0;
 }
-
-@media (min-width: 992px) {
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.box-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 5px 15px;
+	/* width: 578px; */
+	background: #fff;
+	border-radius: 3px;
+}
+.box-item-inner {
+	padding: 5px 30px 35px;
+}
+.gray-circle-wrapper {
+	border: 6px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	height: 112px;
+	margin: 0 auto;
+	width: 112px;
+}
+.gray-circle {
+	border: 6px solid #e6e4e2;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #4f878c;
+	background-color: #fff;
+	font-size: 42px;
+	height: 100px;
+	line-height: 90px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+}
+.white-bottom-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+}
 .shelf {
 	border-bottom: 20px solid transparent;
-	border-image: url("new-shelf.jpg") 30 30 30 30 round round;
+	border-image: url("shelf.jpg") 30 round;
 	border-top: 0 none;
 	padding-bottom: 0;
+	margin: 0 5px;
+}
+.shelf-shadow, .epic-shelf-shadow {
+	background: #fff url("shelf-shadow.jpg") repeat-x;
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 30px solid #fff;
+	border-right: 30px solid #fff;
+	padding: 0 15px;
+}
+
+@media (max-width: 1050px) {
+.cover-image {
+	max-width: 155px;
+}
+}
+@media (max-width: 992px) {
+.shelf-container img {
+	margin: 15px 5px 8px 5px;
+}
+@media (max-width: 875px) {
+.shelf {
+border-bottom: 0;
+border-image: none;
 }
 .shelf-shadow {
-	background: #fff url("shelf-shadow.jpg");
-	background-repeat: repeat-x;
+background: none;
+}
+.shelf-container {
+max-width: 575px;
+}
+}
+@media (max-width: 752px) {
+.epic-wrapper {
+border-bottom: 0;
+border-image: none;
+}
+.epic-shelf-shadow {
+background: none;
+}
+}
+@media (max-width: 750px) {
+.box-wrapper {
+flex-direction: column;
+}
+.box-item {
+text-align: center;
 }
 }
 </style>
@@ -327,34 +432,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row padding-bottom-20 border-top">
     <div class="container">
       <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 fade-in-text">Read, Listen, Watch</h1>
-        <div class="separator-container">
-          <div class="separator line-separator"><i class="fas fa-book"></i></div>
-        </div>
+        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Read, Listen, Watch</h1>
+        <h4 class="roboto margin-top-5">These engaging e-books and downloadable resources make learning fun and easy.</h4>
+        <div>Looking for recommendations? <a href="../staff-picks/">Check out our featured staff picks</a>.</div>
       </div>
-      <h4 class="roboto text-center">These engaging e-books and downloadable resources make learning fun and easy.<br>
-        Looking for recommendations? <a href="../staff-picks/">Check out our featured staff picks</a>.</h4>
     </div>
   </div>
   <div id="epic-reads" class="text-center">
     <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1960235203">Epic Reads</a></h2>
   </div>
-  <div class="row shelf">
-    <div class="container shelf-container text-center epic-wrapper">
-      <div class="epic-item"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1959673259">
-        <div class="epic-title">Grades 1-3</div>
-        <img class="cover-image-alt" src="https://cor-cdn-static.bibliocommons.com/list_jacket_covers/live/1959673259.png" alt="Epic Reads Grades 1-3"></a></div>
-      <div class="epic-item"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1959679789">
-        <div class="epic-title">Grades 4-6</div>
-        <img class="cover-image-alt" src="https://cor-cdn-static.bibliocommons.com/list_jacket_covers/live/1959679789.png" alt="Epic Reads Grades 4-6"></a></div>
-      <div class="epic-item"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1959683533">
-        <div class="epic-title">Grades 6-8</div>
-        <img class="cover-image-alt" src="https://cor-cdn-static.bibliocommons.com/list_jacket_covers/live/1959683533.png" alt="Epic Reads Grades 7-8"></a></div>
+  <div class="row">
+    <div class="epic-row">
+      <div class="epic-wrapper">
+        <div class="epic-item"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1959673259">
+          <div class="epic-title">Grades 1-3</div>
+          <img class="cover-image-alt" src="https://cor-cdn-static.bibliocommons.com/list_jacket_covers/live/1959673259.png" alt="Epic Reads Grades 1-3"></a></div>
+        <div class="epic-item"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1959679789">
+          <div class="epic-title">Grades 4-6</div>
+          <img class="cover-image-alt" src="https://cor-cdn-static.bibliocommons.com/list_jacket_covers/live/1959679789.png" alt="Epic Reads Grades 4-6"></a></div>
+        <div class="epic-item"> <a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1959683533">
+          <div class="epic-title">Grades 6-8</div>
+          <img class="cover-image-alt" src="https://cor-cdn-static.bibliocommons.com/list_jacket_covers/live/1959683533.png" alt="Epic Reads Grades 7-8"></a></div>
+      </div>
     </div>
   </div>
-  <div class="row shelf-shadow padding-bottom-60">
-    <div class="container margin-lg-250">
-      <div class="padding-top-40 text-center"> These are the books DCL’s youth librarians will be talking about in schools throughout the school year. These specially chosen reads for kids in grades 1-8 include everything from fiction, nonfiction and sci-fi to fantasy, mystery, humor and more. Enjoy!
+  <div class="row padding-bottom-60">
+    <div class="epic-shelf-shadow">
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> These are the books DCL’s youth librarians will be talking about in schools throughout the school year. These specially chosen reads for kids in grades 1-8 include everything from fiction, nonfiction and sci-fi to fantasy, mystery, humor and more. Enjoy!
         <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1960235203">See Entire List &raquo;</a></div>
       </div>
     </div>
@@ -363,9 +467,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1271170057">Great Books for Great Kids</a></h2>
   </div>
   <div id="GreatBooksGreatKids"></div>
-  <div class="row shelf-shadow padding-bottom-60">
-    <div class="container margin-lg-250">
-      <div class="padding-top-40 text-center"> Keep your kids reading all year long with these fun books. From adventurous, to suspenseful, to downright hilarious&mdash;and just about everything in between&mdash;these specially curated, kid-friendly reads offer something for everyone.
+  <div class="row padding-bottom-60">
+    <div class="shelf-shadow">
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100">Keep your kids reading all year long with these fun books. From adventurous, to suspenseful, to downright hilarious&mdash;and just about everything in between&mdash;these specially curated, kid-friendly reads offer something for everyone.
         <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/1271170057">See Entire List &raquo;</a></div>
       </div>
     </div>
@@ -374,9 +478,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">Storytime Favorites</a></h2>
   </div>
   <div id="StorytimeFavorites"></div>
-  <div class="row shelf-shadow padding-bottom-60">
-    <div class="container margin-lg-250">
-      <div class="padding-top-40 text-center"> These are the hand-picked favorites of our children's librarians. These books incorporate fun, play and learning in a way that encourages literacy growth. Enjoy some or all of these with your growing reader!
+  <div class="row padding-bottom-60">
+    <div class="shelf-shadow">
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> These are the hand-picked favorites of our children's librarians. These books incorporate fun, play and learning in a way that encourages literacy growth. Enjoy some or all of these with your growing reader!
         <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">See Entire List &raquo;</a></div>
       </div>
     </div>
@@ -385,30 +489,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692278051_dclkids/1826350329">What We Are Reading Now</a></h2>
   </div>
   <div id="DCLKids"></div>
-  <div class="row shelf-shadow padding-bottom-60">
-    <div class="container margin-lg-250">
-      <div class="padding-top-40 text-center"> The DCL book team spends a lot of time poring over children’s books for our collection, from Storytime favorites that inspire a love of reading to great reads for older kids. Not surprisingly, they love to dive into those same books. These are just some that the team is currently reading.
+  <div class="row padding-bottom-60">
+    <div class="shelf-shadow">
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> The DCL book team spends a lot of time poring over children’s books for our collection, from Storytime favorites that inspire a love of reading to great reads for older kids. Not surprisingly, they love to dive into those same books. These are just some that the team is currently reading.
         <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dclkids/1826350329">See Entire List &raquo;</a></div>
       </div>
     </div>
   </div>
-  <div id="digital-media" class="row bg-gray-5 padding-top-15 padding-bottom-15">
-    <div class="container">
-      <h1 class="text-center">Kids' Digital Media</h1>
-      <div class="col-md-4 padding-top-30 padding-bottom-40" id="check-out-colorado">
-        <div style="padding: 3px 0 0;" class="icon-circle-teal"><i class="fas fa-child"></i> </div>
-        <h2 class="text-center"><a href="https://dcl.overdrive.com/library/kids" target="_blank">OverDrive Kids</a></h2>
-        <div class="text-center">Safe e-book search for readers 12 and younger. Filter by format, subject, device or reading level. Includes read-alongs for preschoolers!</div>
+  <div id="digital-media" class="row bg-gray-5 padding-top-30 padding-bottom-80">
+    <h2 class="text-center">Kids' Digital Media</h2>
+    <div class="box-wrapper">
+      <div id="check-out-colorado" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-child"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="https://dcl.overdrive.com/library/kids" target="_blank">OverDrive Kids</a></h3>
+          <div>Safe e-book search for readers 12 and younger. Filter by format, subject, device or reading level. Includes read-alongs for preschoolers!</div>
+        </div>
       </div>
-      <div class="col-md-4 padding-top-30 padding-bottom-40" id="tumble-books">
-        <div style="padding: 4px 5px 0;" class="icon-circle-teal"><i class="fas fa-rocket"></i> </div>
-        <h2 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=tumblebooks" target="_blank">TumbleBooks</a></h2>
-        <div class="text-center">Access animated, talking picture books, read-along chapter books, and National Geographic kids’ videos for your mobile device. <span class="red-text font-weight-400">Access to Tumblebooks will end on April 30, 2022.</span></div>
+      <div id="tumble-books" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-rocket"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=tumblebooks" target="_blank">TumbleBooks</a></h3>
+          <div>Access animated, talking picture books, read-along chapter books, and National Geographic kids’ videos for your mobile device. <span class="red-text font-weight-400">Access to Tumblebooks will end on April 30, 2022.</span></div>
+        </div>
       </div>
-      <div class="col-md-4 padding-top-30 padding-bottom-40" id="kanopy-kids">
-        <div style="padding: 2px 0 0;" class="icon-circle-teal"><i class="fas fa-photo-video"></i> </div>
-        <h2 class="text-center"><a href="https://dcl.kanopy.com/kids" target="_blank">Kanopy Kids</a></h2>
-        <div class="text-center">Unlimited access to educational streaming videos for kids of all ages, as well as movies, storytime videos, classic tales, and much more.</div>
+      <div id="kanopy-kids" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-photo-video"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="https://dcl.kanopy.com/kids" target="_blank">Kanopy Kids</a></h3>
+          <div>Unlimited access to educational streaming videos for kids of all ages, as well as movies, storytime videos, classic tales, and much more.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -509,4 +631,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
