@@ -9,8 +9,8 @@ function createAllPageTitle(title) {
   var x = [
     '<div class="text-center">',
     '<h1 class="jumbo-text text-uppercase font-weight-400">What' + "'s" + 'New</h1>',
-    '</div>',
-    '<h1 class="no-margin">' + title + '</h1>  '
+    ' </div>',
+    ' <h1 class="no-margin">' + title + '</h1>  '
   ].join('\n');
 
   return x;
@@ -29,8 +29,9 @@ function getBiblioHref(keyName) {
 function createPreShelf(title, keyName, seq) {
   var hr = getBiblioHref(keyName);
   var x = [
-    '<div class="shelf">',
+    '<div class="row">',
     '<div id="covers-outer" class ="shelf-container text-center">',
+    '<div class="shelf">',
     '<ul id="covers-' + keyName + '">'
   ].join('\n');
   return x;
@@ -39,6 +40,7 @@ function createPreShelf(title, keyName, seq) {
 function createPostShelves(title) {
   var x = [
     ' </ul>',
+    '</div>',
     '</div>'
   ].join('\n');
   return x;
@@ -74,10 +76,9 @@ $(document).ready(function () {
 function doBiblioList(val) {
   //Noteworthy|New & Noteworthy||5|True|Biblio|975832667|10
   //ListenToThis|Listen To This||5|True|Biblio|963743517|10
-  //NowFeaturing|Now Featuring||5|True|Biblio|991669947|10
-  //YoundAdult|Must-Read Young Adult||5|True|Biblio|1084535587|10    
-  //StorytimeFavorites|Storytime Favorites||5|True|Biblio|695845537|10  
+  //NowFeaturing|Now Featuring||5|True|Biblio|/991669947|24
   //EpicReads|Epic Reads||5|True|Biblio|994069717|10
+  //GreatBooksGreatKids|GreatBooksGreatKids||5|True|Biblio|994069717|10
   //DCLAdults|What We Are Reading Now Adults||5|True|Biblio|1826346254|10
   //DCLKids|What We Are Reading Now Kids||5|True|Biblio|1826350329|10
   title = val.DisplayName;
@@ -105,17 +106,23 @@ function doBiblioList(val) {
     getRandomCollectionList(val.KeyName, '10');
     $('#YoungAdult').append(createPostShelves(title));
   }
+  if (val.KeyName == 'EpicReads') {
+    var myel = $('#EpicReads').append(createPreShelf(title, val.KeyName, '10'));
+    console.log('val', val.KeyName)
+    getRandomCollectionList(val.KeyName, '10');
+    $('#EpicReads').append(createPostShelves(title));
+  }
   if (val.KeyName == 'StorytimeFavorites') {
     var myel = $('#StorytimeFavorites').append(createPreShelf(title, val.KeyName, '10'));
     console.log('val', val.KeyName)
     getRandomCollectionList(val.KeyName, '10');
     $('#StorytimeFavorites').append(createPostShelves(title));
   }
-  if (val.KeyName == 'EpicReads') {
-    var myel = $('#EpicReads').append(createPreShelf(title, val.KeyName, '10'));
+  if (val.KeyName == 'GreatBooksGreatKids') {
+    var myel = $('#GreatBooksGreatKids').append(createPreShelf(title, val.KeyName, '10'));
     console.log('val', val.KeyName)
     getRandomCollectionList(val.KeyName, '10');
-    $('#EpicReads').append(createPostShelves(title));
+    $('#GreatBooksGreatKids').append(createPostShelves(title));
   }
   if (val.KeyName == 'DCLAdults') {
     var myel = $('#DCLAdults').append(createPreShelf(title, val.KeyName, '10'));
@@ -236,6 +243,9 @@ function getRandomCollectionList(KeyName, divid) {
         }
         if (KeyName == "EpicReads") {
           $('#covers-EpicReads').append(createBookList(val, KeyName));
+        }
+        if (KeyName == "GreatBooksGreatKids") {
+          $('#covers-GreatBooksGreatKids').append(createBookList(val, KeyName));
         }
         if (KeyName == "DCLAdults") {
           $('#covers-DCLAdults').append(createBookList(val, KeyName));
