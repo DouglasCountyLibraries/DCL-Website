@@ -149,6 +149,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 #sort .btn {
 	margin: 5px 0 5px;
 }
+.club-item-wrapper {
+	display: flex;
+	max-width: 800px;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+.club-item {
+	margin: 40px 40px 20px;
+	transition-duration: 0.4s;
+}
+.club-item:hover, .club-item:focus {
+	transform: scale(1.05);
+	transition-duration: 0.4s;
+}
 
 @media (max-width: 600px) {
 .item-wrapper {
@@ -183,9 +199,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .element-item {
 	width: 100%;
 }
+.club-item {
+	margin: 20px;
 }
 #sort .btn {
 	width: 100%;
+}
+}
+
+@media (max-width: 575px) {
+.club-item {
+	margin: 20px 5px 0;
 }
 }
 </style>
@@ -685,6 +709,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="row border-top padding-top-60 padding-bottom-60">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="no-margin">Digital Book Clubs</h2>
+        <h4 class="margin-top-5 no-margin-bottom">Looking for a digital options? Join an online book club!</h4>
+      </div>
+      <div class="club-item-wrapper">
+        <div class="club-item"><a href="https://theclub.hoopladigital.com/" target="_blank"><img class="img-responsive" src="hoopla-book-club.jpg" alt="Hoopla Book Club Hub"></a></div>
+        <div class="club-item"><a href="https://biglibraryread.com/" target="_blank"><img class="img-responsive" src="big-library-read.jpg" alt="Big Library Read"></a></div>
       </div>
     </div>
   </div>
