@@ -97,7 +97,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .carousel-cell {
 	width: 100%;
-	padding: 0 0 20px;
 }
 .carousel-cell:before {
 	display: block;
@@ -125,21 +124,58 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .flickity-viewport {
 	transition: height 0.6s;
 }
+.item-wrapper {
+	display: flex;
+}
+.custom-container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
 .shelf-container img {
 	margin: 15px 15px 17px 15px;
 	vertical-align: bottom;
 }
-.item-wrapper {
-	display: flex;
+.shelf-wrapper {
+	margin: 0 5px;
 }
-
-@media (min-width: 992px) {
 .shelf {
-	background: url("new-shelf.jpg") bottom center repeat-x;
+	border-top: 20px solid transparent;
+	border-image: url("shelf.jpg") 30 round;
+	max-width: 1170px;
+	margin: -2px auto 0 auto;
 }
 .shelf-shadow {
-	background: #fff url("shelf-shadow.jpg");
-	background-repeat: repeat-x;
+	background: #fff url("shelf-shadow.jpg") repeat-x;
+	max-width: 1170px;
+	margin: 0 auto;
+	min-height: 100px;
+	border-right: 30px solid #fff;
+	border-left: 30px solid #fff;
+}
+
+@media (max-width: 1050px) {
+.cover-image {
+	max-width: 155px;
+}
+}
+
+@media (max-width: 992px) {
+.shelf-container img {
+	margin: 15px 5px 8px 5px;
+}
+}
+
+@media (max-width: 875px) {
+.shelf {
+	border-top: 0;
+	border-image: none;
+}
+.shelf-shadow {
+	background: none;
+}
+.shelf-container {
+	max-width: 575px;
+	margin: 0 auto;
 }
 }
 
@@ -347,8 +383,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row shelf">
-    <div class="container text-center">
+  <div class="row">
+    <div class="custom-container text-center">
       <div class="bottom-carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.01, "friction": 0.40, "autoPlay": 6000 }'> 
         <!--carousel group begins-->
         <div class="carousel-cell">
@@ -356,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book by a Colorado Author" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2012754039">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1572624114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781492686033/MC.GIF" alt="The Dead Girl in 2A"></a> <a href="https://dcl.bibliocommons.com/item/show/765093114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781590171998/MC.GIF" alt="Stoner"></a> <a href="https://dcl.bibliocommons.com/item/show/1731184114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781680032611/MC.GIF" alt="Mixed Company"></a> <a href="https://dcl.bibliocommons.com/item/show/1256448114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780385352871/MC.GIF" alt="The Water Knife"></a> <a href="https://dcl.bibliocommons.com/item/show/1730707114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781643858425/MC.GIF" alt="They Can't Take your Name"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1572624114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781492686033/MC.GIF" alt="The Dead Girl in 2A"></a> <a href="https://dcl.bibliocommons.com/item/show/765093114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781590171998/MC.GIF" alt="Stoner"></a> <a href="https://dcl.bibliocommons.com/item/show/1731184114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781680032611/MC.GIF" alt="Mixed Company"></a> <a href="https://dcl.bibliocommons.com/item/show/1256448114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780385352871/MC.GIF" alt="The Water Knife"></a> <a href="https://dcl.bibliocommons.com/item/show/1730707114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781643858425/MC.GIF" alt="They Can't Take your Name"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -366,7 +402,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book That Features a Creature" category</h4>
             <div class="text-uppercase font-weight-400"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2003743739">See Entire List </a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1441764114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316556347/MC.GIF" alt="Circe"></a> <a href="https://dcl.bibliocommons.com/item/show/1692304114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593199763/MC.GIF" alt="Near the Bone"></a> <a href="https://dcl.bibliocommons.com/item/show/1652830114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781984826787/MC.GIF" alt="Devolution"></a> <a href="https://dcl.bibliocommons.com/item/show/1462828114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250112682/MC.GIF" alt="To Kill a Kingdom"></a> <a href="https://dcl.bibliocommons.com/item/show/1569046114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525620778/MC.GIF" alt="Gods of Jade and Shadow"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1441764114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316556347/MC.GIF" alt="Circe"></a> <a href="https://dcl.bibliocommons.com/item/show/1692304114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593199763/MC.GIF" alt="Near the Bone"></a> <a href="https://dcl.bibliocommons.com/item/show/1652830114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781984826787/MC.GIF" alt="Devolution"></a> <a href="https://dcl.bibliocommons.com/item/show/1462828114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250112682/MC.GIF" alt="To Kill a Kingdom"></a> <a href="https://dcl.bibliocommons.com/item/show/1569046114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525620778/MC.GIF" alt="Gods of Jade and Shadow"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -376,7 +412,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book With a Dynamite Duo" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2016105993">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1703698114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316592789/MC.GIF" alt="For the Wolf"></a> <a href="https://dcl.bibliocommons.com/item/show/1704009114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250252708/MC.GIF" alt="Razorblade Tears"></a> <a href="https://dcl.bibliocommons.com/item/show/1573601114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781481497619/MC.GIF" alt="Sorcery of Thorns"></a> <a href="https://dcl.bibliocommons.com/item/show/893617114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781416585831/MC.GIF" alt="Dog on It"></a> <a href="https://dcl.bibliocommons.com/item/show/1360807114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781681772103/MC.GIF" alt="Sherlock"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1703698114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316592789/MC.GIF" alt="For the Wolf"></a> <a href="https://dcl.bibliocommons.com/item/show/1704009114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250252708/MC.GIF" alt="Razorblade Tears"></a> <a href="https://dcl.bibliocommons.com/item/show/1573601114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781481497619/MC.GIF" alt="Sorcery of Thorns"></a> <a href="https://dcl.bibliocommons.com/item/show/893617114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781416585831/MC.GIF" alt="Dog on It"></a> <a href="https://dcl.bibliocommons.com/item/show/1360807114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781681772103/MC.GIF" alt="Sherlock"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -386,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book About Social Media" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2016114629">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1686751114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101966846/MC.GIF" alt="Forget Me Not"></a> <a href="https://dcl.bibliocommons.com/item/show/1489955114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781524743444/MC.GIF" alt="An Absolutely Remarkable Thing"></a> <a href="https://dcl.bibliocommons.com/item/show/1621555114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250237323/MC.GIF" alt="Tweet Cute"></a> <a href="https://dcl.bibliocommons.com/item/show/1585134114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525510543/MC.GIF" alt="Trick Mirror"></a> <a href="https://dcl.bibliocommons.com/item/show/1175049114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780385351393/MC.GIF" alt="The Circle"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1686751114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101966846/MC.GIF" alt="Forget Me Not"></a> <a href="https://dcl.bibliocommons.com/item/show/1489955114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781524743444/MC.GIF" alt="An Absolutely Remarkable Thing"></a> <a href="https://dcl.bibliocommons.com/item/show/1621555114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250237323/MC.GIF" alt="Tweet Cute"></a> <a href="https://dcl.bibliocommons.com/item/show/1585134114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525510543/MC.GIF" alt="Trick Mirror"></a> <a href="https://dcl.bibliocommons.com/item/show/1175049114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780385351393/MC.GIF" alt="The Circle"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -396,7 +432,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book With a Two-word Title" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2012751819">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1710730114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780385545136/MC.GIF" alt="Harlem Shuffle"></a> <a href="https://dcl.bibliocommons.com/item/show/710526114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780060853969/MC.GIF" alt="Good Omens"></a> <a href="https://dcl.bibliocommons.com/item/show/1330913114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101904220/MC.GIF" alt="Dark Matter"></a> <a href="https://dcl.bibliocommons.com/item/show/1329900114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780812998320/MC.GIF" alt="Missing, Presumed"></a> <a href="https://dcl.bibliocommons.com/item/show/1268408114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780143035008/MC.GIF" alt="Anna Karenina"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1710730114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780385545136/MC.GIF" alt="Harlem Shuffle"></a> <a href="https://dcl.bibliocommons.com/item/show/710526114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780060853969/MC.GIF" alt="Good Omens"></a> <a href="https://dcl.bibliocommons.com/item/show/1330913114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101904220/MC.GIF" alt="Dark Matter"></a> <a href="https://dcl.bibliocommons.com/item/show/1329900114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780812998320/MC.GIF" alt="Missing, Presumed"></a> <a href="https://dcl.bibliocommons.com/item/show/1268408114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780143035008/MC.GIF" alt="Anna Karenina"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -406,7 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book About Fresh Starts" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2016607679">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1595241114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781984806093/MC.GIF" alt="The Bromance Book Club"></a> <a href="https://dcl.bibliocommons.com/item/show/1641423114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780802148537/MC.GIF" alt="Writers & Lovers"></a> <a href="https://dcl.bibliocommons.com/item/show/1557074114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781984803252/MC.GIF" alt="Natalie Tan's Book of Luck and Fortune"></a> <a href="https://dcl.bibliocommons.com/item/show/1190022114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781616203214/MC.GIF" alt="The Storied Life of A. J. Fikry"></a> <a href="https://dcl.bibliocommons.com/item/show/1242408114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780062333001/MC.GIF" alt="The Bookseller"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1595241114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781984806093/MC.GIF" alt="The Bromance Book Club"></a> <a href="https://dcl.bibliocommons.com/item/show/1641423114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780802148537/MC.GIF" alt="Writers & Lovers"></a> <a href="https://dcl.bibliocommons.com/item/show/1557074114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781984803252/MC.GIF" alt="Natalie Tan's Book of Luck and Fortune"></a> <a href="https://dcl.bibliocommons.com/item/show/1190022114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781616203214/MC.GIF" alt="The Storied Life of A. J. Fikry"></a> <a href="https://dcl.bibliocommons.com/item/show/1242408114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780062333001/MC.GIF" alt="The Bookseller"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -416,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Multigenerational Family Story" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2017901819">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1718603114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780063093577/MC.GIF" alt="Beasts of A Little Land"></a> <a href="https://dcl.bibliocommons.com/item/show/1647762114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781616209728/MC.GIF" alt="Hieroglyphics"></a> <a href="https://dcl.bibliocommons.com/item/show/1692340114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101947807/MC.GIF" alt="Send for Me"></a> <a href="https://dcl.bibliocommons.com/item/show/1538553114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780062699763/MC.GIF" alt="A Woman is No Man"></a> <a href="https://dcl.bibliocommons.com/item/show/1317344114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101947135/MC.GIF" alt="Homegoing"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1718603114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780063093577/MC.GIF" alt="Beasts of A Little Land"></a> <a href="https://dcl.bibliocommons.com/item/show/1647762114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781616209728/MC.GIF" alt="Hieroglyphics"></a> <a href="https://dcl.bibliocommons.com/item/show/1692340114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101947807/MC.GIF" alt="Send for Me"></a> <a href="https://dcl.bibliocommons.com/item/show/1538553114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780062699763/MC.GIF" alt="A Woman is No Man"></a> <a href="https://dcl.bibliocommons.com/item/show/1317344114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101947135/MC.GIF" alt="Homegoing"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -426,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book By or About a Musician" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2017905569">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1721673114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781648960208/MC.GIF" alt="Three Pianos"></a> <a href="https://dcl.bibliocommons.com/item/show/1728017114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780811231251/MC.GIF" alt="Woolgathering"></a> <a href="https://dcl.bibliocommons.com/item/show/1590978114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780399589652/MC.GIF" alt="The Beautiful Ones"></a> <a href="https://dcl.bibliocommons.com/item/show/1596293114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780374169947/MC.GIF" alt="High School"></a> <a href="https://dcl.bibliocommons.com/item/show/1708479114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781982156848/MC.GIF" alt="Baby Girl"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1721673114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781648960208/MC.GIF" alt="Three Pianos"></a> <a href="https://dcl.bibliocommons.com/item/show/1728017114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780811231251/MC.GIF" alt="Woolgathering"></a> <a href="https://dcl.bibliocommons.com/item/show/1590978114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780399589652/MC.GIF" alt="The Beautiful Ones"></a> <a href="https://dcl.bibliocommons.com/item/show/1596293114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780374169947/MC.GIF" alt="High School"></a> <a href="https://dcl.bibliocommons.com/item/show/1708479114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781982156848/MC.GIF" alt="Baby Girl"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -436,7 +472,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Comic Book or Graphic Novel" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2016129759">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/667658114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781779501127/MC.GIF" alt="Watchmen"></a> <a href="https://dcl.bibliocommons.com/item/show/1351499114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781603094023/MC.GIF" alt="March"></a> <a href="https://dcl.bibliocommons.com/item/show/1563932114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250312846/MC.GIF" alt="Laura Dean Keeps Breaking up With Me"></a> <a href="https://dcl.bibliocommons.com/item/show/1459134114"><img class="cover-image" src="https://d2snwnmzyr8jue.cloudfront.net/mvl_9781302367749_180.jpeg" alt="Hawkeye"></a> <a href="https://dcl.bibliocommons.com/item/show/745323114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781591169208/MC.GIF" alt="Fullmetal Alchemist"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/667658114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781779501127/MC.GIF" alt="Watchmen"></a> <a href="https://dcl.bibliocommons.com/item/show/1351499114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781603094023/MC.GIF" alt="March"></a> <a href="https://dcl.bibliocommons.com/item/show/1563932114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250312846/MC.GIF" alt="Laura Dean Keeps Breaking up With Me"></a> <a href="https://dcl.bibliocommons.com/item/show/1459134114"><img class="cover-image" src="https://d2snwnmzyr8jue.cloudfront.net/mvl_9781302367749_180.jpeg" alt="Hawkeye"></a> <a href="https://dcl.bibliocommons.com/item/show/745323114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781591169208/MC.GIF" alt="Fullmetal Alchemist"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -446,7 +482,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book by an Author Who Uses Initials" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2013235043">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1619227114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316509848/MC.GIF" alt="The City We Became"></a> <a href="https://dcl.bibliocommons.com/item/show/1710932114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250272812/MC.GIF" alt="Forgotten in Death"></a> <a href="https://dcl.bibliocommons.com/item/show/1460515114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780735213890/MC.GIF" alt="The Incendiaries"></a> <a href="https://dcl.bibliocommons.com/item/show/1711279114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250217349/MC.GIF" alt="Under the Whispering Door"></a> <a href="https://dcl.bibliocommons.com/item/show/1709365114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525555520/MC.GIF" alt="Switch"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1619227114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316509848/MC.GIF" alt="The City We Became"></a> <a href="https://dcl.bibliocommons.com/item/show/1710932114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250272812/MC.GIF" alt="Forgotten in Death"></a> <a href="https://dcl.bibliocommons.com/item/show/1460515114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780735213890/MC.GIF" alt="The Incendiaries"></a> <a href="https://dcl.bibliocommons.com/item/show/1711279114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250217349/MC.GIF" alt="Under the Whispering Door"></a> <a href="https://dcl.bibliocommons.com/item/show/1709365114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525555520/MC.GIF" alt="Switch"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -456,7 +492,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book With a Character 'On the Run'" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2017912219">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1000620114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781442429987/MC.GIF" alt="Blook Red Road"></a> <a href="https://dcl.bibliocommons.com/item/show/646637114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316010801/MC.GIF" alt="The Devil's Highway"></a> <a href="https://dcl.bibliocommons.com/item/show/1672627114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316422048/MC.GIF" alt="The Once and Future Witches"></a> <a href="https://dcl.bibliocommons.com/item/show/1672552114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780765387561/MC.GIF" alt="The Invisible Life of Addie LaRue"></a> <a href="https://dcl.bibliocommons.com/item/show/1680781114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338268492/MC.GIF" alt="Poisoned"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1000620114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781442429987/MC.GIF" alt="Blook Red Road"></a> <a href="https://dcl.bibliocommons.com/item/show/646637114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316010801/MC.GIF" alt="The Devil's Highway"></a> <a href="https://dcl.bibliocommons.com/item/show/1672627114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316422048/MC.GIF" alt="The Once and Future Witches"></a> <a href="https://dcl.bibliocommons.com/item/show/1672552114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780765387561/MC.GIF" alt="The Invisible Life of Addie LaRue"></a> <a href="https://dcl.bibliocommons.com/item/show/1680781114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338268492/MC.GIF" alt="Poisoned"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -466,7 +502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for the "Book by or About a Woman in STEM" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2012750239">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1316915114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316338929/MC.GIF" alt="Rise of the Rocket Girls"></a> <a href="https://dcl.bibliocommons.com/item/show/1306738114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101874936/MC.GIF" alt="Lab Girl"></a> <a href="https://dcl.bibliocommons.com/item/show/1724955114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781728229393/MC.GIF" alt="Her Hidden Genius"></a> <a href="https://dcl.bibliocommons.com/item/show/1418995114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101985205/MC.GIF" alt="Enchantress of Numbers"></a> <a href="https://dcl.bibliocommons.com/item/show/1239824114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780618249060/MC.GIF" alt="Silent Spring"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1316915114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780316338929/MC.GIF" alt="Rise of the Rocket Girls"></a> <a href="https://dcl.bibliocommons.com/item/show/1306738114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101874936/MC.GIF" alt="Lab Girl"></a> <a href="https://dcl.bibliocommons.com/item/show/1724955114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781728229393/MC.GIF" alt="Her Hidden Genius"></a> <a href="https://dcl.bibliocommons.com/item/show/1418995114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101985205/MC.GIF" alt="Enchantress of Numbers"></a> <a href="https://dcl.bibliocommons.com/item/show/1239824114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780618249060/MC.GIF" alt="Silent Spring"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -476,7 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for kids for the "Book That Features a Creature" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2041882489">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1710874114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593205440/MC.GIF" alt="Kitty Quest"></a> <a href="https://dcl.bibliocommons.com/item/show/1727366114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593354155/MC.GIF" alt="When Pigs Fly"></a> <a href="https://dcl.bibliocommons.com/item/show/1724902114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593430361/MC.GIF" alt="The Outlaws Scarlett and Browne"></a> <a href="https://dcl.bibliocommons.com/item/show/1707665114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593125540/MC.GIF" alt="Roar of the Beast"></a> <a href="https://dcl.bibliocommons.com/item/show/1697537114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593301739/MC.GIF" alt="Dog Squad"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1710874114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593205440/MC.GIF" alt="Kitty Quest"></a> <a href="https://dcl.bibliocommons.com/item/show/1727366114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593354155/MC.GIF" alt="When Pigs Fly"></a> <a href="https://dcl.bibliocommons.com/item/show/1724902114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593430361/MC.GIF" alt="The Outlaws Scarlett and Browne"></a> <a href="https://dcl.bibliocommons.com/item/show/1707665114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593125540/MC.GIF" alt="Roar of the Beast"></a> <a href="https://dcl.bibliocommons.com/item/show/1697537114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593301739/MC.GIF" alt="Dog Squad"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -486,7 +522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for kids for the "Comic Book or Graphic Novel" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2048042381">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1710883114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250156365/MC.GIF" alt="Jukebox"></a> <a href="https://dcl.bibliocommons.com/item/show/1629925114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250219954/MC.GIF" alt="InvestiGators"></a> <a href="https://dcl.bibliocommons.com/item/show/1427448114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338089523/MC.GIF" alt="The Witch Boy"></a> <a href="https://dcl.bibliocommons.com/item/show/1681116114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338226485/MC.GIF" alt="Animorphs"></a> <a href="https://dcl.bibliocommons.com/item/show/1710874114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593205440/MC.GIF" alt="Kitty Quest"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1710883114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250156365/MC.GIF" alt="Jukebox"></a> <a href="https://dcl.bibliocommons.com/item/show/1629925114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250219954/MC.GIF" alt="InvestiGators"></a> <a href="https://dcl.bibliocommons.com/item/show/1427448114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338089523/MC.GIF" alt="The Witch Boy"></a> <a href="https://dcl.bibliocommons.com/item/show/1681116114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338226485/MC.GIF" alt="Animorphs"></a> <a href="https://dcl.bibliocommons.com/item/show/1710874114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593205440/MC.GIF" alt="Kitty Quest"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -496,7 +532,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for kids for the "Book by or About a Woman in STEM" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2054607909">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1702392114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593115558/MC.GIF" alt="The Outdoor Scientist"></a> <a href="https://dcl.bibliocommons.com/item/show/1648296114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781419707346/MC.GIF" alt="Changing the Equation"></a> <a href="https://dcl.bibliocommons.com/item/show/1148517114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781596438651/MC.GIF" alt="Primates"></a> <a href="https://dcl.bibliocommons.com/item/show/1437359114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780544717138/MC.GIF" alt="The Girl Who Drew Butterflies"></a> <a href="https://dcl.bibliocommons.com/item/show/1398561114"><img class="cover-image" src="https://d2snwnmzyr8jue.cloudfront.net/ipg_9781613748473_180.jpeg" alt="Women is Space"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1702392114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593115558/MC.GIF" alt="The Outdoor Scientist"></a> <a href="https://dcl.bibliocommons.com/item/show/1648296114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781419707346/MC.GIF" alt="Changing the Equation"></a> <a href="https://dcl.bibliocommons.com/item/show/1148517114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781596438651/MC.GIF" alt="Primates"></a> <a href="https://dcl.bibliocommons.com/item/show/1437359114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780544717138/MC.GIF" alt="The Girl Who Drew Butterflies"></a> <a href="https://dcl.bibliocommons.com/item/show/1398561114"><img class="cover-image" src="https://d2snwnmzyr8jue.cloudfront.net/ipg_9781613748473_180.jpeg" alt="Women is Space"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -506,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for kids for the "Book About Social Media" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2057143039">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1594770114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525517245/MC.GIF" alt="Count Me In"></a> <a href="https://dcl.bibliocommons.com/item/show/1317895114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781454917519/MC.GIF" alt="Cici Reno"></a> <a href="https://dcl.bibliocommons.com/item/show/1577906114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534452138/MC.GIF" alt="Banana Splits"></a> <a href="https://dcl.bibliocommons.com/item/show/1656538114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534445208/MC.GIF" alt="The Popularity Code"></a> <a href="https://dcl.bibliocommons.com/item/show/1694638114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593119396/MC.GIF" alt="Whisker Wizard"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1594770114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780525517245/MC.GIF" alt="Count Me In"></a> <a href="https://dcl.bibliocommons.com/item/show/1317895114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781454917519/MC.GIF" alt="Cici Reno"></a> <a href="https://dcl.bibliocommons.com/item/show/1577906114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534452138/MC.GIF" alt="Banana Splits"></a> <a href="https://dcl.bibliocommons.com/item/show/1656538114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534445208/MC.GIF" alt="The Popularity Code"></a> <a href="https://dcl.bibliocommons.com/item/show/1694638114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593119396/MC.GIF" alt="Whisker Wizard"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -516,7 +552,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for kids for the "Book With a Dynamite Duo" category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2064668269">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1652935114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338280128/MC.GIF" alt="Ghost Squad"></a> <a href="https://dcl.bibliocommons.com/item/show/1409900114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101918296/MC.GIF" alt="Super Narwhal and Jelly Jolt"></a> <a href="https://dcl.bibliocommons.com/item/show/1652947114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780358116684/MC.GIF" alt="A Place at the Table"></a> <a href="https://dcl.bibliocommons.com/item/show/1493977114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338111026/MC.GIF" alt="City of Ghosts"></a> <a href="https://dcl.bibliocommons.com/item/show/1698377114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534478084/MC.GIF" alt="Mystery on the Mayhem Express"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1652935114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338280128/MC.GIF" alt="Ghost Squad"></a> <a href="https://dcl.bibliocommons.com/item/show/1409900114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101918296/MC.GIF" alt="Super Narwhal and Jelly Jolt"></a> <a href="https://dcl.bibliocommons.com/item/show/1652947114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780358116684/MC.GIF" alt="A Place at the Table"></a> <a href="https://dcl.bibliocommons.com/item/show/1493977114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338111026/MC.GIF" alt="City of Ghosts"></a> <a href="https://dcl.bibliocommons.com/item/show/1698377114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534478084/MC.GIF" alt="Mystery on the Mayhem Express"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -526,17 +562,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Staff Picks for kids for the “Book by a Colorado Author” category</h4>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2072485979">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1574899114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338259551/MC.GIF" alt="Out of My Shell"></a> <a href="https://dcl.bibliocommons.com/item/show/1557461114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780545800884/MC.GIF" alt="Tree of Dreams"></a> <a href="https://dcl.bibliocommons.com/item/show/1594763114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250202864/MC.GIF" alt="All The Impossible Things"></a> <a href="https://dcl.bibliocommons.com/item/show/1687412114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534467569/MC.GIF" alt="Alone"></a> <a href="https://dcl.bibliocommons.com/item/show/1317891114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780062342065/MC.GIF" alt="Wishing Day"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1574899114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781338259551/MC.GIF" alt="Out of My Shell"></a> <a href="https://dcl.bibliocommons.com/item/show/1557461114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780545800884/MC.GIF" alt="Tree of Dreams"></a> <a href="https://dcl.bibliocommons.com/item/show/1594763114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781250202864/MC.GIF" alt="All The Impossible Things"></a> <a href="https://dcl.bibliocommons.com/item/show/1687412114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781534467569/MC.GIF" alt="Alone"></a> <a href="https://dcl.bibliocommons.com/item/show/1317891114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780062342065/MC.GIF" alt="Wishing Day"></a> </div>
         </div>
         <!--carousel group ends--> 
         
       </div>
     </div>
   </div>
-  <div class="row shelf-shadow padding-bottom-60">
-    <div class="container text-center">
-      <h4 class="margin-top-60"><i>Find <a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">more books</a> for the Reading Challenge!</i></h4>
+  <div class="row">
+    <div class="shelf-wrapper">
+      <div class="shelf"></div>
     </div>
+  </div>
+  <div class="row shelf-shadow padding-bottom-60">
+    <h4 class="text-center margin-top-60"><i>Find <a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">more books</a> for the Reading Challenge!</i></h4>
   </div>
   
   <!-- Modal -->
