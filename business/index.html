@@ -143,7 +143,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .carousel-cell {
 	width: 100%;
-	padding: 0 0 20px;
 }
 .carousel-cell:before {
 	display: block;
@@ -171,18 +170,59 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .flickity-viewport {
 	transition: height 0.6s;
 }
+.custom-container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
 .shelf-container img {
 	margin: 15px 15px 17px 15px;
 	vertical-align: bottom;
 }
-
-@media (min-width: 992px) {
+.shelf-wrapper {
+	margin: 0 5px;
+}
 .shelf {
-	background: url("new-shelf.jpg") bottom center repeat-x;
+	border-top: 20px solid transparent;
+	border-image: url("shelf.jpg") 30 round;
+	max-width: 1170px;
+	margin: -2px auto 0 auto;
 }
 .shelf-shadow {
-	background: #fff url("shelf-shadow.jpg");
-	background-repeat: repeat-x;
+	background: #fff url("shelf-shadow.jpg") repeat-x;
+	max-width: 1170px;
+	margin: 0 auto;
+	min-height: 100px;
+	border-right: 30px solid #fff;
+	border-left: 30px solid #fff;
+}
+
+@media (max-width: 1050px) {
+.cover-image {
+	max-width: 155px;
+}
+}
+
+@media (max-width: 992px) {
+.shelf-container img {
+	margin: 15px 5px 8px 5px;
+}
+}
+
+@media (max-width: 875px) {
+.shelf {
+	border-top: 0;
+	border-image: none;
+}
+.shelf-shadow {
+	background: none;
+}
+.shelf-container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 0 0 30px 0;
+}
+.find-more {
+	margin-top: 20px;
 }
 }
 
@@ -397,16 +437,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="text-center margin-top-20"> <a href="form/" target="_blank" class="btn btn-primary btn-lg">Contact Us</a> </div>
     </div>
   </div>
-  <div class="row shelf">
-    <div class="container text-center">
-      <div class="bottom-carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.01, "friction": 0.40, "autoPlay": 6000 }'> 
+  <div class="row">
+    <div class="custom-container text-center">
+      <div class="bottom-carousel" data-flickity='{"imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.01, "friction": 0.40, "autoPlay": 6000 }'> 
         <!--carousel group begins-->
         <div class="carousel-cell">
           <div class="text-center">
             <h2>Business for Creatives</h2>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1854975299">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1609080114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781614294986/MC.GIF" alt="Creativity, Spirituality & Making A Buck"></a> <a href="https://dcl.bibliocommons.com/item/show/1514257114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781524761714/MC.GIF" alt="The Creative Curve"></a> <a href="https://dcl.bibliocommons.com/item/show/1284410114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781608682560/MC.GIF" alt="Building your Business the Right-brain Way"></a> <a href="https://dcl.bibliocommons.com/item/show/1086544114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780307587107/MC.GIF" alt="Handmade to Sell"></a> <a href="https://dcl.bibliocommons.com/item/show/1070222114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781603429894/MC.GIF" alt="Grow your Handmade Business"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1609080114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781614294986/MC.GIF" alt="Creativity, Spirituality & Making A Buck"></a> <a href="https://dcl.bibliocommons.com/item/show/1514257114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781524761714/MC.GIF" alt="The Creative Curve"></a> <a href="https://dcl.bibliocommons.com/item/show/1284410114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781608682560/MC.GIF" alt="Building your Business the Right-brain Way"></a> <a href="https://dcl.bibliocommons.com/item/show/1086544114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780307587107/MC.GIF" alt="Handmade to Sell"></a> <a href="https://dcl.bibliocommons.com/item/show/1070222114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781603429894/MC.GIF" alt="Grow your Handmade Business"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -416,7 +456,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h2>Business Startups</h2>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1868140989">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1661536114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780231194525/MC.GIF" alt="Startup Myths and Models"></a> <a href="https://dcl.bibliocommons.com/item/show/1693722114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781642504125/MC.GIF" alt="The Entrepreneur's Paradox"></a> <a href="https://dcl.bibliocommons.com/item/show/1693839114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593137024/MC.GIF" alt="Why Startups Fail"></a> <a href="https://dcl.bibliocommons.com/item/show/1693842114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781413327588/MC.GIF" alt="The Women's Small Business Start-up Kit"></a> <a href="https://dcl.bibliocommons.com/item/show/1670904114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780995404403/MC.GIF" alt="The 7 Day Startup"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1661536114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780231194525/MC.GIF" alt="Startup Myths and Models"></a> <a href="https://dcl.bibliocommons.com/item/show/1693722114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781642504125/MC.GIF" alt="The Entrepreneur's Paradox"></a> <a href="https://dcl.bibliocommons.com/item/show/1693839114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593137024/MC.GIF" alt="Why Startups Fail"></a> <a href="https://dcl.bibliocommons.com/item/show/1693842114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781413327588/MC.GIF" alt="The Women's Small Business Start-up Kit"></a> <a href="https://dcl.bibliocommons.com/item/show/1670904114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780995404403/MC.GIF" alt="The 7 Day Startup"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -426,7 +466,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h2>The Business Plan</h2>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1992774469">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1550598114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781401957476/MC.GIF" alt="Choose"></a> <a href="https://dcl.bibliocommons.com/item/show/1470164114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780749480844/MC.GIF" alt="Starting A Business From Home"></a> <a href="https://dcl.bibliocommons.com/item/show/1440668114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781476794358/MC.GIF" alt="Burn the Business Plan"></a> <a href="https://dcl.bibliocommons.com/item/show/1561379114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781933895826/MC.GIF" alt="Successful Business Plan Secrets & Strategies S Plan Guide!"></a> <a href="https://dcl.bibliocommons.com/item/show/1516381114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781413325454/MC.GIF" alt="How to Write A Business Plan"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1550598114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781401957476/MC.GIF" alt="Choose"></a> <a href="https://dcl.bibliocommons.com/item/show/1470164114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780749480844/MC.GIF" alt="Starting A Business From Home"></a> <a href="https://dcl.bibliocommons.com/item/show/1440668114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781476794358/MC.GIF" alt="Burn the Business Plan"></a> <a href="https://dcl.bibliocommons.com/item/show/1561379114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781933895826/MC.GIF" alt="Successful Business Plan Secrets & Strategies S Plan Guide!"></a> <a href="https://dcl.bibliocommons.com/item/show/1516381114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781413325454/MC.GIF" alt="How to Write A Business Plan"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -436,7 +476,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h2>Entrepreneurship </h2>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051/1831865179">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1693715114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781400220618/MC.GIF" alt="Digital Goddess"></a> <a href="https://dcl.bibliocommons.com/item/show/1642588114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781722510176/MC.GIF" alt="Entrepreneurship"></a> <a href="https://dcl.bibliocommons.com/item/show/1693814114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781950863471/MC.GIF" alt="Stuck in the Middle Seat"></a> <a href="https://dcl.bibliocommons.com/item/show/1693727114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781642505177/MC.GIF" alt="The Fearless Woman's Guide to Starting A Business"></a> <a href="https://dcl.bibliocommons.com/item/show/1693759114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781264259168/MC.GIF" alt="Launch your Inner Entrepreneur"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1693715114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781400220618/MC.GIF" alt="Digital Goddess"></a> <a href="https://dcl.bibliocommons.com/item/show/1642588114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781722510176/MC.GIF" alt="Entrepreneurship"></a> <a href="https://dcl.bibliocommons.com/item/show/1693814114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781950863471/MC.GIF" alt="Stuck in the Middle Seat"></a> <a href="https://dcl.bibliocommons.com/item/show/1693727114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781642505177/MC.GIF" alt="The Fearless Woman's Guide to Starting A Business"></a> <a href="https://dcl.bibliocommons.com/item/show/1693759114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781264259168/MC.GIF" alt="Launch your Inner Entrepreneur"></a> </div>
         </div>
         <!--carousel group ends--> 
         
@@ -446,13 +486,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h2>Marketing Insights</h2>
             <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/1858771239">See Entire List &raquo;</a></div>
           </div>
-          <div class="container shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1542102114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781989025017/MC.GIF" alt="The 1-Page Marketing Plan"></a> <a href="https://dcl.bibliocommons.com/item/show/1737534114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593330630/MC.GIF" alt="Get Different: Marketing That Can't Be Ignored!"></a> <a href="https://dcl.bibliocommons.com/item/show/1693768114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781642503807/MC.GIF" alt="Marketing Mess to Brand Success"></a> <a href="https://dcl.bibliocommons.com/item/show/1638173114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781633697973/MC.GIF" alt="The Experience Economy"></a> <a href="https://dcl.bibliocommons.com/item/show/1314677114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101903599/MC.GIF" alt="The Power of Broke"></a> </div>
+          <div class="shelf-container text-center"> <a href="https://dcl.bibliocommons.com/item/show/1542102114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781989025017/MC.GIF" alt="The 1-Page Marketing Plan"></a> <a href="https://dcl.bibliocommons.com/item/show/1737534114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9780593330630/MC.GIF" alt="Get Different: Marketing That Can't Be Ignored!"></a> <a href="https://dcl.bibliocommons.com/item/show/1693768114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781642503807/MC.GIF" alt="Marketing Mess to Brand Success"></a> <a href="https://dcl.bibliocommons.com/item/show/1638173114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781633697973/MC.GIF" alt="The Experience Economy"></a> <a href="https://dcl.bibliocommons.com/item/show/1314677114"><img class="cover-image" src="https://secure.syndetics.com/index.aspx?isbn=9781101903599/MC.GIF" alt="The Power of Broke"></a> </div>
         </div>
         <!--carousel group ends--> 
         
       </div>
     </div>
   </div>
+    
+    
+     <div class="row">
+    <div class="shelf-wrapper">
+      <div class="shelf"></div>
+    </div>
+  </div> 
+    
+    
+    
   <div id="databases" class="row shelf-shadow">
     <div class="container text-center padding-top-40">
       <h1 class="no-margin-top text-center">Business Databases</h1>
