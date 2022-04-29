@@ -88,6 +88,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Sancreek&display=swap" rel="stylesheet">
@@ -195,6 +196,20 @@ h3.sancreek {
 	padding: 30px;
 	margin: 5px;
 	border-radius: 3px;
+}
+.minutes-wrapper {
+	display: flex;
+}
+.minutes-item-one, .minutes-item-two {
+	border: 1px solid red;
+}
+.counter {
+	font-size: 80px;
+	font-weight: 900;
+	letter-spacing: -5px;
+}
+.counter:not(.is-visible) {
+	visibility: hidden;
 }
 
 @media (max-width: 875px) {
@@ -395,7 +410,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <h5 class="noto orange-shadow white">2022 Summer Reading for All Ages</h5>
               <h5 class="white orange-shadow margin-top-5">Saturday, June 4-Sunday, July 31</h5>
             </div>
-            <div class="intro-text orange-shadow margin-lg-200 margin-md-100">Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest <a class="white text-underline" href="#" target="_blank">on the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
+            <div class="intro-text text-center orange-shadow margin-lg-125 margin-md-100">Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest <a class="white text-underline" href="#" target="_blank">on the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
             <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now!</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
             <div class="alt-link-wrapper">
               <div class="alt-link"><a class="white" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank">Ta-da! Kickoff Events</a></div>
@@ -452,10 +467,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="custom-container padding-top-15">
-      <h4>Help us meet our community goal of 8.5 million minutes read!</h4>
-      <div> Watch the minutes materialize and help us meet our goal. If we meet our goal, the Douglas County Libraries Foundation will donate $1,000 to AllHealth Network, which works to enhance the quality of life for individuals and families in our community through compassionate, integrated behavioral health services.</div>
+  <div class="row">
+    <div class="custom-container three">
+      <div class="minutes-wrapper">
+        <div class="minutes-item-one">
+          <div class="">Watch the minutes materialize and help us meet our goal. If we meet our goal, the Douglas County Libraries Foundation will donate $1,000 to AllHealth Network, which works to enhance the quality of life for individuals and families in our community through compassionate, integrated behavioral health services.</div>
+        </div>
+        <div class="minutes-item-two">
+          <div class="counter">5,185,425</div>
+          <h4 class="no-margin">Minutes Read</h4>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -542,7 +564,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script id="rendered-js" >
+const counterUp = window.counterUp.default;
+
+const callback = entries => {
+  entries.forEach(entry => {
+    const el = entry.target;
+    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+      counterUp(el, {
+        duration: 10000,
+        delay: 36 });
+
+      el.classList.add('is-visible');
+    }
+  });
+};
+
+const IO = new IntersectionObserver(callback, { threshold: 1 });
+
+const el = document.querySelector('.counter');
+IO.observe(el);
+//# sourceURL=pen.js
+    </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
