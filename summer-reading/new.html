@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,6 +96,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	max-width: 1170px;
 	margin: 0 auto;
 }
+.custom-container.one {
+	padding: 30px 10px 40px;
+}
 h1.sancreek {
 	font-family: 'Sancreek', serif;
 	text-transform: uppercase;
@@ -105,6 +109,25 @@ h1.sancreek {
 h1.noto, h2.noto, h3.noto, h4.noto, h5.noto {
 	font-family: 'Noto Serif', serif;
 	text-transform: uppercase;
+}
+.orange-shadow {
+	text-shadow: 0px 0px 15px #e55d11;
+}
+.background-one {
+	background: linear-gradient(#e89219, #e55d11);
+}
+.background-two {
+	background: transparent url("bubbles.png") center top repeat-x;
+}
+.background-three {
+	background: transparent url("banner-flags.png") center top repeat-x;
+}
+.background-four {
+	background: #452d7f;
+}
+.separator-one {
+	height: 50px;
+	background: #e55d11 url("separator-one.jpg") center center repeat-x;
 }
 .link-wrapper {
 	width: 325px;
@@ -117,22 +140,36 @@ h1.noto, h2.noto, h3.noto, h4.noto, h5.noto {
 }
 .link, .link:visited, .link:active {
 	width: 300px;
-	background: linear-gradient(#0fb79d, #0f4991);
+	background: radial-gradient(#8556f4, #452d7f);
 	color: #fff;
-	margin: 5px 10px;
+	margin: 10px;
 	padding: 15px 5px;
-	border-radius: 2px;
+	border-radius: 3px;
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-    transition-duration: 0.4s;
+	box-shadow: 0px 0px 35px 10px rgba(255, 255, 255, 0.3);
+	font-weight: 500;
+	border: 2px solid #fff;
 }
 .link:hover {
-	background: radial-gradient(#0fb79d, #0f4991);
+	background: radial-gradient(#452d7f, #8556f4);
 	color: #fff;
 	text-decoration: none;
-    transition-duration: 0.4s;
+	box-shadow: 0px 0px 35px 10px rgba(255, 255, 255, 0.9);
+	transition-duration: 0.4s;
+}
+.alt-link-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.alt-link {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin: 5px 20px;
+	white-space: nowrap;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -312,31 +349,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row bg-gray-5">
-    <div class="custom-container">
-      <div class="text-center">
-        <h1 class="noto">Unlock the</h1>
-        <h1 class="sancreek">Magic</h1>
-        <h3 class="noto no-margin-top">Pull a Great Summer out of the Hat!</h3>
-        <h5 class="noto">2022 Summer Reading for All Ages</h5>
-        <h5 class="margin-top-5">Saturday, June 4-Sunday, July 31</h5>
-      </div>
-      <div>Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest <a href="#" target="_blank">on the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
-      <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now!</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
-        <div class="alt-link-wrapper">
-          <div class="alt-link"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank">Ta-da! Kickoff Events</a></div>
-          <div class="alt-link"><a href="#">Dazzling Summer Events</a></div>
-          <div class="alt-link"><a href="#">Amusing Jokes</a></div>
-          <div class="alt-link"><a href="#">Tricks for Kids</a></div>
+  <div class="row">
+    <div class="background-one">
+      <div class="background-two">
+        <div class="background-three">
+          <div class="custom-container one white">
+            <div class="text-center">
+              <h1 class="noto orange-shadow white">Unlock the</h1>
+              <h1 class="sancreek orange-shadow white">Magic</h1>
+              <h3 class="noto orange-shadow white no-margin-top">Pull a Great Summer out of the Hat!</h3>
+              <h5 class="noto orange-shadow white">2022 Summer Reading for All Ages</h5>
+              <h5 class="white orange-shadow margin-top-5">Saturday, June 4-Sunday, July 31</h5>
+            </div>
+            <div class="orange-shadow margin-lg-200 margin-md-100">Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest <a class="white text-underline" href="#" target="_blank">on the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
+            <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now!</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
+            <div class="alt-link-wrapper">
+              <div class="alt-link"><a class="white" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank">Ta-da! Kickoff Events</a></div>
+              <div class="alt-link"><a class="white" href="#">Dazzling Summer Events</a></div>
+              <div class="alt-link"><a class="white" href="#">Amusing Jokes</a></div>
+              <div class="alt-link"><a class="white" href="#">Tricks for Kids</a></div>
+            </div>
+          </div>
         </div>
-   
+      </div>
     </div>
   </div>
-    
-    
-
-  <div class="row">
-    <div class="custom-container"><h4>Prizes</h4>
+  <div class="row separator-one"></div>
+  <div class="row white background-four">
+    <div class="custom-container">
+      <h4>Prizes</h4>
       <h5>Sign-Up Prizes</h5>
       <div>Visit any DCL location to pick up your Summer Reading sign-up prizes, while supplies last.</div>
       <ul>
@@ -346,7 +387,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <li>Ages 18+: TBD</li>
       </ul>
       <div>*See coupon for full details.</div>
-
       <h5>Mid-Way Prizes</h5>
       <div>Celebrate being halfway to your goal! Stop by the library to pick up your prize.</div>
       <ul>
@@ -356,7 +396,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <li>Ages 18+: Second Chapter Bookstore free book coupon*</li>
       </ul>
       <div>*See coupon for full details.</div>
-  
       <h5>Finishing Prizes</h5>
       <div>Collect a prize when you complete your challenge, or just for having a magical summer!</div>
       <ul>
@@ -403,7 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div>Look what we have up our sleeve! We’re giving away 105 prizes to Summer Reading participants who sign up to read. What could you win? Unlock the Magic of Summer Reading and find out!</div>
       <div class="padding-top-15">Each giveaway day features a random drawing for that day’s prize. Everyone registered May 1-July 15 will be entered into the prize drawings. Most prizes mailed directly to winners or delivery will be otherwise arranged. Winners will be announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free.</div>
     </div>
-  </div>-->
+  </div>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -501,4 +540,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
