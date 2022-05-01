@@ -103,11 +103,11 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding: 70px 10px 0;
 }
 .custom-container.three {
-	padding: 0 10px 85px;
+	padding: 0 10px 70px;
 	background: transparent url("magic-trick.png") top center no-repeat;
 }
 .custom-container.four {
-	padding: 80px 10px 75px;
+	padding: 110px 10px 95px;
 }
 h1.sancreek {
 	font-family: 'Sancreek', serif;
@@ -143,12 +143,15 @@ h4.sancreek {
 	font-size: 18px;
 	font-weight: 400;
 }
+.red-shadow {
+	text-shadow: 0px 0px 15px #851734;
+}
 .orange-shadow {
 	text-shadow: 0px 0px 15px #e55d11;
 }
 .background-one {
-	background: linear-gradient(#e89219, #e55d11);
-	border-top: 4px solid #452d7f;
+	background: radial-gradient(circle at center, #ca2c43 0%, #851734 60%, #4e0d1f 100%);
+	padding-bottom: 20px;
 }
 .background-two {
 	background: transparent url("bubbles.png") center top repeat-x;
@@ -156,23 +159,30 @@ h4.sancreek {
 .background-three {
 	background: transparent url("banner-flags.png") center top repeat-x;
 }
-.background-four, .background-five {
+.background-four {
 	background: #452d7f;
 }
+.background-five {
+	background: linear-gradient(#452d7f 0%, #452d7f 10%, #6743be 50%, #452d7f 60%, #000 100%);
+}
 .background-six {
-	background: linear-gradient(#e55d11, #e89219);
+	background: radial-gradient(circle at center, #e57639 0%, #ce540f 60%, #b64a0e 90%, #a8440d 100%);
+	box-shadow: inset 0px 5px 100px 5px rgba(0,0,0,.3);
 }
 .background-seven {
 	background: transparent url("bubbles.png") center top repeat-x;
-	border-bottom: 4px solid #452d7f;
 }
 .separator-one {
-	height: 50px;
-	background: #e55d11 url("separator-one.jpg") center center repeat-x;
+	height: 20px;
+	background: transparent url("separator-one.png") center center repeat-x;
+	margin-top: -20px;
 }
 .separator-two {
-	height: 50px;
-	background: #e55d11 url("separator-two.jpg") center center repeat-x;
+	height: 20px;
+	background: transparent url("separator-two.png") center center repeat-x;
+	position: relative;
+	bottom: -20px;
+	margin-top: -20px;
 }
 .link-wrapper {
 	width: 325px;
@@ -185,15 +195,14 @@ h4.sancreek {
 }
 .link, .link:visited, .link:active {
 	width: 300px;
-	background: radial-gradient(#8556f4, #452d7f);
+	background: linear-gradient(#8556f4, #452d7f);
 	color: #fff;
 	margin: 10px;
 	padding: 15px 5px;
 	border-radius: 3px;
 	text-transform: uppercase;
 	text-decoration: none;
-	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-	box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.1);
 	font-weight: 500;
 	border: 3px solid #fff;
 }
@@ -201,7 +210,7 @@ h4.sancreek {
 	background: #8556f4;
 	color: #fff;
 	text-decoration: none;
-	box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.6);
+	box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.4);
 	transition-duration: 0.4s;
 }
 .link.tee-link {
@@ -228,8 +237,7 @@ h4.sancreek {
 	padding: 30px 10px;
 }
 .prize-item {
-	border: 3px solid #fff;
-	background: #56389e;
+	background: linear-gradient(#6743be 0%, #452d7f 100%);
 	padding: 30px;
 	margin: 5px;
 	border-radius: 3px;
@@ -489,13 +497,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="background-three">
           <div class="custom-container one white">
             <div class="text-center">
-              <h1 class="noto orange-shadow white">Unlock the</h1>
-              <h1 class="sancreek orange-shadow white">Magic</h1>
-              <h3 class="noto orange-shadow white no-margin-top">Pull a Great Summer out of the Hat!</h3>
-              <h5 class="noto orange-shadow white">2022 Summer Reading for All Ages</h5>
-              <h5 class="white orange-shadow margin-top-5">Saturday, June 4-Sunday, July 31</h5>
+              <h1 class="noto red-shadow white">Unlock the</h1>
+              <h1 class="sancreek red-shadow white">Magic</h1>
+              <h3 class="noto red-shadow white no-margin-top">Pull a Great Summer out of the Hat!</h3>
+              <h5 class="noto red-shadow white">2022 Summer Reading for All Ages</h5>
+              <h5 class="white red-shadow margin-top-5">Saturday, June 4-Sunday, July 31</h5>
             </div>
-            <div class="intro-text text-center orange-shadow margin-lg-125 margin-md-100">Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.<!--You can also do the supplemental activities we suggest <a class="white text-underline" href="#" target="_blank">on the reading log</a>.--> We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
+            <div class="intro-text text-center red-shadow margin-lg-125 margin-md-100">Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.<!--You can also do the supplemental activities we suggest <a class="white text-underline" href="#" target="_blank">on the reading log</a>.--> We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
             <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now!</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
             <div class="alt-link-wrapper">
               <div class="alt-link"><a class="white" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank">Ta-da! Kickoff Events</a></div>
@@ -572,15 +580,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row separator-two"></div>
   <div id="tees" class="row">
-    <div class="background-six">
+    <div class="background-one">
       <div class="background-seven">
         <div class="custom-container four">
-          <h4 class="text-center sancreek white orange-shadow">Summer Reading Tees</h4>
-          <h4 class="noto white text-center no-margin-top orange-shadow">On Sale Now!</h4>
+          <h4 class="text-center sancreek white red-shadow">Summer Reading Tees</h4>
+          <h4 class="noto white text-center no-margin-top red-shadow">On Sale Now!</h4>
           <div class="tee-wrapper">
             <div class="tee-item-one"><img src="bam-tee.png" alt="Books Are Magic Tee"></div>
             <div class="tee-item-two">
-              <div class="white orange-shadow font-weight-400">Sport one of our summery tees to support the <a class="text-underline white" href="../foundation/">Douglas County Libraries Foundation</a>—choose from two styles. The unisex t-shirts come in youth sizes S-L for $15 plus tax, and adult sizes S-XXL for $18 plus tax. Order by June 5—pick up and pay at your preferred library. Supply chain disruptions may delay order availability and limit supply. Color may vary. You will be contacted by email when your order arrives. Payment required at time of pickup.</div>
+              <div class="white red-shadow font-weight-400">Sport one of our summery tees to support the <a class="text-underline white" href="../foundation/">Douglas County Libraries Foundation</a>—choose from two styles. The unisex t-shirts come in youth sizes S-L for $15 plus tax, and adult sizes S-XXL for $18 plus tax. Order by June 5—pick up and pay at your preferred library. Supply chain disruptions may delay order availability and limit supply. Color may vary. You will be contacted by email when your order arrives. Payment required at time of pickup.</div>
               <div><a class="link tee-link" href="tees/">Order Now!</a></div>
             </div>
             <div class="tee-item-three"><img src="gc-tee.png" alt="Great Characters Tee"></div>
