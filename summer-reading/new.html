@@ -185,7 +185,7 @@ h4.sancreek {
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-	box-shadow: 0px 0px 35px 10px rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.3);
 	font-weight: 500;
 	border: 3px solid #fff;
 }
@@ -193,8 +193,14 @@ h4.sancreek {
 	background: #8556f4;
 	color: #fff;
 	text-decoration: none;
-	box-shadow: 0px 0px 35px 10px rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.6);
 	transition-duration: 0.4s;
+}
+.link.tee-link {
+	width: 175px;
+	display: inherit;
+	text-align: center;
+	margin: 25px auto;
 }
 .alt-link-wrapper {
 	display: flex;
@@ -251,9 +257,23 @@ h4.sancreek {
 .tee-wrapper {
 	display: flex;
 	justify-content: center;
+	align-content: center;
 }
-.tee-item {
-	max-width: 417px;
+.tee-item-two {
+	padding: 0 10px;
+}
+
+@media (max-width: 1125px) {
+.tee-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+.tee-item-two {
+	order: 3;
+	padding: 15px 10px;
+}
 }
 
 @media (max-width: 875px) {
@@ -263,6 +283,16 @@ h4.sancreek {
 	max-width: 500px;
 	margin: 0 auto;
 }
+}
+
+@media (max-width: 850px) {
+.tee-item-one img, .tee-item-three img {
+	max-width: 350px;
+}
+    .tee-item-two {
+        max-width: 700px;
+        text-align: center;
+    }
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -534,12 +564,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h4 class="text-center sancreek white orange-shadow">Summer Reading Tees</h4>
           <h4 class="noto white text-center no-margin-top orange-shadow">On Sale Now!</h4>
           <div class="tee-wrapper">
-            <div class="tee-item"><img class="img-responsive" src="bam-tee.png" alt="Books Are Magic Tee"></div>
-            <div class="tee-item">
+            <div class="tee-item-one"><img src="bam-tee.png" alt="Books Are Magic Tee"></div>
+            <div class="tee-item-two">
               <div class="white orange-shadow font-weight-400">Sport one of our summery tees to support the Douglas County Libraries Foundation—choose from two styles. The unisex t-shirts come in youth sizes S-L for $15 plus tax, and adult sizes S-XXL for $18 plus tax. Order by June 5—pick up and pay at your preferred library. Supply chain disruptions may delay order availability and limit supply. Color may vary. You will be contacted by email when your order arrives. Payment required at time of pickup.</div>
-              <div class="link-wrapper padding-top-15"><a class="link" href="tees/" target="_blank">Order Now!</a></div>
+              <div><a class="link tee-link" href="tees/">Order Now!</a></div>
             </div>
-            <div class="tee-item"><img class="img-responsive" src="gc-tee.png" alt="Great Characters Tee"></div>
+            <div class="tee-item-three"><img src="gc-tee.png" alt="Great Characters Tee"></div>
           </div>
         </div>
       </div>
