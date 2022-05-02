@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -92,191 +93,124 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Sancreek&display=swap" rel="stylesheet">
 <style>
 .page {
-	background: #005b4e url("background.jpg") center top repeat-x;
-	height: 700px;
-	padding: 60px 0 0;
-	position: relative;
-    border-top: 30px solid #003d59;
+	background: #121042 url("banner-background.jpg") center top repeat-x;
 }
-h1.nerko {
-	font-family: 'Nerko One', cursive;
-	color: #fff;
-	font-size: 100px;
+.custom-container {
+	display: flex;
+	justify-content: center;
+	padding: 0 10px;
 }
-.static-marsha {
-	background: url("marsha.png");
-	width: 48px;
-	height: 50px;
-	margin: 0 auto;
-	animation: marsha-sprite .1s steps(2) infinite;
+h1.sancreek {
+	font-family: 'Sancreek', serif;
+	text-transform: uppercase;
+	font-size: 190px;
+	margin: 0;
 }
-.bee-one {
-	background: url("marsha.png");
-	position: absolute;
-	left: 20%;
-	width: 48px;
-	height: 50px;
-	animation: marsha-sprite .1s steps(2) infinite;
+h1.noto, h2.noto, h3.noto, h4.noto, h5.noto {
+	font-family: 'Noto Serif', serif;
+	text-transform: uppercase;
 }
-.bee-two {
-	background: url("jim.png");
-	position: absolute;
-	right: 15%;
-	width: 58px;
-	height: 60px;
-	animation: jim-sprite .1s steps(2) infinite;
+h1.noto {
+	font-size: 52px;
+	margin: 0;
+}
+h3.sancreek {
+	font-family: 'Sancreek', serif;
+	text-transform: uppercase;
+	font-size: 60px;
+	margin: 0;
+}
+h4.sancreek {
+	font-family: 'Sancreek', serif;
+	text-transform: uppercase;
+	font-size: 40px;
+	margin: 0;
+}
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-top: 120px;
+}
+.rabbit-wrapper {
+	margin-bottom: -10px;
 }
 .link-wrapper {
+	font-family: 'Noto Serif', serif;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 50px 0 0;
+	padding: 0 0 30px;
+	flex-direction: column;
 }
 .link, .link:visited, .link:active {
+	text-transform: uppercase;
 	color: #fff;
-	border-radius: 15px;
-	background: #ff8f49;
-	padding: 20px 5px;
+	border-radius: 50px;
+	background: #4a9bb8;
+	padding: 20px 0 22px;
 	transition-duration: .5s;
 	text-decoration: none;
-	width: 245px;
+	width: 320px;
 	margin: 10px;
 	display: block;
 	font-size: 22px;
 	font-weight: 400;
-	line-height: 1.1em;
+	line-height: 1.2em;
 }
 .link:hover, .link:focus {
-	color: #fff;
-	background: #d24500;
+	color: #121042;
+	background: #61cbf1;
 	text-decoration: none;
 	transition-duration: .5s;
-	animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
-@media (max-width: 890px) {
-h1.nerko {
-	font-size: 88px;
-	line-height: .9em;
+@media (max-width:940px) {
+h1.sancreek {
+	font-size: 140px;
 }
 }
 
-@media (max-width: 824px) {
-.page {
-	background: #003d59 url("background-small.jpg") center bottom repeat-x;
-	height: inherit;
-	padding: 60px 0 0;
-	position: relative;
-    border-top: 0;
+@media (max-width:750px) {
+.rabbit-wrapper {
+	margin-bottom: 0;
 }
-.link-wrapper {
-	padding: 50px 0 325px;
+.content-wrapper {
+	padding: 10px 0 10px;
+	justify-content: center;
 }
-.bee-two {
+}
+
+@media (min-width: 676px) {
+.rabbit-wrapper-alt {
 	display: none;
 }
 }
 
-@media (min-width: 624px) {
-.static-marsha {
-	display: none;
-}
-}
-
-@media (max-width: 625px) {
-.link-wrapper {
+@media (max-width: 675px) {
+.custom-container {
+	display: flex;
+	justify-content: center;
+	padding: 0 10px;
 	flex-direction: column;
-	width: inherit;
+	align-items: center;
 }
-.bee-one {
+.link, .link:visited, .link:active {
+	padding: 18px 0 20px;
+	width: 300px;
+	font-size: 20px;
+}
+.rabbit-wrapper {
 	display: none;
 }
-.page {
-	padding: 10px 0 0;
-}
-}
-@keyframes jim-sprite {
-to {
-background-position: -116px 0;
-}
-}
-@keyframes marsha-sprite {
-to {
-background-position: -96px 0;
-}
-}
-@-webkit-keyframes heartbeat {
-from {
--webkit-transform: scale(1);
-transform: scale(1);
--webkit-transform-origin: center center;
-transform-origin: center center;
--webkit-animation-timing-function: ease-out;
-animation-timing-function: ease-out;
-}
-10% {
--webkit-transform: scale(0.91);
-transform: scale(0.91);
--webkit-animation-timing-function: ease-in;
-animation-timing-function: ease-in;
-}
-17% {
--webkit-transform: scale(0.98);
-transform: scale(0.98);
--webkit-animation-timing-function: ease-out;
-animation-timing-function: ease-out;
-}
-33% {
--webkit-transform: scale(0.87);
-transform: scale(0.87);
--webkit-animation-timing-function: ease-in;
-animation-timing-function: ease-in;
-}
-45% {
--webkit-transform: scale(1);
-transform: scale(1);
--webkit-animation-timing-function: ease-out;
-animation-timing-function: ease-out;
-}
-}
-@keyframes heartbeat {
-from {
--webkit-transform: scale(1);
-transform: scale(1);
--webkit-transform-origin: center center;
-transform-origin: center center;
--webkit-animation-timing-function: ease-out;
-animation-timing-function: ease-out;
-}
-10% {
--webkit-transform: scale(0.91);
-transform: scale(0.91);
--webkit-animation-timing-function: ease-in;
-animation-timing-function: ease-in;
-}
-17% {
--webkit-transform: scale(0.98);
-transform: scale(0.98);
--webkit-animation-timing-function: ease-out;
-animation-timing-function: ease-out;
-}
-33% {
--webkit-transform: scale(0.87);
-transform: scale(0.87);
--webkit-animation-timing-function: ease-in;
-animation-timing-function: ease-in;
-}
-45% {
--webkit-transform: scale(1);
-transform: scale(1);
--webkit-animation-timing-function: ease-out;
-animation-timing-function: ease-out;
+.rabbit-wrapper-alt img {
+	max-height: 600px;
+	margin: 0 auto -90px auto;
 }
 }
 </style>
@@ -458,15 +392,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row page">
-    <div class="container-md">
-      <div class="bee-one"></div>
-      <div class="static-marsha"></div>
-      <h1 class="nerko no-margin text-center">Splish, Splash, Bloom</h1>
-      <div class="link-wrapper"> <a href="reading-challenge/" class="link">Keep Growing:<br>
-        Reading Challenge</a> <a href="volunteer/" class="link">It's National<br>
-        Volunteer Month!</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2074168319" class="link">Flowers<br>
-        for You</a></div>
-      <div class="bee-two"></div>
+    <div class="custom-container">
+      <div class="rabbit-wrapper"><img class="img-responsive" src="rabbit.png" alt=""></div>
+      <div class="content-wrapper">
+        <h1 class="noto white">Unlock the</h1>
+        <h1 class="sancreek white">Magic</h1>
+        <div class="rabbit-wrapper-alt"><img class="img-responsive" src="rabbit.png" alt=""></div>
+        <div class="link-wrapper"> <a href="summer-reading/" class="link">Summer Reading<br>
+          Magic</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank" class="link">Hop to a<br>
+          Kickoff Party!</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2094567089" class="link">Thrive: Mental<br>
+          Health & Wellness</a></div>
+      </div>
     </div>
   </div>
   <!-- <a href="storybook-holiday/">
@@ -531,24 +467,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script type="text/javascript">
-            $(".bee-one").mouseover(function () {
-                $(".bee-one").animate({ 
-                        left:(Math.random()*500),
-                        top:(Math.random()*500),
-                 }, "slow");
-            });
-        </script> 
-<script type="text/javascript">
-            $(".bee-two").mouseover(function () {
-                $(".bee-two").animate({ 
-                        right:(Math.random()*500),
-                        bottom:(Math.random()*500),
-                 }, "slow");
-            });
-        </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -587,4 +506,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
