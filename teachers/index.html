@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -100,10 +101,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .teachables-background {
 	background: url("teachables.jpg") repeat top center;
 }
-.teacher-box {
-	background-color: #fff;
-	padding: 15px 30px 40px;
-}
 .item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -119,19 +116,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	padding: 0 30px 35px;
 	border-radius: 3px;
 }
-.icon-circle-gray {
-	border: 6px solid #f5f5f5;
-	border-radius: 50%;
-	box-sizing: border-box;
-	color: #4f878c;
-	background-color: #fff;
-	font-size: 42px;
-	height: 100px;
-	line-height: 90px;
-	margin: -50px auto 0 auto;
-	text-align: center;
-	width: 100px;
-}
 .circle-wrapper {
 	border: 6px solid #fff;
 	height: 92px;
@@ -139,14 +123,78 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	border-radius: 50%;
 	margin: -46px auto 0 auto;
 }
-.item-alt {
-	margin: 15px;
-	width: 400px;
-	background-color: #fff;
-}
 .align-bottom {
 	margin-top: auto;
 	text-align: center;
+	padding: 20px 0 55px;
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	max-width: 1365px;
+	margin: 0 auto;
+}
+.box-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 10px 15px;
+	background: #fff;
+	border-radius: 3px;
+	max-width: 575px;
+	min-width: 275px;
+}
+.box-item-inner {
+	padding: 0 30px 0;
+}
+.box-item-inner.inner-alt {
+	padding-bottom: 75px;
+}
+.gray-circle-wrapper {
+	border: 6px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	height: 112px;
+	margin: 0 auto;
+	width: 112px;
+}
+.gray-circle {
+	border: 6px solid #e6e4e2;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #4f878c;
+	background-color: #fff;
+	font-size: 42px;
+	height: 100px;
+	line-height: 90px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+}
+.gray-circle-wrapper.circle-alt {
+	height: 132px;
+	width: 132px;
+}
+.gray-circle.circle-alt {
+	height: 120px;
+	width: 120px;
+}
+.white-bottom-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+}
+
+@media (max-width: 915px) {
+.box-wrapper {
+	max-width: 600px;
+}
+.box-item-inner {
+	text-align: center;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -347,19 +395,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row padding-top-30 padding-bottom-30">
-    <div class="item-wrapper">
-      <div id="page-to-stage" class="item-alt"><img src="page-stage.png" alt="Page to Stage" class="img-responsive center-block">
-        <h3 class="text-center">Page to Stage</h3>
-        <div>Page to Stage brings literature to life! Every year, we bring a classic tale to schools across the county in the form of a traveling theater production especially for kids in grades K-5.</div>
+  <div class="row bg-gray-5 padding-top-40 padding-bottom-80">
+    <div class="box-wrapper">
+      <div id="page-to-stage" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="page-stage.png" alt="Page to Stage" class="img-responsive"></div>
+          </div>
+        </div>
+        <div class="box-item-inner inner-alt">
+          <h3 class="text-center margin-top-10">Page to Stage</h3>
+          <div>Page to Stage brings literature to life! Every year, we bring a classic tale to schools across the county in the form of a traveling theater production especially for kids in grades K-5.</div>
+        </div>
       </div>
-      <div id="epic-reads" class="item-alt"><img src="epic-reads.png" alt="Epic Reads" class="img-responsive center-block">
-        <h3 class="text-center">Epic Reads</h3>
-        <div>Library staff from your closest DCL branch will come to your school to <a href="../read-listen-watch/#epic-reads">recommend just-right books</a> to your students in a fun and interactive way.</div>
+      <div id="epic-reads" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="epic-reads.png" alt="Epic Reads" class="img-responsive"></div>
+          </div>
+        </div>
+        <div class="box-item-inner inner-alt">
+          <h3 class="text-center margin-top-10">Epic Reads</h3>
+          <div>Library staff from your closest DCL branch will come to your school to <a href="../read-listen-watch/#epic-reads">recommend just-right books</a> to your students in a fun and interactive way.</div>
+        </div>
       </div>
-      <div id="book-an-archivist" class="item-alt"><img src="archivist.png" alt="Book an Archivist" class="img-responsive center-block">
-        <h3 class="text-center">Book an Archivist</h3>
-        <div>Got history? We do! Archivists and local historians from the <a href="https://archives.dcl.org/" target="_blank">DCL Archives & Local History</a> can visit your school to talk about local history and how they keep track of it. </div>
+      <div id="book-an-archivist" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="archivist.png" alt="Book an Archivist" class="img-responsive"></div>
+          </div>
+        </div>
+        <div class="box-item-inner inner-alt">
+          <h3 class="text-center margin-top-10">Book an Archivist</h3>
+          <div>Got history? We do! Archivists and local historians from the <a href="https://archives.dcl.org/" target="_blank">DCL Archives & Local History</a> can visit your school to talk about local history and how they keep track of it. </div>
+        </div>
       </div>
     </div>
   </div>
@@ -369,27 +438,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="white padding-bottom-15 margin-lg-150 text-center">Students can even sharpen their cognitive skills with live chess tutoring!</div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-60 padding-bottom-60">
-    <div class="item-wrapper">
-      <div id="school-liaison" class="item">
-        <div class="icon-circle-gray"><i class="fas fa-chalkboard-teacher"></i></div>
-        <h3 class="text-center margin-top-10">DCL School Liaison</h3>
-        <div>Did you know you have your very own DCL School Liaison? Get started by leaving a comment on our form along with your contact information. We’d love to visit your classroom!</div>
+  <div class="row bg-gray-5 padding-top-40 padding-bottom-80">
+    <div class="box-wrapper">
+      <div id="school-liaison" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-chalkboard-teacher"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10">DCL School Liaison</h3>
+          <div>Did you know you have your very own DCL School Liaison? Get started by leaving a comment on our form along with your contact information. We’d love to visit your classroom!</div>
+        </div>
         <div class="align-bottom"><!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary text-uppercase margin-top-15" data-toggle="modal" data-target="#modal-four">Contact Us</button>
+          <button type="button" class="btn text-uppercase btn-primary btn-lg" data-toggle="modal" data-target="#modal-four">Contact Us</button>
         </div>
       </div>
-      <div id="resources" class="item">
-        <div class="icon-circle-gray"><i class="fas fa-shopping-cart"></i></div>
-        <h3 class="text-center margin-top-10">Resources by Request</h3>
-        <div>Resources by Request is like having a personal shopper at the library. We'll compile a set of materials on any topic, author or genre for use in your classroom&mdash;all you have to do is come pick them up.</div>
-        <div class="align-bottom"> <a href="resources-by-request/" class="btn btn-primary text-uppercase margin-top-15">Get Started</a> </div>
+      <div id="resources" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-shopping-cart"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10">Resources by Request</h3>
+          <div>Resources by Request is like having a personal shopper at the library. We'll compile a set of materials on any topic, author or genre for use in your classroom—all you have to do is come pick them up.</div>
+        </div>
+        <div class="align-bottom"> <a href="resources-by-request/" class="btn btn-primary btn-lg">Get Started</a> </div>
       </div>
-      <div id="tours" class="item">
-        <div class="icon-circle-gray"><i class="fas fa-city"></i></div>
-        <h3 class="text-center margin-top-10">Library Tours</h3>
-        <div>Library Tours are available to your class. Tours typically last 30 minutes, but may vary depending on the branch and services requested. Set a date to come see how things work!</div>
-        <div class="align-bottom"> <a href="library-tours/" class="btn btn-primary text-uppercase margin-top-15">Get Started</a> </div>
+      <div id="tours" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-city"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10">Library Tours</h3>
+          <div>Library Tours are available to your class. Tours typically last 30 minutes, but may vary depending on the branch and services requested. Set a date to come see how things work!</div>
+        </div>
+        <div class="align-bottom"> <a href="library-tours/" class="btn btn-primary btn-lg">Get Started</a> </div>
       </div>
     </div>
   </div>
@@ -510,4 +597,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
