@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,31 +91,59 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .kids-teens-active {
 	background-color: #f5f5f5;
 }
-.subheading {
-	font-size: 18px;
-	color: #666;
+.custom-container {
+	max-width: 1280px;
+	margin: 0 auto;
 }
-.item-wrapper {
+.photo-box-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0 auto;
 }
-.custom-container {
-	max-width: 1280px;
-	margin: 0 auto;
+.align-bottom {
+	margin-top: auto;
+	text-align: center;
 }
-.item {
+.photo-box-item {
 	display: flex;
 	flex-direction: column;
-	margin: 45px 20px 20px 20px;
-	width: 450px;
-	background-color: #fff;
-	padding: 0 30px 35px;
-	border-radius: 3px;
+	flex: 1;
+	margin: 30px 15px;
+	min-width: 400px;
+	max-width: 800px;
 }
-.icon-circle-gray {
-	border: 6px solid #f5f5f5;
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	max-width: 1365px;
+	margin: 0 auto;
+}
+.box-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 10px 15px;
+	background: #fff;
+	border-radius: 3px;
+	max-width: 575px;
+	min-width: 275px;
+}
+.box-item-inner {
+	padding: 0px 30px 75px;
+}
+.gray-circle-wrapper {
+	border: 6px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	height: 112px;
+	margin: 0 auto;
+	width: 112px;
+}
+.gray-circle {
+	border: 6px solid #e6e4e2;
 	border-radius: 50%;
 	box-sizing: border-box;
 	color: #4f878c;
@@ -122,38 +151,29 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-size: 42px;
 	height: 100px;
 	line-height: 90px;
-	margin: -50px auto 0 auto;
+	margin: 0 auto;
 	text-align: center;
 	width: 100px;
 }
-.circle-wrapper {
-	border: 6px solid #fff;
-	height: 92px;
-	width: 92px;
-	border-radius: 50%;
-	margin: -46px auto 0 auto;
-}
-.item-alt {
-	margin: 15px;
-	width: 400px;
-	background-color: #fff;
-}
-.align-bottom {
-	margin-top: auto;
-	text-align: center;
-}
-.box-item {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin: 30px 15px;
-	min-width: 400px;
+.white-bottom-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
 }
 
-@media (max-width: 768px) {
-.box-item {
-	flex-direction: column;
-	padding: 0;
+@media (max-width: 915px) {
+.box-wrapper {
+	max-width: 600px;
+}
+.box-item-inner {
+	text-align: center;
+}
+}
+
+@media (max-width: 859px) {
+.photo-box-item {
+text-align: center;
 }
 }
 </style>
@@ -338,21 +358,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Parents</h1>
-
         <h4 class="roboto margin-top-5 margin-bottom-5">DCL is proud to help you build bright futures for your kids! </h4>
-        <div class="subheading margin-lg-150">We also offer a <a href="../camp-dcl/">variety of camps</a> at our locations and can host your child’s <a href="../birthday-parties/">birthday party</a>. Sign up for our <a href="../newsletters/">eNewsletter</a> to learn about <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">upcoming events</a> and happenings for kids and families each month.</div>
+        <div class="subheading margin-lg-175">We also offer a <a href="../camp-dcl/">variety of camps</a> at our locations and can host your child’s <a href="../birthday-parties/">birthday party</a>. Sign up for our <a href="../newsletters/">eNewsletter</a> to learn about <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">upcoming events</a> and happenings for kids and families each month.</div>
       </div>
     </div>
   </div>
   <div class="row padding-bottom-30">
     <div class="custom-container">
-      <div class="item-wrapper">
-        <div id="bark-for-books" class="box-item">
-          <div id="box-two"></div>
+      <div class="photo-box-wrapper">
+        <div id="bark-for-books" class="photo-box-item">
+          <div id="photo-box-two"></div>
           <h3 class="text-center">Bark for Books</h3>
           <div>Bark for Books helps budding and struggling readers build confidence and self-esteem by reading out loud to trained therapy dogs without the stress of being judged.</div>
           <div class="align-bottom">
-            <div class="dropdown"> <a href="#" class="btn btn-primary margin-top-15 dropdown-toggle" data-toggle="dropdown">View Calendar <span class="caret"></span></a>
+            <div class="dropdown"> <a href="#" class="btn btn-primary btn-lg margin-top-15 dropdown-toggle" data-toggle="dropdown">View Calendar <span class="caret"></span></a>
               <div class="dropdown-menu dropdown-menu-center">
                 <div class="padding-15" style="border-bottom:1px solid #ccc;">Choose a Location:</div>
                 <div class="padding-15 text-capitalize">
@@ -369,30 +388,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
         </div>
-        <div id="reading-buddies" class="box-item">
-          <div id="box-three"></div>
+        <div id="reading-buddies" class="photo-box-item">
+          <div id="photo-box-three"></div>
           <h3 class="text-center">Reading Buddies</h3>
           <div>This unique program matches trained teen Big Buddies with struggling readers, Little Buddies, in grades 1-3. Buddies meet regularly to read and enjoy literacy-based games. Does your child struggle with motivation, confidence and skill when it comes to reading?</div>
-          <div class="align-bottom"> <a href="../reading-buddies/" class="btn btn-primary margin-top-15">Get Started</a></div>
+          <div class="align-bottom"> <a href="../reading-buddies/" class="btn btn-primary btn-lg margin-top-15">Get Started</a></div>
         </div>
-        <div id="slick-science" class="box-item">
-          <div id="box-six"></div>
+        <div id="slick-science" class="photo-box-item">
+          <div id="photo-box-six"></div>
           <h3 class="text-center">Slick Science</h3>
           <div>Fun, rotating science activities for kids ages 8-12 exploring a variety of STEAM-focused topics.</div>
-          <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=724&kw=slick+science&df=list&cn=0&lib=all&nd=365" target="_blank" class="btn btn-primary margin-top-15">Register Now</a></div>
+          <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=724&kw=slick+science&df=list&cn=0&lib=all&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-15">Register Now</a></div>
         </div>
-        <div id="botb" class="box-item">
-          <div id="box-five"></div>
+        <div id="botb" class="photo-box-item">
+          <div id="photo-box-five"></div>
           <h3 class="text-center"><a href="../botb/">Battle of the Books</a></h3>
           <div><a href="../botb/">Battle of the Books</a> is a bowl-style trivia tournament that’s all about books, engaging hundreds of young minds every year.</div>
         </div>
-        <div id="1000-books" class="box-item">
-          <div id="box-one"></div>
+        <div id="1000-books" class="photo-box-item">
+          <div id="photo-box-one"></div>
           <h3 class="text-center"><a href="../1000-books/">1000 Books Before Kindergarten</a></h3>
           <div>This national initiative encourages regular reading to babies and toddlers to increase their potential for school success.</div>
         </div>
-        <div id="reading-levels" class="box-item">
-          <div id="box-four"></div>
+        <div id="reading-levels" class="photo-box-item">
+          <div id="photo-box-four"></div>
           <h3 class="text-center">Reading Levels</h3>
           <div>Looking for the right books to match your child's reading level and foster growth? <a href="http://www.arbookfind.com/" target="_blank">AR BookFinder</a> and <a href="http://www.scholastic.com/bookwizard/" target="_blank">Scholastic's Book Wizard</a> can help. </div>
         </div>
@@ -401,44 +420,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <script>
     var images = ['1kbook-one.jpg', '1kbook-two.jpg', '1kbook-three.jpg', '1kbook-four.jpg', '1kbook-five.jpg', '1kbook-six.jpg', '1kbook-seven.jpg', '1kbook-eight.jpg', '1kbook-nine.jpg', '1kbook-ten.jpg', '1kbook-eleven.jpg', '1kbook-twelve.jpg', '1kbook-thirteen.jpg'];
-    $('<img alt="1000 Books Before Kindergarten" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+    $('<img alt="1000 Books Before Kindergarten" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-one');
 	
 	var images = ['bark-one.jpg', 'bark-two.jpg', 'bark-three.jpg', 'bark-four.jpg', 'bark-five.jpg', 'bark-six.jpg', 'bark-seven.jpg', 'bark-eight.jpg', 'bark-nine.jpg', 'bark-ten.jpg', 'bark-eleven.jpg', 'bark-twelve.jpg', 'bark-thirteen.jpg', 'bark-fourteen.jpg'];
-    $('<img alt="Bark for Books" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+    $('<img alt="Bark for Books" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-two');
 	
 	var images = ['buddies-one.jpg', 'buddies-two.jpg', 'buddies-three.jpg', 'buddies-four.jpg', 'buddies-five.jpg','buddies-six.jpg', 'buddies-seven.jpg', 'buddies-eight.jpg', 'buddies-nine.jpg', 'buddies-ten.jpg', 'buddies-eleven.jpg', 'buddies-twelve.jpg'];
-    $('<img alt="Reading Buddies" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
+    $('<img alt="Reading Buddies" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-three');
 	
 	var images = ['levels-one.jpg', 'levels-two.jpg', 'levels-three.jpg', 'levels-four.jpg', 'levels-five.jpg', 'levels-six.jpg', 'levels-seven.jpg', 'levels-eight.jpg', 'levels-nine.jpg', 'levels-ten.jpg', 'levels-eleven.jpg', 'levels-twelve.jpg'];
-    $('<img alt="Reading Levels" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
+    $('<img alt="Reading Levels" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-four');
       
     var images = ['botb-one.jpg', 'botb-two.jpg', 'botb-three.jpg', 'botb-four.jpg', 'botb-five.jpg', 'botb-six.jpg', 'botb-seven.jpg', 'botb-eight.jpg', 'botb-nine.jpg', 'botb-ten.jpg'];
-    $('<img alt="Battle of the Books" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-five');
+    $('<img alt="Battle of the Books" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-five');
       
      var images = ['science-one.jpg', 'science-two.jpg', 'science-three.jpg', 'science-four.jpg', 'science-five.jpg', 'science-six.jpg', 'science-seven.jpg', 'science-eight.jpg', 'science-nine.jpg', 'science-ten.jpg'];
-    $('<img alt="Slick Science" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-six'); 
+    $('<img alt="Slick Science" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-six'); 
 </script>
   <div class="row bg-teal padding-top-30 padding-bottom-40">
     <div class="container">
       <h4 class="white margin-lg-125 text-center">Parents and guardians have the option to limit their children’s borrowing if they’re under the age of 15. <a class="white text-underline" href="../fines-fees-borrowing/#parental-controls">Learn more</a> about parental controls. </h4>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-60 padding-bottom-60">
-    <div class="item-wrapper">
-      <div id="curriculum-kits" class="item">
-        <div class="icon-circle-gray"><i class="fas fa-shopping-bag"></i></div>
-        <h3 class="text-center margin-top-10"><a href="https://dcl.bibliocommons.com/v2/search?query=%22curriculum+kit%22&searchType=smart">Curriculum Kits</a></h3>
-        <div>Self-contained kits for K-6 students provide manipulatives and ideas for helping students during remote learning or home schooling. Kits on the subjects of Literacy/Language Arts, Math, Art, Social Studies, and Science can be checked out using your library card. </div>
+  <div class="row bg-gray-5 padding-top-40 padding-bottom-80">
+    <div class="box-wrapper">
+      <div id="curriculum-kits" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-shopping-bag"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="https://dcl.bibliocommons.com/v2/search?query=%22curriculum+kit%22&searchType=smart">Curriculum Kits</a></h3>
+          <div>Self-contained kits for K-6 students provide manipulatives and ideas for helping students during remote learning or home schooling. Kits on the subjects of Literacy/Language Arts, Math, Art, Social Studies, and Science can be checked out using your library card. </div>
+        </div>
       </div>
-      <div id="book-club-express" class="item">
-        <div class="icon-circle-gray"><i class="fas fa-layer-group"></i></div>
-        <h3 class="text-center margin-top-10"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h3>
-        <div>It’s easy to <a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">reserve reading materials</a> for kids and teens! Multiple copies of the book, an author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit, so students are all on the same page. </div>
+      <div id="book-club-express" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-rotate-270 fa-server"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h3>
+          <div>It’s easy to <a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">reserve reading materials</a> for kids and teens! Multiple copies of the book, an author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit, so students are all on the same page. </div>
+        </div>
       </div>
-      <div id="scholastic-teachables" class="item">
-        <div class="icon-circle-gray"><i class="far fa-object-group"></i></div>
-        <h3 class="text-center margin-top-10"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=scholastic-teachables" target="_blank">Scholastic Teachables</a></h3>
-        <div>Download printable worksheets, learning games, lesson plans, reading passages, games and puzzles, clip art, bulletin board ideas, and skill sheets for kids Pre-K to 8th grade. Find thousands of math, science, reading comprehension, STEM, and writing activities to meet student needs.</div>
+      <div id="scholastic-teachables" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="far fa-object-group"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=scholastic-teachables" target="_blank">Scholastic Teachables</a></h3>
+          <div>Download printable worksheets, learning games, lesson plans, reading passages, games and puzzles, clip art, bulletin board ideas, and skill sheets for kids Pre-K to 8th grade. Find thousands of math, science, reading comprehension, STEM, and writing activities to meet student needs.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -545,4 +582,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
