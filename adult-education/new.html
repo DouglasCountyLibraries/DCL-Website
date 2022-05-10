@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic|Open+Sans:300,400,600|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?5822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -172,6 +173,146 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .box-item {
 	flex-direction: column;
 	padding: 0;
+}
+}
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-row {
+	background: #f5f5f5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1610px;
+	margin: 0 auto;
+}
+.slideshow-content {
+	flex: 1 1 36%;
+	padding: 0 30px;
+}
+.slideshow-content h4 {
+	font-size: 20px;
+	color: #333;
+}
+.slideshow-image.main {
+	min-height: 600px;
+}
+#slideshow {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 0%;
+	width: 67%;
+	border-right: 15px solid #fff;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+	position: absolute;
+	z-index: 2;
+	width: 105%;
+	height: 105%;
+	top: -5%;
+	left: -5%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	-webkit-transition: opacity 3s, -webkit-transform 8s;
+	transition: opacity 3s, transform 8s;
+}
+/* slide two */
+#slideshow div {
+	-webkit-transform-origin: bottom left;
+	-ms-transform-origin: bottom left;
+	transform-origin: bottom left;
+}
+/* slide three */
+#slideshow div:nth-of-type(2n+1) {
+	-webkit-transform-origin: center center;
+	-ms-transform-origin: center center;
+	transform-origin: center center;
+}
+/* slide four */
+#slideshow div:nth-of-type(3n+1) {
+	-webkit-transform-origin: top right;
+	-ms-transform-origin: top right;
+	transform-origin: top right;
+}
+/* slide five */
+#slideshow div:nth-of-type(4n+1) {
+	-webkit-transform-origin: top center;
+	-ms-transform-origin: top center;
+	transform-origin: top center;
+}
+/* slide six */
+#slideshow div:nth-of-type(5n+1) {
+	-webkit-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+/* slide seven */
+#slideshow div:nth-of-type(6n+1) {
+	-webkit-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+/* slide eight */
+#slideshow div:nth-of-type(7n+1) {
+	-webkit-transform-origin: bottom center;
+	-ms-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+/* slide nine */
+#slideshow div:nth-of-type(8n+1) {
+	-webkit-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+/* slide one */
+#slideshow div:nth-of-type(9n+1) {
+	-webkit-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
+	z-index: 1
+}
+#slideshow .fx, #slideshow .fx1 {
+	-webkit-transform: scale(1.1) translate(1.5%);
+	-ms-transform: scale(1.1) translate(1.5%);
+	transform: scale(1.1) translate(1.5%);
+	opacity: 1
+}
+
+@media (max-width: 1150px) {
+.slideshow-image.main {
+	min-height: 400px;
+}
+.page-nav {
+	max-width: 800px;
+	margin: 0 auto;
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-row, .item-wrapper {
+	flex-direction: column;
+}
+.slideshow-content {
+	padding: 30px 20px 40px;
+	text-align: center;
+}
+#slideshow {
+	width: 100%;
+	border-right: 0;
+}
+.item-wrapper img {
+	padding-bottom: 15px;
+}
+.art-item {
+	text-align: center;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-image.main {
+	min-height: 300px;
 }
 }
 </style>
@@ -356,24 +497,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- InstanceBeginEditable name="Content" -->
 <div class="dcl-border-top">
   <div class="container-xxl text-center">
-    <h1 class="jumbo-text text-uppercase font-weight-400 margin-top-20 no-margin-bottom">Adult Education & Test Prep</h1>
+    <h1 class="jumbo-text text-uppercase font-weight-400 margin-top-20 no-margin-bottom">Adult Education</h1>
+    <h1 class="text-uppercase font-weight-400 no-margin">& Test Prep</h1>
   </div>
 </div>
-<div class="container-xxl padding-top-12">
+<div class="container-xxl padding-top-12 padding-bottom-30">
   <div class="page-nav">
     <div class="page-nav-item"><a href="#citizenship-and-esl"><i class="pagenav-icon fas fa-flip-horizontal fa-flag"></i>Citizenship & ESL</a></div>
     <div class="page-nav-item"><a href="#tutoring-and-proctoring"><i class="pagenav-icon fas fa-user-circle"></i>Tutoring & Proctoring</a></div>
   </div>
 </div>
-<div class="padding-top-30 padding-bottom-50">
-  <div class="container-xxl no-padding">
-    <div class="d-flex max-width-60 mx-auto justify-content-center flex-wrap flex-md-nowrap">
-      <div class="text-center padding-12">
-        <div id="box-one"></div>
-        <h3 class="text-center padding-top-15">Career Online High School (COHS)</h3>
-        <div>COHS is an accredited online high school diploma and career certification program designed to help adults ages 19 and up realize their educational and career goals.</div>
-        <div class="align-bottom"> <a href="/cohs/" class="btn btn-primary margin-top-20">Learn More</a></div>
-      </div>
+<div class="slideshow-row">
+  <div id="slideshow" class="slideshow-image main"> 
+    <!-- define each background-image in CSS -->
+    <div class="random-slide" style="background-image: url('slideshow/cohs-one.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(1) -->
+    <div class="random-slide" style="background-image: url('slideshow/cohs-two.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(2) -->
+    
+    <div class="random-slide" style="background-image: url('slideshow/cohs-three.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(3) -->
+    
+    <div class="random-slide" style="background-image: url('slideshow/cohs-four.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(4) -->
+    
+    <div class="random-slide" style="background-image: url('slideshow/cohs-five.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(5) -->
+    
+    <div class="random-slide" style="background-image: url('slideshow/cohs-six.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(6) -->
+    
+    <div class="random-slide" style="background-image: url('slideshow/cohs-seven.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(7) -->
+    
+    <div class="random-slide" style="background-image: url('slideshow/cohs-eight.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(8) -->
+    
+    <div class="random-slide" style="background-image: url('slideshow/cohs-nine.jpg')"></div>
+    <!-- #slideshow div:nth-of-type(9) --> 
+  </div>
+  <div class="slideshow-content">
+    <h4 class="no-margin-top">Career Online High School (COHS)</h4>
+    <div>COHS is an accredited online high school diploma and career certification program designed to help adults ages 19 and up realize their educational and career goals. Take a quick survey to get started. Questions or comments? <a href="#" class="text-nowrap" data-toggle="modal" data-target="#cohsmodal">Contact the COHS Team</a>.
+      <div class="padding-top-20 padding-bottom-20"><a href="https://co.careeronlinehs.org/are-you-ready-survey/" target="_blank" class="btn btn-primary btn-lg">Get Started</a></div>
     </div>
   </div>
 </div>
@@ -568,6 +734,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<script>
+function OpenInNewTab(url ){
+  var win=window.open(url, '_blank');
+  win.focus();
+}
+$("#eventsinfo .item").click(function(){
+     var url = $(this).find("a").attr("href");
+     OpenInNewTab(url);
+     return false;
+});
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+ </script> 
+<script>
+	var cards = $(".random-slide");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
 <script>
 	var cards = $(".carousel-cell");
@@ -576,11 +783,6 @@ for (var i = 0; i < cards.length; i++) {
   var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
   cards.eq(target1).before(cards.eq(target2));
 }
- </script> 
-<script>
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
  </script> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
@@ -620,4 +822,5 @@ $(function () {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
