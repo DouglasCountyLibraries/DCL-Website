@@ -186,11 +186,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .slideshow-content {
 	flex: 1 1 36%;
-	padding: 0 30px;
-}
-.slideshow-content h4 {
-	font-size: 20px;
-	color: #333;
+	padding: 0 30px 20px;
 }
 .slideshow-image.main {
 	min-height: 600px;
@@ -216,79 +212,51 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	-webkit-transition: opacity 3s, -webkit-transform 8s;
 	transition: opacity 3s, transform 8s;
 }
-/* slide two */
+#slideshow div:nth-of-type(9n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+}
 #slideshow div {
+	-webkit-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(2n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+}
+#slideshow div:nth-of-type(3n+1) {
 	-webkit-transform-origin: bottom left;
-	-ms-transform-origin: bottom left;
 	transform-origin: bottom left;
 }
-/* slide three */
-#slideshow div:nth-of-type(2n+1) {
-	-webkit-transform-origin: center center;
-	-ms-transform-origin: center center;
-	transform-origin: center center;
-}
-/* slide four */
-#slideshow div:nth-of-type(3n+1) {
+#slideshow div:nth-of-type(4n+1) {
 	-webkit-transform-origin: top right;
-	-ms-transform-origin: top right;
 	transform-origin: top right;
 }
-/* slide five */
-#slideshow div:nth-of-type(4n+1) {
-	-webkit-transform-origin: top center;
-	-ms-transform-origin: top center;
-	transform-origin: top center;
-}
-/* slide six */
 #slideshow div:nth-of-type(5n+1) {
-	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
-	transform-origin: bottom right;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
 }
-/* slide seven */
 #slideshow div:nth-of-type(6n+1) {
 	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
 	transform-origin: bottom right;
 }
-/* slide eight */
 #slideshow div:nth-of-type(7n+1) {
-	-webkit-transform-origin: bottom center;
-	-ms-transform-origin: bottom center;
-	transform-origin: bottom center;
-}
-/* slide nine */
-#slideshow div:nth-of-type(8n+1) {
-	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
-	transform-origin: bottom right;
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
 }
 /* slide one */
-#slideshow div:nth-of-type(9n+1) {
-	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
-	transform-origin: bottom right;
-}
-#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
-	z-index: 1
+#slideshow div:nth-of-type(8n+1) {
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
 }
 #slideshow .fx, #slideshow .fx1 {
 	-webkit-transform: scale(1.1) translate(1.5%);
-	-ms-transform: scale(1.1) translate(1.5%);
 	transform: scale(1.1) translate(1.5%);
-	opacity: 1
+	opacity: 1;
 }
 
-@media (max-width: 1150px) {
-.slideshow-image.main {
-	min-height: 400px;
-}
-.page-nav {
-	max-width: 800px;
-	margin: 0 auto;
-}
-}
+
+
 
 @media (max-width: 925px) {
 .slideshow-row, .item-wrapper {
@@ -508,34 +476,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <div class="slideshow-row">
-  <div id="slideshow" class="slideshow-image main"> 
-    <!-- define each background-image in CSS -->
-    <div class="random-slide" style="background-image: url('slideshow/cohs-one.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(1) -->
-    <div class="random-slide" style="background-image: url('slideshow/cohs-two.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(2) -->
+    <div id="slideshow" class="slideshow-image main"> 
+      <!-- define each background-image in CSS -->
+      <div class="random-slide" style="background-image: url('slideshow/cohs-one.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(1) --> 
+
+      <div class="random-slide" style="background-image: url('slideshow/cohs-two.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(2) --> 
+ 
+      <div class="random-slide" style="background-image: url('slideshow/cohs-three.jpg')"></div>
+      
+      <!-- #slideshow div:nth-of-type(3) --> 
+ 
+      <div class="random-slide" style="background-image: url('slideshow/cohs-four.jpg')"></div>
+      
+      <!-- #slideshow div:nth-of-type(4) --> 
+     
+      <div class="random-slide" style="background-image: url('slideshow/cohs-five.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(5) --> 
+      
+      <div class="random-slide" style="background-image: url('slideshow/cohs-six.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(6) --> 
+ 
+      <div class="random-slide" style="background-image: url('slideshow/cohs-seven.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(7) --> 
+  
+      <div class="random-slide" style="background-image: url('slideshow/cohs-eight.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(8) --> 
     
-    <div class="random-slide" style="background-image: url('slideshow/cohs-three.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(3) -->
+      <div class="random-slide" style="background-image: url('slideshow/cohs-nine.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(9) --> 
     
-    <div class="random-slide" style="background-image: url('slideshow/cohs-four.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(4) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/cohs-five.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(5) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/cohs-six.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(6) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/cohs-seven.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(7) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/cohs-eight.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(8) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/cohs-nine.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(9) --> 
-  </div>
+
+      </div>
   <div class="slideshow-content">
     <h4 class="no-margin-top">Career Online High School (COHS)</h4>
     <div>COHS is an accredited online high school diploma and career certification program designed to help adults ages 19 and up realize their educational and career goals. Take a quick survey to get started. Questions or comments? <a href="#" class="text-nowrap" data-toggle="modal" data-target="#cohsmodal">Contact the COHS Team</a>.
@@ -735,15 +708,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-function OpenInNewTab(url ){
-  var win=window.open(url, '_blank');
-  win.focus();
-}
-$("#eventsinfo .item").click(function(){
-     var url = $(this).find("a").attr("href");
-     OpenInNewTab(url);
-     return false;
-});
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
@@ -774,7 +738,7 @@ function kbSlideshow() { // set .fx1 class on 1st img on page load
 		}
 	}
 setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script>
+</script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
 <script>
 	var cards = $(".carousel-cell");
