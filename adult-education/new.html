@@ -113,60 +113,23 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .flickity-viewport {
 	transition: height 0.6s;
 }
-.subheading {
-	font-size: 18px;
-	color: #666;
-}
-.item-wrapper {
+.box-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0 auto;
 }
-.item {
-	display: flex;
-	flex-direction: column;
-	margin: 45px 20px 20px 20px;
-	width: 450px;
-	background-color: #fff;
-	padding: 0 30px 35px;
-	border-radius: 3px;
-}
-.icon-circle-gray {
-	border: 6px solid #f5f5f5;
-	border-radius: 50%;
-	box-sizing: border-box;
-	color: #4f878c;
-	background-color: #fff;
-	font-size: 42px;
-	height: 100px;
-	line-height: 90px;
-	margin: -50px auto 0 auto;
-	text-align: center;
-	width: 100px;
-}
-.circle-wrapper {
-	border: 6px solid #fff;
-	height: 92px;
-	width: 92px;
-	border-radius: 50%;
-	margin: -46px auto 0 auto;
-}
-.item-alt {
-	margin: 15px;
-	width: 400px;
-	background-color: #fff;
-}
-.align-bottom {
-	margin-top: auto;
-	text-align: center;
-}
 .box-item {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-	margin: 30px 15px;
-	min-width: 400px;
+	margin: 15px 15px 30px;
+	max-width: 575px;
+	min-width: 275px;
+}
+.align-bottom {
+	margin-top: auto;
+	text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -176,6 +139,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-wrapper {
+	margin: 0 .75rem 0 .75rem;
+}
 .slideshow-row {
 	background: #f5f5f5;
 	display: flex;
@@ -255,8 +221,21 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	opacity: 1;
 }
 
+@media (max-width: 1150px) {
+.slideshow-image.main {
+	min-height: 400px;
+}
+.page-nav {
+	max-width: 800px;
+	margin: 0 auto;
+}
+}
 
-
+@media (max-width: 915px) {
+.box-wrapper {
+	max-width: 600px;
+}
+}
 
 @media (max-width: 925px) {
 .slideshow-row, .item-wrapper {
@@ -269,12 +248,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 #slideshow {
 	width: 100%;
 	border-right: 0;
-}
-.item-wrapper img {
-	padding-bottom: 15px;
-}
-.art-item {
-	text-align: center;
 }
 }
 
@@ -475,175 +448,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="page-nav-item"><a href="#tutoring-and-proctoring"><i class="pagenav-icon fas fa-user-circle"></i>Tutoring & Proctoring</a></div>
   </div>
 </div>
-<div class="slideshow-row">
+<div class="slideshow-wrapper">
+  <div class="slideshow-row">
     <div id="slideshow" class="slideshow-image main"> 
       <!-- define each background-image in CSS -->
       <div class="random-slide" style="background-image: url('slideshow/cohs-one.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(1) --> 
-
+      <!-- #slideshow div:nth-of-type(1) -->
+      
       <div class="random-slide" style="background-image: url('slideshow/cohs-two.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(2) --> 
- 
+      <!-- #slideshow div:nth-of-type(2) -->
+      
       <div class="random-slide" style="background-image: url('slideshow/cohs-three.jpg')"></div>
       
-      <!-- #slideshow div:nth-of-type(3) --> 
- 
+      <!-- #slideshow div:nth-of-type(3) -->
+      
       <div class="random-slide" style="background-image: url('slideshow/cohs-four.jpg')"></div>
       
-      <!-- #slideshow div:nth-of-type(4) --> 
-     
+      <!-- #slideshow div:nth-of-type(4) -->
+      
       <div class="random-slide" style="background-image: url('slideshow/cohs-five.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(5) --> 
+      <!-- #slideshow div:nth-of-type(5) -->
       
       <div class="random-slide" style="background-image: url('slideshow/cohs-six.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(6) --> 
- 
+      <!-- #slideshow div:nth-of-type(6) -->
+      
       <div class="random-slide" style="background-image: url('slideshow/cohs-seven.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(7) --> 
-  
+      <!-- #slideshow div:nth-of-type(7) -->
+      
       <div class="random-slide" style="background-image: url('slideshow/cohs-eight.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(8) --> 
-    
+      <!-- #slideshow div:nth-of-type(8) -->
+      
       <div class="random-slide" style="background-image: url('slideshow/cohs-nine.jpg')"></div>
       <!-- #slideshow div:nth-of-type(9) --> 
-    
-
-      </div>
-  <div class="slideshow-content">
-    <h4 class="no-margin-top">Career Online High School (COHS)</h4>
-    <div>COHS is an accredited online high school diploma and career certification program designed to help adults ages 19 and up realize their educational and career goals. Take a quick survey to get started. Questions or comments? <a href="#" class="text-nowrap" data-toggle="modal" data-target="#cohsmodal">Contact the COHS Team</a>.
-      <div class="padding-top-20 padding-bottom-20"><a href="https://co.careeronlinehs.org/are-you-ready-survey/" target="_blank" class="btn btn-primary btn-lg">Get Started</a></div>
-    </div>
-  </div>
-</div>
-<div id="citizenship" class="box-item">
-  <div id="box-two"></div>
-  <h3 class="text-center padding-top-15">U.S. Citizenship</h3>
-  <div>Candidates for U.S. citizenship can choose from two classes a year to prepare for citizenship application and interviews. Representatives from USCIS attend to answer your questions.</div>
-  <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=Prepare+for+U.S.+Citizenship&nd=365" target="_blank" class="btn btn-primary margin-top-20">View Calendar</a></div>
-</div>
-<div id="esl" class="box-item">
-  <div id="box-three"></div>
-  <h3 class="text-center padding-top-15">Practice Your English</h3>
-  <div>Adults of all skill levels, cultures and language backgrounds converse in English in a relaxed environment, facilitated by trained volunteers. Practice Your English is held four times each month, at various Douglas County Libraries locations. </div>
-  <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?ag=&et=&kw=Practice+Your+English&lib=all&df=list&nd=365" target="_blank" class="btn btn-primary margin-top-20">View Calendar</a></div>
-</div>
-<div id="proctoring" class="box-item">
-  <div id="box-four"></div>
-  <h3 class="text-center padding-top-15">Proctoring</h3>
-  <div>We are pleased to offer free test proctoring at four locations, by appointment. By submitting the form, <a class="pointer" data-target="#proctoringmodal" data-toggle="modal" type="button">I agree to DCL's Proctoring Guidelines.</a></div>
-  <div class="align-bottom"> <a href="proctoring-form/" target="_blank" class="btn btn-primary margin-top-20">Get Started</a></div>
-</div>
-<div id="adult-tutoring" class="box-item">
-  <div id="box-five"></div>
-  <h3 class="text-center padding-top-15">Adult Tutoring</h3>
-  <div>Tutoring for <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET/TASC exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for six months. GED/TASC/HiSET students work with tutors until they are ready to pass the test. </div>
-  <div class="align-bottom dropdown text-center"> <a class="btn btn-primary margin-top-20" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Now <span class="caret"></span></a>
-    <div class="dropdown-menu dropdown-menu-center">
-      <div class="padding-15">
-        <ul class="no-margin">
-          <li><a class="text-dark" href="https://forms.gle/vyrGtZMxtEDYQbjg9" target="_blank">Application for a GED/HSE/Accuplacer/Adult Education or Adult Basic Literacy Tutor</a></li>
-          <li class="margin-top-10"><a class="text-dark" href="https://forms.gle/2KJNmqcGjmhwUKhaA" target="_blank">Application for an English or Citizenship Tutor</a></li>
-          <li class="margin-top-10"><a class="text-dark" href="https://forms.gle/ZbZD3FDfwqFkZq2R9" target="_blank">Solicitued d’un tutor d’ingles</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="tech-tutoring" class="box-item">
-  <div id="box-six"></div>
-  <h3 class="text-center padding-top-15">Tech Tutoring</h3>
-  <div>We match customers to tutors for individualized learning in technology subjects like basic internet use, tablets, email, e-books, popular software basics and more. Schedule a one-hour appointment with library staff now!</div>
-  <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=42&lib=ALL&nd=365" target="_blank" class="btn btn-primary margin-top-20">Get Started</a></div>
-</div>
-<script>
-    var images = ['cohs-one.jpg', 'cohs-two.jpg' , 'cohs-three.jpg', 'cohs-four.jpg', 'cohs-five.jpg' , 'cohs-six.jpg'];
-    $('<img alt="Career Online High School" class="img-fluid mx-auto" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
-	
-	var images = ['usc-one.jpg', 'usc-two.jpg' , 'usc-three.jpg', 'usc-four.jpg', 'usc-five.jpg' , 'usc-six.jpg'];
-    $('<img alt="U.S. Citizenship" class="img-fluid mx-auto" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
-	
-	var images = ['esl-one.jpg'];
-    $('<img alt="Practice Your English" class="img-fluid mx-auto" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
-    
-    var images = ['proctoring-one.jpg', 'proctoring-two.jpg' , 'proctoring-three.jpg', 'proctoring-four.jpg', 'proctoring-five.jpg' , 'proctoring-six.jpg', 'proctoring-seven.jpg'];
-    $('<img alt="Proctoring" class="img-fluid mx-auto" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
-	
-	var images = ['adult-tutoring-one.jpg', 'adult-tutoring-two.jpg', 'adult-tutoring-three.jpg', 'adult-tutoring-four.jpg', 'adult-tutoring-five.jpg'];
-    $('<img alt="Adult Tutoring" class="img-fluid mx-auto" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-five');
       
-    var images = ['tech-tutoring-one.jpg', 'tech-tutoring-two.jpg', 'tech-tutoring-three.jpg', 'tech-tutoring-four.jpg'];
-    $('<img alt="Tech Tutoring" class="img-fluid mx-auto" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-six'); 
-</script>
-<div class="bg-gray-5 carousel-wapper">
-  <div class="container-xxl text-center">
-    <div class="carousel max-width-50" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "autoPlay": 6000 }'>
-      <div class="carousel-cell">
-        <div class="large-text">John got the job at the salary he was looking for! He and his DCL volunteer tutor practiced communication skills. He is now the chief cook at his workplace, managing a kitchen crew and ordering supplies.</div>
-      </div>
-      <div class="carousel-cell">
-        <div class="large-text">"People are creating in the library. They're creating businesses, going back to school, studying, because they're going to create something. How would that happen if we didn't have libraries?" <i class="small">&mdash;Niki Weninger</i> </div>
-      </div>
-      <div class="carousel-cell">
-        <div class="large-text">DCL tutoring builds confidence. After some general literacy tutoring, Margaret is making plans to re-enroll in high school or pursue her GED. DCL will be with her every step of the way!</div>
-      </div>
-      <div class="carousel-cell">
-        <div class="large-text">DCL ESL learners have passed online classes, volunteered for children's field trips, helped friends solve problems by acting as interpreters, and shared books in English with their own children. DCL tutoring makes a difference! </div>
-      </div>
-      <div class="carousel-cell">
-        <div class="large-text">Margaret had been driving without a license because her low literacy skills prevented her from passing the written portion of the exam. After DCL-facilitated tutoring, Margaret passed, having missed only two questions. </div>
-      </div>
-      <div class="carousel-cell">
-        <div class="large-text">A recent session of Practice Your English included many highly educated people from Peru, Iran, India and Venezuela (to name a few) who wanted to refine their English and improve their accents. </div>
-      </div>
-      <div class="carousel-cell">
-        <div class="large-text">A DCL ESL student who had struggled in an English class at the community college received an A on his last paper. He is now employed as a substitute teacher and private math tutor. </div>
-      </div>
-      <div class="carousel-cell">
-        <div class="large-text">"The library's literacy program helped me interact with people, and more importantly, gave me the opportunity to teach. When I came to this country, I didn't speak English. Someone took the time to teach me."<i class="small">&mdash;Opp Slawson</i> </div>
+    </div>
+    <div class="slideshow-content">
+      <h4 class="no-margin-top">Career Online High School (COHS)</h4>
+      <div>COHS is an accredited online high school diploma and career certification program designed to help adults ages 19 and up realize their educational and career goals. Take a quick survey to get started. Questions or comments? <a href="#" class="text-nowrap" data-toggle="modal" data-target="#cohsmodal">Contact the COHS Team</a>.
+        <div class="padding-top-20"><a href="https://co.careeronlinehs.org/are-you-ready-survey/" target="_blank" class="btn btn-primary btn-lg">Get Started</a></div>
       </div>
     </div>
   </div>
 </div>
-<div class="padding-top-60 padding-bottom-60">
-  <div class="item-wrapper">
-    <div id="curriculum-kits" class="item">
-      <div class="icon-circle-gray"><i class="fas fa-shopping-bag"></i></div>
-      <h3 class="text-center margin-top-10"><a href="https://dcl.bibliocommons.com/v2/search?query=%22curriculum+kit%22&searchType=smart">Curriculum Kits</a></h3>
-      <div>Self-contained kits for K-6 students provide manipulatives and ideas for helping students during remote learning or home schooling. Kits on the subjects of Literacy/Language Arts, Math, Art, Social Studies, and Science can be checked out using your library card. </div>
-    </div>
-    <div id="book-club-express" class="item">
-      <div class="icon-circle-gray"><i class="fas fa-layer-group"></i></div>
-      <h3 class="text-center margin-top-10"><a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a></h3>
-      <div>It’s easy to <a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">reserve reading materials</a> for kids and teens! Multiple copies of the book, an author bio, book reviews, author interview, and discussion questions are provided in a handy to-go kit, so students are all on the same page. </div>
-    </div>
-  </div>
-</div>
-<div class="bg-teal padding-top-30 padding-bottom-40">
-  <div class="container">
-    <h4 class="white text-center">Did you know we offer many other services for parents and children?</h4>
-    <div class="white padding-bottom-15 margin-lg-125 text-center">Stream instructional films and lessons from <a class="white text-underline" href="../digital-media/#kanopy">Kanopy</a>. Explore great research and learning resources in our <a class="white text-underline"  href="../research/">research databases</a>. Improve cognitive skills while learning chess with Expert Help and live tutoring through <a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=brainfuse" target="_blank" class="white text-underline">Homework HelpNow</a>.</div>
-  </div>
-</div>
-<div id="proctoringmodal" class="modal fade" aria-labelledby="myModalLabel" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title text-center">Proctoring Guidelines</h3>
+<div id="citizenship-and-esl" class="padding-top-60 padding-bottom-50">
+  <div class="container-xxl no-padding">
+    <h2 class="text-center">Citizenship & ESL</h2>
+    <div class="box-wrapper">
+      <div class="box-item">
+        <div id="box-one"></div>
+        <script>
+     var images = ['usc-one.jpg', 'usc-two.jpg', 'usc-three.jpg', 'usc-four.jpg', 'usc-five.jpg', 'usc-six.jpg'];
+    $('<img alt="U.S. Citizenship" class="img-fluid image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');  
+    </script>
+        <h4 class="padding-top-15 text-center">U.S. Citizenship</h4>
+        <div>Candidates for U.S. citizenship can choose classes on March 5 or September 10, 2022, to prepare for citizenship application and interviews. Representatives from <a href="https://www.uscis.gov/" target="_blank">USCIS</a> attend to answer your questions.</div>
+        <div class="text-center"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=Prepare+for+U.S.+Citizenship&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-30">View Calendar</a></div>
       </div>
-      <div class="modal-body text-left padding-30">
-        <ul>
-          <li>We cannot guarantee that the proctor for your exam has a Master of Library Science degree.</li>
-          <li>We must receive written confirmation from your school that it accepts our requirements and/or we must have approved your school&rsquo;s proctoring requirements.</li>
-          <li>Please check your school's monitoring requirements before completing a proctoring request. Our proctors are unable to continuously monitor your testing.</li>
-          <li>Secure storage is not available for personal items.</li>
-          <li>Please provide the exam to your assigned proctor at least 48 hours prior to your proctoring appointment.</li>
-          <li>Please present a current photo ID before each exam. For minors who don&rsquo;t have one, a parent or legal guardian with a photo ID must be present.</li>
-          <li>Proctors cannot provide your school with their personal identification numbers (e.g., Social Security numbers, including the last four digits; driver's license numbers; employee ID numbers).</li>
-          <li>We can scan/email completed exams to your school, free of charge. Students are responsible for all costs if returning the exam by mail.</li>
-          <li>We cannot fax exams.</li>
-        </ul>
+      <div class="box-item">
+        <div id="box-two"></div>
+        <script>
+     var images = ['esl-one.jpg', 'esl-two.jpg', 'esl-three.jpg', 'esl-four.jpg', 'esl-five.jpg', 'esl-six.jpg'];
+    $('<img alt="Practice Your English" class="img-fluid image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');  
+    </script>
+        <h4 class="padding-top-15 text-center">Practice Your English</h4>
+        <div>Adults of all skill levels, cultures and language backgrounds converse in English in a relaxed environment, facilitated by trained volunteers. Practice Your English is held four times each month, at various Douglas County Libraries locations. </div>
+        <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?ag=&et=&kw=Practice+Your+English&lib=all&df=list&nd=365" target="_blank" class="btn btn-primary margin-top-20">View Calendar</a></div>
       </div>
     </div>
   </div>
