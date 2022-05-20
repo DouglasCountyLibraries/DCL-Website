@@ -89,20 +89,16 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	margin: 0 auto;
 }
 .custom-container.one {
-	padding: 40px 10px 70px;
+	padding: 40px 10px 80px;
 }
 .custom-container.two {
-	padding: 70px 10px 0;
+	padding: 80px 10px 120px;
 }
 .custom-container.three {
-	padding: 0 10px 60px;
-	background: transparent url("magic-trick.png") top center no-repeat;
-	margin-top: -35px;
-	z-index: 100;
-	position: relative;
+	padding: 85px 10px 65px;
 }
 .custom-container.four {
-	padding: 110px 10px 100px;
+	padding: 90px 10px 100px;
 	max-width: 1250px;
 }
 h1.sancreek {
@@ -114,23 +110,19 @@ h1.sancreek {
 }
 h1.noto, h2.noto, h3.noto, h4.noto, h5.noto {
 	font-family: 'Noto Serif', serif;
-	text-transform: uppercase;
 }
 h3.sancreek {
 	font-family: 'Sancreek', serif;
-	text-transform: uppercase;
 	font-size: 60px;
 	margin: 0;
 }
 h4.sancreek {
 	font-family: 'Sancreek', serif;
-	text-transform: uppercase;
 	font-size: 40px;
 	margin: 0;
 }
 .smaller {
 	font-size: .8em;
-	text-transform: uppercase;
 	vertical-align: middle !important;
 	font-weight: normal;
 	color: #888;
@@ -138,6 +130,18 @@ h4.sancreek {
 .intro-text {
 	font-size: 18px;
 	font-weight: 400;
+	padding-bottom: 30px;
+	max-width: 975px;
+	margin: 0 auto;
+}
+.giveaway-text {
+	text-align: center;
+	font-size: 18px;
+	max-width: 870px;
+	margin: 0 auto;
+}
+.alt-text {
+	font-size: 16px;
 }
 .red-shadow {
 	text-shadow: 0px 0px 15px #851734;
@@ -155,10 +159,10 @@ h4.sancreek {
 	background: transparent url("banner-flags.png") center top repeat-x;
 }
 .background-four {
-	background: #25144b;
+	background: linear-gradient(#431761, #26153f);
 }
 .background-five {
-	background: linear-gradient(#25144b 0%, #25144b 2%, #6743be 58%, #25144b 60%, #000 100%);
+	background: #283478 url("magic-trick.jpg") center top no-repeat;
 }
 .background-six {
 	background: radial-gradient(circle at center, #e57639 0%, #ce540f 60%, #b64a0e 90%, #a8440d 100%);
@@ -179,14 +183,41 @@ h4.sancreek {
 	bottom: -20px;
 	margin-top: -20px;
 }
+.section-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-transform: uppercase;
+}
+.section-nav-item a {
+	color: #fff;
+	font-weight: 400;
+	padding: 4px 0;
+	display: inline-block;
+	width: 170px;
+	white-space: nowrap;
+	background: linear-gradient(to bottom, #53a9ba 0%, #53a9ba 50%, #3f9fb2 50%, #3f9fb2 100%);
+	border: 8px solid #3f9fb2;
+	text-align: center;
+	margin: 5px;
+	border-radius: 3px;
+	font-size: 18px;
+	letter-spacing: 1.25px;
+}
+.section-nav-item a:hover, .section-nav-item a:focus {
+	color: #fff;
+	background: #358797;
+	border: 8px solid #358797;
+	text-decoration: none;
+}
 .link-wrapper {
-	width: 325px;
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
 	padding: 20px 0;
 	font-size: 22px;
 	margin: 0 auto;
+	justify-content: center;
 }
 .link, .link:visited, .link:active {
 	width: 300px;
@@ -218,13 +249,18 @@ h4.sancreek {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding-bottom: 30px;
 }
 .alt-link {
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 400;
-	margin: 5px 20px;
-	white-space: nowrap;
+	margin: 5px 10px;
+	box-shadow: 0px 0px 55px 5px rgba(255, 255, 255, 0.5);
+	padding: 5px 0;
+	border-radius: 5px;
+	min-width: 325px;
+	text-align: center;
 }
 .prize-wrapper {
 	display: flex;
@@ -233,25 +269,56 @@ h4.sancreek {
 }
 .prize-item {
 	background: radial-gradient(#6743be 0%, #452d7f 100%);
-	padding: 30px;
+	padding: 30px 30px 40px;
 	margin: 5px;
 	border-radius: 3px;
 }
+.goal-wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 10px 10px 0;
+}
+.goal-item {
+	background: rgba(103,67,190,.3);
+	padding: 30px 30px 40px;
+	margin: 5px;
+	border-radius: 3px;
+}
+.giveaway-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.giveaway-item {
+	text-align: center;
+}
+.giveaway-item > ul {
+	padding: 0 30px;
+	margin-bottom: 0;
+}
+.giveaway-item > ul > li, .prize-item > ul > li {
+	padding: 4px 0;
+}
+.giveaway-item > img {
+	border-radius: 10px;
+	transform: rotate(-5deg);
+	box-shadow: -4px 3px 8px 0px rgba(0,0,0,1);
+	-webkit-backface-visibility: hidden;
+	margin: 25px 0 15px;
+}
 .minutes-read {
 	text-align: center;
-	color: #F8B7CB;
+	color: #fff;
 	margin: 0;
-	padding: 20px 0 20px;
+	padding: 20px 0 0;
 	text-transform: uppercase;
-	font-weight: 500;
-	font-size: 32px;
+	font-size: 24px;
 }
 .counter {
 	font-size: 55px;
 	font-weight: 900;
 	color: #000;
 	text-align: center;
-	padding-top: 255px;
+	padding-top: 280px;
 }
 .counter:not(.is-visible) {
 	visibility: hidden;
@@ -277,6 +344,16 @@ h4.sancreek {
 	padding: 0 10px;
 }
 
+@media (max-width: 745px) {
+.section-nav {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.giveaway-item, .goal-wrapper {
+	flex-direction: column;
+}
+}
+
 @media (max-width: 1125px) {
 .tee-wrapper {
 	display: flex;
@@ -289,6 +366,9 @@ h4.sancreek {
 	padding: 15px 10px;
 	max-width: 800px;
 	text-align: center;
+}
+.background-five {
+	background: #360015 url("magic-trick.jpg") center top no-repeat;
 }
 }
 
@@ -497,78 +577,121 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <h1 class="noto red-shadow white">Unlock the</h1>
               <h1 class="sancreek red-shadow white">Magic</h1>
               <h3 class="noto red-shadow white no-margin-top">Pull a Great Summer out of the Hat!</h3>
-              <h5 class="noto red-shadow white">2022 Summer Reading for All Ages</h5>
-              <h5 class="white red-shadow margin-top-5">Saturday, June 4-Sunday, July 31</h5>
+              <h2 class="noto red-shadow white no-margin-top">2022 Summer Reading for All Ages</h2>
+              <h5 class="noto red-shadow white no-margin-bottom">Saturday, June 4-Sunday, July 31</h5>
             </div>
-            <div class="intro-text text-center red-shadow margin-lg-125 margin-md-100">Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge! You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.<!--You can also do the supplemental activities we suggest <a class="white text-underline" href="#" target="_blank">on the reading log</a>.--> We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
             <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now!</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
+            <div class="intro-text text-center red-shadow">
+              <div class="margin-bottom-10">Join us for a magical summer of reading, exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge is not right for you or your family, feel free to create your own challenge!</div>
+              <div class="alt-text">You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.<!--You can also do the supplemental activities we suggest <a class="white text-underline" href="#" target="_blank">on the reading log</a>.--> We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
+            </div>
             <div class="alt-link-wrapper">
-              <div class="alt-link"><a class="white" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank">Ta-da! Kickoff Events</a></div>
-              <div class="alt-link"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=90" target="_blank" class="white">Dazzling Summer Events</a></div>
+              <div class="alt-link"><a class="white" href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank"><i class="fa-solid fa-wand-sparkles margin-right-5"></i> Ta-da! Kickoff Events</a></div>
+              <div class="alt-link"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=90" target="_blank" class="white"><i class="fa-regular fa-sparkles margin-right-5"></i> Dazzling Summer Events</a></div>
               <!--<div class="alt-link"><a class="white" href="#">Amusing Jokes</a></div>
               <div class="alt-link"><a class="white" href="#">Tricks for Kids</a></div>--> 
+            </div>
+            <div class="section-nav">
+              <div class="section-nav-item"><a href="#giveaways">Giveaways</a></div>
+              <div class="section-nav-item"><a href="#prizes">Prizes</a></div>
+              <div class="section-nav-item"><a href="#goals">Goals</a></div>
+              <div class="section-nav-item"><a href="#tees">Tees</a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div id="prizes" class="row white background-four">
+  <div id="giveaways" class="row white background-four">
     <div class="custom-container two">
-      <h3 class="text-center sancreek white">Prizes</h3>
-      <h5 class="text-center white">Prizes will be available beginning June 4</h5>
-      <div class="prize-wrapper">
-        <div class="prize-item">
-          <h4 class="noto white no-margin-top">Sign-Up Prizes</h4>
-          <div>Visit any DCL location to pick up your Summer Reading sign-up prizes, while supplies last.</div>
-          <ul>
-            <li>Ages 0-2: Rubber ducky</li>
-            <li>Ages 3-12: Pirates Cove free admission gift coupon*</li>
-            <li>Ages 13-17: Smoothie King free gift coupon*</li>
-            <li>Ages 18+: Park Meadows Free valet parking coupon*</li>
+      <h3 class="text-center sancreek white">10 Days of Giveaways</h3>
+      <h5 class="noto white text-center">June 4-13, Register Now for a Chance to Win!</h5>
+      <div class="giveaway-text">
+        <div class="margin-bottom-10">Look what we have up our sleeve! We’re giving away more than 100 prizes to Summer Reading participants who register to read. What could you win? Unlock the Magic of Summer Reading and find out!</div>
+      </div>
+      <div class="giveaway-wrapper">
+        <div class="giveaway-item"><img src="pirates-cove-gift-card.jpg" alt="$50 Pirates Cove Gift Card">
+          <h2 class="noto white">June 4 Giveaway:</h2>
+          <h5 class="noto white">$50 Pirates Cove Gift Card</h5>
+          <!--<ul>
+            <li>June 4 Giveaway: $50 Pirates Cove gift card</li>
+            <li>June 5 Giveaway: $50 Rocket Fizz gift card </li>
+            <li>June 6 Giveaway: $50 AMC Movies gift card </li>
+            <li>June 7 Giveaway: $75 Target gift card </li>
+            <li>June 8 Giveaway: $75 Whole Foods gift card </li>
           </ul>
-          <div>*See coupon for full details.</div>
+          <ul>
+            <li>June 9 Giveaway: $75 Lowes gift card </li>
+            <li>June 10 Giveaway: $100 Boondocks gift card </li>
+            <li>June 11 Giveaway: $100 Outlets at Castle Rock gift card </li>
+            <li>June 12 Giveaway: $100 Park Meadows gift card </li>
+            <li>June 13 Giveaway: $150 Amazon gift card </li>
+          </ul>--> 
         </div>
-        <div class="prize-item">
-          <h4 class="noto white no-margin-top">Mid-Way Prizes</h4>
-          <div>Celebrate being halfway to your goal! Stop by the library to pick up your prize.</div>
-          <ul>
-            <li>Ages 0-2: Bubble tube</li>
-            <li>Ages 3-12: Cards plus tricks and game sheet</li>
-            <li>Ages 13-17: Rocket Fizz gift coupon* and Second Chapter Bookstore free book coupon*</li>
-            <li>Ages 18+: Second Chapter Bookstore free book coupon*</li>
-          </ul>
-          <div>*See coupon for full details.</div>
-        </div>
-        <div class="prize-item">
-          <h4 class="noto white no-margin-top">Finishing Prizes</h4>
-          <div>Collect a prize when you complete your challenge, or just for having a magical summer!</div>
-          <ul>
-            <li>Ages 0-12: Free new book</li>
-            <li>Ages 13+: Canvas pouch</li>
-          </ul>
-          <div>*Finishing prizes available through August 7, or while supplies </div>
+      </div>
+      <div class="giveaway-text">
+        <div class="alt-text text">Each giveaway day features a random drawing for that day’s prize. Everyone registered May 1-June 13 will be entered into the prize drawings. Most prizes mailed directly to winners or delivery will be otherwise arranged. Winners will be notified via email. No purchase necessary and registration is free.</div>
+      </div>
+    </div>
+  </div>
+  <div id="prizes" class="row white background-one">
+    <div class="background-two">
+      <div class="custom-container two">
+        <h3 class="text-center sancreek white">Prizes</h3>
+        <h5 class="noto white text-center">Prizes will be Available Beginning June 4</h5>
+        <div class="prize-wrapper">
+          <div class="prize-item">
+            <h4 class="noto white no-margin-top">Sign-Up Prizes</h4>
+            <div>Visit any DCL location to pick up your Summer Reading sign-up prizes, while supplies last.</div>
+            <ul>
+              <li>Ages 0-2: Rubber ducky</li>
+              <li>Ages 3-12: Pirates Cove free admission gift coupon*</li>
+              <li>Ages 13-17: Smoothie King free gift coupon*</li>
+              <li>Ages 18+: Park Meadows Free valet parking coupon*</li>
+            </ul>
+            <div>*See coupon for full details.</div>
+          </div>
+          <div class="prize-item">
+            <h4 class="noto white no-margin-top">Mid-Way Prizes</h4>
+            <div>Celebrate being halfway to your goal! Stop by the library to pick up your prize.</div>
+            <ul>
+              <li>Ages 0-2: Bubble tube</li>
+              <li>Ages 3-12: Cards plus tricks and game sheet</li>
+              <li>Ages 13-17: Rocket Fizz gift coupon* and Second Chapter Bookstore free book coupon*</li>
+              <li>Ages 18+: Second Chapter Bookstore free book coupon*</li>
+            </ul>
+            <div>*See coupon for full details.</div>
+          </div>
+          <div class="prize-item">
+            <h4 class="noto white no-margin-top">Finishing Prizes</h4>
+            <div>Collect a prize when you complete your challenge, or just for having a magical summer!</div>
+            <ul>
+              <li>Ages 0-12: Free new book</li>
+              <li>Ages 13+: Canvas pouch</li>
+            </ul>
+            <div>*Finishing prizes available through August 7, or while supplies </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div id="minutes" class="row white background-five">
-    <div class="custom-container three text-center">
+  <div id="goals" class="row white background-five">
+    <div class="custom-container three">
+      <h3 class="text-center sancreek white">Goals</h3>
       <div class="counter-wrapper">
-        <div class="counter">1,426</div>
-        <h4 class="minutes-read">Minutes Read</h4>
+        <div class="counter">0</div>
+        <h4 class="noto minutes-read">Minutes Read</h4>
       </div>
-      <div class="margin-lg-175 margin-md-100">
-        <div class="box-one">
-          <h4 class="no-margin-top margin-lg-175 margin-md-100 noto white">Help us meet our community goal of 8.5 million minutes read!</h4>
+      <div class="goal-wrapper">
+        <div class="goal-item">
+          <h4 class="no-margin-top noto white text-center">Help us meet our community goal of 8.5 million minutes read!</h4>
           <div>Watch the minutes materialize and help us meet our goal. If we meet our goal, the <a class="text-underline white" href="../foundation/">Douglas County Libraries Foundation</a> will donate $1,000 to AllHealth Network, which works to enhance the quality of life for individuals and families in our community through compassionate, integrated behavioral health services.</div>
         </div>
-      </div>
-      <div class="margin-lg-200 margin-md-100">
-        <div class="box-two">
-          <h4 class="no-margin-top noto white">Help your school earn $500!</h4>
+        <div class="goal-item">
+          <h4 class="no-margin-top noto white text-center">Help your school earn $500!</h4>
           All you have to do is sign up (and remind your friends and classmates to sign up!) and be sure to include your school name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See contest <a href="#" class="white text-underline" data-toggle="modal" data-target="#modalrules">rules and restrictions</a>, and schools <a href="#" class="white text-underline" data-toggle="modal" data-target="#modalleaderboard">currently in the lead</a>. </div>
       </div>
+      
       <!--<div class="text-center white">
         <div>Take your Summer Reading offline</div>
         <h5 class="noto white margin-top-5">Download a <a class="white text-underline" href="#">Reading Log</a></h5>
