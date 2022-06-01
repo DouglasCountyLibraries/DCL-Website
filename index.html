@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?5822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -94,11 +95,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	display: flex;
 	justify-content: center;
 	padding: 0 10px;
+	align-items: center;
 }
+/*.custom-container {
+	display: flex;
+	justify-content: center;
+	padding: 0 10px;
+}*/
 h1.sancreek {
 	font-family: 'Sancreek', serif;
 	text-transform: uppercase;
-	font-size: 190px;
+	font-size: 160px;
 	margin: 0;
 }
 h1.noto, h2.noto, h3.noto, h4.noto, h5.noto {
@@ -107,6 +114,10 @@ h1.noto, h2.noto, h3.noto, h4.noto, h5.noto {
 }
 h1.noto {
 	font-size: 52px;
+	margin: 0;
+}
+h2.noto {
+	font-size: 44px;
 	margin: 0;
 }
 h3.sancreek {
@@ -125,8 +136,13 @@ h4.sancreek {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	padding-top: 120px;
 }
+/*.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-top: 120px;
+}*/
 .rabbit-wrapper {
 	margin-bottom: -10px;
 }
@@ -138,9 +154,37 @@ h4.sancreek {
 	align-items: center;
 	text-align: center;
 	padding: 0 0 30px;
+	max-width: 725px;
+	flex-wrap: wrap;
+}
+/*.link-wrapper {
+	font-family: 'Noto Serif', serif;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 0 30px;
 	flex-direction: column;
 }
+    */
+    
 .link, .link:visited, .link:active {
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 50px;
+	background: #4a9bb8;
+	padding: 15px 0 18px;
+	transition-duration: .5s;
+	text-decoration: none;
+	width: 250px;
+	margin: 10px;
+	display: block;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.2em;
+}
+/*.link, .link:visited, .link:active {
 	text-transform: uppercase;
 	color: #fff;
 	border-radius: 50px;
@@ -154,7 +198,8 @@ h4.sancreek {
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 1.2em;
-}
+} */
+    
 .link:hover, .link:focus {
 	color: #121042;
 	background: #61cbf1;
@@ -164,7 +209,7 @@ h4.sancreek {
 
 @media (max-width:940px) {
 h1.sancreek {
-	font-size: 140px;
+	font-size: 120px;
 }
 }
 
@@ -178,20 +223,27 @@ h1.sancreek {
 }
 }
 
-@media (min-width: 676px) {
+@media (min-width: /*676px*/ 851px) {
 .rabbit-wrapper-alt {
 	display: none;
 }
 }
 
-@media (max-width: 675px) {
+@media (max-width: /*675px*/ 850px) {
 .custom-container {
+	display: flex;
+	justify-content: center;
+	padding: 30px 10px 10px;
+	flex-direction: column;
+	align-items: center;
+}
+/*.custom-container {
 	display: flex;
 	justify-content: center;
 	padding: 0 10px;
 	flex-direction: column;
 	align-items: center;
-}
+}*/
 .link, .link:visited, .link:active {
 	padding: 18px 0 20px;
 	width: 300px;
@@ -387,13 +439,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="custom-container">
       <div class="rabbit-wrapper"><img class="img-responsive" src="rabbit-mac.png" alt=""></div>
       <div class="content-wrapper">
-        <h1 class="noto white">Unlock the</h1>
-        <h1 class="sancreek white">Magic</h1>
+        <h1 class="noto white">Summer Reading:</h1>
+        <h2 class="noto white">Unlock the</h2>
+        <h1 class="sancreek white">Magic!</h1>
         <div class="rabbit-wrapper-alt"><img class="img-responsive" src="rabbit.png" alt=""></div>
-        <div class="link-wrapper"> <a href="summer-reading/" class="link">Summer Reading<br>
-          Magic</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank" class="link">Hop to a<br>
-          Kickoff Party!</a><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2094567089" class="link">Thrive: Mental<br>
-          Health & Wellness</a></div>
+        <div class="link-wrapper"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=summer+reading+kickoff+party&lib=ALL&nd=60" target="_blank" class="link">Ta-Da!<br>
+          Kickoff Parties</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=90" target="_blank" class="link">Magical<br>
+          Events</a><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor+storytime&lib=all&nd=180" target="_blank" class="link">Outdoor<br>
+          Storytime</a> <a href="https://www.eventbrite.com/e/a-family-fete-hansel-gretels-gingerbread-cottage-tickets-325212628727?aff=websitehomepage" target="_blank" class="link">Family Fête:<br>
+          Hansel & Gretel </a> </div>
       </div>
     </div>
   </div>
@@ -498,4 +552,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
