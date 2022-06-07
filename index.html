@@ -80,6 +80,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<!--randomize div--> 
 
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
@@ -90,6 +91,17 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 .page {
 	background: #121042 url("banner-background.jpg") center top repeat-x;
+}
+.page-alt {
+	background: transparent url("summer-reading/bubbles.png") center top repeat;
+	;
+}
+.background-three {
+	background: transparent url("summer-reading/banner-flags.png") center top repeat-x;
+}
+.background-six {
+	background: radial-gradient(circle at center, #79043d 0%, #79043d 60%, #360017 90%, #360017 100%);
+	box-shadow: inset 0px 5px 100px 5px rgba(0,0,0,.3);
 }
 .custom-container {
 	display: flex;
@@ -146,6 +158,10 @@ h4.sancreek {
 .rabbit-wrapper {
 	margin-bottom: -10px;
 }
+.lion-wrapper {
+	padding: 175px 0 0;
+	margin-bottom: -25px;
+}
 .link-wrapper {
 	font-family: 'Noto Serif', serif;
 	display: flex;
@@ -184,6 +200,21 @@ h4.sancreek {
 	font-weight: 400;
 	line-height: 1.2em;
 }
+.link-alt, .link-alt:visited, .link-alt:active {
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 50px;
+	background: linear-gradient(to bottom, #e49129 0%, #e49129 50%, #d98a27 50%, #d98a27 100%);
+	padding: 15px 0 18px;
+	transition-duration: .5s;
+	text-decoration: none;
+	width: 250px;
+	margin: 10px;
+	display: block;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.2em;
+}
 /*.link, .link:visited, .link:active {
 	text-transform: uppercase;
 	color: #fff;
@@ -206,6 +237,11 @@ h4.sancreek {
 	text-decoration: none;
 	transition-duration: .5s;
 }
+.link-alt:hover, .link-alt:focus {
+	color: #fff;
+	background: #c37c23;
+	text-decoration: none;
+}
 
 @media (max-width:940px) {
 h1.sancreek {
@@ -224,7 +260,7 @@ h1.sancreek {
 }
 
 @media (min-width: /*676px*/ 851px) {
-.rabbit-wrapper-alt {
+.rabbit-wrapper-alt, .lion-wrapper-alt {
 	display: none;
 }
 }
@@ -249,12 +285,24 @@ h1.sancreek {
 	width: 300px;
 	font-size: 20px;
 }
+.link-alt, .link-alt:visited, .link-alt:active {
+	padding: 18px 0 20px;
+	width: 300px;
+	font-size: 20px;
+}
 .rabbit-wrapper {
 	display: none;
 }
 .rabbit-wrapper-alt img {
 	max-height: 600px;
 	margin: 0 auto -90px auto;
+}
+.lion-wrapper {
+	display: none;
+}
+.lion-wrapper-alt img {
+	max-height: 600px;
+	margin: 0 auto -175px auto;
 }
 }
 </style>
@@ -435,19 +483,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row page">
-    <div class="custom-container">
-      <div class="rabbit-wrapper"><img class="img-responsive" src="rabbit-mac.png" alt=""></div>
-      <div class="content-wrapper">
-        <h1 class="noto white"><a class="white" href="summer-reading/">Summer Reading:</a></h1>
-        <h2 class="noto white">Unlock the</h2>
-        <h1 class="sancreek white">Magic!</h1>
-        <div class="rabbit-wrapper-alt"><img class="img-responsive" src="rabbit.png" alt=""></div>
-        <div class="link-wrapper"> <a href="summer-reading/" class="link">Summer Reading:<br>
-          Get Started!</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=90" target="_blank" class="link">Magical<br>
-          Events</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor+storytime&lib=all&nd=180" target="_blank" class="link">Outdoor<br>
-          Storytime</a> <a href="https://www.eventbrite.com/e/a-family-fete-hansel-gretels-gingerbread-cottage-tickets-325212628727?aff=websitehomepage" target="_blank" class="link">Family Fête:<br>
-          Hansel & Gretel </a> </div>
+  <div class="page-wrapper">
+    <div class="row page">
+      <div class="custom-container">
+        <div class="rabbit-wrapper"><img class="img-responsive" src="rabbit-mac.png" alt=""></div>
+        <div class="content-wrapper">
+          <h1 class="noto white"><a class="white" href="summer-reading/">Summer Reading:</a></h1>
+          <h2 class="noto white">Unlock the</h2>
+          <h1 class="sancreek white">Magic!</h1>
+          <div class="rabbit-wrapper-alt"><img class="img-responsive" src="rabbit.png" alt=""></div>
+          <div class="link-wrapper"> <a href="summer-reading/" class="link">Summer Reading:<br>
+            Get Started!</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=90" target="_blank" class="link">Magical<br>
+            Events</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor+storytime&lib=all&nd=180" target="_blank" class="link">Outdoor<br>
+            Storytime</a> <a href="https://www.eventbrite.com/e/a-family-fete-hansel-gretels-gingerbread-cottage-tickets-325212628727?aff=websitehomepage" target="_blank" class="link">Family Fête:<br>
+            Hansel & Gretel </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="row background-six">
+      <div class="background-three">
+        <div class="page-alt">
+          <div class="custom-container">
+            <div class="lion-wrapper"><img class="img-responsive" src="lion.png" alt=""></div>
+            <div class="content-wrapper">
+              <h1 class="noto white"><a class="white" href="summer-reading/">Summer Reading:</a></h1>
+              <h2 class="noto white">Unlock the</h2>
+              <h1 class="sancreek white">Magic!</h1>
+              <div class="lion-wrapper-alt"><img class="img-responsive" src="lion.png" alt=""></div>
+              <div class="link-wrapper"> <a href="summer-reading/" class="link-alt">Summer Reading:<br>
+                Get Started!</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=90" target="_blank" class="link-alt">Magical<br>
+                Events</a> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor+storytime&lib=all&nd=180" target="_blank" class="link-alt">Outdoor<br>
+                Storytime</a> <a href="https://www.eventbrite.com/e/a-family-fete-hansel-gretels-gingerbread-cottage-tickets-325212628727?aff=websitehomepage" target="_blank" class="link-alt">Family Fête:<br>
+                Hansel & Gretel </a> </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -509,7 +581,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+var random = Math.floor(Math.random() * $('.page-wrapper').length);
+$('.page-wrapper').hide().eq(random).show();
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
