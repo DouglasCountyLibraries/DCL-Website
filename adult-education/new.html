@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic|Open+Sans:300,400,600|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?61522">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -132,6 +133,42 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 #dropdown-wrapper {
 	max-width: 400px;
+}
+.databases {
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 1030px;
+}
+.database-item {
+	border-bottom: 2px solid #ddd;
+	padding: 6px 0 20px;
+	width: 475px;
+	margin: 0 20px;
+}
+.database-item:nth-last-of-type(1), .database-item:nth-last-of-type(2) {
+	border-bottom: 0;
+}
+.database-item > h4 {
+	margin-bottom: 0;
+}
+
+@media (max-width: 1030px) {
+.databases {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	width: 475px;
+}
+.database-item:nth-last-of-type(2) {
+	border-bottom: 2px solid #ddd;
+}
+}
+
+@media (max-width: 525px) {
+.databases, .database-item {
+	width: auto;
+}
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 .slideshow-wrapper {
@@ -497,8 +534,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="container-xxl no-padding">
     <h2 class="text-center">Citizenship & ESL</h2>
     <div class="box-item-wrapper">
-        
-        
       <div class="box-item">
         <div id="box-one"></div>
         <script>
@@ -509,8 +544,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>Candidates for U.S. citizenship can choose classes on March 5 or September 10, 2022, to prepare for citizenship application and interviews. Representatives from <a href="https://www.uscis.gov/" target="_blank">USCIS</a> attend to answer your questions.</div>
         <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=Prepare+for+U.S.+Citizenship&nd=365" target="_blank" class="btn btn-primary margin-top-20">View Calendar</a></div>
       </div>
-        
-        
       <div class="box-item">
         <div id="box-two"></div>
         <script>
@@ -521,17 +554,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>Adults of all skill levels, cultures and language backgrounds converse in English in a relaxed environment, facilitated by trained volunteers. Practice Your English is held four times each month, at various Douglas County Libraries locations. </div>
         <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?ag=&et=&kw=Practice+Your+English&lib=all&df=list&nd=365" target="_blank" class="btn btn-primary margin-top-20">View Calendar</a></div>
       </div>
-        
-        
     </div>
   </div>
 </div>
-<div id="tutoring-and-proctoring" class="bg-gray-5 padding-top-60 padding-bottom-50">
+<div id="resources" class="bg-gray-5 padding-top-60 padding-bottom-50">
+  <div class="container-xxl no-padding">
+    <h2 class="text-center">Resources</h2>
+    <div class="database-wrapper">
+      <div class="databases">
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=terc" target="_blank">Peterson’s Test Prep</a></h4>
+          <div>Explore college and career options, build a professional resume, and access practice tests for major academic and vocational exams.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank">Adult Learning Center</a></h4>
+          <div>Achieve your learning and career goals with live assistance from Brainfuse. Connect with experts to prepare for the GED, practice for the U.S. citizenship test, write a resume, and more.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=news-for-you" target="_blank">News for You</a></h4>
+          <div>Easy-to-read news stories from reputable news services to help improve English language skills. Includes audio, vocabulary lists, exercises and puzzles.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=great-courses" target="_blank">The Great Courses</a></h4>
+          <div>Unlimited access to college-level video courses covering a variety of subjects, including history, science, humanities, hobbies and more.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h4>
+          <div>Online language program to learn basic English as well as other languages. No downloads are required, and an app is available.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="tutoring-and-proctoring" class="padding-top-60 padding-bottom-50">
   <div class="container-xxl no-padding">
     <h2 class="text-center">Tutoring & Proctoring</h2>
     <div class="box-item-wrapper">
-        
-
       <div id="adult-tutoring" class="box-item">
         <div><img class="img-fluid" src="images/adult-tutoring-one.jpg" alt=""></div>
         <h4 class="padding-top-15 text-center">Adult Tutoring</h4>
@@ -549,24 +607,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </ul>
         </div>
       </div>
-        
-        
       <div id="tech-tutoring" class="box-item">
         <div><img class="img-fluid" src="images/tech-tutoring-one.jpg" alt=""></div>
         <h4 class="padding-top-15 text-center">Tech Tutoring</h4>
         <div>We match customers to tutors for individualized <a href="#tech-tutoring" type="button" data-bs-toggle="modal" data-bs-target="#tech-modal">learning in technology subjects</a> like basic internet use, tablets, email, e-books, popular software basics and more. Schedule a one-hour appointment with library staff now!</div>
         <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=42&lib=ALL&nd=365" target="_blank" class="btn btn-primary margin-top-20">View Calendar</a></div>
       </div>
-        
-        
       <div id="proctoring" class="box-item">
         <div><img class="img-fluid" src="images/proctoring-one.jpg" alt=""></div>
         <h4 class="padding-top-15 text-center">Proctoring</h4>
         <div>We are pleased to offer free test proctoring at four locations, by appointment. By submitting the form, I agree to <a href="#proctoring" type="button" data-bs-toggle="modal" data-bs-target="#proctor-modal">DCL's Proctoring Guidelines</a>.</div>
         <div class="align-bottom"> <a href="proctoring-form/" target="_blank" class="btn btn-primary margin-top-20">Get Started</a> </div>
       </div>
-        
-        
     </div>
   </div>
 </div>
@@ -764,4 +816,5 @@ for (var i = 0; i < cards.length; i++) {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
