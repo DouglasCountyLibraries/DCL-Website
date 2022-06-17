@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic|Open+Sans:300,400,600|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?61722">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -594,7 +595,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <h2 class="text-center">Tutoring & Proctoring</h2>
     <div class="box-item-wrapper">
       <div id="adult-tutoring" class="box-item">
-        <div><img class="img-fluid" src="images/adult-tutoring-one.jpg" alt=""></div>
+        <div id="box-three"></div>
+        <script>
+     var images = ['adult-tutoring-one.jpg', 'adult-tutoring-two.jpg', 'adult-tutoring-three.jpg', 'adult-tutoring-four.jpg', 'adult-tutoring-five.jpg'];
+    $('<img alt="Adult Tutoring" class="img-fluid image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');  
+    </script>
         <h4 class="padding-top-15 text-center">Adult Tutoring</h4>
         <div>Tutoring for <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET/TASC exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for six months. GED/TASC/HiSET students work with tutors until they are ready to pass the test. </div>
         <div class="align-bottom text-center">
@@ -611,13 +616,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
       <div id="tech-tutoring" class="box-item">
-        <div><img class="img-fluid" src="images/tech-tutoring-one.jpg" alt=""></div>
+        <div id="box-four"></div>
+        <script>
+     var images = ['tech-tutoring-one.jpg', 'tech-tutoring-two.jpg', 'tech-tutoring-three.jpg', 'tech-tutoring-four.jpg'];
+    $('<img alt="Tech Tutoring" class="img-fluid image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');  
+    </script>
         <h4 class="padding-top-15 text-center">Tech Tutoring</h4>
         <div>We match customers to tutors for individualized <a href="#tech-tutoring" type="button" data-bs-toggle="modal" data-bs-target="#tech-modal">learning in technology subjects</a> like basic internet use, tablets, email, e-books, popular software basics and more. Schedule a one-hour appointment with library staff now!</div>
         <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=42&lib=ALL&nd=365" target="_blank" class="btn btn-primary margin-top-20">View Calendar</a></div>
       </div>
       <div id="proctoring" class="box-item">
-        <div><img class="img-fluid" src="images/proctoring-one.jpg" alt=""></div>
+        <div id="box-five"></div>
+        <script>
+     var images = ['proctoring-one.jpg', 'proctoring-two.jpg', 'proctoring-three.jpg', 'proctoring-four.jpg', 'proctoring-five.jpg', 'proctoring-six.jpg', 'proctoring-seven.jpg'];
+    $('<img alt="Proctoring" class="img-fluid image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-five');  
+    </script>
         <h4 class="padding-top-15 text-center">Proctoring</h4>
         <div>We are pleased to offer free test proctoring at four locations, by appointment. By submitting the form, I agree to <a href="#proctoring" type="button" data-bs-toggle="modal" data-bs-target="#proctor-modal">DCL's Proctoring Guidelines</a>.</div>
         <div class="align-bottom"> <a href="proctoring-form/" target="_blank" class="btn btn-primary margin-top-20">Get Started</a> </div>
@@ -873,4 +886,5 @@ for (var i = 0; i < cards.length; i++) {
 </script> 
 <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
