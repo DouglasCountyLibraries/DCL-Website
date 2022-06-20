@@ -83,6 +83,28 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
+.tooltip-inner {
+	background: #fff!important;
+	box-shadow: 0px 5px 4px black;
+	opacity: 1!important;
+	color: #333;
+	padding: 12px 15px 18px;
+	font-size: 1rem;
+	border-radius: 3px!important;
+	line-height: 1.2rem;
+}
+.tooltip.bs-tooltip-right .tooltip-arrow::before {
+	border-right-color: #fff !important;
+}
+.tooltip.bs-tooltip-left .tooltip-arrow::before {
+	border-left-color: #fff !important;
+}
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+	border-bottom-color: #fff !important;
+}
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+	border-top-color: #fff !important;
+}
 .library-info-active {
 	background-color: #f5f5f5;
 }
@@ -604,7 +626,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     $('<img alt="Adult Tutoring" class="img-fluid image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');  
     </script>
         <h4 class="padding-top-15 text-center">Adult Tutoring</h4>
-        <div>Tutoring for <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET/TASC exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for six months. GED/TASC/HiSET students work with tutors until they are ready to pass the test. </div>
+        <div>Tutoring for <a href="#esl" data-bs-toggle="tooltip" data-bs-placement="top" title="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET/TASC exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for six months. GED/TASC/HiSET students work with tutors until they are ready to pass the test. </div>
         <div class="align-bottom text-center">
           <button class="btn btn-primary text-uppercase dropdown-toggle margin-top-20" type="button" id="tutoring-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">Apply Now<span class="material-icons">expand_more</span> </button>
           <ul id="dropdown-wrapper" class="dropdown-menu" aria-labelledby="tutoring-dropdown">
@@ -906,10 +928,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-$(function () {
-  $('[data-toggle="popover"]').popover()
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
 })
- </script> 
+</script> 
 <script>
 	var cards = $(".random-slide");
 for (var i = 0; i < cards.length; i++) {
