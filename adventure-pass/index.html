@@ -325,14 +325,7 @@ opacity:0;
 </style>
 <!-- InstanceEndEditable -->
 </head>
-<body>
-<!-- pull alert.txt into the general-alert div --> 
-<script>
-$.get("https://s3.amazonaws.com/website.alert/alert.txt")
-  .done(function( data ) {
-    if ( data !=null ){	$("#general-alert").show().append( data );}
-});
-</script> 
+<body> 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -730,5 +723,12 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 }
 </script> 
 <!-- InstanceEndEditable -->
+<!-- pull alert.txt into the general-alert div --> 
+<script>
+$.get("https://s3.amazonaws.com/website.alert/alert.txt")
+  .done(function( data ) {
+    if ( data !=null ){	$("#general-alert").show().append( data );}
+});
+</script>
 </body>
 <!-- InstanceEnd --></html>

@@ -189,13 +189,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceEndEditable -->
 </head>
 <body>
-<!-- pull alert.txt into the general-alert div --> 
-<script>
-$.get("https://s3.amazonaws.com/website.alert/alert.txt")
-  .done(function( data ) {
-    if ( data !=null ){	$("#default-alert").show().append( data );}
-});
-</script> 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -553,5 +546,12 @@ for (var i = 0; i < cards.length; i++) {
 }
  </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
+<!-- pull alert.txt into the general-alert div --> 
+<script>
+$.get("https://s3.amazonaws.com/website.alert/alert.txt")
+  .done(function( data ) {
+    if ( data !=null ){	$("#default-alert").show().append( data );}
+});
+</script> 
 </body>
 <!-- InstanceEnd --></html>
