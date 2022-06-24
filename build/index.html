@@ -210,16 +210,16 @@ polyline, g {
 .padding-bottom-70 {
 	padding-bottom: 70px;
 }
-/* Timeline Container */
-/*.outer {
+/* Timeline Container 
+.outer {
 	overflow-y: scroll;
 	max-height: 725px;
 	box-shadow: inset 0px 0px 20px rgba(0,0,0,.5);
 	border: 2px solid #dedede;
-	border-radius: 5px;
+	border-radius: 3px;
 	background: #f5f5f5;
-}*/
-    
+}
+    */
 .left-image {
 	float: left;
 	margin: 5px 30px 5px 0;
@@ -579,7 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="custom-container">
       <h2 class="text-center margin-top-10 text-uppercase font-weight-400">Timeline</h2>
       <div class="timeline">
-        <div class="outer tz-gallery">
+        <div id="timeline-container" class="outer tz-gallery">
           <div class="card">
             <div class="info">
               <h5 class="title">Spring 2022</h5>
@@ -742,6 +742,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+
+<!-- set overflow scroll to start at bottom   
+<script>var objDiv = document.getElementById("timeline-container");
+objDiv.scrollTop = objDiv.scrollHeight;</script>
+--> 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script> 
 <script>
     baguetteBox.run('.tz-gallery', {
