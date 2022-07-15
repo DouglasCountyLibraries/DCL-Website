@@ -96,7 +96,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .custom-container {
 	display: flex;
 	justify-content: center;
-	padding: 0 10px 60px 10px;
+	padding: 0 10px 0 10px;
 	align-items: center;
 }
 .noto {
@@ -121,7 +121,7 @@ h1.noto {
 	align-items: center;
 	text-align: center;
 	padding: 0 0 30px;
-	width: 380px;
+	width: 450px;
 	flex-wrap: wrap;
 }
 .link, .link:visited, .link:active {
@@ -132,7 +132,7 @@ h1.noto {
 	padding: 15px 0 18px;
 	transition-duration: .5s;
 	text-decoration: none;
-	width: 250px;
+	width: 325px;
 	margin: 10px;
 	display: block;
 	font-size: 26px;
@@ -146,23 +146,42 @@ h1.noto {
 	transition-duration: .5s;
 }
 
-@media (max-width:940px) {
+@media (max-width: 650px) {
+.link-wrapper {
+	width: auto;
+}
 h1.noto {
 	text-transform: uppercase;
 	color: #000;
-	font-size: 65px;
-	margin: 60px 0;
+	font-size: 56px;
+	margin: 30px 0 0;
 	text-align: center;
+	letter-spacing: normal;
 }
 }
 
-@media (max-width: 850px) {
+@media (max-width:940px) {
+}
+
+@media (max-width: 1130px) {
+.custom-container {
+	align-items: end;
+}
+}
+
+@media (max-width: 1000px) {
 .custom-container {
 	display: flex;
 	justify-content: center;
-	padding: 30px 10px 10px;
+	padding: 30px 10px 0;
 	flex-direction: column;
 	align-items: center;
+}
+.box-one {
+	display: none;
+}
+.link-wrapper {
+	padding-bottom: 0;
 }
 }
 </style>
@@ -341,14 +360,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h1 class="noto">Celebrate!</h1>
     </div>
     <div class="custom-container">
-      <div class="box-one"></div>
+      <div class="box-one"><img class="img-responsive" src="barrel.png" alt=""></div>
       <div class="box-two">
         <div class="link-wrapper"> <a href="brew-tour/" class="link">Cheers to the<br>
           Brew Tour</a> <a href="https://www.eventbrite.com/e/a-family-fete-hansel-gretels-gingerbread-cottage-tickets-325212628727?aff=websitehomepage" target="_blank" class="link">Family Fête:<br>
           Hansel & Gretel </a><a href="reserve-a-space/" class="link">Throw a<br>
           Party</a> </div>
       </div>
-      <div class="box-three"><img src="cheers-dog.png" alt="Cheers!"></div>
+      <div class="box-three"><img class="img-responsive" src="cheers-dog.png" alt=""></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
