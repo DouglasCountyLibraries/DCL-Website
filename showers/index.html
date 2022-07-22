@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?62722">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -83,6 +84,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <style>
 .reserve-a-space-active {
 	background-color: #f5f5f5;
+}
+.shower-logo {
+	float: left;
+	padding: 0 40px 15px 0;
 }
 .flickity-page-dots .dot {
 	background-color: #fff;
@@ -117,10 +122,18 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	top: 0;
 	width: 30px;
 }
+
+@media (max-width: 425px) {
+.shower-logo {
+	float: none;
+	padding: 0;
+	margin: 0 auto;
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
-<body> 
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -292,8 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container text-center">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Showers at DCL</h1>
       <h4 class="roboto margin-top-5">Celebrate your wedding or baby shower at Douglas County Libraries!</h4>
-      <div class="margin-lg-100">$250 for up to 18 guests (guest of honor + 17 guests); add $10 for each additional guest. <a href="#" data-toggle="modal" data-target="#restrictions">Some restrictions apply.</a>
-      </div>
+      <div class="margin-lg-100">$250 for up to 18 guests (guest of honor + 17 guests); add $10 for each additional guest. <a href="#" data-toggle="modal" data-target="#restrictions">Some restrictions apply.</a> </div>
     </div>
   </div>
   <div style="padding-bottom:45px;" class="row bg-lavender padding-top-40">
@@ -316,9 +328,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row padding-bottom-40 padding-top-40">
-    <div class="container margin-lg-200">
-      <h4 class="padding-bottom-15 text-center">Each shower package includes:</h4>
-      <img class="img-responsive pull-left padding-top-30 padding-right-30 padding-bottom-30" src="birthday-parties.png" alt="Birthday Parties at DCL">
+    <div class="container margin-lg-250 margin-md-100"> <img class="shower-logo img-responsive" src="showers.jpg" alt="Showers at DCL">
+      <h4 class="padding-bottom-15">Each shower package includes:</h4>
       <ul class="fa-ul concierge">
         <li><i class="fa-li fa fa-check fa-lg"></i>Setup, cleanup, and a dedicated party coordinator</li>
         <li><i class="fa-li fa fa-check fa-lg"></i>Fresh floral centerpieces that you may also take home</li>
@@ -467,7 +478,7 @@ $(document).ready(function() {
 	]
 }
 </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
@@ -476,4 +487,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
