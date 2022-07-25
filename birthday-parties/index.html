@@ -84,24 +84,30 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
-.flickity-page-dots .dot {
-	background-color: #fff;
-}
-.flickity-page-dots {
-	bottom: -30px;
-	opacity: .5;
-}
-.flickity-prev-next-button {
-	display: none;
+.custom-container {
+    max-width: 1610px;
+    margin: 0 auto;
 }
 .carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
+    margin-right: 10px;
+}
+.flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+    color: #efeeed;
 }
 .concierge .fa-check {
-	color: #13BBB2;
-}
-.fa.fa-star.fa-spin {
-	color: #d36a50;
+	color: #d36a50 ;
 }
 .fa-ul > li {
 	position: inherit;
@@ -297,9 +303,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div style="padding-bottom:45px;" class="row bg-lavender padding-top-40">
-    <div class="container-lg no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+  <div class="row bg-teal padding-top-60 padding-bottom-60">
+    <div class="custom-container no-padding">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="storytime-move-groove.jpg" alt="Birthday Storytime Move & Groove"></div>
         <div class="carousel-cell"><img src="party-favors.jpg" alt="Party Favors"></div>
         <div class="carousel-cell"><img src="room-setup.jpg" alt="Room Setup"></div>
