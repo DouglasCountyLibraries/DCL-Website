@@ -80,6 +80,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 <style>
 @font-face {
 	font-family: 'The Farmer Original';
@@ -129,6 +130,51 @@ ul.farmer > li {
 	white-space: nowrap;
 	margin-left: 5px;
 }
+polyline, g {
+	stroke: #666;
+}
+#baguetteBox-overlay .full-image figcaption {
+	font-family: "Ubuntu", arial, sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	display: block;
+	position: absolute;
+	bottom: auto;
+	width: 100%;
+	text-align: center;
+	line-height: inherit;
+	white-space: normal;
+	color: #333;
+	background-color: transparent;
+	padding: 10px 10%;
+}
+#baguetteBox-overlay .full-image img {
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.tz-gallery .lightbox img {
+	width: inherit;
+	border-radius: 0;
+	position: inherit;
+}
+.tz-gallery .lightbox::after, .tz-gallery .lightbox::before {
+	display: none;
+}
+.lightbox.null {
+	display: none;
+}
+.custom-container {
+	max-width: 825px;
+	margin: 0 auto;
+}
+.lightbox.lightbox-group {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+.hover.group {
+	margin: 5px;
+}
 .partners {
 	display: flex;
 	flex-direction: column;
@@ -138,6 +184,29 @@ ul.farmer > li {
 }
 .partner-list {
 	padding: 0 15px;
+}
+.tz-gallery .lightbox img.prizes {
+	border-radius: 50%;
+	border: 3px solid #2f2e33;
+	transition: transform .2s ease-in-out;
+}
+.tz-gallery .lightbox img.prizes:hover, .tz-gallery .lightbox img.prizes:focus {
+	transform: rotate(10deg);
+}
+.points {
+	font-family: "Larosa Bold", sans-serif;
+	color: #000;
+	border: 3px solid #2f2e33;
+	max-width: 255px;
+	margin: -30px auto 0 auto;
+	background: #d79e66;
+	font-size: 18px;
+	padding: 15px 0;
+	position: relative;
+	z-index: 1000;
+	text-transform: uppercase;
+	border-radius: 3px;
+	line-height: 24px;
 }
 .table.table-bordered.table-condensed {
 	background: rgba(255,255,255,.2);
@@ -234,6 +303,14 @@ h4.larosa {
 	max-width: 1030px;
 	margin: 0 auto;
 	padding: 60px 15px 80px;
+}
+.prize-box {
+	padding: 10px;
+}
+.prize-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .partner-row {
 	background: #d79e66;
@@ -536,46 +613,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="prizes" class="row prizes-row">
-    <div class="prizes-container">
-      <div class="text-center"><img class="center-block img-responsive" src="mountains.png" alt="">
+    <div class="prizes-container text-center">
+      <div><img class="center-block img-responsive" src="mountains.png" alt="">
         <h2 class="larosa">Prizes & Rewards</h2>
         <h5 class="black">Gather points and unlock rewards by logging your visits to each participating partner brewery and coffee shop. Each visit also earns you one entry into our Grand Prize drawing for a Happy Brew Year&mdash;one premium stainless steel growler filled twice by each participating brewery plus free coffee.</h5>
         <div class="black padding-bottom-15 margin-lg-50">You may also earn additional points and unique rewards by attending DCL-hosted Brew Tour events at our libraries and select brewery locations.** Have fun with Harry Potter Trivia, Craft & Sip events, Books & Authors Bingo, Beer Games, and more.</div>
       </div>
-      <!--<div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=brew+tour&df=list&lib=all&nd=365" target="_blank" class="btn btn-primary btn-custom-alt">Event Signup</a></div>-->
-      <div class="table-row">
-        <div class="text-center large-text padding-bottom-15"><i>5 points each location visit<br>
-          10 points each event attended</i> </div>
-        <div class="table-responsive">
-          <table class="table table-bordered table-condensed" width="100%" cellspacing="0" cellpadding="0" border="0">
-            <tbody>
-              <tr>
-                <td>Registration</td>
-                <td>Lanyard and Brew Card</td>
-              </tr>
-              <tr>
-                <td>50 Points</td>
-                <td>Brew Tour Silipint</td>
-              </tr>
-              <tr>
-                <td>75 Points</td>
-                <td>Brew Tour T-shirt</td>
-              </tr>
-              <tr>
-                <td>100 Points</td>
-                <td>Brew Tour Hoodie</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="large-text"><a class="black" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register now</a> and receive a Brew Tour Lanyard and Brew Card.</div>
+      <div class="large-text padding-bottom-15"><i>5 points each location visit<br>
+        10 points each event attended</i> </div>
+      <div class="tz-gallery">
+        <div class="prize-wrapper">
+          <div class="prize-box"><a class="lightbox" href="silipint-large.png"> <img class="prizes" src="silipint-small.jpg" alt="Brew Tour Silipint"></a>
+            <div class="points">50 Points:<br>
+              Brew Tour Silipint</div>
+          </div>
+          <div class="prize-box"><a class="lightbox" href="tee-large.png"> <img class="prizes" src="tee-small.jpg" alt="Brew Tour T-shirt"></a>
+            <div class="points">75 Points:<br>
+              Brew Tour T-shirt</div>
+          </div>
+          <div class="prize-box"><a class="lightbox" href="hoodie-large.png"> <img class="prizes" src="hoodie-small.jpg" alt="Brew Tour Hoodie"></a>
+            <div class="points">100 Points:<br>
+              Brew Tour Hoodie</div>
+          </div>
         </div>
-        <div class="padding-top-15 text-center"><i>**Brew Tour rewards available for pickup at your nearest DCL location.</i></div>
-        <h4 class="black larosa text-center">Bean There Coffee Challenge</h4>
-        <div class="text-center">Visit all participating coffee shops and attend our exclusive coffee event to earn another faBREWlous perk, a stainless steel book-lovers travel tumbler.</div>
       </div>
+      
+      <!--<div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=brew+tour&df=list&lib=all&nd=365" target="_blank" class="btn btn-primary btn-custom-alt">Event Signup</a></div>-->
+      
+      <div class="padding-top-30">
+        <h2 class="no-margin black larosa">Bean There</h2>
+        <h3 class="no-margin black larosa">Coffee Challenge</h3>
+        <div class="tz-gallery">
+          <div class="prize-wrapper">
+            <div class="prize-box"><a class="lightbox" href="tumbler-large.png"> <img class="prizes" src="tumbler-small.jpg" alt="Book Lovers Travel Tumbler"></a>
+              <div class="points">Book Lovers<br>
+                Travel Tumbler</div>
+            </div>
+          </div>
+        </div>
+        <h5 class="black margin-lg-100">Visit all participating coffee shops and attend our exclusive coffee event to earn another faBREWlous perk, a stainless steel book-lovers travel tumbler.**</h5>
+      </div>
+      <div class="padding-top-15"><i>**Brew Tour rewards available for pickup at your nearest DCL location.</i></div>
     </div>
   </div>
   <div id="partners" class="row partner-row">
-    <div class="partner-container"><img src="hops-wheat.png" class="img-responsive center-block">
+    <div class="partner-container"><img src="hops-wheat.png" alt="" class="img-responsive center-block">
       <h2 class="larosa text-center">Brew Tour Partners</h2>
       <div class="partners">
         <ul class="farmer list-unstyled">
@@ -664,6 +747,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script> 
+<script>
+    baguetteBox.run('.tz-gallery', {
+        buttons: true,
+        overlayBackgroundColor: 'rgba(255,255,255,0.8)'
+    });
+</script> 
 <script>
 $(function () {
   $('[data-toggle="popover"]').popover()
