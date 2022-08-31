@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic|Open+Sans:300,400,600|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?81822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -79,42 +80,72 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/jquery-anyimagecomparisonslider-plugin"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 <style>
+@font-face {
+	font-family: 'Didactic';
+	src: url('../shared-assets/web-fonts/DidacticPanicRegular.woff2') format('woff2'), url('../shared-assets/web-fonts/DidacticPanicRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+.images {
+	min-height: 600px;
+}
 .library-events-active {
 	background-color: #f5f5f5;
 }
-.check-list {
-	max-width: 30rem;
-	margin: 0 auto;
+.row.info-row {
+	background: #1b0b25;
+	padding-bottom: 110px;
 }
-.custom-container {
-	max-width: 1610px;
-	margin: 0 auto;
+.info {
+	padding: 0 10px;
 }
-.carousel-cell {
-	margin: 0 5px;
+.info, .info h1, .info h2, .info h3, .info h4 {
+	color: #fff;
+	text-align: center;
+	margin: 0;
 }
-.flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
+.info h3, .info h4 {
+	font-family: 'Didactic', sans-serif;
+	color: #a44f9d;
 }
-.flickity-prev-next-button:hover {
-	background: transparent;
+.info h1, .info h2 {
+	font-family: 'Creepster', cursive;
 }
-/* arrow color */
-.flickity-prev-next-button .arrow {
-	fill: #efeeed;
+.info h2 {
+	font-size: 60px;
+	line-height: 48px;
+	margin-top: 10px;
 }
-.flickity-prev-next-button.no-svg {
-	color: #efeeed;
+.info h1 {
+	font-size: 120px;
+	line-height: 120px;
 }
-.concierge .fa-check {
-	color: #D36A50;
+.info > div {
+	font-size: 18px;
+	font-weight: 400;
+	padding-top: 20px;
 }
-.fa-ul > li {
-	margin-bottom: 15px;
+a.btn.btn-custom {
+	background: #fff;
+	color: #000;
+	border-radius: 2px;
+}
+.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
+	opacity: .8;
+	color: #000;
+}
+
+@media (max-width: 475px) {
+.info h1 {
+	font-size: 90px;
+	line-height: 90px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -289,61 +320,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- End Mobile Navbar -->
 <div id="default-alert" style="display:none;"></div>
 <!-- InstanceBeginEditable name="Content" -->
-<div class="dcl-border-top">
-  <div class="container-xxl text-center padding-bottom-30">
-    <div class="max-width-50">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom margin-top-20">A Storybook Holiday</h1>
-      <h4 class="roboto text-center">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature. </h4>
-    </div>
+<div id="aics-autostart" data-dividing-line="none">
+  <div class="images">
+    <div class="image-rgt" data-height="900" data-src="jekyll.jpg"></div>
+    <div class="image-lft" data-height="900" data-src="hyde.jpg"></div>
   </div>
 </div>
-<div class="bg-gray-5">
-  <div class="container-xxl padding-top-50 padding-bottom-20 text-center">
-    <div class="max-width-50">
-      <h6>Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</h6>
-    </div>
+<div class="row info-row no-margin">
+  <div class="info">
+    <h4>A Storybook Holiday Halloween</h4>
+    <h2>Eat, Drink &</h2>
+    <h1>Be Scary!</h1>
+    <h3>A Celebration of Dr. Jekyll & Mr. Hyde</h3>
+    <div>Saturday, October&nbsp;29, 6-9PM, Highlands Ranch</div>
+    <div class="padding-top-30 text-center"><a href="https://www.eventbrite.com/e/a-storybook-holiday-dr-jekyll-and-mr-hyde-tickets-406282851947?aff=storybookholidaypage" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
   </div>
 </div>
-<div class="bg-gray-5">
-  <div class="custom-container no-padding">
-    <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-      <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/eleven.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/twelve.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/thirteen.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/fourteen.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="carousel/fifteen.jpg" alt=""></div>
-    </div>
-  </div>
-</div>
-<div class="bg-gray-5">
-  <div class="container text-center padding-top-30 padding-bottom-60">
-    <div class="margin-lg-150">
-      <h6 class="no-margin text-center">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</h6>
-    </div>
-  </div>
-</div>
-
-<!--<div class="text-center padding-top-40 padding-bottom-50">
-  <div>
-    <h4><i>Coming Spring 2022!</i></h4>
-    <div>
-      <h3 class="no-margin">A Storybook Holiday Spring:</h3>
-      <h1 class="no-margin-top text-uppercase font-weight-400">That Hungry Little Bug</h1>
-      Sunday, March 27, Parker<br>
-      Tickets on sale soon. </div>
-  </div>
-</div>--> 
-
 <!-- InstanceEndEditable -->
 <div class="bg-gray-10">
   <div class="container-xxl">
@@ -402,17 +394,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -449,13 +431,14 @@ for (var i = 0; i < cards.length; i++) {
 	]
 }
 </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
   .done(function( data ) {
     if ( data !=null ){	$("#default-alert").show().append( data );}
 });
-</script> 
+</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
