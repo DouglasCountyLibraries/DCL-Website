@@ -141,6 +141,18 @@ a.btn.btn-custom {
 	color: #000;
 }
 
+@media (min-width: 700px) {
+.small-window {
+	display: none;
+}
+}
+
+@media (max-width: 699px) {
+.big-window {
+	display: none;
+}
+}
+
 @media (max-width: 475px) {
 .info h1 {
 	font-size: 90px;
@@ -320,10 +332,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- End Mobile Navbar -->
 <div id="default-alert" style="display:none;"></div>
 <!-- InstanceBeginEditable name="Content" -->
-<div id="aics-autostart" data-dividing-line="none">
+<div class="big-window" id="aics-autostart" data-dividing-line="none">
   <div class="images">
     <div class="image-rgt" data-src="jekyll.jpg"></div>
     <div class="image-lft" data-src="hyde.jpg"></div>
+  </div>
+</div>
+<div class="small-window" id="aics-autostart" data-dividing-line="none">
+  <div class="images">
+    <div class="image-rgt" data-src="jekyll-small.jpg"></div>
+    <div class="image-lft" data-src="hyde-small.jpg"></div>
   </div>
 </div>
 <div class="row info-row no-margin">
