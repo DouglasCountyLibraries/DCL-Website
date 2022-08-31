@@ -81,11 +81,64 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <script src="https://cdn.jsdelivr.net/npm/jquery-anyimagecomparisonslider-plugin"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 <style>
+@font-face {
+	font-family: 'Didactic';
+	src: url('../shared-assets/web-fonts/DidacticPanicRegular.woff2') format('woff2'), url('../shared-assets/web-fonts/DidacticPanicRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+	.images {
+		min-height: 600px;
+	}
 .library-events-active {
 	background-color: #f5f5f5;
 }
-.info-row {background: #1b0b25;
+.row.info-row {
+	background: #1b0b25;
+	padding: 60px 0 90px;
+}
+	.info {
+		padding: 0 10px;
+	}
+.info, .info h1, .info h2, .info h3, .info h4 {
+	color: #fff;
+	text-align: center;
+	margin: 0;
+}
+.info h3, .info h4 {
+	font-family: 'Didactic', sans-serif;
+	color: #a44f9d;
+}
+.info h1, .info h2 {
+	font-family: 'Creepster', cursive;
+}
+.info h2 {
+	font-size: 60px;
+	line-height: 48px;
+	margin-top: 10px;
+}
+.info h1 {
+	font-size: 120px;
+	line-height: 120px;
+}
+	.info > div {
+		font-size: 18px;
+		font-weight: 400;
+		padding-top: 20px;
+	}
+a.btn.btn-custom {
+	background: #fff;
+	color: #000;
+	border-radius: 2px;
+}
+.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
+	opacity: .8;
+	color: #000;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -260,12 +313,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- End Mobile Navbar -->
 <div id="default-alert" style="display:none;"></div>
 <!-- InstanceBeginEditable name="Content" -->
-<div id="aics-autostart">
+<div id="aics-autostart" data-dividing-line="none">
   <div class="images">
-    <div class="image-rgt" data-src="jekyll.jpg"></div>
-    <div class="image-lft" data-src="hyde.jpg"></div>
+    <div class="image-rgt" data-height="900" data-src="jekyll.jpg"></div>
+    <div class="image-lft" data-height="900" data-src="hyde.jpg"></div>
   </div>
-</div><div class="row info-row"></div>
+</div>
+<div class="row info-row no-margin">
+  <div class="info">
+    <h4>A Storybook Holiday Halloween</h4>
+    <h2>Eat, Drink &</h2>
+    <h1>Be Scary!</h1>
+    <h3>A Celebration of Dr. Jekyll & Mr. Hyde</h3>
+	  <div>Saturday, October&nbsp;29, 6-9PM, Highlands Ranch</div><div class="padding-top-30 text-center"><a href="https://www.eventbrite.com/e/a-storybook-holiday-dr-jekyll-and-mr-hyde-tickets-406282851947?aff=storybookholidaypage" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
+  </div>
+</div>
 <!-- InstanceEndEditable -->
 <div class="bg-gray-10">
   <div class="container-xxl">
