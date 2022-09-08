@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?81822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -83,124 +84,50 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.red-text a:hover {
-	color: darkred;
-}
-.item-wrapper {
-	display: flex;
-}
 .box-item-wrapper {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	max-width: 1610px;
+	margin: 0 auto;
 }
-.box-item {
+.photo-item-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.box-item, .photo-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 	margin: 15px;
-	width: 385px;
 }
-.item {
-	margin: 15px;
-	width: 590px;
+.learning-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
 }
-.card-content {
+.learning-content {
 	background: #fff;
 	padding: 0 15px 20px;
 }
-.card-item {
+.learning-item {
 	margin: 15px;
 	width: 380px;
 	background: #fff;
 }
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-.slideshow-row {
-	background: #f5f5f5;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 1610px;
+
+@media (max-width: 1000px) {
+.box-item-wrapper {
+	max-width: 830px;
 	margin: 0 auto;
 }
-.slideshow-content {
-	flex: 1 1 36%;
-	padding: 0 30px 0;
-}
-.slideshow-image.main {
-	min-height: 600px;
-}
-#slideshow {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 0%;
-	width: 64%;
-	border-right: 15px solid #fff;
-} /* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-	position: absolute;
-	z-index: 2;
-	width: 105%;
-	height: 105%;
-	top: -5%;
-	left: -5%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 0;
-	-webkit-transition: opacity 3s, -webkit-transform 8s;
-	transition: opacity 3s, transform 8s;
-}
-#slideshow div:nth-of-type(9n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-#slideshow div {
-	-webkit-transform-origin: bottom right;
-	transform-origin: bottom right;
-}
-#slideshow div:nth-of-type(2n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-#slideshow div:nth-of-type(3n+1) {
-	-webkit-transform-origin: bottom left;
-	transform-origin: bottom left;
-}
-#slideshow div:nth-of-type(4n+1) {
-	-webkit-transform-origin: top right;
-	transform-origin: top right;
-}
-#slideshow div:nth-of-type(5n+1) {
-	-webkit-transform-origin: center center;
-	transform-origin: center center;
-}
-#slideshow div:nth-of-type(6n+1) {
-	-webkit-transform-origin: bottom right;
-	transform-origin: bottom right;
-}
-#slideshow div:nth-of-type(7n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-/* slide one */
-#slideshow div:nth-of-type(8n+1) {
-	-webkit-transform-origin: center center;
-	transform-origin: center center;
-}
-#slideshow .fx, #slideshow .fx1 {
-	-webkit-transform: scale(1.1) translate(1.5%);
-	transform: scale(1.1) translate(1.5%);
-	opacity: 1
-}
-
-@media (max-width: 1620px) {
-.custom-container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-}
-
-@media (max-width: 1245px) {
 .box-item:first-child {
-	width: 800px;
+	width: 100%;
 }
 .flex-break {
 	flex-basis: 100%;
@@ -208,57 +135,22 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 }
 
-@media (max-width: 1150px) {
-.slideshow-content {
-	flex: 1 1 42%;
-}
-#slideshow {
-	width: 58%;
-}
-}
-
-@media (max-width: 830px) {
-.box-item, .box-item:first-child {
-	width: 525px;
-}
-}
-
-@media (max-width: 810px) {
-.card-item {
+@media (max-width: 820px) {
+.learning-item {
 	width: 100%;
 	padding: 30px 0 10px;
 }
 }
 
-@media (max-width: 925px) {
-.slideshow-row {
-	flex-direction: column;
-}
-.slideshow-content {
-	padding: 20px 20px 40px;
-	text-align: center;
-}
-#slideshow {
-	width: 100%;
-	border-right: 0;
-}
-}
-
-@media (max-width: 575px) {
-.slideshow-image.main {
-	min-height: 425px;
-}
-}
-
-@media (max-width: 778px) {
-.box-content {
-	padding: 0 15px;
+@media (max-width: 725px) {
+.box-item, .photo-item {
+	flex-basis: 100%;
 }
 }
 </style>
 <!-- InstanceEndEditable -->
 </head>
-<body> 
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -431,56 +323,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase no-margin-bottom font-weight-400">Library Perks</h1>
       </div>
-      <div class="margin-lg-75 text-center margin-bottom-30">
+      <div class="margin-lg-75 text-center padding-bottom-15">
         <h4 class="roboto margin-top-5">Congratulations! Being a <a href="http://getacard.org/v2/index.html" target="_blank">DCL cardholder</a> means you have access to all sorts of fun perks, everything from free <a href="../digital-media/" target="_blank">digital media</a> to free <a href="#online-learning">online classes</a> (in crafting, software, language and more).</h4>
-        <h5 class="no-margin-top">Explore your options and do something new!</h5>
+        <h5 class="no-margin">Explore your options and do something new!</h5>
       </div>
     </div>
   </div>
-  <div class="row slideshow-row">
-    <div id="slideshow" class="slideshow-image main"> 
-      <!-- define each background-image in CSS -->
-      <div class="random-slide" style="background-image: url('slideshow/one.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(1) -->
-      <div class="random-slide" style="background-image: url('slideshow/two.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(2) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/three.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(3) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/four.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(4) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/five.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(5) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/six.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(6) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/seven.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(7) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/eight.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(8) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/nine.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(9) --> 
-    </div>
-    <div class="slideshow-content"> <a href="https://www.alltrails.com/" target="_blank"><img src="alltrails-logo.png" alt="AllTrails Logo"></a>
-      <h4>Access 140,000 trails from around the world with AllTrails Pro.</h4>
-      <div>Your free Pro upgrade includes downloadable trail maps, reviews, photos, and access to real-time map overlays and Lifeline safety tracker for one year.</div>
-      <div>
-        <ul class="margin-top-5 no-margin-bottom">
-          <li>Create an AllTrails account and redeem our Pro coupon code at AllTrails.com.</li>
-          <li>No credit card information required to apply coupon code.</li>
-          <li> Codes may not be redeemed in the AllTrails app; good for the Annual Plan only.</li>
-        </ul>
-      </div>
-      <!--<div class="padding-top-20 padding-bottom-20"><a href="https://aaptivenroll.douglascountylibraries.org/alltrails/PerkEmail" target="_blank" class="btn btn-lg btn-primary text-uppercase">Get Coupon Code</a></div>-->
-      <div class="margin-top-5 font-weight-400 red-text">We're out of coupons at this time.</div> 
-    </div>
-  </div>
-  <div id="check-out" class="row padding-top-60 padding-bottom-60">
+  <div id="check-out" class="row padding-bottom-60">
     <div class="box-item-wrapper">
       <div id="check-out-colorado" class="box-item">
         <div><img class="img-responsive" src="check-out-colorado.jpg" alt="Check Out Colorado"></div>
@@ -507,55 +356,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="online-learning" class="row bg-gray-5">
-    <div class="container margin-lg-100 text-center padding-top-40">
-      <h1 class="text-uppercase no-margin-top font-weight-400">Online Learning</h1>
+    <div class="container margin-lg-100 text-center padding-top-60">
+      <h1 class="no-margin-top font-weight-400">Online Learning</h1>
       <h4 class="roboto no-margin-bottom">These resources make learning a new language or new technology skills simple and convenient. Learn from the privacy of your own home&mdash;or your local library or coffee shop.</h4>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15 padding-bottom-40">
-    <div class="custom-container">
-      <div class="box-item-wrapper">
-        <div id="linkedin-learning" class="card-item">
-          <div><img class="img-responsive center-block" src="linkedin-learning.jpg" alt="LinkedIn Learning"></div>
-          <div class="card-content">
-            <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=linkedin" target="_blank">LinkedIn Learning</a></h3>
-            <div>Learn software, creative, business and technology skills from video courses taught by industry experts. Installed the <a href="https://play.google.com/store/apps/details?id=com.linkedin.android.learning" target="_blank">Android</a> or <a href="https://apps.apple.com/us/app/linkedin-learning/id1084807225" target="_blank">iOS</a> app? Sign in with your library card and Library ID, “DCL”.</div>
-          </div>
+  <div class="row bg-gray-5 padding-top-15 padding-bottom-60">
+    <div class="learning-wrapper">
+      <div id="linkedin-learning" class="learning-item">
+        <div><img class="img-responsive center-block" src="linkedin-learning.jpg" alt="LinkedIn Learning"></div>
+        <div class="learning-content">
+          <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=linkedin" target="_blank">LinkedIn Learning</a></h3>
+          <div>Learn software, creative, business and technology skills from video courses taught by industry experts. Installed the <a href="https://play.google.com/store/apps/details?id=com.linkedin.android.learning" target="_blank">Android</a> or <a href="https://apps.apple.com/us/app/linkedin-learning/id1084807225" target="_blank">iOS</a> app? Sign in with your library learning and Library ID, “DCL”.</div>
         </div>
-        <div id="mango" class="card-item">
-          <div><img class="img-responsive center-block" src="mango.jpg" alt="Mango Languages"></div>
-          <div class="card-content">
-            <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h3>
-            <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
-          </div>
+      </div>
+      <div id="mango" class="learning-item">
+        <div><img class="img-responsive center-block" src="mango.jpg" alt="Mango Languages"></div>
+        <div class="learning-content">
+          <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h3>
+          <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
         </div>
-        <div id="creativebug" class="card-item">
-          <div><img class="img-responsive center-block" src="creativebug.jpg" alt="Creativebug"></div>
-          <div class="card-content">
-            <h3 class="text-center"><a href="https://creativebug.com/lib/dcl" target="_blank">Creativebug</a></h3>
-            <div>Watch more than 1,000 DIY classes from renowned artists&mdash;anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting!</div>
-          </div>
+      </div>
+      <div id="creativebug" class="learning-item">
+        <div><img class="img-responsive center-block" src="creativebug.jpg" alt="Creativebug"></div>
+        <div class="learning-content">
+          <h3 class="text-center"><a href="https://creativebug.com/lib/dcl" target="_blank">Creativebug</a></h3>
+          <div>Watch more than 1,000 DIY classes from renowned artists&mdash;anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting!</div>
         </div>
-        <div id="prenda" class="card-item">
-          <div><img class="img-responsive center-block" src="fiero.jpg" alt="Fiero Code"></div>
-          <div class="card-content">
-            <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=prenda-code-club" target="_blank">Fiero Code</a></h3>
-            <div>Prenda Code Club is now Fiero Code! Learn how to code using this self-guided online software program, which includes hundreds of coding tutorials and dozens of real-world projects.</div>
-          </div>
+      </div>
+      <div id="prenda" class="learning-item">
+        <div><img class="img-responsive center-block" src="fiero.jpg" alt="Fiero Code"></div>
+        <div class="learning-content">
+          <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=prenda-code-club" target="_blank">Fiero Code</a></h3>
+          <div>Prenda Code Club is now Fiero Code! Learn how to code using this self-guided online software program, which includes hundreds of coding tutorials and dozens of real-world projects.</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row padding-top-40 padding-bottom-40">
-    <div class="box-item-wrapper">
-      <div id="adventure-pass" class="item">
+  <div class="row padding-top-60 padding-bottom-60">
+    <div class="photo-item-wrapper">
+      <div id="adventure-pass" class="photo-item">
         <div><img class="img-responsive" src="adventure-pass.jpg" alt="Adventure Pass"></div>
         <div class="box-content">
           <h3 class="text-center"><a href="../adventure-pass/">Adventure Pass</a></h3>
           <div>Use your library card to reserve a Douglas County Libraries <a href="../adventure-pass/">Adventure Pass</a> to one of our local participating cultural institutions. Reserve free passes up to 14 days in advance.</div>
         </div>
       </div>
-      <div id="legal-clinic" class="item">
+      <div id="legal-clinic" class="photo-item">
         <div><img class="img-responsive" src="legal-clinic.jpg" alt="Free Virtual Legal Clinic"></div>
         <div class="box-content">
           <h3 class="text-center">Free Virtual Legal Clinic</h3>
@@ -622,36 +469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!--[if gte IE 9]><!--> 
-<script>
-	var cards = $(".random-slide");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -688,7 +506,7 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 	]
 }
 </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
@@ -697,4 +515,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
