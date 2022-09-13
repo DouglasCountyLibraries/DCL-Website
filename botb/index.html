@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic|Open+Sans:300,400,600|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?81822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -85,6 +86,40 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .booklist:hover, .booklist:focus {
 	transform: scale(1.04);
+}
+.listen, .pause {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 14px;
+}
+.pause {
+	margin-left: 6px;
+}
+.listen:hover, .listen:focus, .pause:hover, .pause:focus {
+	cursor: pointer;
+	text-decoration: none;
+	color: #d36a50;
+}
+.listen:active, .listen:focus {
+	color: #d36a50;
+}
+.fas.fa-play {
+	margin-left: 7px;
+}
+.author-wrapper {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0.9375rem 0;
+}
+.author-item {
+	width: 520px;
+	padding: 0 1.25rem;
+}
+.author-item > .list-unstyled > li {
+	padding-bottom: 8px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -274,27 +309,129 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <h2 class="text-center">Book Lists</h2>
     <div class="max-width-50 text-center padding-bottom-20">Get ready to battle! These are the books that this year's trivia battle questions will be based upon. All of these titles will be available as "Your Lucky Day" books at your local DCL branch.</div>
     <div class="d-flex max-width-70 mx-auto justify-content-center flex-wrap flex-lg-nowrap">
-      <div class="text-center padding-12"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2149308969"><img class="img-fluid image-center booklist" src="3-4-booklist.png" alt="3rd-4th Grade Books"></a>
+      <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2149308969"><img class="img-fluid image-center booklist" src="3-4-booklist.png" alt="3rd-4th Grade Books"></a>
         <h4 class="margin-top-15">3rd-4th Grade Books</h4>
         <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2149308969">See Entire List »</a></div>
       </div>
-      <div class="text-center padding-12"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2149312009"><img class="img-fluid image-center booklist" src="5-6-booklist.png" alt="5th-6th Grade Books"></a>
+      <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2149312009"><img class="img-fluid image-center booklist" src="5-6-booklist.png" alt="5th-6th Grade Books"></a>
         <h4 class="margin-top-15">5th-6th Grade Books</h4>
         <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2149312009">See Entire List »</a></div>
       </div>
     </div>
   </div>
 </div>
-<div class="container-xxl padding-top-60 padding-bottom-60">
-  <h4 class="text-center mb-4">Congratulations to the 2021-22 winners!</h4>
-  <div class="d-flex max-width-70 mx-auto justify-content-center flex-wrap flex-md-nowrap">
-    <div class="text-center p-md-1"><img class="img-fluid image-center" src="prairie-crossing.jpg" alt="Prairie Crossing Elementary School">
-      <h6 class="font-weight-400 mt-3 mb-3">3rd-4th Grade: Prairie Crossing Elementary School</h6>
-      <div></div>
+<div id="pronunciations" class="container-xxl padding-top-40 padding-bottom-40">
+  <h2 class="text-center">Author Pronunciation List</h2>
+  <div class="author-wrapper">
+    <div class="author-item">
+      <ul class="list-unstyled">
+        <h4>3rd & 4th Grade</h4>
+        <li>Doreen Cronin: "Door_een" "Crow_nin" |&nbsp;<span class="text-nowrap">
+          <audio id="play1">
+            <source src="audio/cronin.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play1').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play1').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Angela Dominguez: "Ann_juh_la" "Duh_ming_es" |&nbsp;<span class="text-nowrap">
+          <audio id="play2">
+            <source src="audio/dominguez.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play2').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play2').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Erin Entrada Kelly: "Eh_rin" "Ehn_traw_dah" "Keh_lee" |&nbsp;<span class="text-nowrap">
+          <audio id="play3">
+            <source src="audio/e-kelly.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play3').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play3').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Eve L. Ewing: "Ee_v" "El" "You_ing" |&nbsp;<span class="text-nowrap">
+          <audio id="play4">
+            <source src="audio/ewing.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play4').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play4').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Adam Gidwitz: "Ah_dum" "Gid_wits" |&nbsp;<span class="text-nowrap">
+          <audio id="play5">
+            <source src="audio/gidwitz.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play5').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play5').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Gillian Goerz: "Jill_ee_an" "Gurt_s" |&nbsp;<span class="text-nowrap">
+          <audio id="play6">
+            <source src="audio/goerz.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play6').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play6').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Jennifer L. Holm: "Jen_nih_fur" "El" "Holm" |&nbsp;<span class="text-nowrap">
+          <audio id="play7">
+            <source src="audio/holm.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play7').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play7').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Zanib Mian: "Zay_neb" "Mee_ahn" |&nbsp;<span class="text-nowrap">
+          <audio id="play8">
+            <source src="audio/mian.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play8').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play8').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Rodman Philbrick: "Rod_mun" "Fill_brick" |&nbsp;<span class="text-nowrap">
+          <audio id="play9">
+            <source src="audio/philbrick.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play9').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play9').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Rosanne Parry: "Rose_ann" "Pair_ee" |&nbsp;<span class="text-nowrap">
+          <audio id="play10">
+            <source src="audio/parry.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play10').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play10').pause()"><i class="fas fa-pause"></i></a></span></li>
+      </ul>
     </div>
-    <div class="text-center p-md-1"><img class="img-fluid image-center" src="montessori.jpg" alt="DCS Montessori Charter School">
-      <h6 class="font-weight-400 mt-3 mb-3">5th-6th Grade: DCS Montessori Charter School</h6>
-      <div></div>
+    <div class="author-item">
+      <ul class="list-unstyled">
+        <h4>5th & 6th Grade</h4>
+        <li>Ruth Behar: "Rooth" "Bay_har" |&nbsp;<span class="text-nowrap">
+          <audio id="play12">
+            <source src="audio/behar.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play12').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play12').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Pablo Cartaya: "Pah_blow" "Car_tie_yah" |&nbsp;<span class="text-nowrap">
+          <audio id="play13">
+            <source src="audio/cartaya.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play13').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play13').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Jerry Craft: "Jeh_ree" "Kraft" |&nbsp;<span class="text-nowrap">
+          <audio id="play14">
+            <source src="audio/craft.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play14').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play14').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Ben Guterson: "Ben" "Goo_tur_sen" |&nbsp;<span class="text-nowrap">
+          <audio id="play15">
+            <source src="audio/guterson.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play15').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play15').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Anna James: "An_uh" "Jaym_s" |&nbsp;<span class="text-nowrap">
+          <audio id="play16">
+            <source src="audio/james.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play16').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play16').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Lynne Kelly: "Lin" "Keh_lee" |&nbsp;<span class="text-nowrap">
+          <audio id="play17">
+            <source src="audio/l-kelly.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play17').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play17').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Gordon Korman: "Gor_don" "Kor_min" |&nbsp;<span class="text-nowrap">
+          <audio id="play18">
+            <source src="audio/korman.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play18').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play18').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Stacy McAnulty: "Stay_cee" "Mac_ah_null_tee" |&nbsp;<span class="text-nowrap">
+          <audio id="play19">
+            <source src="audio/mcanulty.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play19').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play19').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>James Ponti: "Jaym_s" "Pohn_tee" |&nbsp;<span class="text-nowrap">
+          <audio id="play20">
+            <source src="audio/ponti.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play20').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play20').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>Nic Stone: "Nick" "Sto_n" |&nbsp;<span class="text-nowrap">
+          <audio id="play21">
+            <source src="audio/stone.mp3" type="audio/mp3">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play21').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play21').pause()"><i class="fas fa-pause"></i></a></span></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -356,49 +493,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-function OpenInNewTab(url ){
-  var win=window.open(url, '_blank');
-  win.focus();
-}
-$("#eventsinfo .item").click(function(){
-     var url = $(this).find("a").attr("href");
-     OpenInNewTab(url);
-     return false;
-});
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
- </script> 
-<script>
-	var cards = $(".random-slide");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -435,13 +530,14 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 	]
 }
 </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
   .done(function( data ) {
     if ( data !=null ){	$("#default-alert").show().append( data );}
 });
-</script> 
+</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
