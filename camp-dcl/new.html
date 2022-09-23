@@ -96,13 +96,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
 </noscript>
 <style>
-.small-custom-container {
-  max-width: 1250px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 .nav-justified li > a > h1 {
 	color: #666;
 	opacity: .4;
@@ -161,8 +154,8 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: center;
-	 max-width: 1500px;
-  margin: 0 auto;
+	max-width: 1500px;
+	margin: 0 auto;
 }
 .box-item {
 	display: flex;
@@ -175,31 +168,32 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
 .box-border {
 	border: 2px solid #ddd;
 }
-	@media (max-width: 1100px) {
-	.box-item:first-child {
-	min-width: fit-content;
-		
+:target h1:first-of-type, :target h2:first-of-type, :target h1 a:first-of-type, :target h2 a:first-of-type {
+	-webkit-animation: target-fade 0s 0;
+	-moz-animation: target-fade 0s 0;
 }
-	}
+@media (max-width: 1100px) {
+.box-item:first-child {
+	min-width: fit-content;	
+}	
+.box-wrapper {
+	max-width: 850px;
+	margin: 0 auto;
+}			
+}
 @media (max-width: 750px) {
 .box-item {
 	flex-direction: column;
     min-width: fit-content;
-
-	}
+}
 .sold-out-box {
 	background: #fff url("soldout.png") center center no-repeat;
 }
 }
-
 @media (max-width: 475px) {
 .nav-justified li > a > h1 {
 	white-space: pre-wrap;
-	}
 }
-:target h1:first-of-type, :target h2:first-of-type, :target h1 a:first-of-type, :target h2 a:first-of-type {
-	-webkit-animation: target-fade 0s 0;
-	-moz-animation: target-fade 0s 0;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -380,10 +374,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="container margin-lg-100">
     <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a class="tab" href="#spring" aria-controls="one" role="tab" data-toggle="tab">
+      <li role="presentation" class="active"><a class="tab" href="#kid-free" aria-controls="one" role="tab" data-toggle="tab">
         <h2 class="no-margin font-weight-400">Kid-Free Camps</h2>
         </a></li>
-      <li role="presentation"><a class="tab" href="#summer" aria-controls="two" role="tab" data-toggle="tab">
+      <li role="presentation"><a class="tab" href="#holiday" aria-controls="two" role="tab" data-toggle="tab">
         <h2 class="no-margin font-weight-400">HoliDays Camps</h2>
         </a></li>
     </ul>
@@ -396,7 +390,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 tab begins
 ################## 
 -->
-    <div role="tabpanel" class="tab-pane fade in active" id="spring">
+    <div role="tabpanel" class="tab-pane fade in active" id="kid-free">
       <div class="row">
         <div class="container text-center padding-bottom-15">
           <h3 class="margin-top-30">November 25, 9AM-4PM</h3>
@@ -445,7 +439,7 @@ tab ends
 tab begins
 ################## 
 -->
-    <div role="tabpanel" class="tab-pane fade" id="summer">
+    <div role="tabpanel" class="tab-pane fade" id="holiday">
       <div class="row">
         <div class="container text-center padding-bottom-15">
           <h3 class="margin-top-30">December 20-22, 9AM-4PM</h3>
@@ -466,7 +460,7 @@ tab begins
         <h1 class="no-margin-top text-uppercase font-weight-400">Lone Tree</h1>
       </div>
       <div class="row bg-gray-5 padding-bottom-30">
-        <div class="small-custom-container box-wrapper">
+        <div class="box-wrapper">
           <div class="box-item bg-white">
             <h3 class="text-center no-margin-bottom">Cooking & LEGO Camp</h3>
             <h5 class="roboto margin-top-5 text-center">December 20, Ages 5-10, $75</h5>
@@ -499,7 +493,7 @@ tab begins
         <h1 class="no-margin-top text-uppercase font-weight-400">Parker</h1>
       </div>
       <div class="row padding-bottom-60">
-        <div class="small-custom-container box-wrapper">
+        <div class="box-wrapper">
           <div class="box-item box-border">
             <h3 class="text-center no-margin-bottom">Cooking & LEGO Camp</h3>
             <h5 class="roboto margin-top-5 text-center">December 20, Ages 5-10, $75</h5>
