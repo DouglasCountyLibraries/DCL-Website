@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,11 +69,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic|Open+Sans:300,400,600|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?81822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> 	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl-new.js?81822"></script> 
 <!-- Start of Zendesk Widget script --> 
@@ -145,6 +146,20 @@ a.btn.btn-custom {
 	opacity: .8;
 	color: #000;
 }
+.winter {
+	background: #2c123c;
+	border-top: 3px solid #a44f9d;
+}
+.dickens-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 700px;
+	margin: 0 auto;
+}
+.dickens-item {
+	padding: 15px;
+}
 
 @media (min-width: 1050px) {
 .small-window {
@@ -155,6 +170,12 @@ a.btn.btn-custom {
 @media (max-width: 1049px) {
 .big-window {
 	display: none;
+}
+}
+
+@media (max-width: 767px) {
+.dickens-wrapper {
+	justify-content: center;
 }
 }
 
@@ -365,6 +386,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="padding-top-30 text-center"><a href="https://www.eventbrite.com/e/a-storybook-holiday-dr-jekyll-and-mr-hyde-tickets-406282851947?aff=storybookholidaypage" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
   </div>
 </div>
+<div class="winter">
+  <div class="container white text-center padding-top-50 padding-bottom-60">
+    <h3 class="white">Join us for A Dickens Storybook Holiday!</h3>
+    <div class="dickens-wrapper">
+      <div class="dickens-item">
+        <h4 class="white no-margin-bottom">Dinner Edition</h4>
+        <div>Saturday, December&nbsp;3, 5PM, Lone Tree</div>
+        <div class="padding-top-20 text-center"><a href="https://www.eventbrite.com/e/a-dickens-storybook-holiday-dinner-edition-tickets-431801318367?aff=storybookholidaypage" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
+      </div>
+      <div class="dickens-item">
+        <h4 class="white no-margin-bottom">Brunch Edition</h4>
+        <div>Sunday, December&nbsp;4, 8:30AM, Lone Tree</div>
+        <div class="padding-top-20 text-center"><a href="https://www.eventbrite.com/e/a-dickens-storybook-holiday-brunch-edition-tickets-431822010257?aff=storybookholidaypage" target="_blank" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
+      </div>
+    </div>
+    <div class="padding-top-30"><a class="white text-underline" href="../newsletters/">Sign up for our eNewsletter</a> for inside access to ticket sales and other library events and happenings. </div>
+  </div>
+</div>
 <!-- InstanceEndEditable -->
 <div class="bg-gray-10">
   <div class="container-xxl">
@@ -460,13 +499,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	]
 }
 </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
   .done(function( data ) {
     if ( data !=null ){	$("#default-alert").show().append( data );}
 });
-</script> 
+</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
