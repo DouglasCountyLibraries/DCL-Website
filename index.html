@@ -88,80 +88,292 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-.flower-row {
-	background: #fff url("flowers.webp") top center repeat-x;
+.forest-container {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	background: url("tree-branches.jpg") center bottom/cover;
+	max-width: 2800px;
+	margin: 0 auto;
 }
-.flower-row h1 {
-	font-family: 'Kalam', cursive;
-	color: #30364c;
-	font-size: 80px;
-	text-align: center;
-	margin: 0;
-	padding: 115px 0 95px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-.box-item-container {
-	display: flex;
-	justify-content: center;
-	padding: 0 15px 275px 15px;
-	margin-top: -75px;
-}
-.box-item {
-	background-color: #fff;
-	width: 325px;
-	border-radius: 3px;
-	margin: .8em;
-	padding: 10px;
-	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
-}
-.box-item:hover {
-	background-color: rgb(255,255,255);
-	box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 1);
-	transition: all .2s ease-out;
-}
-.box-item > a:visited, .box-item > a:hover, .box-item > a:focus, .box-item > a:active {
-	text-decoration: none !important;
-	color: #000;
-}
-.aligner {
-	font-family: 'Kalam', cursive;
-	font-weight: 700;
+.forest-wrapper {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	text-align: center;
-	font-size: 30px;
-	line-height: 34px;
-	color: #30364c;
-	border-radius: 2px;
-	padding: 82px 10px 92px 10px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 90px 15px 175px;
+	justify-content: flex-end;
 }
-.smaller {
+.details {
+	border-left: 6px solid #a5b887;
+	padding-left: 20px;
+	margin: 20px 0;
+	max-width: 950px;
+}
+.forest {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	color: #fff;
+	margin: 0;
+	text-shadow: 0 4px 9px rgba(0, 0, 0, .9);
+	font-weight: 400;
+}
+h1.forest {
+	text-transform: uppercase;
+	font-size: 70px;
+	font-weight: 700;
+	line-height: 70px;
+}
+.forest.one {
 	font-size: 22px;
-	line-height: 24px;
+	font-weight: 600;
+	margin-bottom: 5px;
 }
-.aligner.one, .aligner.two, .aligner.three, .aligner.four {
-	border: 4px solid #366a9c;
+.forest.two {
+	font-size: 18px;
+	font-weight: 600;
 }
-.aligner.one:hover, .aligner.two:hover, .aligner.three:hover, .aligner.four:hover {
-	color: #000;
-	border: 4px solid #e3592a;
+.forest.three {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 40px;
+}
+.forest.four {
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 8px 0 10px;
+}
+.mark-your {
+	font-weight: 800;
+}
+.forest-read-more {
+	font-weight: 700;
+	margin: 0;
+	font-size: 30px;
+	text-transform: uppercase;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	margin-left: 28px;
+}
+.forest-read-more:active, .forest-read-more:hover, .forest-read-more:focus {
+	color: #a5b887;
+	text-decoration: none;
 }
 
-@media (max-width: 1095px) {
-.box-item-container {
-	flex-wrap: wrap;
-	max-width: 780px;
-	margin: 0 auto;
-	padding: 0 15px 200px 15px;
-	margin-top: -75px;
+@media (max-width: 825px) {
+.forest-container {
+	background: url("tree-branches.jpg") right bottom/cover;
 }
-.flower-row h1 {
-	padding: 85px 0 95px;
-	line-height: 70px;
+.forest-wrapper {
+	padding: 60px 15px 175px;
+}
+}
+/* camp dcl */
+.cdcl {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	font-weight: 400;
+	color: #333;
+}
+.row.cdcl {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	background: #f7e4e6;
+	padding: 85px 15px 155px;
+}
+.cdcl-wrapper {
+	background: transparent url("dcl-campers.jpg") right top no-repeat;
+	display: flex;
+	max-width: 1125px;
+	margin: 0 auto;
+	min-height: 600px;
+}
+h2.cdcl {
+	font-size: 34px;
+	font-weight: 600;
+	margin: 0;
+}
+.cdcl.one {
+	padding: 15px 0 10px;
+	font-size: 18px;
+}
+.cdcl.two {
+	font-size: 22px;
+	font-weight: 500;
+}
+.cdcl-item.two {
+	background: #fff;
+	padding: 60px 60px 70px;
+	margin: 175px 0 75px;
+	max-width: 525px;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media (min-width: 976px) {
+.cdcl-item.one {
+	display: none;
+}
+}
+
+@media (max-width: 975px) {
+.row.cdcl {
+	padding: 80px 15px 120px;
+}
+.cdcl-wrapper {
+	background: none;
+	flex-direction: column;
+	align-items: center;
+	max-width: 675px;
+}
+.cdcl-item.two {
+	max-width: 100%;
+	margin: 0;
+	width: 100%;
+}
+}
+/* storybook holiday */	
+.sbh {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	font-weight: 400;
+	color: #333;
+}
+.row.sbh {
+	background: #fff url("camp-background.jpg") 100% 40% repeat-x;
+}
+h2.sbh {
+	font-size: 28px;
+	font-weight: 600;
+	margin: 0 0 10px;
+}
+.sbh a {
+	font-weight: 500;
+}
+.sbh.ten {
+	font-size: 20px;
+	margin-top: 3px;
+}
+.sbh.eleven {
+	font-size: 22px;
+	margin: 5px 0 10px;
+	font-weight: 500;
+}
+.sbh.twelve {
+	font-size: 16px;
+}
+.sbh-item {
+	padding: 10px;
+}
+.sbh-item:last-child {
+	max-width: 420px;
+}
+.sbh-item img {
+	border-radius: 2px;
+}
+.sbh-item-wrapper {
+	margin: 0 15px;
+}
+.sbh-item-content {
+	display: flex;
+	max-width: 1400px;
+	margin: 0 auto;
+	justify-content: center;
+	padding: 90px 40px;
+	background: #fff;
+	align-content: center;
+	align-items: center;
+	border-radius: 3px;
+}
+
+@media (max-width: 650px) {
+img.large {
+	display: none;
+}
+}
+
+@media (min-width: 651px) {
+img.small {
+	display: none;
+}
+}
+
+@media (max-width: 1120px) {
+.sbh-item-content {
+	flex-wrap: wrap;
+	padding: 90px 60px;
+}
+.sbh-item:last-child {
+	max-width: 100%;
+}
+}
+/* lifelong learning */
+.learning {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	font-weight: 400;
+	color: #000;
+}
+h2.learning {
+	font-weight: 600;
+	font-size: 36px;
+	color: #333;
+	margin: 0 0 5px;
+}
+.learning.twenty {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.learning-intro {
+	padding: 0 15px;
+	max-width: 820px;
+	margin: 0 auto;
+}
+.learning.nineteen {
+	font-size: 20px;
+	color: #333;
+	margin: 0 auto;
+}
+.learning-item a {
+	font-weight: 600;
+}
+.learning-item-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+.learning-item {
+	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+	font-weight: 400;
+	color: #000;
+	margin: 15px;
+	width: 380px;
+	background: #d0dde5;
+	padding: 30px 40px 50px;
+}
+.row.learning-row {
+	padding: 110px 15px;
+	background: #fff url("learning-background.jpg");
+}
+
+@media (max-width: 1300px) {
+.learning-item-wrapper {
+	max-width: 950px;
+}
+}
+
+@media (max-width: 865px) {
+.learning-item {
+	width: 300px;
+}
+.row.learning-row {
+	padding: 95px 0;
+}
+}
+
+@media (max-width: 665px) {
+.learning-item {
+	width: 325px;
 }
 }
 </style>
@@ -335,35 +547,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row flower-row">
-    <div>
-      <h1>Happy Balance</h1>
+  <div class="row" style="background: #f7e4e6;">
+    <div class="forest-container">
+      <div class="forest-wrapper">
+        <div class="forest one"><i>Celebrate the Season!</i></div>
+        <h1 class="forest">A Forest of Stories</h1>
+        <div class="details">
+          <div class="forest three">120+&nbsp;Decorated Trees, 7&nbsp;Locations, 7&nbsp;Weeks</div>
+          <div class="forest four">Unlimited Wonder!</div>
+          <div class="forest two">Make DCL your first stop for the holidays. Visit every location and get ready to Ooh and Aah over decorated trees all dressed up in stories. Harry Potter Sorting Hat, Houses of Hogwarts, Winnie-the-Pooh, and more. <span class="mark-your">Mark your calendar! Nov 19-Jan 7.</span></div>
+        </div>
+        <div class="padding-top-15"><a class="forest forest-read-more" href="forest-of-stories/">Read More</a></div>
+      </div>
     </div>
-    <div class="box-item-wrapper">
-      <div class="box-item-container">
-        <div class="box-item"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=lifelong+learning&lib=ALL&nd=90" target="_blank">
-          <div class="aligner three">
-            <div class="smaller">Lifelong Learning</div>
-            <div>The History of...</div>
-          </div>
-          </a></div>
-        <div class="box-item"> <a href="storybook-holiday/">
-          <div class="aligner one">
-            <div class="smaller">Storybook Holiday</div>
-            <div>Halloween</div>
-          </div>
-          </a></div>
-        <div class="box-item"><a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2187095382" target="_blank">
-          <div class="aligner two">
-            <div class="smaller">Vampire Reads:</div>
-            <div>Fangtastic!</div>
-          </div>
-          </a></div>
-        <div class="box-item"><a href="camp-dcl/">
-          <div class="aligner four">
-            <div>Camp DCL</div>
-          </div>
-          </a></div>
+  </div>
+  
+  <!--#####-->
+  <div class="row cdcl">
+    <div class="cdcl-wrapper">
+      <div class="cdcl-item one"><img class="img-responsive" src="dcl-campers.jpg" alt="Camp DCL Campers"></div>
+      <div class="cdcl-item two">
+        <h2 class="cdcl">Camp DCL</h2>
+        <div class="cdcl one">Registration is open for our Kid-Free Black Friday Camps and HoliDays Camps.</div>
+        <div class="cdcl two"><a href="camp-dcl/"><i>Sign up for some fun!</i></a></div>
+      </div>
+    </div>
+  </div>
+  
+  <!--#####-->
+  <div class="row sbh">
+    <div class="sbh-item-wrapper">
+      <div class="sbh-item-content">
+        <div class="sbh-item"><img class="large img-responsive" src="storybook-holiday.jpg" alt="Storybook Holiday"><img class="small img-responsive" src="santa-claus.jpg" alt="Storybook Holiday"></div>
+        <div class="sbh-item">
+          <h2 class="sbh">A Dickens Storybook Holiday</h2>
+          <div class="sbh ten">December 3&4, Lone Tree</div>
+          <div class="sbh eleven"><a href="storybook-holiday/#winter">Tickets on Sale</a></div>
+          <div class="sbh twelve">Naughty & Nice Hot Cocoa Bar, Entertainment & Performances, Keepsake Crafts, Carolers, Characters Come-to-Life, Festive Food & Drinks, Candy Bar, and Much More.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--#####-->
+  <div class="row learning-row">
+    <div class="learning-intro">
+      <h2 class="learning">Enjoy the Journey</h2>
+      <div class="learning nineteen">Embrace your curiosity and explore these enriching resources and events for adults.</div>
+    </div>
+    <div class="learning-item-wrapper">
+      <div class="learning-item">
+        <div><img class="img-responsive center-block" src="digital-newspaper.png" alt="Digital Newspaper"></div>
+        <div class="learning-content">
+          <div class="learning twenty">Explore & Experience</div>
+          <div><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=explore+&+experience+the+library+digital+collection&lib=ALL&nd=60" target="_blank">Learn how to access</a> digital newspapers, e-books, movies and more on one of our devices or yours.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <div><img class="img-responsive center-block" src="learning.png" alt="Learning"></div>
+        <div class="learning-content">
+          <div class="learning twenty">Learning Series: A History Of...</div>
+          <div>Active Minds presents the histories of <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=lifelong+learning&lib=ALL&nd=90" target="_blank">some favorite things</a>.</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <div><img class="img-responsive center-block" src="beans.png" alt="Coffee Beans"></div>
+        <div class="learning-content">
+          <div class="learning twenty">Coffee Chat</div>
+          <div>What a great way to <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=coffee+chat&lib=ALL&nd=180" target="_blank">start your day</a> each Tuesday!</div>
+        </div>
+      </div>
+      <div class="learning-item">
+        <div><img class="img-responsive center-block" src="chess.png" alt="Chess Piece"></div>
+        <div class="learning-content">
+          <div class="learning twenty">Play Chess</div>
+          <div><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=chess&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Join a pick-up game</a> at your local DCL branch. All ages and skill levels welcome. </div>
+        </div>
       </div>
     </div>
   </div>
