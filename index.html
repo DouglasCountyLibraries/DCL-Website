@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?81822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -376,10 +377,29 @@ h2.learning {
 	width: 325px;
 }
 }
+.sevens:after {
+	content: 'Weeks';
+	animation-name: seven;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+@keyframes seven {
+0% {
+opacity:1;
+}
+50% {
+opacity:1;
+content: "Locations"
+}
+100% {
+opacity:1;
+content: "Weeks"
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
-<body> 
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -553,7 +573,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="forest one"><i>Celebrate the Season!</i></div>
         <h1 class="forest">A Forest of Stories</h1>
         <div class="details">
-          <div class="forest three">100+&nbsp;Decorated Trees, 7&nbsp;Locations, 7&nbsp;Weeks</div>
+          <div class="forest three">7&nbsp;<span class="sevens"></span>, 100+&nbsp;Decorated Trees</div>
           <div class="forest four">Unlimited Wonder!</div>
           <div class="forest two">Make DCL your first stop for the holidays. Visit every location and get ready to Ooh and Aah over decorated trees all dressed up in stories. Harry Potter Sorting Hat, Houses of Hogwarts, Winnie-the-Pooh, and more. <span class="mark-your">Mark your calendar! Nov 19-Jan 7.</span></div>
         </div>
@@ -721,7 +741,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	]
 }
 </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
@@ -730,4 +750,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
