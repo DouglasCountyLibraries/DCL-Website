@@ -89,31 +89,66 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-.forest-container {
-	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-	background: url("sparkle-branches.jpg") center bottom/cover;
-	max-width: 2800px;
-	margin: 0 auto;
+@font-face {
+	font-family: 'Pop Clink Fill';
+	src: url('shared-assets/web-fonts/subset-PopClink-Fill.woff2') format('woff2'), url('shared-assets/web-fonts/subset-PopClink-Fill.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bulgary';
+	src: url('shared-assets/web-fonts/subset-BulgaryRegular.woff2') format('woff2'), url('shared-assets/web-fonts/subset-BulgaryRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+h1.pop-clink {
+	font-family: 'Pop Clink Fill', serif;
+	color: #fff;
+	font-weight: normal;
+	font-style: normal;
+	display: inline;
+	font-size: 80px;
+	margin: 0 0;
+	text-shadow: 0 4px 9px #000;
+	line-height: 80px;
+}
+h1.bulgary {
+	font-family: 'Bulgary', serif;
+	color: #fff;
+	font-weight: normal;
+	font-style: normal;
+	display: inline;
+	font-size: 104px;
+	text-shadow: 0 4px 9px #000;
+	margin: 0 12px 0 5px;
+}
+.branches-row {
+	background: #1c1c06 url("branch-background.jpg") right bottom/cover;
 }
 .forest-wrapper {
 	display: flex;
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 950px;
 	margin: 0 auto;
-	padding: 105px 15px 190px;
-	justify-content: flex-end;
+	padding: 0 15px 35px 15px;
+}
+.social-footer {
+	margin-top: -55px;
 }
 .details {
-	border-left: 6px solid #93beb6;
-	padding-left: 20px;
-	margin: 20px 0;
-	max-width: 950px;
+	display: flex;
+	align-items: center;
+}
+.content-details {
+	padding-left: 30px;
 }
 .forest {
 	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
 	color: #fff;
 	margin: 0;
-	text-shadow: 0 4px 9px rgba(0, 0, 0, .9);
+	text-shadow: 0 4px 9px #000;
 	font-weight: 400;
 }
 h1.forest {
@@ -125,7 +160,7 @@ h1.forest {
 .forest.one {
 	font-size: 22px;
 	font-weight: 600;
-	margin-bottom: 5px;
+	line-height: 20px;
 }
 .forest.two {
 	font-size: 18px;
@@ -147,161 +182,14 @@ h1.forest {
 }
 .forest-read-more {
 	font-weight: 700;
-	margin: 0;
 	font-size: 30px;
 	text-transform: uppercase;
 	border-top: 3px solid #fff;
 	border-bottom: 3px solid #fff;
-	margin-left: 28px;
 }
 .forest-read-more:active, .forest-read-more:hover, .forest-read-more:focus {
-	color: #a5b887;
+	color: #f9dd90;
 	text-decoration: none;
-}
-
-@media (max-width: 825px) {
-.forest-container {
-	background: url("sparkle-branches.jpg") right bottom/cover;
-}
-.forest-wrapper {
-	padding: 60px 15px 175px;
-}
-}
-/* camp dcl */
-.cdcl {
-	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-	font-weight: 400;
-	color: #333;
-}
-.row.cdcl {
-	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-	background: #93beb6 url("tree-pattern.jpg") repeat-x;
-	padding: 30px 15px 0;
-}
-.cdcl-wrapper {
-	background: transparent url("woman-child.jpg") right top no-repeat;
-	display: flex;
-	max-width: 1000px;
-	margin: 0 auto;
-}
-h2.cdcl {
-	font-size: 34px;
-	font-weight: 600;
-	margin: 0;
-}
-.cdcl.one {
-	padding: 15px 0 10px;
-	font-size: 18px;
-}
-.cdcl.two {
-	font-size: 22px;
-	font-weight: 500;
-}
-.cdcl-item.two {
-	background: #fff;
-	padding: 50px 60px 70px;
-	margin: 75px 0 180px;
-	max-width: 525px;
-	border-radius: 3px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-@media (min-width: 976px) {
-.cdcl-item.one {
-	display: none;
-}
-}
-
-@media (max-width: 975px) {
-.cdcl-wrapper {
-	background: none;
-	flex-direction: column;
-	align-items: center;
-	max-width: 675px;
-	padding-bottom: 70px;
-}
-.cdcl-item.two {
-	max-width: 100%;
-	margin: 0;
-	width: 100%;
-}
-}
-/* storybook holiday */	
-.sbh {
-	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-	font-weight: 400;
-	color: #333;
-}
-.row.sbh {
-	background: #fff url("sbh-background.jpg") repeat-x;
-	padding-bottom: 90px;
-}
-h2.sbh {
-	font-size: 28px;
-	font-weight: 600;
-	margin: 0 0 10px;
-}
-.sbh a {
-	font-weight: 500;
-}
-.sbh.ten {
-	font-size: 20px;
-	margin-top: 3px;
-}
-.sbh.eleven {
-	font-size: 22px;
-	margin: 5px 0 10px;
-	font-weight: 500;
-}
-.sbh.twelve {
-	font-size: 16px;
-}
-.sbh-item {
-	padding: 10px;
-}
-.sbh-item:last-child {
-	max-width: 420px;
-}
-.sbh-item img {
-	border-radius: 2px;
-}
-.sbh-item-wrapper {
-	margin: 25px 0 115px;
-}
-.sbh-item-content {
-	display: flex;
-	max-width: 1400px;
-	margin: 0 auto;
-	justify-content: center;
-	padding: 90px 40px;
-	background: #fff;
-	align-content: center;
-	align-items: center;
-	border-radius: 3px;
-}
-
-@media (max-width: 650px) {
-img.large {
-	display: none;
-}
-}
-
-@media (min-width: 651px) {
-img.small {
-	display: none;
-}
-}
-
-@media (max-width: 1120px) {
-.sbh-item-content {
-	flex-wrap: wrap;
-	padding: 60px;
-}
-.sbh-item:last-child {
-	max-width: 100%;
-}
 }
 .sevens:after {
 	content: 'Weeks';
@@ -320,6 +208,138 @@ content: "Locations"
 100% {
 opacity:1;
 content: "Weeks"
+}
+}
+.snowflake-detail {
+	animation: snowflake 15s linear infinite both;
+}
+@keyframes snowflake {
+0% {
+transform: rotateZ(0);
+}
+50% {
+transform: rotateZ(180deg);
+}
+100% {
+transform: rotateZ(360deg);
+}
+}
+.sparkle-row-top {
+	display: flex;
+	justify-content: space-between;
+	max-width: 90%;
+	margin: 0 auto;
+}
+.sparkle-row-bottom {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 200px;
+	max-width: 90%;
+	margin: -100px auto 0 auto;
+}
+.sparkle-rotate:nth-of-type(1) {
+	animation: sparkle-rotate 15s .3s linear infinite both;
+}
+.sparkle-rotate:nth-of-type(2) {
+	animation: sparkle-rotate 18s .9s linear infinite both;
+}
+.sparkle-rotate:nth-of-type(3) {
+	animation: sparkle-rotate 10s 1s linear infinite both;
+}
+.sparkle-rotate:nth-of-type(4) {
+	animation: sparkle-rotate 16s .5s linear infinite both;
+}
+.sparkle-rotate:nth-of-type(5) {
+	animation: sparkle-rotate 14s .2s linear infinite both;
+}
+.sparkle-rotate:nth-of-type(6) {
+	animation: sparkle-rotate 18s .1s linear infinite both;
+}
+@keyframes sparkle-rotate {
+0% {
+transform: rotateZ(0);
+}
+50% {
+opacity: 0;
+transform: rotateZ(180deg);
+}
+100% {
+transform: rotateZ(360deg);
+}
+}
+.sparkle-fall:nth-of-type(1) {
+	animation: sparkle-fall 14s .2s linear infinite both;
+}
+.sparkle-fall:nth-of-type(2) {
+	animation: sparkle-fall 20s .9s linear infinite both;
+}
+.sparkle-fall:nth-of-type(3) {
+	animation: sparkle-fall 15s .1s linear infinite both;
+}
+.sparkle-fall:nth-of-type(4) {
+	animation: sparkle-fall 20s .8s linear infinite both;
+}
+.sparkle-fall:nth-of-type(5) {
+	animation: sparkle-fall 15s .3s linear infinite both;
+}
+.sparkle-fall:nth-of-type(6) {
+	animation: sparkle-fall 12s 1.5s linear infinite both;
+}
+@keyframes sparkle-fall {
+0% {
+transform: translateY(0%);
+opacity: 0;
+}
+25% {
+opacity: 1;
+}
+50% {
+opacity: 0;
+}
+75% {
+opacity: 1;
+}
+100% {
+transform: translateY(100%);
+opacity: 0;
+}
+}
+
+@media (max-width: 1050px) {
+.sparkle-fall:nth-of-type(5), .sparkle-fall:nth-of-type(6), .sparkle-rotate:nth-of-type(1), .sparkle-rotate:nth-of-type(2), .sparkle-rotate:nth-of-type(3), .sparkle-rotate:nth-of-type(4), .sparkle-rotate:nth-of-type(5), .sparkle-rotate:nth-of-type(6) {
+	display: none;
+}
+}
+
+@media (max-width: 850px) {
+.forest-wrapper {
+	text-align: center;
+}
+.snowflake-detail {
+	display: none;
+}
+.content-details {
+	padding-left: 0;
+}
+h1.pop-clink {
+	line-height: 20px;
+}
+.forest.three {
+	padding-top: 20px;
+}
+.sparkle-fall {
+	height: 200px;
+}
+}
+
+@media (max-width: 450px) {
+h1.pop-clink {
+	font-size: 70px;
+	line-height: 80px;
+}
+h1.bulgary {
+	margin: 0;
+	line-height: 80px;
 }
 }
 </style>
@@ -493,44 +513,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row" style="background: #93beb6;">
-    <div class="forest-container">
+  <div class="row no-gutter">
+    <div class="branches-row">
+      <div class="sparkle-row-top"><img class="img-responsive sparkle-rotate" src="s1.png" alt=""><img class="img-responsive sparkle-fall" src="s2.png" alt=""><img class="img-responsive sparkle-fall" src="s5.png" alt=""><img class="img-responsive sparkle-rotate" src="s4.png" alt=""><img class="img-responsive sparkle-fall" src="s6.png" alt=""><img class="img-responsive sparkle-fall" src="s3.png" alt=""></div>
       <div class="forest-wrapper">
         <div class="forest one"><i>Celebrate the Season!</i></div>
-        <h1 class="forest">A Forest of Stories</h1>
+        <div class="heading-wrapper">
+          <h1 class="pop-clink">FOrEST</h1>
+          <h1 class="bulgary">of</h1>
+          <h1 class="pop-clink">STORIeS</h1>
+        </div>
         <div class="details">
-          <div class="forest three">7&nbsp;<span class="sevens"></span>, 120+&nbsp;Decorated Trees</div>
-          <div class="forest four">Unlimited Wonder!</div>
-          <div class="forest two">Make DCL your first stop for the holidays. Visit every location and get ready to Ooh and Aah over decorated trees all dressed up in stories. Harry Potter, Ready Player One, Winnie-the-Pooh, and more. <span class="mark-your">Mark your calendar! Nov 19-Jan 7.</span></div>
-        </div>
-        <div class="padding-top-15"><a class="forest forest-read-more" href="forest-of-stories/">Read More</a></div>
-      </div>
-    </div>
-  </div>
-  
-  <!--#####-->
-  <div class="row cdcl">
-    <div class="cdcl-wrapper">
-      <div class="cdcl-item one"><img class="img-responsive" src="mother-child.jpg" alt="Camp DCL Campers"></div>
-      <div class="cdcl-item two"><img style="width: 83px; height: 40px;" src="bling-one.png" alt="">
-        <h2 class="cdcl">Holiday Camps</h2>
-        <div class="cdcl one">Registration is open for our Black Friday and winter break camps.</div>
-        <div class="cdcl two"><a href="camp-dcl/"><i>Sign up for some fun!</i></a></div>
-      </div>
-    </div>
-    
-    <!--#####-->
-    
-    <div class="sbh-item-wrapper">
-      <div class="sbh-item-content">
-        <div class="sbh-item"><img class="large img-responsive" src="storybook-holiday.jpg" alt="Storybook Holiday"><img class="small img-responsive" src="santa-claus.jpg" alt="Storybook Holiday"></div>
-        <div class="sbh-item"><img style="width: 83px; height: 40px;" src="bling-two.png" alt="">
-          <h2 class="sbh">A Dickens Storybook Holiday</h2>
-          <div class="sbh ten">December 3&4, Lone Tree</div>
-          <div class="sbh eleven"><a href="storybook-holiday/">Tickets on Sale</a></div>
-          <div class="sbh twelve">Naughty & Nice Hot Cocoa Bar, Entertainment & Performances, Keepsake Crafts, Carolers, Characters Come-to-Life, Festive Food & Drinks, Candy Bar, and Much More.</div>
+          <div class="snowflake-detail"><img src="snowflake.png" alt=""></div>
+          <div class="content-details">
+            <div class="forest three">7&nbsp;<span class="sevens"></span>, 120+&nbsp;Decorated Trees</div>
+            <div class="forest four">Unlimited Wonder!</div>
+            <div class="forest two">Make DCL your first stop for the holidays. Visit every location and get ready to Ooh and Aah over decorated trees all dressed up in stories. Harry Potter, Ready Player One, Winnie-the-Pooh, and more. <span class="mark-your">Mark your calendar! Nov 19-Jan 7.</span></div>
+            <div class="padding-top-20"><a class="forest forest-read-more" href="forest-of-stories/">Read More</a></div>
+          </div>
         </div>
       </div>
+      <div class="sparkle-row-bottom"><img class="img-responsive sparkle-fall" src="s5.png" alt=""><img class="img-responsive sparkle-rotate" src="s3.png" alt=""><img class="img-responsive sparkle-fall" src="s2.png" alt=""><img class="img-responsive sparkle-fall" src="s4.png" alt=""><img class="img-responsive sparkle-fall" src="s6.png" alt=""><img class="img-responsive sparkle-rotate" src="s1.png" alt=""></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
