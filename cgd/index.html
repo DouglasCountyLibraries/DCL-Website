@@ -135,6 +135,48 @@ h1.impression {
 .food {
 	padding: 0 3px;
 }
+.animated-progress {
+	width: 100%;
+	height: 10px;
+	border-radius: 10px;
+	margin: 10px 0;
+	overflow: hidden;
+	position: relative;
+	background: rgba(141, 198, 63, 0.2);
+}
+.animated-progress span {
+	height: 100%;
+	display: block;
+	width: 0;
+	color: rgb(255, 251, 251);
+	line-height: 30px;
+	position: absolute;
+	text-align: end;
+	padding-right: 5px;
+}
+.progress-blue span {
+	background-color: #8DC63F;
+}
+.custom-progress-bar {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.green {
+	color: #8DC63F;
+}
+.number-raised {
+	text-align: center;
+	font-weight: 400;
+	/* margin: 0; */
+	color: #777;
+	margin-top: 20px;
+}
+.btn-custom {
+	background: #f89728;
+}
+.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
+	background-color: #f88400;
+}
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 .slideshow-item-wrapper {
 	display: flex;
@@ -175,15 +217,15 @@ h1.impression {
 }
 /* slide two */
 #slideshow div {
-	transform-origin: top left;
+	transform-origin: bottom left;
 }
 /* slide three */
 #slideshow div:nth-of-type(2n+1) {
-	transform-origin: top right;
+	transform-origin: bottom right;
 }
 /* slide four */
 #slideshow div:nth-of-type(3n+1) {
-	transform-origin: top left;
+	transform-origin: top center;
 }
 /* slide five */
 #slideshow div:nth-of-type(4n+1) {
@@ -191,7 +233,7 @@ h1.impression {
 }
 /* slide one */
 #slideshow div:nth-of-type(9n+1) {
-	transform-origin: center center;
+	transform-origin: top center;
 }
 #slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
 	z-index: 1
@@ -203,19 +245,19 @@ h1.impression {
 	opacity: 1
 }
 #slideshow div:nth-of-type(1) {
-	background-image: url("early-literacy.jpg")
+	background-image: url("one.jpg")
 }
 #slideshow div:nth-of-type(2) {
-	background-image: url("camp-dcl.jpg")
+	background-image: url("two.jpg")
 }
 #slideshow div:nth-of-type(3) {
-	background-image: url("ged.jpg")
+	background-image: url("three.jpg")
 }
 #slideshow div:nth-of-type(4) {
-	background-image: url("lifelong-learning.jpg")
+	background-image: url("four.jpg")
 }
 #slideshow div:nth-of-type(5) {
-	background-image: url("endowment.jpg")
+	background-image: url("five.jpg")
 }
 /* captions */
 #slideshow span {
@@ -261,14 +303,14 @@ opacity:0;
 }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
 .slideshow-item-wrapper {
 	flex-direction: column;
 }
 #slideshow {
 	position: relative;
 	overflow: hidden;
-	padding-bottom: 65%;
+	padding-bottom: 120%;
 	width: 100%;
 }
 .slideshow-item {
@@ -278,42 +320,6 @@ opacity:0;
 .bottom-intro {
 	padding-top: 0;
 }
-}
-.animated-progress {
-	width: 100%;
-	height: 10px;
-	border-radius: 10px;
-	margin: 10px 0;
-	overflow: hidden;
-	position: relative;
-	background: rgba(141, 198, 63, 0.2);
-}
-.animated-progress span {
-	height: 100%;
-	display: block;
-	width: 0;
-	color: rgb(255, 251, 251);
-	line-height: 30px;
-	position: absolute;
-	text-align: end;
-	padding-right: 5px;
-}
-.progress-blue span {
-	background-color: #8EC742;
-}
-.custom-progress-bar {
-	max-width: 600px;
-	margin: 0 auto;
-}
-.green {
-	color: #8EC742;
-}
-.number-raised {
-	text-align: center;
-	font-weight: 400;
-	/* margin: 0; */
-	color: #777;
-	margin-top: 20px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -514,10 +520,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="slideshow-item">
           <div>
+            <div class="padding-bottom-15"><img src="cgd-logo.jpg" alt="Colorado Gives Day"></div>
             <div class="large-text black">Please join the Douglas County Libraries (DCL) Foundation on Colorado Gives Day, Tuesday, December 6, to help support our community and the future of our libraries.</div>
             <div class="padding-top-15">The DCL Foundation funds programs and services that reach youth, adults and families in Douglas County and across Colorado, and helps ensure the long-term success of our libraries. </div>
           </div>
-          <div class="padding-top-20 padding-bottom-20"><a href="https://www.coloradogives.org/donate/DouglasCountyLibrariesFoundation" class="btn btn-primary btn-lg" target="_blank">Donate Now</a></div>
+          <div class="padding-top-20 padding-bottom-20"><a href="https://www.coloradogives.org/donate/DouglasCountyLibrariesFoundation" class="btn btn-primary btn-custom btn-lg" target="_blank">Donate Now</a> </div>
         </div>
       </div>
       <div class="padding-left-15 padding-right-15">
