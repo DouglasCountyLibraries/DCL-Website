@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?81822">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -278,10 +279,46 @@ opacity:0;
 	padding-top: 0;
 }
 }
+.animated-progress {
+	width: 100%;
+	height: 10px;
+	border-radius: 10px;
+	margin: 10px 0;
+	overflow: hidden;
+	position: relative;
+	background: rgba(141, 198, 63, 0.2);
+}
+.animated-progress span {
+	height: 100%;
+	display: block;
+	width: 0;
+	color: rgb(255, 251, 251);
+	line-height: 30px;
+	position: absolute;
+	text-align: end;
+	padding-right: 5px;
+}
+.progress-blue span {
+	background-color: #8EC742;
+}
+.custom-progress-bar {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.green {
+	color: #8EC742;
+}
+.number-raised {
+	text-align: center;
+	font-weight: 400;
+	/* margin: 0; */
+	color: #777;
+	margin-top: 20px;
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
-<body> 
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -485,6 +522,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="padding-left-15 padding-right-15">
         <div class="bottom-intro text-center margin-lg-200">You don’t have to wait until Colorado Gives Day to give—you may make a donation today! When you do, your gift counts toward our December 6 goal and receives a partial match from the $1 Million+ Incentive Fund. That means your dollars go further in support of your libraries.</div>
+        <div class="custom-progress-bar">
+          <h4 class="number-raised"><span class="green">$7,586</span> raised by <span class="green">61</span> donors</h4>
+          <!--Start Animated Progress Bar-->
+          <div class="animated-progress progress-blue"> <span data-progress="12"></span> </div>
+          
+          <!--End Animated Progress Bar-->
+          <div class="small font-weight-400 text-dark">12% complete</div>
+        </div>
         <div class="text-center padding-top-15 margin-lg-250">
           <div class="large-text">JOIN US in building a legacy of programs and services that inspire a love of reading, discovery and connection.</div>
           <h4 class="black no-margin-bottom text-center"><i>We’re just getting started!</i></h4>
@@ -551,8 +596,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script>
 /* http://cssmojo.com/ken-burns-effect/ */
 function kbSlideshow() { // set .fx1 class on 1st img on page load
@@ -571,8 +615,17 @@ function kbSlideshow() { // set .fx1 class on 1st img on page load
 		}
 	}
 setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script>
-<!-- InstanceEndEditable -->
+</script> 
+<script>$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    2000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});</script> 
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
@@ -581,4 +634,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
