@@ -97,7 +97,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 	font-display: swap;
 }
 .row.forest-row {
-	background: url("branches.jpg") right bottom/cover;
+	background: url("branch-background.jpg") right bottom/cover;
 	padding: 80px 0 225px;
 	color: #fff;
 	text-shadow: 0 4px 9px #000;
@@ -128,7 +128,7 @@ h1.bulgary {
 	margin: 0 auto;
 }
 .row.carousel-row {
-	background: #d7e3d3;
+	background: #deebda;
 }
 .custom-container {
 	max-width: 1200px;
@@ -138,7 +138,7 @@ h1.bulgary {
 	margin-left: 90px;
 }
 .carousel-cell img {
-	box-shadow: 10px 8px 20px -12px #000;
+	box-shadow: 10px 8px 20px -12px rgba(0,0,0,.8);
 	margin: 20px;
 	border-radius: 3px;
 }
@@ -164,8 +164,7 @@ h1.bulgary {
 	color: #efffd6;
 }
 .row.detail-row {
-	background: #d7e3d3;
-	padding: 0 0 80px;
+	background: #deebda;
 }
 .detail-wrapper {
 	font-size: 18px;
@@ -174,6 +173,10 @@ h1.bulgary {
 	margin: 0 auto;
 	padding: 15px 15px 25px;
 	color: #000;
+}
+.row.tree-row {
+	background: #deebda url("pattern-background.jpg") repeat-x;
+	padding: 0 0 50px;
 }
 .tree-wrapper {
 	display: flex;
@@ -195,15 +198,20 @@ h1.bulgary {
 	justify-content: center;
 }
 .tree-location {
-	font-size: 26px;
+	font-size: 24px;
 	text-align: center;
 	padding: 10px 0;
 	text-transform: uppercase;
+	background: #2b3a18;
+	color: #fff;
+	margin-bottom: 30px;
+	font-weight: 400;
 }
 .location-box {
-	justify-content: center;
+	/*justify-content: center;
 	display: flex;
-	background: #0a0e00;
+	background: #0a0e00;*/
+	display: none;
 }
 .location-box img {
 	width: 125px;
@@ -212,7 +220,7 @@ h1.bulgary {
 .tree-item {
 	display: flex;
 	margin: 10px 15px;
-	background: rgba(255,255,255,.4);
+	background: #fff;
 	border-radius: 3px;
 	color: #000;
 	flex-direction: column;
@@ -236,7 +244,7 @@ h1.bulgary {
 
 @media (max-width: 1200px) {
 .row.forest-row {
-	background: url("branches.jpg") 60% bottom/cover;
+	background: url("branch-background.jpg") 60% bottom/cover;
 }
 }
 
@@ -497,9 +505,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row detail-row">
     <div class="text-center detail-wrapper">
-      <div>Enjoy a wonder-filled holiday experience for the whole family! Our Forest of Stories exhibit displays more than 120 decorated trees, all dressed up in stories&mdash;from favorite children’s tales and classic literature, to crime thrillers, mysteries and more. </div>
+      <div class="margin-bottom-30">Enjoy a wonder-filled holiday experience for the whole family! Our Forest of Stories exhibit displays more than 120 decorated trees, all dressed up in stories&mdash;from favorite children’s tales and classic literature, to crime thrillers, mysteries and more. </div>
+      <img class="center-block" src="../storybook-holiday/bling-one.png">
       <h4 class="black no-margin-bottom">Visit all <a href="https://www.google.com/maps/search/Douglas+County+Libraries/@39.4355275,-104.9629699" target="_blank">seven locations</a> and discover the joy of stories.</h4>
     </div>
+  </div>
+  <div class="row tree-row">
     <div class="tree-wrapper">
       <div class="tree-item">
         <div class="location-box"><img src="castle-pines.jpg" alt=""> </div>
