@@ -82,24 +82,34 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-.library-events-active {
+.reserve-a-space-active {
 	background-color: #f5f5f5;
 }
 .check-list {
 	max-width: 30rem;
 	margin: 0 auto;
 }
-.flickity-page-dots .dot {
-	background-color: #fff;
-}
-.flickity-page-dots {
-	bottom: 15px;
-}
-.flickity-prev-next-button {
-	display: none;
+.custom-container {
+	max-width: 1610px;
+	margin: 0 auto;
 }
 .carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
+	margin: 0 5px;
+}
+.flickity-prev-next-button {
+	width: 50px;
+	height: 50px;
+	background: transparent;
+}
+.flickity-prev-next-button:hover {
+	background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+	fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+	color: #efeeed;
 }
 .concierge .fa-check {
 	color: #D36A50;
@@ -283,30 +293,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="dcl-border-top">
   <div class="container-xxl text-center padding-bottom-30">
     <div class="max-width-50">
-      <h1 class="jumbo-text text-uppercase font-weight-400 margin-top-20">A Storybook Holiday</h1>
+      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom margin-top-20">A Storybook Holiday</h1>
       <h4 class="roboto text-center">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature. </h4>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-5">
+  <div class="container-xxl padding-top-50 padding-bottom-20 text-center">
+    <div class="max-width-50">
       <h6>Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</h6>
     </div>
   </div>
 </div>
-<div class="row no-margin">
-  <div class="no-padding">
-    <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
-      <div class="carousel-cell"><img src="one.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="two.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="three.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="four.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="five.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="six.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="seven.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="eight.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="nine.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="ten.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="eleven.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="twelve.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="thirteen.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="fourteen.jpg" alt=""></div>
-      <div class="carousel-cell"><img src="fifteen.jpg" alt=""></div>
+<div class="bg-gray-5">
+  <div class="custom-container no-padding">
+    <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+      <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/eleven.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/twelve.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/thirteen.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/fourteen.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/fifteen.jpg" alt=""></div>
+      <div class="carousel-cell"><img src="carousel/sixteen.jpg" alt=""></div>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-5">
+  <div class="container text-center padding-top-30 padding-bottom-60">
+    <div class="margin-lg-150">
+      <h6 class="no-margin text-center">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</h6>
     </div>
   </div>
 </div>
@@ -319,12 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       Sunday, March 27, Parker<br>
       Tickets on sale soon. </div>
   </div>
-</div>-->
-<div class="bg-teal padding-top-40 padding-bottom-50">
-  <div class="container">
-    <h4 class="white no-margin text-center">Sign up for our <a class="white text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</h4>
-  </div>
-</div>
+</div>--> 
 <!-- InstanceEndEditable -->
 <div class="bg-gray-10">
   <div class="container-xxl">
