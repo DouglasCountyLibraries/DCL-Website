@@ -150,6 +150,23 @@ h1.impression {
 .bottom-intro {
 	padding-top: 30px;
 }
+.modal-content {
+	background: #f6f3ec url("modal-background.jpg") top left no-repeat;
+}
+.modal-body.custom-modal {
+	padding: 30px 60px 100px 255px;
+	text-align: left;
+}
+.modal-header {
+	border-bottom: none;
+}
+body.modal-open .modal {
+	display: flex !important;
+	height: 100%;
+}
+body.modal-open .modal .modal-dialog {
+	margin: auto;
+}
 .photos {
 	display: flex;
 	justify-content: center;
@@ -334,6 +351,24 @@ opacity:0;
 	margin: .5em;
 	font-size: 24px;
 	font-weight: 400;
+}
+}
+
+@media (min-width: 768px) {
+.modal-dialog {
+	width: 94%;
+	max-width: 900px;
+	margin: 30px auto;
+}
+}
+
+@media (max-width: 600px) {
+.modal-content {
+	background: #f6f3ec;
+}
+.modal-body.custom-modal {
+	padding: 0 30px 60px 30px;
+	text-align: center;
 }
 }
 
@@ -592,12 +627,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="slideshow-item">
           <div>
-            <h1 class="impression">Colorado Gives Season Begins With You!</h1>
-            <div class="large-text black">Please support the DCL Foundation with a Colorado Gives Day donation now through December 6. <i>We’re just getting started!</i></div>
+            <h1 class="impression">It’s Colorado Gives Day!</h1>
+            <div class="large-text black">Please support the DCL Foundation by donating today. <i>We're just getting started&mdash;and it begins with you!</i></div>
             <div class="custom-progress-bar">
-              <h4 class="number-raised"><span class="green">$32,682</span> raised by <span class="green">276</span> donors</h4>
+              <h4 class="number-raised"><span class="green">$36,032</span> raised by <span class="green">294</span> donors</h4>
               <!--Start Animated Progress Bar-->
-              <div class="animated-progress progress-blue"> <span data-progress="50"></span> </div>
+              <div class="animated-progress progress-blue"> <span data-progress="55"></span> </div>
               <!--End Animated Progress Bar--> 
             </div>
             <div class="padding-top-40"><a class="intro-read-more" href="https://www.coloradogives.org/organization/DouglasCountyLibrariesFoundation" target="_blank">Read More</a></div>
@@ -608,6 +643,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row botton-border"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="cgd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body custom-modal">
+          <div>
+            <h1 class="impression">It’s Colorado Gives Day!</h1>
+            <div class="large-text black">Please donate to the DCL Foundation today and join us in building a legacy of programs and services to benefit our community for generations to come.<br>
+              <i>It begins with you!</i></div>
+            <div class="padding-top-40"><a class="intro-read-more" href="https://www.coloradogives.org/donate/DouglasCountyLibrariesFoundation" target="_blank">Donate Today!</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -695,6 +749,17 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
   );
   $(this).text($(this).attr("data-progress") + "%");
 });</script> 
+
+<!-- modal popup once per session, expires after 7 days --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('cgdpop') == null) {
+                     $('#cgd').modal('show');
+                     $.cookie('cgdpop', '7');
+                 }
+             });
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
