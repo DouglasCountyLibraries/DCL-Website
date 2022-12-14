@@ -8,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-	opacity: 0 !important
+    opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -85,127 +85,159 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-@font-face {
-	font-family: 'Pop Clink Fill';
-	src: url('shared-assets/web-fonts/subset-PopClink-Fill.woff2') format('woff2'), url('shared-assets/web-fonts/subset-PopClink-Fill.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+/* flickity-fade */
+
+.flickity-enabled.is-fade .flickity-slider > * {
+    pointer-events: none;
+    z-index: 0;
+}
+.flickity-enabled.is-fade .flickity-slider > .is-selected {
+    pointer-events: auto;
+    z-index: 1;
+}
+.flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+    color: #efeeed;
+}
+.tree-details {
+    min-width: 356px;
+    box-shadow: 0 0px 43px 6px rgb(0, 0, 0);
+}
+.carousel-cell img {
+    border: 3px solid #f3d9a7;
+    border-radius: 2px;
 }
 @font-face {
-	font-family: 'Bulgary';
-	src: url('shared-assets/web-fonts/subset-BulgaryRegular.woff2') format('woff2'), url('shared-assets/web-fonts/subset-BulgaryRegular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+    font-family: 'Pop Clink Fill';
+    src: url('shared-assets/web-fonts/subset-PopClink-Fill.woff2') format('woff2'), url('shared-assets/web-fonts/subset-PopClink-Fill.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Bulgary';
+    src: url('shared-assets/web-fonts/subset-BulgaryRegular.woff2') format('woff2'), url('shared-assets/web-fonts/subset-BulgaryRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 h1.pop-clink {
-	font-family: 'Pop Clink Fill', serif;
-	color: #fff;
-	font-weight: normal;
-	font-style: normal;
-	display: inline;
-	font-size: 80px;
-	margin: 0 0;
-	text-shadow: 0 4px 9px #000;
-	line-height: 80px;
+    font-family: 'Pop Clink Fill', serif;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    display: inline;
+    font-size: 80px;
+    margin: 0 0;
+    text-shadow: 0 4px 9px #000;
+    line-height: 80px;
 }
 h1.bulgary {
-	font-family: 'Bulgary', serif;
-	color: #fff;
-	font-weight: normal;
-	font-style: normal;
-	display: inline;
-	font-size: 104px;
-	text-shadow: 0 4px 9px #000;
-	margin: 0 12px 0 5px;
+    font-family: 'Bulgary', serif;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    display: inline;
+    font-size: 104px;
+    text-shadow: 0 4px 9px #000;
+    margin: 0 12px 0 5px;
 }
 .branches-row {
-	background: #1c1c06 url("branch-background.jpg") right bottom/cover;
+    background: #1c1c06 url("branches.jpg") right bottom/cover;
 }
 .forest-wrapper {
-	display: flex;
-	flex-direction: column;
-	max-width: 950px;
-	margin: 0 auto;
-	padding: 0 15px 35px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1085px;
+    margin: 0 auto;
+    padding: 0 15px 35px;
 }
 .social-footer {
-	margin-top: -55px;
+    margin-top: -55px;
 }
 .details {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 30px;
 }
 .content-details {
-	padding-left: 30px;
+    padding-left: 50px;
 }
 .forest {
-	font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-	color: #fff;
-	margin: 0;
-	text-shadow: 0 4px 9px #000;
-	font-weight: 400;
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 4px 9px #000;
+    font-weight: 400;
 }
 h1.forest {
-	text-transform: uppercase;
-	font-size: 70px;
-	font-weight: 700;
-	line-height: 70px;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
 }
 .forest.one {
-	font-size: 22px;
-	font-weight: 600;
-	line-height: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
 }
 .forest.two {
-	font-size: 18px;
-	font-weight: 600;
+    font-size: 18px;
+    font-weight: 600;
 }
 .forest.three {
-	font-size: 36px;
-	font-weight: 700;
-	line-height: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
 }
 .forest.four {
-	font-size: 22px;
-	text-transform: uppercase;
-	font-weight: 700;
-	padding: 8px 0 10px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px 0 10px;
 }
 .mark-your {
-	font-weight: 800;
+    font-weight: 800;
 }
 .forest-read-more {
-	font-weight: 700;
-	font-size: 30px;
-	text-transform: uppercase;
-	border-top: 3px solid #fff;
-	border-bottom: 3px solid #fff;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
 }
 .forest-read-more:active, .forest-read-more:hover, .forest-read-more:focus {
-	color: #f9dd90;
-	text-decoration: none;
+    color: #f9dd90;
+    text-decoration: none;
 }
 .donate {
-	color: #fff;
-	text-decoration: underline;
-	font-weight: 600;
-	position: relative;
-	z-index: 1000;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+    position: relative;
+    z-index: 1000;
 }
 .donate:active, .donate:hover, .donate:focus {
-	color: #f9dd90;
+    color: #f9dd90;
 }
 .sevens:after {
-	content: 'Weeks';
-	animation-name: seven;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
+    content: 'Weeks';
+    animation-name: seven;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 @keyframes seven {
 0% {
@@ -221,7 +253,7 @@ content: "Weeks"
 }
 }
 .snowflake-detail {
-	animation: snowflake 15s linear infinite both;
+    animation: snowflake 15s linear infinite both;
 }
 @keyframes snowflake {
 0% {
@@ -235,35 +267,35 @@ transform: rotateZ(360deg);
 }
 }
 .sparkle-row-top {
-	display: flex;
-	justify-content: space-between;
-	max-width: 90%;
-	margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
 }
 .sparkle-row-bottom {
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 200px;
-	max-width: 90%;
-	margin: -100px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    max-width: 90%;
+    margin: -100px auto 0 auto;
 }
 .sparkle-rotate:nth-of-type(1) {
-	animation: sparkle-rotate 15s .3s linear infinite both;
+    animation: sparkle-rotate 15s .3s linear infinite both;
 }
 .sparkle-rotate:nth-of-type(2) {
-	animation: sparkle-rotate 18s .9s linear infinite both;
+    animation: sparkle-rotate 18s .9s linear infinite both;
 }
 .sparkle-rotate:nth-of-type(3) {
-	animation: sparkle-rotate 10s 1s linear infinite both;
+    animation: sparkle-rotate 10s 1s linear infinite both;
 }
 .sparkle-rotate:nth-of-type(4) {
-	animation: sparkle-rotate 16s .5s linear infinite both;
+    animation: sparkle-rotate 16s .5s linear infinite both;
 }
 .sparkle-rotate:nth-of-type(5) {
-	animation: sparkle-rotate 14s .2s linear infinite both;
+    animation: sparkle-rotate 14s .2s linear infinite both;
 }
 .sparkle-rotate:nth-of-type(6) {
-	animation: sparkle-rotate 18s .1s linear infinite both;
+    animation: sparkle-rotate 18s .1s linear infinite both;
 }
 @keyframes sparkle-rotate {
 0% {
@@ -278,22 +310,22 @@ transform: rotateZ(360deg);
 }
 }
 .sparkle-fall:nth-of-type(1) {
-	animation: sparkle-fall 14s .2s linear infinite both;
+    animation: sparkle-fall 14s .2s linear infinite both;
 }
 .sparkle-fall:nth-of-type(2) {
-	animation: sparkle-fall 20s .9s linear infinite both;
+    animation: sparkle-fall 20s .9s linear infinite both;
 }
 .sparkle-fall:nth-of-type(3) {
-	animation: sparkle-fall 15s .1s linear infinite both;
+    animation: sparkle-fall 15s .1s linear infinite both;
 }
 .sparkle-fall:nth-of-type(4) {
-	animation: sparkle-fall 20s .8s linear infinite both;
+    animation: sparkle-fall 20s .8s linear infinite both;
 }
 .sparkle-fall:nth-of-type(5) {
-	animation: sparkle-fall 15s .3s linear infinite both;
+    animation: sparkle-fall 15s .3s linear infinite both;
 }
 .sparkle-fall:nth-of-type(6) {
-	animation: sparkle-fall 12s 1.5s linear infinite both;
+    animation: sparkle-fall 12s 1.5s linear infinite both;
 }
 @keyframes sparkle-fall {
 0% {
@@ -317,39 +349,48 @@ opacity: 0;
 
 @media (max-width: 1050px) {
 .sparkle-fall:nth-of-type(5), .sparkle-fall:nth-of-type(6), .sparkle-rotate:nth-of-type(1), .sparkle-rotate:nth-of-type(2), .sparkle-rotate:nth-of-type(3), .sparkle-rotate:nth-of-type(4), .sparkle-rotate:nth-of-type(5), .sparkle-rotate:nth-of-type(6) {
-	display: none;
+    display: none;
 }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 875px) {
+.details {
+    flex-direction: column;
+}
 .forest-wrapper {
-	text-align: center;
+    text-align: center;
 }
 .snowflake-detail {
-	display: none;
+    display: none;
 }
 .content-details {
-	padding-left: 0;
+    padding-left: 0;
 }
 h1.pop-clink {
-	line-height: 20px;
+    line-height: 20px;
 }
 .forest.three {
-	padding-top: 20px;
+    padding-top: 20px;
 }
 .sparkle-fall {
-	height: 200px;
+    height: 200px;
+}
+}
+
+@media (max-width: 830px) {
+.tree-details {
+    margin: 40px 0 10px;
 }
 }
 
 @media (max-width: 450px) {
 h1.pop-clink {
-	font-size: 70px;
-	line-height: 80px;
+    font-size: 70px;
+    line-height: 80px;
 }
 h1.bulgary {
-	margin: 0;
-	line-height: 80px;
+    margin: 0;
+    line-height: 80px;
 }
 }
 </style>
@@ -534,9 +575,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h1 class="pop-clink">STORIeS</h1>
         </div>
         <div class="details">
-          <div class="snowflake-detail"><img src="snowflake.png" alt=""></div>
+          <div class="tree-details">
+            <div class="carousel" data-flickity='{ "fade": true, "imagesLoaded": true, "prevNextButtons": false, "pageDots": false, "wrapAround": true, "autoPlay": 3000 }'>
+              <div class="carousel-cell"><img src="sleepy-hollow.jpg" alt="The Legend of Sleepy Hollow"></div>
+              <div class="carousel-cell"><img src="jungle-book.jpg" alt="The Jungle Book"></div>
+              <div class="carousel-cell"><img src="harry-potter.jpg" alt="Harry Potter"></div>
+              <div class="carousel-cell"><img src="where-the-wild-things-are.jpg" alt="Where the Wild Things Are"></div>
+              <div class="carousel-cell"><img src="h.g.wells.jpg" alt="H.G. Wells"></div>
+              <div class="carousel-cell"><img src="bridgerton.jpg" alt="Bridgerton"></div>
+              <div class="carousel-cell"><img src="great-gatsby.jpg" alt="The Great Gatsby"></div>
+            </div>
+          </div>
           <div class="content-details">
-            <div class="forest three">7&nbsp;<span class="sevens"></span>, 120+&nbsp;Decorated Trees</div>
+            <div class="forest three">7&nbsp;Locations, 120+&nbsp;Decorated Trees</div>
             <div class="forest two">Make DCL your first stop for the holidays. Visit every location and get ready to Ooh and Aah over decorated trees all dressed up in stories.</div>
             <div class="padding-top-20 padding-bottom-20"><a class="forest forest-read-more" href="forest-of-stories/">Learn More</a></div>
             <div class="forest two">The DCL Foundation helps fund programs and services that reach youth, adults and families in Douglas County and across Colorado, and helps ensure the long-term success of our outstanding libraries. Please consider <a class="donate" href="https://www.coloradogives.org/organization/DouglasCountyLibrariesFoundation" target="_blank">donating today</a>.</div>
@@ -604,7 +655,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://unpkg.com/flickity@2.2/dist/flickity.pkgd.js"></script> 
+<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
