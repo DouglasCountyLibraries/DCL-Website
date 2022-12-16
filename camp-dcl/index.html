@@ -65,16 +65,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
 <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#007b83">
 <meta name="theme-color" content="#ffffff">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css" integrity="sha256-qQHUQX+gGGYfpC7Zdni08sr+h0ymXr0avmIASucY4FM=" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic|Open+Sans:300,400,600|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="../shared-assets/css/dcl-new.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?81822">
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> 	
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl-new.js"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl-new.js?81822"></script> 
 <!-- Start of Zendesk Widget script --> 
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
@@ -188,13 +188,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceEndEditable -->
 </head>
 <body>
-<!-- pull alert.txt into the general-alert div --> 
-<script>
-$.get("https://s3.amazonaws.com/website.alert/alert.txt")
-  .done(function( data ) {
-    if ( data !=null ){	$("#default-alert").show().append( data );}
-});
-</script> 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -278,16 +271,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <li class="nav-item reserve-a-space-active"><a class="custom-nav-link nav-link" href="../reserve-a-space/">Reserve a Space</a> </li>
         <li class="nav-item dropdown library-events-active"> <a class="custom-nav-link nav-link dropdown-toggle" href="#" id="library-events-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Library Events<span class="material-icons">expand_more</span></a>
           <ul class="dropdown-menu" aria-labelledby="library-events-dropdown">
-            <li><a class="dropdown-item" href="../authors-events/">Authors & Events</a></li>
-            <li><a class="dropdown-item" href="../kids-events/">Kids Events</a></li>
+            <li><a class="dropdown-item" href="../featured-events/">Featured Events</a></li>
+            <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank" class="dropdown-item">Events Calendar</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown research-active"> <a class="custom-nav-link nav-link dropdown-toggle" href="#" id="research-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Research<span class="material-icons">expand_more</span></a>
-          <ul class="dropdown-menu" aria-labelledby="research-dropdown">
-            <li><a class="dropdown-item" href="../research/">Research Databases</a></li>
-            <li><a class="dropdown-item" href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-          </ul>
-        </li>
+        <li class="nav-item research-active"> <a class="custom-nav-link nav-link" href="../research/">Research</a> </li>
       </ul>
     </div>
   </div>
@@ -341,16 +329,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <li class="reserve-a-space-active mobile-nav-heading"><a href="../reserve-a-space/">Reserve a Space</a> </li>
               <li class="mobile-nav-heading"> <a href="#" data-bs-toggle="collapse" data-bs-target="#library-events">Library Events<span class="mobile-nav-icon material-icons">expand_more</span></a>
                 <ul id="library-events" class="mobile-nav-list list-unstyled collapse">
-                  <li><a href="../authors-events/">Authors & Events</a></li>
-                  <li><a href="../kids-events/">Kids Events</a></li>
+                  <li><a href="../featured-events/">Featured Events</a></li>
+                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
                 </ul>
               </li>
-              <li class="mobile-nav-heading"> <a href="#" data-bs-toggle="collapse" data-bs-target="#research">Research<span class="mobile-nav-icon material-icons">expand_more</span></a>
-                <ul id="research" class="mobile-nav-list list-unstyled collapse">
-                  <li><a href="../research/">Research Databases</a></li>
-                  <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-                </ul>
-              </li>
+              <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
             </ul>
           </div>
         </div>
@@ -495,10 +478,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceEndEditable -->
 <div class="bg-gray-10">
-  <div class="container-xxl text-center">
+  <div class="container-xxl">
     <div class="social-footer">
       <div class="social-left">
-        <h5 class="open-sans">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
+        <h5 class="open-sans no-margin-bottom">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
+        <h5 class="open-sans margin-top-5"><a href="../covid-update/">COVID-19&nbsp;Update</a>&nbsp;| <a href="../build/">Castle Rock Library Construction</a></h5>
       </div>
       <div class="social-right">
         <div class="social-links-wrapper"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fab fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fab fa-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fab fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fab fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="https://www.flickr.com/photos/douglascountylibraries/albums" target="_blank"> <i class="fab fa-flickr fa-2x"></i></a> </div>
@@ -529,13 +513,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <ul>
           <li><a href="../newsletters/">eNews Sign-Up</a></li>
           <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-          <li><a href="https://dclblog.org/">DCL Blog</a></li>
         </ul>
       </div>
       <div>
         <h5 class="open-sans">Support</h5>
         <ul>
-          <li><a href="https://www.coloradogives.org/index.php?section=organizations&action=newDonation&fwID=36788" target="_blank">Donate Online</a></li>
+          <li><a href="https://www.coloradogives.org/organization/DouglasCountyLibrariesFoundation" target="_blank">Donate Online</a></li>
           <li><a href="../donate/">Ways to Give</a></li>
           <li><a href="../volunteer/">Volunteer</a></li>
         </ul>
@@ -546,7 +529,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="bg-gray-90">
   <div class="container-xxl">
     <div class="copyright">
-      <div class="copyright-left"><a href="http://hip.douglascountylibraries.org/ipac20/ipac.jsp?profile=" target="_blank">Use the Classic Catalog &raquo;</a></div>
+      <div class="copyright-left"><a href="../website-accessibility/">Website Accessibility</a></div>
       <div class="copyright-right">&copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a></div>
     </div>
   </div>
@@ -562,5 +545,12 @@ for (var i = 0; i < cards.length; i++) {
 }
  </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable -->
+<!-- pull alert.txt into the general-alert div --> 
+<script>
+$.get("https://s3.amazonaws.com/website.alert/alert.txt")
+  .done(function( data ) {
+    if ( data !=null ){	$("#default-alert").show().append( data );}
+});
+</script> 
 </body>
 <!-- InstanceEnd --></html>
