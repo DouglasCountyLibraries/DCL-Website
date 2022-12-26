@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 <!-- Minimize page flickering for Google Optimize -->
 <style>
 .async-hide {
-	opacity: 0 !important
+    opacity: 0 !important
 }
 </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -68,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?122622">
-<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
@@ -81,184 +82,187 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .secondary-alert {
-	background: #d36a50;
-	color: #fff;
-	font-size: 18px;
-	padding: 12px 10px 13px;
-	font-weight: 400;
-	text-align: center;
+    background: #d36a50;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 10px 13px;
+    font-weight: 400;
+    text-align: center;
 }
 .using-the-library-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 .item-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .item-list {
-	padding: 30px;
+    padding: 30px;
 }
 .item-list > h4 {
-	font-size: 20px;
+    font-size: 20px;
 }
 .date-list li {
-	padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 .library-card {
-	transform: rotate(-5deg);
-	box-shadow: -4px 3px 8px 0px rgba(0,0,0,.4);
-	-webkit-backface-visibility: hidden;
+    transform: rotate(-5deg);
+    box-shadow: -4px 3px 8px 0px rgba(0,0,0,.4);
+    -webkit-backface-visibility: hidden;
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 .slideshow-row {
-	background: #f5f5f5;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 1610px;
-	margin: 0 auto;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1610px;
+    margin: 0 auto;
 }
 .slideshow-content {
-	flex: 1 1 36%;
-	padding: 0 30px 20px;
+    flex: 1 1 36%;
+    padding: 0 30px 20px;
 }
 .slideshow-image.main {
-	min-height: 600px;
+    min-height: 600px;
 }
 #slideshow {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 0%;
-	width: 67%;
-	border-right: 15px solid #fff;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0%;
+    width: 67%;
+    border-right: 15px solid #fff;
 } /* (img px height / img px width x 100) = padding-bottom % */
 #slideshow div {
-	position: absolute;
-	z-index: 2;
-	width: 105%;
-	height: 105%;
-	top: -5%;
-	left: -5%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 0;
-	-webkit-transition: opacity 3s, -webkit-transform 8s;
-	transition: opacity 3s, transform 8s;
+    position: absolute;
+    z-index: 2;
+    width: 105%;
+    height: 105%;
+    top: -5%;
+    left: -5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    -webkit-transition: opacity 3s, -webkit-transform 8s;
+    transition: opacity 3s, transform 8s;
 }
 /* slide two */
 #slideshow div {
-	-webkit-transform-origin: bottom left;
-	-ms-transform-origin: bottom left;
-	transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
 }
 /* slide three */
 #slideshow div:nth-of-type(2n+1) {
-	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
-	transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
 }
 /* slide four */
 #slideshow div:nth-of-type(3n+1) {
-	-webkit-transform-origin: bottom center;
-	-ms-transform-origin: bottom center;
-	transform-origin: bottom center;
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
 }
 /* slide five */
 #slideshow div:nth-of-type(4n+1) {
-	-webkit-transform-origin: bottom center;
-	-ms-transform-origin: bottom center;
-	transform-origin: bottom center;
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
 }
 /* slide six */
 #slideshow div:nth-of-type(5n+1) {
-	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
-	transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
 }
 /* slide seven */
 #slideshow div:nth-of-type(6n+1) {
-	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
-	transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
 }
 /* slide eight */
 #slideshow div:nth-of-type(7n+1) {
-	-webkit-transform-origin: bottom center;
-	-ms-transform-origin: bottom center;
-	transform-origin: bottom center;
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
 }
 /* slide nine */
 #slideshow div:nth-of-type(8n+1) {
-	-webkit-transform-origin: bottom right;
-	-ms-transform-origin: bottom right;
-	transform-origin: bottom right;
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
 }
 /* slide one */
 #slideshow div:nth-of-type(9n+1) {
-	-webkit-transform-origin: center center;
-	-ms-transform-origin: center center;
-	transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
 }
 #slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
-	z-index: 1
+    z-index: 1
 }
 #slideshow .fx, #slideshow .fx1 {
-	-webkit-transform: scale(1.1) translate(1.5%);
-	-ms-transform: scale(1.1) translate(1.5%);
-	transform: scale(1.1) translate(1.5%);
-	opacity: 1
+    -webkit-transform: scale(1.1) translate(1.5%);
+    -ms-transform: scale(1.1) translate(1.5%);
+    transform: scale(1.1) translate(1.5%);
+    opacity: 1
 }
 #slideshow div:nth-of-type(1) {
-	background-image: url("butterfly-pavilion.jpg")
+    background-image: url("butterfly-pavilion.jpg")
 }
 #slideshow div:nth-of-type(2) {
-	background-image: url("clifford-still-museum.jpg")
+    background-image: url("clifford-still-museum.jpg")
 }
 #slideshow div:nth-of-type(3) {
-	background-image: url("colorado-railroad-museum.jpg")
+    background-image: url("colorado-railroad-museum.jpg")
 }
 #slideshow div:nth-of-type(4) {
-	background-image: url("denver-firefighters-museum.jpg")
+    background-image: url("denver-firefighters-museum.jpg")
 }
 #slideshow div:nth-of-type(5) {
-	background-image: url("denver-museum-of-nature-and-science.jpg")
+    background-image: url("denver-museum-of-nature-and-science.jpg")
 }
 #slideshow div:nth-of-type(6) {
-	background-image: url("dinosaur-ridge.jpg")
+    background-image: url("dinosaur-ridge.jpg")
 }
 #slideshow div:nth-of-type(7) {
-	background-image: url("history-colorado-center.jpg")
+    background-image: url("history-colorado-center.jpg")
 }
 #slideshow div:nth-of-type(8) {
-	background-image: url("molly-brown-house-museum.jpg")
+    background-image: url("molly-brown-house-museum.jpg")
 }
 #slideshow div:nth-of-type(9) {
-	background-image: url("museum-of-contemporary-art.jpg")
+    background-image: url("museum-of-contemporary-art.jpg")
 }
 #slideshow div:nth-of-type(10) {
-	background-image: url("wings-over-the-rockies.jpg")
+    background-image: url("vehicle-vault.jpg")
+}
+#slideshow div:nth-of-type(11) {
+    background-image: url("wings-over-the-rockies.jpg")
 }
 /* captions */
 #slideshow span {
-	position: absolute;
-	z-index: 2;
-	bottom: 0;
-	right: 0;
-	display: inline-block;
-	padding: 2% 3%;
-	margin: 5%;
-	font-size: 2.5vw;
-	color: transparent
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    padding: 2% 3%;
+    margin: 5%;
+    font-size: 2.5vw;
+    color: transparent
 }
 #slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
-	z-index: 1
+    z-index: 1
 }
 #slideshow .fx + span, #slideshow .fx1 + span {
-	color: #fff;
-	-webkit-animation: caption 5s 1s both;
-	animation: caption 5s 1s both
+    color: #fff;
+    -webkit-animation: caption 5s 1s both;
+    animation: caption 5s 1s both
 }
 @-webkit-keyframes caption {
 0% {
@@ -291,41 +295,41 @@ opacity:0;
 
 @media(min-width:42em) { /* bigger than 672px */
 #slideshow span {
-	padding: 1em 1.5em;
-	margin: 2em;
-	font-size: .9em
+    padding: 1em 1.5em;
+    margin: 2em;
+    font-size: .9em
 }
 }
 
 @media (max-width: 925px) {
 .slideshow-row, .item-wrapper {
-	flex-direction: column;
+    flex-direction: column;
 }
 .slideshow-content {
-	padding: 30px 20px 40px;
-	text-align: center;
+    padding: 30px 20px 40px;
+    text-align: center;
 }
 #slideshow {
-	width: 100%;
-	border-right: 0;
+    width: 100%;
+    border-right: 0;
 }
 .item-wrapper img {
-	padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 .art-item {
-	text-align: center;
+    text-align: center;
 }
 }
 
 @media (max-width: 575px) {
 .slideshow-image.main {
-	min-height: 300px;
+    min-height: 300px;
 }
 }
 </style>
 <!-- InstanceEndEditable -->
 </head>
-<body> 
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
@@ -535,6 +539,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <span>&copy; MCA Denver</span>
       <div></div>
       <!-- #slideshow div:nth-of-type(10) --> 
+      <span>&copy; Vehicle Vault</span>
+      <div></div>
+      <!-- #slideshow div:nth-of-type(11) --> 
       <span>&copy; Wings Over the Rockies Air & Space Museum</span> </div>
     <div class="slideshow-content">
       <h5 class="no-margin-top"><a href="https://goo.gl/maps/VJiUS4pxFem" target="_blank">Butterfly Pavilion</a></h5>
@@ -557,6 +564,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h5><a href="https://goo.gl/maps/DC8LFDAHJLo" target="_blank">History Colorado Center</a></h5>
       <h5><a href="https://goo.gl/maps/nSdLFauthwT2" target="_blank">Molly Brown House Museum</a></h5>
       <h5><a href="https://goo.gl/maps/ZH2Vas4RAYt" target="_blank">Museum of Contemporary Art Denver</a></h5>
+      <h5><a href="https://goo.gl/maps/4FFg6Uxp49wdvs436" target="_blank">Vehicle Vault</a></h5>
       <h5><a href="https://goo.gl/maps/jxLnGpwLNts" target="_blank">Wings Over the Rockies Air &amp; Space Museum</a></h5>
       <div> <a class="text-uppercase btn btn-lg btn-primary margin-top-15" href="https://www.eventkeeper.com/code/events.cfm?curOrg=DCLIBS&curApp=passes" target="_blank">Reserve Now</a></div>
     </div>
@@ -722,7 +730,7 @@ setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 	]
 }
 </script> 
-<!-- InstanceEndEditable -->
+<!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
@@ -731,4 +739,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
