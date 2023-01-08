@@ -84,312 +84,137 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-/* flickity-fade */
-
-.flickity-enabled.is-fade .flickity-slider > * {
-    pointer-events: none;
-    z-index: 0;
-}
-.flickity-enabled.is-fade .flickity-slider > .is-selected {
-    pointer-events: auto;
-    z-index: 1;
-}
-.flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
-}
-.flickity-prev-next-button:hover {
-    background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-    fill: #efeeed;
-}
-.flickity-prev-next-button.no-svg {
-    color: #efeeed;
-}
-.tree-details {
-    min-width: 356px;
-    box-shadow: 0 0px 43px 6px rgb(0, 0, 0);
-}
-.carousel-cell img {
-    border: 3px solid #f3d9a7;
-    border-radius: 2px;
-}
 @font-face {
-    font-family: 'Pop Clink Fill';
-    src: url('shared-assets/web-fonts/subset-PopClink-Fill.woff2') format('woff2'), url('shared-assets/web-fonts/subset-PopClink-Fill.woff') format('woff');
+    font-family: 'LittleLove';
+    src: url('shared-assets/web-fonts/ALittleofLove-Regular.woff2') format('woff2'), url('shared-assets/web-fonts/ALittleofLove-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'Bulgary';
-    src: url('shared-assets/web-fonts/subset-BulgaryRegular.woff2') format('woff2'), url('shared-assets/web-fonts/subset-BulgaryRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.background-row {
+    background: #efeeed url("row-background.jpg") center top repeat-x;
 }
-h1.pop-clink {
-    font-family: 'Pop Clink Fill', serif;
-    color: #fff;
-    font-weight: normal;
-    font-style: normal;
-    display: inline;
-    font-size: 80px;
-    margin: 0 0;
-    text-shadow: 0 4px 9px #000;
-    line-height: 80px;
-}
-h1.bulgary {
-    font-family: 'Bulgary', serif;
-    color: #fff;
-    font-weight: normal;
-    font-style: normal;
-    display: inline;
-    font-size: 104px;
-    text-shadow: 0 4px 9px #000;
-    margin: 0 12px 0 5px;
-}
-.branches-row {
-    background: #1c1c06 url("branches.jpg") right bottom/cover;
-}
-.forest-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 1085px;
-    margin: 0 auto;
-    padding: 0 15px 35px;
-}
-.social-footer {
-    margin-top: -55px;
-}
-.details {
-    display: flex;
-    align-items: center;
-    padding: 10px 0 30px;
-}
-.content-details {
-    padding-left: 50px;
-}
-.forest {
-    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-    color: #fff;
-    margin: 0;
-    text-shadow: 0 4px 9px #000;
-    font-weight: 400;
-}
-h1.forest {
-    text-transform: uppercase;
-    font-size: 70px;
-    font-weight: 700;
-    line-height: 70px;
-}
-.forest.one {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 20px;
-}
-.forest.two {
-    font-size: 18px;
-    font-weight: 600;
-}
-.forest.three {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 40px;
-}
-.forest.four {
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 8px 0 10px;
-}
-.mark-your {
-    font-weight: 800;
-}
-.forest-read-more {
-    font-weight: 700;
-    font-size: 30px;
-    text-transform: uppercase;
-    border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-}
-.forest-read-more:active, .forest-read-more:hover, .forest-read-more:focus {
-    color: #f9dd90;
-    text-decoration: none;
-}
-.donate {
-    color: #fff;
-    text-decoration: underline;
-    font-weight: 600;
-    position: relative;
-    z-index: 1000;
-}
-.donate:active, .donate:hover, .donate:focus {
-    color: #f9dd90;
-}
-.sevens:after {
-    content: 'Weeks';
-    animation-name: seven;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-@keyframes seven {
-0% {
-opacity:1;
-}
-50% {
-opacity:1;
-content: "Locations"
-}
-100% {
-opacity:1;
-content: "Weeks"
-}
-}
-.snowflake-detail {
-    animation: snowflake 15s linear infinite both;
-}
-@keyframes snowflake {
-0% {
-transform: rotateZ(0);
-}
-50% {
-transform: rotateZ(180deg);
-}
-100% {
-transform: rotateZ(360deg);
-}
-}
-.sparkle-row-top {
-    display: flex;
-    justify-content: space-between;
-    max-width: 90%;
+.theme {
+    max-width: 2000px;
     margin: 0 auto;
 }
-.sparkle-row-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 200px;
-    max-width: 90%;
-    margin: -100px auto 0 auto;
-}
-.sparkle-rotate:nth-of-type(1) {
-    animation: sparkle-rotate 15s .3s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(2) {
-    animation: sparkle-rotate 18s .9s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(3) {
-    animation: sparkle-rotate 10s 1s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(4) {
-    animation: sparkle-rotate 16s .5s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(5) {
-    animation: sparkle-rotate 14s .2s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(6) {
-    animation: sparkle-rotate 18s .1s linear infinite both;
-}
-@keyframes sparkle-rotate {
-0% {
-transform: rotateZ(0);
-}
-50% {
-opacity: 0;
-transform: rotateZ(180deg);
-}
-100% {
-transform: rotateZ(360deg);
-}
-}
-.sparkle-fall:nth-of-type(1) {
-    animation: sparkle-fall 14s .2s linear infinite both;
-}
-.sparkle-fall:nth-of-type(2) {
-    animation: sparkle-fall 20s .9s linear infinite both;
-}
-.sparkle-fall:nth-of-type(3) {
-    animation: sparkle-fall 15s .1s linear infinite both;
-}
-.sparkle-fall:nth-of-type(4) {
-    animation: sparkle-fall 20s .8s linear infinite both;
-}
-.sparkle-fall:nth-of-type(5) {
-    animation: sparkle-fall 15s .3s linear infinite both;
-}
-.sparkle-fall:nth-of-type(6) {
-    animation: sparkle-fall 12s 1.5s linear infinite both;
-}
-@keyframes sparkle-fall {
-0% {
-transform: translateY(0%);
-opacity: 0;
-}
-25% {
-opacity: 1;
-}
-50% {
-opacity: 0;
-}
-75% {
-opacity: 1;
-}
-100% {
-transform: translateY(100%);
-opacity: 0;
-}
-}
-
-@media (max-width: 1050px) {
-.sparkle-fall:nth-of-type(5), .sparkle-fall:nth-of-type(6), .sparkle-rotate:nth-of-type(1), .sparkle-rotate:nth-of-type(2), .sparkle-rotate:nth-of-type(3), .sparkle-rotate:nth-of-type(4), .sparkle-rotate:nth-of-type(5), .sparkle-rotate:nth-of-type(6) {
-    display: none;
-}
-}
-
-@media (max-width: 875px) {
-.details {
-    flex-direction: column;
-}
-.forest-wrapper {
+h1.littlelove {
+    font-family: 'LittleLove', sans-serif;
+    font-size: 180px;
+    color: #9C000E;
     text-align: center;
-}
-.snowflake-detail {
-    display: none;
-}
-.content-details {
-    padding-left: 0;
-}
-h1.pop-clink {
-    line-height: 20px;
-}
-.forest.three {
-    padding-top: 20px;
-}
-.sparkle-fall {
-    height: 200px;
-}
-}
-
-@media (max-width: 830px) {
-.tree-details {
-    margin: 40px 0 10px;
-}
-}
-
-@media (max-width: 450px) {
-h1.pop-clink {
-    font-size: 70px;
-    line-height: 80px;
-}
-h1.bulgary {
+    line-height: 60px;
+    padding-bottom: 75px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
     margin: 0;
-    line-height: 80px;
+}
+.custom-container {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    min-height: 908px;
+    align-items: center;
+    line-height: 34px;
+    color: #9C000E;
+}
+.intro {
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    padding: 0 30px 60px;
+    position: relative;
+    z-index: 100;
+}
+.intro-wrapper {
+    position: relative;
+    z-index: 100;
+    border-style: solid;
+    border-width: 25px;
+    border-image: url("paper-background.png") 30 round;
+    transform: rotate(-6deg);
+}
+.intro-content {
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    padding: 0px 15px 50px;
+    background-color: rgba(240, 229, 223);
+    margin: -2px;
+}
+.intro a {
+    color: #624475;
+    text-decoration: none;
+    border-bottom: 3px dotted #be84e4;
+}
+.intro a:hover, .intro a:focus {
+    text-decoration: none;
+    color: #3a2845;
+    border-bottom: 3px dotted #3a2845;
+}
+.row-wrapper-one {
+    background: #fff url("party-favors.jpg") right center/cover;
+    min-height: 900px;
+}
+.row-wrapper-two {
+    background: #fff url("cupcakes.jpg") center bottom/cover;
+    min-height: 900px;
+}
+.row-wrapper-three {
+    background: #fff url("table-setting.jpg") center bottom/cover;
+    min-height: 900px;
+}
+.row-wrapper-four {
+    background: #fff url("birthday-cake.jpg") right bottom/cover;
+    min-height: 900px;
+}
+.ballons {
+    min-height: 900px;
+    background: transparent url("balloons.png") center center repeat;
+    animation: fall 15s linear infinite;
+}
+.confetti-one {
+    min-height: 900px;
+    background: transparent url("confetti-one.png") center center repeat;
+    animation: fall 4s linear infinite;
+}
+.confetti-two {
+    min-height: 900px;
+    background: transparent url("confetti-two.png") center center repeat;
+    animation: fall 5s linear infinite;
+}
+.confetti-three {
+    min-height: 900px;
+    background: transparent url("confetti-three.png") center center repeat;
+    animation: fall 6s linear infinite;
+}
+@keyframes fall {
+from {
+background-position: 0 -900px;
+}
+to {
+background-position: 0 0;
+}
+}
+
+@media (min-width: 2000px) {
+.social-footer {
+    margin-top: -50px;
+}
+.row-wrapper-one, .row-wrapper-two, .row-wrapper-three, .row-wrapper-four {
+    box-shadow: 0px 30px 60px -40px;
+    margin-bottom: 65px;
+}
+}
+
+@media (max-width: 425px) {
+h1.littlelove {
+    font-size: 140px;
+    line-height: 50px;
+    padding-bottom: 45px;
+}
+.intro-wrapper {
+    transform: rotate(-3deg);
 }
 }
 </style>
@@ -563,42 +388,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row no-gutter">
-    <div class="branches-row">
-      <div class="sparkle-row-top"><img class="img-responsive sparkle-rotate" src="s1.png" alt=""><img class="img-responsive sparkle-fall" src="s2.png" alt=""><img class="img-responsive sparkle-fall" src="s5.png" alt=""><img class="img-responsive sparkle-rotate" src="s4.png" alt=""><img class="img-responsive sparkle-fall" src="s6.png" alt=""><img class="img-responsive sparkle-fall" src="s3.png" alt=""></div>
-      <div class="forest-wrapper">
-        <div class="forest one"><i>Celebrate the Season!</i></div>
-        <div class="heading-wrapper">
-          <h1 class="pop-clink">FOrEST</h1>
-          <h1 class="bulgary">of</h1>
-          <h1 class="pop-clink">STORIeS</h1>
-        </div>
-        <div class="details">
-          <div class="tree-details">
-            <div class="carousel" data-flickity='{ "fade": true, "imagesLoaded": true, "prevNextButtons": false, "pageDots": false, "wrapAround": true, "autoPlay": 3000 }'>
-              <div class="carousel-cell"><img src="sleepy-hollow.jpg" alt="The Legend of Sleepy Hollow"></div>
-              <div class="carousel-cell"><img src="jungle-book.jpg" alt="The Jungle Book"></div>
-              <div class="carousel-cell"><img src="harry-potter.jpg" alt="Harry Potter"></div>
-              <div class="carousel-cell"><img src="where-the-wild-things-are.jpg" alt="Where the Wild Things Are"></div>
-              <div class="carousel-cell"><img src="h.g.wells.jpg" alt="H.G. Wells"></div>
-              <div class="carousel-cell"><img src="bridgerton.jpg" alt="Bridgerton"></div>
-              <div class="carousel-cell"><img src="great-gatsby.jpg" alt="The Great Gatsby"></div>
-              <div class="carousel-cell"><img src="alice-in-wonderland.jpg" alt="Alice in Wonderland"></div>
-              <div class="carousel-cell"><img src="chronicles-of-narnia.jpg" alt="The Chronicles of Narnia"></div>
-              <div class="carousel-cell"><img src="despicable-me.jpg" alt="Despicable Me"></div>
-              <div class="carousel-cell"><img src="secret-garden.jpg" alt="The Secret Garden"></div>
-              <div class="carousel-cell"><img src="wheres-waldo.jpg" alt="Where's Waldo?"></div>
-              <div class="carousel-cell"><img src="winnie-the-pooh.jpg" alt="Winnie the Pooh"></div>
+  <div class="row background-row">
+    <div class="theme">
+      <div class="row-wrapper-one">
+        <div class="ballons">
+          <div class="confetti-one">
+            <div class="confetti-two">
+              <div class="confetti-three">
+                <div class="custom-container">
+                  <div class="intro">
+                    <div class="intro-wrapper">
+                      <div class="intro-content">
+                        <h1 class="littlelove">Let’s Celebrate!</h1>
+                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="content-details">
-            <div class="forest three">7&nbsp;Locations, 120+&nbsp;Decorated Trees</div>
-            <div class="forest two">Make DCL your first stop for the holidays. Visit every location and get ready to Ooh and Aah over decorated trees all dressed up in stories.</div>
-            <div class="padding-top-20 padding-bottom-20"><a class="forest forest-read-more" href="forest-of-stories/">Learn More</a></div>
           </div>
         </div>
       </div>
-      <div class="sparkle-row-bottom"><img class="img-responsive sparkle-fall" src="s5.png" alt=""><img class="img-responsive sparkle-rotate" src="s3.png" alt=""><img class="img-responsive sparkle-fall" src="s2.png" alt=""><img class="img-responsive sparkle-fall" src="s4.png" alt=""><img class="img-responsive sparkle-fall" src="s6.png" alt=""><img class="img-responsive sparkle-rotate" src="s1.png" alt=""></div>
+    </div>
+    <div class="theme">
+      <div class="row-wrapper-two">
+        <div class="ballons">
+          <div class="confetti-one">
+            <div class="confetti-two">
+              <div class="confetti-three">
+                <div class="custom-container">
+                  <div class="intro">
+                    <div class="intro-wrapper">
+                      <div class="intro-content">
+                        <h1 class="littlelove">Let’s Celebrate!</h1>
+                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="theme">
+      <div class="row-wrapper-three">
+        <div class="ballons">
+          <div class="confetti-one">
+            <div class="confetti-two">
+              <div class="confetti-three">
+                <div class="custom-container">
+                  <div class="intro">
+                    <div class="intro-wrapper">
+                      <div class="intro-content">
+                        <h1 class="littlelove">Let’s Celebrate!</h1>
+                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="theme">
+      <div class="row-wrapper-four">
+        <div class="ballons">
+          <div class="confetti-one">
+            <div class="confetti-two">
+              <div class="confetti-three">
+                <div class="custom-container">
+                  <div class="intro">
+                    <div class="intro-wrapper">
+                      <div class="intro-content">
+                        <h1 class="littlelove">Let’s Celebrate!</h1>
+                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -660,16 +533,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://unpkg.com/flickity@2.2/dist/flickity.pkgd.js"></script> 
-<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script> 
 <script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
+var random = Math.floor(Math.random() * $('.theme').length);
+$('.theme').hide().eq(random).show();
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
