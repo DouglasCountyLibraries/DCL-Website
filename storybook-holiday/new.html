@@ -92,8 +92,13 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .reserve-a-space-active {
     background-color: #f5f5f5;
 }
-.background-row {
+.pooh-row {
     background: #eee url("blue-background.jpg") bottom left no-repeat;
+    max-width: 2400px;
+    margin: 0 auto;
+}
+.background-row {
+    background: #efeeed url("../row-background.jpg") center top repeat-x;
 }
 .strawberry {
     font-family: "Strawberry", sans-serif;
@@ -149,6 +154,37 @@ background-position: -1200px 0;
 }
 to {
 background-position: 0 0;
+}
+}
+/* ############################################ */
+.float {
+    position: fixed;
+    width: 233px;
+    height: 203px;
+    animation: float 10s cubic-bezier(0, 0, 0, 0) 2s both;
+}
+@keyframes float {
+0% {
+transform: translateX(-250px);
+opacity: 0;
+}
+1% {
+transform: translateX(-250px);
+opacity: 1;
+}
+99% {
+transform: translateX(100vw);
+opacity: 1;
+}
+100% {
+transform: translateX(100vw);
+opacity: 0;
+}
+}
+
+@media (max-width: 992px) {
+.float {
+    animation: float 15s cubic-bezier(0, 0, 0, 0) 2s both;
 }
 }
 </style>
@@ -323,19 +359,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="leaves-one">
-      <div class="leaves-two">
-        <div class="custom-container">
-          <div class="info-wrapper">
-            <h1 class="times-font">Silly Old Bear's</h1>
-            <h1 class="strawberry">Blustery Day</h1>
-            <h4 class="strawberry">A Storybook Holiday</h4>
-            <h4 class="times-font black text-uppercase padding-top-15">Sunday, March 26, 8-11AM, Highlands Ranch</h4>
-            <h5 class="black text-uppercase font-weight-400 margin-bottom-5">Tickets: $20 Adults, $15 Ages 3-13</h5>
-            <div><i>Ages 0-2 free with paying adult</i></div>
-            <div class="padding-top-15">Celebrate spring with Winnie the Pooh and friends! Kids can enjoy a Pooh-themed puppet show, crafts, and activities, and hunt for Kanga, Roo, and Piglet in the Hundred Acre Wood. Costumes are encouraged! A delicious catered brunch will also be served.</div>
-            <div class="padding-top-20 margin-bottom-20"><a href="https://www.eventbrite.com/e/a-storybook-holiday-silly-old-bears-blustery-day-tickets-515064520847" target="_blank" class="btn btn-lg btn-primary custom">Buy Tickets</a></div>
-            <!--<div class="max-width-30"><i>Adults ages 21+ may enjoy a selection of mimosas with the purchase of an alcohol wristband for an additional $12. </i></div>--> 
+    <div class="pooh-row">
+      <div class="float"><img src="balloon.png" alt=""></div>
+      <div class="leaves-one">
+        <div class="leaves-two">
+          <div class="custom-container">
+            <div class="info-wrapper">
+              <h1 class="times-font">Silly Old Bear's</h1>
+              <h1 class="strawberry">Blustery Day</h1>
+              <h4 class="strawberry">A Storybook Holiday</h4>
+              <h4 class="times-font black text-uppercase padding-top-15">Sunday, March 26, 8-11AM, Highlands Ranch</h4>
+              <h5 class="black text-uppercase font-weight-400 margin-bottom-5">Tickets: $20 Adults, $15 Ages 3-13</h5>
+              <div><i>Ages 0-2 free with paying adult</i></div>
+              <div class="padding-top-15">Celebrate spring with Winnie the Pooh and friends! Kids can enjoy a Pooh-themed puppet show, crafts, and activities, and hunt for Kanga, Roo, and Piglet in the Hundred Acre Wood. Costumes are encouraged! A delicious catered brunch will also be served.</div>
+              <div class="padding-top-20 margin-bottom-20"><a href="https://www.eventbrite.com/e/a-storybook-holiday-silly-old-bears-blustery-day-tickets-515064520847" target="_blank" class="btn btn-lg btn-primary custom">Buy Tickets</a></div>
+              <!--<div class="max-width-30"><i>Adults ages 21+ may enjoy a selection of mimosas with the purchase of an alcohol wristband for an additional $12. </i></div>--> 
+            </div>
           </div>
         </div>
       </div>
