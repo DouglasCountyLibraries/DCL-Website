@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,7 +94,9 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     font-display: swap;
 }
 .background-row {
-    background: #efeeed url("row-background.jpg") center top repeat-x;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
 }
 .theme {
     max-width: 2000px;
@@ -194,16 +197,6 @@ background-position: 0 -900px;
 }
 to {
 background-position: 0 0;
-}
-}
-
-@media (min-width: 2000px) {
-.social-footer {
-    margin-top: -50px;
-}
-.row-wrapper-one, .row-wrapper-two, .row-wrapper-three, .row-wrapper-four {
-    box-shadow: 0px 30px 60px -40px;
-    margin-bottom: 65px;
 }
 }
 
@@ -584,4 +577,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
