@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,20 +81,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-@font-face {
-    font-family: 'Honey';
-    src: url('../shared-assets/web-fonts/HoneyButterScript.woff2') format('woff2'), url('../shared-assets/web-fonts/HoneyButterScript.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-h4.honey {
-    font-family: 'Honey', serif;
-    font-size: 70px;
-    line-height: .9em;
-    color: #666;
-    margin: 15px 0 -10px;
-}
 .white-top-row {
     background: #ffffff;
     background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
@@ -127,7 +114,28 @@ h4.honey {
     margin: 0 auto;
     width: 146px;
 }
-.box-wrapper, .item-wrapper {
+.gray-circle-alt {
+    border: 6px solid #e6e4e2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #4f878c;
+    background-color: #fff;
+    font-size: 42px;
+    height: 100px;
+    line-height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+}
+.gray-circle-wrapper-alt {
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 112px;
+    margin: 0 auto;
+    width: 112px;
+}
+.item-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -142,8 +150,41 @@ h4.honey {
     margin: 15px;
     min-width: 400px;
 }
+.candid {
+    max-width: 175px;
+    margin: 30px auto;
+}
+.candid img {
+    transition: all .4s ease-out;
+}
+.candid img:hover, .candid img:focus {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 8px 0;
+    transition: all .4s ease-out;
+}
 .gala-item {
     padding: 15px;
+}
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.box-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px 15px;
+    background: #fff;
+    border-radius: 3px;
+    max-width: 575px;
+    min-width: 425px;
+}
+.box-item-inner {
+    padding: 0px 30px 75px;
 }
 .custom-icon {
     top: -8px;
@@ -174,6 +215,12 @@ h4.honey {
     flex-direction: column;
     min-width: 100%;
     margin: 15px 5px;
+}
+}
+
+@media (max-width: 915px) {
+.box-wrapper {
+    max-width: 600px;
 }
 }
 </style>
@@ -413,37 +460,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	var images = ['station-one.jpg', 'station-two.jpg', 'station-three.jpg', 'station-four.jpg', 'station-five.jpg', 'station-six.jpg'];
     $('<img alt="Exploration Stations" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');
 </script>
-  <div id="support" class="row white-bottom-row">
-    <div class="white-circle-wrapper">
-      <div class="gray-circle"><i style="position:relative;top:2px;" class="fas fa-hands-helping"></i></div>
-    </div>
-  </div>
-  <div class="row padding-bottom-50">
-    <div class="container text-center margin-lg-150">
-      <h2 class="margin-top-10 margin-bottom-5">We Can Help</h2>
-      <h4 class="no-margin-top margin-lg-100">The Foundation supports other agencies and organizations in our community and across Colorado.</h4>
-      <div>We recognize that strong communities happen when agencies and organizations help each other achieve their missions. We can provide support to your organization’s programs with financial funding, in-kind sponsorships, or communication and promotional assistance. Tell us of your need and we will reply in 2-4 weeks.</div>
-      <div class="padding-top-20 padding-bottom-20"> <a href="support-request/" target="_blank" class="btn btn-lg text-uppercase btn-primary" type="button">Get Started</a></div>
-      <div class="margin-lg-200">Please be aware that the application and approval process may take up to 8 weeks. Schedule your program accordingly.</div>
-    </div>
-  </div>
-  <div id="endowment" class="row white-top-row">
+  <div id="endowment" class="row white-bottom-row">
     <div class="white-circle-wrapper">
       <div class="gray-circle"><i style="position:relative;left:2px;bottom:2px;" class="fa-solid fa-umbrella"></i></div>
     </div>
   </div>
-  <div class="row bg-gray-5">
+  <div class="row">
     <div class="container text-center margin-lg-150">
       <h2 class="margin-top-10 margin-bottom-5">Foundation Endowment</h2>
-      <h4 class="no-margin-top margin-lg-100">Funding the Future: Giving Now for Generations to Come</h4>
+      <h4 class="roboto no-margin-top margin-lg-100">Funding the Future: Giving Now for Generations to Come</h4>
       <div>Our <a href="#" type="button" data-toggle="modal" data-target="#endowment-modal">endowment fund</a>, managed by the Rose Community Foundation, strengthens the library’s ability to support and serve our community well into the future. Your legacy gift <a href="#" type="button" data-toggle="modal" data-target="#endowment-modal">to the Douglas County Libraries Foundation Fund</a> is tax-deductible.</div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-bottom-60">
+  <div class="row padding-bottom-60">
     <div class="container text-center">
       <h5 class="padding-top-15 no-margin">Questions about the Foundation or Endowment?</h5>
       <div class="padding-top-20 padding-bottom-20"><a href="#" type="button" class="btn btn-lg text-uppercase btn-primary" data-toggle="modal" data-target="#contact-modal">Contact Us</a></div>
       <div>or call <a href="tel:+13037643311" class="text-nowrap">(303) 764-3311</a></div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-40 padding-bottom-80">
+    <div class="box-wrapper">
+      <div id="support" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper-alt">
+            <div class="gray-circle-alt"><i class="fa-solid fa-hands-helping"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10">We Can Help</h3>
+          <div class="margin-bottom-10">The Foundation supports other agencies and organizations in our community and across Colorado.</div>
+          <div>We recognize that strong communities happen when agencies and organizations help each other achieve their missions. We can provide support to your organization’s programs with financial funding, in-kind sponsorships, or communication and promotional assistance. Tell us of your need and we will reply in 2-4 weeks.</div>
+          <div class="text-center padding-top-20 padding-bottom-20"> <a href="support-request/" target="_blank" class="btn btn-lg text-uppercase btn-primary" type="button">Get Started</a></div>
+          <div>Please be aware that the application and approval process may take up to 8 weeks. Schedule your program accordingly.</div>
+        </div>
+      </div>
+      <div id="candid" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper-alt">
+            <div class="gray-circle-alt"><i class="fa-solid fa-file-certificate"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10">Candid Seal of Transparency</h3>
+          <div class="candid"><a href="https://www.guidestar.org/profile/shared/1c1e93a9-5a17-4ac1-984e-b05142bcaaca" target="_blank"><img src="https://widgets.guidestar.org/TransparencySeal/8254241" /></a></div>
+          <div>Douglas County Libraries Foundation earned Candid’s Gold Transparency designation for making information on our nonprofit <a href="https://www.guidestar.org/profile/shared/1c1e93a9-5a17-4ac1-984e-b05142bcaaca" target="_blank">readily available to supporters</a>. </div>
+        </div>
+      </div>
     </div>
   </div>
   
@@ -586,4 +649,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
