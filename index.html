@@ -87,31 +87,36 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <style>
 @font-face {
-    font-family: 'LittleLove';
-    src: url('shared-assets/web-fonts/ALittleofLove-Regular.woff2') format('woff2'), url('shared-assets/web-fonts/ALittleofLove-Regular.woff') format('woff');
+    font-family: 'WildHeart';
+    src: url('shared-assets/web-fonts/WildHeart.woff2') format('woff2'), url('shared-assets/web-fonts/WildHeart.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 .background-row {
-    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
-    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 25%, #ffe7eb 65%, #ffe7eb 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 25%, #ffe7eb 65%, #ffe7eb 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #ffe7eb 65%, #ffe7eb 100%);
 }
 .theme {
-    max-width: 2000px;
+    max-width: 1920px;
     margin: 0 auto;
 }
-h1.littlelove {
-    font-family: 'LittleLove', sans-serif;
-    font-size: 180px;
-    color: #9C000E;
+h1.wildheart {
+    font-family: 'WildHeart';
+    font-size: 120px;
+    line-height: 80px;
+    color: #a2273d;
     text-align: center;
-    line-height: 60px;
-    padding-bottom: 75px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin: 0;
+}
+.extended-font {
+    font-size: 145px;
+    line-height: 65px;
+    padding-bottom: 30px;
+}
+.short-font {
+    font-size: 160px;
+    margin: 30px 0;
 }
 .custom-container {
     max-width: 700px;
@@ -120,75 +125,180 @@ h1.littlelove {
     font-weight: 400;
     text-align: center;
     display: flex;
-    min-height: 908px;
+    min-height: 1000px;
     align-items: center;
     line-height: 34px;
-    color: #9C000E;
+    color: #000;
 }
 .intro {
     font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-    padding: 0 30px 60px;
+    padding: 25px 15px 60px;
     position: relative;
     z-index: 100;
-}
-.intro-wrapper {
-    position: relative;
-    z-index: 100;
-    border-style: solid;
-    border-width: 25px;
-    border-image: url("paper-background.png") 30 round;
-    transform: rotate(-6deg);
-}
-.intro-content {
-    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-    padding: 0px 15px 50px;
-    background-color: rgba(240, 229, 223);
-    margin: -2px;
+    background: rgba(255,255,255,.8);
+    border-radius: 3px;
+    margin: 0 10px 115px 10px;
 }
 .intro a {
-    color: #624475;
+    color: #000;
     text-decoration: none;
-    border-bottom: 3px dotted #be84e4;
+    border-bottom: 3px dotted #bbb;
 }
 .intro a:hover, .intro a:focus {
     text-decoration: none;
-    color: #3a2845;
-    border-bottom: 3px dotted #3a2845;
+    color: #000;
+    border-bottom: 3px dotted #000;
+}
+.row.events-row {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #f4ecd9;
+    display: flex;
+    justify-content: flex-end;
+    background: #2e2424;
+}
+.row.wave-row {
+    background: transparent url("wave.png") center center no-repeat;
+    height: 135px;
+    margin-top: -135px;
+}
+.row.events-info {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    background: #ffe7eb;
+    padding: 0px 15px 170px;
+}
+.info-wrapper {
+    max-width: 725px;
+    color: #000;
+    margin: -15px auto 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+.info-wrapper h1 {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    /* padding-bottom: 20px; */
+    font-size: 46px;
+    font-weight: 400;
+    color: #a2273d;
+    /* text-shadow: 0 10px 20px rgba(0, 0, 0, .4); */
+    line-height: 60px;
+}
+.info-wrapper h3 {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    line-height: inherit;
+}
+.box-item-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 13px 0 0px;
+    margin-top: -170px;
+    align-content: center;
+}
+.box-item {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin: 15px;
+    background: #fff;
+    padding: 40px 40px 50px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: inherit;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    min-width: 315px;
+    flex: 1;
+}
+.box-item img {
+    padding-bottom: 20px;
+}
+.row.box-row {
+    padding: 0 15px 90px;
+    background: #ffd1d9;
+}
+.box-content h4 {
+    margin: 0 0 5px;
+    color: #a2273d;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.box-content a {
+    font-size: 20px;
 }
 .row-wrapper-one {
-    background: #fff url("party-favors.jpg") right center/cover;
-    min-height: 900px;
+    background: #fff url("wedding-rings.jpg") center top fixed;
+    border: 4px solid #ffd1d9;
+    border-bottom: 0;
+    border-radius: 3px;
 }
 .row-wrapper-two {
-    background: #fff url("cupcakes.jpg") center bottom/cover;
-    min-height: 900px;
+    background: #fff url("flowers.jpg") center top fixed;
+    border: 4px solid #ffd1d9;
+    border-bottom: 0;
+    border-radius: 3px;
 }
 .row-wrapper-three {
-    background: #fff url("table-setting.jpg") center bottom/cover;
-    min-height: 900px;
+    background: #fff url("bride-flowers.jpg") center top fixed;
+    border: 4px solid #ffd1d9;
+    border-bottom: 0;
+    border-radius: 3px;
 }
 .row-wrapper-four {
-    background: #fff url("birthday-cake.jpg") right bottom/cover;
-    min-height: 900px;
+    background: #fff url("cake.jpg") center top fixed;
+    border: 4px solid #ffd1d9;
+    border-bottom: 0;
+    border-radius: 3px;
 }
-.ballons {
+.gold-bling-one {
     min-height: 900px;
-    background: transparent url("balloons.png") center center repeat;
-    animation: fall 15s linear infinite;
+    background: transparent url("gold-bling-one.png") center center repeat;
+    animation: fall 85s linear infinite;
 }
-.confetti-one {
+.gold-bling-two {
     min-height: 900px;
-    background: transparent url("confetti-one.png") center center repeat;
+    background: transparent url("gold-bling-two.png") center center repeat;
+    animation: fall 60s linear infinite;
+}
+.gold-bling-three {
+    min-height: 900px;
+    background: transparent url("gold-bling-three.gif") center center repeat;
+    animation: fall 10s linear infinite;
+}
+.flower-bling-one {
+    min-height: 900px;
+    background: transparent url("flower-bling-one.png") center center repeat;
+    animation: fall 9s linear infinite;
+}
+.flower-bling-two {
+    min-height: 900px;
+    background: transparent url("flower-bling-two.png") center center repeat;
+    animation: fall 11s linear infinite;
+}
+.flower-bling-three {
+    min-height: 900px;
+    background: transparent url("flower-bling-three.png") center center repeat;
+    animation: fall 13s linear infinite;
+}
+.cake-confetti-one {
+    min-height: 900px;
+    background: transparent url("cake-confetti-one.png") center center repeat;
     animation: fall 4s linear infinite;
 }
-.confetti-two {
+.cake-confetti-two {
     min-height: 900px;
-    background: transparent url("confetti-two.png") center center repeat;
+    background: transparent url("cake-confetti-two.png") center center repeat;
     animation: fall 5s linear infinite;
 }
-.confetti-three {
+.cake-confetti-three {
     min-height: 900px;
-    background: transparent url("confetti-three.png") center center repeat;
+    background: transparent url("cake-confetti-three.png") center center repeat;
     animation: fall 6s linear infinite;
 }
 @keyframes fall {
@@ -200,14 +310,28 @@ background-position: 0 0;
 }
 }
 
-@media (max-width: 425px) {
-h1.littlelove {
-    font-size: 140px;
-    line-height: 50px;
-    padding-bottom: 45px;
+@media (max-width: 1025px) {
+.box-item-wrapper {
+    flex-wrap: wrap;
+    max-width: 600px;
 }
-.intro-wrapper {
-    transform: rotate(-3deg);
+.box-item {
+    min-width: 100%;
+}
+}
+
+@media (min-width: 701px) {
+.short-font {
+    display: none;
+}
+}
+
+@media (max-width: 700px) {
+.extended-font {
+    display: none;
+}
+.custom-container {
+    min-height: 875px;
 }
 }
 </style>
@@ -382,20 +506,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="theme">
+    <div class="theme"> 
+      <!-- gtg -->
       <div class="row-wrapper-one">
-        <div class="ballons">
-          <div class="confetti-one">
-            <div class="confetti-two">
-              <div class="confetti-three">
-                <div class="custom-container">
-                  <div class="intro">
-                    <div class="intro-wrapper">
-                      <div class="intro-content">
-                        <h1 class="littlelove">Let’s Celebrate!</h1>
-                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
-                    </div>
-                  </div>
+        <div class="gold-bling-one">
+          <div class="gold-bling-two">
+            <div class="gold-bling-three">
+              <div class="custom-container">
+                <div class="intro">
+                  <h1 class="wildheart">say yes<br>
+                    to<br>
+                    <div class="extended-font">c</div>
+                    <div class="short-font">dc</div>
+                  </h1>
+                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Celebrate with us!</i></div>
                 </div>
               </div>
             </div>
@@ -405,18 +529,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="theme">
       <div class="row-wrapper-two">
-        <div class="ballons">
-          <div class="confetti-one">
-            <div class="confetti-two">
-              <div class="confetti-three">
-                <div class="custom-container">
-                  <div class="intro">
-                    <div class="intro-wrapper">
-                      <div class="intro-content">
-                        <h1 class="littlelove">Let’s Celebrate!</h1>
-                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
-                    </div>
-                  </div>
+        <div class="cake-confetti-one">
+          <div class="cake-confetti-two">
+            <div class="cake-confetti-three">
+              <div class="custom-container">
+                <div class="intro">
+                  <h1 class="wildheart">celebrate<br>
+                    with<br>
+                    <div class="extended-font"></div>
+                    <div class="short-font">u</div>
+                  </h1>
+                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Say yes to DCL!</i></div>
                 </div>
               </div>
             </div>
@@ -424,20 +547,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div class="theme">
+    <div class="theme"> 
+      <!-- gtg -->
       <div class="row-wrapper-three">
-        <div class="ballons">
-          <div class="confetti-one">
-            <div class="confetti-two">
-              <div class="confetti-three">
-                <div class="custom-container">
-                  <div class="intro">
-                    <div class="intro-wrapper">
-                      <div class="intro-content">
-                        <h1 class="littlelove">Let’s Celebrate!</h1>
-                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
-                    </div>
-                  </div>
+        <div class="flower-bling-one">
+          <div class="flower-bling-two">
+            <div class="flower-bling-three">
+              <div class="custom-container">
+                <div class="intro">
+                  <h1 class="wildheart">say yes<br>
+                    to<br>
+                    <div class="extended-font">c</div>
+                    <div class="short-font">dc</div>
+                  </h1>
+                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Celebrate with us!</i></div>
                 </div>
               </div>
             </div>
@@ -445,23 +568,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div class="theme">
+    <div class="theme"> 
+      <!-- gtg -->
       <div class="row-wrapper-four">
-        <div class="ballons">
-          <div class="confetti-one">
-            <div class="confetti-two">
-              <div class="confetti-three">
-                <div class="custom-container">
-                  <div class="intro">
-                    <div class="intro-wrapper">
-                      <div class="intro-content">
-                        <h1 class="littlelove">Let’s Celebrate!</h1>
-                        It’s a new year, and that means brand-new celebrations. Bring your special events to life in one of our beautiful libraries. <a href="birthday-parties/">Birthday parties</a>! <a href="say-i-do/">Weddings</a>! <a href="showers/">Wedding & baby showers</a>! We’ll add the magic, you make the memories. <i>Celebrate with us in 2023!</i></div>
-                    </div>
-                  </div>
+        <div class="cake-confetti-one">
+          <div class="cake-confetti-two">
+            <div class="cake-confetti-three">
+              <div class="custom-container">
+                <div class="intro">
+                  <h1 class="wildheart">celebrate<br>
+                    with<br>
+                    <div class="extended-font"></div>
+                    <div class="short-font">u</div>
+                  </h1>
+                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Say yes to DCL!</i></div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row wave-row"></div>
+  <div class="row events-info">
+    <div class="info-wrapper">
+      <h3><i>Join us for these exciting</i></h3>
+      <h1 class="no-margin-top">February & March Events</h1>
+    </div>
+  </div>
+  <div class="row box-row">
+    <div class="box-item-wrapper">
+      <div class="box-item">
+        <div><img class="img-responsive center-block" src="cj-box.jpg" alt="C.J. Box"></div>
+        <div class="box-content">
+          <h4>Author C.J. Box</h4>
+          <div>Join bestselling author C.J. Box for a discussion of “Storm Watch,” his latest thriller starring Wyoming game warden Joe Pickett. Wednesday, March&nbsp;1,&nbsp;7PM.
+            <div class="margin-top-10"><a href="https://www.lonetreeartscenter.org/showinfo.php?id=1558" target="_blank"><i>Tickets on Sale Now</i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="box-item">
+        <div><img class="img-responsive center-block" src="fairy-tale-ball.jpg" alt="Fairy Tale Ball"></div>
+        <div class="box-content">
+          <h4>Fairy Tale Ball</h4>
+          <div>Explore the world of Robin Hood at a library near you! Meet a merry band of characters, enjoy crafts and activities, and show off your dance skills. Saturdays,&nbsp;Feb.&nbsp;4-March&nbsp;4.
+            <div class="margin-top-10"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=fairy+tale+ball:+robin+hood&lib=ALL&nd=120" target="_blank"><i>Find an Event Near You</i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="box-item">
+        <div><img class="img-responsive center-block" src="storybook-holiday.jpg" alt="A Storybook Holiday"></div>
+        <div class="box-content">
+          <h4>A Storybook Holiday</h4>
+          <div>Celebrate the sweetness of spring with Winnie the Pooh and his friends from the Hundred Acre Wood. Catered brunch, themed crafts, and fun activities included! Sunday,&nbsp;March&nbsp;26,&nbsp;8-11AM.
+            <div class="margin-top-10"><a href="https://www.eventbrite.com/e/a-storybook-holiday-silly-old-bears-blustery-day-tickets-515064520847" target="_blank"><i>Buy Your Tickets Today</i></a></div>
           </div>
         </div>
       </div>
