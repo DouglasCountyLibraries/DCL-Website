@@ -115,8 +115,8 @@ h1.wildheart {
     padding-bottom: 30px;
 }
 .short-font {
-	font-size: 155px;
-	margin: 18px 0 30px;
+    font-size: 155px;
+    margin: 18px 0 30px;
 }
 .custom-container {
     max-width: 700px;
@@ -618,7 +618,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
       <div class="box-item">
-        <div><img class="img-responsive center-block" src="storybook-holiday.jpg" alt="A Storybook Holiday"></div>
+        <div id="sbh-box"></div>
         <div class="box-content">
           <h4>A Storybook Holiday</h4>
           <div>Celebrate the sweetness of spring with Winnie the Pooh and his friends from the Hundred Acre Wood. Catered brunch, themed crafts, and fun activities included! Sunday,&nbsp;March&nbsp;26,&nbsp;8-11AM.
@@ -628,6 +628,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <script>
+    var images = ['storybook-holiday-one.jpg', 'storybook-holiday-two.jpg', 'storybook-holiday-three.jpg', 'storybook-holiday-four.jpg'];
+    $('<img alt="Scholarships" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#sbh-box');</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
