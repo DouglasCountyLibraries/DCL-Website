@@ -600,7 +600,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row box-row">
     <div class="box-item-wrapper">
       <div class="box-item">
-        <div><img class="img-responsive center-block" src="cj-box.jpg" alt="C.J. Box"></div>
+        <div id="cj-box"></div>
         <div class="box-content">
           <h4>Author C.J. Box</h4>
           <div>Join bestselling author C.J. Box for a discussion of “Storm Watch,” his latest thriller starring Wyoming game warden Joe Pickett. Wednesday, March&nbsp;1,&nbsp;7PM.
@@ -629,8 +629,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <script>
+	 var images = ['cj-box-one.jpg', 'cj-box-two.jpg', 'cj-box-three.jpg', 'cj-box-four.jpg'];
+    $('<img alt="C.J. Box" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#cj-box'); 
     var images = ['storybook-holiday-one.jpg', 'storybook-holiday-two.jpg', 'storybook-holiday-three.jpg', 'storybook-holiday-four.jpg'];
-    $('<img alt="Scholarships" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#sbh-box');</script> 
+    $('<img alt="Scholarships" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#sbh-box');
+	</script>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
