@@ -142,6 +142,8 @@ h4.strawberry {
 }
 .btn.btn-lg.btn-primary.custom {
     background-color: #5d0701;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 .btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
     background-color: #a90d02;
@@ -407,7 +409,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <h5 class="black text-uppercase font-weight-400 margin-bottom-5">Tickets: $20 Adults, $15 Ages 3-13</h5>
               <div><i>Ages 0-2 free with paying adult</i></div>
               <div class="padding-top-15">Celebrate spring with Winnie the Pooh and friends! Kids can enjoy a Pooh-themed puppet show, crafts, and activities, and hunt for Kanga, Roo, and Piglet in the Hundred Acre Wood. Costumes are encouraged! A delicious catered brunch will also be served.</div>
-              <div class="padding-top-20 margin-bottom-20"><a href="https://www.eventbrite.com/e/a-storybook-holiday-silly-old-bears-blustery-day-tickets-515064520847" target="_blank" class="btn btn-lg btn-primary custom">Buy Tickets</a></div>
+              <div class="padding-top-20 margin-bottom-20">
+                <div id="eventbrite-widget-container-515064520847"></div>
+                
+                <!-- Noscript content for added SEO -->
+                <noscript>
+                <a href="https://www.eventbrite.com/e/a-storybook-holiday-silly-old-bears-blustery-day-tickets-515064520847" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                </noscript>
+                <!-- You can customize this button any way you like -->
+                <button id="eventbrite-widget-modal-trigger-515064520847" type="button" class="btn btn-primary btn-lg custom">Buy Tickets</button>
+                <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '515064520847',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-515064520847',
+        onOrderComplete: exampleCallback
+    });
+</script></div>
               <!--<div class="max-width-30"><i>Adults ages 21+ may enjoy a selection of mimosas with the purchase of an alcohol wristband for an additional $12. </i></div>--> 
             </div>
           </div>
