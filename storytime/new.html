@@ -480,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="custom-container">
       <div class="box-wrapper">
         <div class="storytime-box">
-          <div><img alt="Reading Levels" class="img-responsive center-block" src="../parents/images/levels-three.jpg"></div>
+          <div id="photo-box-one"></div>
           <div class="padding-top-20">Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills:
             <div class="skill-wrapper">
               <ul class="no-margin-bottom">
@@ -497,12 +497,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
         </div>
         <div class="storytime-box">
-          <div><img alt="Dolly Parton's Imagination Library" class="img-responsive center-block" src="../parents/images/imagination-library-one.jpg"></div>
+          <div id="photo-box-two"></div>
           <div class="padding-top-20">Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing&mdash;that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well. A great way to do this is to sign up for <a href="../imagination-library/">Dolly Parton's Imagination Library</a>. Exposure to lots of books is a great predictor of reading readiness and school success.</div>
         </div>
       </div>
     </div>
   </div>
+  <script>
+	var images = ['../parents/images/levels-one.jpg', '../parents/images/levels-two.jpg', '../parents/images/levels-three.jpg', '../parents/images/levels-four.jpg', '../parents/images/levels-five.jpg', '../parents/images/levels-six.jpg', '../parents/images/levels-seven.jpg', '../parents/images/levels-eight.jpg', '../parents/images/levels-nine.jpg', '../parents/images/levels-ten.jpg', '../parents/images/levels-eleven.jpg', '../parents/images/levels-twelve.jpg'];
+    $('<img alt="Early Literacy" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-one');
+      
+ 	var images = ['../parents/images/imagination-library-one.jpg', '../parents/images/imagination-library-two.jpg', '../parents/images/imagination-library-three.jpg', '../parents/images/imagination-library-four.jpg', '../parents/images/imagination-library-five.jpg'];
+    $('<img alt="Dolly Parton&#39s Imagination Library" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-two');
+</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
