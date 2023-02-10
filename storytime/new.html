@@ -94,11 +94,68 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     min-width: 210px;
 }
 .box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    /*max-width: 900px;*/
+    /*max-width: 1200px;*/
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.box-item {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 30px 0;
-	align-content: center;
+	flex-direction: column;
+	flex: 1;
+	margin: 10px 15px;
+	background: #fff;
+	border-radius: 3px;
+	max-width: 545px;
+	min-width: 315px;
+	padding: 0 30px;
+}
+.large-text.text-center.margin-top-5 {
+    font-size: 18px;
+}
+.gray-circle-wrapper {
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 112px;
+    margin: 0 auto;
+    width: 112px;
+}
+.gray-circle {
+    border: 6px solid #e6e4e2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #4f878c;
+    background-color: #fff;
+    font-size: 42px;
+    height: 100px;
+    line-height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+}
+.gray-circle-wrapper.circle-alt {
+    height: 132px;
+    width: 132px;
+}
+.gray-circle.circle-alt {
+    height: 120px;
+    width: 120px;
+}
+.white-bottom-row {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.gray-circle > img {
+    border-radius: 50%;
 }
 .storytime-box {
     display: flex;
@@ -477,12 +534,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="padding-top-15">Visit our Virtual Storytime calendar for recorded sessions you can enjoy from any connected device.</div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="custom-container">
-      <div class="box-wrapper">
-        <div class="storytime-box">
-          <div id="photo-box-one"></div>
-          <div class="padding-top-20">Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills:
+ 
+
+	
+	
+	
+	
+	
+	  <div class="row bg-gray-5 padding-top-30 padding-bottom-80">
+    <div class="box-wrapper">
+		
+		
+		<div class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="dcl-storytime.jpg" alt="Storytime at DCL" class="img-responsive"></div>
+          </div>
+        </div>
+        <div class="padding-top-15 padding-bottom-60">Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills:
             <div class="skill-wrapper">
               <ul class="no-margin-bottom">
                 <li><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tell Me a Story">Narrative skills</a></li>
@@ -496,14 +565,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </ul>
             </div>
           </div>
-        </div>
-        <div class="storytime-box">
-          <div id="photo-box-two"></div>
-          <div class="padding-top-20">Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing&mdash;that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well. A great way to do this is to sign up for <a href="../imagination-library/">Dolly Parton's Imagination Library</a>. Exposure to lots of books is a great predictor of reading readiness and school success.</div>
-        </div>
       </div>
+		
+		
+      <div class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="imagination-library.jpg" alt="Dolly Parton's Imagination Library" class="img-responsive"></div>
+          </div>
+        </div>
+        <div class="padding-top-15 padding-bottom-60">Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing&mdash;that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well. A great way to do this is to sign up for <a href="../imagination-library/">Dolly Parton's Imagination Library</a>. Exposure to lots of books is a great predictor of reading readiness and school success.</div>
+      </div>
+       
+
+
     </div>
   </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   <script>
 	var images = ['../parents/images/levels-one.jpg', '../parents/images/levels-two.jpg', '../parents/images/levels-three.jpg', '../parents/images/levels-four.jpg', '../parents/images/levels-five.jpg', '../parents/images/levels-six.jpg', '../parents/images/levels-seven.jpg', '../parents/images/levels-eight.jpg', '../parents/images/levels-nine.jpg', '../parents/images/levels-ten.jpg', '../parents/images/levels-eleven.jpg', '../parents/images/levels-twelve.jpg'];
     $('<img alt="Early Literacy" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-one');
