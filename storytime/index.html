@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,51 +82,238 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .kids-teens-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
+}
+.custom-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 0 15px;
+}
+.btn-custom {
+    min-width: 210px;
 }
 .box-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    /*max-width: 900px;*/
+    /*max-width: 1200px;*/
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.box-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 20px 15px;
+    background: #fff;
+    border-radius: 3px;
+    max-width: 545px;
+    min-width: 315px;
+    padding: 0 30px;
+}
+.large-text.text-center.margin-top-5 {
+    font-size: 18px;
+}
+.gray-circle-wrapper {
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.gray-circle {
+    border: 6px solid #e6e4e2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #4f878c;
+    background-color: #fff;
+    font-size: 42px;
+    height: 100px;
+    line-height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+}
+.gray-circle-wrapper.circle-alt {
+    height: 162px;
+    width: 162px;
+}
+.gray-circle.circle-alt {
+    height: 150px;
+    width: 150px;
+}
+.white-bottom-row {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.gray-circle > img {
+    border-radius: 50%;
 }
 .storytime-box {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	min-width: 300px;
-	text-align: center;
-	padding: 15px;
-	max-width: 500px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 15px;
+    max-width: 600px;
 }
-.align-bottom {
-	margin-top: auto;
-	text-align: center;
+.skill-wrapper {
+    display: flex;
+}
+.skill-wrapper ul {
+    padding: 10px 20px 10px;
 }
 .flower-background {
-	background: transparent url("flowers.png") center bottom repeat-x;
+    background: transparent url("flowers.png") center bottom repeat-x;
 }
 .large-text {
-	font-size: 18px;
+    font-size: 18px;
 }
 .text-red {
-	color: #fff;
-	background-color: #b1462c;
-	font-size: 20px;
-	padding: 5px 20px 6px;
-	margin: 25px 0 25px 0;
-	text-align: center;
+    color: #fff;
+    background-color: #b1462c;
+    font-size: 20px;
+    padding: 5px 20px 6px;
+    margin: 25px 0 25px 0;
+    text-align: center;
 }
 .location-nav.nav > li > a {
-	display: block;
-	padding: 10px 4px;
-	position: relative;
+    display: block;
+    padding: 10px 4px;
+    position: relative;
 }
 .panel-group {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 .modal-header {
-	border-bottom: none;
+    border-bottom: none;
+}
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-row {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1410px;
+    margin: 0 auto 60px auto;
+}
+.slideshow-content {
+    flex: 1 1 30%;
+    padding: 0 30px;
+}
+.slideshow-content h4 {
+    font-size: 20px;
+    color: #333;
+}
+.slideshow-image.main {
+    min-height: 600px;
+}
+#slideshow {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0%;
+    width: 70%;
+    border-right: 15px solid #fff;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+    position: absolute;
+    z-index: 2;
+    width: 105%;
+    height: 105%;
+    bottom: -5%;
+    left: -5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    -webkit-transition: opacity 3s, -webkit-transform 8s;
+    transition: opacity 3s, transform 8s;
+}
+#slideshow div:nth-of-type(9n+1) {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+#slideshow div {
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+}
+#slideshow div:nth-of-type(2n+1) {
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+#slideshow div:nth-of-type(3n+1) {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+#slideshow div:nth-of-type(4n+1) {
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+}
+#slideshow div:nth-of-type(5n+1) {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+#slideshow div:nth-of-type(6n+1) {
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+}
+#slideshow div:nth-of-type(7n+1) {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+/* slide one */
+#slideshow div:nth-of-type(8n+1) {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+#slideshow .fx, #slideshow .fx1 {
+    -webkit-transform: scale(1.1) translate(1.5%);
+    transform: scale(1.1) translate(1.5%);
+    opacity: 1
+}
+
+@media (max-width: 1150px) {
+.slideshow-image.main {
+    min-height: 500px;
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-row, .item-wrapper {
+    flex-direction: column;
+}
+.slideshow-content {
+    padding: 30px 20px 40px;
+    text-align: center;
+}
+#slideshow {
+    width: 100%;
+    border-right: 0;
+}
+}
+
+@media (max-width: 825px) {
+.box-wrapper {
+    flex-direction: column;
+    padding: 30px 0;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-image.main {
+    min-height: 400px;
+}
+.skill-wrapper {
+    flex-direction: column;
+    padding-top: 10px
+}
+.skill-wrapper ul {
+    padding: 0 0 0 30px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -298,40 +486,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
+  <div class="row padding-bottom-30 border-top">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Storytime</h1>
-        <h4 class="roboto margin-top-5 no-margin-bottom">Join us Monday-Saturday for Storytime fun and activities!</h4>
+        <h4 class="roboto margin-top-5 margin-bottom-5">Join us Monday-Saturday for Storytime fun and activities!</h4>
         <div>Library staff will lead songs, rhymes, reading and fingerplays to keep nurturing those all-important emerging reading skills. </div>
       </div>
-      <div class="box-wrapper">
-        <div class="storytime-box">
-          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="zebra.png" alt="Indoor Storytime"></div>
-          <div class="padding-bottom-30">View the calendar to find a Storytime at your library. Thank you for keeping Storytime allergen-free.</div>
-          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&lib=1000,1001,1002,1003,1004,1005,1006&nd=180" target="_blank" class="btn btn-lg btn-primary text-uppercase"> Storytime Calendar</a></div>
+    </div>
+  </div>
+  <div class="row slideshow-row">
+    <div id="slideshow" class="slideshow-image main"> 
+      <!-- define each background-image in CSS -->
+      <div class="random-slide" style="background-image: url('slideshow/one.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(1) -->
+      <div class="random-slide" style="background-image: url('slideshow/two.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(2) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/three.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(3) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/four.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(4) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/five.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(5) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/six.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(6) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/seven.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(7) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/eight.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(8) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/nine.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(9) --> 
+    </div>
+    <div class="slideshow-content">
+      <div class="padding-bottom-15"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&lib=1000,1001,1002,1003,1004,1005,1006&nd=180" target="_blank" class="btn btn-lg btn-primary btn-custom"> Storytime Calendar</a></div>
+      <div>View the Storytime Calendar to find a Storytime at your library. Thank you for keeping Storytime allergen-free.</div>
+      <div class="padding-top-40"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&df=list&et=7&lib=1008&nd=180" target="_blank" class="btn btn-lg btn-primary btn-custom">Virtual Storytime</a></div>
+      <div class="padding-top-15">Visit our Virtual Storytime calendar for recorded sessions you can enjoy from any connected device.</div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-60">
+    <div class="box-wrapper">
+      <div class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="dcl-storytime.jpg" alt="Storytime at DCL" class="img-responsive"></div>
+          </div>
         </div>
-        <!--<div class="storytime-box">
-          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="giraffe.png" alt="Outdoor Storytime"></div>
-          <div class="padding-bottom-30">Join us this June and July for Outdoor Storytime. Ideal for ages 0-5. Thank you for keeping Storytime allergen-free.</div>
-          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor+storytime&lib=all&nd=180" target="_blank" class="btn btn-lg btn-primary text-uppercase">Outdoor Storytime</a></div>
-        </div>-->
-        <div class="storytime-box">
-          <div class="flower-background"><img class="img-responsive image-center margin-bottom-10" src="tiger.png" alt="Virtual Storytime"></div>
-          <div class="padding-bottom-30">Visit our Virtual Storytime calendar for recorded sessions you can enjoy from any connected device.</div>
-          <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&df=list&et=7&lib=1008&nd=180" target="_blank" class="btn btn-lg btn-primary text-uppercase">Virtual Storytime</a></div>
+        <div class="padding-top-15 padding-bottom-60">Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills:
+          <div class="skill-wrapper">
+            <ul class="no-margin-bottom">
+              <li><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tell Me a Story">Narrative skills</a></li>
+              <li><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Take Time to Rhyme">Phonological awareness</a></li>
+              <li><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Look for Letters">Letter knowledge</a></li>
+            </ul>
+            <ul class="no-margin-bottom">
+              <li><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Books Are Fun">Print motivation</a></li>
+              <li><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Explore New Words">Vocabulary</a></li>
+              <li><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Words Are Everywhere">Print awareness</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="imagination-library.jpg" alt="Dolly Parton's Imagination Library" class="img-responsive"></div>
+          </div>
+        </div>
+        <div class="padding-top-15 padding-bottom-60">Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing&mdash;that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well. A great way to do this is to sign up for <a href="../imagination-library/">Dolly Parton's Imagination Library</a>. Exposure to lots of books is a great predictor of reading readiness and school success.</div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="container padding-bottom-60 margin-lg-50">
-      <div class="large-text padding-bottom-15">Early literacy is what children know about reading and writing before they can actually read or write. Storytime nurtures six important pre-reading skills: <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tell Me a Story">narrative skills</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Take Time to Rhyme">phonological awareness</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Look for Letters">letter knowledge</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Books Are Fun">print motivation</a>, <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Explore New Words">vocabulary</a>, and <a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Words Are Everywhere">print awareness</a>.</div>
-      <div>
-        <div class="">Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing&mdash;that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well. A great way to do this is to sign up for <a href="../imagination-library/">Dolly Parton's Imagination Library</a>. Exposure to lots of books is a great predictor of reading readiness and school success.</div>
-      </div>
-    </div>
-  </div>
+  <script>
+	var images = ['../parents/images/levels-one.jpg', '../parents/images/levels-two.jpg', '../parents/images/levels-three.jpg', '../parents/images/levels-four.jpg', '../parents/images/levels-five.jpg', '../parents/images/levels-six.jpg', '../parents/images/levels-seven.jpg', '../parents/images/levels-eight.jpg', '../parents/images/levels-nine.jpg', '../parents/images/levels-ten.jpg', '../parents/images/levels-eleven.jpg', '../parents/images/levels-twelve.jpg'];
+    $('<img alt="Early Literacy" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-one');
+      
+ 	var images = ['../parents/images/imagination-library-one.jpg', '../parents/images/imagination-library-two.jpg', '../parents/images/imagination-library-three.jpg', '../parents/images/imagination-library-four.jpg', '../parents/images/imagination-library-five.jpg'];
+    $('<img alt="Dolly Parton&#39s Imagination Library" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-two');
+</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -397,6 +636,33 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
  </script> 
+<script>
+	var cards = $(".random-slide");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
@@ -443,4 +709,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
