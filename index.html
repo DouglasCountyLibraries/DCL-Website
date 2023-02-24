@@ -87,257 +87,276 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 <!-- pinterest - do not remove -->
 <style>
 @font-face {
-    font-family: 'WildHeart';
-    src: url('shared-assets/web-fonts/WildHeart.woff2') format('woff2'), url('shared-assets/web-fonts/WildHeart.woff') format('woff');
+    font-family: 'Strawberry';
+    src: url('shared-assets/web-fonts/strawberry_dreams_alternates-webfont.woff2') format('woff2'), url('shared-assets/web-fonts/strawberry_dreams_alternates-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-.background-row {
-    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 25%, #ffe7eb 65%, #ffe7eb 100%);
-    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 25%, #ffe7eb 65%, #ffe7eb 100%);
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #ffe7eb 65%, #ffe7eb 100%);
-}
-.theme {
+.pooh-row {
+    background: #eee url("background.jpg") bottom center no-repeat;
     max-width: 1920px;
     margin: 0 auto;
+    min-height: 1200px;
 }
-h1.wildheart {
-    font-family: 'WildHeart';
-    font-size: 120px;
-    line-height: 80px;
-    color: #a2273d;
-    text-align: center;
+.background-row {
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
 }
-.extended-font {
-    font-size: 145px;
-    line-height: 65px;
-    padding-bottom: 30px;
+.strawberry {
+    font-family: "Strawberry", sans-serif;
 }
-.short-font {
-    font-size: 155px;
-    margin: 18px 0 30px;
+.times-font {
+    font-family: Times, "Times New Roman", serif;
+    font-weight: 600;
+}
+h1.times-font {
+    font-family: Times, "Times New Roman", serif;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 34px;
+    color: #7d1d06;
+    line-height: 32px;
+    font-weight: 600;
+}
+h1.strawberry {
+    font-family: "Strawberry", sans-serif;
+    margin: 0;
+    font-size: 64px;
+    color: #7d1d06;
+}
+h4.strawberry {
+    font-family: "Strawberry", sans-serif;
+    text-transform: uppercase;
+    margin: 8px 0 0;
+    font-size: 32px;
+    color: #000;
 }
 .custom-container {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
     display: flex;
-    min-height: 1000px;
+    /* text-align: center; */
+    color: #000;
+    max-width: 600px;
+    flex: 1 2;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    line-height: 34px;
-    color: #000;
-}
-.intro {
-    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
-    padding: 25px 15px 60px;
-    position: relative;
-    z-index: 100;
-    background: rgba(255,255,255,.8);
-    border-radius: 3px;
-    margin: 0 10px 115px 10px;
-}
-.intro a {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 3px dotted #bbb;
-}
-.intro a:hover, .intro a:focus {
-    text-decoration: none;
-    color: #000;
-    border-bottom: 3px dotted #000;
-}
-.row.events-row {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    color: #f4ecd9;
-    display: flex;
-    justify-content: flex-end;
-    background: #2e2424;
-}
-.row.wave-row {
-    background: transparent url("wave.png") center center no-repeat;
-    height: 135px;
-    margin-top: -135px;
-}
-.row.events-info {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    background: #ffe7eb;
-    padding: 0px 15px 170px;
 }
 .info-wrapper {
-    max-width: 725px;
-    color: #000;
-    margin: -15px auto 0 auto;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 400;
+    position: relative;
+    z-index: 1;
 }
-.info-wrapper h1 {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    /* padding-bottom: 20px; */
-    font-size: 46px;
-    font-weight: 400;
-    color: #a2273d;
-    /* text-shadow: 0 10px 20px rgba(0, 0, 0, .4); */
-    line-height: 60px;
-}
-.info-wrapper h3 {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    color: #000;
-    margin: 0;
-    line-height: inherit;
-}
-.box-item-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 13px 0 0px;
-    margin-top: -170px;
-    align-content: center;
-}
-.box-item {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #333;
-    margin: 15px;
-    background: #fff;
-    padding: 40px 100px 50px;
-    border-radius: 3px;
-    text-align: center;
-    line-height: inherit;
-    display: flex;
-    flex-direction: column;
-    max-width: 515px;
-    min-width: 315px;
-    flex: 1;
-}
-.box-item img {
-    padding-bottom: 20px;
-}
-.row.box-row {
-    padding: 0 15px 90px;
-    background: #ffd1d9;
-}
-.box-content h4 {
-    margin: 0 0 5px;
-    color: #a2273d;
-    font-weight: 400;
+.btn.btn-lg.btn-primary.custom {
+    background-color: #a90d02;
     text-transform: uppercase;
+    font-weight: 400;
 }
-.box-content a {
-    font-size: 20px;
+.btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
+    background-color: #7d1d06;
 }
-.row-wrapper-one {
-    background: #fff url("wedding-rings.jpg") center top fixed;
-    border: 4px solid #ffd1d9;
-    border-bottom: 0;
-    border-radius: 3px;
+.leaves-one {
+    background: transparent url("leaves-one.png") top left repeat-x;
+    animation: blow 6.5s linear infinite;
 }
-.row-wrapper-two {
-    background: #fff url("flowers.jpg") center top fixed;
-    border: 4px solid #ffd1d9;
-    border-bottom: 0;
-    border-radius: 3px;
+.leaves-two {
+    background: transparent url("leaves-two.png") top left repeat-x;
+    animation: blow 8s linear infinite;
 }
-.row-wrapper-three {
-    background: #fff url("bride-flowers.jpg") center top fixed;
-    border: 4px solid #ffd1d9;
-    border-bottom: 0;
-    border-radius: 3px;
-}
-.row-wrapper-four {
-    background: #fff url("cake.jpg") center top fixed;
-    border: 4px solid #ffd1d9;
-    border-bottom: 0;
-    border-radius: 3px;
-}
-.gold-bling-one {
-    min-height: 900px;
-    background: transparent url("gold-bling-one.png") center center repeat;
-    animation: fall 85s linear infinite;
-}
-.gold-bling-two {
-    min-height: 900px;
-    background: transparent url("gold-bling-two.png") center center repeat;
-    animation: fall 60s linear infinite;
-}
-.gold-bling-three {
-    min-height: 900px;
-    background: transparent url("gold-bling-three.gif") center center repeat;
-    animation: fall 10s linear infinite;
-}
-.flower-bling-one {
-    min-height: 900px;
-    background: transparent url("flower-bling-one.png") center center repeat;
-    animation: fall 9s linear infinite;
-}
-.flower-bling-two {
-    min-height: 900px;
-    background: transparent url("flower-bling-two.png") center center repeat;
-    animation: fall 11s linear infinite;
-}
-.flower-bling-three {
-    min-height: 900px;
-    background: transparent url("flower-bling-three.png") center center repeat;
-    animation: fall 13s linear infinite;
-}
-.cake-confetti-one {
-    min-height: 900px;
-    background: transparent url("cake-confetti-one.png") center center repeat;
-    animation: fall 4s linear infinite;
-}
-.cake-confetti-two {
-    min-height: 900px;
-    background: transparent url("cake-confetti-two.png") center center repeat;
-    animation: fall 5s linear infinite;
-}
-.cake-confetti-three {
-    min-height: 900px;
-    background: transparent url("cake-confetti-three.png") center center repeat;
-    animation: fall 6s linear infinite;
-}
-@keyframes fall {
+@keyframes blow {
 from {
-background-position: 0 -900px;
+background-position: -1200px 0;
 }
 to {
 background-position: 0 0;
 }
 }
+.float {
+    position: fixed;
+    top: 160px;
+    z-index: 0;
+    width: 250px;
+    height: 127px;
+    animation: float 25s linear 0s infinite;
+}
+@keyframes float {
+0% {
+transform: translate(-150vw, 350px) rotate(-50deg);
+opacity: 0;
+}
+1% {
+transform: translate(-150vw, 350px) rotate(-50deg);
+opacity: 1;
+}
+99% {
+transform: translate(150vw, 0) rotate(0deg);
+opacity: 1;
+}
+100% {
+transform: translate(150vw, 0) rotate(0deg);
+opacity: 0;
+}
+}
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-row {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    max-width: 1100px;
+    margin: 0 auto;
+    /* padding: 90px 30px 215px; */
+    padding: 215px 15px 0 15px;
+}
+.slideshow-content {
+    flex: 1;
+    padding: 0 0 0 30px;
+}
+.slideshow-image.main {
+    min-height: 450px;
+}
+#slideshow {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0%;
+    width: 500px;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+    position: absolute;
+    z-index: 2;
+    width: 105%;
+    height: 105%;
+    top: -5%;
+    left: -5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 3s, transform 8s;
+}
+/* slide two */
+#slideshow div {
+    transform-origin: bottom center;
+}
+/* slide three */
+#slideshow div:nth-of-type(2n+1) {
+    transform-origin: bottom right;
+}
+/* slide four */
+#slideshow div:nth-of-type(3n+1) {
+    transform-origin: top right;
+}
+/* slide five */
+#slideshow div:nth-of-type(4n+1) {
+    transform-origin: top right;
+}
+/* slide one */
+#slideshow div:nth-of-type(5n+1) {
+    transform-origin: bottom right;
+}
+#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
+    z-index: 1
+}
+#slideshow .fx, #slideshow .fx1 {
+    transform: scale(1.1) translate(1.5%);
+    opacity: 1
+}
+#slideshow div:nth-of-type(1) {
+    background-image: url("catered-brunch.jpg")
+}
+#slideshow div:nth-of-type(2) {
+    background-image: url("puppet-show.jpg")
+}
+#slideshow div:nth-of-type(3) {
+    background-image: url("hunt.jpg")
+}
+#slideshow div:nth-of-type(4) {
+    background-image: url("crafts.jpg")
+}
+#slideshow div:nth-of-type(5) {
+    background-image: url("costumes.jpg")
+}
+/* captions */
+#slideshow span {
+    font-family: 'Strawberry';
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 78px;
+    color: transparent;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    justify-content: center;
+    line-height: 75px;
+}
+#slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
+    z-index: 1
+}
+#slideshow .fx + span, #slideshow .fx1 + span {
+    color: #fff;
+    animation: caption 5s 1s both;
+    text-shadow: 0 6px 20px #000;
+    padding-bottom: 30px;
+}
+@keyframes caption {
+0% {
+opacity:0;
+}
+20% {
+opacity:1;
+}
+90% {
+opacity:1;
+}
+100% {
+opacity:0;
+}
+}
 
-@media (max-width: 1025px) {
-.box-item-wrapper {
-    flex-wrap: wrap;
-    max-width: 600px;
+@media (max-width: 1320px) {
+.pooh-row {
+    background: #eee url("large-background.jpg") center bottom no-repeat;
+    min-height: 1090px;
 }
-.box-item {
-    min-width: 100%;
-}
-}
-
-@media (min-width: 701px) {
-.short-font {
-    display: none;
+.slideshow-row {
+    padding: 40px 15px 0 15px;
 }
 }
 
-@media (max-width: 700px) {
-.extended-font {
-    display: none;
+@media (max-width: 1020px) {
+.pooh-row {
+    background: #eee url("small-background.jpg") center bottom no-repeat;
 }
 .custom-container {
-    min-height: 875px;
+    justify-content: center;
+}
+.slideshow-content {
+    padding: 15px;
+    text-align: center;
+}
+.info-wrapper {
+    max-width: 545px;
+    padding: 15px 15px 510px;
+}
+.slideshow-row, .item-wrapper {
+    flex-direction: column;
+}
+.slideshow-row {
+    padding: 30px 15px 0 15px;
 }
 }
 
-@media (max-width: 475px) {
-.box-item {
-    padding: 20px 20px 30px;
+@media (max-width: 525px) {
+#slideshow {
+    width: 100%;
+}
+#slideshow span {
+    font-size: 60px;
+    line-height: 58px;
 }
 }
 </style>
@@ -512,83 +531,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="theme"> 
-      <!-- gtg -->
-      <div class="row-wrapper-one">
-        <div class="gold-bling-one">
-          <div class="gold-bling-two">
-            <div class="gold-bling-three">
-              <div class="custom-container">
-                <div class="intro">
-                  <h1 class="wildheart">say yes<br>
-                    to<br>
-                    <div class="extended-font">c</div>
-                    <div class="short-font">dc</div>
-                  </h1>
-                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Celebrate with us!</i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="theme">
-      <div class="row-wrapper-two">
-        <div class="cake-confetti-one">
-          <div class="cake-confetti-two">
-            <div class="cake-confetti-three">
-              <div class="custom-container">
-                <div class="intro">
-                  <h1 class="wildheart">celebrate<br>
-                    with<br>
-                    <div class="extended-font"></div>
-                    <div class="short-font">u</div>
-                  </h1>
-                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Say yes to DCL!</i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="theme"> 
-      <!-- gtg -->
-      <div class="row-wrapper-three">
-        <div class="flower-bling-one">
-          <div class="flower-bling-two">
-            <div class="flower-bling-three">
-              <div class="custom-container">
-                <div class="intro">
-                  <h1 class="wildheart">say yes<br>
-                    to<br>
-                    <div class="extended-font">c</div>
-                    <div class="short-font">dc</div>
-                  </h1>
-                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Celebrate with us!</i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="theme"> 
-      <!-- gtg -->
-      <div class="row-wrapper-four">
-        <div class="cake-confetti-one">
-          <div class="cake-confetti-two">
-            <div class="cake-confetti-three">
-              <div class="custom-container">
-                <div class="intro">
-                  <h1 class="wildheart">celebrate<br>
-                    with<br>
-                    <div class="extended-font"></div>
-                    <div class="short-font">u</div>
-                  </h1>
-                  <div>Bring your special events to life in one of our beautiful libraries. <a href="say-i-do/">Weddings</a> and <a href="showers/">wedding showers</a>! <a href="showers/">Baby showers</a>! <a href="birthday-parties/">Birthday parties</a>! We’ll add the magic, you make the memories. <i>Say yes to DCL!</i></div>
-                </div>
+    <div class="pooh-row">
+      <div class="float"><img src="red-balloon.png" alt=""></div>
+      <div class="leaves-one">
+        <div class="leaves-two">
+          <div class="slideshow-row">
+            <div id="slideshow" class="slideshow-image main"> 
+              <!-- define each background-image in CSS -->
+              <div></div>
+              
+              <!-- #slideshow div:nth-of-type(1) --> 
+              <span>Catered<br>
+              Brunch</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(2) --> 
+              <span>Pooh-themed<br>
+              Puppet<br>
+              Show</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(3) --> 
+              <span> Kanga,&nbsp;Roo,<br>
+              &&nbsp;Piglet<br>
+              Hunt</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(4) --> 
+              <span>Crafts<br>
+              &<br>
+              Activities</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(5) --> 
+              <span>Costumes<br>
+              Encouraged</span> </div>
+            <div class="slideshow-content">
+              <div class="info-wrapper">
+                <h1 class="times-font">Silly Old Bear's</h1>
+                <h1 class="strawberry">Blustery Day</h1>
+                <h4 class="strawberry">A Storybook Holiday</h4>
+                <h4 class="times-font black text-uppercase">Sunday, March&nbsp;26, 8-11AM, Highlands&nbsp;Ranch</h4>
+                <h5 class="black font-weight-400 no-margin-bottom"><i>Celebrate spring with Winnie the Pooh and friends!</i></h5>
+                <div class="padding-top-20"><a href="storybook-holiday/" class="btn btn-lg btn-primary custom">Learn More</a></div>
               </div>
             </div>
           </div>
@@ -596,43 +577,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row wave-row"></div>
-  <div class="row events-info">
-    <div class="info-wrapper">
-      <h3><i>Join us for these exciting</i></h3>
-      <h1 class="no-margin-top">March Events</h1>
-    </div>
-  </div>
-  <div class="row box-row">
-    <div class="box-item-wrapper">
-      <div class="box-item">
-        <div id="cj-box"></div>
-        <div class="box-content">
-          <h4>Author C.J. Box</h4>
-          <div>Join bestselling author C.J. Box for a discussion of “Storm Watch,” his latest thriller starring Wyoming game warden Joe Pickett. Wednesday, March&nbsp;1,&nbsp;7PM.
-            <div class="margin-top-10"><a href="https://www.lonetreeartscenter.org/showinfo.php?id=1558" target="_blank"><i>Tickets on Sale Now</i></a></div>
-          </div>
-        </div>
-      </div>
-      <div class="box-item">
-        <div id="sbh-box"></div>
-        <div class="box-content">
-          <h4>A Storybook Holiday</h4>
-          <div>Celebrate the sweetness of spring with Winnie the Pooh and his friends from the Hundred Acre Wood. Catered brunch, themed crafts, and fun activities included! Sunday,&nbsp;March&nbsp;26,&nbsp;8-11AM.
-            <div class="margin-top-10"><a href="https://www.eventbrite.com/e/a-storybook-holiday-silly-old-bears-blustery-day-tickets-515064520847" target="_blank"><i>Buy Your Tickets Today</i></a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-	var images = ['cj-box-one.jpg', 'cj-box-two.jpg', 'cj-box-three.jpg', 'cj-box-four.jpg'];
-    $('<img alt="C.J. Box" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#cj-box'); 
-	var images = ['fairy-tale-ball-one.jpg', 'fairy-tale-ball-two.jpg', 'fairy-tale-ball-three.jpg', 'fairy-tale-ball-four.jpg'];
-    $('<img alt="Fairy Tale Ball" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#ftb-box'); 
-    var images = ['storybook-holiday-one.jpg', 'storybook-holiday-two.jpg', 'storybook-holiday-three.jpg', 'storybook-holiday-four.jpg'];
-    $('<img alt="Scholarships" class="img-responsive center-block" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#sbh-box');
-	</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -694,8 +638,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-var random = Math.floor(Math.random() * $('.theme').length);
-$('.theme').hide().eq(random).show();
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
