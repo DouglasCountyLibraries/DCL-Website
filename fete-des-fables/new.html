@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -195,11 +196,10 @@ video {
     justify-content: center;
     text-shadow: 0 6px 6px rgba(0, 0, 0, 1);
 }
-.tickets-row {
-    padding: 60px 0 80px;
-}
 .tickets-wrapper {
-    background: url("tickets-background.png") repeat-x;
+    background: url("tickets-background.png") center top repeat-x;
+    position: relative;
+    margin-top: 40px;
 }
 .tickets {
     font-family: "Open Sans", Arial, sans-serif;
@@ -207,13 +207,25 @@ video {
     flex-direction: column;
     align-content: center;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
     font-weight: 400;
-    max-width: 700px;
+    max-width: 500px;
     margin: 0 auto;
     justify-content: center;
     text-shadow: 0 6px 6px rgba(0, 0, 0, 1);
+    padding-bottom: 60px;
+}
+.btn-custom {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+a.btn.btn-custom {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 36px #fff;
 }
 
 @media (max-width: 500px) {
@@ -448,17 +460,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="info-row">
           <div class="info-wrapper">
-            <div class="padding-bottom-15">You’re invited! Come dressed in your finest—or a favorite themed outfit. Enjoy a signature cocktail, a delicious catered dinner, and a special dessert. This unforgettable evening includes interesting guests, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
+            <div>You’re invited! Come dressed in your finest—or a favorite themed outfit. Enjoy a signature cocktail, a delicious catered dinner, and a special dessert. This unforgettable evening includes interesting guests, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
           </div>
         </div>
       </div>
-      <div class="tickets-row">
+      <div class="row tickets-row">
         <div class="tickets-wrapper">
           <div class="tickets">
-            <div>Highlands Ranch Mansion<br>
-              Friday, September 29, 6PM<br>
+            <div class="large-text">Highlands Ranch Mansion</div>
+            <div>Friday, September 29, 6PM<br>
               Tickets: $125 </div>
-            <div class="padding-top-20 padding-bottom-20"><a href="#" class="btn btn-lg btn-primary btn-custom">Buy Tickets</a></div>
+            <div class="padding-top-30 padding-bottom-30"><a href="#" class="btn btn-lg btn-primary btn-custom">Buy Tickets</a></div>
             <div>Event proceeds benefit Douglas County Libraries Foundation. Add your name to our list of sponsors.</div>
             <div class="padding-top-20 text-uppercase"><a style="font-weight: 400;" href="#" class="white">Sponsorship Package</a> &raquo;</div>
           </div>
@@ -571,4 +583,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
