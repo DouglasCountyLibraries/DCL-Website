@@ -96,13 +96,32 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     font-style: normal;
     font-display: swap;
 }
-.item-row {
-    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
-    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
+.contain-header {
+    position: relative;
+    overflow: hidden;
+}
+video#bgvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #094458 url(shark.jpg) center center no-repeat;
+    background-size: cover;
+}
+video {
+    display: block;
+}
+.item-row, .info-row {
+    position: relative;
 }
 .item-wrapper {
-    background: #1e365b url("") center center/cover;
     font-family: Times, "Times New Roman", serif;
     display: flex;
     flex-direction: column;
@@ -123,6 +142,63 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 }
 .item h1 {
     font-family: "Altown", serif;
+    font-size: 160px;
+    font-weight: 900;
+    color: #fff;
+    margin: 42px 0 54px;
+    line-height: 70px;
+    letter-spacing: -9px;
+}
+.larger-text {
+    font-size: 1.6em;
+    line-height: 1.1;
+}
+.snow {
+    display: flex;
+    justify-content: center;
+}
+.bigs {
+    font-size: 230px;
+    padding-top: 28px;
+    margin-right: -7px;
+}
+.item h2 {
+    font-family: "Austria", sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 0;
+}
+.item h2.queen {
+    font-size: 85px;
+    margin-left: -20px;
+    line-height: 0;
+}
+.the {
+    margin-right: 120px;
+    padding-top: 32px;
+}
+.info-row {
+    padding: 30px 15px 60px;
+}
+.info-wrapper {
+    font-family: Times, "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto;
+    justify-content: center;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 500px) {
+.item h1 {
+    font-family: "Altown", serif;
     font-size: 100px;
     font-weight: 900;
     color: #fff;
@@ -133,6 +209,10 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .snow {
     display: flex;
     justify-content: center;
+}
+.the {
+    margin-right: 120px;
+    padding-top: 0;
 }
 .bigs {
     font-size: 170px;
@@ -151,26 +231,6 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     margin-left: 30px;
     line-height: 5px;
 }
-.the {
-    margin-right: 120px;
-}
-.info-row {
-    background: #1e365b;
-    padding: 30px 15px 60px;
-}
-.info-wrapper {
-    font-family: Times, "Times New Roman", serif;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 400;
-    max-width: 700px;
-    margin: 0 auto;
-    justify-content: center;
-    text-shadow: 0 6px 6px rgba(0, 0, 0, 1);
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -343,22 +403,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row item-row">
-    <div class="item-wrapper">
-      <div class="item">
-        <div class="padding-bottom-30"><i>This snow-flake grew larger and larger, till at last it became the figure of a woman, dressed in garments of white gauze, which looked like millions of starry snow-flakes linked together. She was fair and beautiful, but made of ice—shining and glittering ice.</i></div>
-        <div>Eighth Annual</div>
-        <div class="large-text">Fête des Fables Gala</div>
-        <h2 class="the padding-top-15">The</h2>
-        <h1 class="snow">
-          <div class="bigs">S</div>
-          <div>nOw</div>
-        </h1>
-        <h2 class="queen">Queen</h2>
+  <div class="row">
+    <div class="contain-header">
+      <div class="container">
+        <div class="row main-header">
+          <video autoplay muted loop playsinline poster="shark.jpg" id="bgvid">
+            <source src="winter-background.mp4" type="video/mp4" />
+            Sorry, your browser does not support background videos.
+            <source src="winter-backround.webm" type="video/webm" />
+            Sorry, your browser does not support background videos.</video>
+          <div class="item-row">
+            <div class="item-wrapper">
+              <div class="item">
+                <div class="padding-bottom-30"><i>This snow-flake grew larger and larger, till at last it became the figure of a woman, dressed in garments of white gauze, which looked like millions of starry snow-flakes linked together. She was fair and beautiful, but made of ice—shining and glittering ice.</i></div>
+                <div>Eighth Annual</div>
+                <div class="larger-text">Fête des Fables Gala</div>
+                <h2 class="the padding-top-15">The</h2>
+                <h1 class="snow">
+                  <div class="bigs">S</div>
+                  <div>nOw</div>
+                </h1>
+                <h2 class="queen">Queen</h2>
+              </div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-wrapper">
+              <div class="padding-bottom-15">You’re invited! Come dressed in your finest—or a favorite themed outfit. Enjoy a signature cocktail, a delicious catered dinner, and a special dessert. This unforgettable evening includes interesting guests, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row info-row">
+  <div class="info-row">
     <div class="info-wrapper">
       <div class="padding-bottom-15">You’re invited! Come dressed in your finest—or a favorite themed outfit. Enjoy a signature cocktail, a delicious catered dinner, and a special dessert. This unforgettable evening includes interesting guests, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
     </div>
