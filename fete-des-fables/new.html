@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -99,6 +98,7 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 .contain-header {
     position: relative;
     overflow: hidden;
+    padding: 0 15px;
 }
 video#bgvid {
     position: absolute;
@@ -112,13 +112,13 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: #094458 url(shark.jpg) center center no-repeat;
+    background: #020202 url(winter-background-poster.jpg) center center no-repeat;
     background-size: cover;
 }
 video {
     display: block;
 }
-.item-row, .info-row {
+.item-row, .info-row, .tickets {
     position: relative;
 }
 .item-wrapper {
@@ -179,10 +179,30 @@ video {
     padding-top: 32px;
 }
 .info-row {
-    padding: 30px 15px 60px;
+    padding: 30px 15px 0;
 }
 .info-wrapper {
     font-family: Times, "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto;
+    justify-content: center;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 1);
+}
+.tickets-row {
+    padding: 60px 0 80px;
+}
+.tickets-wrapper {
+    background: url("tickets-background.png") repeat-x;
+}
+.tickets {
+    font-family: "Open Sans", Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -405,40 +425,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row">
     <div class="contain-header">
-      <div class="container">
-        <div class="row main-header">
-          <video autoplay muted loop playsinline poster="shark.jpg" id="bgvid">
-            <source src="winter-background.mp4" type="video/mp4" />
-            Sorry, your browser does not support background videos.
-            <source src="winter-backround.webm" type="video/webm" />
-            Sorry, your browser does not support background videos.</video>
-          <div class="item-row">
-            <div class="item-wrapper">
-              <div class="item">
-                <div class="padding-bottom-30"><i>This snow-flake grew larger and larger, till at last it became the figure of a woman, dressed in garments of white gauze, which looked like millions of starry snow-flakes linked together. She was fair and beautiful, but made of ice—shining and glittering ice.</i></div>
-                <div>Eighth Annual</div>
-                <div class="larger-text">Fête des Fables Gala</div>
-                <h2 class="the padding-top-15">The</h2>
-                <h1 class="snow">
-                  <div class="bigs">S</div>
-                  <div>nOw</div>
-                </h1>
-                <h2 class="queen">Queen</h2>
-              </div>
-            </div>
-          </div>
-          <div class="info-row">
-            <div class="info-wrapper">
-              <div class="padding-bottom-15">You’re invited! Come dressed in your finest—or a favorite themed outfit. Enjoy a signature cocktail, a delicious catered dinner, and a special dessert. This unforgettable evening includes interesting guests, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
+      <div class="row main-header">
+        <video autoplay muted loop playsinline poster="winter-background-poster.jpg" id="bgvid">
+          <source src="winter-background.mp4" type="video/mp4" />
+          Sorry, your browser does not support background videos.
+          <source src="winter-backround.webm" type="video/webm" />
+          Sorry, your browser does not support background videos.</video>
+        <div class="item-row">
+          <div class="item-wrapper">
+            <div class="item">
+              <div class="padding-bottom-30"><i>This snow-flake grew larger and larger, till at last it became the figure of a woman, dressed in garments of white gauze, which looked like millions of starry snow-flakes linked together. She was fair and beautiful, but made of ice—shining and glittering ice.</i></div>
+              <div>Eighth Annual</div>
+              <div class="larger-text">Fête des Fables Gala</div>
+              <h2 class="the padding-top-15">The</h2>
+              <h1 class="snow">
+                <div class="bigs">S</div>
+                <div>nOw</div>
+              </h1>
+              <h2 class="queen">Queen</h2>
             </div>
           </div>
         </div>
+        <div class="info-row">
+          <div class="info-wrapper">
+            <div class="padding-bottom-15">You’re invited! Come dressed in your finest—or a favorite themed outfit. Enjoy a signature cocktail, a delicious catered dinner, and a special dessert. This unforgettable evening includes interesting guests, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="info-row">
-    <div class="info-wrapper">
-      <div class="padding-bottom-15">You’re invited! Come dressed in your finest—or a favorite themed outfit. Enjoy a signature cocktail, a delicious catered dinner, and a special dessert. This unforgettable evening includes interesting guests, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
+      <div class="tickets-row">
+        <div class="tickets-wrapper">
+          <div class="tickets">
+            <div>Highlands Ranch Mansion<br>
+              Friday, September 29, 6PM<br>
+              Tickets: $125 </div>
+            <div class="padding-top-20 padding-bottom-20"><a href="#" class="btn btn-lg btn-primary btn-custom">Buy Tickets</a></div>
+            <div>Event proceeds benefit Douglas County Libraries Foundation. Add your name to our list of sponsors.</div>
+            <div class="padding-top-20 text-uppercase"><a style="font-weight: 400;" href="#" class="white">Sponsorship Package</a> &raquo;</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -546,5 +571,4 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 });
 </script>
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
