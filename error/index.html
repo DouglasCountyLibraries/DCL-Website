@@ -418,6 +418,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     }); 
     </script> 
 <!-- pull the alert into the general-alert div --> 
-
+<script>
+$.get("https://s3.amazonaws.com/website.alert/alert.txt")
+  .done(function( data ) {
+    if ( data !=null ){	$("#general-alert").show().append( data );}
+});
+</script>
 </body>
 </html>
