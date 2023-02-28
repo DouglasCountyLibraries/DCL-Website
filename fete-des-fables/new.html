@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN9FVQVFV8"></script> 
@@ -79,10 +80,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-style: normal;
     font-display: swap;
 }
+.background-row {
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+}
 .contain-header {
     position: relative;
     overflow: hidden;
     padding: 0 15px;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 video#bgvid {
     position: absolute;
@@ -106,7 +114,7 @@ video {
     position: relative;
 }
 .item-wrapper {
-	background: transparent url("icicles.png") center top no-repeat;
+    background: transparent url("icicles.png") center top no-repeat;
     font-family: Times, "Times New Roman", serif;
     display: flex;
     flex-direction: column;
@@ -419,7 +427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row">
+  <div class="row background-row">
     <div class="contain-header">
       <div class="row main-header">
         <video autoplay muted loop playsinline poster="winter-background-poster.jpg" id="bgvid">
@@ -572,4 +580,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
