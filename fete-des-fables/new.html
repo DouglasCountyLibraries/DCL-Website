@@ -197,7 +197,7 @@ video {
     font-size: 20px;
 }
 .tickets-wrapper {
-    background: url("tickets-background.png") center top repeat-x;
+    /*background: url("tickets-background.png") center top repeat-x;*/
     position: relative;
 }
 .tickets {
@@ -495,10 +495,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row background-row">
     <div class="contain-header">
       <div class="row main-header">
-        <video autoplay loop muted playsinline playcount="100000" poster="winter-background-poster.jpg" id="bgvid">
-          <source src="winter-background.mp4" type="video/mp4" />
+        <video autoplay loop muted playsinline poster="winter-background-poster.jpg" id="bgvid">
+          <source src="winter-video.mp4" type="video/mp4" />
           Sorry, your browser does not support background videos.
-          <source src="winter-backround.webm" type="video/webm" />
+          <source src="winter-video.webm" type="video/webm" />
           Sorry, your browser does not support background videos.</video>
         <div class="item-row">
           <div class="item-wrapper">
@@ -596,12 +596,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" -->
-<script>
-$('video').on('ended', function () {
-  this.load();
-  this.play();
-});
-</script>
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
