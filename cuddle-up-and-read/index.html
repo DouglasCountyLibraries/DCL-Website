@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN9FVQVFV8"></script> 
@@ -64,45 +65,167 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
+<script src="../shared-assets/js/biblioList.js?4722"></script>
 <style>
-.heading-row {
-    background-color: #b0c7d3;
+/* ################# */
+.kids-teens-active {
+    background-color: #f5f5f5;
 }
-.photo-right, .photo-left {
-    padding: 15px;
-    border: 1px solid #ccc;
+.shelf-container {
+    max-width: 1170px;
+    margin: 0 auto;
 }
-.photo-right {
-    transform: rotate(1deg);
+.shelf-container img {
+    margin: 15px 15px 8px 15px;
+    vertical-align: bottom;
 }
-.photo-left {
-    transform: rotate(-1deg);
+.shelf > ul {
+    padding: 0;
 }
-* {
+.cover-image-alt {
+    height: 275px;
+    background: #fff;
+    margin: 10px 3px 5px !important;
+    max-width: 210px;
+}
+#covers-outer > ul {
+    margin: 0;
+    padding: 0;
+}
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-width: 1190px;
+    margin: 0 auto;
+}
+.box-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 5px 15px;
+    background: #fff;
+    border-radius: 3px;
+    max-width: 425px;
+}
+.box-item-inner {
+    padding: 0px 30px 75px;
+}
+.gray-circle-wrapper {
+    border: 6px solid #fff;
+    border-radius: 50%;
     box-sizing: border-box;
+    height: 112px;
+    margin: 0 auto;
+    width: 112px;
 }
-.carousel-feature {
-    padding: 30px 0 70px
+.gray-circle {
+    border: 6px solid #e6e4e2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #4f878c;
+    background-color: #fff;
+    font-size: 42px;
+    height: 100px;
+    line-height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+}
+.white-bottom-row {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+    background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+}
+.shelf {
+    border-bottom: 20px solid transparent;
+    border-image: url("../shared-assets/images/shelf.jpg") 30 round;
+    border-top: 0 none;
+    padding-bottom: 0;
+    margin: 0 5px;
+}
+.shelf-shadow, .epic-shelf-shadow {
+    background: #fff url("../shared-assets/images/shelf-shadow.png") repeat-x;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 30px solid #fff;
+    border-right: 30px solid #fff;
+    padding: 0 15px;
 }
 .carousel-cell {
+    text-align: center;
     width: 100%;
 }
 .carousel-cell:before {
     display: block;
     text-align: center;
 }
-.flickity-page-dots {
-    bottom: -40px;
-    opacity: .5;
+/* big buttons, no circle */
+.flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
 }
-.flickity-page-dots .dot {
-    background-color: #fff;
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+    color: #efeeed;
 }
 .flickity-prev-next-button {
-    display: none;
+    top: 30%;
 }
 .flickity-viewport {
     transition: height 0.6s;
+}
+blockquote {
+    font-size: 18px!important;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1050px) {
+.cover-image {
+    max-width: 155px;
+}
+}
+
+@media (max-width: 992px) {
+.shelf-container img {
+    margin: 15px 5px 8px 5px;
+}
+}
+
+@media (max-width: 875px) {
+.shelf {
+    border-bottom: 0;
+    border-image: none;
+}
+.shelf-shadow {
+    background: none;
+}
+.shelf-container {
+    max-width: 575px;
+}
+.shelf-container img {
+    vertical-align: top;
+}
+}
+
+@media (max-width: 800px) {
+.box-wrapper {
+    flex-direction: column;
+}
+.box-item {
+    text-align: center;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -275,84 +398,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row heading-row">
-    <div class="container"> <img class="hidden-xs image-center img-responsive" src="cuddle-up.png" alt="Cuddle Up & Read"><img class="hidden-lg hidden-md hidden-sm image-center img-responsive" src="cuddle-up-small.png" alt="Cuddle Up & Read">
-      <h4 class="roboto black text-center no-margin-top padding-bottom-20">Your baby's lifetime love of reading begins with the library. DCL partners with area hospitals and pediatric doctors' and dentists' offices to provide new parents with a fun, <a class="black text-underline" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="The program includes small gifts for mom and baby and an opportunity to get baby a library card. Parents also receive children's growth charts with age-appropriate reading suggestions, literacy information, and library-service highlights through our local pediatric doctor and dentist partners." data-original-title="" title="">meaningful&nbsp;introduction</a> to the library and our early literacy services. We're committed to building bright futures by inspiring a love of reading, and no baby is too young! </h4>
-    </div>
-  </div>
-  <div class="row carousel-feature bg-lavender">
-    <div class="container margin-lg-200 white text-center">
-      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.30, "autoPlay": 5000 }'>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>Research shows that experiences with reading throughout the early years profoundly affect the development of literacy.</i></h3>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>More than 4,000 Cuddle Up & Read gift packs are distributed to health facilities in Douglas County each year, including Sky Ridge Medical Center, Castle Rock Adventist, Parker Adventist, and UCHealth Highlands Ranch.</i></h3>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>We partner with 30 local pediatric doctors' and dentists' offices (with new ones added annually).</i></h3>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>DCL provides at least 10 new books every year to each of our pediatric partners' offices for use in their waiting rooms.</i></h3>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>Cuddle Up & Read has enjoyed steady growth over the past seven years.</i></h3>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>Early literacy is what children know about reading before they learn to read.</i></h3>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>Reading readiness begins at birth.</i></h3>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div>
-            <h3 class="white"><i>Our Summer Reading Program serves 14,000-18,000 participants annually, including babies. The time parents spend reading to their babies counts as time spent reading.</i></h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row text-center padding-top-60">
-    <div id="bright-future" class="container">
-      <div class="col-md-4 col-sm-6 padding-bottom-15">
-        <div id="box-one"></div>
-      </div>
-      <div class="col-md-4 col-sm-6 hidden-xs padding-bottom-15">
-        <div id="box-two"></div>
-      </div>
-      <div class="col-md-4 hidden-xs hidden-sm padding-bottom-15">
-        <div id="box-three"></div>
-      </div>
-    </div>
-  </div>
-  <div class="row text-center padding-bottom-60">
+  <div class="row border-top">
     <div class="container">
-      <div class="nothing padding-top-15">#BabyBrightFuture</div>
-      <div class="margin-lg-200">Snap a photo of your little one with a book and share it on Twitter, Facebook or Instagram using our hashtag. You'll be entered to win a gift basket of baby books; we'll announce a new winner each month.</div>
+      <div class="text-center">
+        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Cuddle up and Read</h1>
+      </div>
+      <div class="margin-lg-150 text-center margin-bottom-30">
+        <h4 class="roboto margin-top-5">Your baby's lifetime love of reading begins with the library.</h4>
+        <div>DCL partners with area hospitals and pediatric doctors' and dentists' offices to provide new parents with a fun, <a class="black text-underline" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="The program includes small gifts for mom and baby and an opportunity to get baby a library card. Parents also receive children's growth charts with age-appropriate reading suggestions, literacy information, and library-service highlights through our local pediatric doctor and dentist partners." data-original-title="" title="">meaningful&nbsp;introduction</a> to the library and our early literacy services. We're committed to building bright futures by inspiring a love of reading, and no baby is too young! </div>
+      </div>
     </div>
   </div>
-  <script>
-    var images = ['cuddle-one.jpg', 'cuddle-two.jpg'];
-    $('<img alt="Baby Bright Future" class="center-block img-responsive shadow-low photo-left" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
-	var images = ['cuddle-three.jpg', 'cuddle-four.jpg'];
-    $('<img alt="Baby Bright Future" class="center-block img-responsive shadow-low photo-right" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
-	var images = ['cuddle-five.jpg'];
-    $('<img alt="Baby Bright Future" class="center-block img-responsive shadow-low photo-left" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
-</script> 
+  <div class="row">
+    <div class="container margin-lg-200 text-center padding-bottom-15">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
+        <div class="carousel-cell">
+          <div><img alt="" class="img-circle" src="https://source.unsplash.com/200x200/?cartoon" />
+            <div class="padding-top-15">
+              <blockquote>Research shows that experiences with reading throughout the early years profoundly affect the development of literacy.</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="" class="img-circle" src="cuddle-up-and-read-one.jpg" />
+            <div class="padding-top-15">
+              <blockquote>More than 4,000 Cuddle Up & Read gift packs are distributed to health facilities in Douglas County each year, including Sky Ridge Medical Center, Castle Rock Adventist, Parker Adventist, and UCHealth Highlands Ranch.</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="" class="img-circle" src="cuddle-up-and-read-one.jpg" />
+            <div class="padding-top-15">
+              <blockquote>We partner with 30 local pediatric doctors' and dentists' offices (with new ones added annually).</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="" class="img-circle" src="cuddle-up-and-read-one.jpg" />
+            <div class="padding-top-15">
+              <blockquote>DCL provides at least 10 new books every year to each of our pediatric partners' offices for use in their waiting rooms.</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="" class="img-circle" src="cuddle-up-and-read-one.jpg" />
+            <div class="padding-top-15">
+              <blockquote>Cuddle Up & Read has enjoyed steady growth over the past seven years.</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="" class="img-circle" src="cuddle-up-and-read-one.jpg" />
+            <div class="padding-top-15">
+              <blockquote>Reading readiness begins at birth. Early literacy is what children know about reading before they learn to read.</blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div><img alt="" class="img-circle" src="cuddle-up-and-read-one.jpg" />
+            <div class="padding-top-15">
+              <blockquote>Our Summer Reading Program serves 14,000-18,000 participants annually, including babies. The time parents spend reading to their babies counts as time spent reading.</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="storytime-favorites" class="text-center">
+    <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">Storytime Favorites</a></h2>
+  </div>
+  <div id="StorytimeFavorites"></div>
+  <div class="row padding-bottom-60">
+    <div class="shelf-shadow">
+      <div class="padding-top-40 text-center margin-lg-200 margin-md-100"> These are the hand-picked favorites of our children's librarians. These books incorporate fun, play and learning in a way that encourages literacy growth. Enjoy some or all of these with your growing reader!
+        <div class="padding-top-15"><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">See Entire List &raquo;</a></div>
+      </div>
+    </div>
+  </div>
+  <div id="digital-media" class="row bg-gray-5 padding-top-30 padding-bottom-80">
+    <h2 class="text-center">Kids' Digital Media</h2>
+    <div class="box-wrapper">
+      <div id="overdrive-kids" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-child" aria-hidden="true"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="https://dcl.overdrive.com/library/kids" target="_blank">OverDrive Kids</a></h3>
+          <div>Safe e-book search for readers 12 and younger. Filter by format, subject, device or reading level. Includes read-alongs for preschoolers!</div>
+        </div>
+      </div>
+      <div id="kanopy-kids" class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fas fa-photo-video" aria-hidden="true"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <h3 class="text-center margin-top-10"><a href="https://dcl.kanopy.com/kids" target="_blank">Kanopy Kids</a></h3>
+          <div>Unlimited access to educational streaming videos for kids of all ages, as well as movies, storytime videos, classic tales, and much more.</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -413,13 +562,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
- <script>
+<script>
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
  </script> 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
- <script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
 	var cards = $(".carousel-cell");
 for (var i = 0; i < cards.length; i++) {
   var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
@@ -427,8 +576,7 @@ for (var i = 0; i < cards.length; i++) {
   cards.eq(target1).before(cards.eq(target2));
 }
  </script> 
- <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" -->
-
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -464,7 +612,7 @@ for (var i = 0; i < cards.length; i++) {
 		"https:\/\/twitter.com\/DCLcolorado"
 	]
 }
-</script>
+</script> 
 <!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
@@ -478,4 +626,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
