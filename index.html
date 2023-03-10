@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <!-- Google tag (gtag.js) --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN9FVQVFV8"></script> 
@@ -68,285 +69,113 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 <style>
-@font-face {
-    font-family: 'Strawberry';
-    src: url('shared-assets/web-fonts/strawberry_dreams_alternates-webfont.woff2') format('woff2'), url('shared-assets/web-fonts/strawberry_dreams_alternates-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-.pooh-row {
-    background: #eee url("background.jpg") bottom center no-repeat;
-    max-width: 1920px;
-    margin: 0 auto;
-    min-height: 1200px;
-}
 .background-row {
-    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
-    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+    background: url("page-background.jpg") top center repeat-x;
+    padding-bottom: 60px;
 }
-.strawberry {
-    font-family: "Strawberry", sans-serif;
-}
-.times-font {
-    font-family: Times, "Times New Roman", serif;
-    font-weight: 600;
-}
-h1.times-font {
-    font-family: Times, "Times New Roman", serif;
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 34px;
-    color: #7d1d06;
-    line-height: 32px;
-    font-weight: 600;
-}
-h1.strawberry {
-    font-family: "Strawberry", sans-serif;
-    margin: 0;
-    font-size: 64px;
-    color: #7d1d06;
-}
-h4.strawberry {
-    font-family: "Strawberry", sans-serif;
-    text-transform: uppercase;
-    margin: 8px 0 0;
-    font-size: 32px;
-    color: #000;
-}
-.custom-container {
-    display: flex;
-    /* text-align: center; */
-    color: #000;
-    max-width: 600px;
-    flex: 1 2;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+.details-wrapper {
+    max-width: 855px;
+    margin: 0 auto;
 }
 .info-wrapper {
+    font-family: "Open Sans", arial, sans-serif;
+    padding: 180px 15px 600px;
     position: relative;
-    z-index: 1;
+    text-align: center;
 }
-.btn.btn-lg.btn-primary.custom {
-    background-color: #a90d02;
-    text-transform: uppercase;
+h1.info {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #597e40;
+    font-size: 90px;
+    text-align: center;
+    margin: 0;
+    line-height: 90px;
+    word-spacing: -20px;
+    padding-bottom: 5px;
+}
+.info-one {
+    font-size: 20px;
+    color: #741a45;
     font-weight: 400;
+    padding: 10px 0;
 }
-.btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
-    background-color: #7d1d06;
-}
-.leaves-one {
-    background: transparent url("leaves-one.png") top left repeat-x;
-    animation: blow 6.5s linear infinite;
-}
-.leaves-two {
-    background: transparent url("leaves-two.png") top left repeat-x;
-    animation: blow 8s linear infinite;
-}
-@keyframes blow {
-from {
-background-position: -1200px 0;
-}
-to {
-background-position: 0 0;
-}
-}
-.float {
-    position: fixed;
-    top: 160px;
-    z-index: 0;
-    width: 250px;
-    height: 127px;
-    animation: float 25s linear 0s infinite;
-}
-@keyframes float {
-0% {
-transform: translate(-150vw, 350px) rotate(-50deg);
-opacity: 0;
-}
-1% {
-transform: translate(-150vw, 350px) rotate(-50deg);
-opacity: 1;
-}
-99% {
-transform: translate(150vw, 0) rotate(0deg);
-opacity: 1;
-}
-100% {
-transform: translate(150vw, 0) rotate(0deg);
-opacity: 0;
-}
-}
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-.slideshow-row {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    max-width: 1100px;
+.info-two {
+    font-weight: 400;
+    color: #741a45;
+    max-width: 480px;
     margin: 0 auto;
-    /* padding: 90px 30px 215px; */
-    padding: 215px 15px 0 15px;
 }
-.slideshow-content {
-    flex: 1;
-    padding: 0 0 0 30px;
+.info-one a, .info-two a {
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
 }
-.slideshow-image.main {
-    min-height: 450px;
+.info-one a:hover, .info-two a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #000;
 }
-#slideshow {
+.contain-header {
     position: relative;
     overflow: hidden;
-    padding-bottom: 0%;
-    width: 500px;
-} /* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
+    background: #fff;
+    border: 12px solid #fff;
+    border-bottom: 15px solid #fff;
+    border-top: none;
+    padding: 0 15px;
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 1080px;
+}
+video#bgvid {
     position: absolute;
-    z-index: 2;
-    width: 105%;
-    height: 105%;
-    top: -5%;
-    left: -5%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 3s, transform 8s;
-}
-/* slide two */
-#slideshow div {
-    transform-origin: bottom center;
-}
-/* slide three */
-#slideshow div:nth-of-type(2n+1) {
-    transform-origin: bottom right;
-}
-/* slide four */
-#slideshow div:nth-of-type(3n+1) {
-    transform-origin: top right;
-}
-/* slide five */
-#slideshow div:nth-of-type(4n+1) {
-    transform-origin: bottom left;
-}
-/* slide six */
-#slideshow div:nth-of-type(5n+1) {
-    transform-origin: top right;
-}
-/* slide one */
-#slideshow div:nth-of-type(6n+1) {
-    transform-origin: bottom right;
-}
-#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
-    z-index: 1
-}
-#slideshow .fx, #slideshow .fx1 {
-    transform: scale(1.1) translate(1.5%);
-    opacity: 1
-}
-#slideshow div:nth-of-type(1) {
-    background-image: url("catered-brunch.jpg")
-}
-#slideshow div:nth-of-type(2) {
-    background-image: url("puppet-show.jpg")
-}
-#slideshow div:nth-of-type(3) {
-    background-image: url("hunt.jpg")
-}
-#slideshow div:nth-of-type(4) {
-    background-image: url("crafts.jpg")
-}
-#slideshow div:nth-of-type(5) {
-    background-image: url("petting-zoo.jpg")
-}
-#slideshow div:nth-of-type(6) {
-    background-image: url("costumes.jpg")
-}
-/* captions */
-#slideshow span {
-    font-family: 'Strawberry';
-    position: absolute;
-    z-index: 2;
-    text-align: center;
     top: 50%;
     left: 50%;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    font-size: 78px;
-    color: transparent;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    justify-content: center;
-    line-height: 75px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff url("flower-background.jpg") center center no-repeat;
+    background-size: cover;
 }
-#slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
-    z-index: 1
-}
-#slideshow .fx + span, #slideshow .fx1 + span {
-    color: #fff;
-    animation: caption 5s 1s both;
-    text-shadow: 0 6px 20px #000;
-    padding-bottom: 30px;
-}
-@keyframes caption {
-0% {
-opacity:0;
-}
-20% {
-opacity:1;
-}
-90% {
-opacity:1;
-}
-100% {
-opacity:0;
-}
+video {
+    display: block;
 }
 
-@media (max-width: 1320px) {
-.pooh-row {
-    background: #eee url("large-background.jpg") center bottom no-repeat;
-    min-height: 1090px;
+@media (max-width: 800px) {
+video#bgvid {
+    display: none;
 }
-.slideshow-row {
-    padding: 40px 15px 0 15px;
+.row.main-header {
+    background: url(flower-background.jpg) top center no-repeat;
+    min-height: 1080px;
 }
+.background-row {
+    background: url("page-background.jpg") top center repeat-x;
+    padding-bottom: 0;
 }
-
-@media (max-width: 1020px) {
-.pooh-row {
-    background: #eee url("small-background.jpg") center bottom no-repeat;
-}
-.custom-container {
-    justify-content: center;
-}
-.slideshow-content {
-    padding: 15px;
-    text-align: center;
+.contain-header {
+    border: none;
+    border-bottom: none;
 }
 .info-wrapper {
-    max-width: 545px;
-    padding: 15px 15px 510px;
-}
-.slideshow-row, .item-wrapper {
-    flex-direction: column;
-}
-.slideshow-row {
-    padding: 30px 15px 0 15px;
+    padding: 200px 15px 395px;
 }
 }
 
-@media (max-width: 525px) {
-#slideshow {
-    width: 100%;
+@media (max-width: 650px) {
+.row.main-header {
+    background: url(flower-background-small.jpg) top center no-repeat;
 }
-#slideshow span {
-    font-size: 60px;
-    line-height: 58px;
+.info-wrapper {
+    padding: 60px 15px 395px;
 }
 }
 </style>
@@ -521,51 +350,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="pooh-row">
-      <div class="float"><img src="red-balloon.png" alt=""></div>
-      <div class="leaves-one">
-        <div class="leaves-two">
-          <div class="slideshow-row">
-            <div id="slideshow" class="slideshow-image main"> 
-              <!-- define each background-image in CSS -->
-              <div></div>
-              
-              <!-- #slideshow div:nth-of-type(1) --> 
-              <span>Catered<br>
-              Brunch</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(2) --> 
-              <span>Pooh-themed<br>
-              Puppet<br>
-              Show</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(3) --> 
-              <span> Kanga,&nbsp;Roo,<br>
-              &&nbsp;Piglet<br>
-              Hunt</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(4) --> 
-              <span>Crafts<br>
-              &<br>
-              Activities</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(5) --> 
-              <span>Petting<br>
-              Zoo</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(6) --> 
-              <span>Costumes<br>
-              Encouraged</span> </div>
-            <div class="slideshow-content">
-              <div class="info-wrapper">
-                <h1 class="times-font">Silly Old Bear's</h1>
-                <h1 class="strawberry">Blustery Day</h1>
-                <h4 class="strawberry">A Storybook Holiday</h4>
-                <h4 class="times-font black text-uppercase">Sunday, March&nbsp;26, 8-11AM, Highlands&nbsp;Ranch</h4>
-                <h5 class="black font-weight-400 no-margin-bottom"><i>Celebrate spring with Winnie the Pooh and friends!</i></h5>
-                <div class="padding-top-20"><a href="storybook-holiday/" class="btn btn-lg btn-primary custom">Learn More</a></div>
-              </div>
-            </div>
+    <div class="contain-header">
+      <div class="row main-header">
+        <video autoplay loop muted playsinline poster="flower-background.jpg" id="bgvid">
+          <source src="flower-background.mp4" type="video/mp4" />
+          Sorry, your browser does not support background videos.
+          <source src="flower-background.webm" type="video/webm" />
+          Sorry, your browser does not support background videos.</video>
+        <div class="info-wrapper">
+          <div class="details-wrapper">
+            <h1 class="info">THiNK SPRiNG!</h1>
+            <div class="info-one">Exciting <a href="featured-events/#author-events">author&nbsp;events</a> with award-winning, bestselling writers.<br>
+              <a href="reading-challenge/">Reading&nbsp;Challenge</a> inspiration and fun.<br>
+              Free books through Dolly Parton's <a href="imagination-library/">Imagination&nbsp;Library</a>.<br>
+              <i style="font-size: 22px;line-height: 40px;">The sky is the limit!</i></div>
+            <div class="info-two">Don’t forget to upgrade to OverDrive’s Libby app this spring to keep enjoying e-books and audiobooks. <a href="https://www.overdrive.com/apps/libby/switchtolibby">Learn&nbsp;More</a> &raquo;</div>
           </div>
         </div>
       </div>
@@ -630,27 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -700,4 +479,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
