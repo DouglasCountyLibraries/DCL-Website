@@ -455,13 +455,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script src="https://cdn.jsdelivr.net/mark.js/7.0.0/jquery.mark.min.js"></script> 
 <script>
 $(function() {
-  $("input").on("input.highlight", function() {
+  $("input.find").on("input.highlight", function() {
     // Determine specified search term
     var searchTerm = $(this).val();
     // Highlight search term inside a specific context
     $("#context").unmark().mark(searchTerm);
   }).trigger("input.highlight").focus();
-});</script> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+});</script> 
 <script>window.addEventListener('DOMContentLoaded', () => {
 
 	const observer = new IntersectionObserver(entries => {
@@ -481,7 +481,7 @@ $(function() {
 	});
 	
 });</script> 
-<!-- InstanceEndEditable --> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> <!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt")
