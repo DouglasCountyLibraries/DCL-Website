@@ -78,7 +78,7 @@ color: transparent;
     margin-top: 25px;
 }
 .section-nav li.active > a {
-    color: #666;
+    color: #000;
     font-weight: 400;
 }
 .section-nav a {
@@ -95,21 +95,21 @@ section {
     border-top: 2px solid #ededed;
     padding: 20px 0 23px;
 }
-#questions {
-	border-top: 0;
-	padding-top: 0;
+#questions, #borrowing-account {
+    border-top: 0;
+    padding: 0;
 }
 section h4 {
-	margin: 0;
-	line-height: 1;
-	padding-bottom: 10px;
-	color: #333;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 10px;
+    color: #333;
 }
 section h5 {
     font-size: 17px;
-    font-weight: 400;
+    /* font-weight: 400; */
     padding: 10px 0 0;
-    color: #555;
+    color: #333;
     margin: 0;
     line-height: inherit;
 }
@@ -118,7 +118,7 @@ section h5:hover, section h5:focus {
     color: #000;
 }
 .text-box {
-    padding: 3px 0 12px;
+    padding: 10px 0 15px;
 }
 .sidebar-heading {
     font-size: 15px;
@@ -388,47 +388,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </nav>
     </div>
-   
+    
+    <!--######-->
+    <div class="col-sm-9">
+      <section id="questions">
+        <h3 class="text-uppercase font-weight-400">Common Questions</h3>
+        <section id="general-information">
+          <h4>General Information</h4>
+          <h5 class="toggle-text" onclick="$('.cq1').toggle(300);">What are your hours?</h5>
+          <div class="cq1 text-box" style="display:none">Hours and locations <a href="../locations/">are listed here</a>. Holiday closures can be found at the top of the page.</div>
+          <h5 class="toggle-text" onclick="$('.cq2').toggle(300);">Do you take book donations?</h5>
+          <div class="cq2 text-box" style="display:none">Douglas County Libraries gratefully accepts donations of new and used books, music CDs, and DVDs. Before donating, <a href="../library-basics/#donate-books-and-more">please review these guidelines</a>.</div>
+          <h5 class="toggle-text" onclick="$('.cq3').toggle(300);">What happens if I return a book that doesn't belong to the library?</h5>
+          <div class="cq3 text-box" style="display:none">Douglas County School District books and books belonging to other public libraries are returned to them by courier. Personal items are held for seven days, then treated as donations if they remain unclaimed.</div>
+          <h5 class="toggle-text" onclick="$('.cq4').toggle(300);">How can I access Consumer Reports from home?</h5>
+          <div class="cq4 text-box" style="display:none"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank">Consumer Reports</a> is available from our <a href="../research/">Research page</a> using your library card number and PIN.</div>
+          <h5 class="toggle-text" onclick="$('.cq5').toggle(300);">Do you offer online learning courses?</h5>
+          <div class="cq5 text-box" style="display:none">We do! Please visit our <a href="../library-perks/">Library Perks</a> page and use your library card to access <a href="../library-perks/#online-learning">LinkedIn Learning and Mango Languages</a>. LinkedIn Learning can help you learn software, creative, business and technology skills from thousands of video courses taught by industry experts at your own pace. Mango Languages is a language-learning system teaching actual conversation skills for many different languages.</div>
+          <h5 class="toggle-text" onclick="$('.cq6').toggle(300);">Do you have book club sets?</h5>
+          <div class="cq6 text-box" style="display:none">Yes! You can reserve book sets and other resources from <a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a>.</div>
+          <h5 class="toggle-text" onclick="$('.cq7').toggle(300);">Do you have parental controls that let me limit the kinds of titles my children can check out?</h5>
+          <div class="cq7 text-box" style="display:none">Yes. We offer a <a href="../fines-fees-borrowing/#parental-controls">Children’s Library Card</a> that gives parents/guardians of kids under age 15 the option to limit their children’s borrowing to our children’s collection alone.
+            <ul>
+              <li>Parents or legal guardians may change an account to or from the Children’s Library Card at any time. This must be done in person and requires the child’s library card number.</li>
+              <li>Borrowing of physical materials will be limited to those in our children’s collections.</li>
+              <li>Customers logged into OverDrive with a Children’s Card will only be able to check out ebooks and audiobooks that are designated by publishers as written for a juvenile audience. The <a href="https://dcl.overdrive.com/library/kids" target="_blank">OverDrive Kids</a> portal also provides access to exclusively kids’ titles.</li>
+              <li>For streaming video, <a href="https://dcl.kanopy.com/kids" target="_blank">Kanopy Kids</a> provides an interface that lets preschool to middle school-aged kids browse and access titles that are separate from the rest of Kanopy’s offerings. Access to the <a href="https://dcl.kanopy.com/kids" target="_blank">Kanopy Kids</a> collection is unlimited and doesn’t count against the monthly limit.</li>
+              <li>For <a href="https://www.hoopladigital.com/" target="_blank">Hoopla</a> titles, go to "Settings" and turn the "Kids Mode" toggle switch on.</li>
+            </ul>
+          </div>
+        </section>
+        <section id="using-library">
+          <h4>Using the Library</h4>
+          <h5 class="toggle-text" onclick="$('.cq8').toggle(300);">How can I reserve a room?</h5>
+          <div class="cq8 text-box" style="display:none"><a href="../reserve-a-space/">Study Rooms</a> can be reserved for one to four people, depending on location, for up to two hours. <a href="../event-services/">Meeting Rooms</a> can be reserved for larger groups and longer periods of time.</div>
+          <h5 class="toggle-text" onclick="$('.cq9').toggle(300);">Can I print or copy at the library? What is the price?</h5>
+          <div class="cq9 text-box" style="display:none">You can <a href="../library-basics/#print-copy">print and copy</a> during library hours regardless of device, network or location. Prices are listed and subject to change.</div>
+        </section>
+      </section>
       
       <!--######-->
-      <div class="col-sm-9">
-        <section id="questions">
-          <h3 class="text-uppercase font-weight-400">Common Questions</h3>
-          <section id="general-information">
-            <h4>General Information</h4>
-            <h5 class="toggle-text" onclick="$('.text1').toggle(300);">What are your hours?</h5>
-            <div class="text1 text-box" style="display:none">Hours and locations <a href="../locations/">are listed here</a>. Holiday closures can be found at the top of the page.</div>
-            <h5 class="toggle-text" onclick="$('.text2').toggle(300);">Do you take book donations?</h5>
-            <div class="text2 text-box" style="display:none">Douglas County Libraries gratefully accepts donations of new and used books, music CDs, and DVDs. Before donating, <a href="../library-basics/#donate-books-and-more">please review these guidelines</a>.</div>
-            <h5 class="toggle-text" onclick="$('.text3').toggle(300);">What happens if I return a book that doesn't belong to the library?</h5>
-            <div class="text3 text-box" style="display:none">Douglas County School District books and books belonging to other public libraries are returned to them by courier. Personal items are held for seven days, then treated as donations if they remain unclaimed.</div>
-            <h5 class="toggle-text" onclick="$('.text4').toggle(300);">How can I access Consumer Reports from home?</h5>
-            <div class="text4 text-box" style="display:none"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=consumer-reports" target="_blank">Consumer Reports</a> is available from our <a href="../research/">Research page</a> using your library card number and PIN.</div>
-            <h5 class="toggle-text" onclick="$('.text5').toggle(300);">Do you offer online learning courses?</h5>
-            <div class="text5 text-box" style="display:none">We do! Please visit our <a href="../library-perks/">Library Perks</a> page and use your library card to access <a href="../library-perks/#online-learning">LinkedIn Learning and Mango Languages</a>. LinkedIn Learning can help you learn software, creative, business and technology skills from thousands of video courses taught by industry experts at your own pace. Mango Languages is a language-learning system teaching actual conversation skills for many different languages.</div>
-            <h5 class="toggle-text" onclick="$('.text6').toggle(300);">Do you have book club sets?</h5>
-            <div class="text6 text-box" style="display:none">Yes! You can reserve book sets and other resources from <a href="http://www.eventkeeper.com/kitkeeper/index.cfm?curOrg=dclibs" target="_blank">Book Club Express</a>.</div>
-            <h5 class="toggle-text" onclick="$('.text7').toggle(300);">Do you have parental controls that let me limit the kinds of titles my children can check out?</h5>
-            <div class="text7 text-box" style="display:none">Yes. We offer a <a href="../fines-fees-borrowing/#parental-controls">Children’s Library Card</a> that gives parents/guardians of kids under age 15 the option to limit their children’s borrowing to our children’s collection alone.
-              <ul>
-                <li>Parents or legal guardians may change an account to or from the Children’s Library Card at any time. This must be done in person and requires the child’s library card number.</li>
-                <li>Borrowing of physical materials will be limited to those in our children’s collections.</li>
-                <li>Customers logged into OverDrive with a Children’s Card will only be able to check out ebooks and audiobooks that are designated by publishers as written for a juvenile audience. The <a href="https://dcl.overdrive.com/library/kids" target="_blank">OverDrive Kids</a> portal also provides access to exclusively kids’ titles.</li>
-                <li>For streaming video, <a href="https://dcl.kanopy.com/kids" target="_blank">Kanopy Kids</a> provides an interface that lets preschool to middle school-aged kids browse and access titles that are separate from the rest of Kanopy’s offerings. Access to the <a href="https://dcl.kanopy.com/kids" target="_blank">Kanopy Kids</a> collection is unlimited and doesn’t count against the monthly limit.</li>
-                <li>For <a href="https://www.hoopladigital.com/" target="_blank">Hoopla</a> titles, go to "Settings" and turn the "Kids Mode" toggle switch on.</li>
-              </ul>
-            </div>
-          </section>
-          <section id="using-library">
-            <h4>Using the Library</h4>
-            <h5 class="toggle-text" onclick="$('.text8').toggle(300);">How can I reserve a room?</h5>
-            <div class="text8 text-box" style="display:none"><a href="../reserve-a-space/">Study Rooms</a> can be reserved for one to four people, depending on location, for up to two hours. <a href="../event-services/">Meeting Rooms</a> can be reserved for larger groups and longer periods of time.</div>
-            <h5 class="toggle-text" onclick="$('.text9').toggle(300);">Can I print or copy at the library? What is the price?</h5>
-            <div class="text9 text-box" style="display:none">You can <a href="../library-basics/#print-copy">print and copy</a> during library hours regardless of device, network or location. Prices are listed and subject to change.</div>
-          </section>
+      
+      <section id="borrowing-account">
+        <h3 class="text-uppercase font-weight-400">Borrowing & My Account</h3>
+        <section id="borrowing">
+          <h4>Borrowing</h4>
+          <h5 class="toggle-text" onclick="$('.ba1').toggle(300);">How do I request something you don't have?</h5>
+          <div class="ba1 text-box" style="display:none">
+            <div class="padding-bottom-15">If we do not own an item you want to borrow, you may request the item via <a href="../request-title/">Request a Title</a>, which is found at the top of the <a href="../library-basics/">Library Basics</a> page. Click Search Prospector to search for the item in a combined catalog of other Colorado and Wyoming libraries. Check the status of your Prospector Requests by returning to the <a href="https://www.dcl.org/request-title/" target="_blank">Request a Title</a> page.</div>
+            <div>If you can't find the item through Prospector, <a href="https://titlerequest.douglascountylibraries.org/" target="_blank">tell us what you are looking for</a> and we will purchase it or request it from another library district. That process may take 2-6 weeks.</div>
+          </div>
+          <h5 class="toggle-text" onclick="$('.ba2').toggle(300);">I think I lost a library book. What should I do?</h5>
+          <div class="ba2 text-box" style="display:none">Please call or visit the library as soon as you notice. We will usually renew the item to give you more time to look for it. If it is lost you will be charged the cost of the item. We do not accept replacement copies. </div>
         </section>
-      </div>
-   
+        <section id="my-account">
+          <h4>My Account</h4>
+          <h5 class="toggle-text" onclick="$('.text8').toggle(300);">How can I reserve a room?</h5>
+          <div class="text8 text-box" style="display:none"><a href="../reserve-a-space/">Study Rooms</a> can be reserved for one to four people, depending on location, for up to two hours. <a href="../event-services/">Meeting Rooms</a> can be reserved for larger groups and longer periods of time.</div>
+        </section>
+        <section id="holds">
+          <h4>Holds</h4>
+          <h5 class="toggle-text" onclick="$('.text8').toggle(300);">How can I reserve a room?</h5>
+          <div class="text8 text-box" style="display:none"><a href="../reserve-a-space/">Study Rooms</a> can be reserved for one to four people, depending on location, for up to two hours. <a href="../event-services/">Meeting Rooms</a> can be reserved for larger groups and longer periods of time.</div>
+        </section>
+      </section>
+    </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
