@@ -69,9 +69,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 :focus {
     outline: -webkit-focus-ring-color auto 0px;
 }
-input.:focus::placeholder {
-color: transparent;
-}
 .table-contents {
     position: sticky;
     top: 2rem;
@@ -121,7 +118,7 @@ section h5:hover, section h5:focus {
 #questions {
     border-top: 0;
 }
-#general-information, #using-library, #borrowing, #my-account, #holds {
+#general-information, #using-library, #borrowing, #my-account, #holds, #download-stream {
     padding: 15px 0 18px;
 }
 .text-box {
@@ -138,13 +135,6 @@ section h5:hover, section h5:focus {
     font-weight: 400;
     margin-top: 10px;
 }
-.safety-heading {
-    padding-top: 15px;
-}
-.light-gray {
-    color: #999;
-    white-space: nowrap;
-}
 .jumps li a {
     text-transform: uppercase;
     white-space: nowrap;
@@ -157,34 +147,6 @@ section h5:hover, section h5:focus {
 }
 .border-line {
     border-bottom: 2px solid #ededed;
-}
-.find.form-control {
-    margin: 0 auto;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.form-control:focus {
-    border-color: #999;
-    outline: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-mark {
-    background: #ffc9aa;
-    color: #000;
-}
-.welcome-heading {
-    padding-top: 0;
-}
-}
-.logo-hover {
-    transition: transform .2s;
-    display: inline-block;
-}
-.logo-hover:hover {
-    -ms-transform: scale(1.03); /* IE 9 */
-    -webkit-transform: scale(1.03); /* Safari 3-8 */
-    transform: scale(1.03);
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -501,9 +463,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </section>
         <section id="holds">
           <h4>Holds</h4>
-          <h5 class="toggle-text" onclick="$('.text8').toggle(300);">How can I reserve a room?</h5>
-          <div class="text8 text-box" style="display:none"><a href="../reserve-a-space/">Study Rooms</a> can be reserved for one to four people, depending on location, for up to two hours. <a href="../event-services/">Meeting Rooms</a> can be reserved for larger groups and longer periods of time.</div>
+          <h5 class="toggle-text" onclick="$('.ho1').toggle(300);">When signed in to my account, how do I find my holds?</h5>
+          <div class="ho1 text-box" style="display:none">Click on your username at the top of the screen. Find <a href="https://dcl.bibliocommons.com/holds">On Hold</a> under My Borrowing. A click displays the holds in your queue in two sections: Ready Now or Not Ready. See your place in line on the right side of each Not Ready listing.</div>
+          <h5 class="toggle-text" onclick="$('.ho2').toggle(300);">How long is my hold on the hold shelf? </h5>
+          <div class="ho2 text-box" style="display:none">Holds stay on the shelf for six days, through closing on the day they expire. If you are unable to pick up your item before the hold expires, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> before the hold expires for an extension.</div>
         </section>
+      </section>
+      
+      <!--######-->
+      
+      <section id="digital-media">
+        <h3 class="text-uppercase font-weight-400">Digital Media</h3>
+      </section>
+      <section id="download-stream">
+        <h4>Download & Stream</h4>
+        <h5 class="toggle-text" onclick="$('.ds1').toggle(300);">How do I download e-books, audiobooks or other media?</h5>
+        <div class="ds1 text-box" style="display:none">Get started now by using our <a href="../digital-media/">Digital Media</a> page, or search the catalog and <a href="https://dcl.bibliocommons.com/v2/search?query=all&searchType=catalogue&locked=true&f_CIRC=ONLINE">filter by Format</a>.
+          It's easy to download or stream <a href="../digital-media/#e-books">e-books</a>, <a href="../digital-media/#audiobooks" target="_blank" rel="noopener">audiobooks</a>, <a href="../digital-media/#magazines">magazines</a>, <a href="../digital-media/#videos">videos</a> and <a href="../digital-media/#music">music</a> using your library card number and PIN. For assistance, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a>.</div>
+        <h5 class="toggle-text" onclick="$('.ds3').toggle(300);">How can I get help with my OverDrive, Hoopla, Kanopy or Flipster account or app?</h5>
+        <div class="ds3 text-box" style="display:none">Help and Support links for each service can be found on our <a href="../digital-media/">Digital Media</a> page. Contact us for further assistance.</div>
       </section>
     </div>
   </div>
