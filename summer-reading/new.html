@@ -65,6 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 <style>
 @font-face {
@@ -102,12 +103,12 @@ h1.avaline {
     background: #b8d4df;
     padding: 30px 0;
 }
-	.background-two {
-		background: #fff;
-	
-	}
+.background-two {
+    background: #fff;
+}
 .custom-container {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+	font-weight: 400;
     max-width: 1170px;
     margin: 0 auto;
 }
@@ -133,11 +134,27 @@ h1.avaline {
 }
 .intro-text-alt {
     font-size: 18px;
-    padding: 15px 0 10px;
+   
     text-align: center;
     font-weight: 400;
     max-width: 700px;
     margin: 0 auto;
+}
+	.giveaway-text {
+    font-size: 18px;
+    padding: 15px 0 20px;
+    text-align: center;
+    font-weight: 400;
+    max-width: 925px;
+    margin: 0 auto;
+}
+.giveaway-text-alt {
+	font-size: 18px;
+	/* padding: 0px 0 10px; */
+	text-align: center;
+	font-weight: 400;
+	max-width: 875px;
+	margin: 0 auto;
 }
 .custom-container.one {
     border-style: solid;
@@ -147,6 +164,47 @@ h1.avaline {
 }
 .custom-container.two {
     padding: 60px 10px 80px;
+}
+.carousel-cell {
+    text-align: center;
+    width: 100%;
+}
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+}
+.carousel-cell > div > .img-responsive {
+    margin: 0 auto;
+}
+/* big buttons, no circle */
+.flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+    color: #efeeed;
+}
+.flickity-prev-next-button {
+    top: 40%;
+}
+.flickity-viewport {
+    transition: height 0.6s;
+}
+.card-info {
+    font-size: 24px;
+    font-style: normal;
+    text-transform: uppercase;
+	padding: 20px 0;
+    font-weight: 600;
+    margin: 0 auto;
 }
 .custom-container.three {
     padding: 85px 10px 65px;
@@ -160,15 +218,6 @@ h1.avaline {
     vertical-align: middle !important;
     font-weight: normal;
     color: #888;
-}
-.giveaway-text {
-    text-align: center;
-    font-size: 18px;
-    max-width: 870px;
-    margin: 0 auto;
-}
-.alt-text {
-    font-size: 16px;
 }
 
 .background-five {
@@ -265,27 +314,9 @@ h1.avaline {
     margin: 5px;
     border-radius: 3px;
 }
-.giveaway-wrapper {
-    display: flex;
-    justify-content: center;
-}
-.giveaway-item {
-    text-align: center;
-}
-.giveaway-item > ul {
-    padding: 0 30px;
-    margin-bottom: 0;
-}
-.giveaway-item > ul > li, .prize-item > ul > li {
-    padding: 4px 0;
-}
-.giveaway-item > img {
-    border-radius: 10px;
-    transform: rotate(-5deg);
-    box-shadow: -4px 3px 8px 0px rgba(0,0,0,1);
-    -webkit-backface-visibility: hidden;
-    margin: 25px 0 15px;
-}
+
+
+
 .minutes-read {
     text-align: center;
     color: #fff;
@@ -330,9 +361,7 @@ h1.avaline {
     max-width: 500px;
     margin: 0 auto;
 }
-.giveaway-item, .goal-wrapper {
-    flex-direction: column;
-}
+
 .custom-container.one {
     border-style: solid;
     border-width: 30px;
@@ -549,22 +578,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div id="giveaways" class="row background-two">
     <div class="custom-container two">
-      <h3 class="text-center">10 Days of Giveaways</h3>
-      <h5 class="text-center">June 3-12, Register Now for a Chance to Win!</h5>
-      <div class="giveaway-text">
-        <div class="margin-bottom-10">Who wants a treat? We’re giving away 105[five grand] prizes to participants who sign up to read. Register for the Dog Days of Summer for your chance to win!</div>
+      <h2 class="text-center">10 Days of Giveaways</h2>
+      <h3 class="text-center">June 3-12, Register Now for a Chance to Win!</h3>
+      
+        <div class="giveaway-text">Who wants a treat? We’re giving away 105 prizes to participants who sign up to read. Register for the Dog Days of Summer for your chance to win!</div>
+      
+      <div class="container">
+        <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 4000 }'>
+          <div class="carousel-cell">
+            <div><img class="img-responsive" alt="$50 Starbucks Gift Card" src="starbucks-gift-card.png" />
+              <div class="card-info">June 3 Giveaway: $50 Starbucks gift card</div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div><img class="img-responsive" alt="$50 Starbucks Gift Card" src="starbucks-gift-card.png" />
+              <div class="card-info">June 3 Giveaway: $50 Starbucks gift card</div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div><img class="img-responsive" alt="$50 Starbucks Gift Card" src="starbucks-gift-card.png" />
+              <div class="card-info">June 3 Giveaway: $50 Starbucks gift card</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="giveaway-wrapper">
-
-		  
-		  
-		  
-		  
-		  
-		  
-      </div>
-      <div class="giveaway-text">
-        <div class="alt-text text">Each giveaway day features a random drawing for that day’s prize. Everyone registered May 1-July 14 will be entered into the prize drawings. Most prizes mailed directly to winners or delivery will be otherwise arranged. Winners will be announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free.</div>
+      <div class="giveaway-text-alt">
+       Each giveaway day features a random drawing for that day’s prize. Everyone registered May 1-July 14 will be entered into the prize drawings. Most prizes mailed directly to winners or delivery will be otherwise arranged. Winners will be announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free.
       </div>
     </div>
   </div>
@@ -772,6 +811,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
 <script id="rendered-js" >
 const counterUp = window.counterUp.default;
 
