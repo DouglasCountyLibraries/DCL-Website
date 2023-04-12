@@ -101,6 +101,9 @@ h1.bubblegum {
 }
 .background-one {
     background: #b8d4df;
+    background: -moz-linear-gradient(top, #b8d4df 0%, #b8d4df 85%, #cdf9d8 85%, #cdf9d8 100%);
+    background: -webkit-linear-gradient(top, #b8d4df 0%, #b8d4df 85%, #cdf9d8 85%, #cdf9d8 100%);
+    background: linear-gradient(to bottom, #b8d4df 0%, #b8d4df 85%, #cdf9d8 85%, #cdf9d8 100%);
     padding: 30px 0;
 }
 .background-two {
@@ -142,6 +145,13 @@ h1.bubblegum {
 .custom-container.three h4 {
     font-weight: 500;
 }
+.custom-container.four h3 {
+    font-weight: 500;
+    margin: 20px 0 0;
+}
+.custom-container.four h4 {
+    font-weight: 500;
+}
 .intro-text {
     font-size: 18px;
     padding: 15px 0 0;
@@ -179,11 +189,16 @@ h1.bubblegum {
 .custom-container.one {
     border-style: solid;
     border-width: 85px;
-    border-image: url("background-one.jpg") 125 stretch;
-    background: #fff;
+    border-image: url("background-one.png") 125 stretch;
 }
 .custom-container.two {
+    padding: 0 10px 60px;
+}
+.custom-container.three {
     padding: 60px 10px 80px;
+}
+.custom-container.four {
+    padding: 60px 10px;
 }
 .custom-container.three h1, .custom-container.three h3 {
     color: #fff;
@@ -199,6 +214,7 @@ h1.bubblegum {
 }
 .carousel-cell > div > .img-responsive {
     margin: 0 auto;
+    max-width: 350px;
 }
 /* big buttons, no circle */
 .flickity-prev-next-button {
@@ -211,10 +227,10 @@ h1.bubblegum {
 }
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: #efeeed;
+    fill: #fff;
 }
 .flickity-prev-next-button.no-svg {
-    color: #efeeed;
+    color: #fff;
 }
 .flickity-prev-next-button {
     top: 40%;
@@ -234,18 +250,10 @@ h1.bubblegum {
     margin: 0;
     line-height: 60px;
 }
-.custom-container.three {
-    padding: 85px 10px 100px;
-}
-.custom-container.four {
-    padding: 90px 10px 100px;
-    max-width: 1250px;
-}
-
 .link-wrapper {
     display: flex;
     flex-wrap: wrap;
-	padding: 15px 0;
+    padding: 15px 0;
     text-align: center;
     font-size: 22px;
     letter-spacing: 1px;
@@ -262,6 +270,7 @@ h1.bubblegum {
     text-decoration: none;
     font-weight: 600;
     line-height: inherit;
+    border-radius: 3px;
 }
 .link:hover {
     color: #fff;
@@ -275,26 +284,21 @@ h1.bubblegum {
     padding: 15px 0;
 }
 .alt-link {
-	display: flex;
-	flex-direction: column;
-	font-size: 20px;
-	text-transform: uppercase;
-	font-weight: 400;
-	text-align: center;
-	line-height: 20px;
-	margin: 15px;
-	
-
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px;
+    margin: 15px;
 }
-	.alt-link img {
-		margin-bottom: 5px;
-	}
-
+.alt-link img {
+    margin-bottom: 5px;
+}
 .alt-link a {
-	color: #333;
-	font-weight: 600;
-	
-	
+    color: #333;
+    font-weight: 600;
 }
 .prize-wrapper {
     display: flex;
@@ -302,6 +306,7 @@ h1.bubblegum {
     padding: 30px 10px 0;
 }
 .prize-item {
+    max-width: 500px;
     background: #fff;
     padding: 30px 30px 40px;
     margin: 5px;
@@ -310,9 +315,10 @@ h1.bubblegum {
 .goal-wrapper {
     display: flex;
     justify-content: center;
-    padding: 10px 10px 0;
+    padding: 20px 10px 30px;
 }
 .goal-item {
+    max-width: 500px;
     background: #fff;
     padding: 30px 30px 40px;
     margin: 5px;
@@ -323,32 +329,25 @@ h1.bubblegum {
     font-weight: 900;
     color: #f16c55;
     text-align: center;
-    line-height: 115px;
+    line-height: 100px;
 }
 .counter:not(.is-visible) {
     visibility: hidden;
 }
-.box-one:after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 40%;
-    padding-top: 30px;
-    border-bottom: 8px dotted #fff;
+.minutes {
+    color: #f16c55;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
-.box-two {
-    padding-top: 30px;
-    margin-bottom: 25px;
-}
-	.modal {
+.modal {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
-
 }
 
 @media (max-width: 875px) {
-.prize-wrapper {
+.prize-wrapper, .goal-wrapper {
     flex-direction: column;
     padding: 30px 10px 0;
     max-width: 500px;
@@ -528,26 +527,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-one">
     <div class="custom-container one">
-      <div class="text-center">
-        <h1 class="avaline">Dog Days</h1>
-        <h1 class="bubblegum">of summer</h1>
-        <h2>2023 Summer Fun for All Ages</h2>
-        <h3>Saturday, June 3-Monday, July 31</h3>
-      </div>
-      <div class="intro-text">
-        <div>Fetch some fun during your summer of reading with exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.</div>
-      </div>
-      <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
-      <div class="intro-text-alt">You can also do the supplemental activities we suggest on <a href="#" target="_blank">the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have a ball while doing it!</div>
-      <div class="alt-link-wrapper">
-        <div class="alt-link"><img src="raise-the-woof.png" alt=""><a href="#" target="_blank">Raise the Woof<br>
-          Kickoff</a></div>
-        <div class="alt-link"><img src="summer-events.png" alt="">
-          <a href="#" target="_blank">Bow-Wow<br>
-          Summer Events</a></div>
-        <div class="alt-link"><img src="jokes.png" alt="">
-          <a href="#" target="_blank">Pawsome<br>
-          Jokes & Facts</a></div>
+      <div style="background-color: #fff">
+        <div class="text-center">
+          <h1 class="avaline">Dog Days</h1>
+          <h1 class="bubblegum">of summer</h1>
+          <h2>2023 Summer Fun for All Ages</h2>
+          <h3>Saturday, June 3-Monday, July 31</h3>
+        </div>
+        <div class="intro-text">
+          <div>Fetch some fun during your summer of reading with exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.</div>
+        </div>
+        <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
+        <div class="intro-text-alt">You can also do the supplemental activities we suggest on <a href="#" target="_blank">the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have a ball while doing it!</div>
+        <div class="alt-link-wrapper">
+          <div class="alt-link"><img src="raise-the-woof.png" alt=""><a href="#" target="_blank">Raise the Woof<br>
+            Kickoff</a></div>
+          <div class="alt-link"><img src="summer-events.png" alt=""> <a href="#" target="_blank">Bow-Wow<br>
+            Summer Events</a></div>
+          <div class="alt-link"><img src="jokes.png" alt=""> <a href="#" target="_blank">Pawsome<br>
+            Jokes & Facts</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -555,75 +554,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="custom-container two text-center">
       <h1 class="bubblegum">10 Days of Giveaways</h1>
       <h3 class="text-uppercase">10 Lucky Winners Each Day, June 3-12</h3>
-      <div class="giveaway-text">Who wants a treat? We’re giving away 105 prizes to participants who sign up to read.<br>
-        <a href="#">Register for the Dog Days of Summer</a> for your chance to win!</div>
+      <div class="giveaway-text">Who wants a treat? We’re giving away 105 prizes to participants who sign up to read. <a href="#">Register for the Dog Days of Summer</a> for your chance to win!</div>
       <div class="container">
         <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 4000 }'>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$50 Starbucks Gift Card" src="starbucks-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$50 Starbucks Gift Card" src="starbucks-gift-card.png"/>
               <div class="card-info">June 3 Giveaway:
                 <h2>$50.00</h2>
                 <span class="vendor">Starbucks Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$50 Rocket Fizz Gift Card" src="rocket-fizz-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$50 Rocket Fizz Gift Card" src="rocket-fizz-gift-card.png"/>
               <div class="card-info">June 4 Giveaway:
                 <h2>$50.00</h2>
                 <span class="vendor">Rocket Fizz Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$50 Amazon Gift Card" src="amazon-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$50 Amazon Gift Card" src="amazon-gift-card.png"/>
               <div class="card-info">June 5 Giveaway:
                 <h2>$50.00</h2>
                 <span class="vendor">Amazon Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$50 Target Gift Card" src="target-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$50 Target Gift Card" src="target-gift-card.png"/>
               <div class="card-info">June 6 Giveaway:
                 <h2>$50.00</h2>
                 <span class="vendor">Target Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$75 Whole Foods Gift Card" src="whole-foods-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$75 Whole Foods Gift Card" src="whole-foods-gift-card.png"/>
               <div class="card-info">June 7 Giveaway:
                 <h2>$75.00</h2>
                 <span class="vendor">Whole Foods Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$75 Lowes Gift Card" src="lowes-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$75 Lowes Gift Card" src="lowes-gift-card.png"/>
               <div class="card-info">June 8 Giveaway:
                 <h2>$75.00</h2>
                 <span class="vendor">Lowes Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$100 Boondocks Gift Card" src="boondocks-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$100 Boondocks Gift Card" src="boondocks-gift-card.png"/>
               <div class="card-info">June 9 Giveaway:
                 <h2>$100.00</h2>
                 <span class="vendor">Boondocks Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$100 King Soopers Gift Card" src="king-soopers-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$100 King Soopers Gift Card" src="king-soopers-gift-card.png"/>
               <div class="card-info">June 10 Giveaway:
                 <h2>$100.00</h2>
                 <span class="vendor">King Soopers Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$200 Barnes & Noble Gift Card" src="barnes-noble-gift-card.jpg"/>
+            <div><img class="img-responsive" alt="$200 Barnes & Noble Gift Card" src="barnes-noble-gift-card.png"/>
               <div class="card-info">June 11 Giveaway:
                 <h2>$200.00</h2>
                 <span class="vendor">Barnes & Noble Gift Card</span></div>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="$250 Amazon Gift Card" src="amazon-gift-card-alt.jpg"/>
+            <div><img class="img-responsive" alt="$250 Amazon Gift Card" src="amazon-gift-card-alt.png"/>
               <div class="card-info">June 12 Giveaway:
                 <h2>$250.00</h2>
                 <span class="vendor">Amazon Gift Card</span></div>
@@ -665,15 +663,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="custom-container four">
       <h1 class="bubblegum text-center">Goals</h1>
       <h3 class="text-uppercase text-center">Help us meet our community goal of 9 million minutes read!</h3>
-      <div class="counter">12000</div>
-      <h1 class="text-center">Minutes Read</h1>
+      <div class="counter">1,523,243</div>
+      <div class="minutes text-center">Minutes Read</div>
       <div class="goal-wrapper">
         <div class="goal-item">
-          <h4 class="no-margin-top noto white text-center">Add your minutes to help us meet our goal.</h4>
+          <h4 class="no-margin-top">Add your minutes to help us meet our goal.</h4>
           <div>If we meet the community goal, the <a href="../foundation/">Douglas County Libraries Foundation</a> will donate $1,000 to Guide Dogs for the Blind, whose mission is to harness the power of partnerships&mdash;connecting people, dogs, and communities&mdash;to transform the lives of individuals with visual impairments.</div>
         </div>
         <div class="goal-item">
-          <h4 class="no-margin-top noto white text-center">Help your school earn $500!</h4>
+          <h4 class="no-margin-top">Help your school earn $500!</h4>
           All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school’s name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>, schools <a href="#" data-toggle="modal" data-target="#modalleaderboard">schools currently in the lead</a>. </div>
       </div>
       <div class="text-center">
