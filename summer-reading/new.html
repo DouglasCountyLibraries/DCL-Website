@@ -113,7 +113,7 @@ h1.bubblegum {
     background: #ed5b48;
 }
 .background-four {
-    background: #87c2ea;
+    background: #87c2ea url("tiled-blue-background.jpg");
 }
 .custom-container {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -144,6 +144,10 @@ h1.bubblegum {
 }
 .custom-container.three h4 {
     font-weight: 500;
+}
+.custom-container.four h2 {
+    font-weight: 500;
+    margin: 0 0 15px;
 }
 .custom-container.four h3 {
     font-weight: 500;
@@ -190,7 +194,7 @@ h1.bubblegum {
     border-style: solid;
     border-width: 65px;
     border-image: url("intro-background.png") 125 stretch;
-	border-color: #fff;
+    border-color: #fff;
 }
 .custom-container.two {
     padding: 0 10px 60px;
@@ -228,10 +232,10 @@ h1.bubblegum {
 }
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: #fff;
+    fill: rgba(255,255,255,.6);
 }
 .flickity-prev-next-button.no-svg {
-    color: #fff;
+    color: rgba(255,255,255,.6);
 }
 .flickity-prev-next-button {
     top: 40%;
@@ -279,10 +283,10 @@ h1.bubblegum {
     transition-duration: 0.4s;
 }
 .alt-link-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding: 15px 0 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0 25px;
 }
 .alt-link {
     display: flex;
@@ -314,8 +318,8 @@ h1.bubblegum {
     border-radius: 3px;
 }
 .prize-item:nth-of-type(2) {
-	background: #fff url("rando-dog.png") 97% bottom no-repeat;
-	padding-right: 80px;
+    background: #fff url("rando-dog.png") 97% bottom no-repeat;
+    padding-right: 80px;
 }
 .goal-wrapper {
     display: flex;
@@ -344,6 +348,19 @@ h1.bubblegum {
     font-size: 32px;
     text-transform: uppercase;
     font-weight: 600;
+}
+.leaderboard-wrapper {
+    background: #fff;
+    max-width: 1010px;
+    margin: 0 auto;
+}
+.leaderboard-wrapper > .table-responsive > .table {
+    margin: 0;
+}
+.leaderboard-wrapper > .table-responsive > .table > thead > tr > th {
+    border-bottom-width: 0px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 .modal {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -677,8 +694,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="goal-item">
           <h4 class="no-margin-top">Help your school earn $500!</h4>
-          All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school’s name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>, schools <a href="#" data-toggle="modal" data-target="#modalleaderboard">schools currently in the lead</a>. </div>
+          All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school’s name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>. </div>
       </div>
+      <h2 class="text-uppercase text-center">Who's Ahead?*</h2>
+      <div class="leaderboard-wrapper">
+        <div class="table-responsive">
+          <table class="table table-bordered table-condensed" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="smaller">First Place</th>
+                <th class="smaller">Second Place</th>
+                <th class="smaller">Third Place</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="smaller">Elementary</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="smaller">Middle</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="smaller">High</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="smaller">Other (Charter/K-12)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><div class="text-center padding-top-15 padding-bottom-15">*Leader board will be updated each Monday through July 31.</div>
       <div class="text-center">
         <h4>Thanks to Our Sponsor!</h4>
         <a href="../foundation/"><img src="foundation-logo.png" alt="Douglas County Libraries Foundation Logo"></a></div>
@@ -701,59 +759,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modalleaderboard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div style="border-bottom: 0; padding-bottom: 0;" class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 style="color: #333;" class="text-center modal-title">Who's Ahead?*</h3>
-        </div>
-        <div class="modal-body padding-30">
-          <div class="table-responsive">
-            <table class="table table-bordered table-condensed" width="100%" border="0" cellspacing="0" cellpadding="0">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th class="smaller">First Place</th>
-                  <th class="smaller">Second Place</th>
-                  <th class="smaller">Third Place</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="smaller">Elementary</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="smaller">Middle</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="smaller">High</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="smaller">Other (Charter/K-12)</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="text-center padding-bottom-15">*Leader board will be updated each Monday through July 31.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
