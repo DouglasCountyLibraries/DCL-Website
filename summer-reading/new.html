@@ -101,19 +101,24 @@ h1.bubblegum {
 }
 .background-one {
     background: #b8d4df;
-    background: -moz-linear-gradient(top, #b8d4df 0%, #b8d4df 50%, #faae32 95%, #faae32 100%);
-    background: -webkit-linear-gradient(top, #b8d4df 0%, #b8d4df 50%, #faae32 95%, #faae32 100%);
-    background: linear-gradient(to bottom, #b8d4df 0%, #b8d4df 50%, #faae32 95%, #faae32 100%);
-    padding: 30px 0 40px;
+    margin-top: -3px;
 }
+/*.background-one {
+	background: #b8d4df;
+	padding: 30px 0 0px;
+	margin-bottom: -60px;
+}*/
 .background-two {
     background: #faae32;
+    margin-top: -3px;
 }
 .background-three {
     background: #ed5b48;
+    margin-top: -3px;
 }
 .background-four {
-    background: #87c2ea url("tiled-blue-background.jpg");
+    background: #87c2ea url("tiled-blue-background.jpg") top center repeat;
+    margin-top: -3px;
 }
 .custom-container {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -165,7 +170,7 @@ h1.bubblegum {
     padding: 15px 0 0;
     text-align: center;
     font-weight: 400;
-    /* max-width: 925px; */
+    max-width: 925px;
     margin: 0 auto;
 }
 .intro-text-alt {
@@ -199,17 +204,21 @@ h1.bubblegum {
     font-size: 26px;
 }
 .custom-container.one {
+    background: url("background-one.png") center center/cover;
+    padding: 60px 10px 60px;
+}
+/*.custom-container.one {
     border-style: solid;
     border-width: 65px;
     border-image: url("intro-background.png") 125 stretch;
     border-color: #fff;
-}
+} */
 .custom-container.two {
-    padding: 0 10px 60px;
+    padding: 60px 10px 60px;
     color: #000;
 }
 .custom-container.three {
-    padding: 60px 10px 80px;
+    padding: 70px 10px 100px;
 }
 .custom-container.four {
     background: url("skateboard-dog.png") center bottom no-repeat;
@@ -383,6 +392,41 @@ h1.bubblegum {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
+}
+.row-line-one {
+    height: 3px;
+    width: 98%;
+    background: #333;
+    transform: rotate(-.4deg);
+    margin: 0 auto;
+}
+.row-line-two {
+    height: 3px;
+    width: 97%;
+    background: #333;
+    transform: rotate(.6deg);
+    margin: 0 1%;
+}
+.row-line-three {
+    height: 3px;
+    width: 98%;
+    background: #333;
+    transform: rotate(-.9deg);
+    margin: 0 auto;
+}
+.row-line-four {
+    height: 3px;
+    width: 99%;
+    background: #333;
+    transform: rotate(.9deg);
+    margin: 0 1%;
+}
+.row-line-five {
+    height: 3px;
+    width: 96%;
+    background: #333;
+    transform: rotate(.4deg);
+    margin: 0 auto -3px auto;
 }
 
 @media (max-width: 875px) {
@@ -564,31 +608,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
+  <div class="row-line-one"></div>
   <div class="row background-one">
     <div class="custom-container one">
-      <div style="background-color: #fff">
-        <div class="text-center">
-          <h1 class="avaline">Dog Days</h1>
-          <h1 class="bubblegum">of summer</h1>
-          <h2>2023 Summer Fun for All Ages</h2>
-          <h3>Saturday, June 3-Monday, July 31</h3>
-        </div>
-        <div class="intro-text">
-          <div>Fetch some fun during your summer of reading with exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.</div>
-        </div>
-        <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
-        <div class="intro-text-alt">You can also do the supplemental activities we suggest on <a href="#" target="_blank">the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have a ball while doing it!</div>
-        <div class="alt-link-wrapper">
-          <div class="alt-link"><img src="raise-the-woof.png" alt=""><a href="#" target="_blank">Raise the Woof<br>
-            Kickoff</a></div>
-          <div class="alt-link"><img src="summer-events.png" alt=""> <a href="#" target="_blank">Bow-Wow<br>
-            Summer Events</a></div>
-          <div class="alt-link"><img src="jokes.png" alt=""> <a href="#" target="_blank">Pawsome<br>
-            Jokes & Facts</a></div>
-        </div>
+      <div class="text-center">
+        <h1 class="avaline">Dog Days</h1>
+        <h1 class="bubblegum">of summer</h1>
+        <h2>2023 Summer Fun for All Ages</h2>
+        <h3>Saturday, June 3-Monday, July 31</h3>
+      </div>
+      <div class="intro-text">
+        <div>Fetch some fun during your summer of reading with exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.</div>
+      </div>
+      <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a></div>
+      <div class="intro-text-alt">You can also do the supplemental activities we suggest on <a href="#" target="_blank">the reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have a ball while doing it!</div>
+      <div class="alt-link-wrapper">
+        <div class="alt-link"><img src="raise-the-woof.png" alt=""><a href="#" target="_blank">Raise the Woof<br>
+          Kickoff</a></div>
+        <div class="alt-link"><img src="summer-events.png" alt=""> <a href="#" target="_blank">Bow-Wow<br>
+          Summer Events</a></div>
+        <div class="alt-link"><img src="jokes.png" alt=""> <a href="#" target="_blank">Pawsome<br>
+          Jokes & Facts</a></div>
       </div>
     </div>
   </div>
+  <div class="row-line-two"></div>
   <div id="giveaways" class="row background-two">
     <div class="custom-container two text-center">
       <h1 class="bubblegum" style="color: #000;">10 Days of Giveaways</h1>
@@ -667,10 +711,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
           <div class="carousel-cell">
-            <div><img class="img-responsive" alt="Wiender Dog" src="wiener-dog.jpg"/>
+            <div><img class="img-responsive" alt="Wiender Dog" src="wiener-dog.gif"/>
               <div class="card-info">
                 <h2 style="padding-top: 30px;">Wiener Dog</h2>
-                (He so wanted to be on this page)</div>
+                (He sooo wanted to be on this page!)</div>
             </div>
           </div>
         </div>
@@ -678,6 +722,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="giveaway-text-alt"> Each giveaway day features a random drawing for that day’s prize. Everyone registered May 1-July 14 will be entered into the prize drawings. Most prizes mailed directly to winners or delivery will be otherwise arranged. Winners will be announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free. </div>
     </div>
   </div>
+  <div class="row-line-three"></div>
   <div id="prizes" class="row background-three">
     <div class="custom-container three">
       <h1 class="bubblegum white text-center">Prizes</h1>
@@ -705,6 +750,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <div class="row-line-four"></div>
   <div id="goals" class="row background-four">
     <div class="custom-container four">
       <h1 class="bubblegum text-center" style="color: #000;">Goals</h1>
@@ -767,6 +813,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <a href="../foundation/"><img src="foundation-logo.png" alt="Douglas County Libraries Foundation Logo"></a></div>
     </div>
   </div>
+  <div class="row-line-five"></div>
   
   <!-- Modal -->
   <div class="modal fade" id="modalrules" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
