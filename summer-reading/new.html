@@ -83,6 +83,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-display: swap;
     text-rendering: optimizeLegibility;
 }
+	.background-row {
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+	background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+	background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+}
+	.row-wrapper {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
 h1.avaline {
     font-family: 'AvalineScriptSC', serif;
     text-transform: uppercase;
@@ -100,7 +109,8 @@ h1.bubblegum {
 }
 .background-one {
     background: #b8d4df;
-    margin-top: -3px;
+    margin-top: 8px;
+	border-radius: 5px;
 }
 /*.background-one {
 	background: #b8d4df;
@@ -109,15 +119,18 @@ h1.bubblegum {
 }*/
 .background-two {
     background: #faae32;
-    margin-top: -3px;
+    margin-top: 5px;
+	border-radius: 5px;
 }
 .background-three {
     background: #ed5b48;
-    margin-top: -3px;
+    margin-top: 5px;
+	border-radius: 5px;
 }
 .background-four {
     background: #87c2ea url("tiled-blue-background.jpg") top center repeat;
-    margin-top: -3px;
+    margin-top: 5px;
+	border-radius: 5px;
 }
 .custom-container {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -397,35 +410,35 @@ h1.bubblegum {
     width: 98%;
     background: #333;
     transform: rotate(-.4deg);
-    margin: 0 auto;
+    margin: 10px auto 0;
 }
 .row-line-two {
     height: 3px;
     width: 97%;
     background: #333;
     transform: rotate(.6deg);
-    margin: 0 1%;
+    margin: 10px 1% 0;
 }
 .row-line-three {
     height: 3px;
     width: 98%;
     background: #333;
     transform: rotate(-.9deg);
-    margin: 0 auto;
+    margin: 10px auto 0;
 }
 .row-line-four {
     height: 3px;
     width: 99%;
     background: #333;
     transform: rotate(.9deg);
-    margin: 0 1%;
+    margin: 10px 1% 0;
 }
 .row-line-five {
     height: 3px;
     width: 96%;
     background: #333;
-    transform: rotate(.4deg);
-    margin: 0 auto -3px auto;
+    transform: rotate(.7deg);
+    margin: 0 auto 20px auto;
 }
 
 @media (max-width: 875px) {
@@ -606,7 +619,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- End Mobile Navbar -->
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
-  <!-- InstanceBeginEditable name="Content" -->
+  <!-- InstanceBeginEditable name="Content" --><div class="row background-row"><div class="row-wrapper">
   <div class="row-line-one"></div>
   <div class="row background-one">
     <div class="custom-container one">
@@ -812,7 +825,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <a href="../foundation/"><img src="foundation-logo.png" alt="Douglas County Libraries Foundation Logo"></a></div>
     </div>
   </div>
-  <div class="row-line-five"></div>
+  <div class="row-line-five"></div></div></div>
   
   <!-- Modal -->
   <div class="modal fade" id="modalrules" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
