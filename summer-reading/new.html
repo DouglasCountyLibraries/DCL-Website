@@ -111,7 +111,7 @@ h1.bubblegum {
 .background-one {
     background: #b8d4df;
     margin-top: 8px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 /*.background-one {
 	background: #b8d4df;
@@ -121,17 +121,17 @@ h1.bubblegum {
 .background-two {
     background: #faae32;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .background-three {
     background: #ed5b48;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .background-four {
     background: #87c2ea url("tiled-blue-background.jpg") top center repeat;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 .custom-container {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -193,7 +193,7 @@ h1.bubblegum {
 }
 .custom-container.four h2 {
     font-weight: 500;
-    margin: 0 0 15px;
+    margin: 15px 0 15px;
 }
 .custom-container.four h3 {
     font-weight: 500;
@@ -348,7 +348,6 @@ h1.bubblegum {
 .alt-link-wrapper {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 15px 0 25px;
 }
 .alt-link {
@@ -387,7 +386,7 @@ h1.bubblegum {
 .goal-wrapper {
     display: flex;
     justify-content: center;
-    padding: 20px 10px;
+    padding: 20px 10px 0;
 }
 .goal-item {
     max-width: 500px;
@@ -474,16 +473,49 @@ h1.bubblegum {
 @media (max-width: 875px) {
 .prize-wrapper, .goal-wrapper {
     flex-direction: column;
-    padding: 30px 10px 0;
+    padding: 30px 0 0;
     max-width: 500px;
     margin: 0 auto;
 }
 .custom-container.one {
-	background: url("background-one-small.jpg") top center/cover;
-	padding: 75px 10px 45px;
+    background: url("background-one-small.jpg") top center/cover;
+    padding: 75px 10px 45px;
 }
 .intro-text, .intro-text-alt {
     max-width: 655px;
+}
+.goal-item, .prize-item {
+    margin: 5px 0;
+}
+.prize-item:nth-of-type(2) {
+    padding: 30px 150px 40px 30px;
+}
+}
+
+@media (max-width: 575px) {
+.alt-link-wrapper {
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+}
+.alt-link {
+    height: 205px;
+    width: 195px;
+    margin-top: -10px;
+}
+.alt-link:nth-of-type(3) {
+    margin-top: -35px;
+}
+.custom-container.four {
+    background: url("skateboard-dog-alt.png") center bottom no-repeat;
+    padding: 60px 10px 250px;
+}
+}
+
+@media (max-width: 475px) {
+.prize-item:nth-of-type(2) {
+    background: #fff;
+    padding: 30px 30px 40px;
 }
 }
 </style>
@@ -678,11 +710,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <!--<div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a> </div>-->
           <div class="intro-text-alt">You can also do the supplemental activities we suggest on the reading log. We aren’t set on you reading 900 minutes, we just want you to read and have a ball while doing it!</div>
           <div class="alt-link-wrapper">
-            <div class="alt-link"><img src="raise-the-woof.png" alt=""><a href="#" target="_blank">Raise the Woof<br>
+            <div class="alt-link"><img class="img-responsive" src="raise-the-woof.png" alt=""><a href="#" target="_blank">Raise the Woof<br>
               Kickoff</a></div>
-            <div class="alt-link"><img src="summer-events.png" alt=""> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=180" target="_blank">Bow-Wow<br>
+            <div class="alt-link"><img class="img-responsive" src="summer-events.png" alt=""> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=180" target="_blank">Bow-Wow<br>
               Summer Events</a></div>
-            <div class="alt-link"><img src="jokes.png" alt=""> <a href="#" target="_blank">Pawsome<br>
+            <div class="alt-link"><img class="img-responsive" src="jokes.png" alt=""> <a href="#" target="_blank">Pawsome<br>
               Jokes & Facts</a></div>
           </div>
         </div>
