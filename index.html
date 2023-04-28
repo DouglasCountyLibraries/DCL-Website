@@ -69,6 +69,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Cormorant:wght@400;600&display=swap" rel="stylesheet">
+	<!-- modal popup once per session, expires after 7 days --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('scottpop') == null) {
+                     $('#scottModal').modal('show');
+                     $.cookie('scottpop', '7');
+                 }
+             });
+</script>
 <style>
 .kendra-content {
     background: url("kendra-scott-background.jpg") top center/cover;
@@ -446,13 +456,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   
   <!-- Modal -->
-  <div class="modal fade" id="campModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="scottModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content kendra-content">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
         <div class="kendra-wrapper">
           <h1>Shop, Gift, Give Back</h1>
-          <h3>Shop Kendra Scott jewelry for lasting gifts for Mother’s Day, graduation, and more, and 20% goes back to the <a class="text-underline black" href="foundation/">DCL Foundation</a>.</h3>
+          <h3>Shop Kendra Scott jewelry for lasting gifts for Mother’s Day, graduation, and more, and 20% goes back to the DCL Foundation.</h3>
           <div>In-Store Park Meadows: April 29, 12-2pm</div>
           <div>
             <div>Online at <a href="https://www.kendrascott.com/" target="_blank" class="text-underline black">kendrascott.com</a>: April 28-29, use code</div>
