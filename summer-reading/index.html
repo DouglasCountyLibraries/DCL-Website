@@ -126,6 +126,35 @@ h1.bubblegum {
     background: #87c2ea url("tiled-blue-background.jpg") top center repeat;
     margin-top: 5px;
     border-radius: 3px;
+    padding-bottom: 30px;
+}
+.skating-background {
+    /* padding: 60px 10px; */
+    min-height: 250px;
+    background: transparent url("skateboarding.png") bottom center repeat-x;
+    -webkit-animation: left-slide 35s linear infinite;
+    animation: left-slide 35s linear infinite;
+    position: relative;
+    z-index: 1;
+    margin-top: -250px;
+    margin-bottom: 0;
+    bottom: 29px;
+}
+@-webkit-keyframes left-slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 5000px 0;
+}
+}
+@keyframes left-slide {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 5000px 0;
+}
 }
 .custom-container {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -147,8 +176,7 @@ h1.bubblegum {
     padding: 70px 10px 100px;
 }
 .custom-container.four {
-    background: url("skateboard-dog.png") center bottom no-repeat;
-    padding: 60px 10px;
+    padding: 60px 10px 70px;
     color: #000;
 }
 .custom-container.three h1, .custom-container.three h3 {
@@ -456,8 +484,7 @@ h1.bubblegum {
     height: 3px;
     width: 96%;
     background: #333;
-    transform: rotate(.8deg);
-    margin: 0 auto 25px auto;
+    margin: -30px auto 25px auto;
 }
 
 @media (max-width: 875px) {
@@ -495,10 +522,6 @@ h1.bubblegum {
 }
 .alt-link:nth-of-type(3) {
     margin-top: -35px;
-}
-.custom-container.four {
-    background: url("skateboard-dog-alt.png") center bottom no-repeat;
-    padding: 60px 10px 250px;
 }
 }
 
@@ -932,11 +955,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
           <div class="text-center padding-top-15 padding-bottom-15">*Leader board will be updated each Monday through July 31.</div>
-          <div class="text-center">
-            <h4>Thanks to Our Sponsor!</h4>
-            <a href="../foundation/"><img src="foundation-logo.png" alt="Douglas County Libraries Foundation Logo"></a></div>
         </div>
       </div>
+      <div class="skating-background"></div>
       <div class="row-line-five"></div>
     </div>
   </div>
