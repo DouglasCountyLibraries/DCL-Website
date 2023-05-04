@@ -69,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Cormorant:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 <style>
 .background-row {
     background: url("page-background.jpg") top center repeat-x;
@@ -78,27 +78,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .details-wrapper {
     max-width: 855px;
     margin: 0 auto;
+    padding: 25px 0 140px;
 }
 .info-wrapper {
-	font-family: "Open Sans", arial, sans-serif;
-	padding: 200px 15px 580px;
-	position: relative;
-	text-align: center;
+    font-family: "Open Sans", arial, sans-serif;
+    padding: 0 15px 0;
+    position: relative;
+    text-align: center;
+    background: url(noun-doodle.png) bottom center no-repeat;
+    margin-top: 230px;
 }
 h1.info {
-    font-family: 'Caveat Brush', cursive;
-    color: #7cb059;
+    font-family: 'Caveat Brush', sans-serif;
+    color: #204999;
     font-size: 98px;
     text-align: center;
     line-height: 72px;
-    text-shadow: 0px 0px 20px #fff;
-    margin-top: 0;
+    letter-spacing: -3px;
+    transform: rotate(-1.3deg);
 }
 .info-one {
-    font-size: 20px;
-    color: #395129;
-    font-weight: 400;
+    font-size: 22px;
+    color: #153065;
+    font-weight: 600;
     padding: 10px 0;
+}
+.info-one div {
+    padding-top: 10px;
 }
 .info-two {
     font-weight: 400;
@@ -107,13 +113,14 @@ h1.info {
     margin: 0 auto;
 }
 .info-one a, .info-two a {
-    color: #000;
-    font-weight: 500;
+    color: #153065;
+    font-weight: 700;
     text-transform: uppercase;
 }
 .info-one a:hover, .info-two a:hover {
     text-decoration: none;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #153065;
+    letter-spacing: .5px;
 }
 .contain-header {
     position: relative;
@@ -125,7 +132,7 @@ h1.info {
     padding: 0 15px;
     max-width: 1920px;
     margin: 0 auto;
-    min-height: 1080px;
+    height: 850px;
 }
 video#bgvid {
     position: absolute;
@@ -139,70 +146,40 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: #fff url("flower-background.jpg") center center no-repeat;
+    background: #fff url("cloud-sky-background.jpg") center center no-repeat;
     background-size: cover;
 }
 video {
     display: block;
 }
 
-@media (max-width: 992px) {
-.modal-lg {
-    width: inherit;
-}
-.modal-dialog {
-    margin: 10px;
-}
-}
-
-@media (max-width: 800px) {
+@media (max-width: 675px) {
 video#bgvid {
     display: none;
 }
 .row.main-header {
-    background: url(flower-background.jpg) top center no-repeat;
-    min-height: 1080px;
-}
-.background-row {
-    background: url("page-background.jpg") top center repeat-x;
-    padding-bottom: 0;
-}
-.contain-header {
-    border: none;
-    border-bottom: none;
-}
-.info-wrapper {
-    padding: 200px 15px 395px;
-}
-}
-
-@media (max-width: 650px) {
-.row.main-header {
-    background: url(flower-background-small.jpg) top center no-repeat;
+    background: url(sky-with-doodles-small.jpg) top center no-repeat;
     min-height: auto;
 }
 .info-wrapper {
-    padding: 260px 15px 510px;
+    margin-top: 120px;
 }
 h1.info {
-    font-size: 80px;
-    line-height: 60px;
+    font-size: 100px;
+    line-height: 95px;
 }
 .contain-header {
-    min-height: auto;
-}
-.details-wrapper {
-    max-width: 620px;
+    height: auto;
 }
 }
 
 @media (max-width: 450px) {
 h1.info {
-    font-size: 60px;
-    line-height: 50px;
+    font-size: 80px;
+    line-height: 70px;
 }
-.info-wrapper {
-    padding: 230px 15px 540px;
+.contain-header {
+    height: auto;
 }
 }
 </style>
@@ -379,18 +356,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row background-row">
     <div class="contain-header">
       <div class="row main-header">
-        <video autoplay loop muted playsinline poster="flower-background.jpg" id="bgvid">
-          <source src="flower-background.mp4" type="video/mp4" />
+        <video autoplay loop muted playsinline poster="sky-with-doodles.jpg" id="bgvid">
+          <source src="sky-with-doodles.mp4" type="video/mp4" />
           Sorry, your browser does not support background videos.
-          <source src="flower-background.webm" type="video/webm" />
+          <source src="sky-with-doodles.webm" type="video/webm" />
           Sorry, your browser does not support background videos.</video>
         <div class="info-wrapper">
           <div class="details-wrapper">
-            <h1 class="info"><i>Think Spring!</i></h1>
-            <div class="info-one">Exciting <a href="featured-events/#author-events">author&nbsp;events</a> with award-winning, bestselling writers.<br>
-              Summer reading fun for all ages! <a href="summer-reading/">Pre-register now</a>.<br>
-              Free books through Dolly Parton's <a href="imagination-library/">Imagination&nbsp;Library</a>.<br>
-              <i style="font-size: 22px;line-height: 40px;">The sky is the limit!</i></div>
+            <h1 class="info"><i>The Sky's the Limit!</i></h1>
+            <div class="info-one">
+              <div>Exciting <a href="featured-events/#author-events">author&nbsp;events</a> with award-winning, bestselling writers.</div>
+              <div>Summer reading fun for all ages! <a class="text-nowrap" href="summer-reading/">Pre-register&nbsp;now</a>.</div>
+              <div>Mental health resources and inspiration for <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2290489219">Taking&nbsp;Care</a>.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -457,8 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
