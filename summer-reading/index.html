@@ -129,7 +129,6 @@ h1.bubblegum {
     padding-bottom: 30px;
 }
 .skating-background {
-    /* padding: 60px 10px; */
     min-height: 250px;
     background: transparent url("skateboarding.png") bottom center repeat-x;
     -webkit-animation: left-slide 35s linear infinite;
@@ -137,6 +136,8 @@ h1.bubblegum {
     margin-top: -250px;
     margin-bottom: 0;
     bottom: 29px;
+    position: relative;
+    z-index: 100;
 }
 @-webkit-keyframes left-slide {
 from {
@@ -453,7 +454,7 @@ background-position: 5000px 0;
 .smaller {
     font-size: 16px;
     text-transform: uppercase;
-	color: #333;
+    color: #333;
 }
 .modal {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -517,6 +518,20 @@ background-position: 5000px 0;
 }
 .prize-item:nth-of-type(2) {
     padding: 30px 150px 40px 30px;
+}
+}
+
+@media (max-width: 775px) {
+.skating-background {
+    display: none;
+    -webkit-animation: none;
+    animation: none;
+}
+.custom-container.four {
+    padding: 60px 10px 217px;
+    color: #000;
+    background: url("skateboard-dog-alt.png") bottom center no-repeat;
+    margin-bottom: -3px;
 }
 }
 
