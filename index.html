@@ -67,116 +67,197 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 <style>
-.background-row {
-    background: url("page-background.jpg") top center repeat-x;
-    padding-bottom: 60px;
+@font-face {
+    font-family: 'AvalineScriptSC';
+    src: url('shared-assets/web-fonts/AvalineScriptSC-Bold.woff2') format('woff2'), url('shared-assets/web-fonts/AvalineScriptSC-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
 }
-.details-wrapper {
-    max-width: 855px;
-    margin: 0 auto;
-    padding: 25px 0 140px;
+@font-face {
+    font-family: 'Bubblegum';
+    src: url('shared-assets/web-fonts/BubblegumScript.woff2') format('woff2'), url('shared-assets/web-fonts/BubblegumScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
 }
-.info-wrapper {
-    font-family: "Open Sans", arial, sans-serif;
-    padding: 0 15px 0;
-    position: relative;
-    text-align: center;
-    background: url(noun-doodle.png) bottom center no-repeat;
-    margin-top: 230px;
-}
-h1.info {
-    font-family: 'Caveat Brush', sans-serif;
-    color: #204999;
-    font-size: 98px;
-    text-align: center;
-    line-height: 72px;
-    letter-spacing: -3px;
-    transform: rotate(-1.3deg);
-}
-.info-one {
-    font-size: 22px;
-    color: #153065;
-    font-weight: 600;
-    padding: 10px 0;
-}
-.info-one div {
-    padding-top: 10px;
-}
-.info-two {
-    font-weight: 400;
-    color: #395129;
-    max-width: 480px;
-    margin: 0 auto;
-}
-.info-one a, .info-two a {
-    color: #153065;
-    font-weight: 700;
+h1.avaline {
+    font-family: 'AvalineScriptSC', serif;
     text-transform: uppercase;
+    font-size: 120px;
+    margin: 0;
+    line-height: 90px;
+    color: #333;
 }
-.info-one a:hover, .info-two a:hover {
+h1.bubblegum {
+    font-family: 'Bubblegum', serif;
+    font-size: 80px;
+    margin: 0;
+    line-height: 50px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.intro-text {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #000;
+    font-size: 20px;
+    padding: 5px 0 0;
+    text-align: center;
+    font-weight: 400;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.intro-text a {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.intro-text a:hover, .intro-text a:focus {
     text-decoration: none;
-    border-bottom: 2px solid #153065;
+    border-bottom: 2px solid #02729e;
     letter-spacing: .5px;
 }
-.contain-header {
-    position: relative;
-    overflow: hidden;
-    background: #fff;
-    padding: 0 15px;
+.info-wrapper {
+    background: transparent;
     max-width: 1920px;
     margin: 0 auto;
-    height: 850px;
+    padding: 75px 10px 350px;
+    text-align: center;
+    color: #000;
 }
-video#bgvid {
+.background-row {
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
+}
+.row-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 2px;
+}
+.background {
+    background: transparent url("pool-dogs.jpg") bottom center no-repeat;
+    position: relative;
+    min-height: 726px;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+.watermelon-wrapper {
+    margin: -300px 0 0 325px;
+    position: relative;
+}
+.social-footer {
+    padding-top: 70px!important;
+}
+.floaters {
+    max-width: 1200px;
+    position: relative;
+    bottom: 200px;
+    margin: 0 auto;
+    min-height: 425px;
+}
+.float-one {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: #fff url("cloud-sky-background.jpg") center center no-repeat;
-    background-size: cover;
+    top: 10px;
+    left: 20px;
+    animation: orbit-one 15s linear infinite;
 }
-video {
-    display: block;
+.float-two {
+    position: absolute;
+    top: 200px;
+    right: 70px;
+    animation: orbit-two 50s ease-in-out infinite;
+}
+.float-three {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    animation: orbit-three 10s linear infinite;
+}
+@keyframes orbit-one {
+from {
+transform: rotate(0deg) translateX(20px) rotate(0deg);
+}
+to {
+transform: rotate(360deg) translateX(20px) rotate(-360deg);
+}
+}
+@keyframes orbit-two {
+0% {
+transform: translate(0, 150px);
+}
+50% {
+transform: translate(-650px, 0);
+}
+100% {
+transform: translate(0, 150px);
+}
+}
+@keyframes orbit-three {
+from {
+transform: rotate(0deg) translateX(20px) rotate(0deg);
+}
+to {
+transform: rotate(-360deg) translateX(20px) rotate(360deg);
+}
 }
 
-@media (max-width: 675px) {
-video#bgvid {
+@media (max-width: 950px) {
+.watermelon-wrapper {
+    margin: -300px 0 0 0;
+    position: relative;
+}
+}
+
+@media (max-width: 750px) {
+.hide-me {
     display: none;
 }
-.row.main-header {
-    background: url(sky-with-doodles-small.jpg) top center no-repeat;
-    min-height: auto;
 }
-.info-wrapper {
-    margin-top: 120px;
+
+@media (max-width: 600px) {
+.float-one {
+    display: none;
 }
-h1.info {
-    font-size: 100px;
-    line-height: 95px;
+.float-two {
+    top: 150px;
+    right: 0;
 }
-.contain-header {
-    height: auto;
+.float-three {
+    top: 30px;
+    right: 35px;
 }
 }
 
-@media (max-width: 450px) {
-h1.info {
-    font-size: 80px;
-    line-height: 70px;
+@media (max-width: 475px) {
+.background {
+    background: #b7d559 url("pool-dogs-small.jpg") top center no-repeat;
+    position: relative;
+    min-height: 726px;
+    padding: 0 10px;
+    border-radius: 3px;
 }
-.contain-header {
-    height: auto;
+h1.avaline {
+    font-size: 90px;
+    margin: 0;
+    line-height: 70px;
+    padding-top: 20px;
+}
+h1.bubblegum {
+    font-size: 70px;
+    margin: 0;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+.float-two {
+    top: 50px;
+    right: 0;
+}
+.float-three {
+    top: -40px;
+    right: 35px;
 }
 }
 </style>
@@ -351,24 +432,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="contain-header">
-      <div class="row main-header">
-        <video autoplay loop muted playsinline poster="sky-with-doodles.jpg" id="bgvid">
-          <source src="sky-with-doodles.mp4" type="video/mp4" />
-          Sorry, your browser does not support background videos.
-          <source src="sky-with-doodles.webm" type="video/webm" />
-          Sorry, your browser does not support background videos.</video>
+    <div class="row-wrapper">
+      <div class="background">
         <div class="info-wrapper">
-          <div class="details-wrapper">
-            <h1 class="info"><i>The Sky's the Limit!</i></h1>
-            <div class="info-one">
-              <div>Exciting <a href="featured-events/#author-events">author&nbsp;events</a> with award-winning, bestselling writers.</div>
-              <div>Summer reading fun for all ages! <a class="text-nowrap" href="summer-reading/">Pre-register&nbsp;now</a>.</div>
-              <div>Mental health resources and inspiration for <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2290489219">Taking&nbsp;Care</a>.</div>
-            </div>
+          <h1 class="avaline">Dog Days</h1>
+          <h1 class="bubblegum">of summer</h1>
+          <div class="intro-text">
+            <div>Celebrate! Events, activities, prizes, and giveaways. <a href="summer-reading/">Register</a> for Summer Reading!<br class="hide-me">
+              <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=prize+pickup+kickoff&lib=ALL&nd=60" target="_blank">Kick off</a> the Dog Days of Summer and pick up a special limited-edition prize.<br class="hide-me">
+              We’re <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2296334919">here for the dogs</a>!</div>
           </div>
         </div>
+        <div class="floaters">
+          <div><img class="float-one" src="floating-one.png" alt=""></div>
+          <div><img class="float-two" src="floating-two.png" alt=""></div>
+          <div><img class="float-three" src="floating-three.png" alt=""></div>
+        </div>
       </div>
+      <div class="watermelon-wrapper"><img src="watermelon-dog.png" alt=""></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
