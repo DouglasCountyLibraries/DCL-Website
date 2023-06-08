@@ -57,29 +57,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .custom-container {
-	display: flex;
+    display: flex;
     max-width: 975px;
-	margin: 0 auto;
+    margin: 0 auto;
     padding: 0 0 60px 0;
 }
-
-@media (min-width: 768px) {
-.custom-container {
-    width: 100%;
-}
-}
-
-@media (max-width: 767px) {
-section h3 {
-    text-align: center;
-}
+.policy-contents {
+    padding: 0 15px;
 }
 .table-contents {
     position: sticky;
-	align-self: flex-start;
+    align-self: flex-start;
     top: 2rem;
     margin-top: 35px;
-	min-width: 250px;
+    padding: 0 15px 60px;
+    min-width: 250px;
 }
 .section-nav li.active > a {
     color: #000;
@@ -96,31 +88,25 @@ section h3 {
     color: #333;
 }
 section h4 {
-	margin: 0 0 10px;
-	line-height: 1;
-	color: #333;
+    margin: 0 0 10px;
+    line-height: 1;
+    color: #333;
 }
 section {
-    border-top: 2px solid #ededed;/* margin: 10px 0; */
+    border-top: 2px solid #ededed;
 }
-
 #access-policy {
     border-top: 0;
 }
 section {
     padding: 15px 0 18px;
 }
-.text-box {
-    padding: 0 0 0 10px;
-    border-left: 2px solid #ededed;
-    margin: 5px 0 8px 5px;
-}
 .padding-bottom-5 {
     padding-bottom: 5px;
 }
-	.padding-bottom-18 {
-		padding-bottom: 18px;
-	}
+.padding-bottom-18 {
+    padding-bottom: 18px;
+}
 .sidebar-heading {
     font-size: 16px;
     text-transform: uppercase;
@@ -129,6 +115,26 @@ section {
 }
 .border-line {
     border-bottom: 2px solid #ededed;
+}
+
+@media (max-width: 768px) {
+section h3 {
+    text-align: center;
+}
+.custom-container {
+    display: flex;
+    flex-direction: column;
+}
+.table-contents {
+    position: inherit;
+    top: 0;
+    margin-top: 0;
+    padding: 0 15px;
+    min-width: 100%;
+}
+.sub-list.list-unstyled {
+    display: none;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -302,7 +308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
-    <div class="container padding-bottom-15">
+    <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400">Policies</h1>
       </div>
@@ -310,11 +316,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row">
     <div class="custom-container">
-      <div class="table-contents padding-bottom-60">
+      <div class="table-contents">
         <nav class="section-nav">
           <ul class="list-unstyled">
             <li><a class="sidebar-heading" href="#access-policy">Access Policy</a>
-              <ul class="list-unstyled">
+              <ul class="sub-list list-unstyled">
                 <li><a href="#library-commitment">Our Library’s Commitment</a></li>
                 <li><a href="#customer-code-of-conduct">Customer Code of Conduct</a></li>
                 <li><a href="#censorship">Censorship</a></li>
@@ -347,28 +353,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <h4>Customer Code of Conduct</h4>
             <div>Our Library will maintain a Code of Conduct describing behavior boundaries for working with staff, using facilities, or participating in Library events.</div>
           </section>
-       
-        <section id="censorship">
-          <h4>Censorship</h4>
-          <div>The Library affirms every customer’s right to make choices and interact with the Library in a way that aligns with their values and beliefs. Censorship is the suppression of ideas and information that individuals, groups, or government officials find objectionable or dangerous. Censors use the power of the state to impose their view of what is truthful and appropriate, or offensive and objectionable, on everyone else. As a tax-supported agent of the State of Colorado, the Library will not suppress or limit customer access beyond legal requirements.</div>
+          <section id="censorship">
+            <h4>Censorship</h4>
+            <div>The Library affirms every customer’s right to make choices and interact with the Library in a way that aligns with their values and beliefs. Censorship is the suppression of ideas and information that individuals, groups, or government officials find objectionable or dangerous. Censors use the power of the state to impose their view of what is truthful and appropriate, or offensive and objectionable, on everyone else. As a tax-supported agent of the State of Colorado, the Library will not suppress or limit customer access beyond legal requirements.</div>
+          </section>
+          <section id="customer-privacy">
+            <h4>Customer Privacy</h4>
+            <div>The Library is committed to customer privacy. The Library will comply with Colorado Revised Statutes 24-90-119 mandating the protection of customer privacy in the use of Library resources. In keeping with CRS 24-90-119, the Library maintains customer confidentiality with specific distinctions.
+              • The Library will use customer information for business operations and improvement.
+              • The Library will release customer information only with the customer’s written consent.
+              • The Library will release to parents account information for their minor children upon the presentation of the minor’s library card or account number.
+              • The Library will release customer information pursuant to subpoena, upon court order, or where otherwise required by law.
+              The Library uses surveillance equipment for specific monitoring purposes:
+              • The safety and security of staff and customers.
+              • Facility operations.
+              • Information on property damage from vandalism, theft, or other illegal activities.
+              Surveillance information is for internal use only. The Library will not release surveillance information to any third party. The Executive Library Director or their designee will manage exceptions.
+              • In the case that the Library is compelled to release the information by law, or
+              • If Library management believes that timely release of the information is necessary for the health or safety of a customer at grave risk.</div>
+          </section>
         </section>
-        <section id="customer-privacy">
-          <h4>Customer Privacy</h4>
-          <div>The Library is committed to customer privacy. The Library will comply with Colorado Revised Statutes 24-90-119 mandating the protection of customer privacy in the use of Library resources. In keeping with CRS 24-90-119, the Library maintains customer confidentiality with specific distinctions.
-            • The Library will use customer information for business operations and improvement.
-            • The Library will release customer information only with the customer’s written consent.
-            • The Library will release to parents account information for their minor children upon the presentation of the minor’s library card or account number.
-            • The Library will release customer information pursuant to subpoena, upon court order, or where otherwise required by law.
-            The Library uses surveillance equipment for specific monitoring purposes:
-            • The safety and security of staff and customers.
-            • Facility operations.
-            • Information on property damage from vandalism, theft, or other illegal activities.
-            Surveillance information is for internal use only. The Library will not release surveillance information to any third party. The Executive Library Director or their designee will manage exceptions.
-            • In the case that the Library is compelled to release the information by law, or
-            • If Library management believes that timely release of the information is necessary for the health or safety of a customer at grave risk.</div>
-        </section>
-         </section>
-        
       </div>
     </div>
   </div>
