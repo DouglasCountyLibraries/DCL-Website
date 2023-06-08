@@ -56,13 +56,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-.container.custom-container {
+.custom-container {
+	display: flex;
     max-width: 975px;
+	margin: 0 auto;
     padding: 0 0 60px 0;
 }
 
 @media (min-width: 768px) {
-.container.custom-container {
+.custom-container {
     width: 100%;
 }
 }
@@ -74,8 +76,10 @@ section h3 {
 }
 .table-contents {
     position: sticky;
+	align-self: flex-start;
     top: 2rem;
     margin-top: 35px;
+	min-width: 250px;
 }
 .section-nav li.active > a {
     color: #000;
@@ -305,8 +309,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="container custom-container">
-      <div class="table-contents col-sm-4 padding-bottom-60 hidden-xs">
+    <div class="custom-container">
+      <div class="table-contents padding-bottom-60">
         <nav class="section-nav">
           <ul class="list-unstyled">
             <li><a class="sidebar-heading" href="#access-policy">Access Policy</a>
@@ -322,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       
       <!--######-->
-      <div class="col-sm-8">
+      <div class="policy-contents">
         <section id="access-policy">
           <h3 class="text-uppercase font-weight-400">Access Policy</h3>
           <div class="padding-bottom-18">Douglas County Libraries (the “Library”) offers its resources equitably for our customers’ interest, information, education, and enjoyment. Our Library values open access and centers policy on constitutional, legal, and professional principles that have informed a century of library service.</div>
