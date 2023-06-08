@@ -80,8 +80,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .section-nav a {
     text-decoration: none;
     display: block;
-    padding: .125rem 0;
-    color: #999;
+    padding: .4rem 0;
+    line-height: 1.2;
+    color: #777;
     transition: all 50ms ease-in-out;
 }
 .section-nav a:hover, .section-nav a:focus {
@@ -131,9 +132,23 @@ section h3 {
     margin-top: 0;
     padding: 0 15px;
     min-width: 100%;
+    border-top: 2px solid #ededed;
+    border-bottom: 2px solid #ededed;
 }
 .sub-list.list-unstyled {
     display: none;
+}
+.section-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section-nav ul li {
+    padding: 0 20px;
+}
+.section-nav a {
+    color: #333;
+    white-space: nowrap;
 }
 }
 </style>
@@ -327,13 +342,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 <li><a href="#customer-privacy">Customer Privacy</a></li>
               </ul>
             </li>
+            <li><a class="sidebar-heading" href="#alcohol-policy">Alcohol Policy</a>
+              <ul class="sub-list list-unstyled">
+                <li><a href="#general-alcohol-policy">General</a></li>
+                <li><a href="#alcohol-policy-permission">Conditions to Prior Written Permission to Serve Alcohol</a></li>
+                <li><a href="#alcohol-policy-violations">Violations of Library Policy</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
-      
-      <!--######-->
-      <div class="policy-contents">
-        <section id="access-policy">
+      <div class="policy-contents"><!--######-->
+        <section class="no-padding-bottom" id="access-policy">
           <h3 class="text-uppercase no-margin-top font-weight-400">Access Policy</h3>
           <div class="padding-bottom-18">Douglas County Libraries (the "Library") offers its resources equitably for our customers' interest, information, education, and enjoyment. Our Library values open access and centers policy on constitutional, legal, and professional principles that have informed a century of library service.</div>
           <section id="library-commitment">
@@ -341,7 +361,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div>
               <div class="padding-bottom-5">The Library welcomes everyone.</div>
               <div class="padding-bottom-5">We will offer our community exceptional care supporting their freedom and self-determination. We will inform customer choice impartially, without interference or improper influence.</div>
-              <div><div class="padding-bottom-5">Our commitment to welcoming requires that our decisions and practices are free from discrimination and individual content preferences. We will not discriminate on the basis of:</div>
+              <div>
+                <div class="padding-bottom-5">Our commitment to welcoming requires that our decisions and practices are free from discrimination and individual content preferences. We will not discriminate on the basis of:</div>
                 <ul>
                   <li>Identity: Age, race, gender, sexual orientation, color, religion, national origin, military status, disability, or genetic history.</li>
                   <li>Beliefs or Associations: Politics, social stances, faith positions, and more.</li>
@@ -366,20 +387,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </section>
           <section id="customer-privacy">
             <h4>Customer Privacy</h4>
-            <div>The Library is committed to customer privacy. The Library will comply with Colorado Revised Statutes 24-90-119 mandating the protection of customer privacy in the use of Library resources. In keeping with CRS 24-90-119, the Library maintains customer confidentiality with specific distinctions.
-              • The Library will use customer information for business operations and improvement.
-              • The Library will release customer information only with the customer's written consent.
-              • The Library will release to parents account information for their minor children upon the presentation of the minor's library card or account number.
-              • The Library will release customer information pursuant to subpoena, upon court order, or where otherwise required by law.
-              The Library uses surveillance equipment for specific monitoring purposes:
-              • The safety and security of staff and customers.
-              • Facility operations.
-              • Information on property damage from vandalism, theft, or other illegal activities.
-              Surveillance information is for internal use only. The Library will not release surveillance information to any third party. The Executive Library Director or their designee will manage exceptions.
-              • In the case that the Library is compelled to release the information by law, or
-              • If Library management believes that timely release of the information is necessary for the health or safety of a customer at grave risk.</div>
+            <div>
+              <div class="padding-bottom-5">The Library is committed to customer privacy. The Library will comply with Colorado Revised Statutes 24-90-119 mandating the protection of customer privacy in the use of Library resources. In keeping with CRS 24-90-119, the Library maintains customer confidentiality with specific distinctions.</div>
+              <ul>
+                <li>The Library will use customer information for business operations and improvement.</li>
+                <li>The Library will release customer information only with the customer's written consent.</li>
+                <li>The Library will release to parents account information for their minor children upon the presentation of the minor's library card or account number.</li>
+                <li>The Library will release customer information pursuant to subpoena, upon court order, or where otherwise required by law.</li>
+              </ul>
+              <div class="padding-bottom-5">The Library uses surveillance equipment for specific monitoring purposes:</div>
+              <ul>
+                <li>The safety and security of staff and customers.</li>
+                <li>Facility operations.</li>
+                <li>Information on property damage from vandalism, theft, or other illegal activities.</li>
+              </ul>
+              <div class="padding-bottom-5">Surveillance information is for internal use only. The Library will not release surveillance information to any third party. The Executive Library Director or their designee will manage exceptions.</div>
+              <ul class="no-margin-bottom">
+                <li>In the case that the Library is compelled to release the information by law, or</li>
+                <li>If Library management believes that timely release of the information is necessary for the health or safety of a customer at grave risk.</li>
+              </ul>
+            </div>
           </section>
         </section>
+        
+        <!--######-->
+        
+        <section id="alcohol-policy">
+          <h3 class="text-uppercase no-margin-top font-weight-400">Alcohol Policy</h3>
+          <section id="general-alcohol-policy">
+            <h4>General</h4>
+            <div>Serving or consuming alcoholic beverages is prohibited on Douglas County Libraries (the "Library") property and within or around Library buildings without the execution of and compliance with the Library's Event and Hospitality Services contract.</div>
+          </section>
+          <section id="alcohol-policy-permission">
+            <h4>Conditions to Prior Written Permission to Serve Alcohol</h4>
+            <div class="padding-bottom-5">Written permission to serve and consume wine, beer, liquor, spirits, mixed drinks, or cocktails (hereinafter "alcohol") may be granted to individuals or entities only under the following conditions:</div>
+            <ul class="no-margin-bottom">
+              <li> A written agreement shall be signed by the appropriate individual or legally authorized entity representative in the form provided by the Library. The form will require the individual or entity to provide specified general liability and other relevant insurance coverages and to indemnify the Library and its officers and employees from any and all liability for use of the Library's property, including but not limited to alcohol-related liability. Please request a written agreement from the Library for review of all applicable terms.</li>
+              <li>The Library's Director of Community Engagement, as applicable, must be satisfied that the alcohol service and consumption requested meets all federal, state and local laws and regulations.</li>
+              <li>No Library tax revenue may be used to purchase alcohol served at Library events.</li>
+              <li>During the event at which alcohol is proposed to be served and consumed, any and all service and consumption of alcohol must take place within the event space contracted.</li>
+              <li>The event at which alcohol is proposed to be served and consumed must be a closed event such that only those individuals or groups receiving written or electronic invitations are eligible to attend. The event shall not be open to the general public or large classes of the general public but must be a special event of special relevance only to a discrete group of defined attendees (e.g., the event must not be one wherein attendance is induced by advertisements, leaflets, or other materials aimed at unspecified individuals).</li>
+            </ul>
+          </section>
+          <section id="alcohol-policy-violations">
+            <h4>Violations of Library Policy</h4>
+            <div>Should the Library or its staff become aware that any individual or entity is violating the Library's Alcohol Policy during any event held on Library property, the Library will immediately terminate the event and all event attendees will be asked to leave the Library's property forthwith. Additional consequences may be imposed on the event's organizer(s) via the written agreement specified above.</div>
+          </section>
+        </section>
+        
+        <!--######--> 
+        
       </div>
     </div>
   </div>
