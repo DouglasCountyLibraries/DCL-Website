@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,20 +60,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 975px;
     padding: 0 0 60px 0;
 }
-
-@media (min-width: 768px) {
-.container.custom-container {
-    width: 100%;
-}
-}
-
-@media (max-width: 767px) {
-section h3 {
-    text-align: center;
-}
-}
 .table-contents {
     position: sticky;
+    position: -webkit-sticky;
     top: 2rem;
     margin-top: 35px;
 }
@@ -91,7 +81,10 @@ section h3 {
     color: #333;
 }
 section {
-    border-top: 2px solid #ededed;/* margin: 10px 0; */
+    border-top: 2px solid #ededed;
+}
+.sublist {
+	margin-left: 5px;
 }
 section h3 {
     text-transform: uppercase;
@@ -139,6 +132,18 @@ section h5:hover, section h5:focus {
 }
 .border-line {
     border-bottom: 2px solid #ededed;
+}
+
+@media (min-width: 768px) {
+.container.custom-container {
+    width: 100%;
+}
+}
+
+@media (max-width: 767px) {
+section h3 {
+    text-align: center;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -316,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Help</h1>
         <h4 class="roboto margin-top-5">Customer Service Hours: Mon-Thu: 8AM-8PM, Fri: 8AM-6PM, Sat-Sun: 10AM-4PM </h4>
-        <div class="page-nav">
+        <div class="page-nav"> 
           <!--<div class="page-nav-item"><a href="#"><i class="pagenav-icon fa-sharp fa-keyboard" aria-hidden="true"></i>Contact Us</a></div>-->
           <div class="page-nav-item"><a href="tel:+13037917323"><i class="pagenav-icon fa-regular fa-headset" aria-hidden="true"></i>Call (303) 791-7323</a></div>
         </div>
@@ -329,20 +334,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <nav class="section-nav">
           <ul class="list-unstyled">
             <li><a class="sidebar-heading" href="#questions">Common Questions</a>
-              <ul class="list-unstyled">
+              <ul class="sublist list-unstyled">
                 <li><a href="#general-information">General Information</a></li>
                 <li><a href="#using-library">Using the Library</a></li>
               </ul>
             </li>
             <li><a class="sidebar-heading" href="#borrowing-account">Borrowing & My Account</a>
-              <ul class="list-unstyled">
+              <ul class="sublist list-unstyled">
                 <li><a href="#borrowing">Borrowing</a></li>
                 <li><a href="#my-account">My Account</a></li>
                 <li><a href="#holds">Holds</a></li>
               </ul>
             </li>
             <li><a class="sidebar-heading" href="#digital-media">Digital Media</a>
-              <ul class="list-unstyled">
+              <ul class="sublist list-unstyled">
                 <li><a href="#download-stream">Download & Stream</a></li>
               </ul>
             </li>
@@ -603,4 +608,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
