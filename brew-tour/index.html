@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,8 +103,8 @@ ul.farmer > li {
 .partners {
     display: flex;
     flex-direction: column;
-    max-width: 435px;
-    margin: 0 auto;
+    max-width: 950px;
+    margin: 0 0 0 200px;
     padding: 10px 0 35px;
 }
 .farmer.brew-tour-heading {
@@ -197,7 +198,15 @@ h2.larosa {
 .partner-container {
     max-width: 1060px;
     margin: 0 auto;
-    padding: 60px 15px 90px;
+    padding: 60px 0 90px;
+}
+.partner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.partner-column {
+    padding: 0 15px;
 }
 .hover-animation {
     color: #2f2e33;
@@ -285,10 +294,29 @@ transform: translateX(-3px) translateY(-3px);
 }
 }
 
+@media (max-width: 1050px) {
+.partner-wrapper {
+    flex-direction: column;
+}
+.partners {
+    display: flex;
+    flex-direction: column;
+    max-width: 475px;
+    padding: 0 0 30px;
+    margin: 0 auto;
+}
+}
+
 @media (max-width: 475px) {
 .sub-title {
     margin-left: 0;
     display: block;
+}
+ul.farmer {
+    line-height: 40px;
+}
+ul.farmer li {
+    margin: 10px 0;
 }
 }
 </style>
@@ -484,21 +512,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div style="font-size: 18px;" class="black margin-lg-50 margin-md-50">You may also earn additional points and unique rewards by attending DCL-hosted Brew Tour events at our libraries and select brewery locations. Prize and event info coming soon!</div>
     </div>
   </div>
-  
-  <!--<div class="row partner-row">
+  <div class="row partner-row">
     <div class="partner-container"><img src="hops-wheat.png" class="img-responsive center-block">
       <h2 class="larosa text-center">Brew Tour Partners</h2>
       <div class="partners">
-        <ul class="farmer list-unstyled">
-          <li><a class="hover-animation" href="https://goo.gl/maps/phqesNWh6oCrRBNK8" target="_blank">3 Freaks</a><span class="sub-title">Brewery</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/2YDHvoadpBU6yHHAA" target="_blank">Barnett & Son</a><span class="sub-title">Brewing Co.</span></li>
-          <li><a class="hover-animation" href="https://g.page/BURLYbrewing?share" target="_blank">Burly</a><span class="sub-title">Brewing Company</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/r77k98LghUGDF6cw9" target="_blank">Downhill</a><span class="sub-title">Brewing</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/Upg8SAmoSK7e4bXo6" target="_blank">Festive Cup</a><span class="sub-title">Coffee and Boutique</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/5b6zPV1YfHDBQbAZ9" target="_blank">Living the Dream</a><span class="sub-title">Brewing Company</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/efksfwVYa2GsmiUj9" target="_blank">Lone Tree</a><span class="sub-title">Brewing Company</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/GZ1cjZN4kbExiDmcA" target="_blank">Monk & Mongoose</a><span class="sub-title">Coffee Co</span></li>
-          <li><a class="hover-animation" href="https://g.page/WelcomeHomeBrewery?share" target="_blank">Welcome Home</a><span class="sub-title">Brewery</span></li>
+        <ul class="partner-wrapper farmer list-unstyled">
+          <div class="partner-column">
+            <li><a class="hover-animation" href="https://goo.gl/maps/phqesNWh6oCrRBNK8" target="_blank">3&nbsp;Freaks</a><span class="sub-title">Brewery</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/o1DC6AY3w918JKwx7" target="_blank">105&nbsp;West</a><span class="sub-title">Brewing Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/2YDHvoadpBU6yHHAA" target="_blank">Barnett&nbsp;&&nbsp;Son</a><span class="sub-title">Brewing Co.</span></li>
+            <li><a class="hover-animation" href="https://g.page/BURLYbrewing?share" target="_blank">Burly</a><span class="sub-title">Brewing&nbsp;Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/pKDTpqA2i4y3GcTE7" target="_blank">Crowfoot&nbsp;Valley</a><span class="sub-title">Coffee</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/ExkCMfiXRYR2AYLw9" target="_blank">Deja&nbsp;Brew</a><span class="sub-title">Coffee</span></li>
+          </div>
+          <div class="partner-column">
+            <li><a class="hover-animation" href="https://goo.gl/maps/r77k98LghUGDF6cw9" target="_blank">Downhill</a><span class="sub-title">Brewing</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/cZ39uHawcW1gWgVV9" target="_blank">Fiction</a><span class="sub-title">Beer Company</span></li>
+            <li><a class="hover-animation" href="https://www.google.com/maps/search/Fika+Coffee+House/@39.5388924,-104.7972333,13z/data=!3m1!4b1?entry=ttu" target="_blank">Fika</a><span class="sub-title">Coffee House</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/5b6zPV1YfHDBQbAZ9" target="_blank">Living&nbsp;the&nbsp;Dream</a><span class="sub-title">Brewing Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/efksfwVYa2GsmiUj9" target="_blank">Lone&nbsp;Tree</a><span class="sub-title">Brewing Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/GZ1cjZN4kbExiDmcA" target="_blank">Monk&nbsp;&&nbsp;Mongoose</a><span class="sub-title">Coffee Co</span></li>
+            <!--<li><a class="hover-animation" href="https://g.page/WelcomeHomeBrewery?share" target="_blank">Welcome Home</a><span class="sub-title">Brewery</span></li>--> 
+          </div>
         </ul>
       </div>
       <div class="text-center">
@@ -506,7 +541,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="padding-top-15"><i>Must be over 21 to consume alcohol. Please drink responsibly.</i></div>
       </div>
     </div>
-  </div>--> 
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -624,4 +659,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
