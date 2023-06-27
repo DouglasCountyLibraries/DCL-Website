@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,7 +97,7 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 	text-rendering: optimizeLegibility;
 	text-align: center;
 }
-	.description a {
+.description a {
 	color: #fff;
 }
 #eventsinfo .item {
@@ -118,7 +119,7 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 	color: #fff;
 	text-decoration: none;
 	letter-spacing: -0.8px;
-	font-size: 39px;
+	font-size: 30px;
 }
 #eventsinfo #eventdate {
 	font-size: 16px;
@@ -138,12 +139,14 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 	text-transform: uppercase;
 }
 .button-wrapper {
-	padding: 25px 0 10px;
-	width: 80%;
+	padding: 20px 0 5px;
+	/* width: 80%; */
 	margin: 0 auto;
 }
 .slide-wrapper {
 	position: relative;
+	border-radius: 3px;
+	padding: 30px 0 35px;
 }
 .prev, .prev a, .next, .next a, .prev:hover, .prev a:hover, .next:hover, .next a:hover {
 	cursor: pointer;
@@ -159,11 +162,11 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 	text-decoration: none;
 }
 .prev, .prev a {
-	left: 0px;
+	left: 15px;
 	padding: 10px 10px 10px 0;
 }
 .next, .next a {
-	right: 0px;
+	right: 15px;
 	padding: 10px 0 10px 10px;
 }
 .flex-wrapper {
@@ -174,9 +177,14 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 }
 .item-one {
 	width: 100%;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 44%, #f5f5f5 44%, #f5f5f5 100%);
+	background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 44%, #f5f5f5 44%, #f5f5f5 100%);
+	background: linear-gradient(to bottom, #ffffff 0%, #ffffff 44%, #f5f5f5 44%, #f5f5f5 100%);
 }
 .item-two {
 	width: 100%;
+	padding: 30px 0 60px;
 }
 .title a, .title a:hover, .title a:focus {
 	color: #333;
@@ -256,9 +264,11 @@ opacity: 1
 @media (max-width: 992px) {
 .item-one {
 	order: 2;
+	padding: 40px 0 50px;
 }
 .item-two {
 	order: 1;
+	padding: 30px 0 50px;
 }
 }
 
@@ -439,16 +449,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-20">
+  <div class="row border-top">
     <div class="container">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Event + Hospitality</h1>
         <h1 class="text-uppercase font-weight-400 no-margin">Services</h1>
       </div>
       <div class="row">
-        <div class="container text-center padding-bottom-15">
-          <h4 class="roboto margin-lg-50 margin-top-5">Your event is important to us! Our packages accommodate the style, size and complexity of any event, ranging from Self-Service to Concierge Service, where a dedicated event expert helps you make your special function a success.</h4>
-          <div class="margin-lg-200">By reserving a room you <a href="../meeting-room-guidelines/" target="_blank">agree to DCL's terms and conditions.</a> Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+        <div class="container text-center padding-bottom-30">
+          <h4 class="roboto margin-lg-100 margin-top-5 margin-bottom-5">Your event is important to us! Our packages accommodate the style, size and complexity of any event, ranging from Self-Service to Concierge Service, where a dedicated event expert helps you make your special function a success.</h4>
+          <div class="red-text large-text font-weight-400">Room reservations open July 1 for the new Castle Rock library.</div>
+          <div class="margin-lg-300">By reserving a room you <a href="../meeting-room-guidelines/" target="_blank">agree to DCL's terms and conditions.</a> Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
           <div class="text-center padding-top-20"> <!-- Button trigger modal --> 
             <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#get-started">Get Started</a> </div>
           <!-- Modal -->
@@ -471,19 +482,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- add back when needed<div class="secondary-alert row">Self-Service meeting rooms are <a class="white text-underline" href="../safety-notice/#spaces">currently unavailable</a> for public use. Contact us for all other reservation information.</div>-->
   <div class="flex-wrapper">
-    <div class="item-one bg-lavender padding-bottom-30">
+    <div class="item-one">
       <div class="container">
-        <h1 class="roboto white text-center no-margin-bottom">Upcoming Community Events</h1>
-        <div class="slide-wrapper">
+        <h3 class="no-margin padding-bottom-15 text-center">Upcoming Community Events</h3>
+        <div class="slide-wrapper bg-teal">
           <div> <a class="prev" onclick="plusSlides(-1)">&#139;</a> <a class="next" onclick="plusSlides(1)">&#155;</a> </div>
           <div id="eventsinfo" class="eventsinfo margin-lg-50"></div>
         </div>
         <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?et=41&private=2&lib=ALL&nd=180&dm=html"></script>
-        <div class="button-wrapper white text-center"><a href="community-events/" class="white text-underline text-uppercase font-weight-400">View All Community Events</a> &raquo;</div>
-        <div class="margin-lg-30 margin-left-30 margin-right-30 white text-center small">Events listed above are sponsored by community groups and/or individuals using Douglas County Libraries spaces for a fee. These events are not sponsored by Douglas County Libraries. Events are listed in chronological order. Contact our Event + Hospitality Services team for information about how to list your event at <span class="text-nowrap"><a class="white" href="tel:303-688-7605">(303) 688-7605</a>.</span></div>
+        <div class="button-wrapper text-center"><a href="community-events/" class="text-uppercase font-weight-400">View All Community Events</a> &raquo;</div>
+        <div class="margin-lg-150 padding-right-15 padding-left-15 text-center">Events listed above are sponsored by community groups and/or individuals using Douglas County Libraries spaces for a fee. These events are not sponsored by Douglas County Libraries. Events are listed in chronological order. Contact our Event + Hospitality Services team for information about how to list your event at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a>.</span></div>
       </div>
     </div>
-    <div id="service-levels" class="item-two bg-gray-5 padding-top-30 padding-bottom-40">
+    <div id="service-levels" class="item-two bg-gray-5">
       <div class="container">
         <div id="self-service" class="col-md-4 service-box equal-height bg-white padding-bottom-30">
           <h1 class="roboto bg-moss text-center">Self-Service</h1>
@@ -590,11 +601,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-40 text-center">
+  <div class="row bg-teal padding-top-50 padding-bottom-60 text-center">
     <div class="container">
       <div><a href="../event-spaces/" type="button" class="btn btn-default text-uppercase">View Event Spaces</a></div>
-      <h4 class="roboto white">All reservations are subject to room availability.</h4>
-      <div class="white large-text margin-lg-200">Select and Concierge Service reservations are subject to availability of Event + Hospitality Services personnel.</div>
+      <h4 class="white">All reservations are subject to room availability.</h4>
+      <div class="white large-text">Select and Concierge Service reservations are subject to availability of Event + Hospitality Services personnel.</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -753,4 +764,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
