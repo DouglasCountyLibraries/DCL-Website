@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,69 +56,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .using-the-library-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 .box-item-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 1610px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1610px;
+    margin: 0 auto;
 }
 .photo-item-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 1280px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
 }
-.box-item, .photo-item {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin: 15px;
+.box-item, .learning-item, .photo-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px;
 }
 .learning-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 1200px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .learning-content {
-	background: #fff;
-	padding: 0 15px 20px;
+    padding: 0 30px 35px;
 }
 .learning-item {
-	margin: 15px;
-	width: 380px;
-	background: #fff;
+    background: #fff;
 }
 
 @media (max-width: 1000px) {
-.box-item-wrapper {
-	max-width: 830px;
-	margin: 0 auto;
+.box-item-wrapper, .learning-wrapper {
+    max-width: 830px;
+    margin: 0 auto;
 }
 .box-item:first-child {
-	width: 100%;
+    width: 100%;
+}
+.learning-item:first-child {
+    width: 100%;
+    padding: 30px 0 10px;
 }
 .flex-break {
-	flex-basis: 100%;
-	height: 0;
+    flex-basis: 100%;
+    height: 0;
 }
 }
 
 @media (max-width: 820px) {
 .learning-item {
-	width: 100%;
-	padding: 30px 0 10px;
+    flex-basis: 100%;
+    padding: 30px 0 10px;
 }
 }
 
 @media (max-width: 725px) {
 .box-item, .photo-item {
-	flex-basis: 100%;
+    flex-basis: 100%;
 }
 }
 </style>
@@ -343,8 +345,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div>Learn software, creative, business and technology skills from video courses taught by industry experts. Installed the <a href="https://play.google.com/store/apps/details?id=com.linkedin.android.learning" target="_blank">Android</a> or <a href="https://apps.apple.com/us/app/linkedin-learning/id1084807225" target="_blank">iOS</a> app? Sign in with your library learning and Library ID, “DCL”.</div>
         </div>
       </div>
+      <div class="flex-break"></div>
       <div id="mango" class="learning-item">
-        <div><img class="img-responsive center-block" src="mango.jpg" alt="Mango Languages"></div>
+        <div><img class="img-responsive center-block " src="mango.jpg" alt="Mango Languages"></div>
         <div class="learning-content">
           <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h3>
           <div>Online language learning from German to Spanish, Russian to Mandarin Chinese. No downloads are required, and an app is available.</div>
@@ -355,14 +358,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="learning-content">
           <h3 class="text-center"><a href="https://creativebug.com/lib/dcl" target="_blank">Creativebug</a></h3>
           <div>Watch more than 1,000 DIY classes from renowned artists&mdash;anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting!</div>
-        </div>
-      </div>
-      <div id="prenda" class="learning-item">
-        <div><img class="img-responsive center-block" src="fiero.jpg" alt="Fiero Code"></div>
-        <div class="learning-content">
-          <h3 class="text-center"><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=prenda-code-club" target="_blank">Fiero Code</a></h3>
-          <div><span class="red-text font-weight-400">Fiero Code access will be discontinued effective July 1. Try LinkedIn Learning for technology courses and training.</span>
-          </div>
         </div>
       </div>
     </div>
@@ -496,4 +491,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
