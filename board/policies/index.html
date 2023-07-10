@@ -58,20 +58,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 .custom-container {
     display: flex;
-    max-width: 1080px;
+    max-width: 1450px;
     margin: 0 auto;
     padding: 0 0 40px 0;
 }
 .policy-contents {
     padding: 0 15px;
+    margin-left: 12%;
 }
 .table-contents {
-    display: flex;
-    align-self: flex-start;
-    top: 2rem;
-    margin-top: 10px;
-    padding: 0 15px 300px;
-    min-width: 30%;
+    top: 30px;
+    margin: 0 15px 15px 30px;
+    padding: 0 15px;
+    min-width: 25%;
+    height: 525px;
+    position: sticky;
+    position: -webkit-sticky;
+    overflow-y: auto;
+    border: 2px solid #ededed;
+    border-radius: 2px;
 }
 .section-nav li.active > a {
     color: #333;
@@ -122,6 +127,12 @@ section {
     border-top: 2px solid #ededed;
 }
 
+@media (max-width: 1450px) {
+.policy-contents {
+    margin-left: inherit;
+}
+}
+
 @media (max-width: 768px) {
 section h3 {
     text-align: center;
@@ -129,18 +140,28 @@ section h3 {
 .custom-container {
     display: flex;
     flex-direction: column;
+    padding: 0 15px 40px;
 }
 #access-policy {
-    margin-top: 40px;
+    border-top: 0;
 }
 .table-contents {
+    order: 1;
     position: inherit;
     top: 0;
     margin-top: 0;
-    padding: 0 15px;
+    padding: 0;
     min-width: 100%;
     border-top: 2px solid #ededed;
     border-bottom: 2px solid #ededed;
+    border-right: 0;
+    height: inherit;
+    margin: 0;
+    border-left: 0;
+}
+.policy-contents {
+    order: 2;
+    padding: 0;
 }
 .sub-list {
     display: none;
@@ -151,14 +172,6 @@ section h3 {
 .section-nav a {
     font-size: 16px;
     color: #333;
-}
-}
-
-/* Maximum height */
-@media (min-height: 1080px) {
-.table-contents {
-    position: sticky;
-    position: -webkit-sticky;
 }
 }
 
@@ -358,55 +371,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row">
     <div class="custom-container">
-      <div class="table-contents">
-        <nav class="section-nav">
-          <ul class="list-unstyled">
-            <li><a class="sidebar-heading" href="#access-policy">Access Policy</a>
-              <ul class="sub-list">
-                <li><a href="#library-commitment">Our Library's Commitment</a></li>
-                <li><a href="#customer-code-of-conduct">Customer Code of Conduct</a></li>
-                <li><a href="#censorship">Censorship</a></li>
-                <li><a href="#customer-privacy">Customer Privacy</a></li>
-              </ul>
-            </li>
-            <li><a class="sidebar-heading" href="#alcohol-policy">Alcohol (Social Use) Policy</a>
-              <ul class="sub-list">
-                <li><a href="#general-alcohol-policy">General</a></li>
-                <li><a href="#alcohol-policy-permission">Conditions to Prior Written Permission to Serve Alcohol</a></li>
-                <li><a href="#alcohol-policy-violations">Violations of Library Policy</a></li>
-              </ul>
-            </li>
-            <li><a class="sidebar-heading" href="#children-parents-policy">Children and Parents Policy</a></li>
-            <li><a class="sidebar-heading" href="#review-request-policy">Citizen Review Request Policy</a></li>
-            <li><a class="sidebar-heading" href="#open-records-policy">Colorado Open Records Policy</a>
-              <ul class="sub-list">
-                <li><a href="#make-request">How to Make a Request</a></li>
-                <li><a href="#costs-deposit">CORA Request Costs and Deposit</a></li>
-                <li><a href="#turnaround-time">Request Turnaround Expectation</a></li>
-              </ul>
-            </li>
-            <li><a class="sidebar-heading" href="#contributions-gifts-policy">Contributions and Gifts Policy</a></li>
-            <li><a class="sidebar-heading" href="#collections-content-policy">Curating Library Collections and Content Policy</a></li>
-            <li><a class="sidebar-heading" href="#internet-access-policy">Internet Access Policy</a></li>
-            <li><a class="sidebar-heading" href="#facilities-spaces-policy">Library Facilities and Spaces Policy</a>
-              <ul class="sub-list">
-                <li><a href="#displays">Displays</a></li>
-                <li><a href="#spaces">Event and Meeting Spaces</a></li>
-                <li><a href="#free-speech-activities">Petitions and Free Speech Activities</a></li>
-              </ul>
-            </li>
-            <li><a class="sidebar-heading" href="#programs-policy">Programs Policy</a>
-              <ul class="sub-list">
-                <li><a href="#oversight-curation">Oversight and Curation</a></li>
-                <li><a href="#communication">Communication</a></li>
-                <li><a href="#talent-endorsements">Talent and Endorsements</a></li>
-              </ul>
-            </li>
-            <li><a class="sidebar-heading" href="#staff-policies">Staff Policies</a></li>
-            <li><a class="sidebar-heading" href="#volunteer-policy">Volunteer Policy</a></li>
-          </ul>
-        </nav>
-      </div>
       <div class="policy-contents"> 
         
         <!--######-->
@@ -679,6 +643,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </section>
         </section>
         <div class="adopted"><i>Adopted by the Library Board on March 29, 2023.</i></div>
+      </div>
+      <div class="table-contents">
+        <nav class="section-nav">
+          <ul class="list-unstyled">
+            <li><a class="sidebar-heading" href="#access-policy">Access Policy</a>
+              <ul class="sub-list">
+                <li><a href="#library-commitment">Our Library's Commitment</a></li>
+                <li><a href="#customer-code-of-conduct">Customer Code of Conduct</a></li>
+                <li><a href="#censorship">Censorship</a></li>
+                <li><a href="#customer-privacy">Customer Privacy</a></li>
+              </ul>
+            </li>
+            <li><a class="sidebar-heading" href="#alcohol-policy">Alcohol (Social Use) Policy</a>
+              <ul class="sub-list">
+                <li><a href="#general-alcohol-policy">General</a></li>
+                <li><a href="#alcohol-policy-permission">Conditions to Prior Written Permission to Serve Alcohol</a></li>
+                <li><a href="#alcohol-policy-violations">Violations of Library Policy</a></li>
+              </ul>
+            </li>
+            <li><a class="sidebar-heading" href="#children-parents-policy">Children and Parents Policy</a></li>
+            <li><a class="sidebar-heading" href="#review-request-policy">Citizen Review Request Policy</a></li>
+            <li><a class="sidebar-heading" href="#open-records-policy">Colorado Open Records Policy</a>
+              <ul class="sub-list">
+                <li><a href="#make-request">How to Make a Request</a></li>
+                <li><a href="#costs-deposit">CORA Request Costs and Deposit</a></li>
+                <li><a href="#turnaround-time">Request Turnaround Expectation</a></li>
+              </ul>
+            </li>
+            <li><a class="sidebar-heading" href="#contributions-gifts-policy">Contributions and Gifts Policy</a></li>
+            <li><a class="sidebar-heading" href="#collections-content-policy">Curating Library Collections and Content Policy</a></li>
+            <li><a class="sidebar-heading" href="#internet-access-policy">Internet Access Policy</a></li>
+            <li><a class="sidebar-heading" href="#facilities-spaces-policy">Library Facilities and Spaces Policy</a>
+              <ul class="sub-list">
+                <li><a href="#displays">Displays</a></li>
+                <li><a href="#spaces">Event and Meeting Spaces</a></li>
+                <li><a href="#free-speech-activities">Petitions and Free Speech Activities</a></li>
+              </ul>
+            </li>
+            <li><a class="sidebar-heading" href="#programs-policy">Programs Policy</a>
+              <ul class="sub-list">
+                <li><a href="#oversight-curation">Oversight and Curation</a></li>
+                <li><a href="#communication">Communication</a></li>
+                <li><a href="#talent-endorsements">Talent and Endorsements</a></li>
+              </ul>
+            </li>
+            <li><a class="sidebar-heading" href="#staff-policies">Staff Policies</a></li>
+            <li><a class="sidebar-heading" href="#volunteer-policy">Volunteer Policy</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
