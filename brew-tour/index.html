@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,6 +54,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 <style>
 @font-face {
     font-family: 'The Farmer';
@@ -99,12 +101,77 @@ ul.farmer > li {
     white-space: nowrap;
     margin-left: 5px;
 }
+polyline, g {
+    stroke: #666;
+}
+#baguetteBox-overlay .full-image figcaption {
+    font-family: "Ubuntu", arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    text-align: center;
+    line-height: inherit;
+    white-space: normal;
+    color: #333;
+    background-color: transparent;
+    padding: 10px 10%;
+}
+#baguetteBox-overlay .full-image img {
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.tz-gallery .lightbox img {
+    width: inherit;
+    border-radius: 0;
+    position: inherit;
+}
+.tz-gallery .lightbox::after, .tz-gallery .lightbox::before {
+    display: none;
+}
+.lightbox.null {
+    display: none;
+}
+.custom-container {
+    max-width: 825px;
+    margin: 0 auto;
+}
+.lightbox.lightbox-group {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
 .partners {
     display: flex;
     flex-direction: column;
     max-width: 950px;
     margin: 0 0 0 200px;
     padding: 10px 0 35px;
+}
+.tz-gallery .lightbox img.prizes {
+    border-radius: 50%;
+    border: 3px solid #2f2e33;
+    transition: transform .2s ease-in-out;
+}
+.tz-gallery .lightbox img.prizes:hover, .tz-gallery .lightbox img.prizes:focus {
+    transform: rotate(10deg);
+}
+.points {
+    font-family: "Larosa Bold", sans-serif;
+    color: #000;
+    border: 2px solid #2f2e33;
+    max-width: 255px;
+    margin: -30px auto 0 auto;
+    background: #d79e66;
+    font-size: 22px;
+    padding: 10px 0 6px;
+    position: relative;
+    z-index: 1000;
+    text-transform: uppercase;
+    border-radius: 3px;
+    line-height: 22px;
 }
 .farmer.brew-tour-heading {
     font-size: 200px;
@@ -183,10 +250,23 @@ h2.larosa {
     background: #f4e4be;
     color: #000;
 }
-.prizes-container {
+.prizes-container-alt {
     max-width: 900px;
     margin: 0 auto;
     padding: 60px 15px 80px;
+}
+.prizes-container {
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 60px 15px 80px;
+}
+.prize-box {
+    padding: 10px;
+}
+.prize-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .partner-row {
     background: #d79e66;
@@ -489,62 +569,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-<div class="row intro-row">
-  <div class="intro-container">
-    <div class="text-center">
-      <div><img class="img-responsive image-center" src="brew-tour-logo.png" alt="Douglas County Libraries"></div>
-      <h1 class="farmer brew-tour-heading">BReW ToUR</h1>
-    </div>
-    <div class="text-center">
-      <h3 class="yellow-text no-margin-top">August 1-September 30</h3>
-      <h2 class="yellow-text no-margin-top">Visit local breweries and coffee shops, earn prizes!</h2>
-      <h5 class="no-margin-bottom yellow-text margin-lg-100">Our 2023 Brew Tour includes some great Douglas County <a class="text-underline" href="#partners">breweries and coffee shops</a>. Beginning August 1, log your visits to the different participating partner establishments to earn points, unlock rewards, and get entered into our Grand Prize drawing. </h5>
-      <div class="button-wrapper"><a href="https://dclibraries.beanstack.org/reader365" target="_blank" class="btn btn-primary btn-custom">Pre-register</a><a href="https://dclibraries.beanstack.org/users/sign_in" target="_blank" class="btn btn-primary btn-custom">Sign In</a></div>
-      <div class="margin-lg-200">*Participants must register and log visits on Beanstack to be eligible for all prizes and rewards. Grand Prize drawing will be held in October.</div>
-    </div>
-  </div>
-</div>
-<div style="border-bottom: 3px solid #2f2e33;" class="row prizes-row">
-  <div class="prizes-container text-center"><img class="center-block img-responsive" src="mountains.png" alt="">
-    <h2 class="larosa">Prizes & Rewards</h2>
-    <h4 class="black">Gather points and unlock rewards by logging your visits to each participating partner brewery and coffee shop. Each visit also earns you one entry into our Grand Prize drawing for a Happy Brew Year&mdash;one premium insulated growler filled twice by each participating brewery.</h4>
-    <div style="font-size: 18px;" class="black margin-lg-50 margin-md-50">You may also earn additional points and unique rewards by attending DCL-hosted Brew Tour events and Power Hours at our libraries and select brewery locations.*</div>
-    <div style="font-size: 20px;" class="margin-top-5 black">
-    <i>Event info coming soon!</i></div>
-  <div class="margin-top-10">*Power Hour dates and locations announced in Beanstack every Friday starting August 4.</div>
-</div>
-</div>
-<div id="partners" class="row partner-row">
-  <div class="partner-container"><img src="hops-wheat.png" class="img-responsive center-block">
-    <h2 class="larosa text-center">Brew Tour Partners</h2>
-    <div class="partners">
-      <ul class="partner-wrapper farmer list-unstyled">
-        <div class="partner-column">
-          <li><a class="hover-animation" href="https://goo.gl/maps/phqesNWh6oCrRBNK8" target="_blank">3&nbsp;Freaks</a><span class="sub-title">Brewery</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/o1DC6AY3w918JKwx7" target="_blank">105&nbsp;West</a><span class="sub-title">Brewing Company</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/2YDHvoadpBU6yHHAA" target="_blank">Barnett&nbsp;&&nbsp;Son</a><span class="sub-title">Brewing Co.</span></li>
-          <li><a class="hover-animation" href="https://g.page/BURLYbrewing?share" target="_blank">Burly</a><span class="sub-title">Brewing&nbsp;Company</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/pKDTpqA2i4y3GcTE7" target="_blank">Crowfoot&nbsp;Valley</a><span class="sub-title">Coffee</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/ExkCMfiXRYR2AYLw9" target="_blank">Deja&nbsp;Brew</a><span class="sub-title">Coffee</span></li>
-        </div>
-        <div class="partner-column">
-          <li><a class="hover-animation" href="https://goo.gl/maps/r77k98LghUGDF6cw9" target="_blank">Downhill</a><span class="sub-title">Brewing</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/cZ39uHawcW1gWgVV9" target="_blank">Fiction</a><span class="sub-title">Beer Company</span></li>
-          <li><a class="hover-animation" href="https://www.google.com/maps/search/Fika+Coffee+House/@39.5388924,-104.7972333,13z/data=!3m1!4b1?entry=ttu" target="_blank">Fika</a><span class="sub-title">Coffee House</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/5b6zPV1YfHDBQbAZ9" target="_blank">Living&nbsp;the&nbsp;Dream</a><span class="sub-title">Brewing Company</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/efksfwVYa2GsmiUj9" target="_blank">Lone&nbsp;Tree</a><span class="sub-title">Brewing Company</span></li>
-          <li><a class="hover-animation" href="https://goo.gl/maps/GZ1cjZN4kbExiDmcA" target="_blank">Monk&nbsp;&&nbsp;Mongoose</a><span class="sub-title">Coffee Co</span></li>
-          <!--<li><a class="hover-animation" href="https://g.page/WelcomeHomeBrewery?share" target="_blank">Welcome Home</a><span class="sub-title">Brewery</span></li>--> 
-        </div>
-      </ul>
-    </div>
-    <div class="text-center">
-      <div><img src="stamp-logo.jpg" alt=""></div>
-      <div class="padding-top-15"><i>Must be over 21 to consume alcohol. Please drink responsibly.</i></div>
+  <div class="row intro-row">
+    <div class="intro-container">
+      <div class="text-center">
+        <div><img class="img-responsive image-center" src="brew-tour-logo.png" alt="Douglas County Libraries"></div>
+        <h1 class="farmer brew-tour-heading">BReW ToUR</h1>
+      </div>
+      <div class="text-center">
+        <h3 class="yellow-text no-margin-top">August 1-September 30</h3>
+        <h2 class="yellow-text no-margin-top">Visit local breweries and coffee shops, earn prizes!</h2>
+        <h5 class="no-margin-bottom yellow-text margin-lg-100">Our 2023 Brew Tour includes some great Douglas County <a class="text-underline" href="#partners">breweries and coffee shops</a>. Beginning August 1, log your visits to the different participating partner establishments to earn points, unlock rewards, and get entered into our Grand Prize drawing. </h5>
+        <div class="button-wrapper"><a href="https://dclibraries.beanstack.org/reader365" target="_blank" class="btn btn-primary btn-custom">Pre-register</a><a href="https://dclibraries.beanstack.org/users/sign_in" target="_blank" class="btn btn-primary btn-custom">Sign In</a></div>
+        <div class="margin-lg-200">*Participants must register and log visits on Beanstack to be eligible for all prizes and rewards. Grand Prize drawing will be held in October.</div>
+      </div>
     </div>
   </div>
-</div>
-<!-- InstanceEndEditable --> </div>
+  <div style="border-bottom: 3px solid #2f2e33;" class="row prizes-row">
+    <div class="prizes-container-alt text-center"><img class="center-block img-responsive" src="mountains.png" alt="">
+      <h2 class="larosa">Prizes & Rewards</h2>
+      <h4 class="black">Gather points and unlock rewards by logging your visits to each participating partner brewery and coffee shop. Each visit also earns you one entry into our Grand Prize drawing for a Happy Brew Year&mdash;one premium insulated growler filled twice by each participating brewery.</h4>
+      <div style="font-size: 18px;" class="black margin-lg-50 margin-md-50">You may also earn additional points and unique rewards by attending DCL-hosted Brew Tour events and Power Hours at our libraries and select brewery locations.*</div>
+      <div style="font-size: 20px;" class="margin-top-5 black"> <i>Event info coming soon!</i></div>
+      <div class="margin-top-10">*Power Hour dates and locations announced in Beanstack every Friday starting August 4.</div>
+    </div>
+  </div>
+  
+  <!--
+	
+  <div id="prizes" class="row prizes-row">
+    <div class="prizes-container text-center">
+      <div><img class="center-block img-responsive" src="mountains.png" alt="">
+        <h2 class="larosa">Prizes & Rewards</h2>
+        <h5 class="black">Gather points and unlock rewards by logging your visits to each participating partner brewery and coffee shop. Each visit also earns you one entry into our Grand Prize drawing for a Happy Brew Year&mdash;one premium stainless steel growler filled twice by each participating brewery plus free coffee.</h5>
+        <div class="black padding-bottom-15 margin-lg-50">You may also earn additional points and unique rewards by attending DCL-hosted Brew Tour events at our libraries and select brewery locations.** Have fun with Harry Potter Trivia, Craft & Sip events, Books & Authors Bingo, Beer Games, and more.</div>
+      </div>
+      <div class="large-text"><a class="black" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register now</a> and receive a Brew Tour Lanyard and Brew Card.</div>
+      <div class="large-text padding-bottom-15"><i>5 points each location visit<br>
+        10 points each event attended</i> </div>
+      <div class="tz-gallery">
+        <div class="prize-wrapper">
+          <div class="prize-box"><a class="lightbox" href="dcl-socks-large.jpg"> <img class="prizes" src="dcl-socks-small.jpg" alt="DCL Brew Tour Socks"></a>
+            <div class="points">50 Points:<br>
+              Brew Tour Socks</div>
+          </div>
+          <div class="prize-box"><a class="lightbox" href="dcl-beanie-large.jpg"> <img class="prizes" src="dcl-beanie-small.jpg" alt="DCL Brew Tour Beanie"></a>
+            <div class="points">75 Points:<br>
+              Brew Tour Beanie</div>
+          </div>
+          <div class="prize-box"><a class="lightbox" href="dcl-hoodie-large.jpg"> <img class="prizes" src="dcl-hoodie-small.jpg" alt="Brew Tour Hoodie"></a>
+            <div class="points">100 Points:<br>
+              Brew Tour Hoodie</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=brew+tour&df=list&lib=all&nd=365" target="_blank" class="btn btn-primary btn-custom-alt">Event Signup</a></div>
+      
+      <div class="padding-top-30">
+        <h2 class="no-margin black larosa">Bean There</h2>
+        <h3 class="no-margin black larosa">Coffee Challenge</h3>
+        <div class="tz-gallery">
+          <div class="prize-wrapper">
+            <div class="prize-box"><a class="lightbox" href="dcl-mug-large.jpg"> <img class="prizes" src="dcl-mug-small.jpg" alt="Brew Tour Mug"></a>
+              <div class="points">Brew Tour<br>
+                Coffee Mug</div>
+            </div>
+          </div>
+        </div>
+        <h5 class="black margin-lg-100">Visit all participating coffee shops and attend our exclusive coffee event to earn another faBREWlous perk, a stainless steel book-lovers travel tumbler.**</h5>
+      </div>
+      <div class="padding-top-15"><i>**Brew Tour rewards available for pickup at your nearest DCL location.</i></div>
+    </div>
+  </div>	-->
+  
+  <div id="partners" class="row partner-row">
+    <div class="partner-container"><img src="hops-wheat.png" class="img-responsive center-block">
+      <h2 class="larosa text-center">Brew Tour Partners</h2>
+      <div class="partners">
+        <ul class="partner-wrapper farmer list-unstyled">
+          <div class="partner-column">
+            <li><a class="hover-animation" href="https://goo.gl/maps/phqesNWh6oCrRBNK8" target="_blank">3&nbsp;Freaks</a><span class="sub-title">Brewery</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/o1DC6AY3w918JKwx7" target="_blank">105&nbsp;West</a><span class="sub-title">Brewing Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/2YDHvoadpBU6yHHAA" target="_blank">Barnett&nbsp;&&nbsp;Son</a><span class="sub-title">Brewing Co.</span></li>
+            <li><a class="hover-animation" href="https://g.page/BURLYbrewing?share" target="_blank">Burly</a><span class="sub-title">Brewing&nbsp;Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/pKDTpqA2i4y3GcTE7" target="_blank">Crowfoot&nbsp;Valley</a><span class="sub-title">Coffee</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/ExkCMfiXRYR2AYLw9" target="_blank">Deja&nbsp;Brew</a><span class="sub-title">Coffee</span></li>
+          </div>
+          <div class="partner-column">
+            <li><a class="hover-animation" href="https://goo.gl/maps/r77k98LghUGDF6cw9" target="_blank">Downhill</a><span class="sub-title">Brewing</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/cZ39uHawcW1gWgVV9" target="_blank">Fiction</a><span class="sub-title">Beer Company</span></li>
+            <li><a class="hover-animation" href="https://www.google.com/maps/search/Fika+Coffee+House/@39.5388924,-104.7972333,13z/data=!3m1!4b1?entry=ttu" target="_blank">Fika</a><span class="sub-title">Coffee House</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/5b6zPV1YfHDBQbAZ9" target="_blank">Living&nbsp;the&nbsp;Dream</a><span class="sub-title">Brewing Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/efksfwVYa2GsmiUj9" target="_blank">Lone&nbsp;Tree</a><span class="sub-title">Brewing Company</span></li>
+            <li><a class="hover-animation" href="https://goo.gl/maps/GZ1cjZN4kbExiDmcA" target="_blank">Monk&nbsp;&&nbsp;Mongoose</a><span class="sub-title">Coffee Co</span></li>
+            <!--<li><a class="hover-animation" href="https://g.page/WelcomeHomeBrewery?share" target="_blank">Welcome Home</a><span class="sub-title">Brewery</span></li>--> 
+          </div>
+        </ul>
+      </div>
+      <div class="text-center">
+        <div><img src="stamp-logo.jpg" alt=""></div>
+        <div class="padding-top-15"><i>Must be over 21 to consume alcohol. Please drink responsibly.</i></div>
+      </div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
     <div class="social-footer">
@@ -606,6 +734,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script> 
+<script>
+    baguetteBox.run('.tz-gallery', {
+        buttons: true,
+        overlayBackgroundColor: 'rgba(255,255,255,0.8)'
+    });
+</script> 
 <script>
 $(function () {
   $('[data-toggle="popover"]').popover()
@@ -661,4 +796,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
