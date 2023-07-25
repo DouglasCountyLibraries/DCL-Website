@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,16 +60,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
     animation: image_blur 6s;
+	margin-top: 2px;
 }
-@keyframes image_blur {
-0% {
--webkit-filter: blur(6px);
-filter: blur(6px);
+.contain-header {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 975px;
 }
-100% {
--webkit-filter: blur(0px);
-filter: blur(0px);
+video#bgvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff url("sleepy-hollow-poster.jpg") center center no-repeat;
+    background-size: cover;
 }
+video {
+    display: block;
 }
 .sleepy-wrapper {
     max-width: 1920px;
@@ -85,15 +103,14 @@ filter: blur(0px);
     text-align: center;
     padding-top: 125px;
 }
-.neato {
-    font-family: "neato-serif-rough", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.oldstyle {
-    font-family: "ten-oldstyle", serif;
-    font-weight: 500;
-    font-style: normal;
+.info-wrapper {
+    font-family: "Open Sans", arial, sans-serif;
+    padding: 0 15px 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    animation: fly-in 4s ease-in 0.3s both;
 }
 h1.oldstyle {
     font-family: "ten-oldstyle", serif;
@@ -139,6 +156,16 @@ a.btn.btn-default.btn-custom:active, a.btn.btn-default.btn-custom:hover, a.btn.b
     background: #b41b0b;
     color: #fff;
 }
+@keyframes image_blur {
+0% {
+-webkit-filter: blur(6px);
+filter: blur(6px);
+}
+100% {
+-webkit-filter: blur(0px);
+filter: blur(0px);
+}
+}
 @keyframes lightning {
 0% {
 opacity: 0;
@@ -171,6 +198,18 @@ opacity: 0;
 opacity: 0;
 }
 }
+@keyframes fly-in {
+0% {
+transform: scale(0.2);
+transform-origin: 50% 120%;
+opacity: 0;
+}
+100% {
+transform: scale(1);
+transform-origin: 50% 100%;
+opacity: 1;
+}
+}
 
 @media (max-width: 725px) {
 h1.heading-two {
@@ -188,87 +227,6 @@ h4.heading-one {
     font-size: 50px;
     line-height: .7em;
 }
-}
-.info-wrapper {
-    font-family: "Open Sans", arial, sans-serif;
-    padding: 0 15px 0;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
-    animation: fly-in 5s ease-in 0s both;
-}
-@keyframes fly-in {
-0% {
-transform: scale(0.2);
-transform-origin: 50% 120%;
-opacity: 0;
-}
-100% {
-transform: scale(1);
-transform-origin: 50% 100%;
-opacity: 1;
-}
-}
-h1.info {
-    font-family: 'Caveat Brush', sans-serif;
-    color: #204999;
-    font-size: 98px;
-    text-align: center;
-    line-height: 72px;
-    letter-spacing: -3px;
-    transform: rotate(-1.3deg);
-}
-.info-one {
-    font-size: 22px;
-    color: #153065;
-    font-weight: 600;
-    padding: 10px 0;
-}
-.info-one div {
-    padding-top: 10px;
-}
-.info-two {
-    font-weight: 400;
-    color: #395129;
-    max-width: 480px;
-    margin: 0 auto;
-}
-.info-one a, .info-two a {
-    color: #153065;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.info-one a:hover, .info-two a:hover {
-    text-decoration: none;
-    border-bottom: 2px solid #153065;
-    letter-spacing: .5px;
-}
-.contain-header {
-    position: relative;
-    overflow: hidden;
-    background: #fff;
-    max-width: 1920px;
-    margin: 0 auto;
-    height: 975px;
-}
-video#bgvid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: #fff url("../storybook-holiday-video/cloud-sky-background.jpg") center center no-repeat;
-    background-size: cover;
-}
-video {
-    display: block;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -459,7 +417,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="large-text margin-bottom-15">"His appetite for the marvelous, and his powers of digesting it, were equally extraordinary, and both had been increased by his residence in this spell-bound region." <i>&mdash;&nbsp;Washington Irving</i></div>
               <div class="margin-lg-25">Enjoy a fantastical evening in a favorite haunt as we celebrate the Legend of Sleepy Hollow and its spirited inhabitants. Your little ghosts and goblins will love our interactive, guided trick-or-treat experience, complete with treats and scares along the way, as well as spooky crafts, fun entertainment and activities, and lots of tasty goodies for all to enjoy. But beware the Headless Horseman!</div>
               <div>
-                <h2 class="white no-margin-bottom">Saturday, October&nbsp;28, 6-9PM, <a class="white text-underline" href="#">Parker</a></h2>
+                <h2 class="white no-margin-bottom">Saturday, October&nbsp;28, 6-9PM, <a class="white text-underline" href="../parker">Parker</a></h2>
                 <h3 class="white margin-top-5 margin-bottom-5">$20&nbsp;Adults, $15 Ages&nbsp;3-13</h3>
                 (Ages 0-2 free with paying adult)</div>
               <div class="padding-top-30 text-center"><a href="#" class="btn btn-default btn-lg btn-custom">Buy Tickets</a></div>
@@ -579,4 +537,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
