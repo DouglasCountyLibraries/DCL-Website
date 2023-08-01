@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
 }
 .bubble-wrapper {
-    height: 1025px;
+    height: 1125px;
     max-width: 1920px;
     background: radial-gradient(circle, #023c44 0%, #03778c 100%);
     margin: 2px auto 0 auto;
@@ -142,9 +142,9 @@ h2.myriad-regular {
     margin: -35px auto -105px;
 }
 .link-wrapper {
-    margin: 0 auto;
-    max-width: 875px;
-    padding: 30px 15px 0;
+	margin: 0 auto;
+	max-width: 875px;
+	padding: 30px 0 0;
 }
 .item.one {
     font-family: "myriad-pro", sans-serif;
@@ -167,10 +167,23 @@ h2.myriad-regular {
     font-weight: 400;
     font-style: normal;
     color: #fff;
-    padding: 0;
+    padding: 5px 0;
     font-size: 20px;
-    max-width: 545px;
     margin: 0 auto;
+}
+.fa-ul.list-wrapper {
+    font-family: "myriad-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-left: 90px;
+}
+.fa-ul.list-wrapper li {
+    padding: 7px 0;
+    color: #fff;
+    text-align: left;
 }
 .bubbles {
     height: 50px;
@@ -449,6 +462,12 @@ transform: scale(1.5) translateY(-350px);
 }
 }
 
+@media (max-width: 900px) {
+.fa-ul.list-wrapper {
+    padding-left: 0;
+}
+}
+
 @media (max-width: 800px) {
 .heading-one {
     font-size: 110px;
@@ -466,7 +485,7 @@ transform: scale(1.5) translateY(-350px);
 }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 650px) {
 .heading-one {
     font-size: 82px;
 }
@@ -488,6 +507,11 @@ transform: scale(1.5) translateY(-350px);
     padding: 25px 10px 45px;
 }
 }
+	@media (max-width: 425px) {
+		.bubble-wrapper {
+	height: 1200px;
+}
+	}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -662,7 +686,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row background-row">
     <div class="bubble-wrapper">
       <div class="content-wrapper">
-        <h1 class="myriad-regular headline"><i>Summer's Poppin'</i></h1>
+        <h1 class="myriad-regular headline"><i>Bubble and Pop!</i></h1>
         <div class="content-container">
           <div id="content-container">
             <h1 class="heading-one">Grand</h1>
@@ -673,8 +697,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="link-wrapper">
           <div class="item one">A brand-new Castle Rock library is on the way&mdash;check out our <a class="white text-underline" href="castle-rock/">New Digs</a>! And pop in for our August 26 <a class="white text-underline" href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=218172" target="_blank">Grand Opening</a>.</div>
-          <div class="item two">The Dog Days of Summer aren’t over yet! <a class="white text-underline" href="summer-reading/">Register</a> for Summer Reading.</div>
-          <div class="item three">It's déjà brew all over again! Our 2023 Brew Tour kicks off August&nbsp;1. <a class="white text-underline" href="brew-tour/">Pre-register&nbsp;Today</a>!</div>
+          <ul class="fa-ul list-wrapper">
+            <li><span class="fa-li"><i class="fas fa-arrow-alt-right" style="color: rgba(255,255,255,.7)"></i></span>It's déjà brew all over again! Visit local breweries and coffee shops, earn prizes!<br>
+              <a style="text-transform: uppercase;font-weight: 700;color: rgba(255,255,255,.9);" href="brew-tour/">Register&nbsp;Today</a></li>
+            <!--<li><span class="fa-li"><i class="fas fa-arrow-alt-right" style="color: rgba(255,255,255,.7)"></i></span>Celebrate A Storybook Holiday Halloween: The Legend of Sleepy Hollow.<br>
+              <a style="text-transform: uppercase;font-weight: 700;color: rgba(255,255,255,.9);" href="storybook-holiday/">Buy Tickets now</a></li>-->
+            <li><span class="fa-li"><i class="fas fa-arrow-alt-right" style="color: rgba(255,255,255,.7)"></i></span>You’re invited to our Eighth Annual Fête des Fables Gala: The Snow Queen!<br>
+              <a style="text-transform: uppercase;font-weight: 700;color: rgba(255,255,255,.9);" href="fete-des-fables/">Learn More</a></li>
+          </ul>
         </div>
       </div>
       <div class="bubbles"></div>
