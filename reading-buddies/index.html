@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +54,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .kids-teens-active {
     background-color: #f5f5f5;
@@ -64,9 +64,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .checklist-wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 545px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding-top: 5px;
 }
 .checklist > li {
     padding: 8px;
@@ -76,23 +75,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1610px;
     margin: 0 auto;
 }
-.carousel-cell {
-    margin-right: 10px;
+.photo-box-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
 }
-.flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
+.align-bottom {
+    margin-top: auto;
+    text-align: center;
 }
-.flickity-prev-next-button:hover {
-    background: transparent;
+.photo-box-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 30px 15px;
 }
-/* arrow color */
-.flickity-prev-next-button .arrow {
-    fill: #efeeed;
+.dropdown-menu {
+    min-width: 210px;
 }
-.flickity-prev-next-button.no-svg {
-    color: #efeeed;
+
+@media (max-width: 825px) {
+.photo-box-wrapper {
+    max-width: 625px;
+}
+.photo-box-item {
+    flex-basis: 100%;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -265,46 +275,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-20">
+  <div class="row border-top">
     <div class="container">
-      <div class="text-center">
+      <div class="text-center margin-lg-175">
         <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Reading Buddies</h1>
-        <h4 class="roboto margin-top-5">Reading Buddies is a reading enrichment program for children in grades 1-3.</h4>
+        <h4 class="roboto margin-top-5 no-margin-bottom">Reading Buddies is a reading enrichment program for children in grades 1-3, pairing a trained teen Big Buddy with a struggling young reader.</h4>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="assets/one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/seven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/eight.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/nine.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="assets/ten.jpg" alt=""></div>
+  <div class="row padding-bottom-60">
+    <div class="photo-box-wrapper">
+      <div id="little-buddies" class="photo-box-item">
+        <div id="photo-box-one"></div>
+        <h3 class="text-center">Little Buddies</h3>
+        <div>Applications for Little Buddies are accepted until all positions are filled. Sessions will run from October 2-December 8.</div>
+        <div class="checklist-wrapper">
+          <ul class="fa-ul checklist">
+            <li><i class="fa-li fa fa-check fa-lg"></i>Reading Buddies is not a tutoring service.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>Please attend all scheduled meetings.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>You will need a Douglas County Libraries library card. <a href="https://getacard-ssl.dclibraries.app/" target="_blank">Get a card</a> if you don’t already have one.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>Upon acceptance to the Reading Buddies program, your Little Buddy will be paired with a Big Buddy, a teen library volunteer who is trained to read with kids in a way that helps encourage a love of reading.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>Space is limited and your participation in the program is not guaranteed until all applications have been reviewed and we have been able to match your child with a Teen Big Buddy volunteer.</li>
+          </ul>
+        </div>
+        <div class="align-bottom"> <a href="rb-form/" class="btn btn-primary btn-lg margin-top-15">Apply Now</a></div>
+      </div>
+      <div id="big-buddies" class="photo-box-item">
+        <div id="photo-box-two"></div>
+        <h3 class="text-center">Big Buddies</h3>
+        <div>Be a Teen Reading Buddy! Teen Big Buddies are trained and paired with a child (grades 1-3) to help them become a stronger reader.</div>
+        <div class="checklist-wrapper">
+          <ul class="fa-ul checklist">
+            <li><i class="fa-li fa fa-check fa-lg"></i>Buddies meet weekly for two months.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>For each session, spend 30 minutes preparing, followed by one hour of reading and literacy games with your Little Buddy.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>Volunteer spots are limited and your participation in the program is not guaranteed until your application has been received and approved.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>Volunteer orientation and training are required.</li>
+            <li><i class="fa-li fa fa-check fa-lg"></i>Choose a location to complete an application.</li>
+          </ul>
+        </div>
+        <div class="align-bottom">
+          <div class="dropdown"> <a href="#" class="btn btn-primary btn-lg margin-top-15 dropdown-toggle" data-toggle="dropdown">Choose a Location <span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu-center">
+              <div class="padding-15 text-capitalize">
+                <ul class="list-unstyled">
+                  <li><a href="https://app.betterimpact.com/PublicOrganization/3be61fcc-4003-4a23-9f45-27ab104bc746/Activity/312e65a8-ea24-4997-98c4-a5c909d2bc89/3" target="_blank">Castle Pines</a></li>
+                  <li><a href="https://app.betterimpact.com/PublicOrganization/aa41653e-ef00-4527-a748-66a319bf3763/Activity/7a8015eb-8249-4bbc-969e-411969a84506/3" target="_blank">Castle Rock</a></li>
+                  <li><a href="https://app.betterimpact.com/PublicOrganization/4db67c53-e84f-498c-8c2b-8c018c5be34e/Activity/8c8845e5-42eb-46fd-a4cd-560e4b1c0759/3" target="_blank">Highlands Ranch</a></li>
+                  <li><a href="https://app.betterimpact.com/PublicOrganization/d6250407-22ed-424c-b418-286a0762cd91/Activity/53f056cc-6e91-4613-a8ad-fefe48e7dfcf/3" target="_blank">Lone Tree</a></li>
+                  <li><a href="https://app.betterimpact.com/PublicOrganization/ed867f3b-9aaa-4136-bc68-1712d3743048/Activity/18c81305-b51f-40d8-8c1e-cb9012ce0c88/3" target="_blank">Parker</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row padding-top-20 padding-bottom-40">
-    <div class="container">
-      <h4 class="text-center margin-lg-200">Reading Buddies applications are accepted until all positions are filled.</h4>
-      <h5 class="text-center">Sessions will run from October 2-December 8.</h5>
-      <div class="checklist-wrapper">
-        <ul class="fa-ul checklist">
-          <li><i class="fa-li fa fa-check fa-lg"></i>Reading Buddies is not a tutoring service.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Please attend all scheduled meetings.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>You will need a Douglas County Libraries library card. <a href="https://getacard-ssl.dclibraries.app/" target="_blank">Get a card</a> if you don’t already have one.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Upon acceptance to the Reading Buddies program, your Little Buddy will be paired with a Big Buddy, a teen library volunteer who is trained to read with kids in a way that helps encourage a love of reading.</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Space is limited and your participation in the program is not guaranteed until all applications have been reviewed and we have been able to match your child with a Teen Big Buddy volunteer.</li>
-        </ul>
-        <div class="text-center padding-top-15"><a href="rb-form/" target="_blank" class="btn btn-primary btn-lg text-uppercase ">Apply Now</a></div>
-      </div>
-    </div>
-  </div>
+  <script>
+    
+	
+	
+	
+	var images = ['one.jpg', 'two.jpg', 'three.jpg', 'four.jpg', 'five.jpg'];
+    $('<img alt="Little Buddies" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-one');
+	
+	
+      
+    var images = ['six.jpg', 'seven.jpg', 'eight.jpg', 'nine.jpg', 'ten.jpg'];
+    $('<img alt="Teen Big Buddies" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#photo-box-two');
+      
+     
+</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -427,4 +468,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
