@@ -553,6 +553,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="eventsinfo"></div>
     <script type="text/javascript" src="https://douglascountylibraries.evanced.info/signupadmin/eventsxml.aspx?kw=Castle-Rock-Event&lib=ALL&nd=365&private=1&dm=html&limit=4&IncludeDateHtml=1"></script> 
   </div>
+	
+	
+	
+	  <div id="play-area" class="row bg-gray-5">
+    <div class="container padding-top-50 padding-bottom-20 text-center">
+      <h4 class="no-margin">Kid-friendly Fun:</h4>
+      <h2 class="no-margin">The Ranch</h2>
+		<div class="margin-top-5">Sponsored by Rotary Club of Castle Rock</div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div class="custom-container no-padding">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+	  <div class="row bg-gray-5">
+    <div class="container text-center padding-top-30 padding-bottom-60">
+      <div class="margin-lg-150">Rustle up some fun at The Ranch, where young cowpokes can put their imagination to work tending horses and animals, baling hay, gardening, and more, using play materials and equipment. With a standalone stable, tractor, and mini grain silo, the spirit of the West comes to life in this interactive play space.</div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -626,7 +655,10 @@ $("#eventsinfo .item").click(function(){
      OpenInNewTab(url);
      return false;
 });
-	</script> 
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+ </script> 
 <script>
 	var cards = $(".random-slide");
 for (var i = 0; i < cards.length; i++) {
@@ -654,6 +686,15 @@ function kbSlideshow() { // set .fx1 class on 1st img on page load
 	}
 setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
 </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
