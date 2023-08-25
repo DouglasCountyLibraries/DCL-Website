@@ -69,13 +69,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1610px;
     margin: 0 auto;
 }
-	.sponsor-container {
-		background: #f5f5f5;
-		max-width: 1610px;
+.sponsor-container {
+    background: #f5f5f5;
+    max-width: 1610px;
+    margin: 0 auto;
+    padding: 50px 15px;
+    margin-top: 15px;
+}
+	.sponsor-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 		margin: 0 auto;
-		padding: 50px 15px 60px;
-		margin-top: 15px;
+}
+	.sponsor {
+		margin: 10px 20px;
+		width: 220px;
 	}
+.sponsor img {
+    border-radius: 50%;
+	padding: 5px;
+}
 .carousel-cell {
     margin-right: 10px;
 }
@@ -280,6 +294,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transform: scale(1.1) translate(1.5%);
     opacity: 1
 }
+	@media (max-width: 1210px) {
+			.sponsor-wrapper {
+	max-width: 700px;
+}
+	}
 
 @media (max-width: 1150px) {
 .slideshow-image.main {
@@ -551,20 +570,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div>*Downtown Castle Rock public parking lots and garages are available for parking.</div>
     </div>
   </div>
-	
-	
-	
-  <div id ="sponsors" class="row"><div class="sponsor-container">
-    <h2 class="text-center no-margin">Our Valued Sponsors</h2>
-    <div class="container text-center">
-      <h5 class="margin-top-5">Special thanks to these partnering sponsors.</h5>
-      <div class="sponsor-wrapper"></div>
-    </div></div>
-  </div>	
-	
-	
-	
-	
+  <div id ="sponsors" class="row">
+    <div class="sponsor-container">
+      <h2 class="text-center no-margin">Our Valued Sponsors</h2>
+      <div class="container text-center">
+        <h5 class="no-margin">Special thanks to these partnering sponsors.</h5>
+        <div class="sponsor-wrapper">
+          <div class="sponsor">
+            <div><img src="aloha-fund-logo.jpg" alt="Aloha Fund"></div>
+            <div>Aloha Fund:<br>
+              Outdoor Plazas East and West</div>
+          </div>
+          <div class="sponsor">
+            <div><img src="kiwanis-clubs-logo.jpg" alt="Kiwanis Clubs of Castle Rock"></div>
+            <div>Kiwanis Clubs of Castle Rock:<br>
+              Flagpole</div>
+          </div>
+          <div class="sponsor">
+            <div><img src="rotary-club-logo.jpg" alt="Rotary Club of Castle Rock"></div>
+            <div>Rotary Club of Castle Rock:<br>
+              "The Ranch" Playscape</div>
+          </div>
+          <div class="sponsor">
+            <div><img src="sjostrom-family.jpg" alt="Rotary Club of Castle Rock"></div>
+            <div>The Sjostrom Family:<br>
+              Sjostrom History Lounge reading room</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="events" class="row text-center location-events">
     <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
     <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=1010&nd=180" target="_blank" class="text-uppercase font-weight-400">Castle Rock Calendar »</a>
@@ -575,7 +610,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container padding-top-50 padding-bottom-20 text-center">
       <h4 class="no-margin">Kid-friendly Fun:</h4>
       <h2 class="no-margin">The Ranch</h2>
-      <div class="margin-top-5">Sponsored by Rotary Club of Castle Rock</div>
     </div>
   </div>
   <div class="row bg-gray-5">
