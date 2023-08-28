@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,80 +55,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-.slideshow-row {
-    max-width: 1135px;
-    margin: 0 auto;
+.booklist {
+    transition: transform .2s ease-in-out;
 }
-.slideshow-image.main {
-    min-height: 600px;
+.booklist:hover, .booklist:focus {
+    transform: scale(1.04);
 }
-#slideshow {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 0%;
-    width: 100%;
-} /* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-    position: absolute;
-    z-index: 2;
-    width: 105%;
-    height: 105%;
-    top: -5%;
-    left: -5%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    -webkit-transition: opacity 3s, -webkit-transform 8s;
-    transition: opacity 3s, transform 8s;
+.listen, .pause {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
 }
-#slideshow div:nth-of-type(9n+1) {
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
+.pause {
+    margin-left: 6px;
 }
-#slideshow div {
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
+.listen:hover, .listen:focus, .pause:hover, .pause:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: #d36a50;
 }
-#slideshow div:nth-of-type(2n+1) {
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
+.listen:active, .listen:focus {
+    color: #d36a50;
 }
-#slideshow div:nth-of-type(3n+1) {
-    -webkit-transform-origin: bottom left;
-    transform-origin: bottom left;
+.fas.fa-play {
+    margin-left: 7px;
 }
-#slideshow div:nth-of-type(4n+1) {
-    -webkit-transform-origin: top right;
-    transform-origin: top right;
+.author-wrapper {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.9375rem 0;
 }
-#slideshow div:nth-of-type(5n+1) {
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
+.author-item {
+    width: 520px;
+    padding: 0 1.25rem;
 }
-#slideshow div:nth-of-type(6n+1) {
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-}
-#slideshow div:nth-of-type(7n+1) {
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
-}
-/* slide one */
-#slideshow div:nth-of-type(8n+1) {
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-}
-#slideshow .fx, #slideshow .fx1 {
-    -webkit-transform: scale(1.1) translate(1.5%);
-    transform: scale(1.1) translate(1.5%);
-    opacity: 1
-}
-
-@media (max-width: 575px) {
-.slideshow-image.main {
-    min-height: 400px;
+.author-item > .list-unstyled > li {
+    padding-bottom: 8px;
 }
 }
 </style>
@@ -304,60 +269,165 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div id="default-alert" style="display:none;"></div>
 <!-- InstanceBeginEditable name="Content" -->
 <div class="dcl-border-top">
-  <div class="container-xxl text-center padding-bottom-12">
-    <h1 class="jumbo-text text-uppercase font-weight-400 margin-top-20">Battle of the Books</h1>
+  <div class="container-xxl text-center padding-bottom-40">
+    <h1 class="jumbo-text text-uppercase font-weight-400 margin-top-20 no-margin-bottom">Battle of the Books</h1>
+    <h1 class="text-uppercase font-weight-400">2023-2024</h1>
     <div class="margin-bottom-10">
       <h4 class="roboto text-center max-width-55">Battle of the Books is a bowl-style trivia tournament that's all about books, engaging hundreds of young minds every year.</h4>
     </div>
     <div class="max-width-50">Dozens of teams in grades 3-6 compete against each other in interschool battles and finals tournaments to determine a districtwide champion for all of Douglas County.</div>
   </div>
 </div>
-<div class="container-xxl">
-  <h4 class="text-center mb-3">Congratulations to the 2022-23 winners!</h4>
-  <div class="d-flex max-width-70 mx-auto justify-content-center flex-wrap flex-md-nowrap">
-    <div class="text-center p-md-1"><img class="img-fluid image-center" src="dcs-montessori.jpg" alt="DCS Montessori Charter School">
-      <h6 class="font-weight-400 mt-2 mb-2">3rd-4th Grade: DCS Montessori Charter School</h6>
-      <div></div>
-    </div>
-    <div class="text-center p-md-1"><img class="img-fluid image-center" src="trailblazer.jpg" alt="Trailblazer Elementary School">
-      <h6 class="font-weight-400 mt-2 mb-2">5th-6th Grade: Trailblazer Elementary School</h6>
-      <div></div>
+<div class="bg-gray-5">
+  <div id="book-lists" class="container-xxl padding-top-50 padding-bottom-60">
+    <h2 class="text-center">Book Lists</h2>
+    <div class="max-width-50 text-center padding-bottom-20">Get ready to battle! These are the books that this year's trivia battle questions will be based upon. All of these titles will be available as "Your Lucky Day" books at your local DCL branch.</div>
+    <div class="d-flex max-width-70 mx-auto justify-content-center flex-wrap flex-lg-nowrap">
+      <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372454119"><img class="img-fluid image-center booklist" src="3-4-booklist.jpg" alt="3rd-4th Grade Books"></a>
+        <h4 class="margin-top-15">3rd-4th Grade Books</h4>
+        <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372454119">See Entire List »</a></div>
+      </div>
+      <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372460681"><img class="img-fluid image-center booklist" src="5-6-booklist.jpg" alt="5th-6th Grade Books"></a>
+        <h4 class="margin-top-15">5th-6th Grade Books</h4>
+        <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372460681">See Entire List »</a></div>
+      </div>
     </div>
   </div>
 </div>
-<div class="container-xxl slideshow-row pt-3">
-  <div id="slideshow" class="slideshow-image main"> 
-    <!-- define each background-image in CSS -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/one.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(1) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/two.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(2) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/three.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(3) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/four.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(4) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/five.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(5) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/six.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(6) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/seven.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(7) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/eight.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(8) -->
-    
-    <div class="random-slide" style="background-image: url('slideshow/nine.jpg')"></div>
-    <!-- #slideshow div:nth-of-type(9) --> 
-    
+<div id="pronunciations" class="container-xxl padding-top-60 padding-bottom-50">
+  <h2 class="text-center">Title and Author Pronunciation List</h2>
+  <div class="author-wrapper">
+    <div class="author-item">
+      <ul class="list-unstyled">
+        <h4>3rd & 4th Grade</h4>
+        <li>"Ban This Book" by Alan Gratz |&nbsp;<span class="text-nowrap">
+          <audio id="play1">
+            <source src="audio/alan-gratz.mp3" type="audio/mp3">
+            <source src="audio/alan-gratz.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play1').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play1').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Dog Squad" by Chris Grabenstein |&nbsp;<span class="text-nowrap">
+          <audio id="play2">
+            <source src="audio/chris-grabenstein.mp3" type="audio/mp3">
+            <source src="audio/chris-grabenstein.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play2').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play2').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Framed!" by James Ponti |&nbsp;<span class="text-nowrap">
+          <audio id="play3">
+            <source src="audio/james-ponti.mp3" type="audio/mp3">
+            <source src="audio/james-ponti.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play3').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play3').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"From the Mixed-up Files of Mrs Basil E. Frankweiler" by E.L. Konigsburg |&nbsp;<span class="text-nowrap">
+          <audio id="play4">
+            <source src="audio/el-konigsburg.mp3" type="audio/mp3">
+            <source src="audio/el-konigsburg.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play4').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play4').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Measuring Up" by Lily LaMotte |&nbsp;<span class="text-nowrap">
+          <audio id="play5">
+            <source src="audio/lily-lamotte.mp3" type="audio/mp3">
+            <source src="audio/lily-lamotte.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play5').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play5').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Megabat" by Ana Humphrey |&nbsp;<span class="text-nowrap">
+          <audio id="play6">
+            <source src="audio/ana-humphrey.mp3" type="audio/mp3">
+            <source src="audio/ana-humphrey.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play6').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play6').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Midnight at the Barclay Hotel" by Fleur Bradley |&nbsp;<span class="text-nowrap">
+          <audio id="play7">
+            <source src="audio/fleur-bradley.mp3" type="audio/mp3">
+            <source src="audio/fleur-bradley.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play7').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play7').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"One Crazy Summer" by Rita Williams |&nbsp;<span class="text-nowrap">
+          <audio id="play8">
+            <source src="audio/rita-williams.mp3" type="audio/mp3">
+            <source src="audio/rita-williams.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play8').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play8').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Tales of a Fourth Grade Nothing" by Judy Blume |&nbsp;<span class="text-nowrap">
+          <audio id="play9">
+            <source src="audio/judy-blume.mp3" type="audio/mp3">
+            <source src="audio/judy-blume.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play9').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play9').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"The Truth According to Blue" by Eve Yohalem |&nbsp;<span class="text-nowrap">
+          <audio id="play10">
+            <source src="audio/eve-yohalem.mp3" type="audio/mp3">
+            <source src="audio/eve-yohalem.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play10').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play10').pause()"><i class="fas fa-pause"></i></a></span></li>
+      </ul>
+    </div>
+    <div class="author-item">
+      <ul class="list-unstyled">
+        <h4>5th & 6th Grade</h4>
+        <li>"Alone" by Megan E. Freeman |&nbsp;<span class="text-nowrap">
+          <audio id="play11">
+            <source src="audio/megan-freeman.mp3" type="audio/mp3">
+            <source src="audio/megan-freeman.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play11').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play11').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Amari and the Night Brothers" by B.B. Alston |&nbsp;<span class="text-nowrap">
+          <audio id="play12">
+            <source src="audio/bb-alston.mp3" type="audio/mp3">
+            <source src="audio/bb-alston.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play12').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play12').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"The Blackthorn Key" by Kevin Sands |&nbsp;<span class="text-nowrap">
+          <audio id="play13">
+            <source src="audio/kevin-sands.mp3" type="audio/mp3">
+            <source src="audio/kevin-sands.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play13').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play13').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"The Candymakers" by Wendy Mass |&nbsp;<span class="text-nowrap">
+          <audio id="play14">
+            <source src="audio/wendy-mass.mp3" type="audio/mp3">
+            <source src="audio/wendy-mass.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play14').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play14').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Greetings From Witness Protection!" by Jake Burt |&nbsp;<span class="text-nowrap">
+          <audio id="play15">
+            <source src="audio/jake-burt.mp3" type="audio/mp3">
+            <source src="audio/jake-burt.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play15').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play15').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"The Last Shadow Warrior" by Sam Subity |&nbsp;<span class="text-nowrap">
+          <audio id="play16">
+            <source src="audio/sam-subity.mp3" type="audio/mp3">
+            <source src="audio/sam-subity.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play16').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play16').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"The Marvellers" by Dhonielle Clayton |&nbsp;<span class="text-nowrap">
+          <audio id="play17">
+            <source src="audio/dhonielle-clayton.mp3" type="audio/mp3">
+            <source src="audio/dhonielle-clayton.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play17').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play17').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"My Side of the Mountain" by Jean Craighead George |&nbsp;<span class="text-nowrap">
+          <audio id="play18">
+            <source src="audio/jean-craighead-george.mp3" type="audio/mp3">
+            <source src="audio/jean-craighead-george.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play18').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play18').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"The Seventh Most Important Thing" by Shelley Pearsall |&nbsp;<span class="text-nowrap">
+          <audio id="play19">
+            <source src="audio/shelley-pearsall.mp3" type="audio/mp3">
+            <source src="audio/shelley-pearsall.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play19').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play19').pause()"><i class="fas fa-pause"></i></a></span></li>
+        <li>"Wink" by Rob Harrell |&nbsp;<span class="text-nowrap">
+          <audio id="play20">
+            <source src="audio/rob-harrell.mp3" type="audio/mp3">
+            <source src="audio/rob-harrell.ogg" type="audio/ogg">
+          </audio>
+          <a class="listen" onclick="document.getElementById('play20').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play20').pause()"><i class="fas fa-pause"></i></a></span></li>
+      </ul>
+    </div>
   </div>
-  <h4 class="text-center padding-top-30 padding-bottom-40">Battles will return for the 2023-24 school year!</h4>
 </div>
 <!-- InstanceEndEditable -->
 <div class="bg-gray-10">
@@ -421,49 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-function OpenInNewTab(url ){
-  var win=window.open(url, '_blank');
-  win.focus();
-}
-$("#eventsinfo .item").click(function(){
-     var url = $(this).find("a").attr("href");
-     OpenInNewTab(url);
-     return false;
-});
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
- </script> 
-<script>
-	var cards = $(".random-slide");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -513,4 +541,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
