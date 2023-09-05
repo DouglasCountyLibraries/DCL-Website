@@ -895,7 +895,7 @@ $('.read-more-hide').on('click', function(e) {
 <!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
-$.get("https://s3.amazonaws.com/website.alert/alert.txt")
+$.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.random() * 1000000))
   .done(function( data ) {
     if ( data !=null ){	$("#general-alert").show().append( data );}
 });

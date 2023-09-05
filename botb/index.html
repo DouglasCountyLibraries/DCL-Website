@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -531,7 +530,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- InstanceEndEditable --> 
 <!-- pull alert.txt into the general-alert div --> 
 <script>
-$.get("https://s3.amazonaws.com/website.alert/alert.txt")
+$.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.random() * 1000000))
   .done(function( data ) {
     if ( data !=null ){	$("#default-alert").show().append( data );}
 });
@@ -541,5 +540,4 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt")
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
