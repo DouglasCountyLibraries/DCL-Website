@@ -67,11 +67,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 5px 0;
 }
 .custom-container {
-    max-width: 1610px;
+    max-width: 2200px;
     margin: 0 auto;
 }
 .carousel-cell {
-    margin-right: 10px;
+    margin-right: 30px;
+    opacity: .5;
+    filter: blur(1px);
+}
+.carousel-cell.is-selected {
+    opacity: 1;
+    filter: blur(0);
 }
 .flickity-prev-next-button {
     width: 50px;
@@ -83,10 +89,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: #efeeed;
+    fill: #fff;
 }
 .flickity-prev-next-button.no-svg {
-    color: #efeeed;
+    color: #fff;
 }
 .award-wrapper {
     display: flex;
@@ -352,16 +358,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row padding-bottom-40 border-top">
-    <div class="container text-center margin-lg-50">
+    <div class="container text-center margin-lg-150">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Volunteer</h1>
       <h4 class="roboto margin-top-5">When you volunteer at Douglas County Libraries, you become an invaluable part of our team, helping us provide resources for learning and leisure to improve the lives of the people in our communities.</h4>
-      <div class="padding-bottom-15 margin-lg-150">You also gain valuable skills, give back to your community, and meet people from diverse backgrounds in a pleasant environment. We value our volunteers’ contributions!</div>
-      <div class="text-center"> <a href="https://app.betterimpact.com/PublicEnterprise/74d8b81b-e9ef-40d3-9ff9-259825082a07" target="_blank" class="btn btn-lg btn-primary margin-top-5">Apply Now / Log In</a> </div>
+      <div class="padding-bottom-15 margin-lg-50">You also gain valuable skills, give back to your community, and meet people from diverse backgrounds in a pleasant environment. We value our volunteers’ contributions!</div>
+      <div class="text-center"> <a href="https://app.betterimpact.com/PublicEnterprise/74d8b81b-e9ef-40d3-9ff9-259825082a07" target="_blank" class="btn btn-lg btn-primary margin-top-15">Apply Now / Log In</a> </div>
     </div>
   </div>
-  <div class="row bg-teal padding-top-60 padding-bottom-60">
+  <div class="row">
     <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="images/one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="images/twenty-six.jpg" alt=""></div>
         <div class="carousel-cell"><img src="images/three.jpg" alt="s"></div>
@@ -391,7 +397,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="padding-top-40">
+    <div class="padding-top-30">
       <div class="text-center">
         <h2 class="no-margin-top margin-bottom-5">Volunteer Opportunities</h2>
         <h4 class="no-margin">Apply now for opportunities related to these areas of interest:</h4>

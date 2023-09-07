@@ -58,18 +58,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
-.flickity-page-dots .dot {
-	background-color: #fff;
-}
-.flickity-page-dots {
-	bottom: -30px;
-	opacity: .5;
-}
-.flickity-prev-next-button {
-	display: none;
+.custom-container {
+    max-width: 2200px;
+    margin: 0 auto;
 }
 .carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
+    margin-right: 30px;
+    opacity: .5;
+    filter: blur(1px);
+}
+.carousel-cell.is-selected {
+    opacity: 1;
+    filter: blur(0);
+}
+	.flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #fff;
+}
+.flickity-prev-next-button.no-svg {
+    color: #fff;
 }
 .concierge .fa-check {
 	color: #D36A50;
@@ -248,7 +263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="container-fluid">
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-40">
+  <div class="row border-top padding-bottom-30">
     <div class="container text-center">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Host Your Event at DCL</h1>
 
@@ -256,9 +271,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="margin-lg-200">Your event is important to us! Our packages accommodate the style, size and complexity of any event, with dedicated event experts to help you make your special function a success.</div>
     </div>
   </div>
-  <div style="padding-bottom:45px;" class="row bg-lavender padding-top-40">
+  <div class="row">
     <div class="container-lg no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="dinner.jpg" alt="Couple Enjoying Dinner"></div>
         <div class="carousel-cell"><img src="rehearsal-dinner-buffet.jpg" alt="Rehersal Dinner Buffet"></div>
         <div class="carousel-cell"><img src="presentation.jpg" alt="Meeting Presentation"></div>
@@ -285,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-40 padding-top-40">
+  <div class="row padding-bottom-40 padding-top-20">
     <div class="container margin-lg-200">
       <h4 class="padding-bottom-15 text-center">Our Concierge event services include:</h4>
       <ul class="fa-ul concierge">

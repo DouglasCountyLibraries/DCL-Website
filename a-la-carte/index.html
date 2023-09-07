@@ -62,17 +62,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	max-width: 30rem;
 	margin: 0 auto;
 }
-.flickity-page-dots .dot {
-	background-color: #fff;
+
+.carousel-cell {
+    margin-right: 30px;
+    opacity: .5;
+    filter: blur(1px);
 }
-.flickity-page-dots {
-	bottom: 15px;
+.carousel-cell.is-selected {
+    opacity: 1;
+    filter: blur(0);
 }
 .flickity-prev-next-button {
-	display: none;
+    width: 50px;
+    height: 50px;
+    background: transparent;
 }
-.carousel-cell {
-	border-right: 1px solid rgba(255,255,255,.6);
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #fff;
+}
+.flickity-prev-next-button.no-svg {
+    color: #fff;
 }
 .concierge .fa-check {
 	color: #D36A50;
@@ -264,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <div class="row no-margin">
   <div class="no-padding">
-    <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "wrapAround": true, "autoPlay": 4000 }'>
+    <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
       <div class="carousel-cell"><img src="dinner.jpg" alt="Couple Enjoying Dinner"></div>
       <div class="carousel-cell"><img src="rehearsal-dinner-buffet.jpg" alt="Rehersal Dinner Buffet"></div>
       <div class="carousel-cell"><img src="presentation.jpg" alt="Meeting Presentation"></div>
