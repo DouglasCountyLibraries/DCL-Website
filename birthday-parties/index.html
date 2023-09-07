@@ -60,11 +60,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-color: #f5f5f5;
 }
 .custom-container {
-    max-width: 1610px;
+    max-width: 2200px;
     margin: 0 auto;
 }
 .carousel-cell {
-    margin-right: 10px;
+    margin-right: 30px;
+    opacity: .5;
+    filter: blur(1px);
+}
+.carousel-cell.is-selected {
+    opacity: 1;
+    filter: blur(0);
 }
 .flickity-prev-next-button {
     width: 50px;
@@ -76,10 +82,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: #efeeed;
+    fill: #fff;
 }
 .flickity-prev-next-button.no-svg {
-    color: #efeeed;
+    color: #fff;
 }
 .concierge .fa-check {
     color: #d36a50;
@@ -276,9 +282,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="margin-lg-100">$225 for up to 12 children (the birthday girl/boy + 11 friends); add $15 for each additional child. <a href="#" data-toggle="modal" data-target="#restrictions">Some restrictions apply.</a> </div>
     </div>
   </div>
-  <div class="row bg-teal padding-top-60 padding-bottom-60">
+  <div class="row">
     <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="birthday-one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="birthday-two.jpg" alt=""></div>
         <div class="carousel-cell"><img src="birthday-three.jpg" alt=""></div>
@@ -298,9 +304,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-40 padding-top-40">
+  <div class="row padding-bottom-40 padding-top-30">
     <div class="container margin-lg-200">
-      <h4 class="padding-bottom-15 text-center">Our customized parties are for kids ages 2-7. Each party package includes:</h4>
+      <h4 class="padding-bottom-15 no-margin-top text-center">Our customized parties are for kids ages 2-7. Each party package includes:</h4>
       <img class="img-responsive pull-left padding-top-30 padding-right-30 padding-bottom-30" src="birthday-parties.png" alt="Birthday Parties at DCL">
       <ul class="fa-ul concierge">
         <li><i class="fa-li fa fa-check fa-lg"></i>Your choice of three fun themes: Once Upon a Time, Things that Roar, Folklore and Fantasy</li>
@@ -315,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="text-center padding-top-20 margin-bottom-15"> <a href="form/" class="btn btn-lg btn-primary text-uppercase">Get Started</a> </div>
   </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-40">
+  <div class="row bg-teal padding-top-40 padding-bottom-40">
     <div class="container">
       <div class="white text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a class="white" href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
       <h4 class="text-center"><a class="white text-underline" href="../event-spaces/">View Event Spaces</a></h4>
