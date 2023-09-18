@@ -86,8 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1920px;
     margin: 0 auto;
     text-align: center;
-    padding: 0 15px 60px;
-    color: #fff;
+    padding: 0 15px 25px;
+    color: #3f6896;
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 900;
@@ -95,9 +95,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     letter-spacing: 3px;
 }
+.details-row {
+    background: #b4d2ee;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.event-wrapper {
+    padding: 6px 0 15px;
+    font-size: 22px;
+    letter-spacing: 0;
+}
+.details-wrapper {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #1c4853;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 825px;
+    margin: 0 auto;
+}
 .aromanis {
     font-family: 'Aromanis', serif;
-    color: #fff;
+    color: #3f6896;
     font-weight: normal;
     font-style: normal;
     margin: 0;
@@ -119,24 +139,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     justify-content: flex-end;
 }
-.btn-custom {
-    background: #ef7a22;
-    color: #000;
-    text-shadow: none;
+.tickets-row {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #1c4853;
+    font-size: 18px;
+    font-weight: 400;
+    background: #b4d2ee;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 15px 60px;
+}
+.tickets-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.tickets-item {
+    padding: 15px;
+}
+.tickets-item h4 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    color: #3f6896;
+    margin-top: 15px;
 }
 .btn.btn-custom {
-    color: #000;
+    color: #1c4853;
+    background: #fff;
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: 0px 0px 30px #fff;
     transition: all .4s ease-out;
+    border-radius: 2px;
 }
 .btn.btn-custom:hover, .btn.btn-custom:focus {
-    background: #b41b0b;
-    color: #fff;
+    background: #fff;
+    color: #000;
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0px 0px 90px #fff;
+    box-shadow: 0px 0px 60px #fff;
     transition: all .4s ease-out;
 }
 </style>
@@ -316,9 +360,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="info-row">
       <div class="info-wrapper">
+        <div class="event-wrapper">A Storybook Holiday:</div>
         <div class="snow-one">The</div>
         <div class="aromanis">SNOW</div>
         <div class="snow-two">Ball</div>
+      </div>
+    </div>
+    <div class="details-row">
+      <div class="details-wrapper">
+        <div style="font-size: 20px">Join us for a fun-filled celebration of a storybook classic, "The Snowman" by Raymond Briggs.</div>
+        <div class="padding-top-15">Enjoy family-friendly entertainment, live music and dance, delightful crafts, festive photo ops, make-and-take gifts, and a special visit with Santa. Our dinner and brunch events also include a menu of delicious food and drinks, tasty treats, our signature naughty and nice hot cocoa bar, and much more. </div>
+      </div>
+    </div>
+    <div class="tickets-row">
+      <div class="text-center padding-bottom-60">
+        <div class="tickets-wrapper">
+          <div class="tickets-item one">
+            <h4 class="no-margin-bottom">Dinner Edition</h4>
+            <div>Saturday, December&nbsp;3, 5PM, Lone Tree</div>
+            <div>Tickets: $30 Adults, $25 Ages 3-12</div>
+            <div>(ages 0-2 free with paying adult)</div>
+            <div class="padding-top-20 text-center"><a class="btn btn-lg btn-custom">Buy Tickets</a></div>
+          </div>
+          <div class="tickets-item two">
+            <h4 class="no-margin-bottom">Brunch Edition</h4>
+            <div>Sunday, December&nbsp;4, 8:30AM, Lone Tree</div>
+            <div>Tickets: $25 Adults, $20 Ages 3-12</div>
+            <div>(ages 0-2 free with paying adult)</div>
+            <div class="padding-top-20 text-center"><a class="btn btn-lg btn-custom">Buy Tickets</a></div>
+          </div>
+        </div>
+        <div class="padding-top-20"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
       </div>
     </div>
   </div>
