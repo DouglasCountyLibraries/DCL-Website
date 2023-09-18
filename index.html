@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,230 +58,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <style>
-.source {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+@font-face {
+    font-family: 'Pop Clink Fill';
+    src: url('shared-assets/web-fonts/PopClink-Fill.woff2') format('woff2'), url('shared-assets/web-fonts/PopClink-Fill.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 .background-row {
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
 }
-.photo-item {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin: 30px 15px;
-    min-width: 400px;
-}
-.photo-wrapper {
-    display: flex;
+.leaves-row {
+    background: #6d280d url("leaves-background.jpg") left top no-repeat;
     max-width: 1920px;
     margin: 0 auto;
-    justify-content: center;
-    background: #efeeed;
+    min-height: 725px;
 }
-.single-photo.photo {
-    width: 100%;
-}
-.photo-icon {
-    font-size: 175px;
-    padding-bottom: 30px;
-}
-.link-container {
-    margin: 0 15px;
-}
-.link-wrapper {
-    margin: -190px auto 0 auto;
-    position: relative;
-    z-index: 1000;
-    max-width: 1200px;
-    padding: 40px 30px 45px;
-    background: #fff;
-    border-radius: 3px;
-    box-shadow: 0px 0px 20px 3px rgba(000,000,000,.1);
-}
-.link-item {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #333;
-    padding: 0 0 5px;
-    font-size: 26px;
-}
-.list-unstyled.list-wrapper {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.pop-clink {
+    font-family: 'Pop Clink Fill', serif;
     color: #fff;
-    font-size: 18px;
-    margin-bottom: 0;
-}
-.list-unstyled.list-wrapper li {
-    padding: 7px 0;
-    color: #333;
-}
-.list-unstyled.list-wrapper li a {
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.bottom-row {
-    background: #efeeed;
-    text-align: center;
-    padding-bottom: 15px;
-}
-.slideshow-image.main {
-    min-height: 750px;
-}
-#slideshow {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 0%;
-    border-radius: 3px;
-}
-/* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-    position: absolute;
-    z-index: 2;
-    width: 105%;
-    height: 105%;
-    top: -5%;
-    left: -5%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 3s, transform 8s;
-}
-/* slide two */
-#slideshow div {
-    transform-origin: top right;
-}
-/* slide three */
-#slideshow div:nth-of-type(2n+1) {
-    transform-origin: bottom right;
-}
-/* slide four */
-#slideshow div:nth-of-type(3n+1) {
-    transform-origin: top left;
-}
-/* slide five */
-#slideshow div:nth-of-type(4n+1) {
-    transform-origin: top left;
-}
-/* slide six */
-#slideshow div:nth-of-type(5n+1) {
-    transform-origin: top center;
-}
-/* slide seven */
-#slideshow div:nth-of-type(6n+1) {
-    transform-origin: bottom left;
-}
-/* slide eight */
-#slideshow div:nth-of-type(7n+1) {
-    transform-origin: bottom right;
-}
-/* slide nine */
-#slideshow div:nth-of-type(8n+1) {
-    transform-origin: bottom left;
-}
-/* slide one */
-#slideshow div:nth-of-type(9n+1) {
-    transform-origin: center bottom;
-}
-#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
-    z-index: 1
-}
-#slideshow .fx, #slideshow .fx1 {
-    transform: scale(1.1) translate(1.5%);
-    opacity: 1
-}
-#slideshow div:nth-of-type(1) {
-    background-image: url("one.jpg")
-}
-#slideshow div:nth-of-type(2) {
-    background-image: url("two.jpg")
-}
-#slideshow div:nth-of-type(3) {
-    background-image: url("three.jpg")
-}
-#slideshow div:nth-of-type(4) {
-    background-image: url("four.jpg")
-}
-#slideshow div:nth-of-type(5) {
-    background-image: url("five.jpg")
-}
-#slideshow div:nth-of-type(6) {
-    background-image: url("six.jpg")
-}
-#slideshow div:nth-of-type(7) {
-    background-image: url("seven.jpg")
-}
-#slideshow div:nth-of-type(8) {
-    background-image: url("eight.jpg")
-}
-#slideshow div:nth-of-type(9) {
-    background-image: url("nine.jpg")
-}
-/* captions */
-#slideshow span {
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-    top: 42%;
-    left: 50%;
-    display: flex;
-    padding: 0;
+    font-weight: normal;
+    font-style: normal;
     margin: 0;
-    font-size: 50px;
-    color: transparent;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    line-height: 50px;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-size: 80px;
+    line-height: 80px;
 }
-#slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
-    z-index: 1
+.content-wrapper {
+    padding: 100px 15px 30px;
+    text-align: center;
+    max-width: 750px;
+    float: left;
+    margin-left: 44%;
 }
-#slideshow .fx + span, #slideshow .fx1 + span {
+.content-item {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     color: #fff;
-    animation: caption 5s 1s both;
-    text-shadow: 0 3px 6px #000;
-    padding-bottom: 30px;
+    list-style: none;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    padding: 25px 0 0;
 }
-@keyframes caption {
-0% {
-opacity:0;
+.content-item li {
+    padding: 0 0 10px;
+    margin: 0;
 }
-20% {
-opacity:1;
+
+@media (max-width: 1400px) {
+.leaves-row {
+    background: #6d280d url("leaves-background.jpg") center top no-repeat;
 }
-90% {
-opacity:1;
-}
-100% {
-opacity:0;
+.content-wrapper {
+    float: none;
+    margin-left: 0;
+    max-width: 100%;
 }
 }
 
-@media (max-width: 525px) {
-#slideshow {
-    width: 100%;
+@media (max-width: 1025px) {
+.leaves-row {
+    background: #6d280d url("leaves-background-small.jpg") center bottom no-repeat;
 }
-#slideshow span {
-    font-size: 40px;
-    line-height: 42px;
-}
-.photo-icon {
-    font-size: 100px;
-    font-weight: 300;
-}
-.link-wrapper {
-    margin: -50px auto 0 auto;
-}
-.slideshow-image.main {
-    min-height: 475px;
+.content-wrapper {
+    padding: 80px 15px 400px;
 }
 }
 </style>
@@ -455,51 +296,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="general-alert" style="display:none;"></div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="photo-wrapper">
-      <div class="single-photo photo black text-center">
-        <div id="slideshow" class="slideshow-image main"> 
-          <!-- define each background-image in CSS -->
-          <div></div>
-          <!-- #slideshow div:nth-of-type(1) --> 
-          <span><i class="fa-sharp fa-light fa-shield-check photo-icon"></i>Check Us Out!</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(2) --> 
-          <span><i class="fa-sharp fa-light fa-draw-circle photo-icon"></i>Engage Your Curiosity</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(3) --> 
-          <span><i class="fa-sharp fa-light fa-map photo-icon"></i>Explore</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(4) --> 
-          <span><i class="fa-sharp fa-light fa-hat-cowboy photo-icon"></i>Delight in Discovery</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(5) --> 
-          <span><i class="fa-sharp fa-light fa-fire-smoke photo-icon"></i>Find Your Happy Place</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(6) --> 
-          <span><i class="fa-sharp fa-light fa-chair photo-icon"></i>Get Comfortable</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(7) --> 
-          <span><i class="fa-sharp fa-brands fa-nfc-symbol photo-icon"></i>Make Connections</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(8) --> 
-          <span><i class="fa-sharp fa-light fa-house-heart photo-icon"></i>Your Space is Waiting</span>
-          <div></div>
-          <!-- #slideshow div:nth-of-type(9) --> 
-          <span><i class="fa-sharp fa-light fa-location-dot photo-icon"></i>You Are Here</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="row bottom-row">
-    <div class="link-container">
-      <div class="link-wrapper">
-        <div class="link-item">All DCL locations are open! Come in and discover what's new.</div>
-        <ul class="list-unstyled list-wrapper">
-          <li>Good things are still brewing! Visit local breweries and coffee shops, earn prizes!<br>
-            <a href="brew-tour/">Register&nbsp;Now</a></li>
-          <li>It’s a party! Join us for our Eighth Annual Fête des Fables Gala: The Snow Queen.<br>
-            <a href="fete-des-fables/">Learn&nbsp;More</a></li>
-          <li>Celebrate A Storybook Holiday Halloween: The Legend of Sleepy Hollow.<br>
-            <a href="storybook-holiday/">Buy&nbsp;Tickets</a></li>
+    <div class="leaves-row">
+      <div class="content-wrapper">
+        <div class="pop-clink">HELLo FAlL</div>
+        <ul class="content-item">
+          <li><a class="white text-underline" href="brew-tour/">Join the Brew Tour</a>! Visit local breweries and coffee shops, earn prizes.</li>
+          <li>Our Castle Rock library is now open. <a class="white text-underline" href="castle-rock/">Stop by</a> and discover what's new.</li>
+          <li>Take a peek: <a class="white text-underline" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2090506009">10 children's books</a> to celebrate teachers.</li>
+          Be there or be square&mdash;<a class="white text-underline" href="featured-events/">fun events</a> this fall.
+          <li></li>
         </ul>
       </div>
     </div>
@@ -566,27 +371,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -636,4 +421,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.ra
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
