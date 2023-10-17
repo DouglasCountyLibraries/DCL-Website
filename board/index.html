@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,6 +75,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .alt-item {
     min-height: 575px;
+}
+.custom-menu > li > a {
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    padding: 6px 0;
+    border: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+.custom-menu > li > a:hover, .custom-menu > li > a:focus {
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border: 0;
+}
+.dropdown-menu.center-dropdown-menu.custom-menu {
+    left: 5px;
+    padding: 10px 0;
+    margin: 0;
 }
 
 @media (max-width: 569px) {
@@ -290,7 +312,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="page-nav">
       <div class="page-nav-item"><a href="../board-meetings/"><i class="pagenav-icon fa-solid fa-comments"></i>Meetings</a></div>
       <div class="page-nav-item"><a href="policies/"><i class="pagenav-icon fa-solid fa-clipboard-list"></i>Board Policies</a></div>
-      <div class="page-nav-item"><a href="2023-budget.pdf?v3" target="_blank"><i class="pagenav-icon fa-solid fa-dollar-sign"></i>2023 Budget</a></div>
+      <div class="dropdown page-nav-item"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="pagenav-icon fa-solid fa-dollar-sign"></i>Budgets&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+        <ul class="dropdown-menu center-dropdown-menu custom-menu" role="menu">
+          <li><a href="2023-budget.pdf?v3" target="_blank">2023 Budget</a></li>
+          <li><a href="2024-proposed-draft-budget.pdf" target="_blank">2024 Proposed Draft Budget</a></li>
+        </ul>
+      </div>
       <div class="page-nav-item"><a href="annual-report.pdf?5223" target="_blank"><i class="pagenav-icon fa-solid fa-archive"></i>Annual Report</a></div>
     </div>
   </div>
@@ -459,4 +486,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.ra
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
