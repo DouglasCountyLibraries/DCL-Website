@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
 }
 .contain-header {
-    background: linear-gradient(#ffad85, #ffe3bb);
+    background: #fab08b url("landscape-background.jpg") center bottom no-repeat;
     padding: 0 15px;
     max-width: 1920px;
     margin: 0 auto;
@@ -115,8 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    background: url("landscape-background.png") center bottom no-repeat;
-    padding-bottom: 585px;
+    padding-bottom: 550px;
 }
 .info-wrapper-one, .info-wrapper-two, .info-wrapper-three {
     text-align: center;
@@ -237,6 +237,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     position: relative;
     overflow: hidden;
     padding-bottom: 0%;
+    border: 6px solid #fff;
+    border-radius: 3px;
 } /* (img px height / img px width x 100) = padding-bottom % */
 #slideshow div {
     position: absolute;
@@ -342,6 +344,12 @@ opacity:1;
 }
 100% {
 opacity:0;
+}
+}
+
+@media (max-width: 925px) {
+.contain-header {
+    background: #fab08b url("landscape-background-small.jpg") center bottom no-repeat;
 }
 }
 
@@ -740,4 +748,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.ra
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
