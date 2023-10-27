@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +25,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Booked for the Holidays | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Christmas, Trees, Forest, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
-<meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -70,8 +70,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-display: swap;
 }
 .background-row {
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
-    border-top: 6px solid #f5f5f5;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 25%, #efeeed 65%, #efeeed 100%);
+    /*border-top: 6px solid #f5f5f5;*/
     margin-bottom: -2px;
 }
 .ornament-row {
@@ -119,8 +119,12 @@ h3.celebrate {
     font-family: Times, "Times New Roman", serif;
     color: #006b59;
     margin: 0;
-    padding: 35px 0 30px;
-    font-weight: 600;
+    padding: 18px 0 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* font-size: 22px; */
+    max-width: 300px;
+    margin: 0 auto;
 }
 .subheading {
     font-family: Times, "Times New Roman", serif;
@@ -282,6 +286,34 @@ h3.celebrate {
 h3.celebrate {
     max-width: 300px;
     margin: 0 auto;
+}
+}
+.snowflake {
+    animation: snowflake 35s linear infinite both;
+}
+@keyframes snowflake {
+0% {
+transform: rotateZ(0);
+}
+50% {
+transform: rotateZ(180deg);
+}
+100% {
+transform: rotateZ(360deg);
+}
+}
+.snowflake-odd {
+    animation: snowflake-odd 35s linear infinite both;
+}
+@keyframes snowflake-odd {
+0% {
+transform: rotateZ(0);
+}
+50% {
+transform: rotateZ(-180deg);
+}
+100% {
+transform: rotateZ(-360deg);
 }
 }
 </style>
@@ -457,7 +489,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top background-row">
+  <div class="row background-row">
     <div class="ornament-row">
       <div class="content-wrapper">
         <h1 class="pop-clink">BOoKED</h1>
@@ -467,7 +499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="font-weight-400">Jingle all the way to DCL for magical holiday experiences this winter. From the most wonderful Forest of Stories, to a Storybook Holiday celebration, to singalongs and Santa, the halls are decked and the holidays are booked for you! Join us for unforgettable moments and memories this season.</div>
       </div>
     </div>
-    <div id="forest-of-stories" class="separator-one"><img src="separator-one.png" alt=""></div>
+    <div id="forest-of-stories" class="separator-one"><img class="snowflake" src="separator-one.png" alt=""></div>
     <div class="row-one">
       <div class="content-container">
         <div class="container-one"><img src="forest-of-stories.jpg" alt="Forest of Stories"></div>
@@ -480,7 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div id="open-house" class="separator-two"><img src="separator-two.png" alt=""></div>
+    <div id="open-house" class="separator-two"><img class="snowflake-odd" src="separator-two.png" alt=""></div>
     <div class="row-two">
       <div class="content-container">
         <div class="container-one"><img src="open-house.jpg" alt="A Forest of Stories Open House: Start the Season!"></div>
@@ -494,7 +526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div id="storybook-holiday" class="separator-three"><img src="separator-three.png" alt=""></div>
+    <div id="storybook-holiday" class="separator-three"><img class="snowflake" src="separator-three.png" alt=""></div>
     <div class="row-three">
       <div class="content-container">
         <div class="container-one"><img src="storybook-holiday.jpg" alt="A Storybook Holiday: The Snow Ball"></div>
@@ -507,7 +539,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div id="jingle-jam" class="separator-four"><img src="separator-four.png" alt=""></div>
+    <div id="jingle-jam" class="separator-four"><img class="snowflake-odd" src="separator-four.png" alt=""></div>
     <div class="row-four">
       <div class="content-container">
         <div class="container-one"><img src="sing-along.jpg" alt="Jingle Jam Sing-Along"></div>
@@ -521,7 +553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div id="melodies-and-memories" class="separator-five"><img src="separator-five.png" alt=""></div>
+    <div id="melodies-and-memories" class="separator-five"><img class="snowflake" src="separator-five.png" alt=""></div>
     <div class="row-five">
       <div class="content-container">
         <div class="container-one"><img src="memories.jpg" alt="Melodies & Memories"></div>
@@ -534,7 +566,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div id="a-visit-with-santa" class="separator-six"><img src="separator-one.png" alt=""></div>
+    <div id="a-visit-with-santa" class="separator-six"><img class="snowflake-odd" src="separator-one.png" alt=""></div>
     <div class="row-one">
       <div class="content-container">
         <div class="container-one"><img src="visit-with-santa.jpg" alt="A Visit with Santa"></div>
@@ -623,4 +655,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.ra
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
