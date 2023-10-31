@@ -59,309 +59,200 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <style>
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-.slideshow-row {
-    background: #f2aeee;
+.snow-row {
+    background: #f8bf60;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     max-width: 1440px;
-    margin: 20px auto 30px;
+    margin: 30px auto 30px;
 }
-.slideshow-content, .slideshow-content h1, .slideshow-content h2, .slideshow-content h3, .slideshow-content h4 {
+.snow-content {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     color: #000;
-}
-.slideshow-content {
     font-size: 20px;
-    font-weight: 400;
-    padding: 0 110px;
-    width: 720px;
     text-align: center;
+    padding: 20px 60px;
+    width: 720px;
+    font-weight: 400;
 }
-.slideshow-content h1 {
+.snow-content h1 {
+    color: #000;
     font-size: 60px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
+    line-height: 1;
 }
-.slideshow-content h3 {
-    font-size: 28px;
+.snow-content h3 {
+    color: #000;
+    font-size: 26px;
     font-weight: 400;
     margin: 5px 0 20px;
 }
-.slideshow-image.main {
-    min-height: 640px;
-}
-#slideshow {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 0%;
-    width: 720px;
-    background: #8c2e36;
-} /* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-    position: absolute;
-    z-index: 2;
-    width: 105%;
-    height: 105%;
-    top: -5%;
-    left: -5%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    -webkit-transition: opacity 3s, -webkit-transform 8s;
-    transition: opacity 3s, transform 8s;
-}
-/* slide two */
-#slideshow div {
-    -webkit-transform-origin: top center;
-    transform-origin: top center;
-}
-/* slide three */
-#slideshow div:nth-of-type(2n+1) {
-    -webkit-transform-origin: top left;
-    transform-origin: top left;
-}
-/* slide four */
-#slideshow div:nth-of-type(3n+1) {
-    -webkit-transform-origin: bottom left;
-    transform-origin: bottom left;
-}
-/* slide five */
-#slideshow div:nth-of-type(4n+1) {
-    -webkit-transform-origin: bottom left;
-    transform-origin: bottom left;
-}
-/* slide six */
-#slideshow div:nth-of-type(5n+1) {
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-}
-/* slide seven */
-#slideshow div:nth-of-type(6n+1) {
-    -webkit-transform-origin: bottom center;
-    transform-origin: bottom center;
-}
-/* slide eight */
-#slideshow div:nth-of-type(7n+1) {
-    -webkit-transform-origin: top right;
-    transform-origin: top right;
-}
-/* slide nine */
-#slideshow div:nth-of-type(8n+1) {
-    -webkit-transform-origin: bottom left;
-    transform-origin: bottom left;
-}
-/* slide one */
-#slideshow div:nth-of-type(9n+1) {
-    -webkit-transform-origin: top right;
-    transform-origin: top right;
-}
-#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
-    z-index: 1
-}
-#slideshow .fx, #slideshow .fx1 {
-    -webkit-transform: scale(1.1) translate(1.5%);
-    -ms-transform: scale(1.1) translate(1.5%);
-    transform: scale(1.1) translate(1.5%);
-    opacity: 1
-}
-#slideshow div:nth-of-type(1) {
-    background-image: url("one.jpg");
-}
-#slideshow div:nth-of-type(2) {
-    background-image: url("nine.jpg");
-}
-#slideshow div:nth-of-type(3) {
-    background-image: url("four.jpg");
-}
-#slideshow div:nth-of-type(4) {
-    background-image: url("three.jpg");
-}
-#slideshow div:nth-of-type(5) {
-    background-image: url("ten.jpg");
-}
-#slideshow div:nth-of-type(6) {
-    background-image: url("six.jpg");
-}
-#slideshow div:nth-of-type(7) {
-    background-image: url("seven.jpg");
-}
-#slideshow div:nth-of-type(8) {
-    background-image: url("eight.jpg");
-}
-#slideshow div:nth-of-type(9) {
-    background-image: url("five.jpg");
-}
-#slideshow div:nth-of-type(10) {
-    background-image: url("two.jpg");
-}
-.logo {
-    text-align: center;
-    margin: 0 auto;
-}
-.logo-row {
-    background: #2f2e33;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    max-width: 1440px;
-    margin: 0 auto 30px;
-    padding: 10px 0;
-}
-.logo-content {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    color: #fff;
-    font-size: 28px;
-    text-align: center;
-    padding: 0 60px;
-    width: 720px;
-    font-weight: 400;
-}
-.book-row {
-    background: #30cbd9;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    max-width: 1440px;
-    margin: 0 auto 30px;
-}
-.book-content {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    color: #000;
-    font-size: 26px;
-    text-align: center;
-    padding: 0 60px;
-    width: 720px;
-    font-weight: 400;
-    font-style: italic;
-}
-.book-content > div {
-    padding-bottom: 20px;
-}
-.book-content a {
-    color: #000;
-    border-bottom: 2px solid #000;
-    padding-bottom: 3px;
-}
-.book-content a:hover {
-    color: #666;
-    border-bottom: 2px solid #666;
+.snow-content a {
     text-decoration: none;
-    padding-bottom: 3px;
+    color: #000;
+    border-bottom: 3px solid #000;
+    border-top: 3px solid #000;
+    padding: 2px 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
 }
-.book-image {
-    background: #f2762e;
+.snow-content a:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,.8);
+    border-bottom: 3px solid rgba(0,0,0,.8);
+    border-top: 3px solid rgba(0,0,0,.8);
+    text-decoration: none;
+    padding: 2px 0;
 }
-.gala-row {
-    background: #446362;
+.snow-image {
+    background: #82a6d8;
+}
+.booked-row {
+    background: #dc3f24;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     max-width: 1440px;
-    margin: 0 auto 90px;
-    position: relative;
+    margin: 0 auto 30px;
 }
-.gala-content {
+.booked-content {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     color: #fff;
     font-size: 20px;
     text-align: center;
-    padding: 0 60px;
+    padding: 20px 60px;
     width: 720px;
     font-weight: 400;
+}
+.booked-content h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+}
+.booked-content h3 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 5px 0 20px;
+}
+.booked-content a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+}
+.booked-content a:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
+    border-bottom: 2px solid rgba(255,255,255,.9);
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+.booked-image {
+    background: #006b59;
+}
+.more-content-row {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto 30px;
+}
+.feedback-content {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-	/* align-content: center; */
-    align-items: center;
-}
-.gala-content h1 {
-    color: #fff;
-    font-size: 54px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.gala-content > h4 {
-    padding-top: 20px;
-}
-.gala-content > h4 a {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    font-weight: 700;
-    margin: 0;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: #fff;
-    border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-}
-.gala-content > h4 a:hover {
-    text-decoration: none;
-    opacity: .6;
-}
-.toolkit-row {
-    background: #dab2ae;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    max-width: 1440px;
-    margin: 0 auto 90px;
-}
-.toolkit-image {
-    background: #8c2e36;
-}
-.toolkit-wrapper {
-    display: flex;
-    width: 720px;
     justify-content: center;
-}
-.toolkit-content {
+    background: #5CE0C2 url("holly-left.png") right center no-repeat;
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    color: #fff;
-    font-size: 22px;
-    /* padding: 0 60px; */
-	/* width: 242px; */
+    color: #000;
+    font-size: 20px;
+    text-align: right;
+    padding: 20px 220px 20px 60px;
+    width: 720px;
     font-weight: 400;
+    min-height: 640px;
+}
+.feedback-content h1 {
+    color: #000;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1
+}
+.feedback-content a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #000;
+    padding-bottom: 2px;
+}
+.feedback-content a:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,.9);
+    border-bottom: 2px solid rgba(0,0,0,.9);
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+.giving-content {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
+    justify-content: center;
+    background: #000 url("holly-right.png") left center no-repeat;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #fff;
+    font-size: 20px;
     text-align: left;
-    /* justify-content: center; */
-	/* align-content: center; */
-    padding-top: 30px;
-    align-items: center;
+    padding: 20px 60px 20px 220px;
+    width: 720px;
+    font-weight: 400;
+    min-height: 640px;
 }
-.sitter img {
-    /* padding-right: 25px; */
-    border: 6px solid #fff;
-    border-radius: 50%;
-}
-.sitter {
-    padding-right: 25px;
-}
-.toolkit-content h2 {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+.giving-content h1 {
     color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+.giving-content a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    border-top: 3px solid #fff;
+    padding: 2px 0;
+    text-transform: uppercase;
     font-size: 22px;
-    font-weight: 400;
-    /* text-transform: uppercase; */
-	/* margin: 0 0 30px; */
-    margin: 0 0 10px;
+    font-weight: 600;
 }
-.toolkit-content > div > h5 {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    color: #fff;
+.giving-content a:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,.8);
+    border-bottom: 3px solid rgba(255,255,255,.8);
+    border-top: 3px solid rgba(255,255,255,.8);
+    text-decoration: none;
+    padding: 2px 0;
+}
+.small-text {
     font-size: 18px;
-    font-weight: 400;
-    margin: 0;
 }
-.toolkit-content > div > h5 a {
-    color: #fff;
-    text-decoration: underline;
+
+@media (max-width: 1080px) {
+.snow-content h1, .booked-content h1 {
+    font-size: 48px;
 }
-.toolkit-content > div > h5 a:hover {
-    opacity: .8;
+.snow-content h3, .booked-content h3 {
+    font-size: 22px;
+}
+.feedback-content {
+    padding: 20px 220px 20px 40px;
+}
+.giving-content {
+    padding: 20px 40px 20px 220px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -537,78 +428,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row">
-    <div class="slideshow-row">
-      <div id="slideshow" class="slideshow-image main"> 
-        <!-- define each background-image in CSS -->
-        <div></div>
-        <!-- #slideshow div:nth-of-type(1) --> 
-        <span></span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(2) --> 
-        <span></span>
-        <div></div>
-        
-        <!-- #slideshow div:nth-of-type(3) --> 
-        <span></span>
-        <div></div>
-        
-        <!-- #slideshow div:nth-of-type(4) --> 
-        <span></span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(5) --> 
-        <span></span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(6) --> 
-        <span></span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(7) --> 
-        <span></span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(8) --> 
-        <span></span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(9) --> 
-        <span></span>
-        <div></div>
-        <!-- #slideshow div:nth-of-type(10) --> 
-        <span></span> </div>
-      <div class="slideshow-content">
-        <div class="info-wrapper">
-          <div><i>Good Things Are Brewing!</i></div>
-          <h1>DCL Brew Tour</h1>
-          <h3>Through September 30</h3>
-          <div>Good times, good brews, and a great community, that is what it's all about! Plus prizes and awesome events, too. What's not to love? <a class="black text-underline" href="https://www.dcl.org/brew-tour/">Learn more</a>.</div>
-        </div>
+    <div class="snow-row">
+      <div class="snow-image"><img class="img-responsive" src="snowball.jpg" alt="The Snow Ball"></div>
+      <div class="snow-content">
+        <div>A Storybook Holiday:</div>
+        <h1>The Snow Ball</h1>
+        <h3>December&nbsp;2&3, Lone&nbsp;Tree</h3>
+        <div class="margin-bottom-15"><a href="storybook-holiday/">Tickets&nbsp;on&nbsp;Sale</a></div>
+        <div>Family-friendly Entertainment, Live Music & Performances, Naughty & Nice Hot Cocoa Bar, Festive Food & Drinks, Santa, Crafts, Make-and-Takes, and More!</div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="book-row">
-      <div class="book-content">
-        <div>May we offer <a href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2121333879">a book</a> to go with your brew? </div>
-        <div>Thirsty for a <a href="https://dcl.bibliocommons.com/list/share/692278051/2140423619">good read</a>? </div>
-        <div>Here are <a href="https://dcl.bibliocommons.com/list/share/692278051/2129704889">a latte books </a>to love!</div>
+    <div class="booked-row">
+      <div class="booked-content">
+        <h1>Booked for the Holidays</h1>
+        <h3>Festive <a class="font-weight-400" href="booked-for-the-holidays/">holiday events</a>, right here for you!</h3>
+        <div>Forest of Stories, A Forest of Stories Open House, A Storybook Holiday, Jingle Jam Sing-Along, Melodies & Memories, Visit with Santa</div>
+        <div class="small-text margin-top-10"><i>Add Forest of Stories to your Starlighting plans in <a href="castle-rock/" style="border-bottom: 1px solid #fff;">Castle&nbsp;Rock</a>, Nov.&nbsp;18!</i></div>
       </div>
-      <div class="book-image"><img class="img-responsive" src="books.png" alt=""></div>
+      <div class="booked-image"><img class="img-responsive" src="booked.jpg" alt="Booked for the Holidays"></div>
     </div>
   </div>
   <div class="row">
-    <div class="gala-row">
-      <div class="gala-image"><img class="img-responsive" src="hansel-gretel.jpg" alt=""></div>
-      <div class="gala-content">
-        <h1>Deep in the Forest</h1>
-        <div>Celebrate the timeless tale of Hansel & Gretel at our 7th Annual Fête des Fables Gala, benefiting the DCL Foundation. Enjoy fine dining and drinks, axe throwing, a classic silent auction, and much more.</div>
-        <h4><a href="https://www.eventbrite.com/e/fete-des-fables-deep-in-the-forest-tickets-391228865067" target="_blank">Get Tickets</a></h4>
-        <div class="toolkit-content">
-          <div class="sitter"><img src="baby-sitter.png" alt=""></div>
-          <div>
-            <h2>Babysitter's Toolkit:</h2>
-            <h5><a href="https://www.kanopy.com/en/dcl/" target="_blank">Kanopy Kids Videos</a></h5>
-            <h5><a href="https://dcl.bibliocommons.com/list/share/692283576/2129440009">10 Tales of Hansel & Gretel</a></h5>
-            <h5><a href="https://dcl.bibliocommons.com/v2/record/S114C1745505">Karaoke!</a></h5>
-            <h5><a href="https://dcl.bibliocommons.com/v2/record/S114C1708351">Crazy Forts Night</a></h5>
-          </div>
-        </div>
+    <div class="more-content-row">
+      <div class="feedback-content">
+        <h1>We Need Your Input!</h1>
+        <div>Take our <a href="feedback/">short survey</a> to weigh in on DCL policies.</div>
+      </div>
+      <div class="giving-content">
+        <h1>The Giving Season</h1>
+        <div>Please support the DCL Foundation with a Colorado Gives Day donation now through December&nbsp;5.</div>
+        <div class="padding-top-20"><a href="donate/">Give&nbsp;Now</a></div>
       </div>
     </div>
   </div>
@@ -674,27 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
