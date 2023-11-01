@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Patron Point -->
 <!-- InstanceBeginEditable name="title" -->
 <title>Donate | Douglas County Libraries</title>
-<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
+<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Donate, Colorado Gives Day, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="The Douglas County Libraries Foundation delivers funding and resources to help sustain the Douglas County Libraries to positively impact our community members so they can grow and thrive.">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
@@ -54,9 +54,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+.heading-container {
+    max-width: 925px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 15px;
+}
 .form-container {
     max-width: 925px;
     margin: 0 auto;
+}
+.animated-progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(36, 143, 161, 0.2);
+}
+.animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgb(36, 143, 161);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+}
+.progress-blue span {
+    background-color: #248fa1;
+}
+.custom-progress-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.progress-bar-wrapper {
+    background: #f7f7f7;
+    max-width: 925px;
+    margin: 20px 0;
+    padding: 15px 10px;
+    border-radius: 8px;
+}
+.progress-percentage {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: 666;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -232,20 +279,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row padding-bottom-20 border-top">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Donate</h1>
-        <div class="container text-center">
-          <h4 class="roboto margin-top-5">Supporting our community, protecting the future.</h4>
-          <div class="margin-lg-150"><a href="../foundation/">Douglas County Libraries Foundation</a> supports the incredible work of our libraries, including premium programs and services for customers in Douglas County and across Colorado. Your donation helps support our community today, tomorrow, and for years to come! </div>
+    <div class="heading-container">
+      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Donate</h1>
+      <h4 class="roboto margin-top-5 no-margin-bottom">Colorado Gives Day is Tuesday, December 5, but you don't have to wait to give!</h4>
+      <div class="progress-bar-wrapper">
+        <div class="custom-progress-bar">
+          <div class="animated-progress progress-blue"> <span data-progress="0"></span> </div>
+          <div class="progress-percentage">
+            <div>Complete 0%</div>
+            <div>Goal $70,000</div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row padding-bottom-15">
-    <div class="page-nav">
-      <div class="page-nav-item"><a href="../ways-to-give/"><i class="pagenav-icon fa-solid fa-hand-holding-dollar"></i>Ways to Give</a></div>
-      <div class="page-nav-item"><a href="../foundation/"><i class="pagenav-icon fa-solid fa-solid fa-umbrella"></i>Foundation</a></div>
+      <div class=""><a href="../foundation/">Douglas County Libraries Foundation</a> supports the incredible work of our libraries, including premium programs and services for customers in Douglas County and across Colorado. <a href="../ways-to-give/">Your donation</a> helps support our community today, tomorrow, and for years to come! </div>
     </div>
   </div>
   <div class="row">
@@ -347,6 +393,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<script>$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    2000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
