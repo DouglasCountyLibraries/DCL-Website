@@ -209,28 +209,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height: 1;
 }
 .giving-content a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #fff;
-    border-bottom: 3px solid #fff;
-    border-top: 3px solid #fff;
-    padding: 2px 0;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: 600;
+
 }
 .giving-content a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: rgba(255,255,255,.8);
-    border-bottom: 3px solid rgba(255,255,255,.8);
-    border-top: 3px solid rgba(255,255,255,.8);
-    text-decoration: none;
-    padding: 2px 0;
+
 }
 .feedback-content, .giving-content {
     min-height: 640px;
 }
 .small-text {
     font-size: 18px;
+}
+.animated-progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(92,224,194,.5);
+}
+.animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: #5CE0C2;
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+}
+.progress-blue span {
+    background-color: #5CE0C2;
+}
+.custom-progress-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.progress-bar-wrapper {
+	padding: 10px 0;
+}
+.progress-percentage {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 @media (max-width: 1440px) {
@@ -466,7 +494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row">
     <div class="snow-row">
-      <div class="snow-image"><img class="img-responsive" src="snowball.gif" alt="The Snow Ball"></div>
+      <div class="snow-image"><img class="img-responsive" src="snowball-animation.gif" alt="The Snow Ball"></div>
       <div class="snow-content">
         <div>A Storybook Holiday:</div>
         <h1>The Snow Ball</h1>
@@ -495,8 +523,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="giving-content">
         <h1>The Giving Season</h1>
-        <div>Please support the DCL Foundation with a Colorado Gives Day donation now through December&nbsp;5.</div>
-        <div class="padding-top-20"><a href="donate/">Give&nbsp;Now</a></div>
+        
+        <div>Please support the DCL Foundation with a <a href="donate/">Colorado Gives Day donation</a> now through December&nbsp;5.</div><div class="progress-bar-wrapper">
+          <div class="custom-progress-bar">
+            <div class="animated-progress progress-blue"> <span data-progress="0"></span> </div>
+            <div class="progress-percentage">
+              <div>Complete 0%</div>
+              <div>Goal $70,000</div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -562,7 +599,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    2000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",

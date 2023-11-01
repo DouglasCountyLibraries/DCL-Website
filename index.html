@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,70 +58,264 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <style>
-@font-face {
-    font-family: 'Pop Clink Fill';
-    src: url('shared-assets/web-fonts/PopClink-Fill.woff2') format('woff2'), url('shared-assets/web-fonts/PopClink-Fill.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.snow-row {
+    background: #f8c570;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 30px auto 30px;
 }
-.background-row {
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
-}
-.leaves-row {
-    background: #6d280d url("leaves-background.jpg") left top no-repeat;
-    max-width: 1920px;
-    margin: 0 auto;
-    min-height: 725px;
-}
-.pop-clink {
-    font-family: 'Pop Clink Fill', serif;
-    color: #fff;
-    font-weight: normal;
-    font-style: normal;
-    margin: 0;
-    font-size: 80px;
-    line-height: 80px;
-}
-.content-wrapper {
-    padding: 100px 15px 30px;
+.snow-content {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #000;
+    font-size: 20px;
     text-align: center;
-    max-width: 800px;
-    float: left;
-    margin-left: 40%;
+    padding: 20px 60px;
+    flex: 1 1 50%;
+    font-weight: 400;
 }
-.content-item {
+.snow-content h1 {
+    color: #000;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+}
+.snow-content h3 {
+    color: #000;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 5px 0 20px;
+}
+.snow-content a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 3px solid #000;
+    border-top: 3px solid #000;
+    padding: 2px 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+}
+.snow-content a:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,.8);
+    border-bottom: 3px solid rgba(0,0,0,.8);
+    border-top: 3px solid rgba(0,0,0,.8);
+    text-decoration: none;
+    padding: 2px 0;
+}
+.snow-image {
+    background: #82a6d8;
+    flex: 1 1 50%;
+}
+.booked-row {
+    background: #dc3f24;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto 30px;
+}
+.booked-content {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     color: #fff;
-    list-style: none;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 20px;
     text-align: center;
-    margin: 0;
-    padding: 25px 0 0;
+    padding: 20px 60px;
+    flex: 1 1 50%;
+    font-weight: 400;
 }
-.content-item li {
-    padding: 0 0 10px;
+.booked-content h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
     margin: 0;
+    line-height: 1;
+}
+.booked-content h3 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 5px 0 20px;
+}
+.booked-content a {
+    text-decoration: underline;
+    color: #fff;
+}
+.booked-content a:hover {
+    text-decoration: underline;
+    color: rgba(255,255,255,.9);
+}
+.booked-image {
+    background: #006b59;
+    flex: 1 1 50%;
+}
+.more-content-row {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto 60px;
+}
+.feedback-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #5CE0C2 url("holly-left.png") right center no-repeat;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #000;
+    font-size: 20px;
+    text-align: right;
+    padding: 20px 220px 20px 60px;
+    width: 720px;
+    font-weight: 400;
+}
+.feedback-content h1 {
+    color: #000;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1
+}
+.feedback-content a {
+    text-decoration: underline;
+    color: #000;
+}
+.feedback-content a:hover {
+    text-decoration: underline;
+    color: rgba(0,0,0,.9);
+}
+.giving-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000 url("holly-right.png") left center no-repeat;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px 60px 20px 220px;
+    width: 720px;
+    font-weight: 400;
+}
+.giving-content h1 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+.giving-content a {
+    text-decoration: underline;
+    color: #fff;
+
+}
+.giving-content a:hover {
+    text-decoration: underline;
+    color: rgba(255,255,255,.8);
+
+}
+.feedback-content, .giving-content {
+    min-height: 640px;
+}
+.small-text {
+    font-size: 18px;
+}
+.animated-progress {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(92,224,194,.5);
+}
+.animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: #5CE0C2;
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+}
+.progress-blue span {
+    background-color: #5CE0C2;
+}
+.custom-progress-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.progress-bar-wrapper {
+	padding: 10px 0;
+}
+.progress-percentage {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-@media (max-width: 1575px) {
-.leaves-row {
-    background: #6d280d url("leaves-background.jpg") 62% top no-repeat;
-}
-.content-wrapper {
-    float: none;
-    margin-left: 0;
-    max-width: 100%;
+@media (max-width: 1440px) {
+.feedback-content, .giving-content {
+    min-height: 35vh;
 }
 }
 
-@media (max-width: 1025px) {
-.leaves-row {
-    background: #6d280d url("leaves-background-small.jpg") center bottom no-repeat;
+@media (max-width: 1080px) {
+.snow-content h1, .booked-content h1 {
+    font-size: 48px;
 }
-.content-wrapper {
-    padding: 80px 15px 400px;
+.snow-content h3, .booked-content h3 {
+    font-size: 22px;
+}
+.feedback-content {
+    padding: 20px 220px 20px 40px;
+}
+.giving-content {
+    padding: 20px 40px 20px 220px;
+}
+}
+
+@media (max-width: 950px) {
+.snow-row, .booked-row, .more-content-row {
+    flex-direction: column;
+    max-width: 720px;
+}
+.snow-content, .booked-content {
+    padding: 50px 30px 60px;
+    text-align: center;
+}
+.feedback-content {
+    margin-bottom: 30px;
+}
+.booked-content {
+    order: 2;
+}
+.booked-image {
+    order: 1;
+}
+.giving-content {
+    display: flex;
+    background: #000 url("holly-bottom.png") top center no-repeat;
+    padding: 100px 30px 120px;
+    text-align: center;
+}
+.feedback-content {
+    display: flex;
+    background: #5CE0C2 url("holly-top.png") bottom center no-repeat;
+    padding: 100px 30px 120px;
+    text-align: center;
+}
+}
+
+@media (max-width: 720px) {
+.feedback-content, .giving-content {
+    width: 100%;
 }
 }
 </style>
@@ -296,17 +491,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
-    <div class="leaves-row">
-      <div class="content-wrapper">
-        <div class="pop-clink">HELLo FALL</div>
-        <ul class="content-item">
-          <li>Book your winter holiday plans! Get tickets for <a class="white text-underline" href="storybook-holiday/">A Storybook Holiday: The Snow Ball</a>.</li>
-          <li>Check out our new <a class="white text-underline" href="castle-rock/">Philip & Jerry Miller Library</a> in Castle Rock!</li>
-          <li>Take a peek: <a class="white text-underline" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2090506009">10 children's books</a> to celebrate teachers.</li>
-          <li>Be there or be square&mdash;<a class="white text-underline" href="featured-events/">fun events</a> this fall.</li>
-          <li>Weigh in on <a class="white text-underline" href="feedback/">library policies</a>.</li>
-        </ul>
+  <div class="row">
+    <div class="snow-row">
+      <div class="snow-image"><img class="img-responsive" src="snowball-animation.gif" alt="The Snow Ball"></div>
+      <div class="snow-content">
+        <div>A Storybook Holiday:</div>
+        <h1>The Snow Ball</h1>
+        <h3>December&nbsp;2&3, Lone&nbsp;Tree</h3>
+        <div class="margin-bottom-15"><a href="storybook-holiday/">Tickets&nbsp;on&nbsp;Sale</a></div>
+        <div>Family-friendly Entertainment, Live Music & Performances, Naughty & Nice Hot Cocoa Bar, Festive Food & Drinks, Santa, Crafts, Make-and-Takes, and More!</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="booked-row">
+      <div class="booked-content">
+        <h1>Booked for the Holidays</h1>
+        <h3>Festive <a class="font-weight-400" href="booked-for-the-holidays/">holiday events</a>, right here for you!</h3>
+        <div>Forest of Stories, A Forest of Stories Open House, A Storybook Holiday, Jingle Jam Sing-Along, Melodies & Memories, Visit with Santa</div>
+        <div class="small-text margin-top-10"><i>Add Forest of Stories to your Starlighting plans in <a href="castle-rock/">Castle&nbsp;Rock</a>, Nov.&nbsp;18!</i></div>
+      </div>
+      <div class="booked-image"><img class="img-responsive" src="booked.jpg" alt="Booked for the Holidays"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="more-content-row">
+      <div class="feedback-content">
+        <h1>We Need Your Input!</h1>
+        <div>Take our <a href="feedback/">short survey</a> to weigh in on DCL policies.</div>
+      </div>
+      <div class="giving-content">
+        <h1>The Giving Season</h1>
+        
+        <div>Please support the DCL Foundation with a <a href="donate/">Colorado Gives Day donation</a> now through December&nbsp;5.</div><div class="progress-bar-wrapper">
+          <div class="custom-progress-bar">
+            <div class="animated-progress progress-blue"> <span data-progress="0"></span> </div>
+            <div class="progress-percentage">
+              <div>Complete 0%</div>
+              <div>Goal $70,000</div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -372,7 +598,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    2000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -422,4 +658,5 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.ra
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
 e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
