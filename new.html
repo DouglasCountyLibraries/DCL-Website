@@ -219,14 +219,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #5CE0C2 url("holly-left.png") right center no-repeat;
+    background: #5CE0C2 url("holly-bottom.png") top center no-repeat;
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     color: #000;
     font-size: 20px;
-    text-align: right;
-    padding: 20px 220px 20px 60px;
-    width: 720px;
+    padding: 135px 20px;
+    width: 100%;
     font-weight: 400;
+    text-align: center;
 }
 .feedback-content h1 {
     color: #000;
@@ -242,37 +242,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .feedback-content a:hover {
     text-decoration: underline;
     color: rgba(0,0,0,.9);
-}
-.giving-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #000 url("holly-right.png") left center no-repeat;
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    color: #fff;
-    font-size: 20px;
-    text-align: left;
-    padding: 20px 60px 20px 220px;
-    width: 720px;
-    font-weight: 400;
-}
-.giving-content h1 {
-    color: #fff;
-    font-size: 38px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    line-height: 1;
-}
-.giving-content a {
-    text-decoration: underline;
-    color: #fff;
-}
-.giving-content a:hover {
-    text-decoration: underline;
-    color: rgba(255,255,255,.8);
-}
-.feedback-content, .giving-content {
-    min-height: 640px;
 }
 .small-text {
     font-size: 18px;
@@ -314,33 +283,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-transform: uppercase;
 }
 
-@media (max-width: 1440px) {
-.feedback-content, .giving-content {
-    min-height: 35vh;
-}
-}
-
 @media (max-width: 1080px) {
-.snow-content h1, .booked-content h1 {
+.snow-content h1, .booked-content h1, .cgd-content h1 {
     font-size: 48px;
 }
-.snow-content h3, .booked-content h3 {
+.snow-content h3, .booked-content h3, .cgd-content h3 {
     font-size: 22px;
-}
-.feedback-content {
-    padding: 20px 220px 20px 40px;
-}
-.giving-content {
-    padding: 20px 40px 20px 220px;
 }
 }
 
 @media (max-width: 950px) {
-.snow-row, .booked-row, .more-content-row {
+.snow-row, .booked-row, .cgd-row, .more-content-row {
     flex-direction: column;
     max-width: 720px;
 }
-.snow-content, .booked-content {
+.snow-content, .booked-content, .cgd-content {
     padding: 50px 30px 60px;
     text-align: center;
 }
@@ -350,26 +307,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .booked-image {
     order: 1;
 }
-.giving-content {
-    display: flex;
-    background: #000 url("holly-bottom.png") top center no-repeat;
-    padding: 150px 15px 140px;
-    text-align: center;
-    min-height: auto;
+.cgd-content {
+    order: 2;
 }
-.feedback-content {
-    display: flex;
-    background: #5CE0C2 url("holly-top.png") bottom center no-repeat;
-    padding: 140px 15px 160px;
-    text-align: center;
-    min-height: auto;
-    margin-bottom: 30px;
-}
-}
-
-@media (max-width: 720px) {
-.feedback-content, .giving-content {
-    width: 100%;
+.cgd-image {
+    order: 1;
 }
 }
 </style>
@@ -546,11 +488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-	  
-	  
-	  
-	    <div class="cgd-row">
-      
+    <div class="cgd-row">
       <div class="cgd-content">
         <h1>The Giving Season</h1>
         <div>Please support the DCL Foundation with a Colorado Gives Day donation now through December&nbsp;5.</div>
@@ -562,13 +500,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div>Goal $70,000</div>
             </div>
           </div>
-        </div><div class="margin-bottom-15"><a href="donate/">Donate&nbsp;Today</a></div>
-      </div><div class="cgd-image"><img class="img-responsive" src="cgd-image.jpg" alt="Colorado Gives Day"></div>
-    </div>  
-	  
-	  
-	  
-	  
+        </div>
+        <div class="margin-bottom-15"><a href="donate/">Donate&nbsp;Today</a></div>
+      </div>
+      <div class="cgd-image"><img class="img-responsive" src="cgd-image.jpg" alt="Colorado Gives Day"></div>
+    </div>
     <div class="snow-row">
       <div class="snow-image"><img class="img-responsive" src="snowball-animation.gif" alt="The Snow Ball"></div>
       <div class="snow-content">
@@ -588,24 +524,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="booked-image"><img class="img-responsive" src="booked.jpg" alt="Booked for the Holidays"></div>
     </div>
-
     <div class="more-content-row">
       <div class="feedback-content">
         <h1>We Need Your Input!</h1>
         <div>Take our <a href="feedback/">short survey</a> to weigh in on DCL policies.</div>
-      </div>
-      <div class="giving-content">
-        <h1>The Giving Season</h1>
-        <div>Please support the DCL Foundation with a <a href="donate/">Colorado Gives Day donation</a> now through December&nbsp;5.</div>
-        <div class="progress-bar-wrapper">
-          <div class="custom-progress-bar">
-            <div class="animated-progress progress-blue"> <span data-progress="5"></span> </div>
-            <div class="progress-percentage">
-              <div>Complete 5%</div>
-              <div>Goal $70,000</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
