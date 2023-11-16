@@ -502,8 +502,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
         <div class="margin-bottom-15"><a href="donate/">Donate&nbsp;Today</a></div>
       </div>
-      <div class="cgd-image"><img class="img-responsive" src="cgd-image.jpg" alt="Colorado Gives Day"></div>
+      <div id="cgd-image" class="cgd-image"></div>
     </div>
+    <script>
+    var images = ['cgd-image-one.jpg', 'cgd-image-two.jpg', 'cgd-image-three.jpg', 'cgd-image-four.jpg', 'cgd-image-five.jpg'];
+    $('<img alt="Colorado Gives Day" class="img-responsive" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#cgd-image');
+	
+</script>
     <div class="snow-row">
       <div class="snow-image"><img class="img-responsive" src="snowball-animation.gif" alt="The Snow Ball"></div>
       <div class="snow-content">
@@ -518,7 +523,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="booked-content">
         <h1>Forest of Stories</h1>
         <h3><span class="trees">150</span> <a class="font-weight-400" href="forest-of-stories/">Decorated Trees</a>, Unlimited Wonder</h3>
-        <div>Your sparkling holidays begin here! See all of our book-themed trees and celebrate a season of stories.</div><div class="margin-top-10">A DCL <a class="font-weight-400" href="booked-for-the-holidays/">Booked for the Holidays</a> event.</div>
+        <div>Your sparkling holidays begin here! See all of our book-themed trees and celebrate a season of stories.</div>
+        <div class="margin-top-10">A DCL <a class="font-weight-400" href="booked-for-the-holidays/">Booked for the Holidays</a> event.</div>
         <div class="small-text margin-top-10"><i>Add Forest of Stories to your Starlighting plans in <a href="castle-rock/">Castle&nbsp;Rock</a>, Nov.&nbsp;18!</i></div>
       </div>
       <div class="booked-image"><img class="img-responsive" src="booked.jpg" alt="Booked for the Holidays"></div>
