@@ -228,7 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0 auto;
 }
 .slideshow-content {
-    flex: 1 1 52%;
+    flex: 1 1 36%;
     padding: 0 30px;
 }
 .slideshow-content h4 {
@@ -245,9 +245,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 67%;
     border-right: 15px solid #fff;
 } /* (img px height / img px width x 100) = padding-bottom % */
-#starlighting {
-    border-right: 15px solid #fff;
-}
 #slideshow div {
     position: absolute;
     z-index: 2;
@@ -325,20 +322,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .slideshow-row, .item-wrapper {
     flex-direction: column;
 }
-.slideshow-row {
-    max-width: 775px;
-}
 .slideshow-content {
     padding: 30px 20px 40px;
     text-align: center;
 }
-#starlighting {
+#slideshow {
     width: 100%;
     border-right: 0;
-    background: #fff;
-}
-#starlighting img {
-    margin: 0 auto;
 }
 .item-wrapper img {
     padding-bottom: 15px;
@@ -557,10 +547,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row slideshow-row">
-    <div id="starlighting"> <img class="img-responsive" src="starlighting.jpg" alt="Castle Rock Starlighting"> </div>
+    <div id="slideshow" class="slideshow-image main"> 
+      <!-- define each background-image in CSS -->
+      <div style="background-image: url('slideshow/one.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(1) -->
+      <div class="random-slide" style="background-image: url('slideshow/two.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(2) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/three.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(3) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/four.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(4) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/five.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(5) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/six.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(6) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/seven.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(7) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/eight.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(8) -->
+      
+      <div class="random-slide" style="background-image: url('slideshow/nine.jpg')"></div>
+      <!-- #slideshow div:nth-of-type(9) --> 
+    </div>
     <div class="slideshow-content">
-      <h3 class="text-uppercase font-weight-400 no-margin">Now Open!</h3>
-      <h4>We will be open until 6PM on Saturday, November&nbsp;18, for the Castle Rock Starlighting.</h4>
+      <h2 class="text-uppercase font-weight-400 no-margin-top">Now Open!</h2>
       <div>This new library houses the DCL <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a>, offering customers specialized help with historical, archival and genealogical projects&mdash;and where you can learn about the library's namesake and benefactors, <a href="https://archives.dcl.org/digital/custom/miller" target="_blank">Philip and Jerry Miller</a>.</div>
     </div>
   </div>
