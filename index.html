@@ -113,7 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex: 1 1 50%;
 }
 .booked-row {
-    background: #e6ce9b;
+    background: #E3C57F;
     display: flex;
     align-items: center;
     max-width: 1440px;
@@ -141,6 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 26px;
     font-weight: 400;
     margin: 5px 0 20px;
+    line-height: 35px;
 }
 .booked-content a {
     text-decoration: underline;
@@ -155,7 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex: 1 1 50%;
 }
 .cgd-row {
-    background: #006b59;
+    background: linear-gradient(45deg, #007f6a, #006b59);
     display: flex;
     align-items: center;
     max-width: 1440px;
@@ -206,44 +207,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #006b59;
     flex: 1 1 50%;
 }
-.more-content-row {
-    background: #fff;
-    display: flex;
-    align-items: center;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-.feedback-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #5CE0C2 url("holly-bottom.png") top center no-repeat;
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    color: #000;
-    font-size: 20px;
-    padding: 135px 20px;
-    width: 100%;
-    font-weight: 400;
-    text-align: center;
-}
-.feedback-content h1 {
-    color: #000;
-    font-size: 38px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    line-height: 1
-}
-.feedback-content a {
-    text-decoration: underline;
-    color: #000;
-}
-.feedback-content a:hover {
-    text-decoration: underline;
-    color: rgba(0,0,0,.9);
-}
-.small-text {
-    font-size: 18px;
-}
 .animated-progress {
     width: 100%;
     height: 10px;
@@ -251,20 +214,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 10px 0;
     overflow: hidden;
     position: relative;
-    background: rgba(92,224,194,.5);
+    background: rgba(148,224,207,.6);
 }
 .animated-progress span {
     height: 100%;
     display: block;
     width: 0;
-    color: #5CE0C2;
+    color: #bbe0d8;
     line-height: 30px;
     position: absolute;
     text-align: end;
     padding-right: 5px;
 }
 .progress-blue span {
-    background-color: #5CE0C2;
+    background-color: #bbe0d8;
 }
 .custom-progress-bar {
     max-width: 600px;
@@ -280,13 +243,113 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 400;
     text-transform: uppercase;
 }
+.more-content-row {
+    background: #5CE0C2 url("more-content-background.gif") repeat;
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.feedback-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("holly-left.png") right center no-repeat;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #000;
+    font-size: 20px;
+    text-align: right;
+    padding: 20px 220px 20px 60px;
+    width: 720px;
+    font-weight: 400;
+}
+.feedback-content h1 {
+    color: #000;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1
+}
+.feedback-content h3 {
+    color: #000;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 35px;
+}
+.feedback-content a {
+    text-decoration: underline;
+    color: #000;
+    font-weight: 400;
+}
+.feedback-content a:hover {
+    text-decoration: underline;
+    color: rgba(0,0,0,.9);
+}
+.giving-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000 url("holly-right.png") left center no-repeat;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px 0 20px 220px;
+    width: 720px;
+    font-weight: 400;
+}
+.giving-content h1 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+.giving-content a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    border-top: 3px solid #fff;
+    padding: 2px 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600;
+}
+.giving-content a:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,.8);
+    border-bottom: 3px solid rgba(255,255,255,.8);
+    border-top: 3px solid rgba(255,255,255,.8);
+    text-decoration: none;
+    padding: 2px 0;
+}
+.feedback-content, .giving-content {
+    min-height: 640px;
+}
+.small-text {
+    font-size: 18px;
+}
+
+@media (max-width: 1440px) {
+.feedback-content, .giving-content {
+    min-height: 35vh;
+}
+}
 
 @media (max-width: 1080px) {
 .snow-content h1, .booked-content h1, .cgd-content h1 {
     font-size: 48px;
 }
-.snow-content h3, .booked-content h3, .cgd-content h3 {
+.snow-content h3, .booked-content h3, .cgd-content h3, .feedback-content h3 {
     font-size: 22px;
+    line-height: 30px;
+}
+.feedback-content {
+    padding: 20px 220px 20px 40px;
+}
+.giving-content {
+    padding: 20px 40px 20px 220px;
 }
 }
 
@@ -310,6 +373,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .cgd-image {
     order: 1;
+}
+.giving-content {
+    display: flex;
+    background: #000 url("holly-bottom.png") top center no-repeat;
+    padding: 160px 30px 120px;
+    text-align: center;
+}
+.feedback-content {
+    display: flex;
+    background: url("holly-top.png") bottom center no-repeat;
+    padding: 100px 30px 120px;
+    text-align: center;
+}
+}
+
+@media (max-width: 720px) {
+.feedback-content, .giving-content {
+    width: 100%;
 }
 }
 </style>
@@ -492,9 +573,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>Please support the DCL Foundation with a Colorado Gives Day donation now through December&nbsp;5.</div>
         <div class="progress-bar-wrapper">
           <div class="custom-progress-bar">
-            <div class="animated-progress progress-blue"> <span data-progress="9"></span> </div>
+            <div class="animated-progress progress-blue"> <span data-progress="8"></span> </div>
             <div class="progress-percentage">
-              <div>Complete 9%</div>
+              <div>Complete 8%</div>
               <div>Goal $70,000</div>
             </div>
           </div>
@@ -528,8 +609,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="more-content-row">
       <div class="feedback-content">
-        <h1>We Need Your Input!</h1>
-        <div>Take our <a href="feedback/">short survey</a> to weigh in on DCL policies.</div>
+        <h1>Finish Strong!</h1>
+        <h3>Complete the <a href="reading-challenge/">Reading&nbsp;Challenge</a> by December&nbsp;31&mdash;you've got this.</h3>
+      </div>
+      <div class="giving-content">
+        <h1>Holiday Hours</h1>
+        <div>
+          <ul class="list-unstyled small-text no-margin-bottom">
+            <li class="text-nowrap">Wednesday, November 22: 8AM-3PM</li>
+            <li class="text-nowrap">Thursday, November 23: CLOSED</li>
+            <li class="text-nowrap">Sunday, December 24: 10AM-3PM</li>
+            <li class="text-nowrap">Monday, December 25: CLOSED</li>
+            <li class="text-nowrap">Sunday, December 31: 10AM-3PM</li>
+            <li class="text-nowrap">Monday, January 1: CLOSED</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -538,7 +632,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="container">
     <div class="social-footer">
       <div class="social-left">
-        <h5 class="margin-top-10 no-margin-bottom">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
+        <h5 class="margin-top-10 margin-bottom-10">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
       </div>
       <div class="social-right">
         <div class="social-links-wrapper"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fa-brands fa-x-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fa-brands fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fa-brands fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa-brands fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="https://www.flickr.com/photos/douglascountylibraries/albums" target="_blank"> <i class="fa-brands fa-flickr fa-2x"></i></a> </div>
