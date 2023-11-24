@@ -477,47 +477,38 @@ body.modal-open .modal .modal-dialog {
 }
 /* slide two */
 #slideshow div {
-  
     transform-origin: bottom left;
 }
 /* slide three */
 #slideshow div:nth-of-type(2n+1) {
- 
     transform-origin: bottom right;
 }
 /* slide four */
 #slideshow div:nth-of-type(3n+1) {
-
     transform-origin: bottom center;
 }
 /* slide five */
 #slideshow div:nth-of-type(4n+1) {
- 
     transform-origin: bottom center;
 }
 /* slide six */
 #slideshow div:nth-of-type(5n+1) {
-  
     transform-origin: bottom right;
 }
 /* slide seven */
 #slideshow div:nth-of-type(6n+1) {
-  
     transform-origin: bottom right;
 }
 /* slide eight */
 #slideshow div:nth-of-type(7n+1) {
-
     transform-origin: bottom center;
 }
 /* slide nine */
 #slideshow div:nth-of-type(8n+1) {
-
     transform-origin: bottom right;
 }
 /* slide one */
 #slideshow div:nth-of-type(9n+1) {
-
     transform-origin: top right;
 }
 #slideshow .fx1 {
@@ -539,25 +530,36 @@ body.modal-open .modal .modal-dialog {
     background-image: url("modal-three.jpg");
 }
 #slideshow div:nth-of-type(4) {
-    background-image: url("modal-one.jpg");
+    background-image: url("modal-four.jpg");
 }
 #slideshow div:nth-of-type(5) {
-    background-image: url("modal-two.jpg");
+    background-image: url("modal-five.jpg");
 }
 #slideshow div:nth-of-type(6) {
-    background-image: url("modal-three.jpg");
+    background-image: url("modal-six.jpg");
 }
 #slideshow div:nth-of-type(7) {
-    background-image: url("modal-one.jpg");
+    background-image: url("modal-seven.jpg");
 }
 #slideshow div:nth-of-type(8) {
-    background-image: url("modal-two.jpg");
+    background-image: url("modal-eight.jpg");
 }
 #slideshow div:nth-of-type(9) {
-    background-image: url("modal-three.jpg");
+    background-image: url("modal-nine.jpg");
 }
 #slideshow div:nth-of-type(10) {
-    background-image: url("modal-one.jpg");
+    background-image: url("modal-ten.jpg");
+}
+
+@media (max-width: 475px) {
+.modal-body.custom-modal {
+    text-align: center;
+    padding: 0 0 0 38px;
+    overflow: hidden;
+}
+.modal-content {
+    background: transparent url("cgd-modal-background.png") 8% 2% no-repeat;
+}
 }
 
 @media (min-width: 767px) {
@@ -932,13 +934,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   );
   $(this).text($(this).attr("data-progress") + "%");
 });</script> 
-
-<!-- launch modal on page load --> 
-<script type="text/javascript">
-    $(window).on('load', function() {
-        $('#cgd-modal').modal('show');
-    });
-</script> 
 <script>
 /* http://cssmojo.com/ken-burns-effect/ */
 function kbSlideshow() { // set .fx1 class on 1st img on page load
@@ -956,7 +951,17 @@ function kbSlideshow() { // set .fx1 class on 1st img on page load
         	i++;
 		}
 	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+setTimeout(kbSlideshow, 1000); // short delay so CSS transforms work on 1st img
+</script> 
+<!-- modal popup once per session, expires after 14 days --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('cgdpop') == null) {
+                     $('#cgd-modal').modal('show');
+                     $.cookie('cgdpop', '14');
+                 }
+             });
 </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
