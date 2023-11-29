@@ -57,16 +57,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<script>function clearCookie(name, path, domain) {
-    if(getCookie(name)) {
-        document.cookie = name + "cgdpop" +
-          ((path) ? ";path="+path:"")+
-          ((domain)?";domain="+domain:"") +
-          ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
-    }
-}
-</script>
+
 <style>
+@font-face {
+    font-family: 'Buffalo';
+    src: url('shared-assets/web-fonts/buffalo-regular-webfont.woff2') format('woff2'), url('shared-assets/web-fonts/buffalo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 .background-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
@@ -146,7 +145,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0;
     line-height: 1;
 }
-
 .booked-content h3 {
     color: #000;
     font-size: 26px;
@@ -190,13 +188,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0;
     line-height: 1;
 }*/
-	.cgd-content h1 {
+.cgd-content h1 {
     color: #fff;
     font-size: 40px;
     font-weight: 500;
     margin: 0 0 10px 0;
     line-height: 1;
-		text-transform: uppercase;
+    text-transform: uppercase;
 }
 .cgd-content h3 {
     color: #fff;
@@ -288,7 +286,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 500;
     margin: 0 0 10px 0;
     line-height: 1;
-	text-transform: uppercase
+    text-transform: uppercase
 }
 .feedback-content h3 {
     color: #000;
@@ -325,7 +323,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 500;
     margin: 0 0 10px 0;
     line-height: 1;
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 .giving-content a {
     text-decoration: none;
@@ -351,47 +349,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .small-text {
     font-size: 18px;
 }
-.modal-content {
-
-}
-.modal-backdrop.in {
-    opacity: 0.8;
-}
-.modal-body.custom-modal {
-    text-align: center;
-    padding: 0 0 0 81px;
-    overflow: hidden;
-}
-.modal-header {
-    border-bottom: none;
-}
-body.modal-open .modal {
-    display: flex !important;
-    height: 100%;
-}
-body.modal-open .modal .modal-dialog {
-    margin: auto;
-}
-.cgd-heading {
-    font-size: 26px;
+.buffalo {
+    font-family: 'Buffalo', serif;
+    font-size: 59px;
+    line-height: .9;
     color: #fff;
-    font-weight: 400;
+    padding: 30px 0 10px;
+}
+.CGDmodal-content {
+    background: #dc3f24;
+    color: #fff;
+    padding: 20px 20px 60px;
+    text-align: center;
 }
 .donate-link {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     text-decoration: none;
     color: #fff;
     border-bottom: 3px solid #fff;
     border-top: 3px solid #fff;
     padding: 2px 0;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 600;
 }
-.donate-link:hover {
+.donate-link:hover, .donate-link:focus {
     text-decoration: none;
-    color: #fff;
-    border-bottom: 3px solid #fff;
-    border-top: 3px solid #fff);
+    color: rgba(255,255,255,.8);
+    border-bottom: 3px solid rgba(255,255,255,.8);
+    border-top: 3px solid rgba(255,255,255,.8);
     text-decoration: none;
     padding: 2px 0;
 }
@@ -456,139 +442,6 @@ body.modal-open .modal .modal-dialog {
 @media (max-width: 720px) {
 .feedback-content, .giving-content {
     width: 100%;
-}
-}
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-.slideshow-row {
-    background: transparent;
-}
-.slideshow-content {
-    padding: 60px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.slideshow-image.main {
-    min-height: 475px;
-}
-#slideshow {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 0%;
-    width: 100%;
-    border-bottom-left-radius: 168px;
-}
-/* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-    position: absolute;
-    z-index: 2;
-    width: 105%;
-    height: 105%;
-    top: -5%;
-    left: -5%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    -webkit-transition: opacity 3s, -webkit-transform 8s;
-    transition: opacity 3s, transform 8s;
-}
-/* slide two */
-#slideshow div {
-    transform-origin: bottom left;
-}
-/* slide three */
-#slideshow div:nth-of-type(2n+1) {
-    transform-origin: bottom right;
-}
-/* slide four */
-#slideshow div:nth-of-type(3n+1) {
-    transform-origin: bottom center;
-}
-/* slide five */
-#slideshow div:nth-of-type(4n+1) {
-    transform-origin: bottom center;
-}
-/* slide six */
-#slideshow div:nth-of-type(5n+1) {
-    transform-origin: bottom right;
-}
-/* slide seven */
-#slideshow div:nth-of-type(6n+1) {
-    transform-origin: bottom right;
-}
-/* slide eight */
-#slideshow div:nth-of-type(7n+1) {
-    transform-origin: bottom center;
-}
-/* slide nine */
-#slideshow div:nth-of-type(8n+1) {
-    transform-origin: bottom right;
-}
-/* slide one */
-#slideshow div:nth-of-type(9n+1) {
-    transform-origin: top right;
-}
-#slideshow .fx1 {
-    z-index: 1
-}
-#slideshow .fx, #slideshow .fx1 {
-    -webkit-transform: scale(1.1) translate(1.5%);
-    -ms-transform: scale(1.1) translate(1.5%);
-    transform: scale(1.1) translate(1.5%);
-    opacity: 1;
-}
-#slideshow div:nth-of-type(1) {
-    background-image: url("modal-one.jpg");
-}
-#slideshow div:nth-of-type(2) {
-    background-image: url("modal-two.jpg");
-}
-#slideshow div:nth-of-type(3) {
-    background-image: url("modal-three.jpg");
-}
-#slideshow div:nth-of-type(4) {
-    background-image: url("modal-four.jpg");
-}
-#slideshow div:nth-of-type(5) {
-    background-image: url("modal-five.jpg");
-}
-#slideshow div:nth-of-type(6) {
-    background-image: url("modal-six.jpg");
-}
-#slideshow div:nth-of-type(7) {
-    background-image: url("modal-seven.jpg");
-}
-#slideshow div:nth-of-type(8) {
-    background-image: url("modal-eight.jpg");
-}
-#slideshow div:nth-of-type(9) {
-    background-image: url("modal-nine.jpg");
-}
-#slideshow div:nth-of-type(10) {
-    background-image: url("modal-ten.jpg");
-}
-
-@media (max-width: 475px) {
-.modal-body.custom-modal {
-    text-align: center;
-    padding: 0 0 0 38px;
-    overflow: hidden;
-}
-
-}
-
-@media (min-width: 767px) {
-.modal-lg {
-    width: 750px;
-}
-}
-
-@media (max-width: 768px) {
-.modal-dialog {
-    width: 97%;
-    margin: 30px auto;
 }
 }
 </style>
@@ -771,9 +624,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div>Support the DCL Foundation with a Colorado Gives Day donation now through December&nbsp;5, and let's see what we can do together!</div>
         <div class="progress-bar-wrapper">
           <div class="custom-progress-bar">
-            <div class="animated-progress progress-blue"> <span data-progress="12"></span> </div>
+            <div class="animated-progress progress-blue"> <span data-progress="21"></span> </div>
             <div class="progress-percentage">
-              <div>Complete 12%</div>
+              <div>Complete 21%</div>
               <div>Goal $70,000</div>
             </div>
           </div>
@@ -819,6 +672,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <li class="text-nowrap">Sunday, December 31: 10AM-3PM</li>
             <li class="text-nowrap">Monday, January 1: CLOSED</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="CGDmodal" tabindex="-1" role="dialog" aria-labelledby="CGDmodal-label">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="CGDmodal-content">
+        <div class="CGDmodal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="white" aria-hidden="true">×</span></button>
+        </div>
+        <div class="CGDmodal-body"><img class="img-responsive" src="cgd-modal-image.jpg" alt="Colorado Gives Day">
+          <div class="buffalo">Colorado Gives Day is December&nbsp;5.</div>
+          <div><a class="donate-link" href="donate/">Donate Today!</a></div>
         </div>
       </div>
     </div>
@@ -894,6 +762,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   );
   $(this).text($(this).attr("data-progress") + "%");
 });</script> 
+<!-- modal popup once per session, expires after 7 days --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('CGDmodalpop') == null) {
+                     $('#CGDmodal').modal('show');
+                     $.cookie('CGDmodalpop', '7');
+                 }
+             });
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
