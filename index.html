@@ -132,7 +132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 40px;
     font-weight: 500;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 10px 0;
     line-height: 1;
 }
 .booked-content h3 {
@@ -159,7 +159,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     align-items: center;
     max-width: 1440px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto;
 }
 .cgd-content {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
@@ -214,48 +214,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #006b59;
     flex: 1 1 50%;
 }
-.animated-progress {
-    width: 100%;
-    height: 10px;
-    border-radius: 10px;
-    margin: 10px 0;
-    overflow: hidden;
-    position: relative;
-    background: rgba(148,224,207,.6);
-}
-.animated-progress span {
-    height: 100%;
-    display: block;
-    width: 0;
-    color: #bbe0d8;
-    line-height: 30px;
-    position: absolute;
-    text-align: end;
-    padding-right: 5px;
-}
-.progress-blue span {
-    background-color: #bbe0d8;
-}
-.custom-progress-bar {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.progress-bar-wrapper {
-    padding: 10px 0;
-}
-.progress-percentage {
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
 .more-content-row {
     background: #5CE0C2 url("more-content-background.gif") repeat;
     display: flex;
     align-items: center;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
 }
 .feedback-content {
     display: flex;
@@ -615,28 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
-    <div class="cgd-row">
-      <div class="cgd-content">
-        <h1>It's Colorado Gives Day!</h1>
-        <div>Please donate to the DCL Foundation today and join us in planting roots for the future. </div>
-        <div class="progress-bar-wrapper">
-          <div class="custom-progress-bar">
-            <div class="animated-progress progress-blue"> <span data-progress="83"></span> </div>
-            <div class="progress-percentage">
-              <div>Complete 83%</div>
-              <div>Goal $70,000</div>
-            </div>
-          </div>
-        </div>
-        <div class="margin-bottom-15"><a href="donate/">Donate</a></div>
-      </div>
-      <div id="cgd-image" class="cgd-image"></div>
-    </div>
-    <script>
-    var images = ['cgd-image-one.jpg', 'cgd-image-two.jpg', 'cgd-image-three.jpg', 'cgd-image-four.jpg', 'cgd-image-five.jpg'];
-    $('<img alt="Colorado Gives Day" class="img-responsive" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#cgd-image');
-	  </script> 
+  <div class="row background-row"> 
     <!--<div class="snow-row">
       <div class="snow-image"><img class="img-responsive" src="snowball-animation.gif" alt="The Snow Ball"></div>
       <div class="snow-content">
@@ -651,8 +594,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="booked-image"><img class="img-responsive" src="forest-of-stories.jpg" alt="Forest of Stories"></div>
       <div class="booked-content">
         <h1>Forest of Stories</h1>
-        <h3><span class="trees">150</span> <a class="font-weight-400" href="forest-of-stories/">Decorated Trees</a>, Unlimited Wonder</h3>
-        <div>Your sparkling holidays begin here! See all of our book-themed trees and celebrate a season of stories.</div>
+        <div>Celebrate a season of stories! Visit our twinkling <a href="forest-of-stories/">Forest of Stories</a> for holiday magic and cheer.</div>
         <div class="margin-top-10"><i>A DCL <a class="font-weight-400" href="booked-for-the-holidays/">Booked for the Holidays</a> event.</i></div>
       </div>
     </div>
@@ -673,20 +615,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="CGDmodal" tabindex="-1" role="dialog" aria-labelledby="CGDmodal-label">
-    <div class="modal-dialog" role="document">
-      <div class="CGDmodal-content">
-        <div class="CGDmodal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="white" aria-hidden="true">×</span></button>
-        </div>
-        <div class="CGDmodal-body"><img class="img-responsive" src="cgd-modal-image.jpg" alt="Colorado Gives Day">
-          <div class="buffalo">Today is Colorado Gives Day!</div>
-          <div><a class="donate-link" href="donate/">Donate</a></div>
-        </div>
+    <div class="cgd-row">
+      <div class="cgd-content">
+        <h1>Did you miss Colorado Gives Day?</h1>
+        <div class="padding-bottom-30">There's still time to support the DCL Foundation in your year-end giving.</div>
+        <div class="margin-bottom-15"><a href="donate/">Donate Now</a></div>
       </div>
+      <div class="cgd-image"><img class="img-responsive" src="cgd-image.jpg" alt="Colorado Gives Day"></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -694,9 +629,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="container">
     <div class="social-footer">
       <div class="social-left">
-        <h5 class="margin-top-10 no-margin-bottom">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
-        <h5 class="margin-top-5 margin-bottom-20"><i>It's Colorado Gives Day!</i></h5>
-        <div class="padding-bottom-15"><a class="btn btn-warning white text-uppercase font-weight-400" href="donate/">Donate</a></div>
+        <h5 class="margin-top-10 margin-bottom-10">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
       </div>
       <div class="social-right">
         <div class="social-links-wrapper"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fa-brands fa-x-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fa-brands fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fa-brands fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa-brands fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="https://www.flickr.com/photos/douglascountylibraries/albums" target="_blank"> <i class="fa-brands fa-flickr fa-2x"></i></a> </div>
@@ -752,27 +685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>$(".animated-progress span").each(function () {
-  $(this).animate(
-    {
-      width: $(this).attr("data-progress") + "%",
-    },
-    2000
-  );
-  $(this).text($(this).attr("data-progress") + "%");
-});</script> 
-<!-- modal popup once per session, expires after 7 days --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
-<script type="text/javascript">
-            $(document).ready(function() {
-                 if ($.cookie('CGDmodalpop') == null) {
-                     $('#CGDmodal').modal('show');
-                     $.cookie('CGDmodalpop', '7');
-                 }
-             });
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
