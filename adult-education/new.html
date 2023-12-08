@@ -566,7 +566,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     $('<img alt="Adult Tutoring" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');  
     </script>
           <h4 class="padding-top-15 text-center">Adult Tutoring</h4>
-          <div>Tutoring for <a href="#esl" data-bs-toggle="tooltip" data-bs-placement="top" title="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for three months. GED/HiSET students work with tutors until they are ready to pass the test. </div>
+          <div>Tutoring for <a href="#esl" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for three months. GED/HiSET students work with tutors until they are ready to pass the test. </div>
           <div class="align-bottom text-center">
             <div class="dropdown text-center"> <a class="btn btn-lg btn-primary margin-top-5 text-uppercase" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Now <span class="caret"></span></a>
               <div class="dropdown-menu dropdown-menu-center">
@@ -923,6 +923,11 @@ for (var i = 0; i < cards.length; i++) {
   cards.eq(target1).before(cards.eq(target2));
 }
  </script> 
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
