@@ -96,6 +96,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-top: auto;
     text-align: center;
 }
+.margin-top-20 {
+    margin-top: 20px;
+}
 #dropdown-wrapper {
     max-width: 400px;
 }
@@ -500,7 +503,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="citizenship-and-esl" class="row padding-top-60 padding-bottom-50">
-    <div class="container">
+    <div class="custom-container">
       <h2 class="text-center">Citizenship & ESL</h2>
       <div class="box-item-wrapper">
         <div class="box-item">
@@ -556,7 +559,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="tutoring-and-proctoring" class="row padding-top-60 padding-bottom-50">
-    <div class="container">
+    <div class="custom-container">
       <h2 class="text-center">Tutoring & Proctoring</h2>
       <div class="box-item-wrapper">
         <div id="adult-tutoring" class="box-item">
@@ -569,7 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div>Tutoring for <a href="#esl" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for three months. GED/HiSET students work with tutors until they are ready to pass the test. </div>
           <div class="align-bottom text-center">
             <div class="dropdown text-center"> <a class="btn btn-lg btn-primary margin-top-5 text-uppercase" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Now <span class="caret"></span></a>
-              <div class="dropdown-menu dropdown-menu-center">
+              <div class="dropdown-menu dropdown-menu-center" style="min-width: 280px;padding: 15px;">
                 <ul class="no-margin">
                   <li><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLScvOshsWuI2Ob_Ri-G-qaNSLrrkOEh_jFTknoT4BazqvHco7A/viewform" target="_blank">Application for an ESL or Citizenship Tutor </a></li>
                   <li class="margin-top-10"><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSd2OhEQ_bhiK2kWLj20atcc6Ztc4OlbL_ITTS804Qi5OxWAoA/viewform" target="_blank">GED/HiSET or Adult Basic Literacy Tutoring</a></li>
@@ -602,8 +605,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <div class="row bg-gray-5 padding-top-50 padding-bottom-60">
+    <div class="container text-center">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200">John got the job at the salary he was looking for! He and his DCL volunteer tutor practiced communication skills. He is now the chief cook at his workplace, managing a kitchen crew and ordering supplies.</div>
+        </div>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200"><i>"People are creating in the library. They're creating businesses, going back to school, studying, because they're going to create something. How would that happen if we didn't have libraries?"</i>
+            <blockquote><span class="small">&mdash;Niki Weninger</span></blockquote>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200">DCL tutoring builds confidence. After some general literacy tutoring, Margaret is making plans to re-enroll in high school or pursue her GED. DCL will be with her every step of the way!</div>
+        </div>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200">DCL ESL learners have passed online classes, volunteered for children's field trips, helped friends solve problems by acting as interpreters, and shared books in English with their own children. DCL tutoring makes a difference! </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200">Margaret had been driving without a license because her low literacy skills prevented her from passing the written portion of the exam. After DCL-facilitated tutoring, Margaret passed, having missed only two questions. </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200">A recent session of Practice Your English included many highly educated people from Peru, Iran, India and Venezuela (to name a few) who wanted to refine their English and improve their accents. </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200">A DCL ESL student who had struggled in an English class at the community college received an A on his last paper. He is now employed as a substitute teacher and private math tutor. </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="large-text margin-lg-200"><i>"The library's literacy program helped me interact with people, and more importantly, gave me the opportunity to teach. When I came to this country, I didn't speak English. Someone took the time to teach me."</i>
+            <blockquote><span class="small">&mdash;Opp Slawson</span></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-teal padding-top-40 padding-bottom-50">
+    <div class="container text-center">
+      <h4 class="white no-margin"><i>"I want to be an <a class="white text-underline" href="../volunteer/">adult literacy volunteer</a>!"</i></h4>
+    </div>
+  </div>
   
-  <!-- Conatact AL Modal -->
+  <!-- Contact AL Modal -->
   <div class="modal fade" id="contact-al-modal" tabindex="-1" aria-labelledby="contact-al-modal-label" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -621,93 +663,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       allow="geolocation; microphone; camera"
       src="https://form.jotform.com/92054608043149"
       frameborder="0"
-      style="
-      min-width: 100%;
-      height:530px;
-      border:none;"
+      style="min-width:100%;max-width:100%;height:539px;border:none;"
       scrolling="no"
     > </iframe>
           <script type="text/javascript">
-      var ifr = document.getElementById("JotFormIFrame-92054608043149");
-      if (ifr) {
-        var src = ifr.src;
-        var iframeParams = [];
-        if (window.location.href && window.location.href.indexOf("?") > -1) {
-          iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
-        }
-        if (src && src.indexOf("?") > -1) {
-          iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-          src = src.substr(0, src.indexOf("?"))
-        }
-        iframeParams.push("isIframeEmbed=1");
-        ifr.src = src + "?" + iframeParams.join('&');
+    var ifr = document.getElementById("JotFormIFrame-92054608043149");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
       }
-      window.handleIFrameMessage = function(e) {
-        if (typeof e.data === 'object') { return; }
-        var args = e.data.split(":");
-        if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-        if (!iframe) { return; }
-        switch (args[0]) {
-          case "scrollIntoView":
-            iframe.scrollIntoView();
-            break;
-          case "setHeight":
-            iframe.style.height = args[1] + "px";
-            break;
-          case "collapseErrorPage":
-            if (iframe.clientHeight > window.innerHeight) {
-              iframe.style.height = window.innerHeight + "px";
-            }
-            break;
-          case "reloadPage":
-            window.location.reload();
-            break;
-          case "loadScript":
-            if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
-            var src = args[1];
-            if (args.length > 3) {
-                src = args[1] + ':' + args[2];
-            }
-            var script = document.createElement('script');
-            script.src = src;
-            script.type = 'text/javascript';
-            document.body.appendChild(script);
-            break;
-          case "exitFullscreen":
-            if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-            else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-            else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-            else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-            else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-            break;
-        }
-        var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-        if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-          var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-          iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-        }
-      };
-      window.isPermitted = function(originUrl, whitelisted_domains) {
-        var url = document.createElement('a');
-        url.href = originUrl;
-        var hostname = url.hostname;
-        var result = false;
-        if( typeof hostname !== 'undefined' ) {
-          whitelisted_domains.forEach(function(element) {
-              if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
-                  result = true;
-              }
-          });
-          return result;
-        }
-      };
-      if (window.addEventListener) {
-        window.addEventListener("message", handleIFrameMessage, false);
-
-      } else if (window.attachEvent) {
-        window.attachEvent("onmessage", handleIFrameMessage);
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
       }
-      </script> 
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + "px";
+          }
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script> 
         </div>
       </div>
     </div>
@@ -721,7 +762,102 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h5 class="modal-title text-center" id="education-career-modal-label">Education & Career Programs</h5>
         </div>
-        <div class="modal-body padding-top-30 padding-right-30 padding-bottom-50 padding-left-30">Morbi ultrices tortor sollicitudin elit lobortis scelerisque. Vivamus sed turpis sed sem varius suscipit non vulputate eros. Etiam id tortor fermentum felis fringilla adipiscing at et libero. Sed hendrerit, leo non iaculis vehicula, nisl arcu volutpat velit, quis molestie velit lacus ut nisl. Suspendisse potenti. Fusce a dui urna, vehicula bibendum orci. Vivamus nisl lacus, rhoncus vitae mattis eu, ullamcorper a nisl. Phasellus semper, purus quis mattis consectetur, lacus purus euismod justo, vel mollis leo massa ut massa. </div>
+        <div class="modal-body padding-top-30 padding-right-30 padding-bottom-50 padding-left-30">
+          <iframe
+      id="JotFormIFrame-233245726995165"
+      title="Education & Career Programs Form"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allowfullscreen="true"
+      allow="geolocation; microphone; camera"
+      src="https://form.jotform.com/233245726995165"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:539px;border:none;"
+      scrolling="no"
+    > </iframe>
+          <script type="text/javascript">
+    var ifr = document.getElementById("JotFormIFrame-233245726995165");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+      }
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
+      }
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + "px";
+          }
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script></div>
       </div>
     </div>
   </div>
