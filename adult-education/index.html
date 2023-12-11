@@ -79,17 +79,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .box-item-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1610px;
     margin: 0 auto;
 }
-.box-item {
+.box-item, .esl-item {
     display: flex;
     flex-direction: column;
     flex: 1;
     margin: 15px 15px 30px;
-    max-width: 575px;
-    min-width: 275px;
+}
+.esl-item-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .align-bottom {
     margin-top: auto;
@@ -126,27 +132,9 @@ blockquote .small {
 #proctor-modal > .modal-dialog > .modal-content > .modal-body > ul > li, #tech-modal > .modal-dialog > .modal-content > .modal-body > ul > li {
     padding-bottom: 10px;
 }
-
-@media (max-width: 1030px) {
-.databases {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 475px;
-}
-.database-item:nth-last-of-type(2) {
-    border-bottom: 2px solid #dedede;
-}
-}
-
-@media (max-width: 525px) {
-.databases, .database-item {
-    width: auto;
-}
-}
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 .slideshow-wrapper {
-    margin: 0 .75rem 0 .75rem;
+    margin: 0 15px;
 }
 .slideshow-row {
     background: #f5f5f5;
@@ -237,9 +225,32 @@ blockquote .small {
 }
 }
 
-@media (max-width: 725px) {
-.box-item-wrapper {
-    max-width: 600px;
+@media (max-width: 1030px) {
+.databases {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+}
+.database-item:nth-last-of-type(2) {
+    border-bottom: 2px solid #dedede;
+}
+}
+
+@media (max-width: 1000px) {
+.box-item-wrapper, .esl-item-wrapper {
+    max-width: 830px;
+    margin: 0 auto;
+}
+.box-item:first-child {
+    width: 100%;
+}
+.esl-item:first-child {
+    width: 100%;
+}
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
 }
 }
 
@@ -257,6 +268,18 @@ blockquote .small {
 }
 }
 
+@media (max-width: 820px) {
+.esl-item {
+    flex-basis: 100%;
+}
+}
+
+@media (max-width: 725px) {
+.box-item, .photo-item {
+    flex-basis: 100%;
+}
+}
+
 @media (max-width: 593px) {
 .page-nav-item a {
     text-align: left;
@@ -267,6 +290,12 @@ blockquote .small {
 @media (max-width: 575px) {
 .slideshow-image.main {
     min-height: 300px;
+}
+}
+
+@media (max-width: 525px) {
+.databases, .database-item {
+    width: auto;
 }
 }
 </style>
@@ -462,33 +491,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="slideshow-row">
         <div id="slideshow" class="slideshow-image main"> 
           <!-- define each background-image in CSS -->
-          <div class="random-slide" style="background-image: url('slideshow/cohs-one.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-one.jpg')"></div>
           <!-- #slideshow div:nth-of-type(1) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-two.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-two.jpg')"></div>
           <!-- #slideshow div:nth-of-type(2) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-three.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-three.jpg')"></div>
           
           <!-- #slideshow div:nth-of-type(3) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-four.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-four.jpg')"></div>
           
           <!-- #slideshow div:nth-of-type(4) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-five.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-five.jpg')"></div>
           <!-- #slideshow div:nth-of-type(5) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-six.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-six.jpg')"></div>
           <!-- #slideshow div:nth-of-type(6) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-seven.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-seven.jpg')"></div>
           <!-- #slideshow div:nth-of-type(7) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-eight.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-eight.jpg')"></div>
           <!-- #slideshow div:nth-of-type(8) -->
           
-          <div class="random-slide" style="background-image: url('slideshow/cohs-nine.jpg')"></div>
+          <div class="random-slide" style="background-image: url('slideshow/programs-nine.jpg')"></div>
           <!-- #slideshow div:nth-of-type(9) --> 
           
         </div>
@@ -502,105 +531,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="citizenship-and-esl" class="row padding-top-60 padding-bottom-50">
-    <div class="custom-container">
-      <h2 class="text-center">Citizenship & ESL</h2>
-      <div class="box-item-wrapper">
-        <div class="box-item">
-          <div id="box-one"></div>
-          <script>
+    <h2 class="no-margin-top text-center">Citizenship & ESL</h2>
+    <div class="esl-item-wrapper">
+      <div class="esl-item">
+        <div id="box-one"></div>
+        <script>
      var images = ['usc-one.jpg', 'usc-two.jpg', 'usc-three.jpg', 'usc-four.jpg', 'usc-five.jpg', 'usc-six.jpg'];
     $('<img alt="U.S. Citizenship" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');  
     </script>
-          <h4 class="padding-top-15 text-center">U.S. Citizenship</h4>
-          <div>Candidates for U.S. citizenship can choose classes on March 25 or October 7, 2023, to prepare for citizenship application and interviews. <a href="https://www.uscis.gov/" target="_blank">Representatives from USCIS</a> attend to answer your questions.</div>
-          <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=Prepare+for+U.S.+Citizenship&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-20">View Calendar</a></div>
-        </div>
-        <div class="box-item">
-          <div id="box-two"></div>
-          <script>
+        <h4 class="padding-top-15 text-center">U.S. Citizenship</h4>
+        <div>Candidates for U.S. citizenship can choose classes on March 25 or October 7, 2023, to prepare for citizenship application and interviews. <a href="https://www.uscis.gov/" target="_blank">Representatives from USCIS</a> attend to answer your questions.</div>
+        <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=Prepare+for+U.S.+Citizenship&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-20">View Calendar</a></div>
+      </div>
+      <div class="flex-break"></div>
+      <div class="esl-item">
+        <div id="box-two"></div>
+        <script>
      var images = ['esl-one.jpg', 'esl-two.jpg', 'esl-three.jpg', 'esl-four.jpg', 'esl-five.jpg', 'esl-six.jpg'];
     $('<img alt="Practice Your English" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');  
     </script>
-          <h4 class="padding-top-15 text-center">Practice Your English</h4>
-          <div>Adults of all skill levels, cultures and language backgrounds converse in English in a relaxed environment, facilitated by trained volunteers. Practice Your English is held four times each month, at various Douglas County Libraries locations. </div>
-          <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=Practice+Your+English&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-20">View Calendar</a></div>
-        </div>
+        <h4 class="padding-top-15 text-center">Practice Your English</h4>
+        <div>Adults of all skill levels, cultures and language backgrounds converse in English in a relaxed environment, facilitated by trained volunteers. Practice Your English is held four times each month, at various Douglas County Libraries locations. </div>
+        <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&et=&kw=Practice+Your+English&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-20">View Calendar</a></div>
       </div>
     </div>
   </div>
   <div id="resources" class="row bg-gray-5 padding-top-60 padding-bottom-60">
-    <div class="container">
-      <h2 class="text-center no-margin">Resources</h2>
-      <div class="database-wrapper">
-        <div class="databases">
-          <div class="database-item">
-            <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank">Adult Learning Center</a></h4>
-            <div>Achieve your learning and career goals with live assistance from Brainfuse. Connect with experts to prepare for the GED, practice for the U.S. citizenship test, write a resume, and more.</div>
-          </div>
-          <div class="database-item">
-            <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h4>
-            <div>Online language program to learn basic English as well as other languages. No downloads are required, and an app is available.</div>
-          </div>
-          <div class="database-item">
-            <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=news-for-you" target="_blank">News for You</a></h4>
-            <div>Easy-to-read news stories from reputable news services to help improve English language skills. Includes audio, vocabulary lists, exercises and puzzles.</div>
-          </div>
-          <div class="database-item">
-            <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=terc" target="_blank">Peterson's Test Prep</a></h4>
-            <div>Explore college and career options, build a professional resume, and access practice tests for major academic and vocational exams.</div>
-          </div>
-          <div class="database-item">
-            <h4><a href="https://dcl.kanopy.com/category/supplier/great-courses" target="_blank">The Great Courses</a></h4>
-            <div>Unlimited access to college-level video courses covering a variety of subjects, including history, science, humanities, hobbies and more.</div>
-          </div>
+    <h2 class="text-center no-margin">Resources</h2>
+    <div class="database-wrapper">
+      <div class="databases">
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=adult-learning-center" target="_blank">Adult Learning Center</a></h4>
+          <div>Achieve your learning and career goals with live assistance from Brainfuse. Connect with experts to prepare for the GED, practice for the U.S. citizenship test, write a resume, and more.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=mango-languages" target="_blank">Mango Languages</a></h4>
+          <div>Online language program to learn basic English as well as other languages. No downloads are required, and an app is available.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=news-for-you" target="_blank">News for You</a></h4>
+          <div>Easy-to-read news stories from reputable news services to help improve English language skills. Includes audio, vocabulary lists, exercises and puzzles.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="http://ezstats.dclibraries.org/Intercept/GetStats?name=terc" target="_blank">Peterson's Test Prep</a></h4>
+          <div>Explore college and career options, build a professional resume, and access practice tests for major academic and vocational exams.</div>
+        </div>
+        <div class="database-item">
+          <h4><a href="https://dcl.kanopy.com/category/supplier/great-courses" target="_blank">The Great Courses</a></h4>
+          <div>Unlimited access to college-level video courses covering a variety of subjects, including history, science, humanities, hobbies and more.</div>
         </div>
       </div>
     </div>
   </div>
   <div id="tutoring-and-proctoring" class="row padding-top-60 padding-bottom-50">
-    <div class="custom-container">
-      <h2 class="text-center">Tutoring & Proctoring</h2>
-      <div class="box-item-wrapper">
-        <div id="adult-tutoring" class="box-item">
-          <div id="box-three"></div>
-          <script>
+    <h2 class="no-margin-top text-center">Tutoring & Proctoring</h2>
+    <div class="box-item-wrapper">
+      <div id="adult-tutoring" class="box-item">
+        <div id="box-three"></div>
+        <script>
      var images = ['adult-tutoring-one.jpg', 'adult-tutoring-two.jpg', 'adult-tutoring-three.jpg', 'adult-tutoring-four.jpg', 'adult-tutoring-five.jpg', 'adult-tutoring-six.jpg'];
     $('<img alt="Adult Tutoring" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');  
     </script>
-          <h4 class="padding-top-15 text-center">Adult Tutoring</h4>
-          <div>Tutoring for <a href="#esl" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for three months. GED/HiSET students work with tutors until they are ready to pass the test. </div>
-          <div class="align-bottom text-center">
-            <div class="dropdown text-center"> <a class="btn btn-lg btn-primary margin-top-5 text-uppercase" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Now <span class="caret"></span></a>
-              <div class="dropdown-menu dropdown-menu-center" style="min-width: 280px;padding: 15px;">
-                <ul class="no-margin">
-                  <li><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLScvOshsWuI2Ob_Ri-G-qaNSLrrkOEh_jFTknoT4BazqvHco7A/viewform" target="_blank">Application for an ESL or Citizenship Tutor </a></li>
-                  <li class="margin-top-10"><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSd2OhEQ_bhiK2kWLj20atcc6Ztc4OlbL_ITTS804Qi5OxWAoA/viewform" target="_blank">GED/HiSET or Adult Basic Literacy Tutoring</a></li>
-                  <li class="margin-top-10"><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdBo_PSiZ7T00KIvCCnQRiIMW1afw38ocpEWOZ-2Mr0miRPWg/viewform" target="_blank">Solicitud de un Tutor de Inglés</a></li>
-                </ul>
-              </div>
+        <h4 class="padding-top-15 text-center">Adult Tutoring</h4>
+        <div>Tutoring for <a href="#esl" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="English as a Second Language">ESL</a>, basic literacy, and GED/HiSET exam preparation is personalized to student needs. ESL students meet with tutors one hour a week for three months. GED/HiSET students work with tutors until they are ready to pass the test. </div>
+        <div class="align-bottom text-center">
+          <div class="dropdown text-center"> <a class="btn btn-lg btn-primary margin-top-20 text-uppercase" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Now <span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu-center" style="min-width: 280px;padding: 15px;">
+              <ul class="no-margin">
+                <li><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLScvOshsWuI2Ob_Ri-G-qaNSLrrkOEh_jFTknoT4BazqvHco7A/viewform" target="_blank">Application for an ESL or Citizenship Tutor </a></li>
+                <li class="margin-top-10"><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSd2OhEQ_bhiK2kWLj20atcc6Ztc4OlbL_ITTS804Qi5OxWAoA/viewform" target="_blank">GED/HiSET or Adult Basic Literacy Tutoring</a></li>
+                <li class="margin-top-10"><a class="text-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdBo_PSiZ7T00KIvCCnQRiIMW1afw38ocpEWOZ-2Mr0miRPWg/viewform" target="_blank">Solicitud de un Tutor de Inglés</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div id="tech-tutoring" class="box-item">
-          <div id="box-four"></div>
-          <script>
+      </div>
+      <div class="flex-break"></div>
+      <div id="tech-tutoring" class="box-item">
+        <div id="box-four"></div>
+        <script>
      var images = ['tech-tutoring-one.jpg', 'tech-tutoring-two.jpg', 'tech-tutoring-three.jpg', 'tech-tutoring-four.jpg'];
     $('<img alt="Tech Tutoring" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');  
     </script>
-          <h4 class="padding-top-15 text-center">Tech Tutoring</h4>
-          <div>We match customers to tutors for individualized learning in <a href="#tech-modal" type="button" data-toggle="modal" data-target="#tech-modal">technology subjects</a> like basic internet use, tablets, email, e-books, popular software basics and more. Schedule a one-hour appointment with library staff now <a href="#tech-modal" type="button" data-toggle="modal" data-target="#tech-modal">or learn more</a>.</div>
-          <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=42&lib=ALL&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-20">View Calendar</a></div>
-        </div>
-        <div id="proctoring" class="box-item">
-          <div id="box-five"></div>
-          <script>
+        <h4 class="padding-top-15 text-center">Tech Tutoring</h4>
+        <div>We match customers to tutors for individualized learning in <a href="#tech-modal" type="button" data-toggle="modal" data-target="#tech-modal">technology subjects</a> like basic internet use, tablets, email, e-books, popular software basics and more. Schedule a one-hour appointment with library staff now <a href="#tech-modal" type="button" data-toggle="modal" data-target="#tech-modal">or learn more</a>.</div>
+        <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=42&lib=ALL&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-20">View Calendar</a></div>
+      </div>
+      <div id="proctoring" class="box-item">
+        <div id="box-five"></div>
+        <script>
      var images = ['proctoring-one.jpg', 'proctoring-two.jpg', 'proctoring-three.jpg', 'proctoring-four.jpg', 'proctoring-five.jpg', 'proctoring-six.jpg', 'proctoring-seven.jpg'];
     $('<img alt="Proctoring" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-five');  
     </script>
-          <h4 class="padding-top-15 text-center">Proctoring</h4>
-          <div>We are pleased to offer free test proctoring at four locations, by appointment. By submitting the form, I agree to <a href="#proctor-modal" type="button" data-toggle="modal" data-target="#proctor-modal">DCL's Proctoring Guidelines</a>.</div>
-          <div class="align-bottom"> <a href="proctoring-form/" target="_blank" class="btn btn-primary btn-lg margin-top-20">Get Started</a> </div>
-        </div>
+        <h4 class="padding-top-15 text-center">Proctoring</h4>
+        <div>We are pleased to offer free test proctoring at four locations, by appointment. By submitting the form, I agree to <a href="#proctor-modal" type="button" data-toggle="modal" data-target="#proctor-modal">DCL's Proctoring Guidelines</a>.</div>
+        <div class="align-bottom"> <a href="proctoring-form/" target="_blank" class="btn btn-primary btn-lg margin-top-20">Get Started</a> </div>
       </div>
     </div>
   </div>
