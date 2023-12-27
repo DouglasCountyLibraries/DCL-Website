@@ -51,27 +51,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 
 <style>
-.background-row {
-    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
-    padding-top: 30px;
-}
-.booked-row {
-    background: #f4a6a0;
+.flex-container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     max-width: 1440px;
-    margin: 0 auto 30px auto;
-}
-.booked-content {
+    margin: 0 auto;
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     color: #000;
     font-size: 20px;
     text-align: center;
-    padding: 20px 60px;
-    flex: 1 1 50%;
     font-weight: 400;
 }
-.booked-content h1 {
+.flex-content {
+    padding: 30px;
+}
+.flex-container h1 {
     color: #000;
     font-size: 40px;
     font-weight: 500;
@@ -79,27 +73,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0 0 10px 0;
     line-height: 1;
 }
-.booked-content h3 {
+.flex-container h3 {
     color: #000;
     font-size: 26px;
     font-weight: 400;
     margin: 5px 0 20px;
     line-height: 35px;
 }
-.booked-content a {
+.flex-container a {
     text-decoration: underline;
     color: #000;
 }
-.booked-content a:hover {
+.flex-container a:hover {
     text-decoration: underline;
     color: rgba(0,0,0,.9);
 }
-
-@media (max-width: 1080px) {
-.booked-content h3, .cgd-content h3, .feedback-content h3 {
-    font-size: 22px;
-    line-height: 30px;
+.flex-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.flex-item:nth-of-type(even) {
+    flex-direction: column;
+    background: #f4a6a0;
+}
+.flex-item:nth-of-type(odd) {
+    background: blue;
+}
+.background-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+    padding-top: 30px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -276,12 +280,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="booked-row">
-      <div class="booked-image"><img class="img-responsive" src="booked.jpg" alt="Forest of Stories"></div>
-      <div class="booked-content">
-        <h1>Forest of Stories</h1>
-        <div>Celebrate a season of stories! Visit our twinkling <a href="forest-of-stories/">Forest of Stories</a> for holiday magic and cheer.</div>
-        <div class="margin-top-10 small"><i>A DCL <a class="font-weight-400" href="booked-for-the-holidays/">Booked for the Holidays</a> event.</i></div>
+    <div class="flex-container">
+      <div class="flex-item"><img class="img-responsive" src="booked.jpg" alt="Forest of Stories"></div>
+      <div class="flex-item">
+        <div class="flex-content">
+          <h1>Forest of Stories</h1>
+          <div>Celebrate a season of stories! Visit our twinkling <a href="forest-of-stories/">Forest of Stories</a> for holiday magic and cheer.</div>
+          <div class="margin-top-10 small"><i>A DCL <a class="font-weight-400" href="booked-for-the-holidays/">Booked for the Holidays</a> event.</i></div>
+        </div>
       </div>
     </div>
   </div>
