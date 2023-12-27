@@ -51,7 +51,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 
 <style>
-.flex-container {
+.background-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+    padding: 30px 0 0 0;
+}
+.container-one {
     display: flex;
     align-items: stretch;
     max-width: 1440px;
@@ -62,48 +66,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-align: center;
     font-weight: 400;
 }
-.flex-content {
+.content-wrapper {
     padding: 30px;
 }
-.flex-container h1 {
-    color: #000;
-    font-size: 40px;
+.container-one h1 {
+    color: #fff;
+    font-size: 48px;
     font-weight: 500;
     text-transform: uppercase;
     margin: 0 0 10px 0;
     line-height: 1;
 }
-.flex-container h3 {
-    color: #000;
+.container-one h3 {
+    color: #fff;
     font-size: 26px;
     font-weight: 400;
     margin: 5px 0 20px;
     line-height: 35px;
 }
-.flex-container a {
+.container-one a {
     text-decoration: underline;
-    color: #000;
+    color: #fff;
 }
-.flex-container a:hover {
+.container-one a:hover {
     text-decoration: underline;
-    color: rgba(0,0,0,.9);
+    color: rgba(255,255,255,.9);
 }
-.flex-item {
+.item-one {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.flex-item:nth-of-type(even) {
+.item-one:nth-of-type(even) {
     flex-direction: column;
-    background: #f4a6a0;
+    background: #FF8658 url(flower-pattern.jpg);
 }
-.flex-item:nth-of-type(odd) {
+.item-one:nth-of-type(odd) {
     background: blue;
-}
-.background-row {
-    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
-    padding-top: 30px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -280,13 +280,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="flex-container">
-      <div class="flex-item"><img class="img-responsive" src="booked.jpg" alt="Forest of Stories"></div>
-      <div class="flex-item">
-        <div class="flex-content">
-          <h1>Forest of Stories</h1>
-          <div>Celebrate a season of stories! Visit our twinkling <a href="forest-of-stories/">Forest of Stories</a> for holiday magic and cheer.</div>
-          <div class="margin-top-10 small"><i>A DCL <a class="font-weight-400" href="booked-for-the-holidays/">Booked for the Holidays</a> event.</i></div>
+    <div class="container-one">
+      <div class="item-one"><img class="img-responsive" src="top-checkouts.gif" alt="2023 Top Checkouts"></div>
+      <div class="item-one">
+        <div class="content-wrapper">
+          <h1>Top Checkouts of 2023</h1>
+          <h3>See what everyone was <a href="top-checkouts/">reading and watching</a> last year.</h3>
         </div>
       </div>
     </div>
