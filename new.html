@@ -53,7 +53,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 .background-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
-    padding: 30px 0 0 0;
 }
 .container-one {
     display: flex;
@@ -65,9 +64,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 20px;
     text-align: center;
     font-weight: 400;
+	padding: 30px 0 30px;
+}
+.container-two {
+	display: flex;
+	justify-content: flex-end;
+	background: #ccc url(woman-reading.jpg) left top no-repeat;
+	max-width: 1440px;
+	margin: 0 auto;
+	font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+	color: #000;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 400;
+	min-height: 640px;
+
 }
 .content-wrapper {
     padding: 30px;
+}
+.reading-challenge-wrapper {
+	padding: 30px 40px 60px 30px;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
 }
 .container-one h1 {
     color: #fff;
@@ -84,6 +104,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 5px 0 20px;
     line-height: 35px;
 }
+	.container-two h3 {
+    color: #000;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 20px 0 20px;
+    line-height: 35px;
+}
 .container-one a {
     text-decoration: underline;
     color: #fff;
@@ -92,18 +119,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-decoration: underline;
     color: rgba(255,255,255,.9);
 }
-.item-one {
+	.container-two a {
+    text-decoration: underline;
+    color: #000;
+		
+}
+.container-two a:hover {
+    text-decoration: underline;
+    color: rgba(0,0,0,.9);
+}
+.item-one, .item-two {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.item-one:nth-of-type(even) {
+.item-one:nth-of-type(odd) {
     flex-direction: column;
     background: #FF8658 url(flower-pattern.jpg);
 }
-.item-one:nth-of-type(odd) {
-    background: blue;
+.item-one:nth-of-type(even) {
+    background: #7198a9;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -280,16 +316,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="container-one">
-      <div class="item-one"><img class="img-responsive" src="top-checkouts.gif" alt="2023 Top Checkouts"></div>
-      <div class="item-one">
+    <div class="container-one">      <div class="item-one">
         <div class="content-wrapper">
           <h1>Top Checkouts of 2023</h1>
-          <h3>See what everyone was <a href="top-checkouts/">reading and watching</a> last year.</h3>
+          <h3>See what everyone was <a class="font-weight-400" href="top-checkouts/">reading and watching</a> last year.</h3>
         </div>
       </div>
+      <div class="item-one"><img class="img-responsive" src="top-checkouts-transparent.gif" alt="2023 Top Checkouts"></div>
+
     </div>
-  </div>
+
+	  
+    <div class="container-two">
+      
+     
+        <div class="reading-challenge-wrapper">
+          <img class="img-responsive" src="reading-challenge.png" alt="Reading Challenge" style="max-width: 450px;margin: 0 auto;">
+          <h3>It's baaack, and better than ever&mdash;<a class="font-weight-400" href="reading-challenge/">join the challenge</a>!</h3>
+        </div>
+      
+    </div>
+    </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
