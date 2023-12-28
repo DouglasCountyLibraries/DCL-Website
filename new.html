@@ -79,19 +79,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 400;
     min-height: 640px;
 }
+.container-three {
+    display: flex;
+    align-items: stretch;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    padding: 30px 0 0;
+}
 .content-wrapper {
     padding: 30px;
 }
-.reading-challenge-wrapper {
-    padding: 30px 40px 60px 30px;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+.content-wrapper-three {
+    padding: 0 30px 30px;
+    margin: 0 auto;
 }
-	.reading-challenge-wrapper img {
-		max-width: 100%;
-		margin: 0 auto;
-	}
 .container-one h1 {
     color: #fff;
     font-size: 48px;
@@ -114,6 +120,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 20px 0 20px;
     line-height: 35px;
 }
+.container-three h1 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 30px 0 10px 0;
+    line-height: 1.1;
+}
+.container-three h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 10px;
+    line-height: 1.2;
+}
 .container-one a {
     text-decoration: underline;
     color: #fff;
@@ -130,11 +151,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-decoration: underline;
     color: rgba(0,0,0,.9);
 }
-.item-one, .item-two {
-    flex: 1;
+.container-three a {
+    text-decoration: underline;
+    color: #fff;
+}
+.container-three a:hover {
+    text-decoration: underline;
+    color: rgba(255,255,255,.9);
+}
+.reading-challenge-wrapper {
     display: flex;
+    padding: 30px 40px 60px 30px;
+    justify-content: center;
+    flex-direction: column;
+}
+.reading-challenge-wrapper img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.item-one, .item-two {
+    display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
+}
+.item-three {
+    display: flex;
+    flex: 1;
 }
 .item-one:nth-of-type(odd) {
     flex-direction: column;
@@ -143,6 +186,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .item-one:nth-of-type(even) {
     background: #6ca6bc;
+    min-height: 640px;
+}
+.item-three:nth-of-type(odd) {
+    background: #E74634 url(red-pattern.png) top center repeat-x;
+    min-height: 640px;
+}
+.item-three:nth-of-type(even) {
+    background: #58889A url(blue-pattern.png) top center repeat-x;
     min-height: 640px;
 }
 
@@ -159,31 +210,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 30px auto 0 auto;
 }
 }
-	@media (max-width: 1030px) {
-		.reading-challenge-wrapper {
-	padding: 30px;
-	justify-content: start;
 
+@media (max-width: 1030px) {
+.reading-challenge-wrapper {
+    padding: 30px;
+    justify-content: start;
 }
-	}
+}
 
 @media (max-width: 950px) {
-.container-one {
+.container-one, .container-three {
     flex-direction: column;
     max-width: 720px;
 }
 .container-two {
-	background: #82a3b0 url(woman-reading-small.jpg) left top no-repeat;
-	max-width: 720px;
-	justify-content: center;
+    background: #82a3b0 url(woman-reading-small.jpg) left top no-repeat;
+    max-width: 720px;
+    justify-content: center;
 }
-	.reading-challenge-wrapper h3 {
+.reading-challenge-wrapper h3 {
     max-width: inherit;
     margin: 0 auto;
 }
 .reading-challenge-wrapper {
-	justify-content: center;
-	margin: 0 auto;
+    justify-content: center;
+    margin: 0 auto;
 }
 .item-one:nth-of-type(odd) {
     order: 2;
@@ -192,6 +243,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .item-one:nth-of-type(even) {
     order: 1;
     min-height: inherit;
+}
+.item-three:nth-of-type(odd) {
+    margin-bottom: 30px;
+}
+.item-three:nth-of-type(even), .item-three:nth-of-type(odd) {
+    min-height: inherit;
+}
+.content-wrapper-three {
+    padding: 0 30px 50px;
 }
 }
 </style>
@@ -381,6 +441,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container-two">
       <div class="reading-challenge-wrapper"> <img class="img-responsive" src="reading-challenge.png" alt="Reading Challenge">
         <h3>It's baaack, and better than ever&mdash;<a class="font-weight-400" href="reading-challenge/">join the challenge</a>!</h3>
+      </div>
+    </div>
+    <div class="container-three">
+      <div class="item-three">
+        <div class="content-wrapper-three"> <img class="image-center img-responsive" src="https://source.unsplash.com/400x400/?smile" alt="Fairy Tale Ball: Aladdin">
+          <h1>Fairy Tale Ball: Aladdin</h1>
+          <h3>Magical enchantment awaits—costumes encouraged!</h3>
+          <div>Crafts, Dancing, Music, Fun Activities, Fantastical Characters, Snacks and Treats<br>
+            Saturdays, Feb.&nbsp;3-March&nbsp;2. View Calendar</div>
+        </div>
+      </div>
+      <div class="item-three">
+        <div class="content-wrapper-three"> <img class="image-center img-responsive" src="https://source.unsplash.com/400x400/?woman" alt="Fairy Tale Ball: Aladdin">
+          <h1>Summer Camps 2024</h1>
+          <h3>Mark your calendar: Registration opens February&nbsp;1. Take a peek!</h3>
+        </div>
       </div>
     </div>
   </div>
