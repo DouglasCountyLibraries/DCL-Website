@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MV5DM73');</script> 
-<!-- End Google Tag Manager --> 
+<!-- End Google Tag Manager -->
 <!-- InstanceBeginEditable name="title" -->
 <title>Teens | Douglas County Libraries</title>
 <meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
@@ -49,11 +50,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-color: #f5f5f5;
 }
 .container.custom-container {
-    max-width: 750px;
+    max-width: 745px;
 }
-.bug {
-    margin-bottom: -15px;
-}
+
 .fa-check {
     color: #90ad63;
 }
@@ -81,9 +80,105 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
 }
 
-@media (max-width: 992px) {
-.bug {
-    padding-top: 30px;
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+.slideshow-wrapper {
+    margin: 0 15px;
+}
+.slideshow-row {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1610px;
+    margin: 0 auto;
+}
+.slideshow-content {
+    flex: 1 1 36%;
+    padding: 0 30px 20px;
+}
+.slideshow-image.main {
+    min-height: 600px;
+}
+#slideshow {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0%;
+    width: 67%;
+    border-right: 15px solid #fff;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+    position: absolute;
+    z-index: 2;
+    width: 105%;
+    height: 105%;
+    top: -5%;
+    left: -5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    -webkit-transition: opacity 3s, -webkit-transform 8s;
+    transition: opacity 3s, transform 8s;
+}
+#slideshow div:nth-of-type(9n+1) {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+#slideshow div {
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(2n+1) {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+#slideshow div:nth-of-type(3n+1) {
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+#slideshow div:nth-of-type(4n+1) {
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+}
+#slideshow div:nth-of-type(5n+1) {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+#slideshow div:nth-of-type(6n+1) {
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(7n+1) {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+/* slide one */
+#slideshow div:nth-of-type(8n+1) {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+#slideshow .fx, #slideshow .fx1 {
+    -webkit-transform: scale(1.1) translate(1.5%);
+    transform: scale(1.1) translate(1.5%);
+    opacity: 1;
+}
+
+@media (max-width: 1150px) {
+.slideshow-image.main {
+    min-height: 400px;
+}
+}
+@media (max-width: 925px) {
+.slideshow-row {
+    flex-direction: column;
+}
+.slideshow-content {
+    padding: 30px 20px 40px;
+    text-align: center;
+}
+@media (max-width: 575px) {
+.slideshow-image.main {
+min-height: 300px;
 }
 }
 </style>
@@ -95,8 +190,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV5DM73"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
-<a href="#content-begins" class="skip-link">Skip to content</a>
+<!-- End Google Tag Manager (noscript) --> 
+<a href="#content-begins" class="skip-link">Skip to content</a> 
 <!-- BC Log In Bar -->
 <div class="login-row">
   <div class="container login-container">
@@ -261,52 +356,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
-    <div class="container text-center">
+    <div class="container text-center padding-bottom-20">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Teens</h1>
-      <h4 class="roboto margin-top-5">DCL is here for you!</h4>
-      <div class="margin-lg-175">Looking for a place to study or work on a group project? Book a <a href="http://studyrooms.douglascountylibraries.org/srres.html?branchname=CastlePines" target="_blank">study room</a>. Make the grade with special effects or a film you create in <a href="../parker/">Parker</a>. Use our <a href="../research/">research databases</a> for papers and projects, to find information on scholarships, and to access live homework help.</div>
     </div>
   </div>
   <div class="row">
-    <div class="container text-center no-padding">
-      <div class="hidden-xs hidden-sm"><img class="img-responsive center-block" src="big-lerds.jpg" alt="Teen Library Council (TLC)"></div>
-      <div class="hidden-md hidden-lg"><img class="img-responsive center-block" src="small-lerds.jpg" alt="Teen Library Council (TLC)"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="container custom-container padding-bottom-40">
-      <h2 class="text-center margin-top-5">Become a TLC Member!</h2>
-      <div class="text-center">Teens who want to make a difference in their library and their community are invited to apply to be members of the Teen Library Council (TLC). Earn <a href="../volunteer/">volunteer credit</a>, make a difference, have fun! Stop by a meeting or talk to a youth librarian to sign up:</div>
-      <div>
-        <div class="col-sm-6">
-          <div>
-            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Teen Library Council&lib=1000&nd=365" target="_blank">Castle Pines</a></h4>
-            Meets the third Wednesday of each month from 5:30-7PM</div>
-          <div>
-            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Teen Library Council&lib=1010&nd=365" target="_blank">Castle Rock</a></h4>
-            Meets the third Thursday of each month from 4-5:30PM</div>
-          <div>
-            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Teen Library Council&lib=1004&nd=365" target="_blank">Highlands Ranch</a></h4>
-            Meets the first Thursday of each month from 4-5PM</div>
+    <div class="slideshow-wrapper">
+      <div class="slideshow-row">
+        <div id="slideshow" class="slideshow-image main"> 
+          <!-- define each background-image in CSS -->
+          <div style="background-image: url('slideshow/teens-one.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(1) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-two.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(2) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-three.jpg')"></div>
+          
+          <!-- #slideshow div:nth-of-type(3) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-four.jpg')"></div>
+          
+          <!-- #slideshow div:nth-of-type(4) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-five.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(5) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-six.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(6) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-seven.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(7) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-eight.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(8) -->
+          
+          <div class="random-slide" style="background-image: url('slideshow/teens-nine.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(9) --> 
+          
         </div>
-        <div class="col-sm-6">
-          <div>
-            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Teen Library Council&lib=1002&nd=365" target="_blank">Lone Tree</a></h4>
-            Meets the second Tuesday of each month from 5:30-7:00PM</div>
-          <div>
-            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Teen Library Council&lib=1005&nd=365" target="_blank">Parker</a></h4>
-            Meets the last Tuesday of each month from 6-7:30PM</div>
-          <div>
-            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=Teen Library Council&lib=1006&nd=365" target="_blank">Roxborough</a></h4>
-            Meets the fourth Tuesday of each month from 5:30-7PM</div>
+        <div class="slideshow-content">
+          <h4>DCL is here for you!</h4>
+          <div>Looking for a place to study or work on a group project? Book a <a href="http://studyrooms.douglascountylibraries.org/srres.html?branchname=CastlePines" target="_blank">study room</a>. Make the grade with special effects or a film you create in <a href="../parker/">Parker</a>. Use our <a href="../research/">research databases</a> for papers and projects, to find information on scholarships, and to access live homework help.</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row white-top-row"><img class="center-block" src="reading-buddy.png" alt=""></div>
-  <div class="row bg-gray-5 padding-bottom-60">
+  <div class="row">
+    <div class="container text-center padding-top-30 padding-bottom-15">
+      <h2 class="text-center no-margin-top margin-bottom-15">Become a TLC Member!</h2>
+      <img class="img-responsive center-block" src="teen-library-connections.jpg" alt="Teen Library Connections"></div>
+  </div>
+  <div class="row">
+    <div class="container custom-container padding-bottom-40">
+      <div class="text-center">Teens who want to make a difference in their library and their community are invited to apply to be members of Teen Library Connections (TLC). Earn <a href="../volunteer/">volunteer credit</a>, make a difference, have fun! Stop by a meeting or talk to a youth librarian to sign up:</div>
+      <div>
+        <div class="col-sm-6">
+          <div>
+            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=teen+library+connections&lib=1000&nd=365" target="_blank">Castle Pines</a></h4>
+            Meets the third Wednesday of each month from 4-5:30PM</div>
+          <div>
+            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=teen+library+connections&lib=1010&nd=365" target="_blank">Castle Rock</a></h4>
+            Meets the third Thursday of each month from 4-5:30PM</div>
+          <div>
+            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=teen+library+connections&lib=1004&nd=365" target="_blank">Highlands Ranch</a></h4>
+            Meets the first Thursday of each month from 4-5PM</div>
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=teen+library+connections&lib=1002&nd=365" target="_blank">Lone Tree</a></h4>
+            Meets the second Tuesday of each month from 5:30-7:00PM</div>
+          <div>
+            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=teen+library+connections&lib=1005&nd=365" target="_blank">Parker</a></h4>
+            Meets the last Tuesday of each month from 6-7:30PM</div>
+          <div>
+            <h4 class="no-margin-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=teen+library+connections&lib=1006&nd=365" target="_blank">Roxborough</a></h4>
+            Meets the fourth Tuesday of each month from 4-5:30PM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-60 padding-bottom-60">
     <div class="container custom-container">
-      <h2 class="text-center no-margin-top">Be a Reading Buddy</h2><div>Applications for the next session open in 2024.</div>
+      <h2 class="text-center no-margin-top">Be a Reading Buddy</h2>
+      <div>Applications for the Spring session open on January 8.</div>
       <!--<div class="text-center">The Reading Buddies program matches trained teen volunteers with struggling readers, Little Buddies, in grades 1-3 to help them become a stronger reader. If you love to read and enjoy working with kids, we need you! </div>-->
       <div class="checklist-wrapper">
         <ul class="fa-ul checklist">
@@ -331,20 +464,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </div>
           </div>
         </div>
-      </div>-->
+      </div>--> 
     </div>
   </div>
-  <div class="row padding-top-40">
+  <div class="row padding-top-40 padding-bottom-60">
     <div class="container margin-lg-100 text-center">
       <div class="col-sm-6 padding-top-15"><img class="center-block" src="book-lists.png" alt="Book Lists">
-        <h5 class="no-margin-bottom">Book Lists</h5>
-        <div class="large-text"><a href="https://dcl.bibliocommons.com/user_profile/692285487">Discover great reads!</a></div>
+        <h4 class="no-margin-bottom">Book Lists</h4>
+        <h4 class="margin-top-5"><a href="https://dcl.bibliocommons.com/user_profile/692285487">Discover great reads!</a></h4>
       </div>
       <div class="col-sm-6 padding-top-15"><img class="center-block" src="volunteer.png" alt="Book Lists">
         <h4 class="no-margin-bottom">Community Service</h4>
-        <div class="large-text"><a href="../volunteer/">Earn credits toward graduation.</a></div>
+        <h4 class="margin-top-5"><a href="../volunteer/">Earn credits toward graduation.</a></h4>
       </div>
-      <img class="bug img-responsive center-block" src="bug.png" alt="Bug"></div>
+    </div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
@@ -407,7 +540,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+	var cards = $(".random-slide");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -455,7 +616,7 @@ $.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.ra
 <!-- BiblioCommons APK --> 
 <script async="async" type="text/javascript">(function(){var e=document.createElement("script");
 e.src="https://dcl.bibliocommons.com/javascripts/sdk.js";
-e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
+e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script> 
 <!-- Patron Point --> 
 <script>
     (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
@@ -464,7 +625,8 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
     })(window,document,'script','https://dclco.patronpoint.com/mtc.js','mt');
 
     mt('send', 'pageview');
-</script>
+</script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
