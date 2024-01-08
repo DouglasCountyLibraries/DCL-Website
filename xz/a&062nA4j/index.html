@@ -27,18 +27,23 @@
 <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script> 
 <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.23567" type="text/javascript"></script> 
 <script type="text/javascript">
-   JotForm.setConditions([{"action":[{"id":"action_1614452765578","visibility":"Show","isError":false,"field":"11"},{"id":"action_1614452748469","visibility":"Show","isError":false,"field":"8"}],"id":"1614452773905","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1614452748469","field":"7","operator":"equals","value":"Unisex Pullover","isError":false}],"type":"field"},{"action":[{"id":"action_0_1614473926377","isError":false,"visibility":"Show","field":"8"},{"id":"action_1_1614473926377","visibility":"Show","isError":false,"field":"9"}],"id":"1614451107909","index":"3","link":"Any","priority":"3","terms":[{"id":"term_0_1614473926377","field":"7","operator":"equals","value":"Women's Pullover","isError":false}],"type":"field"}]);
-	JotForm.init(function(){
 	JotForm.newDefaultTheme = false;
 	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
 	JotForm.newPaymentUIForNewCreatedForms = false;
-	JotForm.clearFieldOnHide="disable";
-    /*INIT-END*/
+	JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+	JotForm.replaceTagTest = true;
+   JotForm.setConditions([{"action":[{"id":"action_1614452765578","visibility":"Show","isError":false,"field":"11"},{"id":"action_1614452748469","visibility":"Show","isError":false,"field":"8"}],"id":"1614452773905","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1614452748469","field":"7","operator":"equals","value":"Unisex Pullover","isError":false}],"type":"field"},{"action":[{"id":"action_0_1614473926377","isError":false,"visibility":"Show","field":"8"},{"id":"action_1_1614473926377","visibility":"Show","isError":false,"field":"9"}],"id":"1614451107909","index":"3","link":"Any","priority":"3","terms":[{"id":"term_0_1614473926377","field":"7","operator":"equals","value":"Women's Pullover","isError":false}],"type":"field"}]);	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+	JotForm.isFullSource = true;
+
+	JotForm.init(function(){
+	/*INIT-START*/
+	/*INIT-END*/
 	});
 
-   JotForm.prepareCalculationsOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND","type":"control_button"},{"name":"email","qid":"3","subLabel":"","text":"Email:","type":"control_email"},null,null,{"description":"","name":"name6","qid":"6","text":"Name:","type":"control_fullname"},{"description":"","name":"item7","qid":"7","text":"Item","type":"control_radio"},{"description":"","name":"size","qid":"8","subLabel":"","text":"Size:","type":"control_dropdown"},{"description":"","name":"color","qid":"9","subLabel":"","text":"Color:","type":"control_dropdown"},null,{"description":"","name":"color11","qid":"11","subLabel":"","text":"Color:","type":"control_dropdown"}]);
    setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND","type":"control_button"},{"name":"email","qid":"3","subLabel":"","text":"Email:","type":"control_email"},null,null,{"description":"","name":"name6","qid":"6","text":"Name:","type":"control_fullname"},{"description":"","name":"item7","qid":"7","text":"Item","type":"control_radio"},{"description":"","name":"size","qid":"8","subLabel":"","text":"Size:","type":"control_dropdown"},{"description":"","name":"color","qid":"9","subLabel":"","text":"Color:","type":"control_dropdown"},null,{"description":"","name":"color11","qid":"11","subLabel":"","text":"Color:","type":"control_dropdown"}]);}, 20); 
+JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND","type":"control_button"},{"name":"email","qid":"3","subLabel":"","text":"Email:","type":"control_email"},null,null,{"description":"","name":"name6","qid":"6","text":"Name:","type":"control_fullname"},{"description":"","name":"item7","qid":"7","text":"Item:","type":"control_radio"},{"description":"","name":"size","qid":"8","subLabel":"","text":"Size:","type":"control_dropdown"},{"description":"","name":"color","qid":"9","subLabel":"","text":"Color:","type":"control_dropdown"},null,{"description":"","name":"color11","qid":"11","subLabel":"","text":"Color:","type":"control_dropdown"}]);}, 20); 
 </script>
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
@@ -49,167 +54,167 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
 
 <style type="text/css">
 .radio-item label:before {
-	content: " ";
-	display: inline-block;
-	position: relative;
-	top: 5px;
-	margin: 0 5px 0 0;
-	width: 20px;
-	height: 20px;
-	border-radius: 11px;
-	border: 2px solid #004c97;
-	background-color: transparent;
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 2px solid #004c97;
+    background-color: transparent;
 }
 .radio-item input[type=radio]:checked + label:after {
-	border-radius: 11px;
-	width: 12px;
-	height: 12px;
-	position: absolute;
-	top: 9px;
-	left: 10px;
-	content: " ";
-	display: block;
-	background: #004c97;
+    border-radius: 11px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    content: " ";
+    display: block;
+    background: #004c97;
 }
 .custom-container {
-	max-width: 1550px;
-	margin: 0 auto;
-	padding: 0 10px;
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 .item-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 .item {
-	border: 1px solid #ddd;
-	padding: 15px;
-	margin: 5px;
-	width: 380px;
-	border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 5px;
+    width: 380px;
+    border-radius: 3px;
 }
 .item:hover {
-	border: 1px solid #999;
+    border: 1px solid #999;
 }
 label {
-	display: inherit;
-	max-width: 100%;
-	margin-bottom: 0;
-	font-weight: 400;
-	text-align: left;
+    display: inherit;
+    max-width: 100%;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: left;
 }
 input[type="radio"] {
-	margin-right: 4px;
-	vertical-align: baseline;
-	transform: scale(1.3);
+    margin-right: 4px;
+    vertical-align: baseline;
+    transform: scale(1.3);
 }
 .label-image:hover {
-	cursor: pointer;
-	opacity: .8;
+    cursor: pointer;
+    opacity: .8;
 }
 .form-error-message > img {
-	height: 17px;
-	vertical-align: text-bottom;
+    height: 17px;
+    vertical-align: text-bottom;
 }
 .form-error-message {
-	padding-top: 5px;
-	color: darkred;
+    padding-top: 5px;
+    color: darkred;
 }
 .width-wrapper {
-	max-width: 350px;
-	margin: 0 auto;
+    max-width: 350px;
+    margin: 0 auto;
 }
 .form-control {
-	display: inline-block;
+    display: inline-block;
 }
 .hide-label {
-	display: none;
+    display: none;
 }
 .form-line {
-	padding-top: 8px;
-	padding-bottom: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header {
-	color: false;
+    color: false;
 }
 .form-control::-moz-placeholder {
 color: #999;
 opacity: 1;
 }
 .btn-lg {
-	white-space: normal;
-	font-size: 16px;
-	padding: 15px 45px;
+    white-space: normal;
+    font-size: 16px;
+    padding: 15px 45px;
 }
 select option {
-	background: #fff;
-	color: #666;
-	font-size: 16px;
+    background: #fff;
+    color: #666;
+    font-size: 16px;
 }
 select option[value="Black"] {
-	background: #2a2a2a;
-	color: #fff;
+    background: #2a2a2a;
+    color: #fff;
 }
 select option[value="Charcoal Grey"] {
-	background: #3E3E3E;
-	color: #fff;
+    background: #3E3E3E;
+    color: #fff;
 }
 select option[value="Charcoal Grey Heather"] {
-	background: #7e7e81;
-	color: #fff;
+    background: #7e7e81;
+    color: #fff;
 }
 select option[value="Dusty Rose"] {
-	background: #F78295;
-	color: #fff;
+    background: #F78295;
+    color: #fff;
 }
 select option[value="Forest Green"] {
-	background: #304d3b;
-	color: #fff;
+    background: #304d3b;
+    color: #fff;
 }
 select option[value="Hot Coral"] {
-	background: #ff4565;
-	color: #fff;
+    background: #ff4565;
+    color: #fff;
 }
 select option[value="Iris Purple"] {
-	background: #6a79b0;
-	color: #fff;
+    background: #6a79b0;
+    color: #fff;
 }
 select option[value="Maroon"] {
-	background: #4f282a;
-	color: #fff;
+    background: #4f282a;
+    color: #fff;
 }
 select option[value="Pink Rush"] {
-	background: #801653;
-	color: #fff;
+    background: #801653;
+    color: #fff;
 }
 select option[value="Pink Rush Heather"] {
-	background: #c679a2;
-	color: #fff;
+    background: #c679a2;
+    color: #fff;
 }
 select option[value="True Navy"] {
-	background: #15223B;
-	color: #fff;
+    background: #15223B;
+    color: #fff;
 }
 select option[value="True Navy Heather"] {
-	background: #4c4f59;
-	color: #fff;
+    background: #4c4f59;
+    color: #fff;
 }
 select option[value="True Red"] {
-	background: #aa1428;
-	color: #fff;
+    background: #aa1428;
+    color: #fff;
 }
 select option[value="True Royal"] {
-	background: #253a92;
-	color: #fff;
+    background: #253a92;
+    color: #fff;
 }
 select option[value="True Royal Heather"] {
-	background: #5b6690;
-	color: #fff;
+    background: #5b6690;
+    color: #fff;
 }
 select option[value="White"] {
-	background: #E4E3E3;
-	color: #666;
+    background: #E4E3E3;
+    color: #666;
 }
 </style>
 
@@ -219,7 +224,7 @@ select option[value="White"] {
     <div class="text-center padding-top-15"><img src="../../dcl-logo.jpg" alt="DCL Logo" class="img-responsive image-center">
       <h4 style="color: #2F0049;" class="no-margin">Employee Milestone Anniversary Items</h4>
     </div>
-    <form class="text-center" action="https://submit.jotform.com/submit/210575304986158/" method="post" name="form_210575304986158" id="210575304986158" accept-charset="utf-8" autocomplete="on">
+    <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/210575304986158" method="post" name="form_210575304986158" id="210575304986158" accept-charset="utf-8" autocomplete="on">
       <input type="hidden" name="formID" value="210575304986158" />
       <input type="hidden" id="JWTContainer" value="" />
       <input type="hidden" id="cardinalOrderNumber" value="" />
