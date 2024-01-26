@@ -48,21 +48,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .meeting-container {
-	max-width: 850px;
-	margin: 0 auto;
-	padding: 0 15px 30px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+}
+.meeting-doc-wrapper {
+    display: flex;
+    flex-wrap: wrap;
 }
 .meeting-docs {
     display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-}
-.meeting-docs div:nth-of-type(1), .meeting-docs div:nth-of-type(2) {
-    margin-right: 15px;
+    flex-direction: row;
     white-space: nowrap;
 }
-.meeting-docs div:nth-of-type(2), .meeting-docs div:nth-of-type(3) {
-    display: inline-block;
+.meeting-docs div:nth-of-type(1), .meeting-docs div:nth-of-type(2) {
+    white-space: nowrap;
+    margin-left: 10px;
 }
 .meeting-dates {
     max-width: 550px;
@@ -71,19 +72,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .meeting-list {
     list-style: none;
     margin-bottom: 0;
-    padding: 30px 15px 20px;
+    padding: 20px 0;
     border-bottom: 2px solid #f5f5f5;
 }
 .meeting-list li {
-    padding-bottom: 15px;
+    padding-top: 5px;
 }
 .month-heading {
     text-transform: uppercase;
     font-size: 18px;
-    padding: 0 0 10px;
+    padding-bottom: 5px;
 }
 .fa-regular.fa-file-lines {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .paginate_button.current {
     border: 2px solid #7fbac5;
@@ -102,6 +103,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 li.active > a.tab > h2 {
     font-weight: 400;
     color: #666;
+}
+
+@media (max-width: 425px) {
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -309,17 +313,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <ul class="meeting-list">
             <div class="month-heading">January</div>
             <li>
-              <div class="meeting-docs">
+              <div class="meeting-doc-wrapper">
                 <div>Board Budget Public Hearing:</div>
-                <div><a href="packet/2024/01-09-24-packet.pdf?1824" target="_blank"><i class="fa-regular fa-file-lines"></i>Packet</a></div>
-                <div class="opacity-6"><i class="fa-regular fa-file-lines"></i>Minutes</div>
+                <div class="meeting-docs">
+                  <div><a href="packet/2024/01-09-24-packet.pdf?1824" target="_blank"><i class="fa-regular fa-file-lines"></i>Packet</a></div>
+                  <div class="opacity-6"><i class="fa-regular fa-file-lines"></i>Minutes</div>
+                </div>
               </div>
             </li>
             <li>
-              <div class="meeting-docs">
+              <div class="meeting-doc-wrapper">
                 <div>Board Budget Public Hearing:</div>
-                <div><a href="packet/2024/01-09-24-packet.pdf?1824" target="_blank"><i class="fa-regular fa-file-lines"></i>Packet</a></div>
-                <div class="opacity-6"><i class="fa-regular fa-file-lines"></i>Minutes</div>
+                <div class="meeting-docs">
+                  <div><a href="packet/2024/01-09-24-packet.pdf?1824" target="_blank"><i class="fa-regular fa-file-lines"></i>Packet</a></div>
+                  <div class="opacity-6"><i class="fa-regular fa-file-lines"></i>Minutes</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="meeting-doc-wrapper">
+                <div>Board Budget Public Hearing:</div>
+                <div class="meeting-docs">
+                  <div><a href="packet/2024/01-09-24-packet.pdf?1824" target="_blank"><i class="fa-regular fa-file-lines"></i>Packet</a></div>
+                  <div class="opacity-6"><i class="fa-regular fa-file-lines"></i>Minutes</div>
+                </div>
               </div>
             </li>
           </ul>
