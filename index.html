@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 20px;
     text-align: center;
     font-weight: 400;
-    padding: 30px 0 30px;
+    padding: 30px 0 0;
 }
 .container-two {
     display: flex;
@@ -88,7 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 20px;
     text-align: center;
     font-weight: 400;
-    padding: 30px 0 0;
+    padding: 30px 0 30px 0;
 }
 .container-four {
     background: linear-gradient(#7ba0b2 2%, #E3E1C6 40%, #E3E1C6 100%);
@@ -112,6 +112,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .content-wrapper-three {
     padding: 0 30px 30px;
+    margin: 0 auto;
+}
+.content-wrapper-three-alt {
+    padding: 30px 30px 0;
     margin: 0 auto;
 }
 .container-one h1 {
@@ -143,6 +147,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-transform: uppercase;
     margin: 30px 0 10px 0;
     line-height: 1.1;
+}
+.content-wrapper-three-alt h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 2px 0 10px 0;
+    line-height: 1;
 }
 .container-three h3 {
     color: #fff;
@@ -211,11 +223,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 100%;
     margin: 0 auto;
 }
-.item-one, .item-two {
+.item-one {
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
+}
+.item-two {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: #6ca6bc url("blue-pattern.png") top center repeat-x;
+    min-height: 640px;
 }
 .item-three {
     display: flex;
@@ -227,12 +246,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     min-height: 640px;
 }
 .item-one:nth-of-type(even) {
-    background: #6ca6bc;
-    min-height: 640px;
 }
-.item-three:nth-of-type(odd) {
-    background: #58889A url(blue-pattern.png) top center repeat-x;
+.item-three:nth-of-type(2n+1) {
+    background: #146897 url("storybook-holiday/city-background.jpg") top center repeat-x;
     min-height: 640px;
+    display: flex;
+    align-items: end;
 }
 .item-three:nth-of-type(even) {
     background: #E74634 url(red-pattern.png) top center repeat-x;
@@ -498,14 +517,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="container-one">
-      <div class="item-one">
-        <div class="content-wrapper">
-          <h1>Top Checkouts of 2023</h1>
-          <h3>See what everyone was <a class="font-weight-400" href="top-checkouts/">reading and watching</a> last year.</h3>
+    <div class="container-three">
+      <div class="item-three">
+        <div class="content-wrapper-three-alt">
+          <div class="text-uppercase">A Storybook Holiday:</div>
+          <h1>Monkey Business</h1>
+          <div>
+            <div class="padding-bottom-15">Celebrate spring and our favorite curious monkey, George! Delicious Brunch, Animal-themed Crafts, Man with the Yellow Hat Activity, Bananas and Snacks.</div>
+            <div>
+              <h3 class="padding-bottom-15">Sunday, April&nbsp;7, 8-11AM, Castle Rock</h3>
+              <h3 class="padding-bottom-15"><a class="font-weight-400 text-nowrap" href="storybook-holiday/">Buy Tickets</a></h3>
+            </div>
+            <img class="image-center img-responsive" src="storybook-holiday/monkey.png" alt="A Storybook Holiday: Monkey Business"> </div>
         </div>
       </div>
-      <div class="item-one"><img class="img-responsive" src="top-checkouts.gif" alt="2023 Top Checkouts"></div>
+      <div class="item-three">
+        <div class="content-wrapper-three"> <img class="image-center img-responsive" src="camp-dcl.jpg" alt="Camp DCL">
+          <h1>Summer Camps 2024</h1>
+          <h3>Mark your calendar: Registration opens at 9AM on February&nbsp;1. <a class="font-weight-400 text-nowrap" href="camp-dcl/">Take a peek</a>!</h3>
+        </div>
+      </div>
     </div>
     <div class="container-four">
       <div class="item-wrapper">
@@ -540,17 +571,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div class="container-three">
-      <div class="item-three">
-        <div class="content-wrapper-three"> <img class="image-center img-responsive" src="reading-challenge-logo.png" alt="Reading Challenge">
-          <h3 class="padding-top-20">It's baaack, and better than ever&mdash;<a class="font-weight-400" href="reading-challenge/">join the challenge</a>!</h3>
+    <div class="container-one">
+      <div class="item-one">
+        <div class="content-wrapper">
+          <h1>Top Checkouts of 2023</h1>
+          <h3>See what everyone was <a class="font-weight-400" href="top-checkouts/">reading and watching</a> last year.</h3>
         </div>
       </div>
-      <div class="item-three">
-        <div class="content-wrapper-three"> <img class="image-center img-responsive" src="camp-dcl.jpg" alt="Camp DCL">
-          <h1>Summer Camps 2024</h1>
-          <h3>Mark your calendar: Registration opens at 9AM on February&nbsp;1. <a class="font-weight-400 text-nowrap" href="camp-dcl/">Take a peek</a>!</h3>
-        </div>
+      <div class="item-two"><img class="image-center img-responsive" src="reading-challenge-logo.png" alt="Reading Challenge">
+        <h3 class="padding-top-20">It's baaack, and better than ever&mdash;<a class="font-weight-400" href="reading-challenge/">join the challenge</a>!</h3>
       </div>
     </div>
   </div>
