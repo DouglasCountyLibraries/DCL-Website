@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
 }
 .contain-header {
-    background: #fab08b url("fete-background-lg.jpg") center bottom no-repeat;
+    background: #b18766 url("fete-background-lg.jpg") center bottom no-repeat;
     padding: 0 15px;
     max-width: 1920px;
     margin: 0 auto;
@@ -71,12 +71,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     align-content: center;
     text-align: center;
     font-size: 22px;
-    color: #182035;
+    color: #2a1f18;
     font-weight: 400;
     max-width: 1920px;
     margin: 0 auto;
     justify-content: center;
     padding: 60px 15px 20px;
+}
+.modal-content {
+    font-family: Times, "Times New Roman", serif;
+    font-size: 19px;
+    color: #2a1f18;
+}
+.modal-content h4 {
+    font-family: Times, "Times New Roman", serif;
+    color: #2a1f18;
+    font-size: 30px;
 }
 .item {
     max-width: 900px;
@@ -85,7 +95,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .item h1 {
     font-family: "Rust", serif;
     font-size: 200px;
-    color: #182035;
+    color: #473529;
+    -webkit-text-stroke: 3px #c89674;
+    text-shadow: 1px 10px 10px #000;
     margin: 0;
     line-height: 175px;
 }
@@ -94,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height: 1.1;
 }
 .fete-heading {
-    color: #182035;
+    color: #2a1f18;
 }
 .info-row {
     padding: 0 15px 25px;
@@ -103,23 +115,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 975px;
     margin: 0 auto;
     font-family: Times, "Times New Roman", serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    color: #182035;
+    color: #2a1f18;
     padding: 0 15px 440px;
 }
 .info-content a {
     text-decoration: underline;
-    color: #182035;
+    color: #2a1f18;
 }
 .info-content h2 {
     font-family: Times, "Times New Roman", serif;
-    color: #182035;
+    color: #2a1f18;
     font-size: 38px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0;
-    margin-top: 5px;
+    margin: 5px 0 10px;
 }
 .info-content-one {
     font-size: 24px;
@@ -131,8 +143,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .info-content-three {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 28px;
-    padding: 0 0 10px;
+    font-size: 26px;
+    padding: 0 0 5px;
+}
+.info-content-four, .info-content-four a {
+    font-weight: 600;
+    font-size: 22px;
+    padding: 10px 0 0;
 }
 .info-wrapper-one, .info-wrapper-two, .info-wrapper-three {
     text-align: center;
@@ -253,7 +270,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     position: relative;
     overflow: hidden;
     padding-bottom: 0%;
-    border: 6px solid #fff;
+    border: 3px solid #c89674;
+    box-shadow: 1px 12px 21px rgba(0,0,0,.7);
     border-radius: 3px;
 } /* (img px height / img px width x 100) = padding-bottom % */
 #slideshow div {
@@ -342,7 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     z-index: 1
 }
 #slideshow .fx + span, #slideshow .fx1 + span {
-    color: #fff;
+    color: #f9d5b4;
     animation: caption 5s 1s both;
     text-shadow: 0 6px 20px #000;
     padding-bottom: 30px;
@@ -365,7 +383,7 @@ opacity:0;
 
 @media (max-width: 925px) {
 .contain-header {
-    background: #fab08b url("fete-background-sm.jpg") center bottom no-repeat;
+    background: #b18766 url("fete-background-sm.jpg") center bottom no-repeat;
 }
 .item h1 {
     font-family: "Rust", serif;
@@ -634,14 +652,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="info-content">
           <h2>You're Invited!</h2>
           <div class="info-content-one">Friday, September 27, 6PM<br>
-            Highlands Ranch Mansion </div>
+            <a href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank">Highlands Ranch Mansion</a></div>
           <div class="info-content-two">Join the Douglas County Libraries Foundation to celebrate Carlo Collodi's classic story of the mischievous marionette who becomes a real boy. We'll bring the Italian countryside to life for a fabulous evening that includes a signature cocktail, catered Italian dinner and dessert, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
-          <div class="info-content-three">Tickets on Sale Soon!</div>
-          <div><i>Event proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>.</i></div>
+          <div class="info-content-three">Tickets on Sale Soon</div>
+          <div>Event proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>.</div>
+          <div class="info-content-four"><a href="#sponsors" class="" data-toggle="modal" data-target="#sponsor-modal"><i>Add your name</i></a><i> to our list of sponsors!</i></div>
         </div>
       </div>
     </div>
   </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="sponsor-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="text-center modal-title">Sponsorship Packages</h4>
+        </div>
+        <div class="modal-body padding-30">
+          <div style="font-size: 22px;">Select from a range of sponsorship packages or we’ll create a customized package just for you!</div>
+          <div class="padding-top-15 padding-bottom-15">Your generous sponsorship will support us in creating a truly enchanting evening and will also contribute to funding vital library programs that reach young people, adults, and families in Douglas County and throughout Colorado.</div>
+          <div class="padding-bottom-15">To participate, please contact us at 303-764-3311.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- Modal -->
   <div class="modal fade" id="auction-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
