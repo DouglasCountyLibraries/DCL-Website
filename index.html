@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -126,11 +127,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height: 1;
 }
 .container-one h3 {
-	color: #fff;
-	font-size: 24px;
-	font-weight: 400;
-	margin: 5px 0 20px;
-	line-height: 35px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 5px 0 20px;
+    line-height: 35px;
 }
 .container-two h3 {
     color: #000;
@@ -156,11 +157,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height: 1;
 }
 .container-three h3 {
-	color: #fff;
-	font-size: 21px;
-	font-weight: 400;
-	margin: 0 10px;
-	line-height: 1.2;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 10px;
+    line-height: 1.2;
 }
 .container-four h1 {
     color: #000;
@@ -244,6 +245,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #FF8658 url(flower-pattern.jpg);
     min-height: 640px;
 }
+.item-one:nth-of-type(even) {
+}
 .item-three:nth-of-type(2n+1) {
     background: #146897 url("storybook-holiday/city-background.jpg") top center repeat-x;
     min-height: 640px;
@@ -262,6 +265,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     flex-direction: column;
     margin-left: 60px;
+}
+.sbh-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 @media (max-width: 1220px) {
@@ -290,6 +297,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .container-one h1 {
     font-size: 40px;
 }
+.item-four:nth-of-type(2n) {
+    margin-left: 0;
+}
 .container-four h1 {
     display: none;
 }
@@ -299,9 +309,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .item-four:nth-of-type(odd) {
     min-width: inherit;
-}
-    .item-four:nth-of-type(2n) {
-	margin-left: 0;
 }
 .container-two {
     background: #82a3b0 url(woman-reading-small.jpg) left top no-repeat;
@@ -317,10 +324,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     right: inherit;
     justify-content: center;
     margin: 0 auto;
-}
-.item-one:nth-of-type(2n+1) {
-	order: 2;
-	min-height: 400px;
 }
 .item-one:nth-of-type(2n) {
     order: 1;
@@ -338,7 +341,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 0 30px 120px;
 }
 .content-wrapper {
-    padding: 30px 30px 50px;
+    padding: 50px 15px 50px;
+}
+.item-two {
+    min-height: 600px;
+}
+.container-three {
+    padding: 30px 0 0;
+}
+.item-one:nth-of-type(2n+1) {
+    order: 2;
+    min-height: 550px;
+    padding: 30px 0;
+    margin: 30px 0;
 }
 }
 </style>
@@ -522,21 +537,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container-three">
       <div class="item-three">
         <div class="content-wrapper-three-alt">
-          <div class="text-uppercase">A Storybook Holiday:</div>
-          <h1>Monkey Business</h1>
-          <div>
-            <div class="padding-bottom-15">Celebrate spring and our favorite curious monkey, George! Delicious Brunch, Animal-themed Crafts, Man with the Yellow Hat Activity, Bananas and Snacks.</div>
+          <div class="sbh-wrapper">
+            <div class="text-uppercase">A Storybook Holiday:</div>
+            <h1>Monkey Business</h1>
             <div>
-              <h3 class="padding-bottom-15">Sunday, April&nbsp;7, 8-11AM, Castle Rock</h3>
-              <h3 class="padding-bottom-15"><a class="font-weight-400 text-nowrap" href="storybook-holiday/">Buy Tickets</a></h3>
-            </div>
-            <img class="image-center img-responsive" src="storybook-holiday/monkey.png" alt="A Storybook Holiday: Monkey Business"> </div>
-        </div>
-      </div>
-      <div class="item-three">
-        <div class="content-wrapper-three"> <img class="image-center img-responsive" src="camp-dcl.jpg" alt="Camp DCL">
-          <h1>Summer Camps 2024</h1>
-          <h3>Registration now open! Check out the full schedule and <a class="font-weight-400 text-nowrap" href="camp-dcl/">Sign Up</a>.</h3>
+              <div class="padding-bottom-15">Celebrate spring and our favorite curious monkey, George! Delicious Brunch, Animal-themed Crafts, Man with the Yellow Hat Activity, Bananas and Snacks.</div>
+              <div>
+                <h3 class="padding-bottom-15">Sunday, April&nbsp;7, 8-11AM, Castle Rock</h3>
+                <h3 class="padding-bottom-15"><a class="font-weight-400 text-nowrap" href="storybook-holiday/">Buy Tickets</a></h3>
+              </div>
+              <img class="image-center img-responsive" src="storybook-holiday/monkey.png" alt="A Storybook Holiday: Monkey Business"> </div>
+          </div>
         </div>
       </div>
     </div>
@@ -707,4 +718,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
