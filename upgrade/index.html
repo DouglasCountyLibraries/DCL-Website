@@ -46,32 +46,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<script type="text/javascript" src="https://d25purrcgqtc5w.cloudfront.net/assets/widgetiframe/iframeResizer.contentWindow.min.js"></script>
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script type="text/javascript">
-      var FORM_VERSION = 2;
-
-      var check_email_url = "https://api.honeybook.com/api/v2/email/validate";
-      
-      var isPreview = false;
-      
-
-      var redirectUrl =  "";
-      var contact_form_id = "5a76e190dc14520003133f71";
-      var env = "prod";
-      var contact_form_type = "company";
-      var captcha_type = "honeybook";
-  </script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-<script type="text/javascript" src="https://d25purrcgqtc5w.cloudfront.net/assets/honeywidget.min.js"></script>
 <style>
 .reserve-a-space-active {
     background-color: #f5f5f5;
 }
 .form-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-bottom: 40px;
+	max-width: 600px;
+	margin: 0 auto;
+	padding-bottom: 40px;
 }
 .select .fa-check {
     color: #B0852E;
@@ -264,248 +246,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top padding-bottom-15">
     <div class="container text-center margin-lg-150">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Event + Hospitality</h1>
-      <h1 class="text-uppercase font-weight-400 no-margin">Services</h1>
+      
+        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Event + Hospitality</h1>
+        <h1 class="text-uppercase font-weight-400 no-margin">Services</h1>
+     
       <h4 class="roboto margin-top-5 margin-bottom-5">Reserve and upgrade your event to <a href="#select-modal" data-toggle="modal" data-target="#select-modal">Select Service</a> or <a href="#concierge-modal" data-toggle="modal" data-target="#concierge-modal">Concierge Service</a>. This will allow you to sell tickets, charge an entry fee, sell goods or services, and accept donations.</h4>
       <div class="margin-lg-50">Choose Concierge Service to reserve 50-100% of the library, serve alcohol, or use a full-service caterer with banquet staff. Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
     </div>
   </div>
   <div class="row">
-    <div class="form-wrapper">
-      <form id="hb-embedded-subscribe-form" class="validate hb-embedded-subscribe-form"
-        action="https://api.honeybook.com/api/v2/workspace/widget_inquiries"
-        method="post"
-        name="hb-embedded-subscribe-form"
-        target="innerForm"
-        autocomplete="off">
-        <div id="hb_embed_signup_scroll">
-          <input id="vendor-id" name="vendor_id" value="5a207e3ebaba1a21c232dcfd" type="hidden">
-          <input id="vendor-name" name="vendor_name" value="Talayna Akrie" type="hidden">
-          <input id="contact-form-id" name="contact_form_id" value="5a76e190dc14520003133f71" type="hidden">
-          <input id="company-id" name="company_id" value="5a207e3ebaba1a21c232ddd0" type="hidden">
-          <input id="widgets-source" name="widget_source" type="hidden">
-          <input id="src-host" name="src_host" value="" type="hidden">
-          
-          <!--<input id="hbf-first-name" type="text" name="firstname" tabindex="-1" autocomplete="off" style="border:0px solid; cursor: default; height: 2px; padding: 0px; background: transparent; min-height: 2px; position: absolute; top:0px; right:0px;">--> 
-          <!--Keep this field hidden from users-->
-          
-          <div class="hb-field-group">
-            <label for="hbf-full-name"> Full name <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <input id="hbf-full-name" type="text" name="full_name"
-                     class='required'
-                     placeholder="John Doe"
-                     required ='true'>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-email"> Email address <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <div class="hide email-error"> * Invalid email </div>
-            <input id="hbf-email" type="email" name="email"
-                     class='required'
-                     placeholder="me@email.com"
-                     required ='true'>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-phone-number"> Phone number <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <input id="hbf-phone-number" type="text" name="phone_number"
-                     class='required'
-                     placeholder="123 456 7890"
-                     required ='true'>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-1"> Organization Name (if applicable) <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <input id="hbf-custom-1" type="" name="custom_1"
-                     class='required'
-                     placeholder=""
-                     required ='true'>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-2"> Preferred Location <span
-                      class="asterisk">*</span> </label>
-            <select id="hbf-custom-2" name="custom_2"
-                      class='required'
-                      required ='true'>
-              <option value="" disabled selected>Choose an answer</option>
-              <option value="Castle Pines">Castle Pines</option>
-              <option value="Castle Rock">Castle Rock</option>
-              <option value="Highlands Ranch">Highlands Ranch</option>
-              <option value="Lone Tree">Lone Tree</option>
-              <option value="Parker">Parker</option>
-              <option value="Roxborough">Roxborough</option>
-              <option value="Any Branch">Any Branch</option>
-            </select>
-            <span class="hide error"> * Please select an option </span> </div>
-          <div class="hb-field-group">
-            <label for="hbf-event-date"> Date of meeting/event <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <input id="hbf-event-date" type="text" name="event_date"
-                     class='required'
-                     placeholder="MM/DD/YY"
-                     required ='true'>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-7"> Time of your meeting/event <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <input id="hbf-custom-7" type="" name="custom_7"
-                     class='required'
-                     placeholder="8:00 am - 3:30 pm"
-                     required ='true'>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-event-guests"> Number of People Attending the Meeting/Event: <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <input id="hbf-event-guests" type="text" name="event_guests"
-                     class='required'
-                     placeholder=""
-                     required ='true'>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-3"> I would like to have alcohol at my event, and/or will be using a full-service caterer with banquet staff: <span
-                      class="asterisk">*</span> </label>
-            <fieldset style="border: 0;" id="hbf-custom-3" class='choice-required'>
-              <div class="hide error"> * Please select at least one option below </div>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_3[]" value="Yes">
-                <span style="vertical-align: middle; line-height: 2em;">Yes</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_3[]" value="No">
-                <span style="vertical-align: middle; line-height: 2em;">No</span> </label>
-            </fieldset>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-4"> I would like to use event space before or after library hours and pay the hourly costs. See below for library hours.
-              
-              Business hours are the following:
-              Monday-Thursday: 8:00 am - 8:00 pm
-              Friday: 8:00 am - 6:00 pm
-              Saturday and Sunday: 10:00 am - 4:00 pm <span
-                      class="asterisk">*</span> </label>
-            <fieldset style="border: 0;" id="hbf-custom-4" class='choice-required'>
-              <div class="hide error"> * Please select at least one option below </div>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_4[]" value="Yes">
-                <span style="vertical-align: middle; line-height: 2em;">Yes</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_4[]" value="No">
-                <span style="vertical-align: middle; line-height: 2em;">No</span> </label>
-            </fieldset>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-5"> I will be accepting money/doing transactions prior, during or after my event (i.e., donations, tickets, entry fees, etc.): <span
-                      class="asterisk">*</span> </label>
-            <fieldset style="border: 0;" id="hbf-custom-5" class='choice-required'>
-              <div class="hide error"> * Please select at least one option below </div>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_5[]" value="Yes">
-                <span style="vertical-align: middle; line-height: 2em;">Yes</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_5[]" value="No">
-                <span style="vertical-align: middle; line-height: 2em;">No</span> </label>
-            </fieldset>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-6"> My event will include an educational and/or sales presentation by a paid product or service representative and/or an independent sales consultant. <span
-                      class="asterisk">*</span> </label>
-            <fieldset style="border: 0;" id="hbf-custom-6" class='choice-required'>
-              <div class="hide error"> * Please select at least one option below </div>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_6[]" value="Yes">
-                <span style="vertical-align: middle; line-height: 2em;">Yes</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_6[]" value="No">
-                <span style="vertical-align: middle; line-height: 2em;">No</span> </label>
-            </fieldset>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-9"> I would like for an Event &amp; Hospitality staff member make the reservation on my behalf for the one-time $100.00 fee. <span
-                      class="asterisk">*</span> </label>
-            <fieldset style="border: 0;" id="hbf-custom-9" class='choice-required'>
-              <div class="hide error"> * Please select at least one option below </div>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_9[]" value="Yes">
-                <span style="vertical-align: middle; line-height: 2em;">Yes</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_9[]" value="No">
-                <span style="vertical-align: middle; line-height: 2em;">No</span> </label>
-            </fieldset>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-10"> I would like help with using the audio visual equipment and setup and teardown of tables and chairs for my reservation and pay the hourly costs. <span
-                      class="asterisk">*</span> </label>
-            <fieldset style="border: 0;" id="hbf-custom-10" class='choice-required'>
-              <div class="hide error"> * Please select at least one option below </div>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_10[]" value="Yes">
-                <span style="vertical-align: middle; line-height: 2em;">Yes</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="custom_10[]" value="No">
-                <span style="vertical-align: middle; line-height: 2em;">No</span> </label>
-            </fieldset>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-event-details"> Tell us about your meeting/event <span
-                      class="asterisk">*</span> </label>
-            <div class="hide error"> * Field is required </div>
-            <textarea id="hbf-event-details" type="text" name="event_details"
-                              class='required'
-                              placeholder=""
-                              required ='true'></textarea>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-event-services-manual"> Which service are you interested in PAYING for? <span
-                      class="asterisk">*</span> </label>
-            <fieldset style="border: 0;" id="hbf-event-services-manual" class='choice-required'>
-              <div class="hide error"> * Please select at least one option below </div>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="event_services_manual[]" value="Select service">
-                <span style="vertical-align: middle; line-height: 2em;">Select service</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="event_services_manual[]" value="Concierge service">
-                <span style="vertical-align: middle; line-height: 2em;">Concierge service</span> </label>
-              <label style="display: block; cursor: pointer;">
-                <input style="display: inline-block; margin-right: 0.4em; -webkit-appearance: checkbox;" type="checkbox" name="event_services_manual[]" value="DCL kids birthday party package">
-                <span style="vertical-align: middle; line-height: 2em;">DCL kids birthday party package</span> </label>
-            </fieldset>
-          </div>
-          <div class="hb-field-group">
-            <label for="hbf-custom-8"> How did you hear about us? <span
-                      class="asterisk">*</span> </label>
-            <select id="hbf-custom-8" name="custom_8"
-                      class='required'
-                      required ='true'>
-              <option value="" disabled selected>Choose an answer</option>
-              <option value="DCL.org website">DCL.org website</option>
-              <option value="Referral">Referral</option>
-              <option value="Google search">Google search</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Instagram">Instagram</option>
-              <option value="Yelp">Yelp</option>
-              <option value="Returning Customer">Returning Customer</option>
-              <option value="Library staff">Library staff</option>
-              <option value="Other">Other</option>
-              <option value="The Knot">The Knot</option>
-              <option value="Unique Venues">Unique Venues</option>
-            </select>
-            <span class="hide error"> * Please select an option </span> </div>
-          <textarea id="hbf-message" type="text" name="message" tabindex="-1" autocomplete="off" style="border:0px solid; cursor: default; height: 2px; padding: 0px; background: transparent; min-height: 2px; position: absolute; top:0px; right:0px; resize: none;"></textarea>
-          <!--Keep this field hidden from users--> 
-          <br/>
-          <button  id="hb-embedded-subscribe" class="button" type="submit" translate="">Send</button>
-        </div>
-        <div id="hb-signup-success" style="display:none;">
-          <p>Thank you!</p>
-        </div>
-      </form>
+    <div class="form-wrapper"> 
+      <script type="text/javascript" src="//d25purrcgqtc5w.cloudfront.net/assets/widgetiframe/iframeResizer.min.js"></script>
+      <iframe src="https://widget.honeybook.com/assets_users_production/companies/5a207e3ebaba1a21c232ddd0/widgets/honeybook_widget.html" frameBorder="0" width="100%" height="1860"></iframe>
+      <script type="text/javascript">
+iFrameResize({checkOrigin: false});
+</script> 
     </div>
   </div>
   <!-- Modal -->
