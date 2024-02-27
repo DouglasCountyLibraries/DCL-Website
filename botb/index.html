@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page-new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,21 +34,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
 <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#007b83">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl-new.css?121223">
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?21224">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl-new.js?81822"></script> 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
 <!-- Start of Zendesk Widget script --> 
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
+.kids-teens-active {
+    background-color: #f5f5f5;
+}
 .img-circle {
     border-radius: 50%;
     transition: transform .2s ease-in-out;
+}
+.teams, .booklist-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 1120px;
+    margin: 0 auto;
 }
 .booklist {
     transition: transform .2s ease-in-out;
@@ -75,18 +86,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-left: 7px;
 }
 .author-wrapper {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.9375rem 0;
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px 0;
 }
 .author-item {
-    width: 520px;
-    padding: 0 1.25rem;
+	width: 545px;
+	padding: 0 15px;
 }
 .author-item > .list-unstyled > li {
     padding-bottom: 8px;
+}
+
+@media (max-width: 992px) {
+.teams, .booklist-container {
+    flex-wrap: wrap;
+    max-width: 750px;
 }
 }
 </style>
@@ -102,7 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <a href="#content-begins" class="skip-link">Skip to content</a> 
 <!-- BC Log In Bar -->
 <div class="login-row">
-  <div class="container-xxl login-container">
+  <div class="container login-container">
     <div id="login-bar">
       <div class="biblio_bar_link biblio_bar_my_account">
         <div class="bc-widget bc-my-account-nav"></div>
@@ -113,14 +130,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <!-- End BC Log In Bar --> 
 <!-- Desktop Logo and Search -->
 <div class="dcl-logo-search client_and_search">
-  <div class="container-xxl">
-    <div class="row justify-content-between">
+  <div class="container ">
+    <div class="row no-gutter">
       <div class="col-sm-5">
         <div class="cp_header_client_area">
-          <div class="logo"> <a href="/"><img class="dcl-logo img-responsive" src="../dcl-logo.svg" alt="Douglas County Libraries"></a> </div>
+          <div class="logo"> <a href="/"><img class="img-responsive" src="../dcl-logo.svg" alt="Douglas County Libraries"></a> </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-sm-push-1">
         <form id="searchForm" class="search dcl-search" action="https://dcl.bibliocommons.com/search">
           <div class="input-group">
             <input type="hidden" value="smart" name="t" id="search_param">
@@ -128,81 +145,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
             </span> </div>
-          <div class="search-links"><span class="margin-right-40"><a class="font-weight-400" href="../search/">Website Search</a></span><a class="font-weight-400" href="https://dcl.bibliocommons.com/search">Advanced Search</a></div>
+          <div class="text-right"><span class="small margin-right-80"><a href="../search/">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
   </div>
 </div>
 <!-- End Desktop Logo and Search --> 
-<!--Desktop Navbar begin -->
-<nav class="dcl-navbar navbar navbar-expand-lg navbar-light">
-  <div class="container-xxl">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-lg-0">
-        <li class="nav-item dropdown"> <a class="custom-nav-link nav-link dropdown-toggle" href="#" id="explore-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore<span class="material-icons">expand_more</span></a>
-          <ul class="dropdown-menu" aria-labelledby="explore-dropdown">
-            <li><a class="dropdown-item" href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
-            <li><a class="dropdown-item" href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
-            <li><a class="dropdown-item" href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
-            <li><a class="dropdown-item" href="https://dcl.bibliocommons.com/explore/bestsellers">Bestsellers</a></li>
-            <li><a class="dropdown-item" href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
-          </ul>
-        </li>
-        <li class="nav-item whats-new-active"> <a class="custom-nav-link nav-link" href="../whats-new/">What's New</a> </li>
-        <li class="nav-item dropdown library-info-active"> <a class="custom-nav-link nav-link dropdown-toggle" href="#" id="library-info-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Library Info<span class="material-icons">expand_more</span></a>
-          <ul class="dropdown-menu" aria-labelledby="library-info-dropdown">
-            <li><a class="dropdown-item" href="../locations/">Hours & Locations</a></li>
-            <li><a class="dropdown-item" href="../library-basics/">Library Basics</a></li>
-            <li><a class="dropdown-item" href="../library-perks/">Library Perks</a> </li>
-            <li><a class="dropdown-item" href="../book-clubs/">Book Clubs</a></li>
-            <li><a class="dropdown-item" href="../staff-recommendations/">Staff Recommendations</a></li>
-            <li><a class="dropdown-item" href="../business/">DCL for Business</a></li>
-            <li><a class="dropdown-item" href="../adult-education/">Adult Education & Test Prep</a></li>
-            <li><a class="dropdown-item" href="../ageless/">Ageless Adults</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown kids-teens-active"> <a class="custom-nav-link nav-link dropdown-toggle" href="#" id="kids-teens-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kids & Teens<span class="material-icons">expand_more</span></a>
-          <ul class="dropdown-menu" aria-labelledby="kids-teens-dropdown">
-            <li><a class="dropdown-item" href="../storytime/">Storytime</a></li>
-            <li><a class="dropdown-item" href="../read-listen-watch/">Read, Listen, Watch</a></li>
-            <li><a class="dropdown-item" href="../parents/">Parents</a></li>
-            <li><a class="dropdown-item" href="../teachers/">Teachers</a></li>
-            <li><a class="dropdown-item" href="../camp-dcl/">Camp DCL</a></li>
-            <li><a class="dropdown-item" href="../research/students/">Homework Help</a></li>
-            <li><a class="dropdown-item" href="../teens/">Teens</a></li>
-          </ul>
-        </li>
-        <li class="nav-item digital-media-active"> <a class="custom-nav-link nav-link" href="../digital-media/">Digital Media</a> </li>
-        <li class="nav-item reserve-a-space-active"><a class="custom-nav-link nav-link" href="../reserve-a-space/">Reserve a Space</a> </li>
-        <li class="nav-item dropdown library-events-active"> <a class="custom-nav-link nav-link dropdown-toggle" href="#" id="library-events-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Library Events<span class="material-icons">expand_more</span></a>
-          <ul class="dropdown-menu" aria-labelledby="library-events-dropdown">
-            <li><a class="dropdown-item" href="../featured-events/">Featured Events</a></li>
-            <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank" class="dropdown-item">Events Calendar</a></li>
-          </ul>
-        </li>
-        <li class="nav-item research-active"> <a class="custom-nav-link nav-link" href="../research/">Research</a> </li>
-      </ul>
-    </div>
+<!-- Desktop Navbar -->
+<nav class="dcl-navbar navbar navbar-default">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="dropdown"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
+          <li><a href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
+          <li><a href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
+          <li><a href="https://dcl.bibliocommons.com/explore/bestsellers">Bestsellers</a></li>
+          <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
+        </ul>
+      </li>
+      <li class="whats-new-active"><a href="../whats-new/">What's New</a> </li>
+      <li class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="../locations/">Hours & Locations</a></li>
+          <li><a href="../library-basics/">Library Basics</a></li>
+          <li><a href="../library-perks/">Library Perks</a></li>
+          <li><a href="../book-clubs/">Book Clubs</a></li>
+          <li><a href="../staff-recommendations/">Staff Recommendations</a></li>
+          <li><a href="../business/">DCL for Business</a></li>
+          <li><a href="../adult-education/">Adult Education & Test Prep</a></li>
+          <li><a href="../ageless/">Ageless Adults</a></li>
+        </ul>
+      </li>
+      <li class="dropdown kids-teens-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kids & Teens <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="../storytime/">Storytime</a></li>
+          <li><a href="../read-listen-watch/">Read, Listen, Watch</a></li>
+          <li><a href="../parents/">Parents</a></li>
+          <li><a href="../teachers/">Teachers</a></li>
+          <li><a href="../camp-dcl/">Camp DCL</a></li>
+          <li><a href="../research/students/">Homework Help</a></li>
+          <li><a href="../teens/">Teens</a></li>
+        </ul>
+      </li>
+      <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
+      <li class="reserve-a-space-active"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+      <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="../featured-events/">Featured Events</a></li>
+          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+        </ul>
+      </li>
+      <li class="research-active"><a href="../research/">Research</a></li>
+    </ul>
   </div>
 </nav>
-<!--Desktop Navbar end --> 
+<!-- End Desktop Navbar --> 
 <a href="#content-begins" class="skip-link">Skip Mobile Navigation</a> 
 <!-- Mobile Navbar, Logo and Search -->
-<nav class="dcl-mobile-navbar">
-  <div class="container-md"> <a href="/"><img class="margin-left-15" src="../dcl-responsive-logo.png" alt="DCL Logo"></a> <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#nav-modal"><i class="fas fa-bars"></i></a> 
+<nav class="dcl-mobile-navbar navbar navbar-default">
+  <div class="container-md"> <a href="/"><img class="margin-left-15" src="../dcl-responsive-logo.png" alt="DCL Logo"></a> <a href="#" role="button" data-toggle="modal" data-target="#nav-modal"><i class="fas fa-bars"></i></a> 
     <!-- Nav Modal -->
-    <div class="modal fade" id="nav-modal" tabindex="-1" aria-labelledby="nav-modal" aria-hidden="true">
+    <div class="modal fade" id="nav-modal" role="dialog" aria-hidden="true">
       <div class="dcl-mobile-nav modal-dialog">
         <div class="dcl-mobile-nav modal-content">
           <div class="modal-header">
-            <button type="button" class="close mobile-nav-close" data-bs-dismiss="modal" aria-hidden="true"><i class="fas fa-times"></i></button>
+            <button type="button" class="close mobile-nav-close" data-dismiss="modal" aria-hidden="true"><i class="fas fa-times"></i></button>
           </div>
-          <div class="modal-body mobile-body-nav">
-            <ul class="mobile-nav list-unstyled">
-              <li class="mobile-nav-heading"> <a href="#" data-bs-toggle="collapse" data-bs-target="#explore">Explore<span class="mobile-nav-icon material-icons">expand_more</span></a>
-                <ul id="explore" class="mobile-nav-list list-unstyled collapse">
+          <div class="modal-body">
+            <ul class="nav mobile-nav">
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#explore">Explore <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="explore" class="nav mobile-nav-list collapse">
                   <li><a href="https://dcl.bibliocommons.com/">Recent Activity</a></li>
                   <li><a href="https://dcl.bibliocommons.com/explore/recent_arrivals">New Titles</a></li>
                   <li><a href="https://dcl.bibliocommons.com/explore/awards">Awards</a></li>
@@ -211,8 +225,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </ul>
               </li>
               <li class="whats-new-active mobile-nav-heading"><a href="../whats-new/">What's New</a> </li>
-              <li class="mobile-nav-heading"> <a href="#" data-bs-toggle="collapse" data-bs-target="#library-info">Library Info<span class="mobile-nav-icon material-icons">expand_more</span></a>
-                <ul id="library-info" class="mobile-nav-list list-unstyled collapse">
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#using-the-library">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="using-the-library" class="nav mobile-nav-list collapse">
                   <li><a href="../locations/">Hours & Locations</a></li>
                   <li><a href="../library-basics/">Library Basics</a></li>
                   <li><a href="../library-perks/">Library Perks</a> </li>
@@ -223,8 +237,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                   <li><a href="../ageless/">Ageless Adults</a></li>
                 </ul>
               </li>
-              <li class="mobile-nav-heading"> <a href="#" data-bs-toggle="collapse" data-bs-target="#kids-teens">Kids & Teens<span class="mobile-nav-icon material-icons">expand_more</span></a>
-                <ul id="kids-teens" class="mobile-nav-list list-unstyled collapse">
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#kids-teens">Kids & Teens <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="kids-teens" class="nav mobile-nav-list collapse">
                   <li><a href="../storytime/">Storytime</a></li>
                   <li><a href="../read-listen-watch/">Read, Listen, Watch</a></li>
                   <li><a href="../parents/">Parents</a></li>
@@ -236,8 +250,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               </li>
               <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
               <li class="reserve-a-space-active mobile-nav-heading"><a href="../reserve-a-space/">Reserve a Space</a> </li>
-              <li class="mobile-nav-heading"> <a href="#" data-bs-toggle="collapse" data-bs-target="#library-events">Library Events<span class="mobile-nav-icon material-icons">expand_more</span></a>
-                <ul id="library-events" class="mobile-nav-list list-unstyled collapse">
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../featured-events/">Featured Events</a></li>
                   <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
                 </ul>
@@ -248,209 +262,213 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <span class="mobile-search-icon"> <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#mobile-search"></a> </span> </div>
+    <span class="mobile-search-icon"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#mobile-search"></a> </span> </div>
   <div id="mobile-search" class="collapse bg-gray-10">
-    <div class="container-xxl">
+    <div class="container">
       <form id="searchFormTwo" class="search" action="https://dcl.bibliocommons.com/search">
+        <div class="text-right clearfix margin-bottom-5"><span class="small margin-right-60"><a href="../search/">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         <div class="input-group">
           <input type="hidden" value="smart" name="t" id="search_param_two">
           <input placeholder="Search" type="text" name="q" class="form-control">
           <span class="input-group-btn">
-          <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
+          <button type="submit" value="search" class="btn btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
           </span> </div>
-        <div class="mobile-search-links"><span class="margin-right-60"><a class="gray-90" href="../search/">Website Search</a></span><span><a class="gray-90" href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
       </form>
     </div>
   </div>
 </nav>
 <!-- End Mobile Navbar -->
-<div id="content-begins"></div>
-<div id="default-alert" style="display:none;"></div>
-<!-- InstanceBeginEditable name="Content" -->
-<div class="dcl-border-top">
-  <div class="container-xxl text-center padding-bottom-40">
-    <h1 class="jumbo-text text-uppercase font-weight-400 margin-top-20 no-margin-bottom">Battle of the Books</h1>
-    <h1 class="text-uppercase font-weight-400">2023-2024</h1>
-    <div class="margin-bottom-10">
-      <h4 class="roboto text-center max-width-55">Battle of the Books is a bowl-style trivia tournament that's all about books, engaging hundreds of young minds every year.</h4>
-    </div>
-    <div class="max-width-50">Dozens of teams in grades 3-6 compete against each other in interschool battles and finals tournaments to determine a districtwide champion for all of Douglas County.</div>
+<div id="content-begins" class="container-fluid">
+  <div class="alert-wrapper">
+    <div id="general-alert" style="display:none;"></div>
   </div>
-</div>
-<div class="bg-gray-5">
-  <div class="container-xxl container-md padding-top-50 padding-bottom-30">
-    <h2 class="text-center">Teams, Schedules, Scores, and Standings</h2>
-    <div class="text-center max-width-50 padding-bottom-5">Battle of the Books is active at Douglas County Libraries' Castle Rock, Highlands Ranch, Lone Tree and Parker locations. Choose a location to get started.</div>
-    <div class="d-flex max-width-70 mx-auto justify-content-center flex-wrap flex-lg-nowrap">
-      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank"><img class="image-center img-circle" src="castle-rock.jpg?121123" alt="Battle of the Books, Castle Rock"></a>
-        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank">Castle Rock</a></h4>
-      </div>
-      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank"><img class="image-center img-circle" src="highlands-ranch.jpg" alt="Battle of the Books, Highlands Ranch"></a>
-        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank">Highlands Ranch</a></h4>
-      </div>
-      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank"><img class="image-center img-circle" src="lone-tree.jpg" alt="Battle of the Books, Lone Tree"></a>
-        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank">Lone Tree</a></h4>
-      </div>
-      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank"><img class="image-center img-circle" src="parker.jpg" alt="Battle of the Books, Parker"></a>
-        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank">Parker</a></h4>
+  <!-- InstanceBeginEditable name="Content" -->
+  <div class="row border-top">
+    <div class="container text-center padding-bottom-40">
+      <h1 class="text-uppercase font-weight-400 no-margin-bottom"><span class="jumbo-text">Battle of the Books</span><br>
+        2023-2024</h1>
+      <div class="margin-lg-125">
+        <h4 class="roboto margin-top-5">Battle of the Books is a bowl-style trivia tournament that's all about books, engaging hundreds of young minds every year.</h4>
+        <div class="margin-lg-50">Dozens of teams in grades 3-6 compete against each other in interschool battles and finals tournaments to determine a districtwide champion for all of Douglas County.</div>
       </div>
     </div>
   </div>
-</div>
-<div id="book-lists" class="container-xxl padding-top-50 padding-bottom-60">
-  <h2 class="text-center">Book Lists</h2>
-  <div class="max-width-50 text-center padding-bottom-20">Get ready to battle! These are the books that this year's trivia battle questions will be based upon. All of these titles will be available as "Your Lucky Day" books at your local DCL branch.</div>
-  <div class="d-flex max-width-70 mx-auto justify-content-center flex-wrap flex-lg-nowrap">
-    <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372454119"><img class="img-fluid image-center booklist" src="3-4-booklist.jpg" alt="3rd-4th Grade Books"></a>
-      <h4 class="margin-top-15">3rd-4th Grade Books</h4>
-      <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372454119">See Entire List »</a></div>
-    </div>
-    <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372460681"><img class="img-fluid image-center booklist" src="5-6-booklist.jpg" alt="5th-6th Grade Books"></a>
-      <h4 class="margin-top-15">5th-6th Grade Books</h4>
-      <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372460681">See Entire List »</a></div>
-    </div>
-  </div>
-</div>
-<div class="bg-gray-5">
-  <div id="pronunciations" class="container-xxl padding-top-60 padding-bottom-50">
-    <h2 class="text-center">Title and Author Pronunciation List</h2>
-    <div class="author-wrapper">
-      <div class="author-item">
-        <ul class="list-unstyled">
-          <h4>3rd & 4th Grade</h4>
-          <li>"Ban This Book" by Alan Gratz |&nbsp;<span class="text-nowrap">
-            <audio id="play1">
-              <source src="audio/alan-gratz.mp3" type="audio/mp3">
-              <source src="audio/alan-gratz.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play1').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play1').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Dog Squad" by Chris Grabenstein |&nbsp;<span class="text-nowrap">
-            <audio id="play2">
-              <source src="audio/chris-grabenstein.mp3" type="audio/mp3">
-              <source src="audio/chris-grabenstein.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play2').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play2').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Framed!" by James Ponti |&nbsp;<span class="text-nowrap">
-            <audio id="play3">
-              <source src="audio/james-ponti.mp3" type="audio/mp3">
-              <source src="audio/james-ponti.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play3').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play3').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"From the Mixed-up Files of Mrs Basil E. Frankweiler" by E.L. Konigsburg |&nbsp;<span class="text-nowrap">
-            <audio id="play4">
-              <source src="audio/el-konigsburg.mp3" type="audio/mp3">
-              <source src="audio/el-konigsburg.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play4').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play4').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Measuring Up" by Lily LaMotte |&nbsp;<span class="text-nowrap">
-            <audio id="play5">
-              <source src="audio/lily-lamotte.mp3" type="audio/mp3">
-              <source src="audio/lily-lamotte.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play5').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play5').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Megabat" by Ana Humphrey |&nbsp;<span class="text-nowrap">
-            <audio id="play6">
-              <source src="audio/ana-humphrey.mp3" type="audio/mp3">
-              <source src="audio/ana-humphrey.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play6').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play6').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Midnight at the Barclay Hotel" by Fleur Bradley |&nbsp;<span class="text-nowrap">
-            <audio id="play7">
-              <source src="audio/fleur-bradley.mp3" type="audio/mp3">
-              <source src="audio/fleur-bradley.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play7').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play7').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"One Crazy Summer" by Rita Williams-Garcia |&nbsp;<span class="text-nowrap">
-            <audio id="play8">
-              <source src="audio/rita-williams-garcia.mp3" type="audio/mp3">
-              <source src="audio/rita-williams-garcia.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play8').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play8').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Tales of a Fourth Grade Nothing" by Judy Blume |&nbsp;<span class="text-nowrap">
-            <audio id="play9">
-              <source src="audio/judy-blume.mp3" type="audio/mp3">
-              <source src="audio/judy-blume.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play9').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play9').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"The Truth According to Blue" by Eve Yohalem |&nbsp;<span class="text-nowrap">
-            <audio id="play10">
-              <source src="audio/eve-yohalem.mp3" type="audio/mp3">
-              <source src="audio/eve-yohalem.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play10').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play10').pause()"><i class="fas fa-pause"></i></a></span></li>
-        </ul>
-      </div>
-      <div class="author-item">
-        <ul class="list-unstyled">
-          <h4>5th & 6th Grade</h4>
-          <li>"Alone" by Megan E. Freeman |&nbsp;<span class="text-nowrap">
-            <audio id="play11">
-              <source src="audio/megan-freeman.mp3" type="audio/mp3">
-              <source src="audio/megan-freeman.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play11').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play11').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Amari and the Night Brothers" by B.B. Alston |&nbsp;<span class="text-nowrap">
-            <audio id="play12">
-              <source src="audio/bb-alston.mp3" type="audio/mp3">
-              <source src="audio/bb-alston.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play12').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play12').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"The Blackthorn Key" by Kevin Sands |&nbsp;<span class="text-nowrap">
-            <audio id="play13">
-              <source src="audio/kevin-sands.mp3" type="audio/mp3">
-              <source src="audio/kevin-sands.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play13').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play13').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"The Candymakers" by Wendy Mass |&nbsp;<span class="text-nowrap">
-            <audio id="play14">
-              <source src="audio/wendy-mass.mp3" type="audio/mp3">
-              <source src="audio/wendy-mass.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play14').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play14').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Greetings From Witness Protection!" by Jake Burt |&nbsp;<span class="text-nowrap">
-            <audio id="play15">
-              <source src="audio/jake-burt.mp3" type="audio/mp3">
-              <source src="audio/jake-burt.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play15').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play15').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"The Last Shadow Warrior" by Sam Subity |&nbsp;<span class="text-nowrap">
-            <audio id="play16">
-              <source src="audio/sam-subity.mp3" type="audio/mp3">
-              <source src="audio/sam-subity.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play16').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play16').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"The Marvellers" by Dhonielle Clayton |&nbsp;<span class="text-nowrap">
-            <audio id="play17">
-              <source src="audio/dhonielle-clayton.mp3" type="audio/mp3">
-              <source src="audio/dhonielle-clayton.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play17').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play17').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"My Side of the Mountain" by Jean Craighead George |&nbsp;<span class="text-nowrap">
-            <audio id="play18">
-              <source src="audio/jean-craighead-george.mp3" type="audio/mp3">
-              <source src="audio/jean-craighead-george.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play18').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play18').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"The Seventh Most Important Thing" by Shelley Pearsall |&nbsp;<span class="text-nowrap">
-            <audio id="play19">
-              <source src="audio/shelley-pearsall.mp3" type="audio/mp3">
-              <source src="audio/shelley-pearsall.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play19').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play19').pause()"><i class="fas fa-pause"></i></a></span></li>
-          <li>"Wink" by Rob Harrell |&nbsp;<span class="text-nowrap">
-            <audio id="play20">
-              <source src="audio/rob-harrell.mp3" type="audio/mp3">
-              <source src="audio/rob-harrell.ogg" type="audio/ogg">
-            </audio>
-            <a class="listen" onclick="document.getElementById('play20').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play20').pause()"><i class="fas fa-pause"></i></a></span></li>
-        </ul>
+  <div class="row bg-gray-5">
+    <div class="container text-center padding-top-50 padding-bottom-40">
+      <h2 class="no-margin-top">Teams, Schedules, Scores, and Standings</h2>
+      <div class="margin-lg-100 padding-bottom-10">Battle of the Books is active at Douglas County Libraries' Castle Rock, Highlands Ranch, Lone Tree and Parker locations. Choose a location to get started.</div>
+      <div class="teams">
+        <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank"><img class="image-center img-circle" src="castle-rock.jpg?121123" alt="Battle of the Books, Castle Rock"></a>
+          <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank">Castle Rock</a></h4>
+        </div>
+        <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank"><img class="image-center img-circle" src="highlands-ranch.jpg" alt="Battle of the Books, Highlands Ranch"></a>
+          <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank">Highlands Ranch</a></h4>
+        </div>
+        <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank"><img class="image-center img-circle" src="lone-tree.jpg" alt="Battle of the Books, Lone Tree"></a>
+          <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank">Lone Tree</a></h4>
+        </div>
+        <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank"><img class="image-center img-circle" src="parker.jpg" alt="Battle of the Books, Parker"></a>
+          <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank">Parker</a></h4>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- InstanceEndEditable -->
-<div class="bg-gray-10">
-  <div class="container-xxl">
+  <div id="book-lists" class="row text-center padding-top-50 padding-bottom-30">
+    <div class="container">
+      <h2 class="no-margin-top">Book Lists</h2>
+      <div class="margin-lg-150 padding-bottom-15">Get ready to battle! These are the books that this year's trivia battle questions will be based upon. All of these titles will be available as "Your Lucky Day" books at your local DCL branch.</div>
+      <div class="booklist-container">
+        <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372454119"><img class="img-responsive image-center booklist" src="3-4-booklist.jpg" alt="3rd-4th Grade Books"></a>
+          <h4 class="margin-top-15">3rd-4th Grade Books</h4>
+          <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372454119">See Entire List »</a></div>
+        </div>
+        <div class="bg-white text-center padding-15 margin-15"><a href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372460681"><img class="img-responsive image-center booklist" src="5-6-booklist.jpg" alt="5th-6th Grade Books"></a>
+          <h4 class="margin-top-15">5th-6th Grade Books</h4>
+          <div><a class="text-uppercase font-weight-400" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/2372460681">See Entire List »</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5">
+    <div id="pronunciations" class="container padding-top-50 padding-bottom-50">
+      <h2 class="no-margin-top text-center">Title and Author Pronunciation List</h2>
+      <div class="author-wrapper">
+        <div class="author-item">
+          <ul class="list-unstyled">
+            <h4>3rd & 4th Grade</h4>
+            <li>"Ban This Book" by Alan Gratz |&nbsp;<span class="text-nowrap">
+              <audio id="play1">
+                <source src="audio/alan-gratz.mp3" type="audio/mp3">
+                <source src="audio/alan-gratz.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play1').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play1').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Dog Squad" by Chris Grabenstein |&nbsp;<span class="text-nowrap">
+              <audio id="play2">
+                <source src="audio/chris-grabenstein.mp3" type="audio/mp3">
+                <source src="audio/chris-grabenstein.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play2').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play2').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Framed!" by James Ponti |&nbsp;<span class="text-nowrap">
+              <audio id="play3">
+                <source src="audio/james-ponti.mp3" type="audio/mp3">
+                <source src="audio/james-ponti.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play3').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play3').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"From the Mixed-up Files of Mrs Basil E. Frankweiler" by E.L. Konigsburg |&nbsp;<span class="text-nowrap">
+              <audio id="play4">
+                <source src="audio/el-konigsburg.mp3" type="audio/mp3">
+                <source src="audio/el-konigsburg.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play4').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play4').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Measuring Up" by Lily LaMotte |&nbsp;<span class="text-nowrap">
+              <audio id="play5">
+                <source src="audio/lily-lamotte.mp3" type="audio/mp3">
+                <source src="audio/lily-lamotte.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play5').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play5').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Megabat" by Ana Humphrey |&nbsp;<span class="text-nowrap">
+              <audio id="play6">
+                <source src="audio/ana-humphrey.mp3" type="audio/mp3">
+                <source src="audio/ana-humphrey.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play6').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play6').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Midnight at the Barclay Hotel" by Fleur Bradley |&nbsp;<span class="text-nowrap">
+              <audio id="play7">
+                <source src="audio/fleur-bradley.mp3" type="audio/mp3">
+                <source src="audio/fleur-bradley.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play7').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play7').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"One Crazy Summer" by Rita Williams-Garcia |&nbsp;<span class="text-nowrap">
+              <audio id="play8">
+                <source src="audio/rita-williams-garcia.mp3" type="audio/mp3">
+                <source src="audio/rita-williams-garcia.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play8').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play8').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Tales of a Fourth Grade Nothing" by Judy Blume |&nbsp;<span class="text-nowrap">
+              <audio id="play9">
+                <source src="audio/judy-blume.mp3" type="audio/mp3">
+                <source src="audio/judy-blume.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play9').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play9').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"The Truth According to Blue" by Eve Yohalem |&nbsp;<span class="text-nowrap">
+              <audio id="play10">
+                <source src="audio/eve-yohalem.mp3" type="audio/mp3">
+                <source src="audio/eve-yohalem.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play10').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play10').pause()"><i class="fas fa-pause"></i></a></span></li>
+          </ul>
+        </div>
+        <div class="author-item">
+          <ul class="list-unstyled">
+            <h4>5th & 6th Grade</h4>
+            <li>"Alone" by Megan E. Freeman |&nbsp;<span class="text-nowrap">
+              <audio id="play11">
+                <source src="audio/megan-freeman.mp3" type="audio/mp3">
+                <source src="audio/megan-freeman.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play11').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play11').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Amari and the Night Brothers" by B.B. Alston |&nbsp;<span class="text-nowrap">
+              <audio id="play12">
+                <source src="audio/bb-alston.mp3" type="audio/mp3">
+                <source src="audio/bb-alston.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play12').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play12').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"The Blackthorn Key" by Kevin Sands |&nbsp;<span class="text-nowrap">
+              <audio id="play13">
+                <source src="audio/kevin-sands.mp3" type="audio/mp3">
+                <source src="audio/kevin-sands.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play13').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play13').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"The Candymakers" by Wendy Mass |&nbsp;<span class="text-nowrap">
+              <audio id="play14">
+                <source src="audio/wendy-mass.mp3" type="audio/mp3">
+                <source src="audio/wendy-mass.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play14').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play14').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Greetings From Witness Protection!" by Jake Burt |&nbsp;<span class="text-nowrap">
+              <audio id="play15">
+                <source src="audio/jake-burt.mp3" type="audio/mp3">
+                <source src="audio/jake-burt.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play15').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play15').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"The Last Shadow Warrior" by Sam Subity |&nbsp;<span class="text-nowrap">
+              <audio id="play16">
+                <source src="audio/sam-subity.mp3" type="audio/mp3">
+                <source src="audio/sam-subity.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play16').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play16').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"The Marvellers" by Dhonielle Clayton |&nbsp;<span class="text-nowrap">
+              <audio id="play17">
+                <source src="audio/dhonielle-clayton.mp3" type="audio/mp3">
+                <source src="audio/dhonielle-clayton.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play17').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play17').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"My Side of the Mountain" by Jean Craighead George |&nbsp;<span class="text-nowrap">
+              <audio id="play18">
+                <source src="audio/jean-craighead-george.mp3" type="audio/mp3">
+                <source src="audio/jean-craighead-george.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play18').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play18').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"The Seventh Most Important Thing" by Shelley Pearsall |&nbsp;<span class="text-nowrap">
+              <audio id="play19">
+                <source src="audio/shelley-pearsall.mp3" type="audio/mp3">
+                <source src="audio/shelley-pearsall.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play19').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play19').pause()"><i class="fas fa-pause"></i></a></span></li>
+            <li>"Wink" by Rob Harrell |&nbsp;<span class="text-nowrap">
+              <audio id="play20">
+                <source src="audio/rob-harrell.mp3" type="audio/mp3">
+                <source src="audio/rob-harrell.ogg" type="audio/ogg">
+              </audio>
+              <a class="listen" onclick="document.getElementById('play20').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play20').pause()"><i class="fas fa-pause"></i></a></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- InstanceEndEditable --> </div>
+<div class="row no-margin bg-gray-10">
+  <div class="container">
     <div class="social-footer">
       <div class="social-left">
         <h5 class="margin-top-10 margin-bottom-10">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
@@ -462,11 +480,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<footer class="bg-gray-20">
-  <div class="container-xxl">
+<footer class="row no-margin bg-gray-20">
+  <div class="container">
     <div class="footer-nav">
       <div class="footer-column">
-        <h5 class="open-sans">About</h5>
+        <h5>About</h5>
         <ul>
           <li><a href="../who-we-are/">Who We Are</a></li>
           <li><a href="../foundation/">Our Foundation</a></li>
@@ -475,21 +493,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </div>
       <div class="footer-column">
-        <h5 class="open-sans">Contact</h5>
+        <h5>Contact</h5>
         <ul>
           <li><a href="https://help.dcl.org/" target="_blank">Help & FAQs</a></li>
           <li><a href="../board/cora-request/">Colorado Open Records Request</a></li>
         </ul>
       </div>
       <div class="footer-column">
-        <h5 class="open-sans">Connect</h5>
+        <h5>Connect</h5>
         <ul>
           <li><a href="../newsletters/">eNews Sign-Up</a></li>
           <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
         </ul>
       </div>
       <div class="footer-column">
-        <h5 class="open-sans">Support</h5>
+        <h5>Support</h5>
         <ul>
           <li><a href="../donate/">Donate Now</a></li>
           <li><a href="../ways-to-give/">Ways to Give</a></li>
@@ -499,8 +517,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </footer>
-<div class="bg-gray-90">
-  <div class="container-xxl">
+<div class="row no-margin bg-gray-90">
+  <div class="container">
     <div class="copyright">
       <div class="copyright-left">
         <div><a href="../website-accessibility/">Website Accessibility</a></div>
@@ -552,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <script>
 $.get("https://s3.amazonaws.com/website.alert/alert.txt?q=" + Math.floor(Math.random() * 1000000))
   .done(function( data ) {
-    if ( data !=null ){	$("#default-alert").show().append( data );}
+    if ( data !=null ){	$("#general-alert").show().append( data );}
 });
 </script> 
 <!-- BiblioCommons APK --> 
@@ -570,4 +588,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
