@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1610px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 .photo-item-wrapper {
@@ -81,14 +82,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .learning-item {
     background: #fff;
 }
+.full-flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
 
 @media (max-width: 1000px) {
 .box-item-wrapper, .learning-wrapper {
     max-width: 830px;
     margin: 0 auto;
-}
-.box-item:first-child {
-    width: 100%;
 }
 .learning-item:first-child {
     width: 100%;
@@ -309,7 +311,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div>A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks. <a href="https://dcl.bibliocommons.com/item/show/1350439114">Check now for availability</a>. </div>
         </div>
       </div>
-      <div class="flex-break"></div>
       <div id="nontraditional-items" class="box-item">
         <div><img class="img-responsive" src="oculus.jpg" alt="Nontraditional Items"></div>
         <div class="box-content">
@@ -317,11 +318,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div>Looking for something new and exciting to check out? We offer a variety of gadgets, electronics, and learning tools.</div>
         </div>
       </div>
+      <div class="full-flex-break"></div>
       <div id="dcl-care-kits" class="box-item">
         <div><img class="img-responsive" src="care-kits.jpg" alt="DCL Care Kits"></div>
         <div class="box-content">
           <h3 class="text-center"><a href="https://dcl.bibliocommons.com/v2/search?custom_edit=false&query=anywhere%3A(care%20kit)%20%20%20-anywhere%3A(curriculum)&searchType=bl&suppress=true&f_FORMAT=KIT&sort=newly_acquired">DCL Care Kits</a></h3>
           <div>Our specialized, self-contained kits for kids, adults and caregivers contain materials to help those struggling with anxiety, loss related to suicide, and memory issues. Multigenerational and road trip kits also available. Kits check out for three weeks.</div>
+        </div>
+      </div>
+      <div id="adventure-pass" class="box-item">
+        <div><img class="img-responsive" src="adventure-pass.jpg" alt="Adventure Pass"></div>
+        <div class="box-content">
+          <h3 class="text-center"><a href="../adventure-pass/">Adventure Pass</a></h3>
+          <div>Use your library card to reserve a Douglas County Libraries Adventure Pass to one of our local participating cultural institutions. Reserve free passes up to 14 days in advance.</div>
         </div>
       </div>
     </div>
@@ -332,7 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h4 class="roboto no-margin-bottom">These resources make learning a new language or new technology skills simple and convenient. Learn from the privacy of your own home&mdash;or your local library or coffee shop.</h4>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15 padding-bottom-60">
+  <div class="row bg-gray-5 padding-top-15 padding-bottom-80">
     <div class="learning-wrapper">
       <div id="linkedin-learning" class="learning-item">
         <div><img class="img-responsive center-block" src="linkedin-learning.jpg" alt="LinkedIn Learning"></div>
@@ -354,24 +363,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="learning-content">
           <h3 class="text-center"><a href="https://creativebug.com/lib/dcl" target="_blank">Creativebug</a></h3>
           <div>Watch more than 1,000 DIY classes from renowned artists&mdash;anytime, anywhere. Create a Creativebug account using your library card and PIN, and start crafting!</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row padding-top-60 padding-bottom-60">
-    <div class="photo-item-wrapper">
-      <div id="adventure-pass" class="photo-item">
-        <div><img class="img-responsive" src="adventure-pass.jpg" alt="Adventure Pass"></div>
-        <div class="box-content">
-          <h3 class="text-center"><a href="../adventure-pass/">Adventure Pass</a></h3>
-          <div>Use your library card to reserve a Douglas County Libraries <a href="../adventure-pass/">Adventure Pass</a> to one of our local participating cultural institutions. Reserve free passes up to 14 days in advance.</div>
-        </div>
-      </div>
-      <div id="legal-clinic" class="photo-item">
-        <div><img class="img-responsive" src="legal-clinic.jpg" alt="Free Virtual Legal Clinic"></div>
-        <div class="box-content">
-          <h3 class="text-center">Free Virtual Legal Clinic</h3>
-          <div>Attorneys are available virtually to answer legal questions, help fill out forms, and explain legal process and procedures in a variety of areas: family law, civil litigation, property law, landlord-tenant law, and more. Second Monday each month. Hosted at Castle Rock by appointment only; call <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span> to schedule.</div>
         </div>
       </div>
     </div>
@@ -498,4 +489,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
