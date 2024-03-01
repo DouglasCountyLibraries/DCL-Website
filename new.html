@@ -95,7 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     width: 100%;
 }
-.sbh-item-one {
+.sbh-one {
     background: #3e8d9d;
     color: #fff;
 width: calc(100% * 0.5);
@@ -104,7 +104,7 @@ width: calc(100% * 0.5);
     justify-content: center;
     padding: 30px;
 }
-.sbh-item-two {
+.sbh-two {
     background: #146897 url("monkey-city-background.jpg") center center/cover;
 width: calc(100% * 0.5);
     display: flex;
@@ -140,19 +140,19 @@ width: calc(100% * 0.5);
     margin: 0 auto;
     display: flex;
 }
-.author-item-one {
+.author-one {
     background: #6e442e;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
 }
-.author-item-one h1 {
+.author-one h1 {
     color: #fff;
 }
-.author-item-two h1 {
+.author-two h1 {
     color: #000;
 }
-.author-item-two {
+.author-two {
     background: #f4db90;
 width: calc(100% * 0.5);
     display: flex;
@@ -258,6 +258,20 @@ width: calc(100% * 0.5);
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1.1;
+}
+@media (max-width: 950px) {
+.sbh-container, .author-container, .taygard-container, .showcase-container {
+    max-width: 720px;
+}
+.sbh-wrapper, .author-wrapper, .taygard-wrapper, .showcase-wrapper {
+    flex-direction: column;
+}
+.sbh-one, .sbh-two, .author-one, .author-two, .taygard-one, .taygard-two, .showcase-one, .showcase-two {
+    width: 100%;
+}
+.sbh-two {
+    background: #146897 url("monkey-city-background.jpg") bottom center/cover;
+    height: 400px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -439,7 +453,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row background-row">
     <div class="sbh-container">
       <div class="sbh-wrapper">
-        <div class="sbh-item-one">
+        <div class="sbh-one">
           <div class="text-uppercase">A Storybook Holiday:</div>
           <h1 class="no-margin">Monkey Business</h1>
           <h2 class="margin-top-10">Join us for a springtime celebration!</h2>
@@ -447,18 +461,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h3 class="margin-top-15">Sunday, April&nbsp;7, 8-11AM, Castle Rock</h3>
           <div class="padding-bottom-15 padding-top-15"><a class="white text-underline text-uppercase text-nowrap" href="storybook-holiday/">Buy Tickets</a></div>
         </div>
-        <div class="sbh-item-two"></div>
+        <div class="sbh-two"></div>
       </div>
     </div>
     <div class="author-container">
       <div class="author-wrapper">
-        <div class="author-item-one">
+        <div class="author-one">
           <div><img class="img-responsive" src="carter-wilson.jpg" alt="Carter Wilson"></div>
           <div class="author-info-one">
             <h1>Carter Wilson</h1>
             Join us as the USA Today bestseller presents <a class="white text-underline" href="https://dcl.bibliocommons.com/v2/record/S114C1783203">The Father She Went to Find</a>, Saturday, April&nbsp;20,&nbsp;6:30PM, in Highlands Ranch. <a class="white text-underline" href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=230128" target="_blank">Register Now</a></div>
         </div>
-        <div class="author-item-two">
+        <div class="author-two">
           <div><img class="img-responsive" src="steven-graham-jones.jpg" alt="Steven Graham Jones"></div>
           <div class="author-info-two">
             <h1>Stephen Graham Jones</h1>
