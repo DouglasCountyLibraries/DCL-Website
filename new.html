@@ -54,6 +54,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
 }
+/* row one */
+    
 .sbh-container {
     display: flex;
     max-width: 1440px;
@@ -85,10 +87,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .sbh-container a {
     font-size: 24px;
-    font-weight: 400;
-}
-.sbh-container a:hover {
-    text-decoration: underline;
 }
 .sbh-wrapper {
     margin: 0 auto;
@@ -110,10 +108,11 @@ width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
 }
+/* row two */
+    
 .author-container {
     display: flex;
     max-width: 1440px;
-    background: #ddd;
     margin: 30px auto 0 auto;
     font-size: 20px;
     text-align: center;
@@ -124,17 +123,6 @@ width: calc(100% * 0.5);
     font-size: 30px;
     font-weight: 500;
     line-height: 1.1;
-}
-.author-container h3 {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1.2;
-}
-.author-container a {
-    text-decoration: underline;
-}
-.author-container a:hover {
-    text-decoration: underline;
 }
 .author-wrapper {
     margin: 0 auto;
@@ -160,12 +148,14 @@ width: calc(100% * 0.5);
 }
 .author-info-one {
     color: #fff;
-    padding: 40px 40px 50px;
+    padding: 40px 40px 60px;
 }
 .author-info-two {
     color: #000;
-    padding: 40px 40px 50px;
+    padding: 40px 40px 60px;
 }
+/* row three */
+    
 .taygard-container {
     display: flex;
     max-width: 1440px;
@@ -188,9 +178,10 @@ width: calc(100% * 0.5);
     justify-content: center;
     padding: 15px 15px 150px;
     color: #000;
+    min-height: 640px;
 }
 .taygard-two {
-    background: #3e8d9d url("flower-background.jpg") 50% 76% no-repeat;
+    background: #3e8d9d url("flower-background.jpg") 50% 79% no-repeat;
     color: #fff;
 width: calc(100% * 0.5);
     display: flex;
@@ -200,6 +191,7 @@ width: calc(100% * 0.5);
     border-style: solid;
     border-width: 30px 30px 30px 30px;
     border-image: url(flower-border.jpg) 20 20 20 20 repeat repeat;
+    min-height: 640px;
 }
 .taygard-one h1 {
     color: #000;
@@ -216,6 +208,8 @@ width: calc(100% * 0.5);
     text-transform: uppercase;
     line-height: 1.1;
 }
+/* row four*/
+    
 .showcase-container {
     display: flex;
     max-width: 1440px;
@@ -238,6 +232,7 @@ width: calc(100% * 0.5);
     padding: 30px 30px 40px;
     color: #fff;
     font-size: 20px;
+    min-height: 640px;
 }
 .showcase-two {
     background: #c68d72;
@@ -248,6 +243,7 @@ width: calc(100% * 0.5);
     justify-content: center;
     padding: 30px 30px 40px;
     font-size: 24px;
+    min-height: 640px;
 }
 .showcase-one img {
     max-height: 300px;
@@ -259,6 +255,7 @@ width: calc(100% * 0.5);
     text-transform: uppercase;
     line-height: 1.1;
 }
+
 @media (max-width: 950px) {
 .sbh-container, .author-container, .taygard-container, .showcase-container {
     max-width: 720px;
@@ -269,9 +266,25 @@ width: calc(100% * 0.5);
 .sbh-one, .sbh-two, .author-one, .author-two, .taygard-one, .taygard-two, .showcase-one, .showcase-two {
     width: 100%;
 }
+.sbh-one {
+    order: 2;
+}
 .sbh-two {
     background: #146897 url("monkey-city-background.jpg") bottom center/cover;
     height: 400px;
+    order: 1;
+}
+.author-one, .taygard-one, .showcase-one {
+    margin-bottom: 30px;
+}
+}
+
+@media (max-width: 475px) {
+.taygard-two {
+    padding: 10px 10px 220px;
+    border-width: 10px 10px 10px 10px;
+    border-image: url(flower-border.jpg) 20 20 20 20 repeat repeat;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
