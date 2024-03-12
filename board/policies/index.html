@@ -189,26 +189,50 @@ section h3 {
 }
 
 @media print {
+body::before {
+    content: url("../../shared-assets/images/dcl-logo.jpg");
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+body {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    width: 100%;
+    font-size: 12pt;
+    margin: 0;
+}
+.custom-container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+}
+.policy-contents, .custom-container {
+    width: 100%;
+    margin-left: 0;
+    margin: 0;
+}
+.jumbo-text {
+    font-size: 16pt;
+}
+h1 {
+    font-size: 16pt;
+}
+h3, section h3 {
+    font-size: 14pt;
+}
+.sidebar-heading, .section-nav a {
+    font-size: 12pt;
+}
 .login-row, .dcl-logo-search.client_and_search, .alert-wrapper, .page-nav-row, .table-contents, .social-footer, footer, .copyright {
     display: none!important;
 }
 .policy-contents {
     border-top: 2px solid #ededed;
 }
-h1.jumbo-text.text-uppercase.font-weight-400.margin-bottom-15 {
-    margin: 0 0 15px;
-    font-size: 30px;
-}
 .border-top {
     border-top: none;
-}
-body::before {
-    content: url("../../dcl-logo.jpg");
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    display: block;
 }
 }
 </style>
