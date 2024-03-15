@@ -61,6 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .item {
     margin: 10px 5px;
 }
+
 .image-gallery {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -109,10 +110,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border: 25px solid rgba(255,192,203,.8);
     background-color: rgba(255,192,203,.2);
     border-radius: 2px;
-}
-.larger-text {
-    font-size: 1.4em;
-    padding-bottom: 15px;
 }
 .find-text {
     margin: 10px 0 0;
@@ -167,38 +164,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     flex-wrap: wrap;
 }
-.left-column {
+.column {
     width: 25%;
 }
 .info-row {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    width: 50%;
-    margin: 0 5px 30px;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	background: #fff;
+	width: 50%;
+	margin: 0 5px 30px;
 }
-.more-info {
+    .info-row:nth-of-type(2) {
+        justify-content: center;
+        padding: 15px 15px 30px;
+    }
+        .info-item:nth-of-type(2) {
+    padding: 15px;
 }
-.two-up, .two-wide {
-    display: flex;
-}
-.two-wide {
-    align-items: center;
-}
-.two-stacked {
-    flex-direction: column;
-}
-.one, .two {
-    width: 50%;
-}
+    @media (max-width: 1300px) {
+        .info-row:nth-of-type(1) {
+            width: 66.66666%;
+        }
+                .info-row:nth-of-type(2) {
+            width: 33.33333%;
+        }
+    }
 
 @media (max-width: 992px) {
-.left-column {
+.content-outer {
+    background: #fff url("photos/heading-background-small.jpg") top left/cover;
+}
+.content-inner {
+    padding: 15px;
+    max-width: 100%;
+    margin: 400px 15px 15px;
+}
+.column {
+    width: 50%;
+}
+.info-row {
+    flex-direction: row;
+    
+}
+            .info-row:nth-of-type(1) {
+            width: inherit;
+        }
+                .info-row:nth-of-type(2) {
+            width: inherit;
+        }
+    .custom-info-container {
+
+	flex-direction: column;
+}
+}
+
+@media (max-width: 450px) {
+.column {
     width: 100%;
 }
-.right-column {
-    width: 100%;
+.column.three, .column.four {
+    display: none;
 }
 }
 </style>
@@ -404,28 +429,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="custom-container">
       <div class="outer-wrapper">
-        <div class="left-column">
+        <div class="column one">
           <div class="item image-gallery"> <a href="photos/one.jpg"> <img class="img-responsive" src="photos/one.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/two.jpg"> <img class="img-responsive" src="photos/two.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/three.jpg"> <img class="img-responsive" src="photos/three.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/four.jpg"> <img class="img-responsive" src="photos/four.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/five.jpg"> <img class="img-responsive" src="photos/five.jpg" alt=""> </a> </div>
         </div>
-        <div class="left-column">
+        <div class="column two">
           <div class="item image-gallery"> <a href="photos/six.jpg"> <img class="img-responsive" src="photos/six.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/seven.jpg"> <img class="img-responsive" src="photos/seven.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/eight.jpg"> <img class="img-responsive" src="photos/eight.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/nine.jpg"> <img class="img-responsive" src="photos/nine.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/ten.jpg"> <img class="img-responsive" src="photos/ten.jpg" alt=""> </a> </div>
         </div>
-        <div class="left-column">
+        <div class="column three">
           <div class="item image-gallery"> <a href="photos/eleven.jpg"> <img class="img-responsive" src="photos/eleven.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/twelve.jpg"> <img class="img-responsive" src="photos/twelve.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/thirteen.jpg"> <img class="img-responsive" src="photos/thirteen.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/fourteen.jpg"> <img class="img-responsive" src="photos/fourteen.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/fifteen.jpg"> <img class="img-responsive" src="photos/fifteen.jpg" alt=""> </a> </div>
         </div>
-        <div class="left-column">
+        <div class="column four">
           <div class="item image-gallery"> <a href="photos/sixteen.jpg"> <img class="img-responsive" src="photos/sixteen.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/seventeen.jpg"> <img class="img-responsive" src="photos/seventeen.jpg" alt=""> </a> </div>
           <div class="item image-gallery"> <a href="photos/eighteen.jpg"> <img class="img-responsive" src="photos/eighteen.jpg" alt=""> </a> </div>
@@ -436,8 +461,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="custom-info-container">
       <div class="info-row">
-        <div class="item"><img class="" src="info-image.jpg" alt=""></div>
-        <div class="item">
+        <div class="info-item"><img class="" src="info-image.jpg" alt=""></div>
+        <div class="info-item">
           <div class="flex-list">
             <h4 class="no-margin-top">Styled Shoot</h4>
             <ul class="list-unstyled">
