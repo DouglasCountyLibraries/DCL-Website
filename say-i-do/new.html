@@ -61,7 +61,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .item {
     margin: 10px 5px;
 }
-
 .image-gallery {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -147,10 +146,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     flex-direction: column;
 }
-.flex-list {
-    flex-direction: column;
-    align-self: center;
-}
 .custom-container {
     max-width: 1450px;
     margin: 0 auto;
@@ -168,27 +163,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 25%;
 }
 .info-row {
-	display: flex;
-	align-items: center;
-	background: #fff;
-	width: 50%;
-	margin: 0 5px 30px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    width: 50%;
+    margin: 0 5px 30px;
 }
-    .info-row:nth-of-type(2) {
-        justify-content: center;
-        padding: 15px 15px 30px;
-    }
-        .info-item:nth-of-type(2) {
+.info-row:nth-of-type(2) {
+    justify-content: center;
+    padding: 15px 15px 30px;
+}
+.info-item:nth-of-type(2) {
     padding: 15px;
 }
-    @media (max-width: 1300px) {
-        .info-row:nth-of-type(1) {
-            width: 66.66666%;
-        }
-                .info-row:nth-of-type(2) {
-            width: 33.33333%;
-        }
-    }
+
+@media (max-width: 1300px) {
+.info-row:nth-of-type(1) {
+    width: 66.66666%;
+}
+.info-row:nth-of-type(2) {
+    width: 33.33333%;
+}
+}
+
+@media (max-width: 675px) {
+.info-row:nth-of-type(1) {
+    flex-direction: column;
+    padding: 15px;
+}
+.info-item:nth-of-type(2) {
+    padding: 15px 0 0;
+    text-align: center;
+}
+}
 
 @media (max-width: 992px) {
 .content-outer {
@@ -204,17 +211,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .info-row {
     flex-direction: row;
-    
+    margin: 0 5px 10px;
 }
-            .info-row:nth-of-type(1) {
-            width: inherit;
-        }
-                .info-row:nth-of-type(2) {
-            width: inherit;
-        }
-    .custom-info-container {
-
-	flex-direction: column;
+.info-row:nth-of-type(1) {
+    width: inherit;
+}
+.info-row:nth-of-type(2) {
+    width: inherit;
+}
+.custom-info-container {
+    flex-direction: column;
 }
 }
 
