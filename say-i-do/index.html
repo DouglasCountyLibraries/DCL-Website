@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,125 +48,187 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="simpleLightbox.min.css">
 <style>
 .reserve-a-space-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
+}
+.background-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+    margin-bottom: -1px;
 }
 .fas.fa-wine-glass-alt {
-	color: #d2005a;
+    color: #d2005a;
 }
 .item {
-	border: 1px solid #fff;
-	border-radius: 2px;
+    margin: 10px 5px;
 }
 .image-gallery {
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 .image-gallery:hover {
-	opacity: .6;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
+    opacity: .6;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 .author {
-	color: #fff;
-	font-size: 60px;
-	text-transform: uppercase;
-	font-weight: 400;
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 .author a {
-	color: #fff;
+    color: #fff;
 }
 .author a:hover {
-	color: #fff;
-	text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+}
+.large-text {
+    font-size: 18px;
 }
 .content-outer {
-	background-color: rgba(255,192,203,.2);
-	margin: 1px;
-	border: 2px solid rgba(255,192,203,.8);
-	border-radius: 2px;
+    background: #fff url("photos/heading-background.jpg") top left/cover;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .content-inner {
-	padding: 30px 50px 35px;
+    padding: 40px 40px 50px;
+    max-width: 685px;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    background: rgba(35,22,16,.5);
+    margin: 60px 30px 65px;
+    border-radius: 3px;
 }
 .modal-background {
-	padding: 40px 40px 45px 40px;
-	color: #000;
-	border: 25px solid rgba(255,192,203,.8);
-	background-color: rgba(255,192,203,.2);
-	border-radius: 2px;
-}
-.larger-text {
-	font-size: 1.4em;
-	padding-bottom: 15px;
+    padding: 40px 40px 45px 40px;
+    color: #000;
+    border: 25px solid rgba(255,192,203,.8);
+    background-color: rgba(255,192,203,.2);
+    border-radius: 2px;
 }
 .find-text {
-	margin: 10px 0 0;
+    margin: 10px 0 0;
 }
 .find-text a {
-	color: #d2005a;
-	font-size: 22px;
-	text-decoration: none;
+    color: #d2005a;
+    font-size: 22px;
+    text-decoration: none;
 }
 .find-text a:hover, .find-text a:focus {
-	color: #d2005a;
-	text-decoration: none;
-	opacity: .8;
+    color: #d2005a;
+    text-decoration: none;
+    opacity: .8;
+}
+.btn.btn-lg.btn-primary.btn-custom {
+    color: #000;
+    font-weight: 600;
 }
 .btn-custom {
-	background-color: #9e0044;
+    background-color: #ffa139;
 }
 .btn-custom:active, .btn-custom:hover, .btn-custom:focus {
-	background-color: #750032;
+    background-color: #750032;
 }
 .concierge .fa-check {
-	color: #d2005a;
+    color: #ffa139;
 }
 .fa-ul > li {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 .fa-check {
-	line-height: 22px;
+    line-height: 22px;
 }
 .flex-inner {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
-.flex-list {
-	flex-direction: column;
-	align-self: center;
+.custom-container {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+.custom-info-container {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: flex;
 }
 .outer-wrapper {
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
-.left-column {
-	width: 60%;
+.column {
+    width: 25%;
 }
-.right-column {
-	width: 40%;
+.info-row {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    width: 50%;
+    margin: 0 5px 30px;
 }
-.two-up, .two-wide {
-	display: flex;
+.info-row:nth-of-type(2) {
+    justify-content: center;
+    padding: 15px 15px 30px;
 }
-.two-wide {
-	align-items: center;
+.info-item:nth-of-type(2) {
+    padding: 15px;
 }
-.two-stacked {
-	flex-direction: column;
+
+@media (max-width: 1300px) {
+.info-row:nth-of-type(1) {
+    width: 66.66666%;
 }
-.one, .two {
-	width: 50%;
+.info-row:nth-of-type(2) {
+    width: 33.33333%;
+}
+}
+
+@media (max-width: 675px) {
+.info-row:nth-of-type(1) {
+    flex-direction: column;
+    padding: 15px;
+}
+.info-item:nth-of-type(2) {
+    padding: 15px 0 0;
+    text-align: center;
+}
 }
 
 @media (max-width: 992px) {
-.left-column {
-	width: 100%;
+.content-outer {
+    background: #fff url("photos/heading-background-small.jpg") top left/cover;
 }
-.right-column {
-	width: 100%;
+.content-inner {
+    padding: 15px;
+    max-width: 100%;
+    margin: 400px 15px 15px;
 }
-.custom-container {
-	padding: 0;
+.column {
+    width: 50%;
+}
+.info-row {
+    flex-direction: row;
+    margin: 0 5px 10px;
+}
+.info-row:nth-of-type(1) {
+    width: inherit;
+}
+.info-row:nth-of-type(2) {
+    width: inherit;
+}
+.custom-info-container {
+    flex-direction: column;
+}
+}
+
+@media (max-width: 450px) {
+.column {
+    width: 100%;
+}
+.column.three, .column.four {
+    display: none;
 }
 }
 </style>
@@ -345,104 +408,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-30">
-    <div class="container text-center">
+  <div class="row border-top background-row">
+    <div class="container padding-bottom-20 text-center">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Say I Do at DCL</h1>
       <h4 class="roboto margin-top-5">Weddings, Rehearsal Dinners & <a href="../showers/">Showers</a></h4>
       <div>The premium event spaces in our beautiful libraries are the perfect setting for celebrating your love story.</div>
     </div>
-  </div>
-  <div class="row">
-    <div class="container-md custom-container">
+    <div class="content-outer">
+      <div class="content-inner white">
+        <h4 class="white no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
+        <div class="text-center padding-bottom-15 large-text">Receive full event planning services with our Concierge-level package: </div>
+        <ul class="fa-ul no-margin-bottom concierge text-left">
+          <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
+          <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
+          <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
+          <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
+          <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
+          <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
+          <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
+        </ul>
+        <div class="text-center padding-top-15 padding-bottom-15"> <!-- Button trigger modal --> 
+          <a href="../upgrade/" target="_blank" class="btn btn-lg btn-primary btn-custom">Get Started</a> </div>
+        <div class="text-center"><a class="white text-underline" href="dcl-pricing-2022.pdf?v4" target="_blank">Download pricing</a> for sample services and estimates.</div>
+      </div>
+    </div>
+    <div class="custom-container">
       <div class="outer-wrapper">
-        <div class="left-column">
-          <div class="two-up">
-            <div class="item image-gallery"> <a href="images/one.jpg"> <img class="img-responsive" src="images/one.jpg" alt=""> </a> </div>
-            <div class="item image-gallery"> <a href="images/thirteen.jpg"> <img class="img-responsive" src="images/thirteen.jpg" alt=""> </a> </div>
-          </div>
-          <div class="item">
-            <div class="content-outer">
-              <div class="content-inner">
-                <h4 class="roboto no-margin-top text-center">Whether it's an intimate, romantic affair, an elegant soiree, a rehearsal dinner, or festive celebration, our thoughtful event coordinators can help bring your vision to life.</h4>
-                <div class="text-center margin-bottom-10">Receive full event planning services with our Concierge-level package: </div>
-                <ul class="fa-ul concierge text-left">
-                  <li><i class="fa-li fa fa-check fa-lg"></i>Space reservation to match your celebration: vibrant open-air patios, large banquet halls with floor-to-ceiling windows, ample natural light, contemporary furniture, high-end technology.</li>
-                  <li><i class="fa-li fa fa-check fa-lg"></i>Vendor bidding for invitations, flowers, additional furniture and décor, entertainment, and more.</li>
-                  <li><i class="fa-li fa fa-check fa-lg"></i>Planning and management of all details.</li>
-                  <li><i class="fa-li fa fa-check fa-lg"></i>Coordination with your caterer and full-service bar staff.</li>
-                  <li><i class="fa-li fa fa-check fa-lg"></i>Linens available at a minimal cost.</li>
-                  <li><i class="fa-li fa fa-check fa-lg"></i>Limited inventory of complimentary centerpiece hardware (glassware, mirrors, etc.).</li>
-                  <li><i class="fa-li fa fa-check fa-lg"></i>Complimentary event setup and take-down.</li>
-                </ul>
-                <div class="text-center margin-top-30"> <!-- Button trigger modal --> 
-                  <a href="#" class="btn btn-lg btn-primary btn-custom margin-bottom-15" data-toggle="modal" data-target="#concierge-service-get-started">Get Started</a> </div>
-                <div class="text-center"><a href="dcl-pricing-2022.pdf?v4" target="_blank">Download pricing</a> for sample services and estimates.</div>
-              </div>
-            </div>
-          </div>
-          <div class="two-up">
-            <div class="item two image-gallery"> <a href="images/twenty.jpg"> <img class="img-responsive" src="images/twenty.jpg" alt=""> </a> </div>
-            <div class="two-stacked one">
-              <div class="item image-gallery"> <a href="images/eleven.jpg"> <img class="img-responsive" src="images/eleven.jpg" alt=""> </a> </div>
-              <div class="item image-gallery"> <a href="images/fourteen.jpg"> <img class="img-responsive" src="images/fourteen.jpg" alt=""> </a> </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="content-outer">
-              <div class="content-inner text-center">
-                <div class="find-text text-center"><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank">Find us on <img src="knot.png" alt="The Knot"></a></div>
-              </div>
-            </div>
-          </div>
-          <div class="two-up">
-            <div class="two-stacked one">
-              <div class="item image-gallery"> <a href="images/six.jpg"> <img class="img-responsive" src="images/six.jpg" alt=""> </a> </div>
-              <div class="item image-gallery"> <a href="images/five.jpg"> <img class="img-responsive" src="images/five.jpg" alt=""> </a> </div>
-            </div>
-            <div class="item two image-gallery"> <a href="images/twenty-six.jpg"> <img class="img-responsive" src="images/twenty-six.jpg" alt=""> </a> </div>
+        <div class="column one">
+          <div class="item image-gallery"> <a href="photos/one.jpg"> <img class="img-responsive" src="photos/one.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/two.jpg"> <img class="img-responsive" src="photos/two.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/three.jpg"> <img class="img-responsive" src="photos/three.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/four.jpg"> <img class="img-responsive" src="photos/four.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/five.jpg"> <img class="img-responsive" src="photos/five.jpg" alt=""> </a> </div>
+        </div>
+        <div class="column two">
+          <div class="item image-gallery"> <a href="photos/six.jpg"> <img class="img-responsive" src="photos/six.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/seven.jpg"> <img class="img-responsive" src="photos/seven.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/eight.jpg"> <img class="img-responsive" src="photos/eight.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/nine.jpg"> <img class="img-responsive" src="photos/nine.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/ten.jpg"> <img class="img-responsive" src="photos/ten.jpg" alt=""> </a> </div>
+        </div>
+        <div class="column three">
+          <div class="item image-gallery"> <a href="photos/eleven.jpg"> <img class="img-responsive" src="photos/eleven.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/twelve.jpg"> <img class="img-responsive" src="photos/twelve.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/thirteen.jpg"> <img class="img-responsive" src="photos/thirteen.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/fourteen.jpg"> <img class="img-responsive" src="photos/fourteen.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/fifteen.jpg"> <img class="img-responsive" src="photos/fifteen.jpg" alt=""> </a> </div>
+        </div>
+        <div class="column four">
+          <div class="item image-gallery"> <a href="photos/sixteen.jpg"> <img class="img-responsive" src="photos/sixteen.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/seventeen.jpg"> <img class="img-responsive" src="photos/seventeen.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/eighteen.jpg"> <img class="img-responsive" src="photos/eighteen.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/nineteen.jpg"> <img class="img-responsive" src="photos/nineteen.jpg" alt=""> </a> </div>
+          <div class="item image-gallery"> <a href="photos/twenty.jpg"> <img class="img-responsive" src="photos/twenty.jpg" alt=""> </a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-info-container">
+      <div class="info-row">
+        <div class="info-item"><img class="" src="info-image.jpg" alt=""></div>
+        <div class="info-item">
+          <div class="flex-list">
+            <h4 class="no-margin-top">Styled Shoot</h4>
+            <ul class="list-unstyled">
+              <li>Florist: <a href="https://www.abloomhighlandsranch.com/" target="_blank">Flintwood Floral</a></li>
+              <li>Cake: <a href="https://www.backyardbakeries.com" target="_blank">Suga Me Sweet</a></li>
+              <li>Rentals: <a href="https://eventrents.com/new-denver/" target="_blank">Event Rents</a></li>
+              <li>Hair & Makeup: <a href="https://www.allysbeautybar.com/" target="_blank">Ally’s Beauty Bar</a></li>
+              <li>Photographer: <a href="https://taylorhassebroek.com/" target="_blank">Taylor Hassebroek Photo</a></li>
+              <li>Dress: <a href="https://www.cbbridal.com/" target="_blank">Casa Bianca Bridal</a></li>
+              <li>Bridal Hat: <a href="https://frayedwithgrace.com/" target="_blank">Frayed with Grace</a></li>
+              <li>Mobile Bar: <a href="https://www.luckycharmmobilebar.com/" target="_blank">Lucky Charm Mobile Bar</a></li>
+            </ul>
           </div>
         </div>
-        <div class="right-column">
-          <div class="item image-gallery"> <a href="images/four.jpg"> <img class="img-responsive" src="images/four.jpg" alt=""> </a> </div>
-          <div class="two-up">
-            <div class="item image-gallery"> <a href="images/twenty-four.jpg"> <img class="img-responsive" src="images/twenty-four.jpg" alt=""> </a> </div>
-            <div class="item image-gallery"> <a href="images/twenty-two.jpg"> <img class="img-responsive" src="images/twenty-two.jpg" alt=""> </a> </div>
-          </div>
-          <div class="item">
-            <div class="content-outer">
-              <div class="content-inner flex-inner">
-                <div class="flex-list">
-                  <h4 class="roboto no-margin-top text-center">Styled Shoot</h4>
-                  <ul class="list-unstyled">
-                    <li>Florist: <a href="https://www.abloomhighlandsranch.com/" target="_blank">Abloom</a></li>
-                    <li>Cake: <a href="https://www.sugamesweet.com/" target="_blank">Suga Me Sweet</a></li>
-                    <li>Rentals: <a href="https://eventrents.com/" target="_blank">Event Rents</a></li>
-                    <li>Hair & Makeup: <a href="https://kbjbeauty.com/" target="_blank">Kelsey Bailey Beauty</a></li>
-                    <li>Photographer: <a href="https://jewelsgray.com/" target="_blank">Photography by Jewels</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item image-gallery"> <a href="images/nine.jpg"> <img class="img-responsive" src="images/nine.jpg" alt=""> </a> </div>
-          <div class="item image-gallery"> <a href="images/eight.jpg"> <img class="img-responsive" src="images/eight.jpg" alt=""> </a> </div>
-          <div class="two-up">
-            <div class="item image-gallery"> <a href="images/one.jpg"> <img class="img-responsive" src="images/twenty-seven.jpg" alt=""> </a> </div>
-            <div class="item image-gallery"> <a href="images/twelve.jpg"> <img class="img-responsive" src="images/twelve.jpg" alt=""> </a> </div>
-          </div>
-          <div class="item">
-            <div class="content-outer">
-              <div class="content-inner">
-                <div class="text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-                <h5 class="text-center margin-top-5 no-margin-bottom"><a href="../event-spaces/">View Event Spaces</a></h5>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="info-row">
+        <div class="item text-center">
+          <div>Find us on</div>
+          <div><a href="https://www.theknot.com/marketplace/douglas-county-libraries-douglas-county-co-2045647" target="_blank"><img src="knot.png" alt="The Knot"></a></div>
+          <div class="margin-top-5">Have questions?<br>
+            Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+          <div class="margin-top-5 text-uppercase"><a href="../event-spaces/">View our event spaces</a></div>
         </div>
       </div>
     </div>
   </div>
-  
   <!-- Modal -->
   <div id="concierge-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -584,4 +635,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
