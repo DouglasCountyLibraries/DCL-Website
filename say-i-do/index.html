@@ -135,6 +135,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .concierge .fa-check {
     color: #ffa139;
 }
+.table-content {
+    padding: 0 30px 40px;
+}
+.location {
+    font-size: 20px;
+    padding: 20px 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.table-content li {
+    padding-bottom: 5px;
+}
 .fa-ul > li {
     margin-bottom: 15px;
 }
@@ -429,7 +441,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
         <div class="text-center padding-top-15 padding-bottom-15"> <!-- Button trigger modal --> 
           <a href="../upgrade/" target="_blank" class="btn btn-lg btn-primary btn-custom">Get Started</a> </div>
-        <div class="text-center"><a class="white text-underline" href="dcl-pricing-2022.pdf?v4" target="_blank">Download pricing</a> for sample services and estimates.</div>
+        <div class="text-center"><a class="white text-underline" href="#" role="button" data-toggle="modal" data-target="#pricing-modal">View pricing estimates</a> for popular spaces.</div>
       </div>
     </div>
     <div class="custom-container">
@@ -495,15 +507,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <!-- Modal -->
-  <div id="concierge-service-get-started" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div id="pricing-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="pricing-label">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="text-center modal-title">DCL Event + Hospitality Services - Concierge Service</h4>
+          <h4 class="text-center modal-title">Pricing Estimates for Popular Spaces</h4>
         </div>
-        <div class="padding-right-15 padding-bottom-15 padding-left-15">
-          <iframe src="https://widget.honeybook.com/assets_users_production/companies/5a207e3ebaba1a21c232ddd0/widgets/honeybook_widget.html" frameBorder="0" width="100%" height="750"></iframe>
+        <div class="table-content">
+          <div class="location">Highlands Ranch</div>
+          <ul class="no-margin">
+            <li>Event Hall&nbsp;A - 33'&nbsp;X&nbsp;24' - 65 capacity (chairs only) - $150 Concierge Service per hour</li>
+            <li>Event Hall&nbsp;B - 33'&nbsp;X&nbsp;24' - 55 capacity (chairs only) - $150 Concierge Service per hour</li>
+            <li>Event Hall A&nbsp;&&nbsp;B - 33'&nbsp;X&nbsp;47' - 120 capacity (chairs only) - $250 Concierge Service per hour</li>
+            <li>The Terrace - 19'11"&nbsp;X&nbsp;30' - 140 capacity (chairs only) - $150 Concierge Service per hour</li>
+            <li>Full Library Rental - $5,000 Concierge Service per hour</li>
+          </ul>
+          <div class="location">Lone Tree</div>
+          <ul class="no-margin">
+            <li>Event Hall - 35'5"&nbsp;X&nbsp;30'9" - 120 capacity (chairs only) - $150 Concierge Service per hour</li>
+            <li>Event Hall&nbsp;+ Adjoining Library - 80'&nbsp;X&nbsp;30'9" - 200 capacity (chairs only) - $175 Concierge Service per hour</li>
+            <li>Full Library Rental - $5,000 Concierge Service per hour</li>
+          </ul>
+          <div class="location">Parker</div>
+          <ul class="no-margin">
+            <li>Event Hall&nbsp;A - 33'9"&nbsp;X&nbsp;22'6" - 100 capacity (chairs only) - $150 Concierge Service per hour</li>
+            <li>Event Hall&nbsp;B - 33'8"&nbsp;X&nbsp;23' - 110 capacity (chairs only) - $150 Concierge Service per hour</li>
+            <li>Event Hall&nbsp;A&nbsp;+ Terrace - 14'3"&nbsp;X&nbsp;18'10" - 125 capacity (chairs only) - $175 Concierge Service per hour</li>
+            <li>Event Hall&nbsp;A&nbsp;&&nbsp;B&nbsp;+ Terrace - 33'9"&nbsp;X&nbsp;45' - 235 capacity (chairs only) - $250 Concierge Service per hour</li>
+            <li>Full Library Rental - $5,000 Concierge Service per hour</li>
+          </ul>
         </div>
       </div>
     </div>
