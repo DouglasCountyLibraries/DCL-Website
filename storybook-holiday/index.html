@@ -45,91 +45,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-@font-face {
-    font-family: 'Monteria';
-    src: url('../shared-assets/web-fonts/Monteria-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/Monteria-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-.events-active {
+.reserve-a-space-active {
     background-color: #f5f5f5;
 }
-.monteria {
-    font-family: "Monteria", sans-serif;
-    font-weight: 600;
-}
-h1.monteria {
-    font-family: "Monteria", sans-serif;
-    color: #ffffff;
-    -webkit-text-stroke: 2px #ffcb31;
-    margin: 0;
-    font-size: 100px;
-    font-weight: 900;
-    text-shadow: 3px 3px 0 #BE1E2D, -3px 3px 0 #BE1E2D, -3px -3px 0 #BE1E2D, 3px -3px 0 #BE1E2D;
-    letter-spacing: 5px;
-    line-height: 90px;
-    padding: 5px 0 15px;
-}
-.background-row {
-    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
-}
 .custom-container {
-    background: #146897 url("business-background-lg.jpg") top right no-repeat;
-    max-width: 1920px;
+    max-width: 2200px;
     margin: 0 auto;
-    min-height: 700px;
+}
+.intro-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+}
+.carousel-cell {
+    margin-right: 30px;
+    opacity: .5;
+    filter: blur(1px);
+}
+.carousel-cell.is-selected {
+    opacity: 1;
+    filter: blur(0);
+}
+.flickity-prev-next-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: #fff;
+}
+.flickity-prev-next-button.no-svg {
     color: #fff;
-    font-weight: 400;
-    font-size: 18px;
-}
-.event-wrapper {
-    max-width: 700px;
-    padding: 25px 15px 0;
-    text-align: center;
-    float: right;
-    margin-right: 33%;
-}
-.btn.btn-lg.btn-primary.custom {
-    background-color: #BE1E2D;
-    text-transform: uppercase;
-    font-weight: 400;
-    border: 3px solid #fff;
-    box-shadow: 0px 0px 30px #fff;
-    transition: all .4s ease-out;
-}
-.btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
-    cursor: not-allowed;
-}
-.signup {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-@media (min-width: 1001px) {
-.monkey {
-    display: none;
-}
-}
-
-@media (max-width: 1000px) {
-.custom-container {
-    background: #135577 url("city-background.jpg") top center no-repeat;
-    min-height: inherit;
-}
-.event-wrapper {
-    padding: 25px 15px 0;
-    float: none;
-    margin: 0 auto;
-}
-}
-
-@media (max-width: 450px) {
-h1.monteria {
-    font-size: 80px;
-    line-height: 70px;
-}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -308,23 +260,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
-    <div class="custom-container">
-      <div class="event-wrapper">
-        <h4 class="white text-uppercase font-weight-400 no-margin">A Storybook Holiday:</h4>
-        <h1 class="monteria">Monkey Business</h1>
-        <div>
-          <div>Celebrate spring with Curious George and friends! Enjoy a delightful array of family-friendly entertainment and activities, whimsical themed crafts, fun photo ops, a delicious catered brunch, sweet treats, and much more. Costumes encouraged! Ideal for ages 2-5, but all ages are welcome.</div>
-          <h2 class="white no-margin-bottom">Sunday, April&nbsp;7, 8-11AM, Castle Rock</h2>
-          <h3 class="white margin-top-5 margin-bottom-5">$20 ages 3-13; $25 ages 14+</h3>
-          <div class="padding-bottom-20">(Ages 0-2 free with paying adult)</div>
-          <button class="btn btn-primary btn-lg custom btn-null">Sold Out</button>
-          <div class="signup padding-top-20"><i>Sign up for our <a class="white text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</i></div>
-        </div>
-        <div class="monkey"><img class="img-responsive" src="monkey.png" alt=""></div>
+  <div class="row text-center border-top">
+    <div class="intro-container">
+      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">A Storybook Holiday</h1>
+      <h4 class="roboto text-center margin-top-5">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature. </h4>
+      <div class="margin-lg-50">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
+      <h4><i>Coming this Fall!</i></h4>
+    </div>
+    <div class="custom-container no-padding">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eleven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/twelve.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/thirteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/fourteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/fifteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/sixteen.jpg" alt=""></div>
       </div>
     </div>
+    <div class="container padding-top-30 padding-bottom-60">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</div>
   </div>
+  <!--<div class="text-center padding-top-40 padding-bottom-50">
+  <div>
+    <h4><i>Coming Spring 2022!</i></h4>
+    <div>
+      <h3 class="no-margin">A Storybook Holiday Spring:</h3>
+      <h1 class="no-margin-top text-uppercase font-weight-400">That Hungry Little Bug</h1>
+      Sunday, March 27, Parker<br>
+      Tickets on sale soon. </div>
+  </div>
+</div>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -387,7 +361,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
