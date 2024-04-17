@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -253,12 +254,23 @@ Push Notifications End - Removed for Now -->
 .photo-content-wrapper {
     text-align: center;
 }
+.thriller-intro {
+    text-align: center;
+    padding: 30px 15px 0 15px;
+}
+.thriller-row {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px 60px 15px;
+}
 .photo-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1150px;
-    margin: 0 auto 50px auto;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 .photo-item {
     display: flex;
@@ -272,8 +284,6 @@ Push Notifications End - Removed for Now -->
 }
 .photo-item-inner {
     padding: 30px 30px 0;
-    max-width: 775px;
-    margin: 0 auto;
 }
 .single-photo-row {
     max-width: 1300px;
@@ -452,13 +462,6 @@ opacity:0;
 }
 }
 
-@media (max-width: 768px) {
-.photo-item {
-    flex-direction: column;
-    padding: 0;
-}
-}
-
 @media (max-width: 795px) {
 .author-item.one {
     border-right: 0;
@@ -474,9 +477,6 @@ opacity:0;
 @media (max-width: 725px) {
 .image-large {
     display: none;
-}
-.photo-wrapper {
-    max-width: 790px;
 }
 }
 
@@ -523,6 +523,33 @@ opacity:0;
 .page-nav {
     max-width: 800px;
     margin: 0 auto;
+}
+}
+
+@media (max-width: 1400px) {
+.photo-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.photo-item:last-child {
+    width: 100%;
+    max-width: 900px;
+}
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+}
+
+@media (max-width: 950px) {
+.photo-wrapper {
+    flex-direction: column;
+    align-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.photo-item {
+    max-width: 900px;
 }
 }
 
@@ -726,19 +753,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <!--<div class="row">
+    <div class="thriller-intro">
+      <div class="text-uppercase">DCL Presents:</div>
+      <h2 class="no-margin-top margin-bottom-5">2024 Summer Thriller Series</h2>
+      <div class="large-text">Spend an evening with the New York Times bestselling authors behind these new thrillers!</div>
+    </div>
+  </div>
+  <div class="row">
     <div class="photo-wrapper">
       <div class="photo-item black text-center bg-gray-5">
-        <div class="monkey-background"></div>
+        <div><img class="img-responsive" src="jack-carr.jpg" alt="Jack Carr"></div>
         <div class="photo-item-inner">
-          <h4 class="no-margin-top margin-bottom-5">A Storybook Holiday:</h4>
-          <h2 class="no-margin-top text-uppercase font-weight-400">Monkey Business</h2>
-          <div>Celebrate spring with our favorite curious monkey, George. Enjoy a tasty brunch, springtime and animal-themed crafts, a Man with the Yellow Hat activity, fun photo ops, sweet treats, snacks, and bananas! Ideal for ages&nbsp;2-5, but all ages are welcome.</div>
-          <div class="large-text margin-top-10">Sunday, April&nbsp;7, 8-11AM, <a href="../castle-rock/">Castle Rock</a></div>
-          <div>Tickets: $20&nbsp;ages 3-13&nbsp;| $25&nbsp;ages&nbsp;14+</div>
-          <div>(Ages 0-2 free with paying adult)</div>
+          <h2 class="no-margin-top text-uppercase">Jack Carr</h2>
+          <div class="large-text">In conversation with KOA’s Ross Kaminsky</div>
+          <div>New Terminal List novel, <a href="https://dcl.bibliocommons.com/v2/record/S114C1779829"><i>Red Sky Mourning</i></a></div>
+          <div>Premium ticket: Book signing included</div>
+          <div class="large-text margin-top-5 margin-bottom-5">Friday, June&nbsp;21, 7PM</div>
+          <div><a href="https://maps.app.goo.gl/xyRnvSPeB1q5vZEZ9" target="_blank">DCSD Legacy Campus</a></div>
         </div>
-        <div class="align-bottom-alt"><a class="btn btn-null btn-lg text-uppercase">Sold Out</a></div>
+        <div class="align-bottom-alt"><a hret="#" class="btn btn-lg btn-primary text-uppercase">Buy Tickets</a></div>
       </div>
+      <div class="photo-item black text-center bg-gray-5">
+        <div><img class="img-responsive" src="daniel-silva.jpg" alt="Daniel Silva"></div>
+        <div class="photo-item-inner">
+          <h2 class="no-margin-top text-uppercase">Daniel Silva</h2>
+          <div>New Gabriel Allon novel, <a href="https://dcl.bibliocommons.com/v2/record/S114C1786400"><i>A Death in Cornwall</i></a></div>
+          <div>Premium ticket: Pre-signed book only</div>
+          <div><i>*Cash bar ages 21-plus</i></div>
+          <div class="large-text margin-top-5 margin-bottom-5">Thursday, July&nbsp;18, 7PM</div>
+          <div><a href="https://maps.app.goo.gl/qoo5MtRSWLLJUDMr9" target="_blank">Denver Marriott South at Park Meadows</a></div>
+        </div>
+        <div class="align-bottom-alt"><a hret="#" class="btn btn-lg btn-primary text-uppercase">Buy Tickets</a></div>
+      </div>
+      <div class="flex-break"></div>
+      <div class="photo-item black text-center bg-gray-5">
+        <div><img class="img-responsive" src="brad-thor.jpg" alt="Brad Thor"></div>
+        <div class="photo-item-inner">
+          <h2 class="no-margin-top text-uppercase">Brad Thor</h2>
+          <div class="large-text">In conversation with KOA’s Ross Kaminsky</div>
+          <div>New Scot Harvath novel, <a href="https://dcl.bibliocommons.com/v2/record/S114C1783522"><i>Shadow of Doubt</i></a></div>
+          <div>Premium ticket: Pre-signed book only</div>
+          <div class="large-text margin-top-5 margin-bottom-5">Wednesday, July&nbsp;24, 7PM</div>
+          <div><a href="https://maps.app.goo.gl/xyRnvSPeB1q5vZEZ9" target="_blank">DCSD Legacy Campus</a></div>
+        </div>
+        <div class="align-bottom-alt"><a hret="#" class="btn btn-lg btn-primary text-uppercase">Buy Tickets</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="thriller-row">
+      <div class="margin-bottom-5">Premium tickets for each event include a hardcover copy of the author’s book and a seat for the presentation. Companion tickets are available with the purchase of a premium ticket and include the author’s presentation only. Coffee, tea, and desserts provided. Book sales at each event by Books Are Awesome.</div>
+      <div class="large-text margin-bottom-5">Tickets: $35 Premium, $20 Companion</div>
+      <div><i>*Purchase one ticket and receive a $5 discount for a second Summer Thriller event purchase.</i></div>
     </div>
   </div>-->
   <div class="row bg-gray-5 margin-top-30 padding-top-40 padding-bottom-80">
@@ -996,4 +1062,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
