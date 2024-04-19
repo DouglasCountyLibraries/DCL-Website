@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -132,20 +133,24 @@ width: calc(100% * 0.5);
 }
 /* row three */
     
-.wilson-container {
+.summer-authors-container {
     display: flex;
     max-width: 1440px;
+    min-height: 640px;
     margin: 30px auto 0 auto;
 }
-.wilson-wrapper {
+.summer-authors-wrapper {
     display: flex;
     width: 100%;
 }
-.wilson-image {
-    background: #fff;
+.summer-authors-image {
+    background: #fff url("summer-authors.jpg") center center/cover;
 width: calc(100% * 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.wilson-info {
+.summer-authors-info {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -156,16 +161,24 @@ width: calc(100% * 0.5);
     font-size: 18px;
     text-align: center;
 }
-.wilson-info > div {
+.summer-authors-info > div {
     max-width: 480px;
     margin: 0 auto;
 }
-.wilson-info h1 {
+.summer-authors-info h1 {
     color: #fff;
     margin: 0 0 10px;
     font-size: 42px;
     font-weight: 500;
     line-height: 1;
+}
+.fa-ul.author-list {
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 0;
+}
+.fa-ul.author-list li {
+    padding-bottom: 10px;
 }
 /* row four */
     
@@ -211,23 +224,26 @@ width: calc(100% * 0.5);
 }
 
 @media (max-width: 950px) {
-.jones-container, .wilson-container, .showers-container, .kendra-container {
+.jones-container, .summer-authors-container, .showers-container, .kendra-container {
     max-width: 720px;
 }
-.jones-wrapper, .wilson-wrapper, .showers-wrapper, .kendra-wrapper {
+.jones-wrapper, .summer-authors-wrapper, .showers-wrapper, .kendra-wrapper {
     flex-direction: column;
 }
-.jones-image, .jones-info, .wilson-image, .wilson-info, .showers-image, .showers-info, .kendra-image, .kendra-info {
+.jones-image, .jones-info, .summer-authors-image, .summer-authors-info, .showers-image, .showers-info, .kendra-image, .kendra-info {
     width: 100%;
 }
-.wilson-info, .showers-info, .kendra-info {
+.summer-authors-info, .showers-info, .kendra-info {
     order: 2;
 }
-.wilson-image, .showers-image, .kendra-image {
+.summer-authors-image, .showers-image, .kendra-image {
 order 1;
 }
 .showers-image, .kendra-image {
     height: 500px;
+}
+.summer-authors-image {
+    height: 540px;
 }
 }
 </style>
@@ -429,14 +445,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>-->
-    <div class="wilson-container">
-      <div class="wilson-wrapper">
-        <div class="wilson-image"><img class="img-responsive" src="carter-wilson-updated.jpg" alt="Carter Wilson"></div>
-        <div class="wilson-info">
+    <div class="summer-authors-container">
+      <div class="summer-authors-wrapper">
+        <div class="summer-authors-image"></div>
+        <div class="summer-authors-info">
           <div>
-            <h1>Carter Wilson</h1>
+            <h1>Must-see Summer Author Events</h1>
           </div>
-          <div>Join us as the USA Today bestseller presents <a class="white text-underline" href="https://dcl.bibliocommons.com/v2/record/S114C1783203">The Father She Went to Find</a>, Saturday, April&nbsp;20,&nbsp;6:30PM, in Highlands Ranch. <a class="white text-underline" href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=230128" target="_blank">Register Now</a></div>
+          <div>
+            <div class="padding-bottom-15">Save the dates for these New York Times bestselling authors! Details and ticket sales coming soon.</div>
+            <ul class="text-left fa-ul author-list">
+              <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>Jack Carr | Friday, June 21, 7PM, DCSD Legacy Campus</li>
+              <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>Daniel Silva | Thursday, July 18, 7PM, Denver Marriott South Park Meadows</li>
+              <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>Brad Thor | Wednesday, July 24, 7PM, DCSD Legacy Campus</li>
+              <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>William Kent Krueger | Wednesday, August 21, 7PM, DCSD Legacy Campus</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -572,4 +596,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
