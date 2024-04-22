@@ -11,28 +11,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <style>
-body {
+html, body {
     margin: 0;
     padding: 0;
 }
 .display-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    background: #333 url("display-background.jpg") center center no-repeat;
     width: 1080px;
     height: 1920px;
     margin: 0 auto;
-    background: #333 url("display-background.jpg") center center no-repeat;
+}
+.display-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 400;
     font-style: normal;
     color: #fff;
+    padding: 0 30px;
+    height: 1920px;
 }
 .room-title {
-	font-size: 66px;
-	padding: 46px 30px 0;
+    font-size: 66px;
+    padding: 46px 0 0;
 }
 .date-time-wrapper {
     display: flex;
@@ -49,18 +54,22 @@ body {
     color: #fff;
 }
 .widget-wrapper {
-	padding: 180px 30px 30px;
+    padding: 180px 0 0 0;
+}
+.reserve-message {
+align-self: flex-end;
 }
 </style>
 </head>
 <body>
 <div class="display-wrapper">
-  <div class="room-title">Conference Room E</div>
-  <!-- HTML element to display the date and time -->
-  <div class="date-time-wrapper">
-    <div id="dateTimeDisplay"></div>
-  </div>
-  <script>
+  <div class="display-content">
+    <div class="room-title">Conference Room E</div>
+    <!-- HTML element to display the date and time -->
+    <div class="date-time-wrapper">
+      <div id="dateTimeDisplay"></div>
+    </div>
+    <script>
         // Function to get the current day name
         function getDayName(dayNumber) {
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -106,7 +115,11 @@ body {
         // Update the date and time every minute
         setInterval(displayCurrentDateTime, 1000); // 1000 milliseconds = 1 second
     </script>
-  <div class="widget-wrapper"><iframe src="https://dclibraries.libnet.info/widget?id=21245&style=1554" data-widgetid="21245" data-client="dclibraries" scrolling="no" style="overflow: hidden;" width="100%" height="400" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe></div>
+    <div class="widget-wrapper">
+      <iframe src="https://dclibraries.libnet.info/widget?id=21245&style=1554" data-widgetid="21245" data-client="dclibraries" scrolling="no" style="overflow: hidden;" width="100%" height="400" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
+    </div>
+    <div class="reserve-message">Is this room vacant? To reserve it for immediate use, visit DCL.org or see a staff member.</div>
+  </div>
 </div>
 </body>
 </html>
