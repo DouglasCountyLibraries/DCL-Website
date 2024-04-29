@@ -70,8 +70,11 @@ h1.tan-nimbus {
     font-family: 'Tan Nimbus', serif;
     font-size: 80px;
     margin: 0;
-    line-height: inherit;
+    line-height: 91px;
     color: #333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .blue-font {
     color: #134b94;
@@ -79,15 +82,15 @@ h1.tan-nimbus {
 .orange-font {
     color: #f6891f;
 }
-    .font-stack {
-        color: #fcb017;
-        display: flex;
-        flex-direction: column;
-    }
+.yellow-font {
+    color: #fcb017;
+    display: flex;
+    font-size: 28px;
+    line-height: 37px;
+    padding: 0 12px;
+}
 .background-one {
-    background: #b8d4df;
-    margin-top: 8px;
-    border-radius: 3px;
+    background: #fff;
 }
 .background-two {
     background: #faae32;
@@ -134,19 +137,14 @@ background-position: 5000px 0;
 }
 }
 .custom-container {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
     max-width: 1170px;
     margin: 0 auto;
 }
 .custom-container.one {
-    background: url("background-one.jpg") center center/cover;
-    padding: 60px 10px 60px;
+	padding: 70px 10px 50px;
 }
 .custom-container.two {
     padding: 60px 10px 60px;
-    color: #000;
 }
 .custom-container.three {
     padding: 70px 10px 100px;
@@ -160,17 +158,16 @@ background-position: 5000px 0;
     text-align: center;
 }
 .custom-container h2, .custom-container h3, .custom-container h4 {
-    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
     color: #333;
 }
 .custom-container.one h2 {
-    font-weight: 400;
+
     margin: 10px 0;
     text-transform: uppercase;
 }
 .custom-container.one h3, .custom-container.two h3 {
-    font-weight: 400;
-    margin: 5px 0 0;
+
+	margin: 0 0 5px 0;
 }
 .custom-container.two h3 {
     font-weight: 400;
@@ -197,29 +194,12 @@ background-position: 5000px 0;
     font-weight: 500;
     color: #000;
 }
-.cr-info {
-    color: #d36a50;
-    font-size: 20px;
-    font-weight: 400;
-    padding-top: 5px;
-}
-.cr-info a {
-    color: #d36a50;
-    text-decoration: underline;
-}
 .intro-text {
-    font-size: 18px;
+
     padding: 5px 0 0;
     text-align: center;
-    font-weight: 400;
+
     max-width: 925px;
-    margin: 0 auto;
-}
-.intro-text-alt {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 400;
-    max-width: 700px;
     margin: 0 auto;
 }
 .giveaway-text {
@@ -301,7 +281,7 @@ background-position: 5000px 0;
     flex-wrap: wrap;
     padding: 15px 0;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
     margin: 0 auto;
     justify-content: center;
@@ -324,7 +304,7 @@ background-position: 5000px 0;
 .link, .link:visited, .link:active {
     width: 260px;
     /*width: 225px;*/
-    background: #000;
+    background: #0f543e;
     color: #fff;
     margin: 10px;
     padding: 20px 0;
@@ -344,22 +324,22 @@ background-position: 5000px 0;
 .alt-link-wrapper {
     display: flex;
     justify-content: center;
-    padding: 15px 0 25px;
+    padding: 15px 0 15px;
 }
 .alt-link {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: center;
-    line-height: 20px;
-    margin: 15px;
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-align: center;
+	line-height: 20px;
+	margin: 15px 30px;
 }
 .alt-link a {
-    color: #333;
-    font-weight: 600;
-    transition-duration: 0.4s;
+	color: #333;
+	font-weight: 700;
+	transition-duration: 0.4s;
 }
 .alt-link a:hover {
     color: #333;
@@ -441,40 +421,6 @@ background-position: 5000px 0;
 .modal-body {
     padding: 20px 30px 40px;
 }
-.row-line-one {
-    height: 3px;
-    width: 98%;
-    background: #333;
-    transform: rotate(-.4deg);
-    margin: 10px auto 0;
-}
-.row-line-two {
-    height: 3px;
-    width: 97%;
-    background: #333;
-    transform: rotate(.6deg);
-    margin: 10px 1% 0;
-}
-.row-line-three {
-    height: 3px;
-    width: 98%;
-    background: #333;
-    transform: rotate(-.9deg);
-    margin: 10px auto 0;
-}
-.row-line-four {
-    height: 3px;
-    width: 99%;
-    background: #333;
-    transform: rotate(.9deg);
-    margin: 10px 1% 0;
-}
-.row-line-five {
-    height: 3px;
-    width: 96%;
-    background: #333;
-    margin: -30px auto 25px auto;
-}
 
 @media (max-width: 875px) {
 .prize-wrapper, .goal-wrapper {
@@ -487,7 +433,7 @@ background-position: 5000px 0;
     background: url("background-one-small.jpg") top center/cover;
     padding: 75px 10px 45px;
 }
-.intro-text, .intro-text-alt {
+.intro-text {
     max-width: 655px;
 }
 .goal-item, .prize-item {
@@ -503,14 +449,6 @@ background-position: 5000px 0;
     flex-direction: column;
     padding: 0;
     align-items: center;
-}
-.alt-link {
-    height: 205px;
-    width: 195px;
-    margin-top: -10px;
-}
-.alt-link:nth-of-type(3) {
-    margin-top: -35px;
 }
 }
 
@@ -714,33 +652,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
+  <div class="row background-row border-top">
     <div class="row-wrapper">
-      <div class="row-line-one"></div>
       <div class="background-one">
         <div class="custom-container one">
           <div class="text-center">
-            <h1 class="tan-nimbus"><span class="blue-font">Flock</span> <span class="font-stack">to the</span><span class="orange-font">Library</span></h1>
-            <h2>2023 Summer Fun for All Ages</h2>
-            <h3>Saturday, June 3-Monday, July 31</h3>
-            <div class="cr-info"><i>Important information for <a href="#" data-toggle="modal" data-target="#castle-rock">Castle Rock participants</a>!</i></div>
+            <div class="flock-heading">
+              <h1 class="tan-nimbus"><span class="blue-font">Flock</span><span class="yellow-font">to<br>
+                the</span><span class="orange-font">Library</span></h1>
+            </div>
+            <h2>2024 Summer Fun for All Ages</h2>
+            <h3>Saturday, June 1-Wednesday, July 31</h3>
           </div>
           <div class="intro-text">
-            <div>Fetch some fun during your summer of reading with exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read.</div>
+            <div>Soar into summer reading with exciting activities, prizes, and giveaways. We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest on the reading log. We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
           </div>
           <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Pre-Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a> </div>
-          <div class="intro-text-alt">You can also do the supplemental activities we suggest on the <a href="reading-log.pdf" target="_blank">reading log</a>. We aren’t set on you reading 900 minutes, we just want you to read and have a ball while doing it!</div>
           <div class="alt-link-wrapper">
-            <div class="alt-link"><img class="img-responsive" src="raise-the-woof.png" alt=""><a href="#" data-toggle="modal" data-target="#kickoff">Prize Pickup<br>
-              Kickoff</a></div>
-            <div class="alt-link"><img class="img-responsive" src="summer-events.png" alt=""> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=180" target="_blank">Bow-Wow<br>
-              Summer Events</a></div>
-            <div class="alt-link"><img class="img-responsive" src="jokes.png" alt=""> <a href="jokes.pdf" target="_blank">Pawsome<br>
-              Jokes</a></div>
+            <div class="alt-link">
+              <div><img src="bird-one.jpg" alt=""></div>
+              <div><a href="#" data-toggle="modal" data-target="#kickoff">Prize Pickup<br>
+                Kickoff</a></div>
+            </div>
+            <div class="alt-link">
+              <div><img src="bird-two.jpg" alt=""></div>
+              <div><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=a+summer+reading+event&lib=ALL&nd=180" target="_blank">Fine-Feathered<br>
+                Summer Events</a></div>
+            </div>
+            <div class="alt-link">
+              <div><img src="bird-three.jpg" alt=""></div>
+              <div><a href="jokes.pdf" target="_blank">Cheep Bird<br>
+                Jokes & Facts</a></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row-line-two"></div>
       <div id="giveaways" class="background-two">
         <div class="custom-container two text-center">
           <h1 class="bubblegum" style="color: #000;">10 Days of Giveaways</h1>
@@ -830,7 +776,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="giveaway-text-alt">Each giveaway day features a random drawing for that day’s prize. Everyone registered May 1-July 14 will be entered into the prize drawings. Most prizes mailed directly to winners or delivery will be otherwise arranged. Winners will be announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free. </div>
         </div>
       </div>
-      <div class="row-line-three"></div>
       <div id="prizes" class="background-three">
         <div class="custom-container three">
           <h1 class="bubblegum white text-center">Prizes</h1>
@@ -859,7 +804,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="rando-dog-small"><img src="rando-dog.png" alt=""></div>
         </div>
       </div>
-      <div class="row-line-four"></div>
       <div id="goals" class="background-four">
         <div class="custom-container four">
           <h1 class="bubblegum text-center" style="color: #000;">Goals</h1>
