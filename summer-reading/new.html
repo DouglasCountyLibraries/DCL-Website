@@ -90,7 +90,7 @@ h1.tan-nimbus {
     padding: 0 12px;
 }
 .background-one {
-    background: #fff;
+    background: #fff url("info-background.jpg") bottom right no-repeat;
 }
 .background-two {
     background: #fdb414;
@@ -100,7 +100,7 @@ h1.tan-nimbus {
     background: #0e438f;
 }
 .background-four {
-    background: #65bd45;
+    background: #4eb54e;
     padding-bottom: 30px;
 }
 .custom-container {
@@ -108,7 +108,7 @@ h1.tan-nimbus {
     margin: 0 auto;
 }
 .custom-container.one {
-    padding: 70px 10px 50px;
+    padding: 70px 10px 300px;
 }
 .custom-container.two {
     max-width: 925px;
@@ -119,8 +119,8 @@ h1.tan-nimbus {
     padding: 70px 10px 120px;
 }
 .custom-container.four {
-    padding: 60px 10px 75px;
-    color: #000;
+    padding: 70px 10px 120px;
+ 
 }
 .intro-text {
     padding: 5px 0 0;
@@ -140,8 +140,7 @@ h1.tan-nimbus {
 }
 .link, .link:visited, .link:active {
     width: 260px;
-    /*width: 225px;*/
-    background: #0f543e;
+    background: #398439;
     color: #fff;
     margin: 10px;
     padding: 20px 0;
@@ -154,6 +153,7 @@ h1.tan-nimbus {
 }
 .link:hover {
     color: #fff;
+    background: #0f543e;
     letter-spacing: 2px;
     text-decoration: none;
     transition-duration: 0.4s;
@@ -208,11 +208,11 @@ h1.tan-nimbus {
 }
 .goal-item {
     max-width: 500px;
-    background: #fff;
+    background: rgba(255,255,255,.6);
     padding: 30px 30px 40px;
     margin: 5px;
     border-radius: 3px;
-    color: #333;
+    color: #000;
 }
 .counter {
     font-size: 88px;
@@ -255,6 +255,12 @@ h1.tan-nimbus {
 .modal-body {
     padding: 20px 30px 40px;
 }
+    
+    @media (max-width: 1120px) {
+        .background-one {
+	background: #fff url("info-background.jpg") bottom center no-repeat;
+}
+    }
 
 @media (max-width: 875px) {
 .prize-wrapper, .goal-wrapper {
@@ -263,10 +269,7 @@ h1.tan-nimbus {
     max-width: 500px;
     margin: 0 auto;
 }
-.custom-container.one {
-    background: url("background-one-small.jpg") top center/cover;
-    padding: 75px 10px 45px;
-}
+
 .intro-text {
     max-width: 655px;
 }
@@ -291,24 +294,13 @@ h1.tan-nimbus {
     background: #fff;
     padding: 30px 30px 40px;
 }
-.rando-dog-small {
-    position: relative;
-}
-.rando-dog-small img {
-    position: absolute;
-    top: -55px;
-    left: 175px;
-}
+
 .custom-container.three {
     padding: 70px 10px 122px;
 }
 }
 
-@media (min-width: 476px) {
-.rando-dog-small {
-    display: none;
-}
-}
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -503,7 +495,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div>We’ve suggested 900 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. You can also do the supplemental activities we suggest on the reading log. We aren’t set on you reading 900 minutes, we just want you to read and have fun while doing it!</div>
           </div>
           <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Pre-Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a> </div>
-          <div class="alt-link-wrapper">
+          <!--<div class="alt-link-wrapper">
             <div class="alt-link">
               <div><img src="bird-one.jpg" alt=""></div>
               <div><a href="#" data-toggle="modal" data-target="#kickoff">Prize Pickup<br>
@@ -519,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div><a href="jokes.pdf" target="_blank">Cheep Bird<br>
                 Jokes & Facts</a></div>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
       <div id="giveaways" class="background-two">
@@ -559,17 +551,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div id="goals" class="background-four">
         <div class="custom-container four">
           <h1 class="black text-uppercase text-center">Goals</h1>
-          <div class="black large-text text-center">Help us meet our community goal of 9 million minutes read!</div>
-          <div class="counter">0</div>
-          <div class="minutes text-center">Minutes Read</div>
+          <div class="black large-text text-center">Help us meet our community goal of 9.5 million minutes read!</div>
+          <!--<div class="counter">0</div>
+          <div class="minutes text-center">Minutes Read</div>-->
           <div class="goal-wrapper">
             <div class="goal-item">
-              <h4 class="no-margin-top"><a style="font-weight:500;" class="black text-underline" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Add your minutes</a> to help us meet our goal.</h4>
-              <div>If we meet the community goal, the <a href="../foundation/">Douglas County Libraries Foundation</a> will donate $1,000 to Guide Dogs for the Blind, which seeks to provide a safe means of mobility for people who are blind and visually impaired.</div>
+              <h4 class="black no-margin-top">Beginning June 1, add your minutes to help us meet our goal.</h4>
+              <div>If we meet the community goal, the <a class="black text-underline" href="../foundation/">Douglas County Libraries Foundation</a> will donate $1,000 to HawkQuest, whose mission is to make education both meaningful and fun, while creating an atmosphere that fosters respect for the land and for the stewardship of all living things. </div>
             </div>
             <div class="goal-item">
-              <h4 class="no-margin-top">Help your school earn $500!</h4>
-              All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school’s name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>. </div>
+              <h4 class="black no-margin-top">Help your school earn $500!</h4>
+              All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school’s name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a class="black text-underline" href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>. </div>
           </div>
           <!--<div><h2 class="text-uppercase text-center">Who's Ahead?*</h2>
           <div class="leaderboard-wrapper">
@@ -644,9 +636,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <h3 style="color: #333;" class="text-center modal-title">Contest Rules and Restrictions</h3>
         </div>
         <div class="modal-body">
-          <div>Contest applies only to K-12 students in schools located in Douglas County and accredited by the Colorado Department of Education. Awards will be given to one school at each level: elementary, middle, high, and other (e.g., charter, K-12).</div>
-          <div class="padding-top-15">Sign-ups are tallied through Beanstack online registration. The school in each category with the most sign-ups as a percentage of 2022-2023 enrollment earns the award.</div>
-          <div class="padding-top-15">Contest runs May 1-July 31. Prizes courtesy of Douglas County Libraries Foundation. Award recipients will be notified in August 2023.</div>
+          <div>Contest applies only to K-12 students in schools located in Douglas County and accredited by the Colorado Department of Education. Awards will be given to one school at each level: elementary, middle, high, and other (e.g., charter, K-12). </div>
+          <div class="padding-top-15">Sign-ups are tallied through Beanstack online registration. The school in each category with the most sign-ups as a percentage of 2023-2024 enrollment earns the award.</div>
+          <div class="padding-top-15">Contest runs May 1-July 31. Prizes courtesy of Douglas County Libraries Foundation. Award recipients will be notified in August 2024.</div>
         </div>
       </div>
     </div>
