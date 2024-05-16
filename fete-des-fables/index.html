@@ -115,7 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 18px;
     text-align: center;
     color: #2a1f18;
-    padding: 0 15px 430px;
+    padding: 0 15px;
 }
 .info-content a {
     text-decoration: underline;
@@ -144,7 +144,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .info-content-four, .info-content-four a {
     font-size: 21px;
-    padding: 30px 0 20px;
+    padding: 30px 0 10px;
     font-style: italic;
 }
 .info-wrapper-one, .info-wrapper-two, .info-wrapper-three {
@@ -216,14 +216,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 15px 430px;
 }
 .logos a {
-opacity: .8;
+    opacity: .8;
     transition: all .4s ease-out;
 }
 .logos a:hover, .logos a:focus {
     opacity: 1;
-transform: scale(1.05);
+    transform: scale(1.05);
     transition: all .4s ease-out;
 }
 .sponsors {
@@ -242,6 +243,13 @@ transform: scale(1.05);
     display: flex;
     align-items: center;
     font-weight: 600;
+}
+
+@media (max-width: 1040px) {
+.logos {
+    max-width: 750px;
+    margin: 0 auto;
+}
 }
 
 @media (max-width: 925px) {
@@ -507,9 +515,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <a href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank" style="font-size: 26px;">Highlands Ranch Mansion</a>
             <div></div>
           </div>
-          <div class="info-content-four">Event proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>. <a href="#sponsors" class="" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</div>
-          <div class="logos"><a href="https://www.midwesttape.com/" target="_blank"><img class="" src="sponsors/midwest-tape.png" alt="Midwest Tape"></a><a href="https://www.parksidepromotions.com/" target="_blank"><img class="" src="sponsors/parkside-promotions.png" alt="Midwest Tape"></a></div>
+          <div class="info-content-four">Event proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>.<br>
+            <a href="#sponsors" class="" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</div>
         </div>
+        <div class="logos"> <a href="https://fransenpittman.com/" target="_blank"><img class="" src="sponsors/fransen-pittman.png" alt="Fransen Pittman Construction"></a> <a href="https://hbstrash.com/" target="_blank"><img class="" src="sponsors/hbs-trash-services.png" alt="HBS Trash Services"></a> <a href="https://www.midwesttape.com/" target="_blank"><img class="" src="sponsors/midwest-tape.png" alt="Midwest Tape"></a><a href="https://www.parksidepromotions.com/" target="_blank"><img class="" src="sponsors/parkside-promotions.png" alt="Midwest Tape"></a></div>
       </div>
     </div>
   </div>
