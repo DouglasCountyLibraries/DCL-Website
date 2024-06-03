@@ -35,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?41624">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?6224">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
@@ -216,11 +216,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </li>
       <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
-      <li class="reserve-a-space-active"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+      <li class="dropdown reserve-a-space-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+          <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+        </ul>
+      </li>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../featured-events/">Featured Events</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research/">Research</a></li>
@@ -275,11 +281,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </ul>
               </li>
               <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
-              <li class="reserve-a-space-active mobile-nav-heading"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#reserve-a-space">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="reserve-a-space" class="nav mobile-nav-list collapse">
+                  <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+                  <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+                </ul>
+              </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../featured-events/">Featured Events</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
@@ -314,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Parents</h1>
         <h4 class="roboto margin-top-5 margin-bottom-5">DCL is proud to help you build bright futures for your kids! </h4>
-        <div class="subheading margin-lg-175">We also offer a <a href="../camp-dcl/">variety of camps</a> and <a href="../book-clubs/">kids book clubs</a> at our locations and can host your child’s <a href="../birthday-parties/">birthday party</a>. Sign up for our <a href="../newsletters/">eNewsletter</a> to learn about <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">upcoming events</a> and happenings for kids and families each month.</div>
+        <div class="subheading margin-lg-175">We also offer a <a href="../camp-dcl/">variety of camps</a> and <a href="../book-clubs/">kids book clubs</a> at our locations and can host your child’s <a href="../birthday-parties/">birthday party</a>. Sign up for our <a href="../newsletters/">eNewsletter</a> to learn about <a href="https://go.dcl.org/events?et=Storytime">upcoming events</a> and happenings for kids and families each month.</div>
       </div>
     </div>
   </div>
@@ -330,12 +342,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
               <div class="padding-15" style="border-bottom:1px solid #ccc;">Choose a Location:</div>
               <div class="padding-15 text-capitalize">
                 <ul class="list-unstyled">
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bark+for+books&df=list&cn=0&lib=1000&nd=365" target="_blank">Castle Pines</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bark+for+books&df=list&cn=0&lib=1010&nd=365" target="_blank">Castle Rock</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bark+for+books&df=list&cn=0&lib=1004&nd=365" target="_blank">Highlands Ranch</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bark+for+books&df=list&cn=0&lib=1002&nd=365" target="_blank">Lone Tree</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bark+for+books&df=list&cn=0&lib=1005&nd=365" target="_blank">Parker</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=bark+for+books&df=list&cn=0&lib=1006&nd=365" target="_blank">Roxborough</a></li>
+                  <li><a href="https://go.dcl.org/events?l=castle+pines&term=bark+for+books&t=esl%2C+literacy+%26+citizenship&r=months&n=12">Castle Pines</a></li>
+                  
+                    
+                    <li><a href="https://go.dcl.org/events?l=castle+rock&term=bark+for+books&t=esl%2C+literacy+%26+citizenship&r=months&n=12">Castle Rock</a></li>
+                    
+                    <li><a href="https://go.dcl.org/events?l=highlands+ranch&term=bark+for+books&t=esl%2C+literacy+%26+citizenship&r=months&n=12">Highlands Ranch</a></li>
+                    
+                    <li><a href="https://go.dcl.org/events?l=lone+tree&term=bark+for+books&t=esl%2C+literacy+%26+citizenship&r=months&n=12">Lone Tree</a></li>
+                    
+                    <li><a href="https://go.dcl.org/events?l=parker&term=bark+for+books&t=esl%2C+literacy+%26+citizenship&r=months&n=12">Parker</a></li>
+                    
+                    <li><a href="https://go.dcl.org/events?l=roxborough&term=bark+for+books&t=esl%2C+literacy+%26+citizenship&r=months&n=12">Roxborough</a></li>
+                    
+                    
+                    
+                    
+                    
                 </ul>
               </div>
             </div>
@@ -359,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div id="photo-box-six"></div>
         <h3 class="text-center">Slick Science</h3>
         <div>Fun, rotating science activities for kids ages 8-12 exploring a variety of STEAM-focused topics.</div>
-        <div class="align-bottom"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=724&kw=slick+science&df=list&cn=0&lib=all&nd=365" target="_blank" class="btn btn-primary btn-lg margin-top-15">Register Now</a></div>
+        <div class="align-bottom"> <a href="https://go.dcl.org/events?term=slick+science&t=stem&r=months&n=3" class="btn btn-primary btn-lg margin-top-15">Register Now</a></div>
       </div>
       <div class="flex-break"></div>
       <div id="botb" class="photo-box-item">

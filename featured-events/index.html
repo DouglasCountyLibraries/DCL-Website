@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?41624">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?6224">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
@@ -666,11 +665,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </li>
       <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
-      <li class="reserve-a-space-active"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+      <li class="dropdown reserve-a-space-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+          <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+        </ul>
+      </li>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../featured-events/">Featured Events</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research/">Research</a></li>
@@ -725,11 +730,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </ul>
               </li>
               <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
-              <li class="reserve-a-space-active mobile-nav-heading"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#reserve-a-space">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="reserve-a-space" class="nav mobile-nav-list collapse">
+                  <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+                  <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+                </ul>
+              </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../featured-events/">Featured Events</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
@@ -770,17 +781,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row">
     <div class="page-nav">
-      <div class="page-nav-item"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank"><i class="pagenav-icon fa-regular fa-calendar"></i>Events Calendar</a> 
-        
-        <!--<a href="https://go.dcl.org/events?et=storytime&r=months&n=1"><i class="pagenav-icon fa-regular fa-calendar"></i>Events Calendar</a>--> 
-        
-      </div>
+      <div class="page-nav-item"> <a href="https://go.dcl.org/events?et=storytime&r=months&n=1"><i class="pagenav-icon fa-regular fa-calendar"></i>Events Calendar</a> </div>
       <div class="page-nav-item"><a href="#author-events"><i class="pagenav-icon fa-regular fa-books"></i>Other Author Events</a></div>
-      <div class="page-nav-item"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=724&et=2,3,15,18,22,24,25,35,36,38,39,40&lib=ALL&nd=180" target="_blank"><i class="pagenav-icon fa-regular fa-calendar-heart"></i>Kids Events Calendar</a> 
-        
-        <!--<a href="https://go.dcl.org/events?et=storytime&ea=adults&r=months&n=1"><i class="pagenav-icon fa-regular fa-calendar-heart"></i>Kids Events Calendar</a>--> 
-        
-      </div>
+      <div class="page-nav-item"> <a href="https://go.dcl.org/events?et=storytime&ea=adults&r=months&n=1"><i class="pagenav-icon fa-regular fa-calendar-heart"></i>Kids Events Calendar</a> </div>
     </div>
   </div>
   <div class="row">
@@ -929,11 +932,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">Discover great new reads at an evening of book talks, with special guests and door prizes! ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
-          <a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=book+lovers&lib=ALL&nd=180" target="_blank" class="btn btn-lg btn-primary margin-top-15">Register Now</a> 
-          
-          <!--<a href="https://go.dcl.org/events?t=books%2C+authors+%26+writing&term=book+lovers&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a>--> 
-          
-        </div>
+          <a href="https://go.dcl.org/events?t=books%2C+authors+%26+writing&term=book+lovers&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a> </div>
       </div>
       <div class="box-item">
         <div class="white-bottom-row">
@@ -945,11 +944,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">Sign up for noncredit courses for the joy of learning, because curiosity never retires! Presented by Osher Lifelong Learning Institute. ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
-          <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=ageless+with+OLLI&lib=ALL&nd=365" target="_blank" class="btn btn-lg btn-primary margin-top-15">View Calendar</a> 
-          
-          <!--<a href="https://go.dcl.org/events?term=ageless+with+olli&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">View Calendar</a>--> 
-          
-        </div>
+          <a href="https://go.dcl.org/events?term=ageless+with+olli&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">View Calendar</a> </div>
       </div>
       <div class="box-item">
         <div class="white-bottom-row">
@@ -961,11 +956,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">Join us at an upcoming class presented by Active Minds, with topics to suit a wide range of interests. ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
-          <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=active+minds&lib=ALL&nd=180" target="_blank" class="btn btn-lg btn-primary margin-top-15">Register Now</a> 
-          
-          <!--<a href="https://go.dcl.org/events?term=active+minds&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a>--> 
-          
-        </div>
+          <a href="https://go.dcl.org/events?term=active+minds&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a> </div>
       </div>
     </div>
   </div>
@@ -994,11 +985,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">Is self-publishing right for you? Join us to discuss the possibilities of indie publishing, presented by author Laurie Marr Wasmund. ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Monday, June&nbsp;24, 6PM, Castle Rock</div>
-          <a href="https://douglascountylibraries.evanced.info/signup/EventDetails?EventId=236782" target="_blank" class="btn btn-lg btn-primary margin-top-15">Learn More</a> 
-          
-          <!--<a href="https://go.dcl.org/event/10826350" class="btn btn-lg btn-primary margin-top-15">Register Now</a>--> 
-          
-        </div>
+          <a href="https://go.dcl.org/event/10826350" class="btn btn-lg btn-primary margin-top-15">Register Now</a> </div>
       </div>
       <div class="box-item">
         <div class="white-bottom-row">
@@ -1010,11 +997,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">Watch classic films from the 1940s and ‘50s, then learn about and discuss film noir with film critic Walter Chaw. ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Castle Rock, Various dates, 1PM</div>
-          <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=dcl+at+the+movies&lib=1001&nd=60" target="_blank" class="btn btn-lg btn-primary margin-top-15">Register Now</a> 
-          
-          <!--<a href="https://go.dcl.org/events?term=dcl+at+the+movies&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a>--> 
-          
-        </div>
+          <a href="https://go.dcl.org/events?term=dcl+at+the+movies&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a> </div>
       </div>
       <div class="box-item">
         <div class="white-bottom-row">
@@ -1026,11 +1009,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">Learn secrets, tips, and ideas for planning unforgettable family outings and adventures, presented by local mom and outdoors writer Jamie Siebrase. ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
-          <a href="http://douglascountylibraries.evanced.info/signup/list?nomobile=1&ag=&kw=colorado+family+adventures&lib=ALL&nd=60" target="_blank" class="btn btn-lg btn-primary margin-top-15">Register Now</a> 
-          
-          <!--<a href="https://go.dcl.org/events?term=colorado+family+adventures&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a>--> 
-          
-        </div>
+          <a href="https://go.dcl.org/events?term=colorado+family+adventures&r=months&n=12" class="btn btn-lg btn-primary margin-top-15">Register Now</a> </div>
       </div>
     </div>
   </div>
@@ -1190,5 +1169,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>

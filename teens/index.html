@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?41624">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?6224">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
@@ -349,11 +348,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </li>
       <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
-      <li class="reserve-a-space-active"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+      <li class="dropdown reserve-a-space-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+          <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+        </ul>
+      </li>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../featured-events/">Featured Events</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research/">Research</a></li>
@@ -408,11 +413,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </ul>
               </li>
               <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
-              <li class="reserve-a-space-active mobile-nav-heading"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#reserve-a-space">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="reserve-a-space" class="nav mobile-nav-list collapse">
+                  <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+                  <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+                </ul>
+              </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../featured-events/">Featured Events</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
@@ -485,7 +496,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="slideshow-content">
           <h4 class="no-margin-top">DCL is here for you!</h4>
           <ul class="no-margin">
-            <li>Looking for a place to study or work on a group project? Book a <a href="http://studyrooms.douglascountylibraries.org/srres.html?branchname=CastlePines" target="_blank">study room</a>.</li>
+            <li>Looking for a place to study or work on a group project? Book a <a href="https://go.dcl.org/reserve">study room</a>.</li>
             <li>Make the grade with special effects or a film you create in <a href="../parker/">Parker</a>.</li>
             <li>Use our <a href="../research/">research databases</a> for papers and projects, to find information on scholarships, and to access live homework help.</li>
             <li><a href="../volunteer/">Volunteer</a> to earn community service credits toward graduation.</li>
@@ -501,7 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="text-center">Teens who want to make a difference in their library and their community are invited to apply to be members of Teen Library Connections (TLC). Earn <a href="../volunteer/">volunteer credit</a>, make a difference, have fun!
           <div class="margin-top-5">Stop by a meeting or talk to a youth librarian to sign up.</div>
         </div>
-        <div class="align-bottom"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=teen+library+connections&lib=all&nd=365" target="_blank" class="btn btn-lg btn-primary margin-top-20">View Calendar</a></div>
+        <div class="align-bottom"><a href="https://go.dcl.org/events?term=teen+library+connections&r=months&n=3" class="btn btn-lg btn-primary margin-top-20">View Calendar</a></div>
       </div>
       <div class="photo-item"> <img class="img-responsive" src="reading-buddies.jpg" alt="Reading Buddies">
         <h3 class="text-center">Be a Reading Buddy</h3>
@@ -526,7 +537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div id="young-adult" class="row padding-top-50 bg-gray-5 text-center">
     <h2 class="no-margin-bottom"><a href="https://dcl.bibliocommons.com/list/share/692285487_dclteens/1084535587">Must-Read Young Adult</a></h2>
-    <div class="large-text margin-top-10"><a style="font-weight: 300;" href="https://dcl.bibliocommons.com/user_profile/692285487"><i>Follow us</i></a><i> to discover more great reads!</i></div>
+    <div class="large-text margin-top-10"><a href="https://dcl.bibliocommons.com/user_profile/692285487"><i>Follow us</i></a><i> to discover more great reads!</i></div>
   </div>
   <div id="YoungAdult"></div>
   <div class="row bg-gray-5 padding-bottom-80">
@@ -685,5 +696,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>

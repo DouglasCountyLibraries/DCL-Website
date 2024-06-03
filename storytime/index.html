@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?41624">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?6224">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
@@ -365,11 +364,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </li>
       <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
-      <li class="reserve-a-space-active"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+      <li class="dropdown reserve-a-space-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+          <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+        </ul>
+      </li>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../featured-events/">Featured Events</a></li>
-          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+          <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research/">Research</a></li>
@@ -424,11 +429,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </ul>
               </li>
               <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
-              <li class="reserve-a-space-active mobile-nav-heading"><a href="../reserve-a-space/">Reserve a Space</a> </li>
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#reserve-a-space">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
+                <ul id="reserve-a-space" class="nav mobile-nav-list collapse">
+                  <li><a href="../reserve-a-space/">Reserve a Space</a></li>
+                  <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
+                </ul>
+              </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../featured-events/">Featured Events</a></li>
-                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
+                  <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
@@ -497,23 +508,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!-- #slideshow div:nth-of-type(9) --> 
     </div>
     <div class="slideshow-content">
-      <div class="padding-bottom-10"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&lib=1000,1010,1002,1003,1004,1005,1006&nd=180" target="_blank" class="btn btn-lg btn-primary btn-custom"> Storytime Calendar</a> 
-        
-        <!--<a href="https://go.dcl.org/events?t=Storytime&el=Virtual&r=days&n=30" class="btn btn-lg btn-primary btn-custom">Storytime Calendar</a>--> 
-        
-      </div>
+      <div class="padding-bottom-10"> <a href="https://go.dcl.org/events?t=Storytime&el=Virtual&r=days&n=30" class="btn btn-lg btn-primary btn-custom">Storytime Calendar</a> </div>
       <div class="margin-top-10">View the Storytime Calendar to find a Storytime at your library. Thank you for keeping Storytime allergen-free.</div>
-      <div class="padding-top-20"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=7&kw=outdoor+storytime&lib=all&nd=180" target="_blank" class="btn btn-lg btn-primary btn-custom">Outdoor Storytime</a> 
-        
-        <!--<a href="https://go.dcl.org/events?t=Storytime&el=Virtual&term=Outdoor+Storytime&r=months&n=4" class="btn btn-lg btn-primary btn-custom">Outdoor Storytime</a>--> 
-        
-      </div>
+      <div class="padding-top-20"> <a href="https://go.dcl.org/events?t=Storytime&el=Virtual&term=Outdoor+Storytime&r=months&n=4" class="btn btn-lg btn-primary btn-custom">Outdoor Storytime</a> </div>
       <div class="margin-top-10">Join us this summer for Outdoor Storytime. Ideal for ages 0-5.</div>
-      <div class="padding-top-20"> <a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&df=list&et=7&lib=1008&nd=180" target="_blank" class="btn btn-lg btn-primary btn-custom">Virtual Storytime</a> 
-        
-        <!--<a href="https://go.dcl.org/events?t=Storytime&l=Virtual&r=days&n=30" class="btn btn-lg btn-primary btn-custom">Virtual Storytime</a>--> 
-        
-      </div>
+      <div class="padding-top-20"> <a href="https://go.dcl.org/events?t=Storytime&l=Virtual&r=days&n=30" class="btn btn-lg btn-primary btn-custom">Virtual Storytime</a> </div>
       <div class="margin-top-10">Visit our Virtual Storytime calendar for recorded sessions you can enjoy from any connected device.</div>
     </div>
   </div>
@@ -711,5 +710,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
