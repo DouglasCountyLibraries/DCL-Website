@@ -563,7 +563,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
       <a href="https://go.dcl.org/events?et=storytime&l=roxborough&r=months&n=1" class="text-uppercase font-weight-400">Roxborough Calendar »</a> </div>
     <div class="widget-wrapper">
-      <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3855&bodyonly=1" data-widgetid="21598" data-client="dclibraries" scrolling="yes" width="100%" height="400" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
+      <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3855&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="yes" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5">
@@ -656,17 +656,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-function OpenInNewTab(url ){
-  var win=window.open(url, '_blank');
-  win.focus();
-}
-$("#eventsinfo .item").click(function(){
-     var url = $(this).find("a").attr("href");
-     OpenInNewTab(url);
-     return false;
-});
-	</script> 
-<script>
 	var cards = $(".random-slide");
 for (var i = 0; i < cards.length; i++) {
   var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
@@ -702,6 +691,15 @@ for (var i = 0; i < cards.length; i++) {
   cards.eq(target1).before(cards.eq(target2));
 }
  </script> 
+    <script>window.addEventListener('message', message => {
+    if(typeof message.data === 'string' && message.data.startsWith('widget-height:')) {
+        const extraHeight = 0;
+        const id = message.data.split(':')[1];
+        const height = Number(message.data.split(':')[2]);
+        const iframe = document.querySelector(`[data-widgetid="${id}"]`);
+        iframe.style.height = (height + extraHeight) + 'px';
+    }
+});</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
