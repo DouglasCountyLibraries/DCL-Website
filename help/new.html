@@ -72,7 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0 15px 15px 30px;
     padding: 0 15px;
     min-width: 25%;
-    height: 525px;
+    height: 300px;
     position: sticky;
     position: -webkit-sticky;
     overflow-y: scroll;
@@ -102,9 +102,6 @@ background-color: rgba(0,0,0,.5);
 }
 .section-nav a:hover, .section-nav a:focus {
     color: #333;
-}
-.sub-list {
-    margin-left: 5px;
 }
 section h3 {
     margin-top: 0;
@@ -164,7 +161,7 @@ section h3 {
     flex-direction: column;
     padding: 0 15px 40px;
 }
-#q {
+#questions {
     border-top: 0;
 }
 .table-contents {
@@ -181,12 +178,12 @@ section h3 {
     margin: 0;
     border-left: 0;
 }
+.sub-list {
+    display: none;
+}
 .policy-contents {
     order: 2;
     padding: 0;
-}
-.sub-list {
-    display: none;
 }
 .section-nav ul li {
     padding: 0 15px 0 0;
@@ -527,20 +524,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <nav class="section-nav">
           <ul class="list-unstyled">
             <li><a class="sidebar-heading" href="#questions">Common Questions</a>
-              <ul class="list-unstyled">
+              <ul class="sub-list">
                 <li><a href="#general-information">General Information</a></li>
                 <li><a href="#using-library">Using the Library</a></li>
               </ul>
             </li>
             <li><a class="sidebar-heading" href="#borrowing-account">Borrowing & My Account</a>
-              <ul class="list-unstyled">
+              <ul class="sub-list">
                 <li><a href="#borrowing">Borrowing</a></li>
                 <li><a href="#my-account">My Account</a></li>
                 <li><a href="#holds">Holds</a></li>
               </ul>
             </li>
             <li><a class="sidebar-heading" href="#digital-media">Digital Media</a>
-              <ul class="list-unstyled">
+              <ul class="sub-list">
                 <li><a href="#download-stream">Download & Stream</a></li>
               </ul>
             </li>
