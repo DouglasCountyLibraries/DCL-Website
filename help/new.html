@@ -47,37 +47,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-
-
-
-
-
-#questions {
-    border-top: 0;
-}
 #general-information, #using-library, #borrowing, #my-account, #holds, #download-stream {
     padding: 15px 0 18px;
 }
 .text-box {
     padding: 0 0 0 10px;
-    border-left: 2px solid #ededed;
     margin: 5px 0 8px 5px;
 }
 .padding-bottom-5 {
     padding-bottom: 5px;
 }
-
-.border-line {
-    border-bottom: 2px solid #ededed;
-}
-    
-    
-    
-    
-    
-    
-    
-    
 .custom-container {
     display: flex;
     max-width: 1450px;
@@ -139,7 +118,7 @@ section h4 {
     color: #333;
     font-size: 21px;
 }
-    section h5 {
+section h5 {
     font-size: 17px;
     /* font-weight: 400; */
     padding: 10px 0 0;
@@ -153,9 +132,8 @@ section h5:hover, section h5:focus {
 }
 section {
     border-top: 2px solid #ededed;
-     padding: 15px 0 18px;
+    padding: 15px 0 18px;
 }
-
 section > div {
     padding-bottom: 10px;
 }
@@ -170,7 +148,6 @@ section > div:last-child, section > div:nth-last-child(2) {
     text-transform: uppercase;
     margin-top: 8px;
 }
-
 
 @media (max-width: 1450px) {
 .policy-contents {
@@ -187,7 +164,7 @@ section h3 {
     flex-direction: column;
     padding: 0 15px 40px;
 }
-#access-policy {
+#q {
     border-top: 0;
 }
 .table-contents {
@@ -219,8 +196,6 @@ section h3 {
     color: #333;
 }
 }
-  
-    
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -411,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
-    <div class="container padding-bottom-15">
+    <div class="container padding-bottom-30">
       <div class="text-center">
         <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Help</h1>
         <h4 class="roboto margin-top-5">Customer Service Hours: Mon-Thu: 8AM-8PM, Fri: 8AM-6PM, Sat-Sun: 10AM-4PM </h4>
@@ -423,12 +398,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="container custom-container">
-
+    <div class="custom-container"> 
+      
       <!--######-->
       <div class="policy-contents">
         <section id="questions">
-          <h3 class="text-uppercase font-weight-400">Common Questions</h3>
+          <h3>Common Questions</h3>
           <section id="general-information">
             <h4>General Information</h4>
             <h5 class="toggle-text" onclick="$('.cq1').toggle(300);">What are your hours?</h5>
@@ -466,7 +441,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <!--######-->
         
         <section id="borrowing-account">
-          <h3 class="text-uppercase font-weight-400">Borrowing & My Account</h3>
+          <h3>Borrowing & My Account</h3>
           <section id="borrowing">
             <h4>Borrowing</h4>
             <h5 class="toggle-text" onclick="$('.bw1').toggle(300);">How do I request something you don't have?</h5>
@@ -534,23 +509,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <!--######-->
         
         <section id="digital-media">
-          <h3 class="text-uppercase font-weight-400">Digital Media</h3>
-        </section>
-        <section id="download-stream">
-          <h4>Download & Stream</h4>
-          <h5 class="toggle-text" onclick="$('.ds1').toggle(300);">How do I download e-books, audiobooks or other media?</h5>
-          <div class="ds1 text-box" style="display:none">Get started now by using our <a href="../digital-media/">Digital Media</a> page, or search the catalog and <a href="https://dcl.bibliocommons.com/v2/search?query=all&searchType=catalogue&locked=true&f_CIRC=ONLINE">filter by Format</a>.
-            It's easy to download or stream <a href="../digital-media/#e-books">e-books</a>, <a href="../digital-media/#audiobooks">audiobooks</a>, <a href="../digital-media/#magazines">magazines</a>, <a href="../digital-media/#videos">videos</a> and <a href="../digital-media/#music">music</a> using your library card number and PIN. For assistance, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a>.</div>
-          <h5 class="toggle-text" onclick="$('.ds3').toggle(300);">How can I get help with my OverDrive, Hoopla, Kanopy or Flipster account or app?</h5>
-          <div class="ds3 text-box" style="display:none">Help and Support links for each service can be found on our <a href="../digital-media/">Digital Media</a> page. Contact us at <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> for further assistance.</div>
+          <h3>Digital Media</h3>
+          <section id="download-stream">
+            <h4>Download & Stream</h4>
+            <h5 class="toggle-text" onclick="$('.ds1').toggle(300);">How do I download e-books, audiobooks or other media?</h5>
+            <div class="ds1 text-box" style="display:none">Get started now by using our <a href="../digital-media/">Digital Media</a> page, or search the catalog and <a href="https://dcl.bibliocommons.com/v2/search?query=all&searchType=catalogue&locked=true&f_CIRC=ONLINE">filter by Format</a>.
+              It's easy to download or stream <a href="../digital-media/#e-books">e-books</a>, <a href="../digital-media/#audiobooks">audiobooks</a>, <a href="../digital-media/#magazines">magazines</a>, <a href="../digital-media/#videos">videos</a> and <a href="../digital-media/#music">music</a> using your library card number and PIN. For assistance, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a>.</div>
+            <h5 class="toggle-text" onclick="$('.ds3').toggle(300);">How can I get help with my OverDrive, Hoopla, Kanopy or Flipster account or app?</h5>
+            <div class="ds3 text-box" style="display:none">Help and Support links for each service can be found on our <a href="../digital-media/">Digital Media</a> page. Contact us at <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> for further assistance.</div>
+          </section>
         </section>
       </div>
-        
-        
-         <!--######--> 
-        
-        
-            <div class="table-contents">
+      
+      <!--######-->
+      
+      <div class="table-contents">
         <nav class="section-nav">
           <ul class="list-unstyled">
             <li><a class="sidebar-heading" href="#questions">Common Questions</a>
@@ -573,11 +546,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </li>
           </ul>
         </nav>
-      </div>  
-        
-        
-        
-        
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
