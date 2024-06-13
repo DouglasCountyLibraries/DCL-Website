@@ -47,68 +47,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
 <style>
-.container.custom-container {
-    max-width: 975px;
-    padding: 0 0 60px 0;
-}
 
-@media (min-width: 768px) {
-.container.custom-container {
-    width: 100%;
-}
-}
 
-@media (max-width: 767px) {
-section h3 {
-    text-align: center;
-}
-}
-.table-contents {
-    position: sticky;
-    top: 2rem;
-    margin-top: 35px;
-}
-.section-nav li.active > a {
-    color: #000;
-    font-weight: 400;
-}
-.section-nav a {
-    text-decoration: none;
-    display: block;
-    padding: .125rem 0;
-    color: #999;
-    transition: all 50ms ease-in-out;
-}
-.section-nav a:hover, .section-nav a:focus {
-    color: #333;
-}
-section {
-    border-top: 2px solid #ededed;/* margin: 10px 0; */
-}
-section h3 {
-    text-transform: uppercase;
-    font-weight: 400;
-    margin: 0;
-    padding: 10px 0;
-}
-section h4 {
-    margin: 0;
-    line-height: 1;
-    /* padding-bottom: 10px; */
-    color: #333;
-}
-section h5 {
-    font-size: 17px;
-    /* font-weight: 400; */
-    padding: 10px 0 0;
-    color: #333;
-    margin: 0;
-    line-height: inherit;
-}
-section h5:hover, section h5:focus {
-    cursor: pointer;
-    color: #000;
-}
+
+
+
 #questions {
     border-top: 0;
 }
@@ -123,15 +66,161 @@ section h5:hover, section h5:focus {
 .padding-bottom-5 {
     padding-bottom: 5px;
 }
-.sidebar-heading {
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-top: 10px;
-}
+
 .border-line {
     border-bottom: 2px solid #ededed;
 }
+    
+    
+    
+    
+    
+    
+    
+    
+.custom-container {
+    display: flex;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 0 40px 0;
+}
+.policy-contents {
+    padding: 0 15px;
+    margin-left: 12%;
+}
+.table-contents {
+    top: 30px;
+    margin: 0 15px 15px 30px;
+    padding: 0 15px;
+    min-width: 25%;
+    height: 525px;
+    position: sticky;
+    position: -webkit-sticky;
+    overflow-y: scroll;
+    border: 2px solid #ededed;
+    border-radius: 2px;
+}
+.table-contents::-webkit-scrollbar {
+-webkit-appearance: none;
+width: 7px;
+}
+.table-contents::-webkit-scrollbar-thumb {
+border-radius: 4px;
+background-color: rgba(0,0,0,.5);
+-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.section-nav li.active > a {
+    color: #333;
+    font-weight: 400;
+}
+.section-nav a {
+    text-decoration: none;
+    display: block;
+    padding: .4rem 0 0;
+    line-height: 1.2;
+    color: #777;
+    transition: all 50ms ease-in-out;
+}
+.section-nav a:hover, .section-nav a:focus {
+    color: #333;
+}
+.sub-list {
+    margin-left: 5px;
+}
+section h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #777;
+}
+section h4 {
+    margin: 0 0 10px;
+    line-height: 1;
+    color: #333;
+    font-size: 21px;
+}
+    section h5 {
+    font-size: 17px;
+    /* font-weight: 400; */
+    padding: 10px 0 0;
+    color: #333;
+    margin: 0;
+    line-height: inherit;
+}
+section h5:hover, section h5:focus {
+    cursor: pointer;
+    color: #000;
+}
+section {
+    border-top: 2px solid #ededed;
+     padding: 15px 0 18px;
+}
+
+section > div {
+    padding-bottom: 10px;
+}
+section > div:last-child, section > div:nth-last-child(2) {
+    padding-bottom: 0;
+}
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+.sidebar-heading {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+
+@media (max-width: 1450px) {
+.policy-contents {
+    margin-left: inherit;
+}
+}
+
+@media (max-width: 768px) {
+section h3 {
+    text-align: center;
+}
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 40px;
+}
+#access-policy {
+    border-top: 0;
+}
+.table-contents {
+    order: 1;
+    position: inherit;
+    top: 0;
+    margin-top: 0;
+    padding: 0;
+    min-width: 100%;
+    border-top: 2px solid #ededed;
+    border-bottom: 2px solid #ededed;
+    border-right: 0;
+    height: inherit;
+    margin: 0;
+    border-left: 0;
+}
+.policy-contents {
+    order: 2;
+    padding: 0;
+}
+.sub-list {
+    display: none;
+}
+.section-nav ul li {
+    padding: 0 15px 0 0;
+}
+.section-nav a {
+    font-size: 16px;
+    color: #333;
+}
+}
+  
+    
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -335,33 +424,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row">
     <div class="container custom-container">
-      <div class="table-contents col-sm-3 padding-bottom-60 hidden-xs">
-        <nav class="section-nav">
-          <ul class="list-unstyled">
-            <li><a class="sidebar-heading" href="#questions">Common Questions</a>
-              <ul class="list-unstyled">
-                <li><a href="#general-information">General Information</a></li>
-                <li><a href="#using-library">Using the Library</a></li>
-              </ul>
-            </li>
-            <li><a class="sidebar-heading" href="#borrowing-account">Borrowing & My Account</a>
-              <ul class="list-unstyled">
-                <li><a href="#borrowing">Borrowing</a></li>
-                <li><a href="#my-account">My Account</a></li>
-                <li><a href="#holds">Holds</a></li>
-              </ul>
-            </li>
-            <li><a class="sidebar-heading" href="#digital-media">Digital Media</a>
-              <ul class="list-unstyled">
-                <li><a href="#download-stream">Download & Stream</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      
+
       <!--######-->
-      <div class="col-sm-9">
+      <div class="policy-contents">
         <section id="questions">
           <h3 class="text-uppercase font-weight-400">Common Questions</h3>
           <section id="general-information">
@@ -480,6 +545,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="ds3 text-box" style="display:none">Help and Support links for each service can be found on our <a href="../digital-media/">Digital Media</a> page. Contact us at <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> for further assistance.</div>
         </section>
       </div>
+        
+        
+         <!--######--> 
+        
+        
+            <div class="table-contents">
+        <nav class="section-nav">
+          <ul class="list-unstyled">
+            <li><a class="sidebar-heading" href="#questions">Common Questions</a>
+              <ul class="list-unstyled">
+                <li><a href="#general-information">General Information</a></li>
+                <li><a href="#using-library">Using the Library</a></li>
+              </ul>
+            </li>
+            <li><a class="sidebar-heading" href="#borrowing-account">Borrowing & My Account</a>
+              <ul class="list-unstyled">
+                <li><a href="#borrowing">Borrowing</a></li>
+                <li><a href="#my-account">My Account</a></li>
+                <li><a href="#holds">Holds</a></li>
+              </ul>
+            </li>
+            <li><a class="sidebar-heading" href="#digital-media">Digital Media</a>
+              <ul class="list-unstyled">
+                <li><a href="#download-stream">Download & Stream</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>  
+        
+        
+        
+        
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
