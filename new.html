@@ -110,7 +110,7 @@ width: calc(100% * 0.5);
     width: 100%;
 }
 .fete-image {
-    background: #fff url("fete-des-fables.jpg") center center/cover;
+    background: #fff url("fete-des-fables.jpg") right center/cover;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
@@ -170,11 +170,11 @@ width: calc(100% * 1);
     margin: 0 auto;
 }
 .srp-info h1 {
-	color: #000;
-	font-size: 32px;
-	font-weight: 500;
-	line-height: 1.4;
-	margin: 0;
+    color: #000;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
 }
 .srp-info h3 {
     color: #000;
@@ -220,13 +220,25 @@ width: calc(100% * 1);
     line-height: 1.4;
 }
 
-/* row four */
-    
-
+@media (max-width: 1200px) {
+.srp-info, .summer-authors-info {
+    padding: 50px 15px 65px;
+}
+}
 
 @media (max-width: 950px) {
-.summer-authors-container, .srp-container, .brew-tour-container, .fete-container {
+.srp-authors-container, .brew-tour-container, .fete-container {
     max-width: 720px;
+}
+.srp-authors-container {
+    max-width: 720px;
+    flex-direction: column;
+}
+.summer-authors-info, .srp-info {
+    background: #8eabb5;
+}
+.srp-info {
+    margin-bottom: 30px;
 }
 .summer-authors-wrapper, .srp-wrapper, .brew-tour-wrapper, .fete-wrapper {
     flex-direction: column;
@@ -234,25 +246,13 @@ width: calc(100% * 1);
 .summer-authors-image, .summer-authors-info, .srp-image, .srp-info, .brew-tour-image, .brew-tour-info, .fete-image, .fete-info {
     width: 100%;
 }
-.summer-authors-info, .srp-info, .brew-tour-info {
+.fete-info {
+    order: 1;
+}
+.fete-image {
     order: 2;
 }
-.summer-authors-image, .srp-image, .brew-tour-image {
-order 1;
-}
-.srp-image, .brew-tour-image {
-    height: 575px;
-}
-}
-
-@media (max-width: 600px) {
-.srp-image {
-    background: #fff url("bird-one-sm.jpg") center center/cover;
-}
-.brew-tour-image {
-    background: #fff url("bird-two-sm.jpg") center center/cover;
-}
-.srp-image, .brew-tour-image {
+.brew-tour-image, .fete-image {
     height: 450px;
 }
 }
@@ -461,7 +461,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="srp-wrapper">
         <div class="srp-info">
           <h1>Flock to the Library through July&nbsp;31 for fun and prizes.</h1>
-         
           <div style="font-size: 22px; padding-top: 15px;"><a class="black text-underline" href="summer-reading/">Register for Summer Reading</a>!</div>
         </div>
       </div>
