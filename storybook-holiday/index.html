@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,49 +36,132 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Material+Icons" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?6224">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?21224">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<!-- Start of Zendesk Widget script --> 
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=72a1019f-18b4-4f9c-ad65-4b7aa501f1d8"> </script> 
+<!-- End of Zendesk Widget script -->
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-.reserve-a-space-active {
+@font-face {
+    font-family: 'dreadful';
+    src: url('../shared-assets/web-fonts/dreadful-regular-webfont.woff2') format('woff2'), url('../shared-assets/web-fonts/dreadful-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.events-active {
     background-color: #f5f5f5;
 }
+.background-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+}
+.dreadful {
+    font-family: "dreadful", sans-serif;
+    font-weight: 600;
+}
+h1.dreadful {
+    font-family: "dreadful", sans-serif;
+    color: #000;
+    font-size: 200px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 160px;
+    padding: 10px 0 15px;
+    margin: 0;
+}
+.intro-text {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-top: 5px;
+}
 .custom-container {
-    max-width: 2200px;
+    background: #fff url("witches-background.jpg") top center no-repeat;
+    max-width: 1920px;
     margin: 0 auto;
+    min-height: 600px;
+    color: #000;
+    font-weight: 500;
 }
-.intro-container {
-    max-width: 850px;
+.event-wrapper {
+    max-width: 700px;
+    padding: 25px 15px 0;
+    text-align: center;
+    float: right;
+    margin-right: 40%;
+}
+.details-container {
+    background: #a2ce5c url("details-background.jpg") bottom center repeat-x;
+    max-width: 1920px;
     margin: 0 auto;
-    padding: 0 15px 30px;
+    color: #000;
+    font-weight: 500;
 }
-.carousel-cell {
-    margin-right: 30px;
-    opacity: .5;
-    filter: blur(1px);
+.details-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 45px 15px 150px;
+    text-align: center;
 }
-.carousel-cell.is-selected {
-    opacity: 1;
-    filter: blur(0);
+.details {
+    font-size: 18px;
 }
-.flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
-}
-.flickity-prev-next-button:hover {
-    background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-    fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
+.btn.btn-lg.btn-primary.custom {
+    background-color: #21302d;
     color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 30px #fff;
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+.btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
+    cursor: not-allowed;
+}
+/*
+.btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
+    background-color: #000;
+    color: #fff;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 90px #fff;
+}*/
+.signup {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1225px) {
+.custom-container {
+    background: #fff url("witches-background.jpg") 58% 100% no-repeat;
+}
+}
+
+@media (max-width: 992px) {
+.custom-container {
+    background: #fff url("mice-background.jpg") bottom center no-repeat;
+}
+.event-wrapper {
+    padding: 25px 15px 0;
+    float: none;
+    margin: 0 auto;
+}
+}
+
+@media (max-width: 600px) {
+h1.dreadful {
+    font-size: 140px;
+    line-height: 140px;
+    letter-spacing: 2px;
+}
+.event-wrapper {
+    padding: 60px 15px 0;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -163,17 +247,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </ul>
       </li>
       <li class="digital-media-active"><a href="../digital-media/">Digital Media</a> </li>
-      <li class="dropdown reserve-a-space-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
-        <ul class="dropdown-menu">
-          <li><a href="../reserve-a-space/">Reserve a Space</a></li>
-          <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
-        </ul>
-      </li>
+      <li class="reserve-a-space-active"><a href="../reserve-a-space/">Reserve a Space</a> </li>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="../featured-events/">Featured Events</a></li>
-          <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
-          <li><a href="https://go.dcl.org/myevents">My Events</a></li>
+          <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
         </ul>
       </li>
       <li class="research-active"><a href="../research/">Research</a></li>
@@ -228,17 +306,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </ul>
               </li>
               <li class="digital-media-active mobile-nav-heading"><a href="../digital-media/">Digital Media</a> </li>
-              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#reserve-a-space">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
-                <ul id="reserve-a-space" class="nav mobile-nav-list collapse">
-                  <li><a href="../reserve-a-space/">Reserve a Space</a></li>
-                  <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
-                </ul>
-              </li>
+              <li class="reserve-a-space-active mobile-nav-heading"><a href="../reserve-a-space/">Reserve a Space</a> </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
                   <li><a href="../featured-events/">Featured Events</a></li>
-                  <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
-                  <li><a href="https://go.dcl.org/myevents">My Events</a></li>
+                  <li><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&et=2,3,15,16,18,20,22,24,25,35,36,37,38,39,40&lib=ALL&nd=180" target="_blank">Events Calendar</a></li>
                 </ul>
               </li>
               <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
@@ -268,51 +340,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row text-center border-top">
-    <div class="intro-container">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">A Storybook Holiday</h1>
-      <h4 class="roboto text-center margin-top-5">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature. </h4>
-      <div class="margin-lg-50">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
-      <h4><i>Coming this Fall!</i></h4>
-    </div>
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/eleven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/twelve.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/thirteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/fourteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/fifteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/sixteen.jpg" alt=""></div>
+  <div class="row background-row">
+    <div class="custom-container">
+      <div class="event-wrapper">
+        <div><i>"But this is not a fairy-tale. This is about real witches."" – Roald Dahl</i></div>
+        <div class="intro-text">A Storybook Holiday:</div>
+        <h1 class="dreadful">Witches!</h1>
       </div>
     </div>
-    <div class="container padding-top-30 padding-bottom-60">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</div>
+    <div class="details-container">
+      <div class="details-wrapper">
+        <div class="details">Join us, brave souls and clever children, for a fantastical evening in a favorite haunt as we celebrate Roald Dahl's "The Witches." Creatures and critters of all ages will be enchanted by the evening's eerie delights, including our interactive trick-or-treat experience with treats and frights along the way, magical crafts, spellbinding entertainment and activities, and cauldrons of tasty goodies for all to enjoy. But beware the witches!</div>
+        <h3 class="black no-margin-bottom">Saturday, October&nbsp;26, 6-9PM, Highlands Ranch</h3>
+        <h4 class="black margin-top-5 margin-bottom-5">$23 Adults, $18 ages 3-13</h4>
+        <div class="padding-bottom-20">(Ages 0-2 free with paying adult)</div>
+        <button class="btn btn-primary btn-lg custom" type="button">Tickets On Sale Aug 1</button>
+        <div class="signup padding-top-20"><i>Sign up for our <a class="black text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</i></div>
+      </div>
+    </div>
   </div>
-  <!--<div class="text-center padding-top-40 padding-bottom-50">
-  <div>
-    <h4><i>Coming Spring 2022!</i></h4>
-    <div>
-      <h3 class="no-margin">A Storybook Holiday Spring:</h3>
-      <h1 class="no-margin-top text-uppercase font-weight-400">That Hungry Little Bug</h1>
-      Sunday, March 27, Parker<br>
-      Tickets on sale soon. </div>
-  </div>
-</div>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
     <div class="social-footer">
       <div class="social-left">
         <h5 class="margin-top-10 margin-bottom-10">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></h5>
+        <h5 class="margin-top-5"><a href="taxes/" target="_blank">Tax&nbsp;Resources</a>&nbsp;| <a href="https://cotaxaide.org/appt/" target="_blank">Tax&nbsp;Help&nbsp;for&nbsp;Seniors</a></h5>
       </div>
       <div class="social-right">
         <div class="social-links-wrapper"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fa-brands fa-x-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fa-brands fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fa-brands fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa-brands fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="https://www.flickr.com/photos/douglascountylibraries/albums" target="_blank"> <i class="fa-brands fa-flickr fa-2x"></i></a> </div>
@@ -335,8 +388,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="footer-column">
         <h5>Contact</h5>
         <ul>
-          <li><a href="../help/">Help & FAQs</a></li>
-          <li><a href="../board/cora-request/">DCL Open Records Request</a></li>
+          <li><a href="https://help.dcl.org/" target="_blank">Help & FAQs</a></li>
+          <li><a href="../board/cora-request/">Colorado Open Records Request</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -368,17 +421,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -404,7 +447,8 @@ for (var i = 0; i < cards.length; i++) {
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.dclblog.org",
+		"https:\/\/www.blogs.douglascountylibraries.org",
+		"https:\/\/help.dcl.org/",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
@@ -437,4 +481,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
