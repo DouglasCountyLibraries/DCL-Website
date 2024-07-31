@@ -122,15 +122,11 @@ h1.dreadful {
     border-radius: 2px;
 }
 .btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
-    cursor: not-allowed;
-}
-/*
-.btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
     background-color: #000;
     color: #fff;
     border: 3px solid #fff;
     box-shadow: 0px 0px 90px #fff;
-}*/
+}
 .signup {
     max-width: 400px;
     margin: 0 auto;
@@ -354,7 +350,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <h3 class="black no-margin-bottom">Saturday, October&nbsp;26, 6-9PM, Highlands Ranch</h3>
         <h4 class="black margin-top-5 margin-bottom-5">$23 Adults, $18 ages 3-13</h4>
         <div class="padding-bottom-20">(Ages 0-2 free with paying adult)</div>
-        <button class="btn btn-primary btn-lg custom" type="button">Tickets On Sale Aug 1</button>
+        
+        <!-- Noscript content for added SEO -->
+        <noscript>
+        <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-witches-tickets-951052021197" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+        </noscript>
+        <!-- You can customize this button any way you like -->
+        <button class="btn btn-primary btn-lg custom" id="eventbrite-widget-modal-trigger-951052021197" type="button">Buy Tickets</button>
+        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+        <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '951052021197',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-951052021197',
+        onOrderComplete: exampleCallback
+    });
+</script>
         <div class="signup padding-top-20"><i>Sign up for our <a class="black text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</i></div>
       </div>
     </div>
