@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,69 +40,81 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .reserve-a-space-active {
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
 }
 .shower-logo {
-    float: left;
-    padding: 0 40px 15px 0;
+	float: left;
+	padding: 0 40px 15px 0;
 }
 .custom-container {
-    max-width: 2200px;
-    margin: 0 auto;
+	max-width: 2200px;
+	margin: 0 auto;
 }
 .carousel-cell {
-    margin-right: 30px;
-    opacity: .5;
-    filter: blur(1px);
+	margin-right: 30px;
+	opacity: .5;
+	filter: blur(1px);
 }
 .carousel-cell.is-selected {
-    opacity: 1;
-    filter: blur(0);
+	opacity: 1;
+	filter: blur(0);
 }
 .flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
+	width: 50px;
+	height: 50px;
+	background: transparent;
 }
 .flickity-prev-next-button:hover {
-    background: transparent;
+	background: transparent;
 }
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: #fff;
+	fill: #fff;
 }
 .flickity-prev-next-button.no-svg {
-    color: #fff;
+	color: #fff;
 }
-.concierge .fa-check {
-    color: #d36a50;
+.service-container {
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 30px 15px 0;
 }
-.fa-ul > li {
-    position: inherit;
-    padding: 3px 0;
+.service-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
 }
-.fa-ul {
-    margin-left: 0;
+.service-box {
+	flex: 1;
+	margin: 15px;
+	min-width: 350px;
+	background: #f5f5f5;
 }
-.fa-li {
-    left: 0;
-    position: inherit;
-    text-align: left;
-    top: 0;
-    width: 30px;
+.service-box h3 {
+	color: #fff;
+	margin: 0;
+	padding: 9px 10px 9px;
+	font-size: 24px;
+	background: #4f878c;
+	text-align: center;
 }
-
-@media (max-width: 425px) {
-.shower-logo {
-    float: none;
-    padding: 0;
-    margin: 0 auto;
+.service-inner {
+	padding: 30px 30px 40px;
 }
+.fa-ul.services {
+	margin-left: var(--fa-li-margin, 1.5em);
+}
+.fa-ul.services li {
+	margin-bottom: 15px;
+}
+.fa-li.fa.fa-check.fa-lg {
+	color: #4f878c;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -296,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container text-center">
       <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Showers at DCL</h1>
       <h4 class="roboto margin-top-5">Celebrate your wedding or baby shower at Douglas County Libraries!</h4>
-      <div class="margin-lg-100">$250 for up to 18 guests (guest of honor + 17 guests); add $10 for each additional guest. <a href="#" data-toggle="modal" data-target="#restrictions">Some restrictions apply.</a> </div>
+      <div class="margin-lg-150">DCL offers Select and Concierge Service-level shower packages for up to 18 guests (guest of honor + 17 guests). <a href="#" data-toggle="modal" data-target="#restrictions">Some restrictions apply.</a> </div>
     </div>
   </div>
   <div class="row">
@@ -305,8 +318,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="carousel-cell"><img src="baby-shower-one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="baby-shower-two.jpg?12624" alt=""></div>
         <div class="carousel-cell"><img src="baby-shower-three.jpg" alt=""></div>
-		<div class="carousel-cell"><img src="baby-shower-four.jpg" alt=""></div>
-		<div class="carousel-cell"><img src="baby-shower-five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="baby-shower-four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="baby-shower-five.jpg" alt=""></div>
         <div class="carousel-cell"><img src="bridal-shower-one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="bridal-shower-two.jpg" alt=""></div>
         <div class="carousel-cell"><img src="bridal-shower-three.jpg" alt=""></div>
@@ -319,27 +332,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-40 padding-top-30">
-    <div class="container margin-lg-250 margin-md-100"> <img class="shower-logo img-responsive" src="showers.jpg" alt="Showers at DCL">
-      <h4 class="padding-bottom-15 no-margin-top">Each shower package includes:</h4>
-      <ul class="fa-ul concierge">
-        <li><i class="fa-li fa fa-check fa-lg"></i>Setup, cleanup, and a dedicated party coordinator</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>An invitation you may email to guests</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Your choice of three fun activities&mdash;you choose two</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Three craft activities</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>18 party favors for you and your guests</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Candies and snacks for all to enjoy</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Water service and hot tea service</li>
-      </ul>
+  <div class="row">
+    <div class="service-container">
+      <div class="service-wrapper">
+        <div id="self-service" class="service-box">
+          <h3>Select Service shower package includes:</h3>
+          <div class="service-inner">
+            <ul class="fa-ul services">
+              <li><i class="fa-li fa fa-check fa-lg"></i>Event setup and cleanup, so you can focus on hosting the party</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Three standard activities</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Two standard crafts</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>18 party favors for you and your guests</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Photobooth with access to digital gallery</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Water service and sparkling cider*</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Small charcuterie board (nut-free and gluten-free options available)</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Room reservation/booking service</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Cost: $295 (add $15 per additional guest)</li>
+            </ul>
+          </div>
+        </div>
+        <div id="select-service" class="service-box">
+          <h3>Concierge Service shower package includes:</h3>
+          <div class="service-inner">
+            <ul class="fa-ul services">
+              <li><i class="fa-li fa fa-check fa-lg"></i>Setup, cleanup, and a dedicated party coordinator plus party host</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Your choice of three fun activities&mdash;you choose two</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Two standard craft activities</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>18 party favors for you and your guests</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Photobooth with access to digital gallery</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Water service and sparkling cider*</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Small charcuterie board (nut-free and gluten-free options available) </li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Room reservation/booking service</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Alcohol permitted (additional requirements apply)</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Cost: $450 (add $15 per additional guest)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="text-center padding-top-20 margin-bottom-15"><a href="form/" target="_blank" class="btn btn-primary btn-lg">Get Started</a></div>
   </div>
-  <div class="row bg-teal padding-top-40 padding-bottom-40">
-    <div class="container">
-      <div class="white text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a class="white" href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      <h4 class="text-center"><a class="white text-underline" href="../event-spaces/">View Event Spaces</a></h4>
+  <div class="row padding-bottom-60">
+    <div class="container text-center padding-top-15 margin-lg-250">
+      <div>*Hot tea service is not available.</div>
+      <div class="text-center padding-top-20 padding-bottom-20"><a href="form/" target="_blank" class="btn btn-primary btn-lg">Get Started</a></div>
+      <div class="text-center">Have questions? Call Talayna Akrie, Events & Hospitality Services Manager, at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
     </div>
   </div>
+  
   <!-- Modal -->
   <div class="modal fade" id="restrictions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -352,8 +391,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <ul>
             <li>Reservations must be made at least 15 business days before the requested event date.</li>
             <li>For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</li>
-            <li>Wedding showers available Saturday and Sunday 11 a.m.-1 p.m., 2-4 p.m., and 6-8 p.m., subject to availability.</li>
-            <li>Baby showers available Saturday and Sunday 11 a.m.-1 p.m., 2-4 p.m., and 6-8 p.m., subject to availability. </li>
+            <li>Select Service showers are available Saturday and Sunday, 2-4 p.m., subject to availability.</li>
+            <li>Concierge Service showers are available Saturday and Sunday, 2-4:30 p.m., subject to availability.</li>
           </ul>
         </div>
       </div>
@@ -496,4 +535,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
