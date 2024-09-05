@@ -78,6 +78,10 @@ Push Notifications End - Removed for Now -->
 	max-width: 800px;
 	margin: 0 auto;
 }
+.large-mccarthy, .small-mccarthy {
+	display: flex;
+	justify-content: center;
+}
 .featured-author-wrapper {
 	display: flex;
 	max-width: 1075px;
@@ -575,6 +579,18 @@ opacity:0;
 }
 }
 
+@media (min-width: 901px) {
+.small-mccarthy {
+	display: none;
+}
+}
+
+@media (max-width: 900px) {
+.large-mccarthy {
+	display: none;
+}
+}
+
 @media (max-width: 950px) {
 .photo-wrapper {
 	flex-direction: column;
@@ -800,7 +816,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div id="rewind" class="row padding-top-40">
     <div class="andrew-wrapper">
-      <div><img class="img-responsive" src="andrew-mccarthy.jpg" alt="Andrew McCarthy, '80s Rewind"></div>
+      <div class="large-mccarthy"><img class="img-responsive" src="andrew-mccarthy-lg.jpg" alt="Andrew McCarthy, '80s Rewind"></div>
+      <div class="small-mccarthy"><img class="img-responsive" src="andrew-mccarthy-sm.jpg" alt="Andrew McCarthy, '80s Rewind"></div>
       <div class="andrew-item">
         <div class="andrew-content">
           <h4 class="no-margin-top margin-bottom-5">DCL Presents:</h4>
