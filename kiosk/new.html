@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiosk | Douglas County Libraries</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?8123">
+<script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
+<script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
+<style>
+body {
+	background: #fff url("kiosk-background.jpg") center/cover no-repeat;
+	height: 100vh;
+}
+.kiosk-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	max-width: 1920px;
+	margin: 0 auto;
+	height: 100vh;
+	padding: 0 0 80px;
+}
+.search-box-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	max-width: 900px;
+	justify-content: center;
+	align-content: center;
+}
+.kiosk-search {
+	border: 4px solid #4e5253;
+	border-radius: 6px;
+	min-width: 525px;
+}
+.form-control {
+	font-size: 18px;
+	font-weight: 600;
+	height: 50px;
+	border: 0;
+	box-shadow: none;
+}
+.btn.btn-search {
+	font-size: 20px;
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 900px;
+	justify-content: center;
+	align-content: center;
+}
+.search-box-wrapper h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 48px;
+	font-weight: 500;
+	margin: 0;
+	padding-bottom: 20px;
+}
+.box-item {
+	max-width: 300px;
+}
+.box-item img {
+	margin: 60px;
+}
+
+@media (max-width: 600px) {
+.box-item img {
+	padding: 15px;
+}
+}
+</style>
+</head>
+<body>
+<div class="kiosk-wrapper">
+  <div class="search-box-wrapper">
+    <h1>Search the Catalog</h1>
+    <form id="searchForm" class="kiosk-search" action="https://dcl.bibliocommons.com/search">
+      <div class="input-group">
+        <input type="hidden" value="smart" name="t" id="search_param">
+        <input id="autoFocusInput" type="text" name="q" class="form-control">
+        <span class="input-group-btn">
+        <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
+        </span> </div>
+    </form>
+  </div>
+  <div class="box-wrapper">
+    <div class="box-item"><a href="https://dcl.bibliocommons.com/"><img class="img-responsive" src="one.png" alt=""></a></div>
+    <div class="box-item"><a href="https://getacard-ssl.dclibraries.app/"><img class="img-responsive" src="two.png" alt=""></a></div>
+    <div class="box-item"><a href="https://www.dcl.org/staff-recommendations/"><img class="img-responsive" src="three.png" alt=""></a></div>
+    <div class="box-item"><a href="https://www.dcl.org/featured-events/"><img class="img-responsive" src="four.png" alt=""></a></div>
+    <div class="box-item"><a href="https://dcl.bibliocommons.com/user/login?"><img class="img-responsive" src="five.png" alt=""></a></div>
+    <div class="box-item"><a href="https://www.dcl.org/reserve-a-space/"><img class="img-responsive" src="six.png" alt=""></a></div>
+  </div>
+</div>
+<!DOCTYPE html> 
+
+<script>
+        // This script will run when the page loads
+        window.onload = function() {
+            // Find the input element
+            var inputElement = document.getElementById('autoFocusInput');
+            
+            // Set focus to the input element
+            inputElement.focus();
+        }
+    </script>
+</body>
+</html>
