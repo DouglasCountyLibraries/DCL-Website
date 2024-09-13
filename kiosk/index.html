@@ -15,17 +15,41 @@
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <style>
 body {
-	background: #fff url("pac-background.jpg") center/cover no-repeat;
+	background: #fff url("kiosk-background.jpg") center/cover no-repeat;
 	height: 100vh;
 }
 .kiosk-wrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	max-width: 1920px;
 	margin: 0 auto;
 	height: 100vh;
 	padding: 0 0 80px;
+}
+.search-box-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	max-width: 900px;
+	justify-content: center;
+	align-content: center;
+}
+.kiosk-search {
+	border: 4px solid #4e5253;
+	border-radius: 6px;
+	min-width: 525px;
+}
+.form-control {
+	font-size: 18px;
+	font-weight: 600;
+	height: 50px;
+	border: 0;
+	box-shadow: none;
+}
+.btn.btn-search {
+	font-size: 20px;
 }
 .box-wrapper {
 	display: flex;
@@ -35,11 +59,19 @@ body {
 	justify-content: center;
 	align-content: center;
 }
+.search-box-wrapper h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 48px;
+	font-weight: 500;
+	margin: 0;
+	padding-bottom: 20px;
+}
 .box-item {
 	max-width: 300px;
 }
 .box-item img {
-	padding: 60px;
+	margin: 60px;
 }
 
 @media (max-width: 600px) {
@@ -51,6 +83,17 @@ body {
 </head>
 <body>
 <div class="kiosk-wrapper">
+  <div class="search-box-wrapper">
+    <h1>Search the Catalog</h1>
+    <form id="searchForm" class="kiosk-search" action="https://dcl.bibliocommons.com/search">
+      <div class="input-group">
+        <input type="hidden" value="smart" name="t" id="search_param">
+        <input id="autoFocusInput" type="text" name="q" class="form-control">
+        <span class="input-group-btn">
+        <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
+        </span> </div>
+    </form>
+  </div>
   <div class="box-wrapper">
     <div class="box-item"><a href="https://dcl.bibliocommons.com/"><img class="img-responsive" src="one.png" alt=""></a></div>
     <div class="box-item"><a href="https://getacard-ssl.dclibraries.app/"><img class="img-responsive" src="two.png" alt=""></a></div>
@@ -60,5 +103,17 @@ body {
     <div class="box-item"><a href="https://www.dcl.org/reserve-a-space/"><img class="img-responsive" src="six.png" alt=""></a></div>
   </div>
 </div>
+<!DOCTYPE html> 
+
+<script>
+        // This script will run when the page loads
+        window.onload = function() {
+            // Find the input element
+            var inputElement = document.getElementById('autoFocusInput');
+            
+            // Set focus to the input element
+            inputElement.focus();
+        }
+    </script>
 </body>
 </html>
