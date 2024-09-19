@@ -81,7 +81,7 @@ h1.benguiat {
 	max-width: 1920px;
 	margin: 0 auto;
 	color: #000;
-	padding: 0 15px;
+	
 }
 .event-wrapper {
 	background: #fff url("twas-night-background.jpg") top center no-repeat;
@@ -90,13 +90,14 @@ h1.benguiat {
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
+	padding: 0 15px;
 }
 .details-container {
 	background: linear-gradient(#e3e9e9, #ffffff);
 	max-width: 1920px;
 	margin: 0 auto;
 	color: #000;
-	font-weight: 500;
+	padding: 0 15px;
 }
 .details-wrapper {
 	max-width: 900px;
@@ -107,23 +108,70 @@ h1.benguiat {
 .details-quotation {
 	font-size: 20px;
 }
-.btn.btn-lg.btn-primary.custom {
-	background-color: #21302d;
-	color: #fff;
+
+.tickets-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 820px;
+	margin: 0 auto;
+}
+.tickets-item {
+	padding: 15px;
+}
+.tickets-item h4 {
 	text-transform: uppercase;
-	font-weight: 500;
-	border: 3px solid #fff;
-	box-shadow: 0px 0px 30px #fff;
+	color: #20555b;
+	font-size: 24px;
+	margin: 15px 0 5px;
+	font-weight: 600;
+}
+.tickets-date {
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+.btn.btn-custom {
+	color: #fff;
+	background: #9c3859;
+	text-transform: uppercase;
+	font-weight: 600;
+	box-shadow: 0px 10px 40px rgba(203,218,223, 1);
 	transition: all .4s ease-out;
 	border-radius: 2px;
 }
-.btn.btn-lg.btn-primary.custom:active, .btn.btn-lg.btn-primary.custom:hover, .btn.btn-lg.btn-primary.custom:focus {
+.btn.btn-custom:hover, .btn.btn-custom:focus {
+	background: #722941;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	box-shadow: 0px 0px 60px rgba(130,67,98, .3);
+	transition: all .4s ease-out;
 	cursor: not-allowed;
 }
-.signup {
-	max-width: 400px;
-	margin: 0 auto;
+
+@media (max-width: 725px) {
+.tickets-wrapper {
+	flex-direction: column;
+	justify-content: center;
 }
+.tickets-item {
+	padding: 15px 0;
+}
+}
+	@media (max-width: 475px) {
+		.intro-text {
+	font-size: 26px;
+
+}
+		h1.benguiat {
+
+	font-size: 70px;
+	
+	line-height: 70px;
+	padding: 0;
+
+}
+	}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -324,14 +372,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div class="details">
             <div class="details-quotation times padding-bottom-30"><i>"The children were nestled all snug in their beds, while visions of sugar plums danced in their heads…"<br>
               – Clement Clarke Moore</i></div>
-            <div class="padding-bottom-10">Don’t miss our winter celebration of the beloved holiday classic by Clement Clarke Moore!</div>
+            <div class="padding-bottom-10" style="font-size: 18px;">Don’t miss our winter celebration of the beloved holiday classic by Clement Clarke Moore!</div>
             <div> Enjoy family-friendly entertainment, live music and dance, delightful crafts, a festive photo booth, make-and-take gifts, and a special visit with Santa. Our dinner and brunch events also include a menu of delicious food and drinks, tasty treats, our signature naughty and nice hot cocoa bar, and much more.</div>
           </div>
-          <!--<h3 class="times black no-margin-bottom">Saturday, October&nbsp;26, 6-9PM, Highlands Ranch</h3>
-        <h4 class="times black margin-top-5 margin-bottom-5">$23 Adults, $18 ages 3-13</h4>
-        <div class="padding-bottom-20">(Ages 0-2 free with paying adult)</div>
-        <button class="btn btn-primary btn-lg custom" type="button">Buy Tickets</button>
-        <div class="signup padding-top-20"><i>Sign up for our <a class="black text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</i></div>--> 
+          <div class="tickets-row">
+            <div class="text-center">
+              <div class="tickets-wrapper">
+                <div class="tickets-item one">
+                  <h4 class="times">Dinner Edition</h4>
+                  <div class="tickets-date">Saturday, December&nbsp;7, 5-8:30PM, <a class="black text-underline" href="../lone-tree/">Lone&nbsp;Tree</a></div>
+                  <div>Tickets: $30 Ages 12+, $25 Ages&nbsp;3-11</div>
+                  <div>(ages 0-2 free with paying adult)</div>
+                  <div class="padding-top-20 text-center"><a class="btn btn-lg btn-custom">On Sale Oct 1</a></div>
+                </div>
+                <div class="tickets-item two">
+                  <h4 class="times">Brunch Edition</h4>
+                  <div class="tickets-date">Sunday, December&nbsp;8, 8-11AM, <a class="black text-underline" href="../lone-tree/">Lone&nbsp;Tree</a></div>
+                  <div>Tickets: $25 Ages 12+, $20 Ages&nbsp;3-11</div>
+                  <div>(ages 0-2 free with paying adult)</div>
+                  <div class="padding-top-20 text-center"><a class="btn btn-lg btn-custom">On Sale Oct 1</a></div>
+                </div>
+              </div>
+              <!--<div class="padding-top-20"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>-->
+            </div>
+          </div>
         </div>
       </div>
     </div>
