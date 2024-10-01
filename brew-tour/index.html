@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +14,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <!-- InstanceBeginEditable name="title" -->
 <title>Brew Tour | Douglas County Libraries</title>
-<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
-<meta name="description" content="Get a library card, request a title, sign up for text alerts, and learn about other basic library services.">
+<meta name="keywords" content="Douglas County brewery tour, craft beer tasting experience, Local beer scene exploration, brewery hopping adventure, guided beer excursion, beer education and entertainment, breweries near me, beer lover's tour of Douglas County">
+<meta name="description" content="Join the DCL Brew Tour to discover some of the best local breweries and coffee shops in Douglas County. Taste unique craft beers and learn about the brewing process from experts. Pre-register today!">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
@@ -39,8 +40,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 <style>
 @font-face {
@@ -76,9 +78,6 @@ ul.farmer {
 	color: #2f2e33;
 	font-size: 54px;
 	margin: 0;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
 }
 ul.farmer > li {
 	white-space: nowrap;
@@ -91,68 +90,16 @@ ul.farmer > li {
 	white-space: nowrap;
 	margin-left: 5px;
 }
-polyline, g {
-	stroke: #666;
-}
-#baguetteBox-overlay .full-image figcaption {
-	font-family: "Ubuntu", arial, sans-serif;
-	font-size: 20px;
-	font-weight: 400;
-	display: block;
-	position: absolute;
-	bottom: auto;
-	width: 100%;
-	text-align: center;
-	line-height: inherit;
-	white-space: normal;
-	color: #333;
-	background-color: transparent;
-	padding: 10px 10%;
-}
-#baguetteBox-overlay .full-image img {
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
-.tz-gallery .lightbox img {
-	width: inherit;
-	border-radius: 0;
-	position: inherit;
-}
-.tz-gallery .lightbox::after, .tz-gallery .lightbox::before {
-	display: none;
-}
-.lightbox.null {
-	display: none;
-}
 .custom-container {
 	max-width: 825px;
 	margin: 0 auto;
-}
-.lightbox.lightbox-group {
-	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
-}
-.hover.group {
-	margin: 5px;
 }
 .partners {
 	display: flex;
 	flex-direction: column;
 	max-width: 950px;
-	margin: 0 auto;
-	padding: 10px 0 40px;
-}
-.partner-list {
-	padding: 0 15px;
-}
-.tz-gallery .lightbox img.prizes {
-	border-radius: 50%;
-	border: 3px solid #2f2e33;
-	transition: transform .2s ease-in-out;
-}
-.tz-gallery .lightbox img.prizes:hover, .tz-gallery .lightbox img.prizes:focus {
-	transform: scale(1.02) rotate(10deg);
+	margin: 0 0 0 125px;
+	padding: 10px 0 35px;
 }
 .points {
 	font-family: "Larosa Bold", sans-serif;
@@ -161,33 +108,20 @@ polyline, g {
 	max-width: 255px;
 	margin: -30px auto 0 auto;
 	background: #d79e66;
-	font-size: 18px;
-	padding: 8px 0 6px;
+	font-size: 22px;
+	padding: 10px 0 6px;
 	position: relative;
 	z-index: 1000;
 	text-transform: uppercase;
 	border-radius: 3px;
-	line-height: 20px;
-}
-/* remove after adding photos */
-.points {
-	width: 275px;
-}
-.table.table-bordered.table-condensed {
-	background: rgba(255,255,255,.2);
-	text-align: center;
-	margin-bottom: 0;
-}
-.table-row {
-	max-width: 750px;
-	margin: 0 auto;
+	line-height: 22px;
 }
 .farmer.brew-tour-heading {
 	font-size: 200px;
-	-webkit-animation: text-animation 1s 1s both;
-	animation: text-animation 1s 1s both;
+	-webkit-animation: text-animation 1s 3s both;
+	animation: text-animation 1s 3s both;
 	line-height: .8em;
-	margin: 30px 0 30px 13px;
+	margin: 35px 0 20px 13px;
 }
 .larosa {
 	font-family: "Larosa Regular", sans-serif;
@@ -198,12 +132,7 @@ h2.larosa {
 	margin-top: 10px;
 	line-height: 42px;
 }
-h4.larosa {
-	font-size: 30px;
-	margin: 15px 0 3px;
-	line-height: 30px;
-}
-.yellow-text, .yellow-text:hover, .yellow-text:focus {
+.yellow-text, .yellow-text a {
 	color: #fce9b7;
 }
 .intro-row {
@@ -215,10 +144,10 @@ h4.larosa {
 .intro-container {
 	max-width: 1060px;
 	margin: 0 auto;
-	padding: 75px 15px 90px;
+	padding: 75px 15px;
 }
 .button-wrapper {
-	padding: 25px 0 15px;
+	padding: 25px 0;
 }
 .btn.btn-primary.btn-custom {
 	font-family: "Larosa Bold", sans-serif;
@@ -263,11 +192,12 @@ h4.larosa {
 .prizes-row {
 	background: #f4e4be;
 	color: #000;
+	border-bottom: 3px solid #2f2e33;
 }
 .prizes-container {
-	max-width: 1030px;
+	max-width: 2200px;
 	margin: 0 auto;
-	padding: 60px 15px 80px;
+	padding: 60px 15px 70px;
 }
 .prize-box {
 	padding: 10px;
@@ -276,6 +206,35 @@ h4.larosa {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+.carousel-cell {
+	margin-right: 30px;
+	opacity: .5;
+	filter: blur(1px);
+}
+.carousel-cell.is-selected {
+	opacity: 1;
+	filter: blur(0);
+}
+.flickity-prev-next-button {
+	width: 50px;
+	height: 50px;
+	background: transparent;
+}
+.flickity-prev-next-button:hover {
+	background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+	fill: #efeeed;
+}
+.flickity-prev-next-button.no-svg {
+	color: #efeeed;
+}
+.next-year {
+	max-width: 825px;
+	margin: 0 auto;
+	padding-top: 25px;
 }
 .partner-row {
 	background: #d79e66;
@@ -286,7 +245,21 @@ h4.larosa {
 .partner-container {
 	max-width: 1060px;
 	margin: 0 auto;
-	padding: 60px 15px 90px;
+	padding: 60px 0 90px;
+}
+.partner-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.partner-column {
+	padding: 0 15px;
+}
+.prize {
+	font-style: italic;
+	padding-bottom: 8px;
+	font-size: 18px;
+	font-weight: 400;
 }
 .hover-animation {
 	color: #2f2e33;
@@ -374,11 +347,16 @@ transform: translateX(-3px) translateY(-3px);
 }
 }
 
-@media (max-width: 925px) {
+@media (max-width: 1050px) {
+.partner-wrapper {
+	flex-direction: column;
+}
 .partners {
+	display: flex;
+	flex-direction: column;
 	max-width: 475px;
+	padding: 0 0 30px;
 	margin: 0 auto;
-	padding: 10px 0 35px;
 }
 }
 
@@ -386,8 +364,12 @@ transform: translateX(-3px) translateY(-3px);
 .sub-title {
 	margin-left: 0;
 	display: block;
-	line-height: 5px;
-	margin-bottom: 10px;
+}
+ul.farmer {
+	line-height: 40px;
+}
+ul.farmer li {
+	margin: 10px 0;
 }
 }
 </style>
@@ -586,88 +568,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <h1 class="farmer brew-tour-heading">BReW ToUR</h1>
       </div>
       <div class="text-center">
-        <h3 class="yellow-text no-margin-top">August 1-September 30</h3>
-        <h2 class="yellow-text no-margin-top">Visit local breweries, earn prizes!</h2>
-        <h5 class="no-margin-bottom yellow-text margin-lg-100">Our 2024 Brew Tour includes some great Douglas County breweries and coffee shops. Beginning August 1, log your visits to the different participating <a class="yellow-text text-underline" href="#partners">partner establishments</a> to earn points, unlock rewards, and get entered into our Grand Prize drawing. </h5>
-        <div class="button-wrapper"><a href="https://dclibraries.beanstack.org/users/sign_in" target="_blank" class="btn btn-primary btn-custom">Sign In</a></div>
-        <div class="padding-top-15 margin-lg-200"><i>*Participants must register and log visits on Beanstack to be eligible for all prizes and rewards. Events and Power Hours each have unique keywords obtained on-site for points to be credited. Grand Prize drawing will be held in October.</i></div>
+        <h2 class="yellow-text no-margin-top">2024 Brew Tour winners will be announced soon!</h2>
+        <div class="large-text yellow-text"><i>Pick up 2024 prizes at any DCL location through October 6.</i></div>
+        <!--<div class="h5 no-margin-bottom yellow-text">
+          <div>Happy Brew Year Grand Prize: Kristin K</div>
+          <div class="prize">Insulated growler with a booklet of fills</div>
+          <div>Coaster Design Contest: Nicole R</div>
+          <div class="prize">Design featured on 2024 Brew Tour coasters</div>
+          <div>#DCLBrewTour Photo Contest: Adrienne LW</div>
+          <div class="prize">Brew Tour swag</div>
+        </div>--> 
       </div>
     </div>
   </div>
   <div id="prizes" class="row prizes-row">
     <div class="prizes-container text-center">
-      <div><img class="center-block img-responsive" src="mountains.png" alt="">
-        <h2 class="larosa">Prizes & Rewards</h2>
-        <h5 class="black">Gather points and unlock rewards by logging your visits to each participating partner brewery and coffee shop. Each visit also earns you one entry into our Grand Prize drawing for a Happy Brew Year&mdash;one premium stainless steel growler with a booklet of fills from our participating partner breweries.</h5>
-        <div class="black padding-bottom-15 margin-lg-75">You may also earn additional points and unique rewards by attending&nbsp;Power Hours and DCL-hosted Brew Tour events at our libraries and select brewery locations.** Have fun with Bookish Trivia, Books &amp; Authors Bingo, Scavenger Hunt, and more.</div>
+      <div>
+        <h2 class="black no-margin padding-bottom-40">The Brew Tour returns in August 2025.</h2>
       </div>
-      <!--<div class="large-text"><a class="black" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register now</a> and receive a Brew Tour Lanyard and Brew Card.</div>-->
-      <div class="large-text padding-bottom-15"><i>5 points each location visit<br>
-        5 points each Power Hour visit<br>
-        10 points each event attended</i> </div>
-      <div class="tz-gallery">
-        <div class="prize-wrapper">
-          <div class="prize-box"><a class="lightbox" href="dcl-water-bottle-large.png"> <img class="prizes" src="dcl-water-bottle-small.jpg" alt="Brew Tour Water Bottle"></a>
-            <div class="points">75 Points:<br>
-              Brew Tour Water Bottle</div>
-          </div>
-          <div class="prize-box"><a class="lightbox" href="dcl-soft-cooler-large.png"> <img class="prizes" src="dcl-soft-cooler-small.jpg" alt="Brew Tour Soft Cooler"></a>
-            <div class="points">100 Points:<br>
-              Brew Tour Soft Cooler</div>
-          </div>
-          <div class="prize-box"><a class="lightbox" href="brew-tour-hoodie-large.png"> <img class="prizes" src="brew-tour-hoodie-small.jpg" alt="Brew Tour Hoodie"></a>
-            <div class="points">150 Points:<br>
-              Brew Tour Hoodie</div>
-          </div>
-        </div>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
       </div>
-      
-      <!--<div class="text-center"><a href="https://douglascountylibraries.evanced.info/signup/list?nomobile=1&kw=brew+tour&df=list&lib=all&nd=365" target="_blank" class="btn btn-primary btn-custom-alt">Event Signup</a></div>-->
-      
-      <div class="padding-top-15">
-        <h2 class="no-margin black larosa">Bean There</h2>
-        <h3 class="no-margin black larosa">Coffee Challenge</h3>
-        <div class="tz-gallery">
-          <div class="prize-wrapper">
-            <div class="prize-box"><a class="lightbox" href="brew-tour-mug-large.png"> <img class="prizes" src="brew-tour-mug-small.jpg" alt="Brew Tour Coffee Mug"></a>
-              <div class="points">Brew Tour<br>
-                Coffee Mug</div>
-            </div>
-          </div>
-        </div>
-        <h5 class="black margin-lg-100">Visit all participating coffee shops and attend a coffee-specific event to earn another faBREWlous perk, a Brew Tour coffee mug.**</h5>
-      </div>
-      <div class="padding-top-15"><i>**Brew Tour rewards available for pickup at your nearest DCL location.</i></div>
-    </div>
-  </div>
-  <div id="partners" class="row partner-row">
-    <div class="partner-container"><img src="hops-wheat.png" alt="" class="img-responsive center-block">
-      <h2 class="larosa text-center">Brew Tour Partners</h2>
-      <div class="partners">
-        <ul class="farmer list-unstyled">
-          <div class="partner-list">
-            <li><a class="hover-animation" href="https://goo.gl/maps/phqesNWh6oCrRBNK8" target="_blank">3 Freaks</a><span class="sub-title">Brewery</span></li>
-            <li><a class="hover-animation" href="https://goo.gl/maps/1i3ujCb8YurkotXYA" target="_blank">105 West</a><span class="sub-title">Brewing Company</span></li>
-            <li><a class="hover-animation" href="https://maps.app.goo.gl/2NeHMbZsKjQX7oLA6" target="_blank">Castle Rock</a><span class="sub-title">Collective</span></li>
-            <li><a class="hover-animation" href="https://maps.app.goo.gl/oyNHpw9CCm7mE46YA" target="_blank">Convict</a><span class="sub-title">Coffee Company</span></li>
-            <li><a class="hover-animation" href="https://maps.app.goo.gl/HqdTw1nsNGqWLPUW9" target="_blank">Deja Brew</a><span class="sub-title">Coffee & Print</span></li>
-            <li><a class="hover-animation" href="https://www.google.com/maps/search/Downhill+Brewing+Locations/@39.5608778,-104.8648883,13z/data=!3m1!4b1?entry=ttu" target="_blank">Downhill</a><span class="sub-title">Brewing</span></li>
-          </div>
-          <div class="partner-list">
-            <li><a class="hover-animation" href="https://maps.app.goo.gl/DgfVYrgVbiv7snw87" target="_blank">Fiction BEer</a><span class="sub-title">Company</span></li>
-            <li><a class="hover-animation" href="https://www.google.com/maps/search/Fika+Coffee+House/@39.4943794,-104.7839125,14z/data=!3m1!4b1?entry=ttu" target="_blank">Fika</a><span class="sub-title">Coffee House</span></li>
-            <li><a class="hover-animation" href="https://maps.app.goo.gl/iaZ3KtyyoZGrdTqN6" target="_blank">Iron Mule</a><span class="sub-title">Brewery</span></li>
-            <li><a class="hover-animation" href="https://www.google.com/maps/search/Living+the+Dream/@39.527845,-105.0561864,14z/data=!3m1!4b1?entry=ttu" target="_blank">Living the Dream</a><span class="sub-title">Brewing Company</span></li>
-            <li><a class="hover-animation" href="https://www.google.com/maps/search/Lone+Tree+Brewing/@39.5424655,-104.8753113,13z/data=!3m1!4b1?entry=ttu" target="_blank">Lone TreE</a><span class="sub-title">Brewing Company</span></li>
-            <!-- <li><a class="hover-animation" href="https://goo.gl/maps/GZ1cjZN4kbExiDmcA" target="_blank">Monk & MongOOse</a><span class="sub-title">Coffee Co</span></li>
-            <li><a class="hover-animation" href="https://g.page/RARE-by-Grist-Brewing-Company?share" target="_blank">Rare by Grist</a><span class="sub-title">Brewery</span></li>
-            <li><a class="hover-animation" href="https://g.page/WelcomeHomeBrewery?share" target="_blank">WelCOme Home</a><span class="sub-title">Brewery</span></li> --> 
-          </div>
-        </ul>
-      </div>
-      <div class="text-center">
-        <div><img src="2024-stamp-logo.jpg" alt=""></div>
-        <div class="padding-top-15 margin-lg-200 margin-md-100"><i>DCL makes no guarantees as to Brew Tour partners' hours, operations, services or products. Must be over 21 to consume alcohol. Please drink responsibly.</i></div>
+      <div class="black next-year">
+        <h5 class="black">Join us for our annual tour of Douglas County breweries and coffee shops, plus interactive events hosted at our libraries and select brewery locations.</h5>
+        <div class="margin-md-100">Participants log visits to the different partner establishments and attend events to earn points toward awesome prizes and to get entered into our Happy Brew Year Grand Prize drawing. Good things are brewing at DCL!</div>
       </div>
     </div>
   </div>
@@ -733,27 +666,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
 <script>
-    baguetteBox.run('.tz-gallery', {
-        buttons: true,
-        overlayBackgroundColor: 'rgba(255,255,255,0.8)'
-    });
-</script> 
-<script>
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
  </script> 
-<script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script> 
-<script type="text/javascript">
-            ttd_dom_ready( function() {
-                if (typeof TTDUniversalPixelApi === 'function') {
-                    var universalPixelApi = new TTDUniversalPixelApi();
-                    universalPixelApi.init("h4j8a7p", ["uonqyw7"], "https://insight.adsrvr.org/track/up");
-                }
-            });
-        </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
@@ -813,4 +734,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
