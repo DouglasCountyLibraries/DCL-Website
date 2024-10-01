@@ -49,27 +49,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
 	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-/* brew tour */ 
-.brew-tour-container {
+/* rewind */   
+.rewind-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
-	margin: 30px auto 0 auto;
+	margin: 0 auto 30px auto;
 }
-.brew-tour-wrapper {
+.rewind-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.brew-tour-image {
-	background: #fff url("brew-tour.jpg") right center/cover;
+.rewind-image {
+	background: #83c5db url("rewind-background.jpg") top left repeat;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 30px;
 }
-.brew-tour-info {
-	background: #e8dfd5;
+.rewind-info {
+	background: #83c5db;
 	color: #000;
 width: calc(100% * 0.5);
 	display: flex;
@@ -79,19 +80,22 @@ width: calc(100% * 0.5);
 	font-size: 22px;
 	text-align: center;
 }
-.brew-tour-info img {
+.rewind-image img {
 	display: flex;
 	align-self: center;
+	border: 5px solid #112a57;
+	border-radius: 3px;
 }
-.brew-tour-heading {
+.rewind-info-heading {
 	color: #000;
 	font-size: 42px;
 	font-weight: 500;
 	line-height: 1;
-	padding: 20px 0 10px;
+	margin: 5px 0 10px;
 }
-/* short-mid */
-    
+/* reading challenge */ 	
+	
+	
 .short-mid-container {
 	display: flex;
 	max-width: 1440px;
@@ -104,7 +108,7 @@ width: calc(100% * 0.5);
 	width: 100%;
 }
 .short-mid-info {
-	background: #9ab9c3 url("border.jpg") right center no-repeat;
+	background: #90c49c url("border.jpg") right center no-repeat;
 	color: #000;
 width: calc(100% * 1);
 	display: flex;
@@ -131,7 +135,7 @@ width: calc(100% * 1);
 	line-height: 1.4;
 }
 .short-mid-info-alt {
-	background: #9ab9c3;
+	background: #90c49c;
 	color: #000;
 width: calc(100% * 1);
 	display: flex;
@@ -141,73 +145,37 @@ width: calc(100% * 1);
 	font-size: 20px;
 	text-align: center;
 }
-/* storybook-holiday */
-    
-.storybook-holiday-wrapper {
-	display: flex;
-	width: 100%;
-}
-.storybook-holiday-info {
-	background: #9ab9c3 url("border.jpg") left center no-repeat;
-	color: #000;
-width: calc(100% * 1);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 50px 100px 30px;
-	font-size: 20px;
-	text-align: center;
-}
-.storybook-holiday-heading {
-	color: #000;
-	margin: 0;
-	font-size: 32px;
-	font-weight: 500;
-	line-height: 1.4;
-	text-transform: uppercase;
-}
-.storybook-holiday-info h3 {
-	color: #000;
-	margin: 5px 0 5px;
-	font-size: 22px;
-	font-weight: 500;
-	line-height: 1.4;
-}
-/* fete */   
-.rewind-container {
+/* storybook holiday */ 
+.sbh-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
-	margin: 0 auto 30px auto;
+	margin: 30px auto 0 auto;
 }
-.rewind-wrapper {
+.sbh-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.rewind-image {
-	background: #2c2e2d url("rewind.jpg") center center/cover;
+.sbh-image {
+	background: #b595bc url("storybook-holiday-duotone.jpg") top center/cover;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.rewind-info {
-	background: #d0c260;
+.sbh-info {
+	background: #b595bc;
 	color: #000;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding: 50px 15px 65px;
-	font-size: 22px;
+	font-size: 20px;
 	text-align: center;
 }
-.rewind-info img {
-	display: flex;
-	align-self: center;
-}
-.rewind-info-heading {
+.sbh-heading {
 	color: #000;
 	font-size: 42px;
 	font-weight: 500;
@@ -216,36 +184,33 @@ width: calc(100% * 0.5);
 }
 
 @media (max-width: 1200px) {
-.short-mid-info, .storybook-holiday-info {
+.short-mid-info {
 	padding: 50px 15px 50px;
 }
 }
 
 @media (max-width: 950px) {
-.short-mid-container, .brew-tour-container, .rewind-container {
+.short-mid-container, .sbh-container, .rewind-container {
 	max-width: 720px;
 }
 .short-mid-container {
 	max-width: 720px;
 	flex-direction: column;
 }
-.storybook-holiday-info, .short-mid-info {
-	background: #9ab9c3;
-}
-.storybook-holiday-wrapper, .short-mid-wrapper, .brew-tour-wrapper, .rewind-wrapper {
+.short-mid-wrapper, .sbh-wrapper, .rewind-wrapper {
 	flex-direction: column;
 }
-.storybook-holiday-image, .storybook-holiday-info, .short-mid-image, .short-mid-info, .brew-tour-image, .brew-tour-info, .rewind-image, .rewind-info {
+.short-mid-image, .short-mid-info, .sbh-image, .sbh-info, .rewind-image, .rewind-info {
 	width: 100%;
 }
-.rewind-info {
+.sbh-info {
 	order: 2;
 }
-.rewind-image {
+.sbh-image {
 	order: 1;
 }
-.brew-tour-image, .rewind-image {
-	height: 450px;
+.sbh-image {
+	height: 350px;
 }
 .short-mid-info {
 	padding: 50px 15px 15px;
@@ -445,8 +410,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
     <div class="rewind-container">
-      <div class="rewind-wrapper padding-top-30">
-        <div class="rewind-image"></div>
+      <div class="rewind-wrapper">
+        <div class="rewind-image"><img class="img-responsive" src="rewind-cover.jpg" alt="80s Rewind"></div>
         <div class="rewind-info">
           <div class="rewind-info-heading">'80s Rewind with Andrew McCarthy</div>
           <div style="max-width: 575px; margin: 0 auto;">Join us for a throwback experience with Brat Pack actor and bestselling author Andrew McCarthy!</div>
@@ -462,17 +427,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
       <div class="short-mid-wrapper">
-        <div class="short-mid-info-alt"> <img class="img-responsive" src="reading-challenge-logo.jpg" alt="Douglas County Libraries Reading Challenge" style="align-self: center;"> </div>
+        <div class="short-mid-info-alt"> <img class="img-responsive" src="reading-challenge-updated.jpg" alt="Douglas County Libraries Reading Challenge" style="align-self: center;"> </div>
       </div>
     </div>
-    <div class="brew-tour-container">
-      <div class="brew-tour-wrapper">
-        <div class="brew-tour-image"> </div>
-        <div class="brew-tour-info"> <img class="img-responsive" src="brew-tour/mountains.png" alt="DCL Brew Tour">
-          <div class="brew-tour-heading">Good things are brewing!</div>
-          <div class="padding-bottom-5">Join the Brew Tour, earn prizes!</div>
-          <div><a class="black text-underline" href="brew-tour/">Sign In</a></div>
+    <div class="sbh-container">
+      <div class="sbh-wrapper">
+        <div class="sbh-info">
+          <div class="">A Storybook Holiday:</div>
+          <div class="sbh-heading">'Twas the Night</div>
+          <div class="font-weight-500" style="max-width: 575px;margin: 0 auto;">
+            <div>Join us for a festive holiday celebration! Live Music, Food and Drinks, Photo Booth, Crafts, Make-and-Takes, Santa!
+              <div class="padding-top-5"><a class="font-weight-500 black text-underline" href="storybook-holiday/">Tickets on Sale October&nbsp;1</a></div>
+            </div>
+          </div>
         </div>
+        <div class="sbh-image"> </div>
       </div>
     </div>
   </div>
