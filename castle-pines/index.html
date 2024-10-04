@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,12 +40,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
+}
+.branch-hours-phone {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 500px;
+	justify-content: center;
+}
+ul.branch-hours {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin: 3px 0 5px;
+}
+.branch-hours li {
+	text-transform: uppercase;
+	padding: 0 15px;
+	white-space: nowrap;
 }
 .custom-container {
 	max-width: 2200px;
@@ -421,15 +442,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Castle Pines</h1>
+      <h1 class="page-heading">Castle Pines</h1>
       <div class="padding-bottom-15">
         <div itemscope itemtype="http://schema.org/PostalAddress">
-          <h4 class="margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/Fkbjve6qxH32" target="_blank"><span itemprop="streetAddress">360&nbsp;Village&nbsp;Square&nbsp;Lane</span>, <span itemprop="addressLocality">Castle&nbsp;Pines</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80108</span></a></h4>
+          <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/Fkbjve6qxH32" target="_blank"><span itemprop="streetAddress">360&nbsp;Village&nbsp;Square&nbsp;Lane</span>, <span itemprop="addressLocality">Castle&nbsp;Pines</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80108</span></a></div>
         </div>
-        <div class="text-uppercase"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;8AM-8PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Fri:&nbsp;8AM-6PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Sat-Sun:&nbsp;10-4PM</span></div>
-        <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        <div class="branch-hours-phone">
+          <ul class="branch-hours">
+            <li>Mon-Thu:&nbsp;8AM-8PM</li>
+            <li>Fri:&nbsp;8AM-6PM</li>
+            <li>Sat-Sun:&nbsp;10-4PM</li>
+          </ul>
+          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -476,7 +501,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="events" class="row text-center location-events">
-    <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
+    <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
     <a href="https://go.dcl.org/events?et=storytime&l=castle+pines&r=months&n=1" class="text-uppercase font-weight-400">Castle Pines Calendar »</a>
     <div class="widget-wrapper">
       <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3850&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
@@ -484,8 +509,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div id="play-area" class="row bg-gray-5">
     <div class="container padding-top-50 padding-bottom-20 text-center">
-      <h4 class="no-margin">Kid-friendly Fun:</h4>
-      <h2 class="no-margin">Little Letters Post Office</h2>
+      <div class="h4 no-margin">Kid-friendly Fun:</div>
+      <div class="h2 no-margin">Little Letters Post Office</div>
     </div>
   </div>
   <div class="row bg-gray-5">
@@ -506,7 +531,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row bg-gray-5">
     <div class="container text-center padding-top-30 padding-bottom-60">
-      <div class="margin-lg-150">The library’s interactive play space features fun aspects of a real-life post office, including a standalone mail delivery truck. Kids can process and deliver mail using their imaginations and provided play materials, equipment, and devices. They can also dress up in various postal employee uniforms to accept packages and mail, weigh the items, ring them up on the cash register, place them on the conveyor belt, and sort them into mail slots.</div>
+      <div class="max-width-80">The library’s interactive play space features fun aspects of a real-life post office, including a standalone mail delivery truck. Kids can process and deliver mail using their imaginations and provided play materials, equipment, and devices. They can also dress up in various postal employee uniforms to accept packages and mail, weigh the items, ring them up on the cash register, place them on the conveyor belt, and sort them into mail slots.</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -680,4 +705,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
