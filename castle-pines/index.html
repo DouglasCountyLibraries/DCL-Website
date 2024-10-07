@@ -67,33 +67,25 @@ ul.branch-hours {
 	padding: 0 15px;
 	white-space: nowrap;
 }
-.custom-container {
-	max-width: 2200px;
+.flickity-container {
+	max-width: 830px;
 	margin: 0 auto;
+	padding: 0 15px;
 }
 .carousel-cell {
-	margin-right: 30px;
-	opacity: .5;
-	filter: blur(1px);
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
 }
-.carousel-cell.is-selected {
-	opacity: 1;
-	filter: blur(0);
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #000;
 }
 .flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
-}
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-	fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
-	color: #fff;
+	display: none;
 }
 .item-wrapper {
 	display: flex;
@@ -496,13 +488,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!-- #slideshow div:nth-of-type(9) --> 
     </div>
     <div class="slideshow-content">
-      <h4 class="no-margin-top">This library's creativity-encouraging features include vending-machine-style <a class="text-nowrap" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, a furnished terrace with a fireplace and a Lite-Brite-inspired interactive wall.</h4>
+      <div class="h5 no-margin-top">This library's creativity-encouraging features include vending-machine-style <a class="text-nowrap" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, a furnished terrace with a fireplace and a Lite-Brite-inspired interactive wall.</div>
       <div>The library also includes the <a href="#play-area">Little Letters Post Office</a> play area.</div>
     </div>
   </div>
   <div id="events" class="row text-center location-events">
     <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
-    <a href="https://go.dcl.org/events?et=storytime&l=castle+pines&r=months&n=1" class="text-uppercase font-weight-400">Castle Pines Calendar »</a>
+    <a href="https://go.dcl.org/events?et=storytime&l=castle+pines&r=months&n=1" class="text-uppercase">Castle Pines Calendar »</a>
     <div class="widget-wrapper">
       <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3850&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
     </div>
@@ -514,8 +506,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5">
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
@@ -529,8 +521,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="container text-center padding-top-30 padding-bottom-60">
+  <div id="play-area" class="row bg-gray-5">
+    <div class="container text-center padding-bottom-60">
       <div class="max-width-80">The library’s interactive play space features fun aspects of a real-life post office, including a standalone mail delivery truck. Kids can process and deliver mail using their imaginations and provided play materials, equipment, and devices. They can also dress up in various postal employee uniforms to accept packages and mail, weigh the items, ring them up on the cash register, place them on the conveyor belt, and sort them into mail slots.</div>
     </div>
   </div>

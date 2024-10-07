@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,14 +40,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.location-events {
-	padding: 50px 15px;
+.branch-hours-phone {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 500px;
+	justify-content: center;
+}
+ul.branch-hours {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin: 3px 0 5px;
+}
+.branch-hours li {
+	text-transform: uppercase;
+	padding: 0 15px;
+	white-space: nowrap;
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 .slideshow-row {
@@ -337,13 +355,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Louviers</h1>
+      <h1 class="page-heading">Louviers</h1>
       <div class="padding-bottom-15">
         <div itemscope itemtype="http://schema.org/PostalAddress">
-          <h4 class="margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/xXeJ3N1B2zR2" target="_blank"><span itemprop="streetAddress">7885&nbsp;Louviers&nbsp;Blvd.</span>, <span itemprop="addressLocality">Louviers</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80131</span></a></h4>
+          <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/xXeJ3N1B2zR2" target="_blank"><span itemprop="streetAddress">7885&nbsp;Louviers&nbsp;Blvd.</span>, <span itemprop="addressLocality">Louviers</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80131</span></a></div>
         </div>
-        <div class="text-uppercase"><span class="margin-left-10 margin-right-10">Tue:&nbsp;3-8PM</span> <span class="margin-left-10 margin-right-10">Sat:&nbsp;10AM-4PM</span></div>
-        <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        <div class="branch-hours-phone">
+          <ul class="branch-hours">
+            <li>Tue:&nbsp;3-8PM</li>
+            <li>Sat:&nbsp;10AM-4PM</li>
+          </ul>
+          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -386,8 +409,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="container margin-lg-200 padding-top-30 padding-bottom-50">
-      <h4 class="no-margin text-center">This charming library is located on the second floor of the historic Village Club House in the former DuPont Company town of Louviers.</h4>
+    <div class="container padding-top-30 padding-bottom-80">
+      <div class="max-width-80">
+        <div class="h5 no-margin text-center">This charming library is located on the second floor of the historic Village Club House in the former DuPont Company town of Louviers.</div>
+      </div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -538,4 +563,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>

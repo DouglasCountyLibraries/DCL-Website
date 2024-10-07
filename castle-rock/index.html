@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
@@ -55,7 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	background: #f5f5f5;
 	max-width: 1610px;
 	margin: 0 auto;
-	padding: 40px 15px;
+	padding: 15px;
 	margin-top: 15px;
 }
 .sponsor-wrapper {
@@ -74,33 +75,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	height: 120px;
 	width: 120px;
 }
-.custom-container {
-	max-width: 2200px;
+.branch-hours-phone {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0 auto;
+	max-width: 500px;
+	justify-content: center;
+}
+ul.branch-hours {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin: 3px 0 5px;
+}
+.branch-hours li {
+	text-transform: uppercase;
+	padding: 0 15px;
+	white-space: nowrap;
+}
+.flickity-container {
+	max-width: 830px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 .carousel-cell {
-	margin-right: 30px;
-	opacity: .5;
-	filter: blur(1px);
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
 }
-.carousel-cell.is-selected {
-	opacity: 1;
-	filter: blur(0);
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #000;
 }
 .flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
-}
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-	fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
-	color: #fff;
+	display: none;
 }
 .item-wrapper {
 	display: flex;
@@ -230,7 +243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media (max-width: 925px) {
-.slideshow-row, .item-wrapper {
+.slideshow-row, .art-item-wrapper {
 	flex-direction: column;
 }
 .slideshow-content {
@@ -241,7 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	width: 100%;
 	border-right: 0;
 }
-.item-wrapper img {
+.art-item-wrapper img {
 	padding-bottom: 15px;
 }
 .art-item {
@@ -455,16 +468,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Castle Rock</h1>
-      <h3 class="margin-top-5 no-margin-bottom font-weight-400 text-uppercase">The Philip & Jerry Miller Library</h3>
+      <h1 class="page-heading">Castle Rock</h1>
+      <div class="h3 text-uppercase no-margin">The Philip & Jerry Miller Library</div>
       <div class="padding-bottom-15">
         <div itemscope itemtype="http://schema.org/PostalAddress">
-          <h4 class="margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/3kDTE89mPGw" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></h4>
+          <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/3kDTE89mPGw" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></div>
         </div>
-        <div class="text-uppercase"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;8AM-8PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Fri:&nbsp;8AM-6PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Sat-Sun:&nbsp;10-4PM</span></div>
-        <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        <div class="branch-hours-phone">
+          <ul class="branch-hours">
+            <li>Mon-Thu:&nbsp;8AM-8PM</li>
+            <li>Fri:&nbsp;8AM-6PM</li>
+            <li>Sat-Sun:&nbsp;10-4PM</li>
+          </ul>
+          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -506,15 +523,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!-- #slideshow div:nth-of-type(9) --> 
     </div>
     <div class="slideshow-content">
-      <h2 class="text-uppercase font-weight-400 no-margin-top">Now Open!</h2>
-      <div>This new library houses the DCL <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a>, offering customers specialized help with historical, archival and genealogical projects&mdash;and where you can learn about the library's namesake and benefactors, <a href="https://archives.dcl.org/digital/custom/miller" target="_blank">Philip and Jerry Miller</a>.</div>
+      <div class="h5 no-margin-top">This new library houses the DCL <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a>, offering customers specialized help with historical, archival and genealogical projects&mdash;and where you can learn about the library's namesake and benefactors, <a href="https://archives.dcl.org/digital/custom/miller" target="_blank">Philip and Jerry Miller</a>.</div>
     </div>
   </div>
   <div id ="sponsors" class="row">
     <div class="sponsor-container">
-      <h2 class="text-center no-margin">Our Valued Sponsors</h2>
+      <div class="h2 text-center no-margin">Our Valued Sponsors</div>
       <div class="container text-center">
-        <h5 class="no-margin">Special thanks to these partnering sponsors.</h5>
+        <div class="h5 no-margin">Special thanks to these partnering sponsors.</div>
         <div class="sponsor-wrapper">
           <div class="sponsor">
             <div><img src="aloha-fund-logo.jpg" alt="Aloha Fund"></div>
@@ -541,22 +557,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="events" class="row text-center location-events">
-    <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
-    <a href="https://go.dcl.org/events?et=storytime&l=castle+rock&r=months&n=1" class="text-uppercase font-weight-400">Castle Rock Calendar »</a>
+    <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
+    <a href="https://go.dcl.org/events?et=storytime&l=castle+rock&r=months&n=1" class="text-uppercase">Castle Rock Calendar »</a>
     <div class="widget-wrapper">
       <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3829&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
     </div>
   </div>
   <div id="play-area" class="row bg-gray-5">
     <div class="container padding-top-50 padding-bottom-20 text-center">
-      <h4 class="no-margin">Kid-friendly Fun:</h4>
-      <h2 class="no-margin">The Ranch</h2>
+      <div class="h4 no-margin">Kid-friendly Fun:</div>
+      <div class="h2 no-margin">The Ranch</div>
       <div class="margin-top-5">Sponsored by Rotary Club of Castle Rock</div>
     </div>
   </div>
   <div class="row bg-gray-5">
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
@@ -569,19 +585,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5">
-    <div class="container text-center padding-top-30 padding-bottom-60">
-      <div class="margin-lg-150">Rustle up some fun at The Ranch, where young cowpokes can put their imagination to work tending horses and animals, baling hay, gardening, and more, using play materials and equipment. With a standalone stable, tractor, and mini grain silo, the spirit of the West comes to life in this interactive play space.</div>
+    <div class="container text-center padding-bottom-60">
+      <div class="max-width-80">Rustle up some fun at The Ranch, where young cowpokes can put their imagination to work tending horses and animals, baling hay, gardening, and more, using play materials and equipment. With a standalone stable, tractor, and mini grain silo, the spirit of the West comes to life in this interactive play space.</div>
     </div>
   </div>
   <!--<div id="exhibits" class="row padding-top-50">
-    <h2 class="text-center no-margin padding-bottom-30">Art on Display</h2>
+    <div class="h2 text-center no-margin padding-bottom-30">Art on Display</div>
     <div class="container no-padding item-wrapper margin-lg-175 margin-md-100">
       <div class="art-item text-center"><img class="img-responsive center-block" alt="Sagar Gaikwad" src="sagar-gaikwad.jpg"> </div>
       <div class="art-item">
         <div class="margin-left-10 margin-right-10">
-          <h2 class="no-margin text-uppercase font-weight-400">Sagar Gaikwad</h2>
-          <h3 class="margin-top-5 no-margin-bottom">Paintings</h3>
-          <h4 class="margin-top-5">May 1-June 30</h4>
+          <div class="h2 no-margin text-uppercase font-weight-400">Sagar Gaikwad</div>
+          <div class="h3 margin-top-5 no-margin-bottom">Paintings</div>
+          <div class="h4 margin-top-5">May 1-June 30</div>
           <div>Specializing in abstract and realism acrylic painting, Sagar Gaikwad has a passion for creating vibrant works of art that capture the beauty and complexity of life. Through a combination of bold brushstrokes, vivid colors, and intricate details, Sagar's works invite viewers to explore new perspectives and connect with the emotions conveyed in each piece.</div>
         </div>
       </div>
@@ -589,16 +605,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row padding-top-30 padding-bottom-60">
     <div class="container text-center">
-      <h5 class="no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h5>
+      <div class="h5 no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
       <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-15" type="button">Exhibit Your Work</button>
     </div>
   </div>-->
   
   <div id="exhibits" class="row padding-top-50 padding-bottom-60">
-    <h2 class="text-center no-margin padding-bottom-15">Art on Display</h2>
-    <div class="container text-center">
-      <h5 class="no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h5>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-15" type="button">Exhibit Your Work</button>
+    <div class="h2 text-center no-margin padding-bottom-15">Art on Display</div>
+    <div class="container text-center max-width-80">
+      <div class="h5 no-margin-top">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
+      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary margin-top-15" type="button">Exhibit Your Work</button>
     </div>
   </div>
   
@@ -608,7 +624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="modal-content">
         <div class="modal-header">
           <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-          <h3 id="artModalLabel" class="modal-title text-center">Interested in Exhibiting Your Work?</h3>
+          <div id="artModalLabel" class="h3 modal-title text-center">Interested in Exhibiting Your Work?</div>
         </div>
         <div class="modal-body">
           <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
@@ -787,4 +803,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,50 +40,72 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.custom-container {
-	max-width: 2200px;
-	margin: 0 auto;
-}
-.carousel-cell {
-	margin-right: 30px;
-	opacity: .5;
-	filter: blur(1px);
-}
-.carousel-cell.is-selected {
-	opacity: 1;
-	filter: blur(0);
-}
-.flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
-}
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-	fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
-	color: #fff;
-}
-.item-wrapper {
+.branch-hours-phone {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 500px;
+	justify-content: center;
 }
-.item-wrapper img {
+ul.branch-hours {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin: 3px 0 5px;
+}
+.branch-hours li {
+	text-transform: uppercase;
+	padding: 0 15px;
+	white-space: nowrap;
+}
+.flickity-container {
+	max-width: 830px;
+	margin: 0 auto;
 	padding: 0 15px;
 }
+.carousel-cell {
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
+}
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #000;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+.art-item-wrapper {
+	display: flex;
+	gap: 20px;
+	max-width: 875px;
+	margin: 0 auto;
+}
+.art-item-wrapper img {
+	padding: 15px;
+}
 .art-item {
+	display: flex;
+	justify-content: center;
+}
+.art-item:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	flex-basis: 60%;
+	align-content: center;
 }
 .location-events {
 	padding: 50px 15px 40px;
@@ -196,7 +219,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media (max-width: 925px) {
-.slideshow-row, .item-wrapper {
+.slideshow-row, .art-item-wrapper {
 	flex-direction: column;
 }
 .slideshow-content {
@@ -206,9 +229,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #slideshow {
 	width: 100%;
 	border-right: 0;
-}
-.item-wrapper img {
-	padding-bottom: 15px;
 }
 .art-item {
 	text-align: center;
@@ -421,15 +441,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Highlands Ranch</h1>
+      <h1 class="page-heading">Highlands Ranch</h1>
       <div class="padding-bottom-15">
         <div itemscope itemtype="http://schema.org/PostalAddress">
-          <h4 class="margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/xzXMWh7yn772" target="_blank"><span itemprop="streetAddress">9292&nbsp;S.&nbsp;Ridgeline&nbsp;Blvd</span>, <span itemprop="addressLocality">Highlands&nbsp;Ranch</span>, <span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80129</span></a></h4>
+          <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/xzXMWh7yn772" target="_blank"><span itemprop="streetAddress">9292&nbsp;S.&nbsp;Ridgeline&nbsp;Blvd</span>, <span itemprop="addressLocality">Highlands&nbsp;Ranch</span>, <span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80129</span></a></div>
         </div>
-        <div class="text-uppercase"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;8AM-8PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Fri:&nbsp;8AM-6PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Sat-Sun:&nbsp;10-4PM</span></div>
-        <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        <div class="branch-hours-phone">
+          <ul class="branch-hours">
+            <li>Mon-Thu:&nbsp;8AM-8PM</li>
+            <li>Fri:&nbsp;8AM-6PM</li>
+            <li>Sat-Sun:&nbsp;10-4PM</li>
+          </ul>
+          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -471,26 +495,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!-- #slideshow div:nth-of-type(9) --> 
     </div>
     <div class="slideshow-content">
-      <h4 class="padding-bottom-15">Our expansive library features interactive children’s areas, flexible meeting and community spaces with state-of-the-art technology, <a class="text-nowrap" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, and a furnished terrace with shade structure.</h4>
+      <div class="h5 no-margin-top">Our expansive library features interactive children’s areas, flexible meeting and community spaces with state-of-the-art technology, <a class="text-nowrap" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Tech It Out! lets you check out a laptop or Mac with your library card for use inside the library.">laptop borrowing</a>, and a furnished terrace with shade structure.</div>
       <div>The library also features <a href="#play-area">The Market</a> play area.</div>
     </div>
   </div>
   <div id="events" class="row text-center location-events">
-    <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
-    <a href="https://go.dcl.org/events?et=storytime&l=highlands+ranch&r=months&n=1" class="text-uppercase font-weight-400">Highlands Ranch Calendar »</a>
+    <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
+    <a href="https://go.dcl.org/events?et=storytime&l=highlands+ranch&r=months&n=1" class="text-uppercase">Highlands Ranch Calendar »</a>
     <div class="widget-wrapper">
       <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3851&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
     </div>
   </div>
   <div id="play-area" class="row bg-gray-5">
     <div class="container padding-top-50 padding-bottom-20 text-center">
-      <h4 class="no-margin">Kid-friendly Fun:</h4>
-      <h2 class="no-margin">The Market</h2>
+      <div class="h4 no-margin">Kid-friendly Fun:</div>
+      <div class="h2 no-margin">The Market</div>
     </div>
   </div>
   <div class="row bg-gray-5">
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
@@ -507,19 +531,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5">
-    <div class="container text-center padding-top-30 padding-bottom-60">
-      <div class="margin-lg-150">The library’s farm-to-table play market and kitchen lets kids cook up all kinds of imaginative fun, from shopping for farm fresh fruits and veggies, to ringing them up in the market, to cooking up something playfully delicious in the kitchen. With kid-friendly shopping baskets, bright produce, weight scales, checkout stands, and a galley kitchen stocked with aprons, kids will have a blast playing shopper, grocery checker, and chef all in the same day! </div>
+    <div class="container text-center padding-bottom-60">
+      <div class="max-width-80">The library’s farm-to-table play market and kitchen lets kids cook up all kinds of imaginative fun, from shopping for farm fresh fruits and veggies, to ringing them up in the market, to cooking up something playfully delicious in the kitchen. With kid-friendly shopping baskets, bright produce, weight scales, checkout stands, and a galley kitchen stocked with aprons, kids will have a blast playing shopper, grocery checker, and chef all in the same day! </div>
     </div>
   </div>
   <div id="exhibits" class="row padding-top-50">
-    <h2 class="text-center no-margin padding-bottom-30">Art on Display</h2>
-    <div class="container no-padding item-wrapper margin-lg-175 margin-md-100">
-      <div class="art-item text-center"><img class="img-responsive center-block" alt="Marina Barrett Painting" src="marina-barrett.jpg"> </div>
-      <div class="art-item">
-        <div class="margin-left-10 margin-right-10">
-          <h2 class="no-margin text-uppercase font-weight-400">Marina Barrett</h2>
-          <h3 class="margin-top-5 no-margin-bottom">Wool</h3>
-          <h4 class="margin-top-5">September 1-October 31</h4>
+    <div class="container">
+      <div class="h2 text-center margin-bottom-20">Art on Display</div>
+      <div class="art-item-wrapper">
+        <div class="art-item"><img class="img-responsive" alt="Marina Barrett Painting" src="marina-barrett.jpg"> </div>
+        <div class="art-item">
+          <div class="h2 no-margin text-uppercase">Marina Barrett</div>
+          <div class="h3 margin-top-5 no-margin-bottom">Wool</div>
+          <div class="h4 margin-top-5">September 1-October 31</div>
           <div>Awakening to an unexpected creative spirit, Marina Barrett developed a unique wool technique that adds depth and airiness to their art. Each piece is a textural portal to cherished memories, inviting viewers to explore the tangible landscapes of recollection and imagination.</div>
         </div>
       </div>
@@ -527,7 +551,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row padding-top-30 padding-bottom-60">
     <div class="container text-center">
-      <h5 class="no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h5>
+      <div class="h5 no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
       <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-15" type="button">Exhibit Your Work</button>
     </div>
   </div>
@@ -545,7 +569,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="modal-content">
         <div class="modal-header">
           <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-          <h3 id="artModalLabel" class="text-center modal-title">Interested in Exhibiting Your Work?</h3>
+          <div id="artModalLabel" class="h3 modal-title text-center">Interested in Exhibiting Your Work?</div>
         </div>
         <div class="modal-body">
           <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
@@ -724,4 +748,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>

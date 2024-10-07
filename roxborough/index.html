@@ -46,43 +46,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.custom-container {
-	max-width: 2200px;
-	margin: 0 auto;
-}
-.carousel-cell {
-	margin-right: 30px;
-	opacity: .5;
-	filter: blur(1px);
-}
-.carousel-cell.is-selected {
-	opacity: 1;
-	filter: blur(0);
-}
-.flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
-}
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-	fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
-	color: #fff;
-}
-.item-wrapper {
+.branch-hours-phone {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 500px;
+	justify-content: center;
 }
-.item-wrapper img {
+ul.branch-hours {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin: 3px 0 5px;
+}
+.branch-hours li {
+	text-transform: uppercase;
+	padding: 0 15px;
+	white-space: nowrap;
+}
+.flickity-container {
+	max-width: 830px;
+	margin: 0 auto;
 	padding: 0 15px;
 }
+.carousel-cell {
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
+}
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #000;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+.art-item-wrapper {
+	display: flex;
+	gap: 20px;
+	max-width: 875px;
+	margin: 0 auto;
+}
+.art-item-wrapper img {
+	padding: 15px;
+}
 .art-item {
+	display: flex;
+	justify-content: center;
+}
+.art-item:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	flex-basis: 60%;
+	align-content: center;
 }
 .location-events {
 	padding: 50px 15px 40px;
@@ -196,7 +218,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media (max-width: 925px) {
-.slideshow-row, .item-wrapper {
+.slideshow-row, .art-item-wrapper {
 	flex-direction: column;
 }
 .slideshow-content {
@@ -207,7 +229,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	width: 100%;
 	border-right: 0;
 }
-.item-wrapper img {
+.art-item-wrapper img {
 	padding-bottom: 15px;
 }
 .art-item {
@@ -421,15 +443,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Roxborough</h1>
+      <h1 class="page-heading">Roxborough</h1>
       <div class="padding-bottom-15">
         <div itemscope itemtype="http://schema.org/PostalAddress">
           <h4 class="margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/Kk1TkKQHKrj" target="_blank"><span itemprop="streetAddress">8357&nbsp;N. Rampart&nbsp;Range&nbsp;Rd. #200</span>, <span itemprop="addressLocality">Littleton</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80125</span></a></h4>
         </div>
-        <div class="text-uppercase"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;8AM-8PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Fri:&nbsp;8AM-6PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Sat-Sun:&nbsp;10-4PM</span></div>
-        <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+		  
+		  
+     
+		  
+		  
+		  
+		          <div class="branch-hours-phone">
+          <ul class="branch-hours">
+            <li>Mon-Thu:&nbsp;8AM-8PM</li>
+            <li>Fri:&nbsp;8AM-6PM</li>
+            <li>Sat-Sun:&nbsp;10-4PM</li>
+          </ul>
+          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        </div>
+		  
+		  
+		  
+		  
+		  
       </div>
     </div>
   </div>
@@ -471,26 +508,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!-- #slideshow div:nth-of-type(9) --> 
     </div>
     <div class="slideshow-content">
-      <h4 class="no-margin-top">Located in the heart of Roxborough, this intimate storefront library boasts a light-filled space with a fantastic view of Colorado's Front Range.</h4>
+      <div class="h5 no-margin-top">Located in the heart of Roxborough, this intimate storefront library boasts a light-filled space with a fantastic view of Colorado's Front Range.</div>
       <div>The library also features the <a href="#play-area">Mission Control</a> play area.</div>
     </div>
   </div>
   <div id="events" class="row text-center location-events">
-    <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
-    <a href="https://go.dcl.org/events?et=storytime&l=roxborough&r=months&n=1" class="text-uppercase font-weight-400">Roxborough Calendar »</a>
+    <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
+    <a href="https://go.dcl.org/events?et=storytime&l=roxborough&r=months&n=1" class="text-uppercase">Roxborough Calendar »</a>
     <div class="widget-wrapper">
       <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3855&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
     </div>
   </div>
   <div class="row bg-gray-5">
     <div class="container padding-top-50 padding-bottom-20 text-center">
-      <h4 class="no-margin">Kid-friendly Fun:</h4>
-      <h2 class="no-margin">Mission Control</h2>
+      <div class="h4 no-margin">Kid-friendly Fun:</div>
+      <div class="h2 no-margin">Mission Control</div>
     </div>
   </div>
   <div class="row bg-gray-5">
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
@@ -505,8 +542,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div id="play-area" class="row bg-gray-5">
-    <div class="container text-center padding-top-30 padding-bottom-60">
-      <div class="margin-lg-100">3-2-1&hellip;Blast off to an out-of-this-world play experience here! Our interactive space-themed play space features a standalone rocket and other playful facets of a mission control room where imaginations can soar. Kids can dress up in spacesuits, climb aboard the rocket, run a "systems check," and prepare for blast-off using their imaginations and the provided play materials, equipment, and devices. The sky's the limit!</div>
+    <div class="container text-center padding-bottom-60">
+      <div class="max-width-80">3-2-1&hellip;Blast off to an out-of-this-world play experience here! Our interactive space-themed play space features a standalone rocket and other playful facets of a mission control room where imaginations can soar. Kids can dress up in spacesuits, climb aboard the rocket, run a "systems check," and prepare for blast-off using their imaginations and the provided play materials, equipment, and devices. The sky's the limit!</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>

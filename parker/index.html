@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,50 +40,72 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.custom-container {
-	max-width: 2200px;
-	margin: 0 auto;
-}
-.carousel-cell {
-	margin-right: 30px;
-	opacity: .5;
-	filter: blur(1px);
-}
-.carousel-cell.is-selected {
-	opacity: 1;
-	filter: blur(0);
-}
-.flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
-}
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-	fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
-	color: #fff;
-}
-.item-wrapper {
+.branch-hours-phone {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 500px;
+	justify-content: center;
 }
-.item-wrapper img {
+ul.branch-hours {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin: 3px 0 5px;
+}
+.branch-hours li {
+	text-transform: uppercase;
+	padding: 0 15px;
+	white-space: nowrap;
+}
+.flickity-container {
+	max-width: 830px;
+	margin: 0 auto;
 	padding: 0 15px;
 }
+.carousel-cell {
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
+}
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #000;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+.art-item-wrapper {
+	display: flex;
+	gap: 20px;
+	max-width: 875px;
+	margin: 0 auto;
+}
+.art-item-wrapper img {
+	padding: 15px;
+}
 .art-item {
+	display: flex;
+	justify-content: center;
+}
+.art-item:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	flex-basis: 60%;
+	align-content: center;
 }
 .location-events {
 	padding: 50px 15px 40px;
@@ -427,15 +450,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Parker</h1>
+      <h1 class="page-heading">Parker</h1>
       <div class="padding-bottom-15">
         <div itemscope itemtype="http://schema.org/PostalAddress">
-          <h4 class="margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/BN5GzHYJYwB2" target="_blank"><span itemprop="streetAddress">20105&nbsp;East&nbsp;Mainstreet</span>, <span itemprop="addressLocality">Parker</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80138</span></a></h4>
+          <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/BN5GzHYJYwB2" target="_blank"><span itemprop="streetAddress">20105&nbsp;East&nbsp;Mainstreet</span>, <span itemprop="addressLocality">Parker</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80138</span></a></div>
         </div>
-        <div class="text-uppercase"><span class="margin-left-10 margin-right-10">Mon-Thu:&nbsp;8AM-8PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Fri:&nbsp;8AM-6PM</span><br class="insert-break">
-          <span class="margin-left-10 margin-right-10">Sat-Sun:&nbsp;10-4PM</span></div>
-        <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        <div class="branch-hours-phone">
+          <ul class="branch-hours">
+            <li>Mon-Thu:&nbsp;8AM-8PM</li>
+            <li>Fri:&nbsp;8AM-6PM</li>
+            <li>Sat-Sun:&nbsp;10-4PM</li>
+          </ul>
+          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -477,25 +504,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!-- #slideshow div:nth-of-type(9) --> 
     </div>
     <div class="slideshow-content">
-      <h4 class="no-margin-top">This library is home to <a href="../reserve-a-space/#recording-studio">The Recording Studio</a>, where customers can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</h4>
+      <div class="h5 no-margin-top">This library is home to <a href="../reserve-a-space/#recording-studio">The Recording Studio</a>, where customers can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</div>
       <div>The U-Fix-It Pit Stop has closed. Look for the new <a href="#play-area">Plants & Pollinators</a> play space in October! </div>
     </div>
   </div>
   <div id="events" class="row text-center location-events">
-    <h2 class="no-margin-top margin-bottom-5">Featured Branch Events</h2>
-    <a href="https://go.dcl.org/events?et=storytime&l=parker&r=months&n=1" class="text-uppercase font-weight-400">Parker Calendar »</a>
+    <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
+    <a href="https://go.dcl.org/events?et=storytime&l=parker&r=months&n=1" class="text-uppercase">Parker Calendar »</a>
     <div class="widget-wrapper">
       <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3854&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
     </div>
   </div>
   <div id="play-area" class="row bg-gray-5">
     <div class="container padding-top-50 padding-bottom-60 text-center">
-      <h4 class="no-margin">Kid-friendly Fun:</h4>
-      <h2 class="no-margin">Plants & Pollinators</h2>
-      <div class="margin-lg-150 padding-top-15 padding-bottom-15">Watch imaginations soar as children learn about the plant-pollinator system through hands-on playtime in the apple play house, featuring a specimen table for insect observation. Busy little ones will have fun exploring the world of bees and playing beekeeper in our realistic beekeeping station, complete with materials for role play and dress up. Crawl through the caterpillar, spin the blossoms, and much more while learning about this fascinating ecosystem.</div>
-      <div>Sponsored by Tagawa Gardens.</div>
+      <div class="h4 no-margin">Kid-friendly Fun:</div>
+      <div class="h2 no-margin">Plants & Pollinators</div>
+      <div class="margin-top-10"><i>Opening Soon!</i></div>
+      <div class="max-width-80 padding-top-15 padding-bottom-15">Watch imaginations soar as children learn about the plant-pollinator system through hands-on playtime in the apple play house, featuring a specimen table for insect observation. Busy little ones will have fun exploring the world of bees and playing beekeeper in our realistic beekeeping station, complete with materials for role play and dress up. Crawl through the caterpillar, spin the blossoms, and much more while learning about this fascinating ecosystem.</div>
+      <div>Sponsored by Tagawa Gardens</div>
       <div class="sponsor-logo"><img src="tagawa-gardens-logo.png" alt="Tagawa Gardens Logo"></div>
-      <div style="font-size: 22px" class="margin-top-10"><i>Opening Soon!</i></div>
     </div>
   </div>
   
@@ -519,19 +546,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>-->
   <div id="exhibits" class="row padding-top-50 padding-bottom-60">
-    <h2 class="text-center no-margin padding-bottom-15">Art on Display</h2>
-    <div class="container text-center">
-      <h5 class="no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h5>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-15" type="button">Exhibit Your Work</button>
+    <div class="h2 text-center no-margin padding-bottom-15">Art on Display</div>
+    <div class="container text-center max-width-80">
+      <div class="h5 no-margin-top">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
+      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary margin-top-15" type="button">Exhibit Your Work</button>
     </div>
   </div>
+  
   <!-- Modal -->
   <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
     <div role="document" class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-          <h3 id="artModalLabel" class="modal-title text-center">Interested in Exhibiting Your Work?</h3>
+          <div id="artModalLabel" class="h3 modal-title text-center">Interested in Exhibiting Your Work?</div>
         </div>
         <div class="modal-body">
           <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
@@ -705,4 +733,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
