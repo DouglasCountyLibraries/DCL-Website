@@ -42,251 +42,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
 <!-- InstanceBeginEditable name="head" -->
 <style>
-@font-face {
-	font-family: 'Rust';
-	src: url('../shared-assets/web-fonts/AtomicRust.woff2') format('woff2'), url('../shared-assets/web-fonts/AtomicRust.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-.background-row {
-	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
-	background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
-	background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
-}
-.contain-header {
-	background: #b18766 url("fete-background-lg.jpg") center bottom no-repeat;
-	padding: 0 15px;
-	max-width: 1920px;
-	margin: 0 auto;
+.item-row {
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 15%, #efeeed 15%, #efeeed 100%);
 }
 .item-wrapper {
-	font-family: Times, "Times New Roman", serif;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	text-align: center;
-	font-size: 22px;
-	color: #2a1f18;
-	font-weight: 400;
-	max-width: 1920px;
-	margin: 0 auto;
-	justify-content: center;
-	padding: 60px 15px 20px;
-}
-.modal-content {
-	font-family: Times, "Times New Roman", serif;
-	font-size: 19px;
-	color: #2a1f18;
-}
-.modal-content h4 {
-	font-family: Times, "Times New Roman", serif;
-	color: #2a1f18;
-	font-size: 30px;
-}
-.item {
-	max-width: 900px;
-	margin: 0 auto;
+    background: url("gala.jpg") center center/cover;
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    height: 68vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 60px;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 1);
 }
 .item h1 {
-	font-family: "Rust", serif;
-	font-size: 200px;
-	color: #473529;
-	-webkit-text-stroke: 3px #c89674;
-	text-shadow: 1px 10px 10px #000;
-	margin: 0;
-	line-height: 175px;
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 74px;
+    font-weight: 700;
+    color: #fff;
+    margin: 15px 0 20px;
+    line-height: 70px;
 }
-.larger-text {
-	font-size: 1.6em;
-	line-height: 1.1;
-}
-.fete-heading {
-	color: #2a1f18;
-}
-.info-content {
-	max-width: 975px;
-	margin: 0 auto;
-	font-family: Times, "Times New Roman", serif;
-	font-size: 18px;
-	text-align: center;
-	color: #2a1f18;
-	padding: 0 15px;
-}
-.info-content a {
-	text-decoration: underline;
-	color: #2a1f18;
-}
-.info-content h2 {
-	font-family: Times, "Times New Roman", serif;
-	color: #2a1f18;
-	font-size: 32px;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin: 0;
-}
-.info-content-one {
-	font-size: 24px;
-}
-.info-content-two {
-	font-size: 22px;
-	padding: 10px 0 0;
-}
-.info-content-three {
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 26px;
-	padding: 0 0 5px;
-}
-.info-content-four, .info-content-four a {
-	font-size: 21px;
-	padding: 30px 0 10px;
-	font-style: italic;
-}
-.info-wrapper-one, .info-wrapper-two, .info-wrapper-three {
-	text-align: center;
-	color: #fff;
-	font-weight: 400;
-	margin: 0 auto;
-	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
-}
-.info-wrapper-one {
-	font-family: Times, "Times New Roman", serif;
-	max-width: 975px;
-	font-size: 24px;
-	padding-bottom: 30px;
-}
-.info-wrapper-two {
-	font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-	max-width: 1000px;
-	font-size: 24px;
-	padding: 0 0 15px;
-	margin-top: -40px;
-}
-.info-wrapper-three {
-	font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-	max-width: 860px;
-	font-size: 20px;
-}
-.btn-custom, .btn-active:active, .btn-custom:hover, .btn-custom:focus {
-	background: #913b68;
-	color: #fff;
-	text-shadow: none;
-}
-.btn.btn-custom {
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 22px;
-	letter-spacing: 1px;
-	border: 2px solid #fff;
-	line-height: 1;
-	padding: 20px 25px;
-}
-.btn.btn-custom:active, .btn.btn-custom:hover, .btn.btn-custom:focus {
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 22px;
-	letter-spacing: 1px;
-	border: 2px solid #fff;
-	line-height: 1;
-	padding: 20px 25px;
-}
-.sponsor-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	padding-bottom: 100px;
-	padding: 10px 15px 100px;
-}
-.sponsor-wrapper h4 {
-	font-family: Times, "Times New Roman", serif;
-	color: #fff;
-	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
-	font-size: 24px;
-	margin: 0;
-	text-align: center;
-}
-.logos {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 0 15px 430px;
-}
-.logos a {
-	opacity: .8;
-	transition: all .4s ease-out;
-}
-.logos a:hover, .logos a:focus {
-	opacity: 1;
-	transform: scale(1.05);
-	transition: all .4s ease-out;
-}
-.sponsors {
-	font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-	height: 100px;
-	width: 250px;
-	font-size: 24px;
-	text-transform: uppercase;
-	justify-content: center;
-	display: flex;
-	align-content: center;
-	align-self: center;
-	line-height: 24px;
-}
-.sponsors a {
-	display: flex;
-	align-items: center;
-	font-weight: 600;
+.item .h2 {
+    font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
 }
 
-@media (max-width: 1530px) {
-.logos {
-	max-width: 900px;
-	margin: 0 auto;
-}
-}
-
-@media (max-width: 925px) {
-.contain-header {
-	background: #b18766 url("fete-background-sm.jpg") center bottom no-repeat;
-}
+@media (max-width: 625px) {
 .item h1 {
-	font-family: "Rust", serif;
-	font-size: 160px;
-	margin: 0;
-	line-height: 160px;
-}
-.info-content h2 {
-	font-size: 28px;
-}
-}
-
-@media (max-width: 675px) {
-.item h1 {
-	font-family: "Rust", serif;
-	font-size: 120px;
-	margin: 0;
-	line-height: 120px;
-	-webkit-text-stroke: 2px #c89674;
-	text-shadow: 1px 10px 10px rgba(0,0,0,.5);
-}
-.fete-heading {
-	padding-right: 0;
-}
-.item-wrapper {
-	padding: 40px 15px 25px;
-}
-}
-
-@media (max-width: 500px) {
-.item h1 {
-	font-family: "Rust", serif;
-	font-size: 88px;
-	color: #473529;
-	margin: 0;
-	line-height: 100px;
+    font-size: 58px;
+    line-height: 54px;
 }
 }
 </style>
@@ -478,67 +276,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
-    <div class="contain-header">
-      <div class="row main-header">
-        <div class="item-row">
-          <div class="item-wrapper">
-            <div class="item">
-              <div class="fete-heading">
-                <div>Ninth Annual</div>
-                <div class="larger-text">Fête des Fables Gala</div>
-              </div>
-              <h1 class="entrance-two">Pinocchio</h1>
-            </div>
-          </div>
-        </div>
-        <div class="info-content">
-          <h2>You're Invited!</h2>
-          <div class="info-content-two">Join the Douglas County Libraries Foundation to celebrate Carlo Collodi's classic story of the mischievous marionette who becomes a real boy. We'll bring the Italian countryside to life for a fabulous evening that includes a signature cocktail, catered Italian dinner and dessert, remarkable entertainment, and an exciting silent auction, where you just might find the treasure of your dreams. </div>
-          <div class="padding-top-30 padding-bottom-30">
-            <button class="btn btn-lg btn-null btn-custom">Sold Out</button>
-          </div>
-          <div class="info-content-one">Friday, September 27, 6PM<br>
-            Tickets: $125<br>
-            <a href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank" style="font-size: 26px;">Highlands Ranch Mansion</a>
-            <div></div>
-          </div>
-          <div class="info-content-four">Event proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>.<br>
-            <a href="#sponsors" class="" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</div>
-        </div>
-        <div class="logos"> <a href="https://fransenpittman.com/" target="_blank"><img class="" src="sponsors/fransen-pittman.png" alt="Fransen Pittman Construction"></a> <a href="https://hbstrash.com/" target="_blank"><img class="" src="sponsors/hbs-trash-services-updated.png" alt="HBS Trash Services"></a> <a href="https://www.livelyproductions.com/" target="_blank"><img class="" src="sponsors/lively-productions.png" alt="Lively Productions"></a> <a href="https://www.midwesttape.com/" target="_blank"><img class="" src="sponsors/midwest-tape.png" alt="Midwest Tape"></a><a href="https://www.parksidepromotions.com/" target="_blank"><img class="" src="sponsors/parkside-promotions.png" alt="Midwest Tape"></a><a href="https://sterlingranchcolorado.com/" target="_blank"><img class="" src="sponsors/sterling-ranch.png" alt="Sterling Ranch"></a></div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="sponsor-modal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-          <h4 class="text-center modal-title">Sponsorship Packages</h4>
-        </div>
-        <div class="modal-body padding-30">
-          <div style="font-size: 22px;">Select from a range of sponsorship packages or we’ll create a customized package just for you!</div>
-          <div class="padding-top-15 padding-bottom-15">Your generous sponsorship will support us in creating a truly enchanting evening and will also contribute to funding vital library programs that reach young people, adults, and families in Douglas County and throughout Colorado.</div>
-          <div class="padding-bottom-15">To participate, please contact us at <a class="text-nowrap" href="tel:+13037643311">303-764-3311</a>.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="auction-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header" style="border-bottom: 0;">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-          <h4 class="text-center modal-title" style="padding: 20px 50px 0;">Preregister for bidding and check out our auction items here:</h4>
-        </div>
-        <div class="modal-body text-center padding-bottom-60"> <img class="padding-bottom-30" src="auction-qrcode.png" alt="QR Code">
-          <div><a href="https://auctria.events/2023fetedesfables" target="_blank">auctria.events/2023fetedesfables</a></div>
-        </div>
+  <div class="row item-row">
+    <div class="item-wrapper">
+      <div class="item">
+        <div class="h2">Tenth Annual</div>
+        <h1>Fête des Fables<br>
+          Gala</h1>
+        <div>
+          <div class="h2 padding-bottom-15"><i>Details coming soon!</i></div>
+          <!--Friday, September&nbsp;29,&nbsp;2023<br>
+          Highlands Ranch Mansion </div>-->
       </div>
     </div>
   </div>
@@ -603,27 +350,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
