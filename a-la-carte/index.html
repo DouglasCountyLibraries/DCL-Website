@@ -47,22 +47,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
-.custom-container {
-	max-width: 2200px;
+.flickity-container {
+	max-width: 1400px;
 	margin: 0 auto;
-}
-.check-list {
-	max-width: 600px;
-	margin: 0 auto;
+	padding: 0 15px;
 }
 .carousel-cell {
-	margin-right: 30px;
-	opacity: .5;
-	filter: blur(1px);
+	width: 100%;
+	padding: 0;
+	text-align: center;
 }
-.carousel-cell.is-selected {
-	opacity: 1;
-	filter: blur(0);
+.carousel-cell img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
 }
 .flickity-prev-next-button {
 	width: 50px;
@@ -72,12 +71,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .flickity-prev-next-button:hover {
 	background: transparent;
 }
-/* arrow color */
 .flickity-prev-next-button .arrow {
-	fill: #fff;
+	fill: #efeeed;
 }
 .flickity-prev-next-button.no-svg {
-	color: #fff;
+	color: #efeeed;
+}
+.check-list {
+	max-width: 600px;
+	margin: 0 auto;
 }
 .concierge .fa-check {
 	color: #D36A50;
@@ -284,31 +286,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="dinner.jpg" alt="Couple Enjoying Dinner"></div>
-        <div class="carousel-cell"><img src="rehearsal-dinner-buffet.jpg" alt="Rehersal Dinner Buffet"></div>
-        <div class="carousel-cell"><img src="presentation.jpg" alt="Meeting Presentation"></div>
-        <div class="carousel-cell"><img src="table-setting.jpg" alt="Table Setting"></div>
-        <div class="carousel-cell"><img src="fruit-tray.jpg" alt="Fruit Tray"></div>
-        <div class="carousel-cell"><img src="chip-tray.jpg" alt="Chips and Salsa"></div>
-        <div class="carousel-cell"><img src="group-presenter.jpg" alt="Presenter with Group"></div>
-        <div class="carousel-cell"><img src="meeting-discussion.jpg" alt="Discussion after Meeting"></div>
-        <div class="carousel-cell"><img src="meeting-room.jpg" alt="Meeting Room"></div>
-        <div class="carousel-cell"><img src="meeting-break.jpg" alt="Meeting Break"></div>
-        <div class="carousel-cell"><img src="power-point-presentation.jpg" alt="Powerpoint Presentation"></div>
-        <div class="carousel-cell"><img src="slide-presentation.jpg" alt="Slide Presentation"></div>
-        <div class="carousel-cell"><img src="dinner-meeting.jpg" alt="Dinner Meeting"></div>
-        <div class="carousel-cell"><img src="rehearsal-dinner-buffet.jpg" alt="Rehearsal Dinner Buffet"></div>
-        <div class="carousel-cell"><img src="arrangement.jpg" alt="Table with Arrangement"></div>
-        <div class="carousel-cell"><img src="table-conversation.jpg" alt="Dinner Conversation"></div>
-        <div class="carousel-cell"><img src="wedding-party.jpg" alt="Wedding Party"></div>
-        <div class="carousel-cell"><img src="conversation.jpg" alt="Conversations"></div>
-        <div class="carousel-cell"><img src="parker-place-settings.jpg" alt="Place Settings at Parker"></div>
-        <div class="carousel-cell"><img src="refreshments.jpg" alt="Table Setting with Refreshments"></div>
-        <div class="carousel-cell"><img src="before-party.jpg" alt="Before the Party"></div>
-        <div class="carousel-cell"><img src="large-group.jpg" alt="Large Group Celebration"></div>
-        <div class="carousel-cell"><img src="getting-seated.jpg" alt="Dinner Party Getting Seated"></div>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="images/dinner.jpg" alt="Couple Enjoying Dinner"></div>
+        <div class="carousel-cell"><img src="images/rehearsal-dinner-buffet.jpg" alt="Rehersal Dinner Buffet"></div>
+        <div class="carousel-cell"><img src="images/presentation.jpg" alt="Meeting Presentation"></div>
+        <div class="carousel-cell"><img src="images/table-setting.jpg" alt="Table Setting"></div>
+        <div class="carousel-cell"><img src="images/fruit-tray.jpg" alt="Fruit Tray"></div>
+        <div class="carousel-cell"><img src="images/chip-tray.jpg" alt="Chips and Salsa"></div>
+        <div class="carousel-cell"><img src="images/group-presenter.jpg" alt="Presenter with Group"></div>
+        <div class="carousel-cell"><img src="images/meeting-discussion.jpg" alt="Discussion after Meeting"></div>
+        <div class="carousel-cell"><img src="images/meeting-room.jpg" alt="Meeting Room"></div>
+        <div class="carousel-cell"><img src="images/meeting-break.jpg" alt="Meeting Break"></div>
+        <div class="carousel-cell"><img src="images/power-point-presentation.jpg" alt="Powerpoint Presentation"></div>
+        <div class="carousel-cell"><img src="images/slide-presentation.jpg" alt="Slide Presentation"></div>
+        <div class="carousel-cell"><img src="images/dinner-meeting.jpg" alt="Dinner Meeting"></div>
+        <div class="carousel-cell"><img src="images/rehearsal-dinner-buffet.jpg" alt="Rehearsal Dinner Buffet"></div>
+        <div class="carousel-cell"><img src="images/arrangement.jpg" alt="Table with Arrangement"></div>
+        <div class="carousel-cell"><img src="images/table-conversation.jpg" alt="Dinner Conversation"></div>
+        <div class="carousel-cell"><img src="images/wedding-party.jpg" alt="Wedding Party"></div>
+        <div class="carousel-cell"><img src="images/conversation.jpg" alt="Conversations"></div>
+        <div class="carousel-cell"><img src="images/parker-place-settings.jpg" alt="Place Settings at Parker"></div>
+        <div class="carousel-cell"><img src="images/refreshments.jpg" alt="Table Setting with Refreshments"></div>
+        <div class="carousel-cell"><img src="images/before-party.jpg" alt="Before the Party"></div>
+        <div class="carousel-cell"><img src="images/large-group.jpg" alt="Large Group Celebration"></div>
+        <div class="carousel-cell"><img src="images/getting-seated.jpg" alt="Dinner Party Getting Seated"></div>
       </div>
     </div>
   </div>

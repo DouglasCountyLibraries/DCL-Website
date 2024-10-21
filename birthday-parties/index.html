@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,25 +40,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .reserve-a-space-active {
 	background-color: #f5f5f5;
 }
-.custom-container {
-	max-width: 2200px;
+.flickity-container {
+	max-width: 1400px;
 	margin: 0 auto;
+	padding: 0 15px;
 }
 .carousel-cell {
-	margin-right: 30px;
-	opacity: .5;
-	filter: blur(1px);
+	width: 100%;
+	padding: 0;
+	text-align: center;
 }
-.carousel-cell.is-selected {
-	opacity: 1;
-	filter: blur(0);
+.carousel-cell img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
 }
 .flickity-prev-next-button {
 	width: 50px;
@@ -67,12 +71,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .flickity-prev-next-button:hover {
 	background: transparent;
 }
-/* arrow color */
 .flickity-prev-next-button .arrow {
-	fill: #fff;
+	fill: #efeeed;
 }
 .flickity-prev-next-button.no-svg {
-	color: #fff;
+	color: #efeeed;
 }
 .concierge .fa-check {
 	color: #d36a50;
@@ -291,24 +294,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="birthday-one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-seven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-eight.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-nine.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-ten.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-eleven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-twelve.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-thirteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-fourteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-fifteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="birthday-sixteen.jpg" alt=""></div>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="images/birthday-one.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-two.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-three.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-six.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-seven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-eight.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-nine.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-ten.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-eleven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-twelve.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-thirteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-fourteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-fifteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="images/birthday-sixteen.jpg" alt=""></div>
       </div>
     </div>
   </div>
@@ -491,4 +494,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
