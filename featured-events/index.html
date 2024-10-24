@@ -254,17 +254,7 @@ Push Notifications End - Removed for Now -->
 }
 .white-bottom-row {
 	background: #ffffff;
-	background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
-	background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
 	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
-	margin-left: -30px;
-	margin-right: -30px;
-}
-.white-top-row {
-	background: #ffffff;
-	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
-	background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
-	background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f5f5f5 50%, #f5f5f5 100%);
 	margin-left: -30px;
 	margin-right: -30px;
 }
@@ -282,18 +272,6 @@ Push Notifications End - Removed for Now -->
 .photo-content-wrapper {
 	text-align: center;
 }
-.thriller-intro {
-	text-align: center;
-	padding: 30px 15px 0 15px;
-	max-width: 875px;
-	margin: 0 auto;
-}
-.thriller-row {
-	text-align: center;
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 0 15px 15px 15px;
-}
 .photo-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -302,23 +280,11 @@ Push Notifications End - Removed for Now -->
 	margin: 0 auto;
 	padding: 0 15px;
 }
-.wkk-photo-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	max-width: 925px;
-	margin: 0 auto;
-	padding: 0 15px;
-}
 .photo-item {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
 	margin: 30px 15px;
-}
-.monkey-background {
-	background: #fff url("monkey-city.jpg") bottom right no-repeat;
-	min-height: 500px;
 }
 .photo-item-inner {
 	padding: 30px 30px 0;
@@ -343,140 +309,6 @@ Push Notifications End - Removed for Now -->
 	align-self: center;
 	padding: 30px;
 }
-.photo-icon {
-	font-size: 120px;
-	font-weight: 200;
-	padding-bottom: 15px;
-}
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-
-.slideshow-image.main {
-	min-height: 450px;
-}
-#slideshow {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 0%;
-} /* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-	position: absolute;
-	z-index: 2;
-	width: 105%;
-	height: 105%;
-	top: -5%;
-	left: -5%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 0;
-	transition: opacity 3s, transform 8s;
-}
-/* slide two */
-#slideshow div {
-	transform-origin: bottom right;
-}
-/* slide three */
-#slideshow div:nth-of-type(2n+1) {
-	transform-origin: top right;
-}
-/* slide four */
-#slideshow div:nth-of-type(3n+1) {
-	transform-origin: top right;
-}
-/* slide five */
-#slideshow div:nth-of-type(4n+1) {
-	transform-origin: top left;
-}
-/* slide six */
-#slideshow div:nth-of-type(5n+1) {
-	transform-origin: top right;
-}
-/* slide one */
-#slideshow div:nth-of-type(6n+1) {
-	transform-origin: bottom center;
-}
-#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
-	z-index: 1
-}
-#slideshow .fx, #slideshow .fx1 {
-	transform: scale(1.1) translate(1.5%);
-	opacity: 1
-}
-#slideshow div:nth-of-type(1) {
-	background-image: url("delicious-menus.jpg")
-}
-#slideshow div:nth-of-type(2) {
-	background-image: url("delightful-crafts.jpg")
-}
-#slideshow div:nth-of-type(3) {
-	background-image: url("photo-ops.jpg")
-}
-#slideshow div:nth-of-type(4) {
-	background-image: url("make-and-take.jpg")
-}
-#slideshow div:nth-of-type(5) {
-	background-image: url("music-entertainment.jpg")
-}
-#slideshow div:nth-of-type(6) {
-	background-image: url("santa-visit.jpg")
-}
-/* captions */
-#slideshow span {
-	position: absolute;
-	z-index: 2;
-	text-align: center;
-	top: 50%;
-	left: 50%;
-	display: flex;
-	padding: 0;
-	margin: 0;
-	font-size: 40px;
-	color: transparent;
-	transform: translate(-50%, -50%);
-	width: 100%;
-	justify-content: center;
-	flex-direction: column;
-	line-height: 40px;
-	text-transform: uppercase;
-	font-weight: 500;
-}
-#slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
-	z-index: 1
-}
-#slideshow .fx + span, #slideshow .fx1 + span {
-	color: #fff;
-	animation: caption 5s 1s both;
-	text-shadow: 0 6px 20px #000;
-	padding-bottom: 30px;
-}
-@keyframes caption {
-0% {
-opacity:0;
-}
-20% {
-opacity:1;
-}
-90% {
-opacity:1;
-}
-100% {
-opacity:0;
-}
-}
-
-@media (max-width: 525px) {
-#slideshow {
-	width: 100%;
-}
-#slideshow span {
-	font-size: 30px;
-	line-height: 42px;
-}
-.photo-icon {
-	font-size: 80px;
-	font-weight: 300;
-}
-}
 
 @media (max-width: 675px) {
 .author-wrapper {
@@ -488,9 +320,6 @@ opacity:0;
 	background: #f5f5f5;
 	margin: 0 auto 10px;
 }
-/*.author-item.one {
-    border-right: 0;
-}*/
 .author-item.two {
 	text-align: center;
 	padding: 20px 0;
@@ -565,10 +394,6 @@ opacity:0;
 }
 
 @media (max-width: 1400px) {
-/*.photo-wrapper {
-	max-width: 1150px;
-	margin: 0 auto;
-}*/
 .photo-item:last-child {
 	width: 100%;
 	max-width: 900px;
@@ -602,13 +427,6 @@ opacity:0;
 	max-width: 900px;
 }
 }
-
-/*
-@media (max-width: 1400px) {
-.box-wrapper {
-    max-width: 900px;
-}
-}*/
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -798,11 +616,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-15">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Featured Events</h1>
-        <h4 class="roboto margin-top-5"><a href="../newsletters/">Become a DCL insider</a> and be the first to access ticket sales for our events!</h4>
+  <div class="row border-top padding-bottom-20">
+    <div class="container text-center">
+      <h1 class="page-heading">Featured Events</h1>
+      <div class="max-width-80">
+        <h2 class="page-subheading"><a href="../newsletters/">Become a DCL insider</a> and be the first to access ticket sales for our events!</h2>
         <div>You’ll also get the inside scoop on great reads and upcoming events.</div>
       </div>
     </div>
@@ -820,8 +638,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="small-mccarthy"><img class="img-responsive" src="andrew-mccarthy-sm.jpg" alt="Andrew McCarthy, '80s Rewind"></div>
       <div class="andrew-item">
         <div class="andrew-content">
-          <h4 class="no-margin-top margin-bottom-5">DCL Presents:</h4>
-          <h2 class="no-margin-top text-uppercase font-weight-400">Andrew McCarthy</h2>
+          <div class="h4 no-margin-top margin-bottom-5">DCL Presents:</div>
+          <div class="h2 no-margin-top text-uppercase font-weight-400">Andrew McCarthy</div>
           <div class="large-text margin-bottom-5">Relive the magic of the 1980s with former Brat Pack actor and author Andrew McCarthy!</div>
           <div class="margin-bottom-5">Your VIP Experience ticket includes themed appetizers and cocktails to enjoy in your favorite ‘80s movie scenes, an ‘80s costume contest, and premium reserved seating at the author’s presentation.</div>
           <div>General admission tickets include a place in the photo line, ’80s-themed activities, and dessert bites; cash bar for ages 21-plus. Pre-signed books ($28) are available for sale upon reservation or at the event.</div>
@@ -857,8 +675,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="photo-wrapper">
       <div class="photo-item black text-center bg-gray-5"> <img class="img-responsive center-block" src="storybook-holiday-winter.jpg" alt="Storybook Holiday Winter">
         <div class="photo-item-inner">
-          <h4 class="no-margin-top margin-bottom-5">A Storybook Holiday:</h4>
-          <h2 class="no-margin-top text-uppercase font-weight-400">'Twas the Night</h2>
+          <div class="h4 no-margin-top margin-bottom-5">A Storybook Holiday:</div>
+          <div class="h2 no-margin-top text-uppercase font-weight-400">'Twas the Night</div>
           <div>Join us for a magical celebration filled with holiday cheer! Bring the whole family for festive fun that includes a visit with Santa, delicious food and drinks, holiday entertainment, crafts and activities, photo booth, make-and-takes, and more. Create lasting memories with us!</div>
         </div>
         <div class="align-bottom-alt">
@@ -869,8 +687,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="photo-item black text-center bg-gray-5"> <img class="img-responsive center-block" src="storybook-holiday-witches.jpg" alt="C.J. Box">
         <div class="photo-item-inner">
-          <h4 class="no-margin-top margin-bottom-5">A Storybook Holiday:</h4>
-          <h2 class="no-margin-top text-uppercase font-weight-400">Witches!</h2>
+          <div class="h4 no-margin-top margin-bottom-5">A Storybook Holiday:</div>
+          <div class="h2 no-margin-top text-uppercase font-weight-400">Witches!</div>
           <div>Get ready for a spooktacular evening of eerie delights, enchanting crafts, spellbinding activities, bewitching treats, and a trick-or-treat experience not to be missed! Whether you’re a Grand High Witch in disguise or a young witch-hunter, come dressed in your best costume for magical fun! Ideal for ages 7-11, but all ages welcome.</div>
         </div>
         <div class="align-bottom-alt">
@@ -888,7 +706,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="gray-circle circle-alt"><img src="icon-images/gardening-workshop.jpg" alt="CSU Master Gardener Series" class="img-responsive"></div>
           </div>
         </div>
-        <h3 class="text-center margin-top-10">CSU Master Gardener Series</h3>
+        <div class="h3 text-center margin-top-10">CSU Master Gardener Series</div>
         <div class="text-center">Cultivate a green thumb! Join us for a series of free fall sessions to up your gardening game. ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
@@ -900,7 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="gray-circle circle-alt"><img src="icon-images/slick-science.jpg" alt="Slick Science" class="img-responsive"></div>
           </div>
         </div>
-        <h3 class="text-center margin-top-10">Slick Science</h3>
+        <div class="h3 text-center margin-top-10">Slick Science</div>
         <div class="text-center">Spark curiosity and learn some seriously cool science through fun, rotating STEAM-related activities. AGES&nbsp;8-12.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
@@ -912,7 +730,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="gray-circle circle-alt"><img src="icon-images/book-lovers.jpg" alt="Book Lovers" class="img-responsive"></div>
           </div>
         </div>
-        <h3 class="text-center margin-top-10">Book Lovers</h3>
+        <div class="h3 text-center margin-top-10">Book Lovers</div>
         <div class="text-center">Discover great new reads at an evening of book talks, with special guests and door prizes! ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
@@ -924,7 +742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="gray-circle circle-alt"><img src="icon-images/fired-up.jpg" alt="Active Minds" class="img-responsive"></div>
           </div>
         </div>
-        <h3 class="text-center margin-top-10">Active Minds</h3>
+        <div class="h3 text-center margin-top-10">Active Minds</div>
         <div class="text-center">Join us at an upcoming class presented by Active Minds, with topics to suit a wide range of interests. ADULTS.</div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
@@ -937,7 +755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
         </div>
         <div class="margin-top-10 text-center">Bellco Credit Union Presents:</div>
-        <h3 class="text-center no-margin-top"> Recognizing & Protecting Yourself from Fraud</h3>
+        <div class="h3 text-center no-margin-top"> Recognizing & Protecting Yourself from Fraud</div>
         <div class="text-center"> Don’t let fraud catch you off guard! Learn how to identify theft and fraud, and get useful tips for protecting yourself. ADULTS. </div>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Saturday, November&nbsp;2, 3-5PM, Highlands Ranch</div>
@@ -948,8 +766,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="author-events" class="row padding-bottom-30">
     <div class="container">
       <div class="text-center padding-top-30">
-        <h1>Other Author Events</h1>
-        <h4 class="margin-lg-150 no-margin-bottom text-center">Spend an evening with these diverse authors and hear the stories behind their stories. We regularly host bestsellers, local authors, children's writers, and more.</h4>
+        <div class="h1">Other Author Events</div>
+        <div class="h5 max-width-90 no-margin-bottom text-center">Spend an evening with these diverse authors and hear the stories behind their stories. We regularly host bestsellers, local authors, children's writers, and more.</div>
       </div>
     </div>
   </div>
@@ -957,8 +775,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="author-wrapper">
       <div class="author-item one"><a href="https://dcl.bibliocommons.com/v2/record/S114C1791334"><img src="ofrenda-we-built.jpg" alt="The Ofrenda That We Built"></a></div>
       <div class="author-item two">
-        <h2 class="no-margin-top">Jolene Gutiérrez</h2>
-        <h4>Saturday, November&nbsp;9, 2PM, <a href="../castle-rock/">Castle Rock</a></h4>
+        <div class="h2 no-margin-top">Jolene Gutiérrez</div>
+        <div class="h4">Saturday, November&nbsp;9, 2PM, <a href="../castle-rock/">Castle Rock</a></div>
         <div>Join us for a special Storytime and activity with the author, featuring her bilingual book <a href="https://dcl.bibliocommons.com/v2/record/S114C1791334"><i>The Ofrenda That We Built</i></a>. Guests will also learn about the Day of the Dead (Dia de los Muertos) celebration. Books will be sold at the event. CHILDREN & FAMILIES.</div>
         <div class="margin-top-15"><a href="https://go.dcl.org/event/11862896" class="btn btn-primary btn-lg text-uppercase">Register Now</a></div>
       </div>
@@ -966,8 +784,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="author-wrapper">
       <div class="author-item one"><a href="https://dcl.bibliocommons.com/v2/record/S114C1794778"><img src="https://www.syndetics.com/index.aspx?isbn=9798990807426&issn=/LC.JPG" alt="Anyone But Her"></a></div>
       <div class="author-item two">
-        <h2 class="no-margin-top">Cynthia Swanson</h2>
-        <h4>Friday, November&nbsp;15, 6:30PM, <a href="../highlands-ranch/">Highlands Ranch</a></h4>
+        <div class="h2 no-margin-top">Cynthia Swanson</div>
+        <div class="h4">Friday, November&nbsp;15, 6:30PM, <a href="../highlands-ranch/">Highlands Ranch</a></div>
         <div>Join us with your book club for an evening with the Colorado author and hear about her new novel, <a href="https://dcl.bibliocommons.com/v2/record/S114C1794778"><i>Anyone But Her</i></a>. She is also the New York Times and USA Today bestselling author of <i><a href="https://dcl.bibliocommons.com/v2/record/S114C1242408">The Bookseller</a></i> and <a href="https://dcl.bibliocommons.com/v2/record/S114C1441804"><i>The Glass Forest</i></a>. A book sale and signing will follow her presentation. ADULTS.</div>
         <div class="margin-top-15"><a href="https://go.dcl.org/event/11238720" class="btn btn-primary btn-lg text-uppercase">Register Now</a></div>
       </div>
@@ -975,31 +793,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="author-wrapper">
       <div class="author-item one"><a href="https://dcl.bibliocommons.com/v2/record/S114C1780502"><img src="https://www.syndetics.com/index.aspx?isbn=9798988631705&issn=/LC.JPG" alt="The Road Unpaved"></a></div>
       <div class="author-item two">
-        <h2 class="no-margin-top">Local Author Showcase</h2>
-        <h4>Saturday, November&nbsp;16, 1PM, <a href="../highlands-ranch/">Highlands Ranch</a></h4>
+        <div class="h2 no-margin-top">Local Author Showcase</div>
+        <div class="h4">Saturday, November&nbsp;16, 1PM, <a href="../highlands-ranch/">Highlands Ranch</a></div>
         <div>Connect with local authors and hear about their books. Adult and young adult fiction, nonfiction, and juvenile titles are represented. Each presenting author will talk about their work, followed by a book sale and signing. ADULTS.</div>
         <div class="margin-top-15"><a href="https://go.dcl.org/event/10892816" class="btn btn-primary btn-lg text-uppercase">Register Now</a></div>
       </div>
     </div>
   </div>
   <div id="collection-consideration" class="row bg-teal">
-    <div class="container text-center padding-top-50 padding-bottom-50">
-      <h4 class="white no-margin-top margin-lg-200">Are you a local author interested in adding your work to our collection? <a class="white text-underline" href="collection-consideration/">Apply now</a> to be considered.</h4>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="auction-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header" style="border-bottom: 0;">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-          <h4 class="text-center modal-title" style="padding: 20px 50px 0;">Preregister for bidding and check out our auction items here:</h4>
-        </div>
-        <div class="modal-body text-center padding-bottom-60"> <img class="padding-bottom-30" src="../fete-des-fables/auction-qrcode.png" alt="QR Code">
-          <div><a href="https://auctria.events/2023fetedesfables" target="_blank">auctria.events/2023fetedesfables</a></div>
-        </div>
-      </div>
+    <div class="container text-center padding-top-60 padding-bottom-60">
+      <div class="h4 white no-margin-top max-width-60">Are you a local author interested in adding your work to our collection? <a class="white text-underline" href="collection-consideration/">Apply now</a> to be considered.</div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
