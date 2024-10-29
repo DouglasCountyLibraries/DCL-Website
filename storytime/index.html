@@ -42,6 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
+<script src="../shared-assets/js/biblioList-new.js"></script>
 <style>
 .kids-teens-active {
 	background-color: #f5f5f5;
@@ -236,6 +237,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	-webkit-transform: scale(1.1) translate(1.5%);
 	transform: scale(1.1) translate(1.5%);
 	opacity: 1
+}
+.shelf-container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.shelf-container img {
+	margin: 15px 15px 2px 15px;
+	vertical-align: bottom;
+}
+.shelf > ul {
+	padding: 0;
+}
+#covers-outer > ul {
+	margin: 0;
+	padding: 0;
+}
+.shelf {
+	border-bottom: 20px solid transparent;
+	border-image: url("../shared-assets/images/shelf.jpg") 30 round;
+	border-top: 0 none;
+	padding-bottom: 0;
+}
+.shelf-shadow {
+	background: #fff url("../shared-assets/images/shelf-shadow.png") repeat-x;
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 45px solid #fff;
+	border-right: 45px solid #fff;
+	padding-bottom: 85px;
+}
+
+@media (max-width: 1070px) {
+.cover-image {
+	max-width: 155px;
+}
+}
+
+@media (max-width: 992px) {
+.shelf-container img {
+	margin: 15px 5px 2px 5px;
+}
+}
+
+@media (max-width: 875px) {
+.shelf {
+	border-bottom: 0;
+	border-image: none;
+}
+.shelf-shadow {
+	background: none;
+	border-left: inherit;
+	border-right: inherit;
+}
+.shelf-container {
+	max-width: 575px;
+}
+.shelf-container img {
+	vertical-align: top;
+	margin: 15px 5px 8px 5px;
+}
 }
 
 @media (max-width: 1150px) {
@@ -542,6 +604,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           </div>
         </div>
         <div class="padding-top-15 padding-bottom-60">Storytime at Douglas County Libraries emphasizes five simple activities — reading, talking, writing, singing and playing&mdash;that help children learn the skills to be ready to read. You can build on your child's learning by incorporating these activities into your day as well. A great way to do this is to sign up for <a href="../imagination-library/">Dolly Parton's Imagination Library</a>. Exposure to lots of books is a great predictor of reading readiness and school success.</div>
+      </div>
+    </div>
+  </div>
+  <div class="row padding-top-50 text-center">
+    <div id="storytime-favorites" class="text-center">
+      <div class="h2 no-margin-top margin-bottom-5">Storytime Favorites</div>
+      <div><a class="text-uppercase" href="https://dcl.bibliocommons.com/list/share/692283576_dclkids/695845537">See Entire List »</a></div>
+    </div>
+    <div id="StorytimeFavorites"></div>
+    <div class="row">
+      <div class="shelf-shadow">
+        <div class="padding-top-40 text-center max-width-80">Discover even more children’s titles to <a href="../read-listen-watch/">read, listen to, and watch</a>. </div>
       </div>
     </div>
   </div>
