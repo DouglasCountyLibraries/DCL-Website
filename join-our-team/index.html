@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,15 +39,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
+<script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script> 
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.large-text {
-	color: #666;
+.box-container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.box-inner {
+	max-width: 800px;
+	margin: 20px auto 0 auto;
+}
+.box-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding-bottom: 20px;
+	margin: 15px;
+	min-width: 380px;
+}
+.item-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	max-width: 980px;
+	margin: 0 auto;
+}
+.item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 10px 15px;
+	background: #fff;
+	border-radius: 3px;
+	max-width: 500px;
+	min-width: 300px;
+}
+.item-inner {
+	padding: 0px 30px 75px;
+}
+.gray-circle-wrapper {
+	border: 6px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	height: 112px;
+	margin: 0 auto;
+	width: 112px;
+}
+.gray-circle {
+	border: 6px solid #e6e4e2;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #4f878c;
+	background-color: #fff;
+	font-size: 42px;
+	height: 100px;
+	line-height: 90px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+}
+.white-bottom-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+}
+blockquote {
+	font-size: 17px;
+}
+blockquote small {
+	font-size: 16px;
+	color: #333;
+	padding-top: 5px;
+	font-style: normal;
 }
 .carousel-cell {
 	text-align: center;
@@ -79,18 +154,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .flickity-viewport {
 	transition: height 0.6s;
-}
-
-@media (min-width: 992px) {
-#box-two, #box-three {
-	border-left: 1px solid rgba(255,255,255,.6);
-}
-}
-
-@media (min-width: 1200px) {
-#box-two, #box-three {
-	border-left: 1px solid rgba(255,255,255,.6);
-}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -281,19 +344,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
-    <div class="container padding-bottom-40">
-      <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Start Your Next Chapter Here</h1>
-        <h4 class="roboto margin-top-5 margin-lg-200">Welcome to Douglas County Libraries, where exciting things happen every day at <a href="../locations/">our seven library locations</a>.</h4>
-        <div class="margin-bottom-5 margin-lg-100">When you join our team, you become part of a dynamic network of doers. Differing talents and diverse backgrounds are valued. Yes, we work hard, but we also infuse fun (and integrity and excellence) into everything we do. And what we do is elevate our community by inspiring a love of reading, discovery and connection. You, too, can contribute to this narrative.</div>
-        <a class="margin-top-15 btn btn-primary btn-lg" href="https://recruiting.paylocity.com/Recruiting/Jobs/All/f1fa2efd-676d-42a7-88a4-a765563ad73f" target="_blank">Open Positions</a> </div>
+  <div class="row padding-bottom-40 border-top">
+    <div class="container text-center">
+      <h1 class="page-heading">Start Your Next</h1>
+      <div class="h1 text-uppercase no-margin-top">Chapter Here</div>
+      <div class="max-width-80">
+        <h2 class="page-subheading">Welcome to Douglas County Libraries, where exciting things happen every day at <a href="../locations/">our seven library locations</a>.</h2>
+      </div>
+      <div class="max-width-90">
+        <div>When you join our team, you become part of a dynamic network of doers. Differing talents and diverse backgrounds are valued. Yes, we work hard, but we also infuse fun (and integrity and excellence) into everything we do. And what we do is elevate our community by inspiring a love of reading, discovery and connection. You, too, can contribute to this narrative.</div>
+        <div class="padding-top-20"><a class="btn btn-primary" href="https://recruiting.paylocity.com/Recruiting/Jobs/All/f1fa2efd-676d-42a7-88a4-a765563ad73f" target="_blank">Open Positions</a></div>
+      </div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div class="container margin-lg-200 text-center padding-top-15 padding-bottom-40">
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-40">
+    <div class="h2 text-center">Our Story</div>
+    <div class="box-container">
+      <div class="box-wrapper">
+        <div class="box-item">
+          <div id="box-one"></div>
+          <div class="box-inner"> Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection. It's a place where purpose and profession align and you're empowered to make a positive difference. </div>
+        </div>
+        <div class="box-item">
+          <div id="box-two"></div>
+          <div class="box-inner">
+            <div><a data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Welcoming to All, Continual Growth, Authentic Relationships">Our core values</a> are the heart of our organization's culture. They guide the work we do, and also the way we interact with each other and our customers.</div>
+          </div>
+        </div>
+        <div class="box-item">
+          <div id="box-three"></div>
+          <div class="box-inner">
+            <div>We're readers and leaders who work together in all manner of creative, impactful ways to meet goals and fulfill our vision. It's a great story to be part of!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var images = ['two.jpg'];
+    $('<img alt="DCL Staff" class="img-responsive center-block" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
+	
+	var images = ['one.jpg'];
+    $('<img alt="DCL Staff" class="img-responsive center-block" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
+	
+	var images = ['three.jpg'];
+    $('<img alt="DCL Staff" class="img-responsive center-block" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
+</script>
+  <div class="row">
+    <div class="container max-width-80 text-center padding-top-30 padding-bottom-50">
       <h2 class="padding-bottom-15">We Work With Some Great Characters</h2>
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "adaptiveHeight": true, "wrapAround": true, "pageDots": false, "selectedAttraction": 0.05, "friction": 0.40, "autoPlay": 7000 }'>
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "pageDots": false, "autoPlay": 7000 }'>
         <div class="carousel-cell">
           <div><img alt="Aimee" class="img-circle" src="aimee.jpg" />
             <div class="padding-top-15">
@@ -395,75 +495,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row white bg-teal padding-bottom-15">
-    <div class="container-md no-gutter">
-      <h2 class="text-center white">Our Story</h2>
-      <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div id="box-one"></div>
-        <div class="margin-top-30 margin-left-30 margin-right-30">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection. It's a place where purpose and profession align and you're empowered to make a positive difference.</div>
-      </div>
-      <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div id="box-two"></div>
-        <div class="margin-top-30 margin-left-30 margin-right-30"><a class="white text-underline" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="Welcoming to All, Continual Growth, Authentic Relationships">Our core values</a> are the heart of our organization's culture. They guide the work we do, and also the way we interact with each other and our customers.</div>
-      </div>
-      <div class="col-md-4 padding-top-15 padding-bottom-30">
-        <div id="box-three"></div>
-        <div class="margin-top-30 margin-left-30 margin-right-30">We're readers and leaders who work together in all manner of creative, impactful ways to meet goals and fulfill our vision. It's a great story to be part of!</div>
-      </div>
-    </div>
-  </div>
-  <script>
-    var images = ['image-one.jpg', 'image-two.jpg', 'image-three.jpg', 'image-five.jpg', 'image-six.jpg', 'image-seven.jpg', 'image-eight.jpg', 'image-nine.jpg'];
-    $('<img alt="DCL Staff" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-one');
-	
-	var images = ['image-ten.jpg', 'image-eleven.jpg', 'image-twelve.jpg', 'image-fourteen.jpg', 'image-fifteen.jpg', 'image-sixteen.jpg', 'image-seventeen.jpg'];
-    $('<img alt="DCL Staff" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-two');
-	
-	var images = ['image-twenty.jpg', 'image-twenty-one.jpg', 'image-twenty-two.jpg', 'image-twenty-three.jpg', 'image-twenty-five.jpg'];
-    $('<img alt="DCL Staff" class="img-responsive center-block" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-three');
-	
-</script>
-  <div class="row bg-gray-5 padding-top-20 padding-bottom-60">
-    <div class="container">
-      <h2 class="text-center padding-bottom-15">A Collection of Perks</h2>
-      <div class="row padding-bottom-15">
-        <div class="col-sm-2 col-sm-push-1 padding-top-15 col-xs-4">
-          <div class="icon-circle-teal"><i class="fas fa-balance-scale"></i></div>
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-60">
+    <h2 class="text-center">A Collection of Perks</h2>
+    <div class="item-wrapper">
+      <div class="item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-solid fa-scale-balanced"></i></div>
+          </div>
         </div>
-        <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Work-Life Balance</h4>
+        <div class="item-inner">
+          <div class="h3 text-center margin-top-10">Work-Life Balance</div>
           <div>We love our work, and we work hard. But we also have generous paid time off and floating holidays, so it’s possible to enjoy everything else in life too.</div>
         </div>
       </div>
-      <div class="row padding-bottom-15">
-        <div class="col-sm-2 col-sm-push-1 padding-top-15 col-xs-4">
-          <div class="icon-circle-teal" style="padding: 3px 0 0 1px"><i class="fas fa-dollar-sign"></i></div>
+      <div class="item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-regular fa-money-check-dollar-pen"></i></div>
+          </div>
         </div>
-        <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Compensation &amp; Security</h4>
+        <div class="item-inner">
+          <div class="h3 text-center margin-top-10">Compensation &amp; Security</div>
           <div>Earning now while saving for later makes for a happy ending when you close the book on your career. Douglas County Libraries offers competitive salaries, a pension plan through <a href="https://www.copera.org/" target="_blank">Colorado Public Employees’ Retirement Association (PERA)</a>, and an optional 401(k).</div>
         </div>
       </div>
-      <div class="row padding-bottom-15">
-        <div class="col-sm-2 col-sm-push-1 padding-top-15 col-xs-4">
-          <div class="icon-circle-teal" style="padding: 3px 0 0 0"><i class="fas fa-heart"></i></div>
+      <div class="item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-regular fa-hand-heart"></i></div>
+          </div>
         </div>
-        <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Health &amp; Well-Being</h4>
+        <div class="item-inner">
+          <div class="h3 text-center margin-top-10">Health &amp; Well-Being</div>
           <div>Our comprehensive, competitive benefits package includes health, dental, vision, disability and life insurance; extended illness pay; and an employee assistance program. And we're a Health Links Certified Healthy Business&mdash;we really do care about the well-being of our employees!</div>
         </div>
       </div>
-      <div class="row padding-bottom-15">
-        <div class="col-sm-2 col-sm-push-1 padding-top-15 col-xs-4">
-          <div class="icon-circle-teal" style="padding: 3px 0 0 2px"><i class="fas fa-chart-line"></i></div>
+      <div class="item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+          </div>
         </div>
-        <div class="col-sm-7 col-sm-push-1 col-xs-8">
-          <h4>Growth &amp; Development</h4>
+        <div class="item-inner">
+          <div class="h3 text-center margin-top-10">Growth &amp; Development</div>
           <div>There’s room for professional growth and promotion through organizational development and training programs. Come grow with us!</div>
         </div>
       </div>
     </div>
-    <div class="text-center margin-top-15"> <a class="btn btn-primary btn-lg" href="https://recruiting.paylocity.com/Recruiting/Jobs/All/f1fa2efd-676d-42a7-88a4-a765563ad73f" target="_blank">Open Positions</a></div>
+    <div class="text-center padding-top-30"> <a class="btn btn-primary" href="https://recruiting.paylocity.com/Recruiting/Jobs/All/f1fa2efd-676d-42a7-88a4-a765563ad73f" target="_blank">Open Positions</a></div>
   </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
@@ -600,5 +680,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
