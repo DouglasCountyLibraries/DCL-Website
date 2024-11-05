@@ -47,6 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-content: center;
 }
 .admin-card {
 	height: 620px;
@@ -56,6 +57,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .card-item {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+.h6.title {
+	text-align: center;
+	margin-top: 5px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.front, .back {
+	border-radius: 4px;
 }
 .card-grid:hover, .card-grid:focus {
 	cursor: pointer;
@@ -72,18 +82,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	transition-duration: 0.8s;
 }
 
-@media (min-width: 375px) {
-.admin-card {
-	height: 540px;
-}
-}
-
-@media (min-width: 625px) {
-.admin-card {
-	height: 455px;
-}
-}
-
 /* flexbox break */
 @media (min-width: 1140px) and (max-width: 2290px) {
 .break {
@@ -92,29 +90,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 }
 
-@media (min-width: 2119px) {
-.card-wrapper {
-}
-}
-
-@media (min-width: 991px) {
-.admin-card {
-	height: 585px;
-}
-}
-
-@media (max-width: 992px) {
+@media (max-width: 800px) {
 .card-wrapper {
 	flex-direction: column;
 }
 .admin-card {
-	width: auto;
+	width: 450px;
 }
 }
 
-@media (min-width: 1180px) {
+@media (max-width: 500px) {
 .admin-card {
-	height: 600px;
+	width: auto;
+}
+.card-wrapper {
+	align-content: stretch;
 }
 }
 </style>
@@ -320,13 +310,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-low padding-30">
             <div class="h3 text-center margin-top-5 no-margin-bottom">Bob Pasicznyuk<i class="flip-btn material-icons">arrow_forward</i></div>
-            <div class="h6 text-center text-capitalize no-margin-top">Executive Library Director</div>
+            <div class="h6 title">Executive Library Director</div>
             <img alt="Bob Pasicznyuk, Executive Director" class="img-circle center-block" src="bob.jpg" />
             <div class="margin-top-15"><i>"Our customers have high expectations of their library district, and we aim to meet those expectations by providing exceptional library experiences through our <a href="../featured-events/">signature events</a>, beautiful facilities, contemporary technology, and <a href="https://dcl.bibliocommons.com/">expansive collections</a>."</i></div>
           </div>
           <div class="back bg-white shadow-low padding-30"><i class="unflip-btn material-icons">clear</i>
             <div class="h3 text-center no-margin-bottom">Bob Pasicznyuk</div>
-            <div class="h6 text-capitalize no-margin-top text-center">Executive Library Director</div>
+            <div class="h6 title">Executive Library Director</div>
             <div>Bob Pasicznyuk has served as Executive Library Director at Douglas County Libraries since 2014. Prior to joining DCL, Bob worked for libraries in Colorado, Iowa, Texas, California, and Illinois, concentrating on the interface of technology and library service, as well as key rebuilding projects. Most recently, Bob led DCL’s $60M capital improvement plan for new and remodeled libraries across Douglas County. Bob holds master’s degrees from the University of North Texas and Missouri State University. </div>
           </div>
         </div>
@@ -335,13 +325,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-low padding-30">
             <div class="h3 text-center margin-top-5 no-margin-bottom">Amber DeBerry<i class="flip-btn material-icons">arrow_forward</i></div>
-            <div class="h6 text-center text-capitalize no-margin-top">Director of Community Engagement</div>
+            <div class="h6 title">Director of Community Engagement</div>
             <img alt="Amber DeBerry, Director of Community Engagement" class="img-circle center-block" src="amber.jpg" />
             <div class="margin-top-15"><i>"<a href="../locations/">Our libraries</a> are more than just learning hubs, they’re the centers of our community. Douglas County Libraries brings the community together, inside and outside our beautiful buildings, with excellent public resources and educational, <a href="../featured-events/">engaging and entertaining events</a> for all customers."</i></div>
           </div>
           <div class="back bg-white shadow-low padding-30"><i class="unflip-btn material-icons">clear</i>
             <div class="h3 text-center no-margin-bottom">Amber DeBerry</div>
-            <div class="h6 text-capitalize no-margin-top text-center">Director of Community Engagement</div>
+            <div class="h6 title">Director of Community Engagement</div>
             <div>Amber DeBerry joined Douglas County Libraries in May of 2011. Previously, she was Senior Vice President of Revenue Operations for The Wildlife Experience and in the marketing department of the Denver Zoological Foundation. She has a B.S. in Journalism with a minor in Business from the University of Colorado at Boulder. Over the years, she has been a member of various marketing and foundation committees. At Douglas County Libraries, Amber oversees Community Engagement, District Programming, and the Douglas County Libraries Foundation. </div>
           </div>
         </div>
@@ -350,13 +340,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="card-grid admin-card">
           <div class="front shadow-low bg-white padding-30">
             <div class="h3 text-center margin-top-5 no-margin-bottom">Patti Owen-DeLay<i class="flip-btn material-icons">arrow_forward</i></div>
-            <div class="h6 text-center text-capitalize no-margin-top">Executive Administrator</div>
+            <div class="h6 title">Executive Administrator</div>
             <img alt="Patti Owen-DeLay, Executive Administrator" class="img-circle center-block" src="patti.jpg" />
             <div class="margin-top-15"><i>"Douglas County Libraries’ administrative team takes a thoughtful, forward-looking approach to providing premium library experiences for our guests. All of our <a href="../who-we-are/#goals-strategies">strategic plans and goals</a> are designed with the customer top of mind."</i></div>
           </div>
           <div class="back bg-white shadow-low padding-30"><i class="unflip-btn material-icons">clear</i>
             <div class="h3 text-center no-margin-bottom">Patti Owen-DeLay</div>
-            <div class="h6 text-capitalize no-margin-top text-center">Executive Administrator</div>
+            <div class="h6 title">Executive Administrator</div>
             <div>Patti Owen-DeLay has rejoined Douglas County Libraries after an absence of seven years. During her absence she became a Professional Certified Coach and led coach training programs in the United States and Canada. Recently, she returned to libraries, working for Arapahoe Library District. Back at Douglas County Libraries, she is again Executive Administrator. </div>
           </div>
         </div>
@@ -365,13 +355,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-low padding-30">
             <div class="h3 text-center margin-top-5 no-margin-bottom">Jill Corrente<i class="flip-btn material-icons">arrow_forward</i></div>
-            <div class="h6 text-center text-capitalize no-margin-top">Director of Infrastructure Services</div>
+            <div class="h6 title">Director of Infrastructure Services</div>
             <img alt="Jill Corrente, Director of Finance" class="img-circle center-block" src="jill.jpg" />
             <div class="margin-top-15"><i>"DCL's Technology, Facilities, Collection Services, and Human Resources teams are dedicated to supporting library staff so that staff can focus on providing premium library experiences to our customers. Our early literacy programs, library events, top-tier technology, <a href="https://dcl.bibliocommons.com/">curated collections</a>, <a href="../locations/">inspired buildings</a>, and meeting and event spaces serve customers in fresh ways."</i></div>
           </div>
           <div class="back bg-white shadow-low padding-30"><i class="unflip-btn material-icons">clear</i>
             <div class="h3 text-center no-margin-bottom">Jill Corrente</div>
-            <div class="h6 text-capitalize no-margin-top text-center">Director of Infrastructure Services</div>
+            <div class="h6 title">Director of Infrastructure Services</div>
             <div>Jill Corrente joined Douglas County Libraries in March 2020. Previously, she was the Director of Technology and Innovation for Arapahoe Libraries. She has a Master's in Library Science from Southern Connecticut State University and more than 20 years of experience with public libraries. At Douglas County Libraries, Jill oversees the Technology, Facilities, Collection, and Human Resources teams.</div>
           </div>
         </div>
@@ -380,13 +370,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="card-grid admin-card">
           <div class="front bg-white shadow-low padding-30">
             <div class="h3 text-center margin-top-5 no-margin-bottom">Casie Cook<i class="flip-btn material-icons">arrow_forward</i></div>
-            <div class="h6 text-center text-capitalize no-margin-top">Director of Finance</div>
+            <div class="h6 title">Director of Finance</div>
             <img alt="Casie Cook, Director of Finance" class="img-circle center-block" src="casie.jpg" />
             <div class="margin-top-15"><i>"Providing growth opportunities to team members, building an <a href="../who-we-are/">excellent company culture</a>, and providing ethical financial stewardship are of utmost importance to me."</i></div>
           </div>
           <div class="back bg-white shadow-low padding-30"><i class="unflip-btn material-icons">clear</i>
             <div class="h3 text-center no-margin-bottom">Casie Cook</div>
-            <div class="h6 text-capitalize no-margin-top text-center">Director of Finance</div>
+            <div class="h6 title">Director of Finance</div>
             <div>Casie Cook joined Douglas County Libraries in January 2023. She is a CPA with 16 years of experience in financial forecasting, budgeting, leadership, accounting, and systems with for-profit organizations. Casie earned her Bachelor’s and Master’s degrees in Accounting from Metropolitan State University in Denver. She is a collaborative, hands-on, and results-oriented executive. </div>
           </div>
         </div>
@@ -395,13 +385,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="card-grid admin-card">
           <div class="front shadow-low bg-white padding-30">
             <div class="h3 text-center margin-top-5 no-margin-bottom">Amy Fischer<i class="flip-btn material-icons">arrow_forward</i></div>
-            <div class="h6 text-center text-capitalize no-margin-top">Director of Customer Experience</div>
+            <div class="h6 title">Director of Customer Experience</div>
             <img alt="Amy Fischer, Director of Customer Experience" class="img-circle center-block" src="placeholder.png" />
             <div class="margin-top-15"><i>"Our talented and friendly staff are eager to welcome library customers and engage with them as they make connections through our varied literacy services and <a href="../featured-events/">special events</a>, discover our <a href="https://dcl.bibliocommons.com/">rich collections</a>, and enjoy our <a href="../reserve-a-space/">interesting spaces</a> on their lifelong learning journey."</i></div>
           </div>
           <div class="back bg-white shadow-low padding-30"><i class="unflip-btn material-icons">clear</i>
             <div class="h3 text-center no-margin-bottom">Amy Fischer</div>
-            <div class="h6 text-capitalize no-margin-top text-center">Director of Customer Experience</div>
+            <div class="h6 title">Director of Customer Experience</div>
             <div>Amy Fischer joined Douglas County Libraries in 2016 serving in various leadership roles. Previously, she worked in the private sector as a corporate archivist and in corporate communications for Fortune 500 companies. She is a certified archivist with a Bachelor’s degree from Macalester College and a Master of Library and Information Studies degree from the University of Michigan.</div>
           </div>
         </div>
