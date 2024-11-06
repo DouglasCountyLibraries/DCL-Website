@@ -46,26 +46,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.location-container {
-	max-width: 1170px;
+.box-item-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 1280px;
 	margin: 0 auto;
 }
-.hours-wrapper {
+.box-item {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	flex: 1;
+	margin: 15px;
+}
+.box-content {
+	text-align: center;
+}
+.hours-container {
+	display: flex;
 	justify-content: center;
+	align-items: flex-start;
+	text-align: left;
 }
-.new-hours {
-	padding: 15px 25px;
+.list-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
-.message.white {
-	background: #b1462c;
-	position: absolute;
-	bottom: 250px;
-	width: 91%;
-	right: 4.5%;
-	padding: 10px 5px 12px;
-	font-weight: 400;
+ul.branch-hours {
+	padding: 0;
+	margin: 6px 0 0;
+	list-style-position: inside;
+}
+.branch-hours li {
+	white-space: nowrap;
+}
+.branch-address {
+	font-size: 18px;
+}
+.flex-break {
+	flex-basis: 100%;
+	height: 0;
 }
 .closures {
 	position: relative;
@@ -73,6 +94,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media (max-width: 800px) {
+.box-item {
+	flex-basis: 100%;
+}
+.box-item-wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -266,129 +297,154 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row border-top">
     <div class="container">
       <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400">Hours & Locations</h1>
+        <h1 class="page-heading">Hours & Locations</h1>
       </div>
     </div>
   </div>
-  <div class="row padding-bottom-30">
+  <div class="row padding-bottom-30 padding-top-15">
     <div class="page-nav">
       <div class="page-nav-item"><a href="#" data-toggle="modal" data-target="#closings"><i class="pagenav-icon fas fa-gifts"></i>Holiday Closures</a></div>
     </div>
   </div>
-  <div class="row">
-    <div class="location-container text-center">
-      <div class="col-md-6 padding-bottom-60"><a href="../castle-pines/"><img src="castle-pines.jpg" alt="Douglas County Libraries, Castle Pines" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="../castle-pines/">Castle Pines</a></h2>
-        <div class="col-md-6 no-padding text-left-md"> <a href="https://goo.gl/maps/Fkbjve6qxH32" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">360 Village Square Lane</div>
-              <span class="locality">Castle Pines</span>, <span class="region">CO</span> <span class="postal-code"> 80108</span> </div>
+  <div class="row padding-bottom-40">
+    <div class="box-item-wrapper">
+      <div id="castle-pines" class="box-item">
+        <div><a href="../castle-pines/"><img src="castle-pines.jpg" alt="Douglas County Libraries, Castle Pines" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase margin-bottom-5"><a href="../castle-pines/">Castle Pines</a></div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/Fkbjve6qxH32" target="_blank"><span itemprop="streetAddress">360&nbsp;Village&nbsp;Square&nbsp;Lane</span>, <span itemprop="addressLocality">Castle&nbsp;Pines</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80108</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Monday-Thursday:&nbsp;8AM-8PM</li>
+                <li>Friday:&nbsp;8AM-6PM</li>
+                <li>Saturday-Sunday:&nbsp;10-4PM</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Mon-Thu: 8AM-8PM<br>
-          Fri: 8AM-6PM<br>
-          Sat-Sun: 10AM-4PM </div>
+        </div>
       </div>
-      <div class="col-md-6 padding-bottom-60"><a href="../castle-rock/"><img src="castle-rock.jpg" alt="Douglas County Libraries, Castle Rock" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="../castle-rock/">Castle Rock</a></h2>
-        <div class="text-uppercase">The Philip & Jerry Miller Library</div>
-        <div class="col-md-6 no-padding text-left-md"> <a href="https://goo.gl/maps/3kDTE89mPGw" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">100 S. Wilcox Street</div>
-              <span class="locality">Castle Rock</span>, <span class="region">CO</span> <span class="postal-code"> 80104</span></div>
+      <div id="castle-rock" class="box-item">
+        <div><a href="../castle-rock/"><img src="castle-rock.jpg" alt="Douglas County Libraries, Castle Rock" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase no-margin-bottom"><a href="../castle-rock/">Castle Rock</a></div>
+          <div class="text-uppercase margin-bottom-5">The Philip & Jerry Miller Library</div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/3kDTE89mPGw" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Monday-Thursday:&nbsp;8AM-8PM</li>
+                <li>Friday:&nbsp;8AM-6PM</li>
+                <li>Saturday-Sunday:&nbsp;10-4PM</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Mon-Thu: 8AM-8PM<br>
-          Fri: 8AM-6PM<br>
-          Sat-Sun: 10AM-4PM </div>
+        </div>
       </div>
-      <div class="col-md-6 padding-bottom-60"><a href="../highlands-ranch/"><img src="highlands-ranch.jpg" alt="Douglas County Libraries, Highlands Ranch" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="../highlands-ranch/">Highlands Ranch</a></h2>
-        <div class="col-md-6 no-padding text-left-md"> <a href="https://goo.gl/maps/xzXMWh7yn772" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">9292 S. Ridgeline Blvd.</div>
-              <span class="locality">Highlands Ranch</span>, <span class="region">CO</span> <span class="postal-code"> 80129</span></div>
+      <div class="flex-break"></div>
+      <div id="highlands-ranch" class="box-item">
+        <div><a href="../highlands-ranch/"><img src="highlands-ranch.jpg" alt="Douglas County Libraries, Highlands Ranch" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase margin-bottom-5"><a href="../highlands-ranch/">Highlands Ranch</a></div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/xzXMWh7yn772" target="_blank"><span itemprop="streetAddress">9292&nbsp;S.&nbsp;Ridgeline&nbsp;Blvd.</span>, <span itemprop="addressLocality">Highlands&nbsp;Ranch</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80129</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Monday-Thursday:&nbsp;8AM-8PM</li>
+                <li>Friday:&nbsp;8AM-6PM</li>
+                <li>Saturday-Sunday:&nbsp;10-4PM</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Mon-Thu: 8AM-8PM<br>
-          Fri: 8AM-6PM<br>
-          Sat-Sun: 10AM-4PM </div>
+        </div>
       </div>
-      <div class="col-md-6 padding-bottom-60"><a href="../lone-tree/"><img src="lone-tree.jpg" alt="Douglas County Libraries, Lone Tree" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="../lone-tree/">Lone Tree</a></h2>
-        <div class="col-md-6 no-padding text-left-md"> <a href="https://goo.gl/maps/iCAWeKh68Dr" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">10055 Library Way</div>
-              Lone Tree, <span class="region">CO</span> <span class="postal-code"> 80124</span></div>
+      <div id="lone-tree" class="box-item">
+        <div><a href="../lone-tree/"><img src="lone-tree.jpg" alt="Douglas County Libraries, Lone Tree" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase margin-bottom-5"><a href="../lone-tree/">Lone Tree</a></div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/iCAWeKh68Dr" target="_blank"><span itemprop="streetAddress">10055&nbsp;Library&nbsp;Way</span>, <span itemprop="addressLocality">Lone&nbsp;Tree</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80124</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Monday-Thursday:&nbsp;8AM-8PM</li>
+                <li>Friday:&nbsp;8AM-6PM</li>
+                <li>Saturday-Sunday:&nbsp;10-4PM</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Mon-Thu: 8AM-8PM<br>
-          Fri: 8AM-6PM<br>
-          Sat-Sun: 10AM-4PM </div>
+        </div>
       </div>
-      <div class="col-md-6 padding-bottom-60"><a href="../louviers/"><img src="louviers.jpg" alt="Douglas County Libraries, Louviers" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="../louviers/">Louviers</a></h2>
-        <div class="col-md-6 no-padding text-left-md"> <a href="https://goo.gl/maps/xXeJ3N1B2zR2" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">7885 Louviers Blvd.</div>
-              Louviers, <span class="region">CO</span> <span class="postal-code"> 80131</span></div>
+      <div class="flex-break"></div>
+      <div id="louviers" class="box-item">
+        <div><a href="../louviers/"><img src="louviers.jpg" alt="Douglas County Libraries, Louviers" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase margin-bottom-5"><a href="../louviers/">Louviers</a></div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/xXeJ3N1B2zR2" target="_blank"><span itemprop="streetAddress">7885&nbsp;Louviers&nbsp;Blvd.</span>, <span itemprop="addressLocality">Louviers</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80131</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Tuesday:&nbsp;3-8PM</li>
+                <li>Saturday:&nbsp;10AM-4PM</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Tue: 3-8PM<br>
-          Sat: 10AM-4PM</div>
+        </div>
       </div>
-      <div class="col-md-6 padding-bottom-60"><a href="../parker/"><img src="parker.jpg" alt="Douglas County Libraries, Parker" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="../parker/">Parker</a></h2>
-        <div class="col-md-6 no-padding text-left-md"> <a href="https://goo.gl/maps/BN5GzHYJYwB2" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">20105 East Mainstreet</div>
-              Parker, <span class="region">CO</span> <span class="postal-code"> 80138</span></div>
+      <div id="parker" class="box-item">
+        <div><a href="../parker/"><img src="parker.jpg" alt="Douglas County Libraries, Parker" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase margin-bottom-5"><a href="../parker/">Parker</a></div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/BN5GzHYJYwB2" target="_blank"><span itemprop="streetAddress">20105&nbsp;East&nbsp;Mainstreet</span>, <span itemprop="addressLocality">Parker</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80138</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Monday-Thursday:&nbsp;8AM-8PM</li>
+                <li>Friday:&nbsp;8AM-6PM</li>
+                <li>Saturday-Sunday:&nbsp;10-4PM</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Mon-Thu: 8AM-8PM<br>
-          Fri: 8AM-6PM<br>
-          Sat-Sun: 10AM-4PM </div>
+        </div>
       </div>
-      <div class="col-md-6 padding-bottom-60"><a href="../roxborough/"><img src="roxborough.jpg" alt="Douglas County Libraries, Roxborough" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="../roxborough/">Roxborough</a></h2>
-        <div class="col-md-12 text-center"> </div>
-        <div class="col-md-6 no-padding text-left-md"> <a href="https://goo.gl/maps/Kk1TkKQHKrj" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">8357 N. Rampart Range Rd. #200 </div>
-              Littleton, <span class="region">CO</span> <span class="postal-code"> 80125</span></div>
+      <div class="flex-break"></div>
+      <div id="roxborough" class="box-item">
+        <div><a href="../roxborough/"><img src="roxborough.jpg" alt="Douglas County Libraries, Roxborough" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase margin-bottom-5"><a href="../roxborough/">Roxborough</a></div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/Kk1TkKQHKrj" target="_blank"><span itemprop="streetAddress">8357&nbsp;N.&nbsp;Rampart&nbsp;Range&nbsp;Rd.&nbsp;#200</span>, <span itemprop="addressLocality">Littleton</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80125</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Monday-Thursday:&nbsp;8AM-8PM</li>
+                <li>Friday:&nbsp;8AM-6PM</li>
+                <li>Saturday-Sunday:&nbsp;10-4PM</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Mon-Thu: 8AM-8PM<br>
-          Fri: 8AM-6PM<br>
-          Sat-Sun: 10AM-4PM </div>
+        </div>
       </div>
-      <div class="col-md-6 padding-bottom-60"><a href="https://archives.dcl.org/"><img src="archives-local-history.jpg?1824" alt="Archives & Local History" class="img-responsive shadow-low shadow-low-hover"></a>
-        <h2 class="font-weight-400 text-uppercase no-margin-bottom margin-top-10"><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></h2>
-        <div class="col-md-6 no-padding text-left-md">
-          <div>Inside Our Castle Rock Location</div>
-          <a href="https://www.google.com/maps/place/Douglas+County+Libraries/@39.3676569,-104.8601784,18z/data=!4m5!3m4!1s0x0:0x3640fa4d1ddfc4e0!8m2!3d39.3680882!4d-104.8591377" target="_blank">
-          <div class="vcard">
-            <div class="adr">
-              <div class="street-address">100 S. Wilcox Street</div>
-              <span class="locality">Castle Rock</span>, <span class="region">CO</span> <span class="postal-code"> 80104</span></div>
+      <div id="alh" class="box-item">
+        <div><a href="https://archives.dcl.org/" target="_blank"><img src="archives-local-history.jpg" alt="DCL Archives & Local History" class="img-responsive"></a></div>
+        <div class="box-content">
+          <div class="h3 text-uppercase no-margin-bottom"><a href="https://archives.dcl.org/" target="_blank">Archives&nbsp;& Local History</a></div>
+          <div class="margin-bottom-5">Inside Our Castle Rock Location</div>
+          <div class="branch-address" itemscope itemtype="http://schema.org/PostalAddress"> <a href="https://goo.gl/maps/3kDTE89mPGw" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a> </div>
+          <div class="hours-container">
+            <div class="list-container">
+              <ul class="branch-hours">
+                <li>Reading Room, Monday & Friday:&nbsp;8AM-4PM</li>
+                <li>Research Assistance <a href="https://archives.dcl.org/digital/custom/visit" target="_blank">by&nbsp;Appointment&nbsp;Only</a></li>
+                <li>Saturday-Sunday:&nbsp;Closed</li>
+              </ul>
+            </div>
           </div>
-          </a> </div>
-        <div class="col-md-6 no-padding text-right-md">Reading Room, Mon & Fri:&nbsp;8AM-4PM<br>
-          Research Assistance <a href="https://archives.dcl.org/digital/custom/visit" target="_blank">by&nbsp;Appointment</a><br>
-          Sat-Sun: Closed </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="row bg-teal">
-    <div class="container text-center padding-top-30 padding-bottom-30">
-      <h4 class="white no-margin-top">View map and get directions to <a href="https://www.google.com/maps/search/douglas+county+libraries/@39.6170664,-105.0377354,11z/data=!3m1!4b1?entry=ttu" target="_blank" class="text-nowrap text-underline white">all locations</a>.</h4>
+    <div class="container text-center padding-top-50 padding-bottom-50">
+      <div class="h4 white no-margin-top">View map and get directions to <a href="https://www.google.com/maps/search/douglas+county+libraries/@39.6170664,-105.0377354,11z/data=!3m1!4b1?entry=ttu" target="_blank" class="text-nowrap text-underline white">all locations</a>.</div>
     </div>
   </div>
   
