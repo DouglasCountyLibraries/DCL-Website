@@ -52,28 +52,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
 	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-/* rewind */   
-.rewind-container {
+/* booked */ 
+.bfth-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
-	margin: 0 auto 30px auto;
+	margin: 0 auto;
 }
-.rewind-wrapper {
+.bfth-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.rewind-image {
-	background: #83c5db url("rewind-background.jpg") top left repeat;
+.bfth-image {
+	background: #b595bc url("booked.jpg") top center/cover;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 30px;
 }
-.rewind-info {
-	background: #83c5db;
+.bfth-info {
+	background: #b595bc;
 	color: #000;
 width: calc(100% * 0.5);
 	display: flex;
@@ -83,13 +82,7 @@ width: calc(100% * 0.5);
 	font-size: 22px;
 	text-align: center;
 }
-.rewind-image img {
-	display: flex;
-	align-self: center;
-	border: 5px solid #112a57;
-	border-radius: 3px;
-}
-.rewind-info-heading {
+.bfth-heading {
 	color: #000;
 	font-size: 42px;
 	font-weight: 500;
@@ -148,42 +141,73 @@ width: calc(100% * 1);
 	font-size: 20px;
 	text-align: center;
 }
-/* storybook holiday */ 
-.sbh-container {
+/* booklist & closures */   
+.bc-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
-	margin: 0 auto;
+	margin: 30px auto 0 auto;
 }
-.sbh-wrapper {
+.bc-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.sbh-image {
-	background: #b595bc url("booked.jpg") top center/cover;
+.bc-image {
+	background: #83c5db url("rewind-background.jpg") top left repeat;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 30px 15px;
 }
-.sbh-info {
-	background: #b595bc;
+.bc-info {
+	background: #83c5db;
 	color: #000;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 50px 15px 65px;
-	font-size: 22px;
+	padding: 0px 15px 85px;
+	font-size: 18px;
 	text-align: center;
 }
-.sbh-heading {
+.bc-dates {
+	display: flex;
+	justify-content: center;
+}
+ul.bc-list {
+	padding: 0;
+	margin: 6px 0 0;
+	list-style-type: none;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.bc-list li {
+	white-space: nowrap;
+	padding-bottom: 5px;
+}
+.bc-image img {
+	display: flex;
+	align-self: center;
+}
+.bc-info-heading {
 	color: #000;
 	font-size: 42px;
 	font-weight: 500;
 	line-height: 1;
 	margin: 5px 0 10px;
+}
+.book-list {
+	/* max-width: 450px; */
+	margin: 0 auto;
+	color: #fff;
+	padding: 40px 0 15px;
+	font-size: 24px;
+	font-weight: 500;
+	/* line-height: 1.4; */
+	text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -193,26 +217,26 @@ width: calc(100% * 0.5);
 }
 
 @media (max-width: 950px) {
-.short-mid-container, .sbh-container, .rewind-container {
+.short-mid-container, .bfth-container, .bc-container {
 	max-width: 720px;
 }
 .short-mid-container {
 	max-width: 720px;
 	flex-direction: column;
 }
-.short-mid-wrapper, .sbh-wrapper, .rewind-wrapper {
+.short-mid-wrapper, .bfth-wrapper, .bc-wrapper {
 	flex-direction: column;
 }
-.short-mid-image, .short-mid-info, .sbh-image, .sbh-info, .rewind-image, .rewind-info {
+.short-mid-image, .short-mid-info, .bfth-image, .bfth-info, .bc-image, .bc-info {
 	width: 100%;
 }
-.sbh-info {
+.bfth-info {
 	order: 2;
 }
-.sbh-image {
+.bfth-image {
 	order: 1;
 }
-.sbh-image {
+.bfth-image, .bc-image {
 	height: 500px;
 }
 .short-mid-info {
@@ -220,6 +244,9 @@ width: calc(100% * 0.5);
 }
 .short-mid-info-alt {
 	padding: 0 55px 50px;
+}
+.bc-info {
+	padding: 50px 15px 65px;
 }
 }
 </style>
@@ -412,11 +439,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="sbh-container">
-      <div class="sbh-wrapper">
-        <div class="sbh-image"> </div>
-        <div class="sbh-info">
-          <div class="sbh-heading">Booked for the Holidays</div>
+    <div class="bfth-container">
+      <div class="bfth-wrapper">
+        <div class="bfth-image"> </div>
+        <div class="bfth-info">
+          <div class="bfth-heading">Booked for the Holidays</div>
           <div style="max-width: 600px;margin: 0 auto;">
             <div>Your holiday hub for festive family fun! Forest of Stories, Jingle Jam Sing-Along, Cocoa & Caroling, Visit with Santa.
               <div class="padding-top-5"><a class="font-weight-500 black text-underline" href="booked-for-the-holidays/">Start Here</a></div>
@@ -434,6 +461,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
       <div class="short-mid-wrapper">
         <div class="short-mid-info-alt"> <img class="img-responsive" src="reading-challenge-updated.jpg" alt="Douglas County Libraries Reading Challenge" style="align-self: center;"> </div>
+      </div>
+    </div>
+    <div class="bc-container">
+      <div class="bc-wrapper">
+        <div class="bc-image"><img class="img-responsive" src="cookbooks.png" alt="Favorite Cookbooks for Fall ">
+          <div class="book-list">Celebrate fall with all the <a class="white text-underline text-nowrap" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2632778279">foods you love</a>!</div>
+        </div>
+        <div class="bc-info">
+          <div class="bc-dates">
+            <ul class="bc-list">
+              <div class="bc-info-heading">Holiday Hours</div>
+              <li>Wednesday, November 27: 8AM-3PM</li>
+              <li>Thursday, November 28: Closed</li>
+              <li>Tuesday, December 24: 8AM-3PM</li>
+              <li>Wednesday, December 25: Closed</li>
+              <li>Tuesday, December 31: 8AM-3PM</li>
+              <li>Wednesday, January 1: Closed</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
