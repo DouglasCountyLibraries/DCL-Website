@@ -82,12 +82,21 @@ width: calc(100% * 0.5);
 	font-size: 22px;
 	text-align: center;
 }
-.bfth-heading {
+.bfth-heading-one {
 	color: #000;
 	font-size: 42px;
 	font-weight: 500;
 	line-height: 1;
 	margin: 5px 0 10px;
+}
+.bfth-heading-two {
+	color: #fff;
+	font-size: 42px;
+	font-weight: 500;
+	line-height: 1;
+	margin: 0;
+	text-align: center;
+	padding: 0 15px 15px;
 }
 /* reading challenge */ 	
 	
@@ -200,19 +209,23 @@ ul.bc-list {
 	margin: 5px 0 10px;
 }
 .book-list {
-	/* max-width: 450px; */
 	margin: 0 auto;
 	color: #fff;
-	padding: 40px 0 15px;
-	font-size: 24px;
+	padding: 30px 0 15px;
+	font-size: 26px;
 	font-weight: 500;
-	/* line-height: 1.4; */
 	text-align: center;
 }
 
 @media (max-width: 1200px) {
 .short-mid-info {
 	padding: 50px 15px 50px;
+}
+}
+
+@media (min-width: 951px) {
+.bfth-heading-two {
+	display: none;
 }
 }
 
@@ -230,14 +243,20 @@ ul.bc-list {
 .short-mid-image, .short-mid-info, .bfth-image, .bfth-info, .bc-image, .bc-info {
 	width: 100%;
 }
+.bfth-container {
+	min-height: inherit;
+}
+.bfth-heading-one {
+	display: none;
+}
 .bfth-info {
 	order: 2;
 }
 .bfth-image {
 	order: 1;
 }
-.bfth-image, .bc-image {
-	height: 500px;
+.bfth-image {
+	height: 375px;
 }
 .short-mid-info {
 	padding: 50px 15px 15px;
@@ -441,9 +460,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row background-row">
     <div class="bfth-container">
       <div class="bfth-wrapper">
-        <div class="bfth-image"> </div>
+        <div class="bfth-image">
+          <div class="bfth-heading-two">Booked for the Holidays</div>
+        </div>
         <div class="bfth-info">
-          <div class="bfth-heading">Booked for the Holidays</div>
+          <div class="bfth-heading-one">Booked for the Holidays</div>
           <div style="max-width: 600px;margin: 0 auto;">
             <div>Your holiday hub for festive family fun! Forest of Stories, Jingle Jam Sing-Along, Cocoa & Caroling, Visit with Santa.
               <div class="padding-top-5"><a class="font-weight-500 black text-underline" href="booked-for-the-holidays/">Start Here</a></div>
@@ -465,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="bc-container">
       <div class="bc-wrapper">
-        <div class="bc-image"><img class="img-responsive" src="cookbooks.png" alt="Favorite Cookbooks for Fall ">
+        <div class="bc-image"><img class="img-responsive" src="cookbook-covers.webp" alt="Favorite Cookbooks for Fall ">
           <div class="book-list">Celebrate fall with all the <a class="white text-underline text-nowrap" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2632778279">foods you love</a>!</div>
         </div>
         <div class="bc-info">
