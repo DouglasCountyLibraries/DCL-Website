@@ -310,6 +310,121 @@ Push Notifications End - Removed for Now -->
 	align-self: center;
 	padding: 30px;
 }
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+
+.slideshow-image.main {
+	min-height: 450px;
+}
+#slideshow {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 0%;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+	position: absolute;
+	z-index: 2;
+	width: 105%;
+	height: 105%;
+	top: -5%;
+	left: -5%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	transition: opacity 3s, transform 8s;
+}
+/* slide two */
+#slideshow div {
+	transform-origin: bottom right;
+}
+/* slide three */
+#slideshow div:nth-of-type(2n+1) {
+	transform-origin: top right;
+}
+/* slide four */
+#slideshow div:nth-of-type(3n+1) {
+	transform-origin: top right;
+}
+/* slide five */
+#slideshow div:nth-of-type(4n+1) {
+	transform-origin: top left;
+}
+/* slide six */
+#slideshow div:nth-of-type(5n+1) {
+	transform-origin: top right;
+}
+/* slide one */
+#slideshow div:nth-of-type(6n+1) {
+	transform-origin: bottom center;
+}
+#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
+	z-index: 1
+}
+#slideshow .fx, #slideshow .fx1 {
+	transform: scale(1.1) translate(1.5%);
+	opacity: 1
+}
+#slideshow div:nth-of-type(1) {
+	background-image: url("santa-visit.jpg");
+}
+#slideshow div:nth-of-type(2) {
+	background-image: url("forest-of-stories.jpg");
+}
+#slideshow div:nth-of-type(3) {
+	background-image: url("photo-ops.jpg");
+}
+#slideshow div:nth-of-type(4) {
+	background-image: url("make-and-take.jpg");
+}
+#slideshow div:nth-of-type(5) {
+	background-image: url("sing-along.jpg");
+}
+#slideshow div:nth-of-type(6) {
+	background-image: url("delicious-menus.jpg");
+}
+/* captions */
+#slideshow span {
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	font-size: 40px;
+	color: transparent;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	justify-content: center;
+	flex-direction: column;
+	line-height: 40px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+#slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
+	z-index: 1
+}
+#slideshow .fx + span, #slideshow .fx1 + span {
+	color: #fff;
+	animation: caption 5s 1s both;
+	text-shadow: 0 6px 20px #000;
+	padding-bottom: 30px;
+}
+@keyframes caption {
+0% {
+opacity:0;
+}
+20% {
+opacity:1;
+}
+90% {
+opacity:1;
+}
+100% {
+opacity:0;
+}
+}
 
 @media (max-width: 675px) {
 .author-wrapper {
@@ -628,29 +743,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row">
-    <div class="photo-wrapper">
-      <div class="photo-item black text-center bg-gray-5"> <img class="img-responsive" src="andrew-mccarthy-sm.jpg" alt="Andrew McCarthy, '80s Rewind">
-        <div class="photo-item-inner">
-          <div class="h4 no-margin-top margin-bottom-5">DCL Presents:</div>
-          <div class="h2 no-margin-top text-uppercase font-weight-400">Andrew McCarthy</div>
-          <div class="large-text margin-bottom-5 text-uppercase font-weight-500 red-text">Cancelled due to inclement weather</div>
-          <div class="margin-bottom-5">We are rescheduling this event and will announce the new date as soon as it is confirmed. If you are unable to attend the rescheduled event, you will be eligible for a full refund. We apologize for the inconvenience and look forward to hosting this event soon.</div>
+    <div class="single-photo-row">
+      <div class="single-photo-wrapper">
+        <div class="single-photo photo black text-center">
+          <div id="slideshow" class="slideshow-image main"> 
+            <!-- define each background-image in CSS -->
+            <div></div>
+            
+            <!-- #slideshow div:nth-of-type(1) --> 
+            <span><i class="fa-regular fa-sleigh photo-icon"></i>A Visit from Santa</span>
+            <div></div>
+            <!-- #slideshow div:nth-of-type(2) --> 
+            <span><i class="fa-regular fa-tree photo-icon"></i>Forest of Stories</span>
+            <div></div>
+            <!-- #slideshow div:nth-of-type(3) --> 
+            <span><i class="fa-regular fa-image-polaroid-user photo-icon"></i>Festive Photo Ops</span>
+            <div></div>
+            <!-- #slideshow div:nth-of-type(4) --> 
+            <span><i class="fa-regular fa-box-open-full photo-icon"></i>Workshops and Crafts</span>
+            <div></div>
+            <!-- #slideshow div:nth-of-type(5) --> 
+            <span><i class="fa-regular fa-guitars photo-icon"></i>Jingle Jam Sing-Alongs</span>
+            <div></div>
+            <!-- #slideshow div:nth-of-type(6) --> 
+            <span><i class="fa-regular fa-plate-utensils photo-icon"></i>Snacks and Treats</span></div>
         </div>
-      </div>
-      <div class="photo-item black text-center bg-gray-5"> <img class="img-responsive" src="storybook-holiday-sm.jpg" alt="Storybook Holiday Winter">
-        <div class="photo-item-inner">
-          <div class="h4 no-margin-top margin-bottom-5">A Storybook Holiday:</div>
-          <div class="h2 no-margin-top text-uppercase font-weight-400">'Twas the Night</div>
-          <div class="padding-bottom-10">Join us for a magical celebration filled with holiday cheer! Bring the whole family for festive fun that includes a visit with Santa, delicious food and drinks, holiday entertainment, crafts and activities, photo booth, make-and-takes, and more. Create lasting memories with us!</div>
-          <div>Saturday, December&nbsp;7, 5-8:30PM, <a href="../lone-tree/">Lone Tree</a></div>
-          <div>Sunday, December&nbsp;8, 8-11AM, <a href="../lone-tree/">Lone Tree</a></div>
-          <div class="margin-top-15"><a href="../storybook-holiday/" class="btn btn-primary">Sold Out</a></div>
+        <div class="single-photo info">
+          <div class="h2 no-margin-top text-uppercase">Book for the Holidays</div>
+          <div>Start the season at our festive events, from <a href="../forest-of-stories/">Forest of Stories</a> to Jingle Jam Sing-Alongs, Santa Visits, and more. Holiday photo ops aplenty!</div>
+          <div class="padding-top-20"><a href="../booked-for-the-holidays/" class="btn btn-primary">Learn More</a></div>
         </div>
       </div>
     </div>
   </div>
   <div class="row bg-gray-5 margin-top-30 padding-top-40 padding-bottom-80">
     <div class="box-wrapper">
+      <div class="box-item">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper circle-alt">
+            <div class="gray-circle circle-alt"><img src="icon-images/twas-the-night.jpg" alt="A Storybook Holiday" class="img-responsive"></div>
+          </div>
+        </div>
+        <div class="text-center text-uppercase margin-top-5">A Storybook Holiday:</div>
+        <div class="h3 text-center no-margin-top">'Twas the Night</div>
+        <div class="text-center">Create lasting memories with us!</div>
+        <div class="text-center">Saturday, December&nbsp;7, 5-8:30PM, <a href="../lone-tree/">Lone Tree</a></div>
+        <div class="text-center">Sunday, December&nbsp;8, 8-11AM, <a href="../lone-tree/">Lone Tree</a></div>
+        <div class="align-bottom"> <a href="../storybook-holiday/" class="btn btn-primary margin-top-15">Sold Out</a></div>
+      </div>
       <div class="box-item">
         <div class="white-bottom-row">
           <div class="gray-circle-wrapper circle-alt">
@@ -686,16 +826,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="align-bottom">
           <div class="large-text text-center margin-top-5">Various dates & locations</div>
           <a href="https://go.dcl.org/events?term=active+minds&r=months&n=3" class="btn btn-lg btn-primary margin-top-15">Register Now</a> </div>
-      </div>
-      <div class="box-item">
-        <div class="white-bottom-row">
-          <div class="gray-circle-wrapper circle-alt">
-            <div class="gray-circle circle-alt"><img src="booked.jpg" alt="Booked for the Holidays" class="img-responsive"></div>
-          </div>
-        </div>
-        <h3 class="text-center margin-top-10">Booked for the Holidays</h3>
-        <div class="text-center">Start the season at our festive events, from Forest of Stories to Jingle Jam Sing-Alongs, Santa Visits, and more. Holiday photo&nbsp;ops aplenty!</div>
-        <div class="align-bottom"> <a href="../booked-for-the-holidays/" class="btn btn-lg btn-primary margin-top-15">Learn More</a></div>
       </div>
     </div>
   </div>
