@@ -43,10 +43,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-/* carousel height, as percentage of width */
-/* inherit height from parent */
-* {
-	box-sizing: border-box;
+.box-container {
+	max-width: 1610px;
+	margin: 0 auto;
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.box-inner {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 25px 0 0;
+}
+.box-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding-bottom: 20px;
+	margin: 15px;
+	min-width: 380px;
 }
 .carousel-cell {
 	width: 100%;
@@ -56,8 +74,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	display: block;
 	text-align: center;
 }
+.carousel-cell > div {
+	font-size: 18px;
+	max-width: 90rem;
+	margin: 0 auto;
+}
 .flickity-page-dots {
-	bottom: 20px;
+	bottom: 15px;
 	opacity: .5;
 }
 .flickity-page-dots .dot {
@@ -69,11 +92,78 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .flickity-viewport {
 	transition: height 0.6s;
 }
+blockquote {
+	font-size: 16px;
+	color: rgba(255,255,255,.9);
+	padding-top: 5px;
+}
+blockquote:before {
+	content: '\2014 \00A0';
+}
+.rss-item br {
+	display: none;
+}
+li.rss-item {
+	list-style: none;
+	padding: 0 0 25px;
+}
+.rss-item a {
+	font-size: 20px;
+	font-weight: 400;
+	display: block;
+	padding: 0 0 5px;
+}
+.image-container {
+	max-width: 70rem;
+	margin: 0 auto;
+}
+.image-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.image-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 15px;
+	min-width: 185px;
+	align-items: center;
+}
+.media-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	max-width: 1020px;
+	margin: 0 auto;
+}
+.media-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 15px;
+	text-align: center;
+	align-items: center;
+}
+.h6.title {
+	text-align: center;
+	margin: 5px 0 0;
+	text-transform: uppercase;
+	font-weight: 500;
+}
 
 @media (max-width: 1150px) {
 .page-nav {
 	max-width: 800px;
 	margin: 0 auto;
+}
+}
+
+@media (max-width: 992px) {
+.media-wrapper {
+	max-width: 600px;
 }
 }
 
@@ -274,12 +364,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row border-top">
     <div class="container text-center">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Press Kit</h1>
-    </div>
-  </div>
-  <div class="row padding-bottom-15">
-    <div class="container text-center">
-      <h4 class="roboto margin-top-5 no-margin-bottom margin-lg-200">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</h4>
+      <h1 class="page-heading">Press Kit</h1>
+      <div class="max-width-80">
+        <h2 class="page-subheading">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</h2>
+      </div>
     </div>
   </div>
   <div class="row padding-bottom-15">
@@ -291,144 +379,157 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
   <div class="row padding-bottom-40">
-    <div class="container">
-      <div class="col-md-4">
-        <div class="padding-top-15 padding-bottom-15">Douglas County Libraries is one of the largest library systems in Colorado, and we play a vital role in the life of our community with programs and services for <a href="dcl-for-kids-teens.pdf" target="_blank">kids, teens</a> and <a href="dcl-for-adults.pdf?92624" target="_blank">adults</a>. We lend nearly 6 million books, DVDs, magazines, e-books and audiobooks every year, including more children’s materials than any other Colorado library.</div>
-      </div>
-      <div class="col-md-4">
-        <div class="padding-top-15 padding-bottom-15"><a href="../locations/">Our seven locations</a> offer a large collection of popular materials; children’s books; reference materials and <a href="../research/">research tools</a>; <a href="../digital-media/">downloadable audio, video and e-books</a>; wireless access; public internet stations; and friendly, professional staff. We also provide reading recommendations and online access to <a href="https://archives.dcl.org/" target="_blank">the DCL Archives & Local History</a> and community information.</div>
-      </div>
-      <div class="col-md-4">
-        <div class="padding-top-15 padding-bottom-15">We offer <a href="dcl-signature-programming.pdf?92624" target="_blank">signature programs</a> for all ages, <a href="../storytime/">more than 75 Storytimes</a> each week, children’s and teen writing groups, <a href="../book-clubs/">book clubs</a>, <a href="../used-book-sales/">used book sales</a>, and a <a href="../featured-events/">variety of interesting events</a> that engage, educate and entertain customers of all ages. <a href="../reserve-a-space/">Study rooms, large meeting rooms</a>, and <a href="../event-spaces/">event venues</a> are available to the public. </div>
+    <div class="box-container">
+      <div class="box-wrapper">
+        <div class="box-item">
+          <div id="box-one"><img alt="Group Meeting" class="img-responsive image-center" src="one.jpg"></div>
+          <div class="box-inner">Douglas County Libraries is one of the largest library systems in Colorado, and we play a vital role in the life of our community with programs and services for <a href="dcl-for-kids-teens.pdf" target="_blank">kids, teens</a> and <a href="dcl-for-adults.pdf?92624" target="_blank">adults</a>. We lend nearly 6 million books, DVDs, magazines, e-books and audiobooks every year, including more children’s materials than any other Colorado library.</div>
+        </div>
+        <div class="box-item">
+          <div id="box-two"><img alt="Reading with a Child" class="img-responsive image-center" src="two.jpg"></div>
+          <div class="box-inner"><a href="../locations/">Our seven locations</a> offer a large collection of popular materials; children’s books; reference materials and <a href="../research/">research tools</a>; <a href="../digital-media/">downloadable audio, video and e-books</a>; wireless access; public internet stations; and friendly, professional staff. We also provide reading recommendations and online access to <a href="https://archives.dcl.org/" target="_blank">the DCL Archives & Local History</a> and community information.</div>
+        </div>
+        <div class="box-item">
+          <div id="box-three"><img alt="Storytime Fun" class="img-responsive image-center" src="three.jpg"></div>
+          <div class="box-inner">We offer <a href="dcl-signature-programming.pdf?92624" target="_blank">signature programs</a> for all ages, <a href="../storytime/">more than 75 Storytimes</a> each week, children’s and teen writing groups, <a href="../book-clubs/">book clubs</a>, <a href="../used-book-sales/">used book sales</a>, and a <a href="../featured-events/">variety of interesting events</a> that engage, educate and entertain customers of all ages. <a href="../reserve-a-space/">Study rooms, large meeting rooms</a>, and <a href="../event-spaces/">event venues</a> are available to the public. </div>
+        </div>
       </div>
     </div>
   </div>
-  <div id="news" class="row bg-teal white">
+  <div id="news" class="row bg-teal white padding-top-40 padding-bottom-50">
     <div class="container text-center">
-      <h1 class="white">DCL in the News</h1>
-      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.30, "autoPlay": 6000 }'>
+      <div class="h1 white">DCL in the News</div>
+      <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "autoPlay": 7000 }'>
         <div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;A relationship that might be unexpected is having a big impact in Douglas County. Local craft breweries and coffee shops have partnered up with Douglas County Libraries to put on the 'Douglas County Libraries 2024 Brew Tour.'&quot;
-            <blockquote><span class="small white">KDVR Fox 31, August 2024</span></blockquote>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;... an unprecedented wave of book bans and censorship spurred by parents and right-wing groups has targeted books that center on the LGBTQ+ community, Black history and diverse stories across the country. Douglas County Libraries rejected an effort last year to ban four LGBTQ-focused books after months of meetings and public comment.&quot;
-            <blockquote><span class="small white">Colorado Newsline, May 2024</span></blockquote>
-          </div>
-        </div>
-		<div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;Douglas County Libraries customers reached a major milestone in 2023: 1.4 million e-books and audiobooks were borrowed during the year. ‘We love that we are meeting users where they are, and that we’re providing formats that work for our customers both inside and outside the library,’ says DCL Collection Development Librarian Angie Brown.&quot;
-            <blockquote><span class="small white">Parker City Lifestyle, March 2024</span></blockquote>
-          </div>
-        </div>
-		<div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;Last year, the Douglas County Libraries Board voted unanimously to keep four LGBTQ+ books on its shelves, after an appeal process that lasted months. … Pasicznyuk does not believe banning books is a partisan issue.&quot;
-            <blockquote><span class="small white">Denver7, February 2024</span></blockquote>
+          <div>&quot;A relationship that might be unexpected is having a big impact in Douglas County. Local craft breweries and coffee shops have partnered up with Douglas County Libraries to put on the 'Douglas County Libraries 2024 Brew Tour.'&quot;
+            <blockquote>KDVR Fox 31, August 2024</blockquote>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;A ransomware attack last month and a water main break at the Highlands Ranch library have proved challenging for Douglas County Libraries. … The problems are temporary, according to Amber DeBerry, director of community engagement for Douglas County Libraries.&quot;
-            <blockquote><span class="small white">Douglas County News-Press, February 2024</span></blockquote>
+          <div>&quot;... an unprecedented wave of book bans and censorship spurred by parents and right-wing groups has targeted books that center on the LGBTQ+ community, Black history and diverse stories across the country. Douglas County Libraries rejected an effort last year to ban four LGBTQ-focused books after months of meetings and public comment.&quot;
+            <blockquote>Colorado Newsline, May 2024</blockquote>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;A Douglas County Libraries program, BFB [Bark for Books] is available to independent readers ages 6 to 12 and has helped build many bright futures during its 15-year program. … DCL partners with Denver Pet Partners (DPP), a nonprofit that provides the teams of volunteer handlers and dogs.&quot;
-            <blockquote><span class="small white">The Castle Pines Connection, January 2024</span></blockquote>
+          <div>&quot;Douglas County Libraries customers reached a major milestone in 2023: 1.4 million e-books and audiobooks were borrowed during the year. ‘We love that we are meeting users where they are, and that we’re providing formats that work for our customers both inside and outside the library,’ says DCL Collection Development Librarian Angie Brown.&quot;
+            <blockquote>Parker City Lifestyle, March 2024</blockquote>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;The Douglas County Libraries Board of Trustees on Jan. 9 approved the library’s 2024 budget with an estimated taxpayer savings of $5 million. This budget will help sustain library services and quality, while temporarily lowering the library’s tax levy this year.&quot;
-            <blockquote><span class="small white">YourHub Douglas County, January 2024</span></blockquote>
+          <div>&quot;Last year, the Douglas County Libraries Board voted unanimously to keep four LGBTQ+ books on its shelves, after an appeal process that lasted months. … Pasicznyuk does not believe banning books is a partisan issue.&quot;
+            <blockquote>Denver7, February 2024</blockquote>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;It’s been over a week since Douglas County Libraries were the victim of an international cyber-attack… Luckily, the library has cybersecurity insurance, and they’re working with a cybersecurity firm to recover from the hack.&quot;
-            <blockquote><span class="small white">CBS News Colorado, January 2024</span></blockquote>
+          <div>&quot;A ransomware attack last month and a water main break at the Highlands Ranch library have proved challenging for Douglas County Libraries. … The problems are temporary, according to Amber DeBerry, director of community engagement for Douglas County Libraries.&quot;
+            <blockquote>Douglas County News-Press, February 2024</blockquote>
           </div>
         </div>
         <div class="carousel-cell">
-          <div class="large-text margin-lg-100">&quot;Multiple local governments are dealing with cyberattacks, including ransomware incidents, this week, causing outages and problems for county hospitals, libraries and other local services. … Ransomware was also the culprit behind a cyberattack on Douglas County Libraries in Colorado.&quot;
-            <blockquote><span class="small white">The Record.media, January 2024</span></blockquote>
+          <div>&quot;A Douglas County Libraries program, BFB [Bark for Books] is available to independent readers ages 6 to 12 and has helped build many bright futures during its 15-year program. … DCL partners with Denver Pet Partners (DPP), a nonprofit that provides the teams of volunteer handlers and dogs.&quot;
+            <blockquote>The Castle Pines Connection, January 2024</blockquote>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>&quot;The Douglas County Libraries Board of Trustees on Jan. 9 approved the library’s 2024 budget with an estimated taxpayer savings of $5 million. This budget will help sustain library services and quality, while temporarily lowering the library’s tax levy this year.&quot;
+            <blockquote>YourHub Douglas County, January 2024</blockquote>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>&quot;It’s been over a week since Douglas County Libraries were the victim of an international cyber-attack… Luckily, the library has cybersecurity insurance, and they’re working with a cybersecurity firm to recover from the hack.&quot;
+            <blockquote>CBS News Colorado, January 2024</blockquote>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div>&quot;Multiple local governments are dealing with cyberattacks, including ransomware incidents, this week, causing outages and problems for county hospitals, libraries and other local services. … Ransomware was also the culprit behind a cyberattack on Douglas County Libraries in Colorado.&quot;
+            <blockquote>The Record.media, January 2024</blockquote>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row padding-top-15 padding-bottom-60">
+  <div class="row padding-top-30 padding-bottom-70">
     <div id="press-releases" class="container">
       <div class="text-center">
-        <h1>Press Releases</h1>
-        <a target="_blank" href="https://dclblog.org/press/" class="text-uppercase">Archive &raquo;</a></div>
-      <div class="col-sm-10 col-sm-push-1">
+        <div class="h1">Press Releases</div>
+        <a href="https://dclblog.org/press/" class="text-uppercase font-weight-500">Archive &raquo;</a></div>
+      <div class="max-width-80">
         <div class="padding-bottom-30" id="blogfeed"></div>
-        <script language="JavaScript" src="https://dclblog.org/wp-content/feed2js-master/feed2js.php?src=https%3A%2F%2Fdclblog.org%2Fpress%2Ffeed%2Ffeed&num=3&desc=500>1&targ=y&utf=y"  charset="UTF-8" type="text/javascript"></script> 
+        <script language="JavaScript" src="https://dclblog.org/wp-content/feed2js-master/feed2js.php?src=https%3A%2F%2Fdclblog.org%2Fpress%2Ffeed%2Ffeed&num=3&desc=400>1&targ=n&utf=y"  charset="UTF-8" type="text/javascript"></script> 
       </div>
     </div>
   </div>
-  <div class="row bg-gray-5 padding-top-15 padding-bottom-30">
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-40">
     <div id="images" class="container text-center">
-      <h1 class="text-center">Images</h1>
+      <div class="h1 text-center">Images</div>
       <div class="padding-bottom-30">For usage questions and guidelines, please contact a member of our <a href="#media-team">Media Team</a>.</div>
-      <div class="col-md-4 padding-bottom-30">
-        <div><img alt="Download the DCL Logo" class="logo-mediakit center-block" src="dcl-logo-color-th.jpg" />
-          <h4 class="no-margin-bottom">Logo</h4>
-          <h5 class="no-margin-top"><a href="dcl-logo-color.jpg" download>JPG,</a> <a href="dcl-logo-color.png" download>PNG,</a> <a href="dcl-logo-vector.eps" download>EPS</a></h5>
-        </div>
-      </div>
-      <div class="col-md-4 padding-bottom-30">
-        <div><img alt="Download the DCL Logo" class="logo-mediakit center-block" src="dcl-logo-grayscale-th.jpg" />
-          <h4 class="no-margin-bottom">Logo</h4>
-          <h5 class="no-margin-top"><a href="dcl-logo-grayscale.jpg" download>Grayscale</a></h5>
-        </div>
-      </div>
-      <div class="col-md-4 padding-bottom-30">
-        <div><img alt="DCL Image Gallery" class="logo-mediakit-alt center-block" src="flickr.jpg" />
-          <h4 class="no-margin-bottom">DCL Image Gallery</h4>
-          <h5 class="no-margin-top"><a href="https://www.flickr.com/photos/douglascountylibraries/sets/72177720304674405/" target="_blank">Flickr</a></h5>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <div class="image-item">
+            <div><img class="img-responsive" alt="Download the DCL Logo" src="dcl-logo-color-th.jpg" />
+              <div class="h4 no-margin-bottom">Logo</div>
+              <div class="h5 no-margin-top"><a href="dcl-logo-color.jpg" download>JPG,</a> <a href="dcl-logo-color.png" download>PNG,</a> <a href="dcl-logo-vector.eps" download>EPS</a></div>
+            </div>
+          </div>
+          <div class="image-item">
+            <div><img class="img-responsive" alt="Download the DCL Logo" src="dcl-logo-grayscale-th.jpg" />
+              <div class="h4 no-margin-bottom">Logo</div>
+              <div class="h5 no-margin-top"><a href="dcl-logo-grayscale.jpg" download>Grayscale</a></div>
+            </div>
+          </div>
+          <div class="image-item">
+            <div><img class="img-responsive" alt="DCL Image Gallery" src="flickr.jpg" />
+              <div class="h4 no-margin-bottom">DCL Image Gallery</div>
+              <div class="h5 no-margin-top"><a href="https://www.flickr.com/photos/douglascountylibraries/sets/72177720304674405/" target="_blank">Flickr</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row padding-top-15">
+  <div class="row padding-top-30">
     <div id="media-team" class="container text-center">
-      <h1 class="text-center">Media Team</h1>
-      <div class="margin-lg-150"> Our Community Engagement/Communications Team can help answer your questions, put you in touch with library leadership or staff responsible for specific programs, and help you develop library stories for your audience. </div>
+      <div class="h1 text-center">Media Team</div>
+      <div class="max-width-80">Our Community Engagement/Communications Team can help answer your questions, put you in touch with library leadership or staff responsible for specific programs, and help you develop library stories for your audience. </div>
       <div class="margin-top-10 padding-bottom-30"><a href="../locations/" class="font-weight-400 text-uppercase">Hours & Locations &raquo;</a></div>
-      <div class="row">
-        <div class="col-md-3 padding-bottom-30">
+    </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <div class="media-wrapper">
+        <div class="media-item">
           <div><img alt="Amber DeBerry, Director of Community Relations" class="center-block img-circle" src="adeberry.jpg" />
-            <h3 class="no-margin-bottom">Amber DeBerry</h3>
-            <div class="text-uppercase">Director of Community Engagement</div>
+            <div class="h3 margin-top-10 no-margin-bottom">Amber DeBerry</div>
+            <div class="h6 title">Director of Community Engagement</div>
             <div><a href="tel:303-688-7641">(303) 688-7641</a></div>
           </div>
         </div>
-        <div class="col-md-3 padding-bottom-30">
+        <div class="media-item">
           <div><img alt="Nanci Marr, Marketing and Communications Supervisor" class="center-block img-circle" src="nmarr.jpg" />
-            <h3 class="no-margin-bottom">Nanci Marr</h3>
-            <div class="text-uppercase">Marketing & Communications Manager</div>
+            <div class="h3 margin-top-10 no-margin-bottom">Nanci Marr</div>
+            <div class="h6 title">Marketing & Communications Manager</div>
             <div><a href="tel:303-688-7642">(303) 688-7642</a></div>
           </div>
         </div>
-        <div class="col-md-3 padding-bottom-30">
+        <div class="media-item">
           <div><img alt="Melissa Anciaux, Staff Writer/Editor" class="center-block img-circle" src="manciaux.jpg" />
-            <h3 class="no-margin-bottom">Melissa Anciaux</h3>
-            <div class="text-uppercase">Staff Writer/Editor</div>
+            <div class="h3 margin-top-10 no-margin-bottom">Melissa Anciaux</div>
+            <div class="h6 title">Staff Writer/Editor</div>
             <div><a href="tel:720-348-9526">(720) 348-9526</a></div>
           </div>
         </div>
-        <div class="col-md-3 padding-bottom-30">
+        <div class="media-item">
           <div><img alt="Sarah Neufeld, Digital Marketing Specialist" class="center-block img-circle" src="sneufeld.jpg" />
-            <h3 class="no-margin-bottom">Sarah Neufeld</h3>
-            <div class="text-uppercase">Digital Marketing Specialist</div>
+            <div class="h3 margin-top-10 no-margin-bottom">Sarah Neufeld</div>
+            <div class="h6 title">Digital Marketing Specialist</div>
             <div><a href="tel:720-348-9524">(720) 348-9524</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row text-center padding-bottom-60">
-    <div class="container"> <a href="#" type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#mediamodal">Contact a Media Team Member</a> </div>
+  <div class="row text-center padding-top-20 padding-bottom-80">
+    <div class="container"> <a href="#" type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#mediamodal">Contact the Media Team</a> </div>
   </div>
   <!-- Modal -->
   <div class="modal fade" id="mediamodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -436,7 +537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h3 class="text-center modal-title">Contact a Media Team Member</h3>
+          <div class="h3 text-center modal-title">Contact the Media Team</div>
         </div>
         <div class="modal-body">
           <iframe class="embed-responsive-item" src="https://form.jotform.com/53426770386967" frameborder="0" style="width: 100%;height:485px;border:none;" scrolling="no"> </iframe>
