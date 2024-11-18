@@ -52,7 +52,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
 	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-/* booked */ 
+/* colorado gives */   
+.cgd-container {
+	display: flex;
+	max-width: 1440px;
+	min-height: 640px;
+	margin: 0 auto 30px auto;
+}
+.cgd-wrapper {
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+}
+.cgd-image {
+width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #053d36;
+}
+.cgd-info {
+	background: #fdca39;
+	color: #000;
+width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0px 15px;
+	text-align: center;
+}
+.cgd-heading-one {
+	color: #000;
+	font-size: 42px;
+	font-weight: 500;
+	line-height: 1;
+	margin: 5px 0 10px;
+}
+.cgd-heading-two {
+	color: #000;
+	font-size: 22px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 15px 15px;
+	max-width: 630px;
+}
+.animated-progress {
+	width: 100%;
+	height: 20px;
+	border-radius: 20px;
+	margin: 10px 0;
+	overflow: hidden;
+	position: relative;
+	background: rgba(255, 255, 255, 0.4);
+	border: 3px solid #fff;
+}
+.animated-progress span {
+	height: 100%;
+	display: block;
+	width: 0;
+	color: rgba(255, 255, 255, 0);
+	line-height: 30px;
+	position: absolute;
+	text-align: end;
+	padding-right: 5px;
+}
+.progress-blue span {
+	background-color: #faa819;
+}
+.custom-progress-bar {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.progress-bar-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1px 0 5px;
+}
+.progress-percentage {
+	display: flex;
+	justify-content: space-between;
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #333;
+}
+/* booked for the holidays */ 
 .bfth-container {
 	display: flex;
 	max-width: 1440px;
@@ -98,59 +182,7 @@ width: calc(100% * 0.5);
 	text-align: center;
 	padding: 0 15px 15px;
 }
-/* reading challenge */ 	
-	
-	
-.short-mid-container {
-	display: flex;
-	max-width: 1440px;
-	min-height: 340px;
-	margin: 30px auto 0 auto;
-}
-.short-mid-wrapper {
-	margin: 0 auto;
-	display: flex;
-	width: 100%;
-}
-.short-mid-info {
-	background: #90c49c url("border.jpg") right center no-repeat;
-	color: #000;
-width: calc(100% * 1);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 50px 55px 65px;
-	font-size: 20px;
-	text-align: center;
-}
-.short-mid-heading {
-	color: #000;
-	margin: 0;
-	font-size: 32px;
-	font-weight: 500;
-	line-height: 1.2;
-}
-.short-mid-subheading {
-	max-width: 450px;
-	margin: 0 auto;
-	color: #000;
-	padding: 5px 0 5px;
-	font-size: 22px;
-	font-weight: 500;
-	line-height: 1.4;
-}
-.short-mid-info-alt {
-	background: #90c49c;
-	color: #000;
-width: calc(100% * 1);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 50px 55px 50px;
-	font-size: 20px;
-	text-align: center;
-}
-/* booklist & closures */   
+/* reading challenge & closures */ 	
 .bc-container {
 	display: flex;
 	max-width: 1440px;
@@ -163,7 +195,7 @@ width: calc(100% * 1);
 	width: 100%;
 }
 .bc-image {
-	background: #063e37;
+	background: #90c49c;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
@@ -171,15 +203,16 @@ width: calc(100% * 0.5);
 	padding: 30px 15px;
 }
 .bc-info {
-	background: #d9a866;
-	color: #000;
+	background: #042917;
+	color: #fff;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 0px 15px 85px;
+	padding: 0px 15px 50px;
 	font-size: 18px;
 	text-align: center;
+	font-weight: 500;
 }
 .bc-dates {
 	display: flex;
@@ -202,61 +235,121 @@ ul.bc-list {
 	align-self: center;
 }
 .bc-info-heading {
-	color: #000;
-	font-size: 42px;
+	color: #fff;
 	font-weight: 500;
+	font-size: 42px;
 	line-height: 1;
 	margin: 5px 0 10px;
 }
 .book-list {
 	margin: 0 auto;
-	color: #fff;
-	padding: 30px 0 15px;
-	font-size: 26px;
-	font-weight: 500;
+	color: #000;
+	padding: 15px 0 15px;
+	font-size: 24px;
 	text-align: center;
+	max-width: 520px;
 }
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 
-@media (max-width: 1200px) {
-.short-mid-info {
-	padding: 50px 15px 50px;
+.slideshow-image.main {
+	min-height: 640px;
 }
+#slideshow {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 0%;
+	width: 100%;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+	position: absolute;
+	z-index: 2;
+	width: 105%;
+	height: 105%;
+	top: -5%;
+	left: -5%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	-webkit-transition: opacity 3s, -webkit-transform 8s;
+	transition: opacity 3s, transform 8s;
+}
+#slideshow div:nth-of-type(9n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+}
+#slideshow div {
+	-webkit-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(2n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+}
+#slideshow div:nth-of-type(3n+1) {
+	-webkit-transform-origin: bottom left;
+	transform-origin: bottom left;
+}
+#slideshow div:nth-of-type(4n+1) {
+	-webkit-transform-origin: top right;
+	transform-origin: top right;
+}
+#slideshow div:nth-of-type(5n+1) {
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+#slideshow div:nth-of-type(6n+1) {
+	-webkit-transform-origin: bottom right;
+	transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(7n+1) {
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+}
+/* slide one */
+#slideshow div:nth-of-type(8n+1) {
+	-webkit-transform-origin: top right;
+	transform-origin: top right;
+}
+#slideshow .fx, #slideshow .fx1 {
+	-webkit-transform: scale(1.1) translate(1.5%);
+	transform: scale(1.1) translate(1.5%);
+	opacity: 1
 }
 
 @media (max-width: 950px) {
-.short-mid-container, .bfth-container, .bc-container {
+.cgd-container, .bfth-container, .bc-container {
 	max-width: 720px;
 }
-.short-mid-container {
-	max-width: 720px;
+.cgd-wrapper, .bfth-wrapper, .bc-wrapper {
 	flex-direction: column;
 }
-.short-mid-wrapper, .bfth-wrapper, .bc-wrapper {
-	flex-direction: column;
-}
-.short-mid-image, .short-mid-info, .bfth-image, .bfth-info, .bc-image, .bc-info {
+.cgd-image, .cgd-info, .bfth-image, .bfth-info, .bc-image, .bc-info {
 	width: 100%;
 }
-.bfth-container {
-	min-height: inherit;
+.slideshow-image.main {
+	min-height: 500px;
 }
-.bfth-info {
+.bfth-image, .cgd-image {
+	order: 1;
+}
+.bfth-info, .cgd-info {
 	order: 2;
 }
 .bfth-image {
-	order: 1;
+	min-height: 500px;
 }
-.bfth-image {
-	height: 375px;
-}
-.short-mid-info {
-	padding: 50px 15px 15px;
-}
-.short-mid-info-alt {
-	padding: 0 55px 50px;
-}
-.bc-info {
+.bc-info, .cgd-info {
 	padding: 50px 15px 65px;
+}
+.bc-image {
+	margin-bottom: 30px;
+}
+}
+
+@media (max-width: 600px) {
+.slideshow-image.main, .bfth-image {
+	min-height: 375px;
 }
 }
 </style>
@@ -449,38 +542,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
+    <div class="cgd-container">
+      <div class="cgd-wrapper">
+        <div class="cgd-info">
+          <div class="cgd-heading-one">Give, Connect, Grow</div>
+          <div class="progress-bar-wrapper">
+            <div class="custom-progress-bar">
+              <div class="animated-progress progress-blue"> <span data-progress="5"></span> </div>
+              <div class="progress-percentage">
+                <div>Complete: 5%</div>
+                <div>Goal: $70,000</div>
+              </div>
+            </div>
+          </div>
+          <div class="cgd-heading-two">
+            <div>Support thriving libraries with a gift to the DCL Foundation now through December 10, Colorado Gives Day.</div>
+            <div class="padding-top-5"><a class="black text-underline" href="donate/">Donate Now</a></div>
+          </div>
+        </div>
+        <div class="cgd-image">
+          <div id="slideshow" class="slideshow-image main"> 
+            <!-- define each background-image in CSS -->
+            <div class="random-slide" style="background-image: url('one.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(1) -->
+            <div class="random-slide" style="background-image: url('two.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(2) -->
+            
+            <div class="random-slide" style="background-image: url('three.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(3) -->
+            
+            <div class="random-slide" style="background-image: url('four.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(4) -->
+            
+            <div class="random-slide" style="background-image: url('five.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(5) -->
+            
+            <div class="random-slide" style="background-image: url('six.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(6) -->
+            
+            <div class="random-slide" style="background-image: url('seven.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(7) -->
+            
+            <div class="random-slide" style="background-image: url('eight.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(8) -->
+            
+            <div class="random-slide" style="background-image: url('nine.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(9) --> 
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="bfth-container">
       <div class="bfth-wrapper">
         <div class="bfth-image"> </div>
         <div class="bfth-info">
           <div class="bfth-heading-one">Booked for the Holidays</div>
           <div style="max-width: 600px;margin: 0 auto;">
-            <div>Your holiday hub for festive family fun! Forest of Stories, Jingle Jam Sing-Along, Cocoa & Caroling, Visit with Santa.
+            <div>Your holiday hub for festive family fun! <a class="font-weight-500 black text-underline" href="forest-of-stories/">Forest of Stories</a>, Jingle Jam Sing-Along, Cocoa & Caroling, Visit with Santa.
               <div class="padding-top-5"><a class="font-weight-500 black text-underline" href="booked-for-the-holidays/">Start Here</a></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="short-mid-container">
-      <div class="short-mid-wrapper">
-        <div class="short-mid-info">
-          <div class="short-mid-heading">Make Your Reading Count</div>
-          <div class="short-mid-subheading">There's still time to sign up and complete the <a class="black text-underline font-weight-500" href="reading-challenge/">Reading Challenge</a>.</div>
-        </div>
-      </div>
-      <div class="short-mid-wrapper">
-        <div class="short-mid-info-alt"> <img class="img-responsive" src="reading-challenge-updated.jpg" alt="Douglas County Libraries Reading Challenge" style="align-self: center;"> </div>
-      </div>
-    </div>
     <div class="bc-container">
       <div class="bc-wrapper">
-        <div class="bc-image"><img class="img-responsive" src="cookbook-covers.webp" alt="Favorite Cookbooks for Fall ">
-          <div class="book-list">Celebrate fall with all the <a class="white text-underline text-nowrap" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2632778279">foods you love</a>!</div>
+        <div class="bc-image"><img class="img-responsive" src="reading-challenge-updated.jpg" alt="Douglas County Libraries Reading Challenge" style="align-self: center;">
+          <div class="book-list">Last call!<br>
+            Submit your completed <a class="black text-underline" href="reading-challenge/">Reading Challenge</a> entry by December&nbsp;31.</div>
         </div>
         <div class="bc-info">
           <div class="bc-dates">
             <ul class="bc-list">
+              <img class="center-block padding-bottom-15 padding-right-15" src="bells.png" alt="">
               <div class="bc-info-heading">Holiday Hours</div>
               <li>Wednesday, November 27: 8AM-3PM</li>
               <li>Thursday, November 28: Closed</li>
@@ -557,7 +691,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --><!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    2000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});</script> 
+<script>
+	var cards = $(".random-slide");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
