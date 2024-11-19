@@ -183,18 +183,18 @@ width: calc(100% * 0.5);
 	padding: 0 15px 15px;
 }
 /* reading challenge & closures */ 	
-.bc-container {
+.two-up-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
 	margin: 30px auto 0 auto;
 }
-.bc-wrapper {
+.two-up-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.bc-image {
+.two-up-image {
 	background: #90c49c;
 width: calc(100% * 0.5);
 	display: flex;
@@ -202,7 +202,7 @@ width: calc(100% * 0.5);
 	justify-content: center;
 	padding: 30px 15px;
 }
-.bc-info {
+.two-up-info {
 	background: #042917;
 	color: #fff;
 width: calc(100% * 0.5);
@@ -214,11 +214,11 @@ width: calc(100% * 0.5);
 	text-align: center;
 	font-weight: 500;
 }
-.bc-dates {
+.two-up-dates {
 	display: flex;
 	justify-content: center;
 }
-ul.bc-list {
+ul.two-up-list {
 	padding: 0;
 	margin: 6px 0 0;
 	list-style-type: none;
@@ -226,22 +226,22 @@ ul.bc-list {
 	align-items: flex-start;
 	flex-direction: column;
 }
-.bc-list li {
+.two-up-list li {
 	white-space: nowrap;
 	padding-bottom: 5px;
 }
-.bc-image img {
+.two-up-image img {
 	display: flex;
 	align-self: center;
 }
-.bc-info-heading {
+.two-up-info-heading {
 	color: #fff;
 	font-weight: 500;
 	font-size: 42px;
 	line-height: 1;
 	margin: 5px 0 10px;
 }
-.book-list {
+.rc-content {
 	margin: 0 auto;
 	color: #000;
 	padding: 15px 0 15px;
@@ -274,57 +274,64 @@ ul.bc-list {
 	-webkit-transition: opacity 3s, -webkit-transform 8s;
 	transition: opacity 3s, transform 8s;
 }
-#slideshow div:nth-of-type(9n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
 #slideshow div {
-	-webkit-transform-origin: bottom right;
 	transform-origin: bottom right;
 }
 #slideshow div:nth-of-type(2n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
+	transform-origin: center left;
 }
 #slideshow div:nth-of-type(3n+1) {
-	-webkit-transform-origin: bottom left;
-	transform-origin: bottom left;
+	transform-origin: bottom center;
 }
 #slideshow div:nth-of-type(4n+1) {
-	-webkit-transform-origin: top right;
 	transform-origin: top right;
 }
 #slideshow div:nth-of-type(5n+1) {
-	-webkit-transform-origin: center center;
 	transform-origin: center center;
 }
 #slideshow div:nth-of-type(6n+1) {
-	-webkit-transform-origin: bottom right;
-	transform-origin: bottom right;
+	transform-origin: bottom left;
 }
 #slideshow div:nth-of-type(7n+1) {
-	-webkit-transform-origin: top left;
+	transform-origin: top bottom;
+}
+#slideshow div:nth-of-type(8n+1) {
+	transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(9n+1) {
+	transform-origin: center center;
+}
+#slideshow div:nth-of-type(10n+1) {
 	transform-origin: top left;
 }
-/* slide one */
-#slideshow div:nth-of-type(8n+1) {
-	-webkit-transform-origin: top right;
-	transform-origin: top right;
+#slideshow div:nth-of-type(11n+1) {
+	transform-origin: bottom right;
+}
+#slideshow div:nth-of-type(12n+1) {
+	transform-origin: top center;
+}
+#slideshow div:nth-of-type(13n+1) {
+	transform-origin: center right;
+}
+#slideshow div:nth-of-type(14n+1) {
+	transform-origin: bottom left;
+}
+	#slideshow div:nth-of-type(15n+1) {
+	transform-origin: center center;
 }
 #slideshow .fx, #slideshow .fx1 {
-	-webkit-transform: scale(1.1) translate(1.5%);
 	transform: scale(1.1) translate(1.5%);
 	opacity: 1
 }
 
 @media (max-width: 950px) {
-.cgd-container, .bfth-container, .bc-container {
+.cgd-container, .bfth-container, .two-up-container {
 	max-width: 720px;
 }
-.cgd-wrapper, .bfth-wrapper, .bc-wrapper {
+.cgd-wrapper, .bfth-wrapper, .two-up-wrapper {
 	flex-direction: column;
 }
-.cgd-image, .cgd-info, .bfth-image, .bfth-info, .bc-image, .bc-info {
+.cgd-image, .cgd-info, .bfth-image, .bfth-info, .two-up-image, .two-up-info {
 	width: 100%;
 }
 .slideshow-image.main {
@@ -339,10 +346,10 @@ ul.bc-list {
 .bfth-image {
 	min-height: 500px;
 }
-.bc-info, .cgd-info {
+.two-up-info, .cgd-info {
 	padding: 50px 15px 65px;
 }
-.bc-image {
+.two-up-image {
 	margin-bottom: 30px;
 }
 }
@@ -587,7 +594,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <!-- #slideshow div:nth-of-type(8) -->
             
             <div class="random-slide" style="background-image: url('nine.jpg')"></div>
-            <!-- #slideshow div:nth-of-type(9) --> 
+            <!-- #slideshow div:nth-of-type(9) -->
+            
+            <div class="random-slide" style="background-image: url('ten.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(10) -->
+            
+            <div class="random-slide" style="background-image: url('eleven.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(11) -->
+            
+            <div class="random-slide" style="background-image: url('twelve.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(12) -->
+            
+            <div class="random-slide" style="background-image: url('thirteen.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(13) -->
+            
+            <div class="random-slide" style="background-image: url('fourteen.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(14) --> 
+			  
+			  <div class="random-slide" style="background-image: url('fifteen.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(15) --> 
           </div>
         </div>
       </div>
@@ -605,17 +630,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </div>
       </div>
     </div>
-    <div class="bc-container">
-      <div class="bc-wrapper">
-        <div class="bc-image"><img class="img-responsive" src="reading-challenge-updated.jpg" alt="Douglas County Libraries Reading Challenge" style="align-self: center;">
-          <div class="book-list">Last call!<br>
+    <div class="two-up-container">
+      <div class="two-up-wrapper">
+        <div class="two-up-image"><img class="img-responsive" src="reading-challenge-updated.jpg" alt="Douglas County Libraries Reading Challenge" style="align-self: center;">
+          <div class="rc-content">Last call!<br>
             Submit your completed <a class="black text-underline" href="reading-challenge/">Reading Challenge</a> entry by December&nbsp;31.</div>
         </div>
-        <div class="bc-info">
-          <div class="bc-dates">
-            <ul class="bc-list">
+        <div class="two-up-info">
+          <div class="two-up-dates">
+            <ul class="two-up-list">
               <img class="center-block padding-bottom-15 padding-right-15" src="bells.png" alt="">
-              <div class="bc-info-heading">Holiday Hours</div>
+              <div class="two-up-info-heading">Holiday Hours</div>
               <li>Wednesday, November 27: 8AM-3PM</li>
               <li>Thursday, November 28: Closed</li>
               <li>Tuesday, December 24: 8AM-3PM</li>
