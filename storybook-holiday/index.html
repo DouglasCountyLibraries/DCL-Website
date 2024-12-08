@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,143 +41,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://use.typekit.net/vsp7dsy.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
-.events-active {
-	background-color: #f5f5f5;
-}
-.background-row {
-	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
-}
-.benguiat {
-	font-family: itc-benguiat-condensed, sans-serif;
-	font-weight: 400;
-}
-.times {
-	font-family: Times, "Times New Roman", "serif";
-}
-h1.benguiat {
-	font-family: itc-benguiat-condensed, sans-serif;
-	color: #20555b;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 100px;
-	text-transform: uppercase;
-	line-height: 90px;
-	padding: 10px 0 0;
-	margin: 0;
-	letter-spacing: -1px;
-}
-.intro-text {
-	font-size: 30px;
-	text-transform: uppercase;
-	font-weight: 600;
-	margin-top: auto;
-	color: #3e6b67;
+.reserve-a-space-active {
+    background-color: #f5f5f5;
 }
 .custom-container {
-	max-width: 1920px;
-	margin: 0 auto;
-	color: #000;
+    max-width: 2200px;
+    margin: 0 auto;
 }
-.event-wrapper {
-	background: #fff url("twas-night-background.jpg") top center no-repeat;
-	height: 755px;
+.flickity-container {
+	max-width: 1610px;
+	margin: 0 auto;
+	padding: 10px 15px;
+}
+.carousel-cell {
+	width: 100%;
+	padding: 0 0 50px 0;
 	text-align: center;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	padding: 0 15px;
 }
-.details-container {
-	background: linear-gradient(#e3e9e9, #ffffff);
-	max-width: 1920px;
-	margin: 0 auto;
-	color: #000;
-	padding: 0 15px;
-}
-.details-wrapper {
-	max-width: 900px;
-	margin: 0 auto;
-	text-align: center;
-	padding-bottom: 100px;
-}
-.details-quotation {
-	font-size: 20px;
-}
-.tickets-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	max-width: 820px;
+.carousel-cell img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 	margin: 0 auto;
 }
-.tickets-item {
-	padding: 15px;
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
 }
-.tickets-item h4 {
-	text-transform: uppercase;
-	color: #20555b;
-	font-size: 24px;
-	margin: 15px 0 5px;
-	font-weight: 600;
+.flickity-page-dots .dot {
+	background-color: #000;
 }
-.tickets-date {
-	font-size: 18px;
-	padding-bottom: 5px;
-}
-.btn.btn-custom {
-	color: #fff;
-	background: #9c3859;
-	text-transform: uppercase;
-	font-weight: 600;
-	box-shadow: 0px 10px 40px rgba(203,218,223, 1);
-	transition: all .4s ease-out;
-	border-radius: 2px;
-}
-.btn.btn-custom:hover, .btn.btn-custom:focus {
-	color: #fff;
-	background: #9c3859;
-	text-transform: uppercase;
-	font-weight: 600;
-	box-shadow: 0px 10px 40px rgba(203,218,223, 1);
-	transition: all .4s ease-out;
-	border-radius: 2px;
-	cursor: not-allowed
-}
-
-@media (max-width: 900px) {
-.event-wrapper {
-	background: #fff url("twas-night-background.jpg") 38% 0 no-repeat;
-}
-}
-
-@media (max-width: 800px) {
-.tickets-wrapper {
-	flex-direction: column;
-	justify-content: center;
-}
-.tickets-item {
-	padding: 15px 0;
-}
-}
-
-@media (max-width: 625px) {
-.event-wrapper {
-	background: #fff url("twas-night-background-small.jpg") center top no-repeat;
-	height: 630px;
-}
-.intro-text {
-	font-size: 26px;
-}
-h1.benguiat {
-	font-size: 70px;
-	line-height: 70px;
-	padding: 0;
-}
-}
-
-@media (max-width: 475px) {
+.flickity-prev-next-button {
+	display: none;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -369,49 +265,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
-    <div class="custom-container">
-      <div class="event-wrapper">
-        <div class="intro-text times">A Storybook Holiday:</div>
-        <h1 class="benguiat">'Twas the Night</h1>
-      </div>
-      <div class="details-container">
-        <div class="details-wrapper">
-          <div class="details">
-            <div class="details-quotation times padding-bottom-30"><i>"The children were nestled all snug in their beds, while visions of sugar plums danced in their heads…"<br>
-              – Clement Clarke Moore</i></div>
-            <div class="padding-bottom-10" style="font-size: 18px;">Don’t miss our winter celebration of the beloved holiday classic by Clement Clarke Moore!</div>
-            <div> Enjoy family-friendly entertainment, live music and dance, delightful crafts, a festive photo booth, make-and-take gifts, and a special visit with Santa. Our dinner and brunch events also include a menu of delicious food and drinks, tasty treats, our signature naughty and nice hot cocoa bar, and much more.</div>
-          </div>
-          <div class="tickets-row">
-            <div class="text-center">
-              <div class="tickets-wrapper">
-                <div class="tickets-item one">
-                  <h4 class="times">Dinner Edition</h4>
-                  <div class="tickets-date">Saturday, December&nbsp;7, 5-8:30PM, <a class="black text-underline" href="../lone-tree/">Lone&nbsp;Tree</a></div>
-                  <div>Tickets: $30 Ages 12+, $25 Ages&nbsp;3-11</div>
-                  <div>(ages 0-2 free with paying adult)</div>
-                  <div class="padding-top-20 text-center">
-                    <button class="btn btn-custom" type="button">Sold Out</button>
-                  </div>
-                </div>
-                <div class="tickets-item two">
-                  <h4 class="times">Brunch Edition</h4>
-                  <div class="tickets-date">Sunday, December&nbsp;8, 8-11AM, <a class="black text-underline" href="../lone-tree/">Lone&nbsp;Tree</a></div>
-                  <div>Tickets: $25 Ages 12+, $20 Ages&nbsp;3-11</div>
-                  <div>(ages 0-2 free with paying adult)</div>
-                  <div class="padding-top-20 text-center">
-                    <button class="btn btn-custom" type="button">Sold Out</button>
-                  </div>
-                </div>
-              </div>
-              <div class="padding-top-20"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
-            </div>
-          </div>
-        </div>
+	
+  <div class="row border-top padding-bottom-15">
+    <div class="container text-center"><div class="max-width-80">
+      <h1 class="page-heading">A Storybook Holiday</h1>
+      <h2 class="page-subheading">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature. </h2>
+      <div class="max-width-70">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
+    </div>
+  </div></div>
+	
+	
+	
+	
+  <div class="row text-center">
+	  
+	  
+	  
+	  
+
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eleven.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/twelve.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/thirteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/fourteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/fifteen.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/sixteen.jpg" alt=""></div>
       </div>
     </div>
+    <div class="container padding-bottom-60"><a class="text-underline" href="../newsletters/"><i>Sign up for our newsletter</i></a><i> to get the inside scoop on DCL events and ticket sales!</i></div>
   </div>
+  <!--<div class="text-center padding-top-40 padding-bottom-50">
+  <div>
+    <h4><i>Coming Spring 2022!</i></h4>
+    <div>
+      <h3 class="no-margin">A Storybook Holiday Spring:</h3>
+      <h1 class="no-margin-top text-uppercase font-weight-400">That Hungry Little Bug</h1>
+      Sunday, March 27, Parker<br>
+      Tickets on sale soon. </div>
+  </div>
+</div>--> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -475,7 +378,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -501,8 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.blogs.douglascountylibraries.org",
-		"https:\/\/help.dcl.org/",
+		"https:\/\/www.dclblog.org",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
@@ -535,5 +447,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
