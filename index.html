@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,7 +51,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
 	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-/* colorado gives */   
+/* colorado gives */ 
+/* modal style begins */	
+	
+.buffalo {
+	font-size: 24px;
+	color: #fff;
+	padding: 35px 0 5px;
+}
+.CGDmodal-content {
+	background: #dc3f24;
+	color: #fff;
+	padding: 10px 20px 60px;
+	text-align: center;
+	border-radius: 3px;
+}
+.CGDmodal-body img {
+	padding-top: 10px;
+}
+.donate-link {
+	text-decoration: underline;
+	color: #fff;
+	padding: 2px 0;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 500;
+}
+/* modal style ends */	
+	
 .cgd-container {
 	display: flex;
 	max-width: 1440px;
@@ -94,7 +120,7 @@ width: calc(100% * 0.5);
 	margin: 0 auto;
 	text-align: center;
 	padding: 0 15px 15px;
-	max-width: 630px;
+	max-width: 475px;
 }
 .animated-progress {
 	width: 100%;
@@ -552,19 +578,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="cgd-container">
       <div class="cgd-wrapper">
         <div class="cgd-info">
-          <div class="cgd-heading-one">Give, Connect, Grow</div>
+          <div class="cgd-heading-one">It's Colorado Gives Day!</div>
           <div class="progress-bar-wrapper">
             <div class="custom-progress-bar">
-              <div class="animated-progress progress-blue"> <span data-progress="74"></span> </div>
+              <div class="animated-progress progress-blue"> <span data-progress="67"></span> </div>
               <div class="progress-percentage">
-                <div>Complete: 66%</div>
+                <div>Complete: 67%</div>
                 <div>Goal: $80,000</div>
               </div>
             </div>
           </div>
           <div class="cgd-heading-two">
-            <div>Support thriving libraries with a gift to the DCL Foundation now through December 10, Colorado Gives Day.</div>
-            <div class="padding-top-5"><a class="black text-underline" href="donate/">Donate Now</a></div>
+            <div>Support thriving libraries! Donate to the DCL Foundation today.</div>
+            <div class="padding-top-5"><a class="black text-underline" href="donate/" style="font-size: 25px;">Donate Now</a>!</div>
           </div>
         </div>
         <div class="cgd-image">
@@ -651,6 +677,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="CGDmodal" tabindex="-1" role="dialog" aria-labelledby="CGDmodal-label">
+    <div class="modal-dialog" role="document">
+      <div class="CGDmodal-content">
+        <div class="CGDmodal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="white" aria-hidden="true">×</span></button>
+        </div>
+        <div class="CGDmodal-body"><img class="img-responsive" src="cgd-modal-photo.jpg" alt="Colorado Gives Day">
+          <div class="buffalo">Today is Colorado Gives Day!</div>
+          <div><a class="white donate-link" href="donate/">Donate Today!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -715,6 +755,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<!-- modal popup once per session, expires after 3 days --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha256-1A78rJEdiWTzco6qdn3igTBv9VupN3Q1ozZNTR4WE/Y=" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+            $(document).ready(function() {
+                 if ($.cookie('CGDmodalpop') == null) {
+                     $('#CGDmodal').modal('show');
+                     $.cookie('CGDmodalpop', '3');
+                 }
+             });
+</script> 
 <script>$(".animated-progress span").each(function () {
   $(this).animate(
     {
@@ -810,5 +860,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
