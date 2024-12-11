@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,6 +45,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 .kids-teens-active {
 	background-color: #f5f5f5;
+}
+.location-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
 }
 .book-list-wrapper {
 	display: flex;
@@ -169,6 +176,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	-webkit-transform: scale(1.1) translate(1.5%);
 	transform: scale(1.1) translate(1.5%);
 	opacity: 1
+}
+
+@media (max-width: 1040px) {
+.location-wrapper {
+	max-width: 750px;
+}
 }
 
 @media (max-width: 575px) {
@@ -379,14 +392,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="container text-center">
       <h1 class="page-heading">Battle of the Books</h1>
       <div class="h1 text-uppercase no-margin">2024-2025</div>
-      <div class="max-width-90">
+      <div class="max-width-80">
         <h2 style="margin-bottom: 5px;" class="page-subheading">Battle of the Books is a bowl-style trivia tournament that's all about books, engaging hundreds of young minds every year.</h2>
       </div>
       <div class="max-width-70">Dozens of teams in grades 3-6 compete against each other in interschool battles and finals tournaments to determine a districtwide champion for all of Douglas County.</div>
     </div>
   </div>
-  <div class="row bg-gray-5">
-    <div id="book-lists" class="container padding-top-30 padding-bottom-60">
+  <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
+    <div class="container">
+      <div class="h2 text-center">Teams, Schedules, Scores, and Standings</div>
+      <div class="text-center max-width-80 padding-bottom-5">Battle of the Books is active at Douglas County Libraries' Castle Rock, Highlands Ranch, Lone Tree and Parker locations. Choose a location to get started.</div>
+    </div>
+    <div class="location-wrapper">
+      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank"><img class="image-center img-circle" src="castle-rock.jpg?121123" alt="Battle of the Books, Castle Rock"></a>
+        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank">Castle Rock</a></h4>
+      </div>
+      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank"><img class="image-center img-circle" src="highlands-ranch.jpg" alt="Battle of the Books, Highlands Ranch"></a>
+        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank">Highlands Ranch</a></h4>
+      </div>
+      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank"><img class="image-center img-circle" src="lone-tree.jpg" alt="Battle of the Books, Lone Tree"></a>
+        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank">Lone Tree</a></h4>
+      </div>
+      <div class="text-center padding-30"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank"><img class="image-center img-circle" src="parker.jpg" alt="Battle of the Books, Parker"></a>
+        <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank">Parker</a></h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div id="book-lists" class="container padding-top-30 padding-bottom-50">
       <div class="h2 text-center">Book Lists</div>
       <div class="max-width-80 text-center padding-bottom-20">Get ready to battle! These are the books that this year's trivia battle questions will be based upon. All of these titles will be available as "Your Lucky Day" books at your local DCL branch.</div>
       <div class="book-list-wrapper">
@@ -401,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div id="pronunciations" class="row padding-top-40 padding-bottom-60">
+  <div id="pronunciations" class="row bg-gray-5 padding-top-40 padding-bottom-60">
     <div class="h2 text-center">Title and Author Pronunciation List</div>
     <div class="author-wrapper">
       <div class="author-item">
@@ -509,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             </audio>
             <a class="listen" onclick="document.getElementById('play16').play()">Listen<i class="fas fa-play"></i></a><a class="pause" onclick="document.getElementById('play16').pause()"><i class="fas fa-pause"></i></a></span></li>
           <li><i>Running Out of Time</i> by Margaret Peterson Haddix<span class="text-nowrap">&nbsp;|&nbsp;
-              <audio id="play17">
+            <audio id="play17">
               <source src="audio/running.mp3" type="audio/mp3">
               <source src="audio/running.ogg" type="audio/ogg">
             </audio>
@@ -698,4 +731,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
