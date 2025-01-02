@@ -64,6 +64,31 @@ Push Notifications End - Removed for Now -->
 .events-active {
 	background-color: #f5f5f5;
 }
+.custom-menu > li > a {
+	text-decoration: none;
+	color: #333;
+	background-color: #fff;
+	padding: 6px 0;
+	border: 0;
+	margin: 0;
+	font-weight: 400;
+	font-size: 16px;
+	width: inherit;
+	min-width: 255px;
+}
+.custom-menu > li > a:hover, .custom-menu > li > a:focus {
+	text-decoration: none;
+	color: #333;
+	background-color: #fff;
+	border: 0;
+}
+.dropdown-menu.center-dropdown-menu.custom-menu {
+	left: 5px;
+	padding: 10px;
+	margin: 0;
+}
+/* ^^^ Do not remove ^^^ */
+	
 .andrew-wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -727,9 +752,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <div class="row">
     <div class="page-nav">
-      <div class="page-nav-item"> <a href="https://go.dcl.org/events?et=storytime&r=months&n=1"><i class="pagenav-icon fa-regular fa-calendar"></i>Events Calendar</a> </div>
+      <div class="dropdown page-nav-item"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="pagenav-icon fa-regular fa-calendar"></i>Event Calendars&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+        <ul class="dropdown-menu center-dropdown-menu custom-menu" role="menu">
+          <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">All Events</a></li>
+          <li><a href="https://go.dcl.org/events?et=storytime&a=adults&r=months&n=1">Adult Events</a></li>
+          <li><a href="https://go.dcl.org/events?et=storytime&ea=adults&r=months&n=1">Kids Events</a></li>
+          <li><a href="https://go.dcl.org/events?t=Storytime&r=days&n=1">Storytime</a></li>
+        </ul>
+      </div>
       <div class="page-nav-item"><a href="#author-events"><i class="pagenav-icon fa-regular fa-books"></i>Author Events</a></div>
-      <div class="page-nav-item"> <a href="https://go.dcl.org/events?et=storytime&ea=adults&r=months&n=1"><i class="pagenav-icon fa-regular fa-calendar-heart"></i>Kids Events Calendar</a> </div>
     </div>
   </div>
   <div class="row">
