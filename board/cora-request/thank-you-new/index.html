@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,22 +18,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="Stay up-to-date with all the latest news and events from Douglas County Libraries. Follow us on social media and get access to book recommendations, reading lists, library programs, and more! Connect with us today.">
 <meta name="robots" content="noindex, nofollow">
 <!-- InstanceEndEditable -->
-<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="../../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="../../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="../../apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="../../favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="../../favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="../../android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="../../favicon-16x16.png" sizes="16x16">
-<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#007b83">
+<link rel="shortcut icon" href="../../../favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon" sizes="57x57" href="../../../apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../../apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../../apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../../../favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../../favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../../../favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../../../android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16">
+<link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#007b83">
 <meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Material+Icons" rel="stylesheet">
@@ -42,7 +43,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <!-- InstanceBeginEditable name="head" -->
-<style></style>
+<style>
+.reserve-a-space-active {
+	background-color: #f5f5f5;
+}
+svg {
+	width: 100px;
+	display: block;
+	margin: 30px auto;
+}
+.path {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+}
+.path.circle {
+	-webkit-animation: dash 2s ease-in-out;
+	animation: dash 2s ease-in-out;
+}
+.path.check {
+	stroke-dashoffset: -100;
+	-webkit-animation: dash-check 1s 1.2s ease-in-out forwards;
+	animation: dash-check 1s 1.2s ease-in-out forwards;
+}
+@-webkit-keyframes dash {
+0% {
+stroke-dashoffset: 1000;
+}
+100% {
+stroke-dashoffset: 0;
+}
+}
+@keyframes dash {
+0% {
+stroke-dashoffset: 1000;
+}
+100% {
+stroke-dashoffset: 0;
+}
+}
+@-webkit-keyframes dash-check {
+0% {
+stroke-dashoffset: -100;
+}
+100% {
+stroke-dashoffset: 900;
+}
+}
+@keyframes dash-check {
+0% {
+stroke-dashoffset: -100;
+}
+100% {
+stroke-dashoffset: 900;
+}
+}
+</style>
 <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -70,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="row no-gutter">
       <div class="col-sm-5">
         <div class="cp_header_client_area">
-          <div class="logo"> <a href="/"><img class="img-responsive" src="../../dcl-logo.svg" alt="Douglas County Libraries"></a> </div>
+          <div class="logo"> <a href="/"><img class="img-responsive" src="../../../dcl-logo.svg" alt="Douglas County Libraries"></a> </div>
         </div>
       </div>
       <div class="col-sm-6 col-sm-push-1">
@@ -81,7 +136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <span class="input-group-btn">
             <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
             </span> </div>
-          <div class="text-right"><span class="small margin-right-80"><a href="../../search/">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
+          <div class="text-right"><span class="small margin-right-80"><a href="../../../search/">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         </form>
       </div>
     </div>
@@ -101,45 +156,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
         </ul>
       </li>
-      <li class="whats-new-active"><a href="../../whats-new/">What's New</a> </li>
+      <li class="whats-new-active"><a href="../../../whats-new/">What's New</a> </li>
       <li class="dropdown using-the-library-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
         <ul class="dropdown-menu">
-          <li><a href="../../locations/">Hours & Locations</a></li>
-          <li><a href="../../library-basics/">Library Basics</a></li>
-          <li><a href="../../library-perks/">Library Perks</a></li>
-          <li><a href="../../book-clubs/">Book Clubs</a></li>
-          <li><a href="../../staff-recommendations/">Staff Recommendations</a></li>
-          <li><a href="../../business/">DCL for Business</a></li>
-          <li><a href="../../adult-education/">Adult Education & Test Prep</a></li>
-          <li><a href="../../ageless/">Ageless Adults</a></li>
+          <li><a href="../../../locations/">Hours & Locations</a></li>
+          <li><a href="../../../library-basics/">Library Basics</a></li>
+          <li><a href="../../../library-perks/">Library Perks</a></li>
+          <li><a href="../../../book-clubs/">Book Clubs</a></li>
+          <li><a href="../../../staff-recommendations/">Staff Recommendations</a></li>
+          <li><a href="../../../business/">DCL for Business</a></li>
+          <li><a href="../../../adult-education/">Adult Education & Test Prep</a></li>
+          <li><a href="../../../ageless/">Ageless Adults</a></li>
         </ul>
       </li>
       <li class="dropdown kids-teens-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kids & Teens <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="../../storytime/">Storytime</a></li>
-          <li><a href="../../read-listen-watch/">Read, Listen, Watch</a></li>
-          <li><a href="../../parents/">Parents</a></li>
-          <li><a href="../../teachers/">Teachers</a></li>
-          <li><a href="../../camp-dcl/">Camp DCL</a></li>
-          <li><a href="../../research/students/">Homework Help</a></li>
-          <li><a href="../../teens/">Teens</a></li>
+          <li><a href="../../../storytime/">Storytime</a></li>
+          <li><a href="../../../read-listen-watch/">Read, Listen, Watch</a></li>
+          <li><a href="../../../parents/">Parents</a></li>
+          <li><a href="../../../teachers/">Teachers</a></li>
+          <li><a href="../../../camp-dcl/">Camp DCL</a></li>
+          <li><a href="../../../research/students/">Homework Help</a></li>
+          <li><a href="../../../teens/">Teens</a></li>
         </ul>
       </li>
-      <li class="digital-media-active"><a href="../../digital-media/">Digital Media</a> </li>
+      <li class="digital-media-active"><a href="../../../digital-media/">Digital Media</a> </li>
       <li class="dropdown reserve-a-space-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
         <ul class="dropdown-menu">
-          <li><a href="../../reserve-a-space/">Reserve a Space</a></li>
+          <li><a href="../../../reserve-a-space/">Reserve a Space</a></li>
           <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
         </ul>
       </li>
       <li class="dropdown events-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="../../featured-events/">Featured Events</a></li>
+          <li><a href="../../../featured-events/">Featured Events</a></li>
           <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
           <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
-      <li class="research-active"><a href="../../research/">Research</a></li>
+      <li class="research-active"><a href="../../../research/">Research</a></li>
     </ul>
   </div>
 </nav>
@@ -147,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <a href="#content-begins" class="skip-link">Skip Mobile Navigation</a> 
 <!-- Mobile Navbar, Logo and Search -->
 <nav class="dcl-mobile-navbar navbar navbar-default">
-  <div class="container-md"> <a href="/"><img class="margin-left-15" src="../../dcl-responsive-logo.png" alt="DCL Logo"></a> <a href="#" role="button" data-toggle="modal" data-target="#nav-modal"><i class="fas fa-bars"></i></a> 
+  <div class="container-md"> <a href="/"><img class="margin-left-15" src="../../../dcl-responsive-logo.png" alt="DCL Logo"></a> <a href="#" role="button" data-toggle="modal" data-target="#nav-modal"><i class="fas fa-bars"></i></a> 
     <!-- Nav Modal -->
     <div class="modal fade" id="nav-modal" role="dialog" aria-hidden="true">
       <div class="dcl-mobile-nav modal-dialog">
@@ -166,45 +221,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                   <li><a href="https://dcl.bibliocommons.com/explore/featured_lists/staff_picks">Staff Picks</a></li>
                 </ul>
               </li>
-              <li class="whats-new-active mobile-nav-heading"><a href="../../whats-new/">What's New</a> </li>
+              <li class="whats-new-active mobile-nav-heading"><a href="../../../whats-new/">What's New</a> </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#using-the-library">Library Info <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="using-the-library" class="nav mobile-nav-list collapse">
-                  <li><a href="../../locations/">Hours & Locations</a></li>
-                  <li><a href="../../library-basics/">Library Basics</a></li>
-                  <li><a href="../../library-perks/">Library Perks</a> </li>
-                  <li><a href="../../book-clubs/">Book Clubs</a></li>
-                  <li><a href="../../staff-recommendations/">Staff Recommendations</a></li>
-                  <li><a href="../../business/">DCL for Business</a></li>
-                  <li><a href="../../adult-education/">Adult Education & Test Prep</a></li>
-                  <li><a href="../../ageless/">Ageless Adults</a></li>
+                  <li><a href="../../../locations/">Hours & Locations</a></li>
+                  <li><a href="../../../library-basics/">Library Basics</a></li>
+                  <li><a href="../../../library-perks/">Library Perks</a> </li>
+                  <li><a href="../../../book-clubs/">Book Clubs</a></li>
+                  <li><a href="../../../staff-recommendations/">Staff Recommendations</a></li>
+                  <li><a href="../../../business/">DCL for Business</a></li>
+                  <li><a href="../../../adult-education/">Adult Education & Test Prep</a></li>
+                  <li><a href="../../../ageless/">Ageless Adults</a></li>
                 </ul>
               </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#kids-teens">Kids & Teens <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="kids-teens" class="nav mobile-nav-list collapse">
-                  <li><a href="../../storytime/">Storytime</a></li>
-                  <li><a href="../../read-listen-watch/">Read, Listen, Watch</a></li>
-                  <li><a href="../../parents/">Parents</a></li>
-                  <li><a href="../../teachers/">Teachers</a></li>
-                  <li><a href="../../camp-dcl/">Camp DCL</a></li>
-                  <li><a href="../../research/students/">Homework Help</a></li>
-                  <li><a href="../../teens/">Teens</a></li>
+                  <li><a href="../../../storytime/">Storytime</a></li>
+                  <li><a href="../../../read-listen-watch/">Read, Listen, Watch</a></li>
+                  <li><a href="../../../parents/">Parents</a></li>
+                  <li><a href="../../../teachers/">Teachers</a></li>
+                  <li><a href="../../../camp-dcl/">Camp DCL</a></li>
+                  <li><a href="../../../research/students/">Homework Help</a></li>
+                  <li><a href="../../../teens/">Teens</a></li>
                 </ul>
               </li>
-              <li class="digital-media-active mobile-nav-heading"><a href="../../digital-media/">Digital Media</a> </li>
+              <li class="digital-media-active mobile-nav-heading"><a href="../../../digital-media/">Digital Media</a> </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#reserve-a-space">Reserve a Space <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="reserve-a-space" class="nav mobile-nav-list collapse">
-                  <li><a href="../../reserve-a-space/">Reserve a Space</a></li>
+                  <li><a href="../../../reserve-a-space/">Reserve a Space</a></li>
                   <li><a href="https://go.dcl.org/myreservations/">My Reservations</a></li>
                 </ul>
               </li>
               <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#library-events">Library Events <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </a>
                 <ul id="library-events" class="nav mobile-nav-list collapse">
-                  <li><a href="../../featured-events/">Featured Events</a></li>
+                  <li><a href="../../../featured-events/">Featured Events</a></li>
                   <li><a href="https://go.dcl.org/events?et=storytime&r=months&n=1">Events Calendar</a></li>
                   <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
-              <li class="research-active mobile-nav-heading"><a href="../../research/">Research</a> </li>
+              <li class="research-active mobile-nav-heading"><a href="../../../research/">Research</a> </li>
             </ul>
           </div>
         </div>
@@ -214,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div id="mobile-search" class="collapse bg-gray-10">
     <div class="container">
       <form id="searchFormTwo" class="search" action="https://dcl.bibliocommons.com/search">
-        <div class="text-right clearfix margin-bottom-5"><span class="small margin-right-60"><a href="../../search/">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
+        <div class="text-right clearfix margin-bottom-5"><span class="small margin-right-60"><a href="../../../search/">Website Search</a></span><span class="small"><a href="https://dcl.bibliocommons.com/search">Advanced Search</a></span></div>
         <div class="input-group">
           <input type="hidden" value="smart" name="t" id="search_param_two">
           <input placeholder="Search" type="text" name="q" class="form-control">
@@ -241,11 +296,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div class="row"> 
-    <script type="text/javascript" src="https://form.jotform.com/jsform/250074002988153"></script></div>
+  <div class="row">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+      <circle class="path circle" fill="none" stroke="#90ad63" stroke-width="5" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+      <polyline class="path check" fill="none" stroke="#90ad63 " stroke-width="15" stroke-linecap="square" stroke-miterlimit="15" points="100.2,45.2 51.5,88.8 29.8,67.5"/>
+    </svg>
+   
+  </div>
   <div class="row padding-bottom-80">
     <div class="container text-center">
-      <div class="max-width-80">
+      <div class="max-width-80"> <div class="h4">Thank you for your request!</div>
         <h5>For general questions or requests, please <a href="../../help/#contact-us">contact us</a> or call <a class="dark-text text-nowrap" href="tel:+13037917323">(303) 791-7323</a>.</h5>
         <div>Douglas County Libraries considers all <a href="https://www.sos.state.co.us/pubs/info_center/cora.html" target="_blank">Colorado Open Records Act (CORA)</a> requests to be a public record.</div>
       </div>
@@ -257,7 +317,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="social-footer">
       <div class="social-left">
         <div class="h5 margin-top-10 margin-bottom-10">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></div>
-        <div class="h5 margin-top-5"><a href="../../taxes/" target="_blank">Tax&nbsp;Resources</a>&nbsp;| <a href="https://cotaxaide.org/appt/" target="_blank">Tax&nbsp;Help&nbsp;for&nbsp;Seniors</a></div>
+        <div class="h5 margin-top-5"><a href="../../../taxes/" target="_blank">Tax&nbsp;Resources</a>&nbsp;| <a href="https://cotaxaide.org/appt/" target="_blank">Tax&nbsp;Help&nbsp;for&nbsp;Seniors</a></div>
       </div>
       <div class="social-right">
         <div class="social-links-wrapper"> <a class="margin-right-5" title="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fa-brands fa-x-twitter fa-2x"></i></a> <a class="margin-right-5" title="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fa-brands fa-instagram fa-2x"></i></a> <a class="margin-right-5" title="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fa-brands fa-pinterest fa-2x"></i></a> <a class="margin-right-5" title="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa-brands fa-youtube fa-2x"></i></a> <a title="Visit us on Flickr" href="https://www.flickr.com/photos/douglascountylibraries/albums" target="_blank"> <i class="fa-brands fa-flickr fa-2x"></i></a> </div>
@@ -271,32 +331,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="footer-column">
         <div class="h5">About</div>
         <ul>
-          <li><a href="../../who-we-are/">Who We Are</a></li>
-          <li><a href="../../foundation/">Our Foundation</a></li>
-          <li><a href="../../join-our-team/">Join Our Team</a></li>
-          <li><a href="../../press-kit/">Press Kit</a></li>
+          <li><a href="../../../who-we-are/">Who We Are</a></li>
+          <li><a href="../../../foundation/">Our Foundation</a></li>
+          <li><a href="../../../join-our-team/">Join Our Team</a></li>
+          <li><a href="../../../press-kit/">Press Kit</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <div class="h5">Contact</div>
         <ul>
-          <li><a href="../../help/">Help & FAQs</a></li>
-          <li><a href="../cora-request/">DCL Open Records Request</a></li>
+          <li><a href="../../../help/">Help & FAQs</a></li>
+          <li><a href="../../cora-request/">DCL Open Records Request</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <div class="h5">Connect</div>
         <ul>
-          <li><a href="../../newsletters/">eNews Sign-Up</a></li>
+          <li><a href="../../../newsletters/">eNews Sign-Up</a></li>
           <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <div class="h5">Support</div>
         <ul>
-          <li><a href="../../donate/">Donate Now</a></li>
-          <li><a href="../../ways-to-give/">Ways to Give</a></li>
-          <li><a href="../../volunteer/">Volunteer</a></li>
+          <li><a href="../../../donate/">Donate Now</a></li>
+          <li><a href="../../../ways-to-give/">Ways to Give</a></li>
+          <li><a href="../../../volunteer/">Volunteer</a></li>
         </ul>
       </div>
     </div>
@@ -306,8 +366,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="container">
     <div class="copyright">
       <div class="copyright-left">
-        <div><a href="../../website-accessibility/">Website Accessibility</a></div>
-        <div><a href="../../website-privacy/">Website Privacy</a></div>
+        <div><a href="../../../website-accessibility/">Website Accessibility</a></div>
+        <div><a href="../../../website-privacy/">Website Privacy</a></div>
       </div>
       <div class="copyright-right">&copy; <script>document.write(new Date().getFullYear())</script> Douglas County Libraries, <a href="https://goo.gl/maps/1KN1wAoTvgx" target="_blank"><span class="text-nowrap">100 S. Wilcox Street,</span> <span class="text-nowrap">Castle Rock, CO&nbsp;&nbsp;80104</span></a> | <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a></div>
     </div>
@@ -336,4 +396,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
