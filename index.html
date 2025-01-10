@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	width: 100%;
 }
 .authors-image {
-	background: #F2A922 url("authors.jpg") top center/cover;
+	background: #444;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
@@ -211,7 +212,65 @@ width: calc(100% * 0.5);
 	margin: 0 0 10px;
 	font-weight: 500;
 }
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 
+.slideshow-image.main {
+	min-height: 640px;
+}
+#slideshow {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 0%;
+	width: 100%;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
+	position: absolute;
+	z-index: 2;
+	width: 105%;
+	height: 105%;
+	top: -5%;
+	left: -5%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	-webkit-transition: opacity 3s, -webkit-transform 8s;
+	transition: opacity 3s, transform 8s;
+}
+#slideshow div {
+	transform-origin: top right;
+}
+#slideshow div:nth-of-type(2n+1) {
+	transform-origin: top left;
+}
+#slideshow div:nth-of-type(3n+1) {
+	transform-origin: top center;
+}
+#slideshow div:nth-of-type(4n+1) {
+	transform-origin: top right;
+}
+#slideshow div:nth-of-type(5n+1) {
+	transform-origin: center center;
+}
+#slideshow div:nth-of-type(6n+1) {
+	transform-origin: center left;
+}
+#slideshow div:nth-of-type(7n+1) {
+	transform-origin: top bottom;
+}
+#slideshow div:nth-of-type(8n+1) {
+	transform-origin: center right;
+}
+#slideshow div:nth-of-type(9n+1) {
+	transform-origin: center center;
+}
+#slideshow div:nth-of-type(10n+1) {
+	transform-origin: top left;
+}
+#slideshow .fx, #slideshow .fx1 {
+	transform: scale(1.1) translate(1.5%);
+	opacity: 1
+}
 
 @media (max-width: 950px) {
 .ftb-camps-container, .authors-container, .checkouts-challenge-container {
@@ -229,16 +288,16 @@ width: calc(100% * 0.5);
 .authors-info {
 	order: 2;
 }
-	.authors-image {
-	min-height: 500px;
-}
 .camps-wrapper, .challenge-wrapper {
 	margin-top: 30px;
+}
+.slideshow-image.main {
+	min-height: 500px;
 }
 }
 
 @media (max-width: 600px) {
-.authors-image {
+.slideshow-image.main {
 	min-height: 425px;
 }
 }
@@ -434,7 +493,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row background-row">
     <div class="authors-container">
       <div class="authors-wrapper">
-        <div class="authors-info"><div class="padding-bottom-20"><img class="img-responsive image-center" src="box-mccarthy.jpg" alt="C.J. Box and Andrew McCarthy"></div>
+        <div class="authors-info">
+          <div class="padding-bottom-20"><img class="img-responsive image-center" src="box-mccarthy.jpg" alt="C.J. Box and Andrew McCarthy"></div>
           <div class="authors-content">
             <div class="authors-heading-one">Must-See Authors: Coming Soon!</div>
             <div class="authors-heading-two">
@@ -444,7 +504,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <div class="padding-top-5"><a class="black text-underline" href="featured-events/">Buy Tickets</a></div>
           </div>
         </div>
-        <div class="authors-image"> </div>
+        <div class="authors-image">
+          <div id="slideshow" class="slideshow-image main"> 
+            <!-- define each background-image in CSS -->
+            <div class="random-slide" style="background-image: url('one.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(1) -->
+            <div class="random-slide" style="background-image: url('two.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(2) -->
+            
+            <div class="random-slide" style="background-image: url('three.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(3) -->
+            
+            <div class="random-slide" style="background-image: url('four.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(4) -->
+            
+            <div class="random-slide" style="background-image: url('five.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(5) -->
+            
+            <div class="random-slide" style="background-image: url('six.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(6) -->
+            
+            <div class="random-slide" style="background-image: url('seven.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(7) -->
+            
+            <div class="random-slide" style="background-image: url('eight.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(8) -->
+            
+            <div class="random-slide" style="background-image: url('nine.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(9) -->
+            
+            <div class="random-slide" style="background-image: url('ten.jpg')"></div>
+            <!-- #slideshow div:nth-of-type(10) --> 
+            
+          </div>
+        </div>
       </div>
     </div>
     <div class="checkouts-challenge-container">
@@ -546,8 +639,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<!-- modal popup once per session, expires after 3 days --> 
-
+<script>
+	var cards = $(".random-slide");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
@@ -607,4 +725,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
