@@ -569,14 +569,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="ftb-camps-container">
       <div class="ftb-camps-wrapper">
-        <div class="ftb-wrapper"><img class="img-responsive image-center" src="fairy-tale-ball-one.jpg" alt="Fairy Tale Ball">
+        <div class="ftb-wrapper">
+          <div id="ftb-box"></div>
           <div class="ftb-content">
             <div class="ftb-heading-one">Fairy Tale Ball: Beauty & the Beast</div>
             <div>Be our guest! Enchanting Crafts, Favorite Characters, Fun Activities, Snacks and Treats, Feb 1-March&nbsp;1.</div>
             <div class="padding-top-5"><a style="font-size: 22px" class="white text-underline" href="https://go.dcl.org/events?term=fairy+tale+ball&r=months&n=3">View Calendar</a></div>
           </div>
         </div>
-        <div class="camps-wrapper"><img class="img-responsive image-center" src="camp-dcl-one.jpg" alt="Camp DCL">
+        <div class="camps-wrapper">
+          <div id="camp-box"></div>
           <div class="camps-content">
             <div class="camps-heading-one">Summer Camps <a class="white font-weight-500 text-underline" href="camp-dcl/">Sneak Peek</a></div>
             <div>Check out all the camps before registration opens February&nbsp;3.</div>
@@ -585,6 +587,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
+  <script>
+    var images = ['fairy-tale-ball-one.jpg', 'fairy-tale-ball-two.jpg', 'fairy-tale-ball-three.jpg', 'fairy-tale-ball-four.jpg', 'fairy-tale-ball-five.jpg'];
+    $('<img alt="Fairy Tale Ball" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#ftb-box');
+	 var images = ['camp-dcl-one.jpg', 'camp-dcl-two.jpg', 'camp-dcl-three.jpg', 'camp-dcl-four.jpg', 'camp-dcl-five.jpg'];
+    $('<img alt="Camp DCL" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#camp-box');
+</script> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
   <div class="container">
