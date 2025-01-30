@@ -53,26 +53,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
 	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-/* forest of stories */ 
-.authors-container {
+/* storybook holiday */ 
+.sbh-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
 	margin: 0 auto;
 }
-.authors-wrapper {
+.sbh-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.authors-image {
+.sbh-image {
 	background: #bee7fe url("pig-spider.webp") bottom right/cover;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.authors-info {
+.sbh-info {
 	background: #ffd9c4;
 	color: #000;
 width: calc(100% * 0.5);
@@ -83,82 +83,21 @@ width: calc(100% * 0.5);
 	text-align: center;
 	justify-content: center;
 }
-.authors-heading-one {
+.sbh-heading-one {
 	color: #000;
 	font-size: 30px;
 	font-weight: 500;
 	line-height: 1;
 	margin: 5px 0 10px;
 }
-.authors-heading-two {
+.sbh-heading-two {
 	font-size: 20px;
 }
-.authors-content {
+.sbh-content {
 	max-width: 680px;
 	margin: 0 auto;
 }
-/* fairy tale ball & summer camps */
-.ftb-camps-container {
-	display: flex;
-	max-width: 1440px;
-	min-height: 640px;
-	margin: 30px auto 0 auto;
-}
-.ftb-camps-wrapper {
-	margin: 0 auto;
-	display: flex;
-	width: 100%;
-}
-.ftb-wrapper {
-	background: #888;
-width: calc(100% * 0.5);
-	display: flex;
-	flex-direction: column;
-	padding: 65px 15px 30px;
-}
-.ftb-wrapper img {
-	border-radius: 50%;
-	border: 5px solid rgba(255,255,255,.8);
-}
-.ftb-content {
-	margin: 0 auto;
-	color: #fff;
-	padding: 30px 0 35px;
-	font-size: 20px;
-	text-align: center;
-	max-width: 650px;
-}
-.ftb-heading-one {
-	font-size: 30px;
-	line-height: 1;
-	margin: 0 0 10px;
-	font-weight: 500;
-}
-.camps-wrapper {
-	background: #999;
-width: calc(100% * 0.5);
-	display: flex;
-	flex-direction: column;
-	padding: 65px 15px 30px;
-}
-.camps-wrapper img {
-	border-radius: 50%;
-	border: 5px solid rgba(255,255,255,.8);
-}
-.camps-content {
-	margin: 0 auto;
-	color: #fff;
-	padding: 30px 0 35px;
-	font-size: 20px;
-	text-align: center;
-	max-width: 650px;
-}
-.camps-heading-one {
-	font-size: 30px;
-	line-height: 1;
-	margin: 0 0 10px;
-	font-weight: 500;
-}
+
 /* top checkouts & reading challenge */
 	
 .icon-font.fa-sharp.fa-regular.fa-pen-to-square {
@@ -226,22 +165,84 @@ width: calc(100% * 0.5);
 	margin: 0 0 10px;
 	font-weight: 500;
 }
-
-@media (max-width: 950px) {
-.ftb-camps-container, .authors-container, .checkouts-challenge-container {
-	max-width: 720px;
+	/* fairy tale ball & summer camps */
+.ftb-camps-container {
+	display: flex;
+	max-width: 1440px;
+	min-height: 640px;
+	margin: 30px auto 0 auto;
 }
-.ftb-camps-wrapper, .authors-wrapper, .checkouts-challenge-wrapper {
-	flex-direction: column;
-}
-.ftb-wrapper, .camps-wrapper, .authors-info, .authors-image, .authors-content, .checkouts-wrapper, .challenge-wrapper {
+.ftb-camps-wrapper {
+	margin: 0 auto;
+	display: flex;
 	width: 100%;
 }
-.authors-image {
+.ftb-wrapper {
+	background: #888;
+width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	padding: 80px 15px 30px;
+}
+.ftb-wrapper img {
+	border-radius: 50%;
+	border: 5px solid rgba(255,255,255,.8);
+}
+.ftb-content {
+	margin: 0 auto;
+	color: #fff;
+	padding: 30px 0 35px;
+	font-size: 20px;
+	text-align: center;
+	max-width: 650px;
+}
+.ftb-heading-one {
+	font-size: 30px;
+	line-height: 1;
+	margin: 0 0 10px;
+	font-weight: 500;
+}
+.camps-wrapper {
+	background: #999;
+width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	padding: 80px 15px 30px;
+}
+.camps-wrapper img {
+	border-radius: 50%;
+	border: 5px solid rgba(255,255,255,.8);
+}
+.camps-content {
+	margin: 0 auto;
+	color: #fff;
+	padding: 30px 0 35px;
+	font-size: 20px;
+	text-align: center;
+	max-width: 650px;
+}
+.camps-heading-one {
+	font-size: 30px;
+	line-height: 1;
+	margin: 0 0 10px;
+	font-weight: 500;
+}
+
+@media (max-width: 950px) {
+.ftb-camps-container, .sbh-container, .checkouts-challenge-container {
+	max-width: 720px;
+}
+.ftb-camps-wrapper, .sbh-wrapper, .checkouts-challenge-wrapper {
+	flex-direction: column;
+}
+.ftb-wrapper, .camps-wrapper, .sbh-info, .sbh-image, .sbh-content, .checkouts-wrapper, .challenge-wrapper {
+	width: 100%;
+}
+.sbh-image {
 	order: 1;
 	height: 100%;
 }
-.authors-info {
+.sbh-info {
 	order: 2;
 	padding: 40px 15px 15px;
 }
@@ -448,13 +449,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-    <div class="authors-container">
-      <div class="authors-wrapper">
-        <div class="authors-image"></div>
-        <div class="authors-info">
-          <div class="authors-content">
-            <div class="authors-heading-one">Delightful, Terrific, Radiant!</div>
-            <div class="authors-heading-two">
+    <div class="sbh-container">
+      <div class="sbh-wrapper">
+        <div class="sbh-image"></div>
+        <div class="sbh-info">
+          <div class="sbh-content">
+            <div class="sbh-heading-one">Delightful, Terrific, Radiant!</div>
+            <div class="sbh-heading-two">
               <div>Join us for A Storybook Holiday:</div>
               <div>Charlotte’s Garden Party, Sunday, April&nbsp;6</div>
             </div>
