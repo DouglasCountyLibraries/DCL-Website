@@ -44,13 +44,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <style>
+@font-face {
+	font-family: 'Vinila';
+	src: url('../shared-assets/web-fonts/Vanila Beauty.woff2') format('woff2'), url('../shared-assets/web-fonts/Vanila Beauty.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 .events-active {
 	background-color: #f5f5f5;
 }
-.flickity-container {
-	max-width: 1920px;
+.background-row {
+	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 95%, #efeeed 100%);
+}
+.times {
+	font-family: Times, "Times New Roman", "serif";
+		font-size: 28px;
+	text-transform: uppercase;
+	font-weight: 600;
+
+	color: #741900;
+}
+h1.vinila {
+	font-family: "Vinila", Georgia;
+	color: #5a6135;
+	font-style: normal;
+	font-size: 90px;
+	margin: 0 0 0 -20px;
+	padding: 30px 0 0;
+	line-height: 100px;
+}
+.vinila-small {
+	font-size: 40px;
+	color: #5a6135;
+	white-space: nowrap;
+	position: relative;
+	top: -12px;
+	margin: 0 -20px 0 -8px;
+}
+.intro-text {
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: 600;
+	/* padding: 0 0 35px; */
+	color: #741900;
+}
+.custom-container {
+	background: #fff6ee;
+	max-width: 1300px;
 	margin: 0 auto;
+	color: #000;
+	padding-bottom: 60px;
+}
+.event-wrapper {
+	text-align: center;
+	margin: -11% auto 0 auto;
+	display: flex;
+	flex-direction: column;
 	padding: 0 15px;
+}
+	.flickity-container {
+	max-width: 1100px;
+	margin: 0 auto;
+	background: #fff6ee;
+	padding: 30px 15px;
 }
 .carousel-cell {
 	width: 100%;
@@ -77,6 +134,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .flickity-prev-next-button.no-svg {
 	color: #efeeed;
 }
+.details-container {
+	
+	max-width: 1300px;
+	margin: 0 auto;
+	color: #000;
+	padding: 0 15px;
+}
+.details-wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 40px;
+	/* margin-bottom: 50px; */
+}
+.details-quotation {
+	font-size: 20px;
+}
+.tickets-wrapper {
+	display: flex;
+	/* flex-wrap: wrap; */
+	justify-content: center;
+	max-width: 820px;
+	margin: 0 auto;
+}
+.tickets-item {
+	padding: 15px 0 20px;
+}
+.tickets-item h4 {
+	text-transform: uppercase;
+	color: #20555b;
+	font-size: 24px;
+	margin: 15px 0 5px;
+	font-weight: 600;
+}
+.tickets-date {
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+.btn.btn-custom {
+	color: #fff;
+	background: #741900;
+	text-transform: uppercase;
+	font-weight: 600;
+	box-shadow: 0px 10px 40px rgba(0,0,0, .1);
+	transition: all .4s ease-out;
+	border-radius: 2px;
+}
+.btn.btn-custom:hover, .btn.btn-custom:focus {
+	color: #fff;
+	background: #530000;
+	text-transform: uppercase;
+	font-weight: 600;
+	box-shadow: 0px 10px 40px rgba(0,0,0, .3);
+	transition: all .4s ease-out;
+	border-radius: 2px;
+	cursor: not-allowed
+}
+
+@media (max-width: 800px) {
+.event-wrapper {
+
+	margin: -9% auto 0 auto;
+
+}
+.vinila-small {
+
+	margin: -20px 0 -5px;
+	display: block;
+}
+
+.details-container {
+	
+}
+}
+
+@media (max-width: 400px) {
+h1.vinila {
+
+	font-size: 80px;
+
+}
+.vinila-small {
+	margin: -25px 0px -15px 0px;
+}
+
+}
+
+@media (max-width: 375px) {
+h1.vinila {
+
+}
+}
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -266,16 +416,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-top-30 padding-bottom-30">
-    <div class="container text-center">
-      <div class="text-uppercase font-weight-500">Tenth Annual</div>
-      <div class="h2 no-margin">Fête des Fables Gala</div>
-      <h1 class="page-heading no-margin-top">Beauty & the Beast</h1>
-      <div class="max-width-80"><i>"To see you was instantly to love you. Entering your apartment, tremblingly, my joy was excessive to find that you could behold me with greater intrepidity than I could behold myself."</i></div>
+	
+	  <div class="row background-row">
+    <div class="custom-container"><div><img class="center-block img-responsive" src="fete-background-top.webp" alt=""></div>
+      <div class="event-wrapper"><div class="intro-text times">Tenth Annual</div>
+        <div class="times">Fête des Fables Gala</div>
+        <h1 class="vinila">Beauty <span class="vinila-small">and the</span> Beast</h1>
+        <div class="max-width-80"><i>"To see you was instantly to love you. Entering your apartment, tremblingly, my joy was excessive to find that you could behold me with greater intrepidity than I could behold myself."</i></div>
       <div class="padding-top-5"><i>&mdash;Gabrielle-Suzanne Barbot de Villeneuve</i></div>
-    </div>
-  </div>
-  <div class="row">
+      </div>
+		
+	 
     <div class="flickity-container">
       <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="images/one.jpg" alt=""></div>
@@ -296,19 +447,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="carousel-cell"><img src="images/sixteen.jpg" alt=""></div>
       </div>
     </div>
-  </div>
-  <div class="row padding-top-30 padding-bottom-60 text-center">
-    <div class="container">
-      <div class="max-width-80">
-        <div>Join the Douglas County Libraries Foundation to celebrate the classic story of true love and its timeless messages of inner beauty and the transformative nature of kindness. You’ll enjoy an unforgettable evening in the style of provincial France, including beautiful scenery, a signature cocktail, catered dinner and dessert, remarkable entertainment, and a magnificent silent auction, where you just might find the treasure of your dreams.</div>
-        <div class="padding-top-15">Friday,&nbsp;September&nbsp;19,&nbsp;2025, <a href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank">Highlands Ranch Mansion</a></div>
-        <div>Tickets: $130</div>
-        <div class="h4 font-weight-500 text-uppercase margin-top-20 margin-bottom-20">Tickets on Sale Soon!</div>
-        <div class="padding-bottom-5"><i>Event proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>.</i></div>
-        <div><i><a href="#sponsors" class="" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</i></div>
-      </div>
+ 	
+		
+		
+      <div class="details-container">
+        <div class="details-wrapper">
+          <div class="details">
+            <div class="large-text padding-bottom-5">Join the Douglas County Libraries Foundation to celebrate the classic story of true love and its timeless messages of inner beauty and the transformative nature of kindness.</div>
+            <div>You’ll enjoy an unforgettable evening in the style of provincial France, including beautiful scenery, a signature cocktail, catered dinner and dessert, remarkable entertainment, and a magnificent silent auction, where you just might find the treasure of your dreams.</div>
+          </div>
+          <div class="tickets-row">
+            <div class="text-center">
+              <div class="tickets-wrapper">
+                <div class="tickets-item one">
+                  <div class="tickets-date">Friday,&nbsp;September&nbsp;19, <a class="black text-underline" href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank">Highlands Ranch Mansion</a></div>
+                  <div>Tickets: $130</div>
+                 
+                  <div class="padding-top-20 text-center">
+                    <button class="btn btn-custom" type="button">On Sale Feb 1</button>
+                  </div>
+                </div>
+              </div>
+              <div class="padding-bottom-5"><i>Event proceeds benefit the <a class="black text-underline" href="../foundation/">Douglas County Libraries Foundation</a>.</i></div>
+        <div><i><a href="#sponsors" class="black text-underline" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</i></div>
+            </div>
+          </div>
+        </div>
+      </div><div><img class="center-block img-responsive" src="fete-background-bottom.webp" alt=""></div>
     </div>
   </div>
+	
+	
+
   
   <!-- Modal -->
   <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="sponsor-modal">
