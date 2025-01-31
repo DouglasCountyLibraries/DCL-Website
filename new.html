@@ -66,14 +66,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	width: 100%;
 }
 .sbh-image {
-	background: #bee7fe url("pig-spider.webp") bottom right/cover;
+	background: #f8dbc7 url("pig-spider-large.webp") 57% 100% no-repeat;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
 }
 .sbh-info {
-	background: #ffd9c4;
+	background: #f8dbc7;
 	color: #000;
 width: calc(100% * 0.5);
 	display: flex;
@@ -97,8 +98,7 @@ width: calc(100% * 0.5);
 	max-width: 680px;
 	margin: 0 auto;
 }
-
-/* top checkouts & reading challenge */
+/* authors & reading challenge */
 	
 .icon-font.fa-sharp.fa-regular.fa-pen-to-square {
 	font-size: 80px;
@@ -106,29 +106,29 @@ width: calc(100% * 0.5);
 .icon-font {
 	font-size: 100px;
 	padding-bottom: 30px;
-	color: #9e5b42;
+	color: #000;
 }
-.checkouts-challenge-container {
+.authors-challenge-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 400px;
 	margin: 30px auto 0 auto;
 }
-.checkouts-challenge-wrapper {
+.authors-challenge-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.checkouts-wrapper {
+.authors-wrapper {
 	display: flex;
 	justify-content: center;
-	background: #eee;
+	background: #b2b370;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	padding: 30px 15px;
 }
-.checkouts-content {
+.authors-content {
 	margin: 0 auto;
 	color: #000;
 	padding: 0 0 30px;
@@ -136,7 +136,7 @@ width: calc(100% * 0.5);
 	text-align: center;
 	max-width: 650px;
 }
-.checkouts-heading-one {
+.authors-heading-one {
 	font-size: 30px;
 	line-height: 1;
 	margin: 0 0 10px;
@@ -145,7 +145,7 @@ width: calc(100% * 0.5);
 .challenge-wrapper {
 	display: flex;
 	justify-content: center;
-	background: #ddd;
+	background: #7c8f69;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
@@ -165,7 +165,7 @@ width: calc(100% * 0.5);
 	margin: 0 0 10px;
 	font-weight: 500;
 }
-	/* fairy tale ball & summer camps */
+/* fairy tale ball & summer camps */
 .ftb-camps-container {
 	display: flex;
 	max-width: 1440px;
@@ -178,7 +178,7 @@ width: calc(100% * 0.5);
 	width: 100%;
 }
 .ftb-wrapper {
-	background: #888;
+	background: #e47969;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
@@ -203,7 +203,7 @@ width: calc(100% * 0.5);
 	font-weight: 500;
 }
 .camps-wrapper {
-	background: #999;
+	background: #719ba6;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
@@ -228,19 +228,77 @@ width: calc(100% * 0.5);
 	font-weight: 500;
 }
 
-@media (max-width: 950px) {
-.ftb-camps-container, .sbh-container, .checkouts-challenge-container {
+#words {
+	font-size: 26px;
+	color: #333;
+	text-align: center;
+	font-style: italic;
+	display: block;
+	max-width: 150px;
+	position: relative;
+	left: 18%;
+	top: -5%;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+#words:after {
+	content: "";
+	animation: spin 5s linear infinite;
+}
+@keyframes spin {
+0% {
+content:"Delightful!";
+}
+33% {
+content:"Terrific!";
+}
+66% {
+content:"Radiant!";
+}
+100% {
+content:"Delightful!";
+}
+}
+.spider {
+	animation: swing 4s infinite both;
+	position: absolute;
+	top: 0;
+	right: 22%;
+}
+@keyframes swing {
+0%, 100% {
+transform: translateX(0%);
+transform-origin: 50% 50%;
+}
+15% {
+transform: translateX(-15px) rotate(6deg);
+}
+30% {
+transform: translateX(10px) rotate(-6deg);
+}
+45% {
+transform: translateX(-10px) rotate(3.6deg);
+}
+60% {
+transform: translateX(9px) rotate(-2.4deg);
+}
+75% {
+transform: translateX(-6px) rotate(1.2deg);
+}
+}
+	@media (max-width: 950px) {
+.ftb-camps-container, .sbh-container, .authors-challenge-container {
 	max-width: 720px;
 }
-.ftb-camps-wrapper, .sbh-wrapper, .checkouts-challenge-wrapper {
+.ftb-camps-wrapper, .sbh-wrapper, .authors-challenge-wrapper {
 	flex-direction: column;
 }
-.ftb-wrapper, .camps-wrapper, .sbh-info, .sbh-image, .sbh-content, .checkouts-wrapper, .challenge-wrapper {
+.ftb-wrapper, .camps-wrapper, .sbh-info, .sbh-image, .sbh-content, .authors-wrapper, .challenge-wrapper {
 	width: 100%;
 }
 .sbh-image {
 	order: 1;
-	height: 100%;
+	min-height: 600px;
 }
 .sbh-info {
 	order: 2;
@@ -249,14 +307,15 @@ width: calc(100% * 0.5);
 .camps-wrapper, .challenge-wrapper {
 	margin-top: 30px;
 }
-.slideshow-image.main {
-	min-height: 500px;
-}
 }
 
-@media (max-width: 600px) {
-.slideshow-image.main {
-	min-height: 425px;
+@media (max-width: 550px) {
+.sbh-image {
+	background: #f8dbc7 url("pig-spider-small.webp") 90% 100% no-repeat;
+}
+#words {
+	left: 15%;
+	top: 1%;
 }
 }
 </style>
@@ -451,27 +510,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row background-row">
     <div class="sbh-container">
       <div class="sbh-wrapper">
-        <div class="sbh-image"></div>
+        <div class="sbh-image">
+          <div class="spider"><img src="spider.png" alt=""></div>
+          <div id="words"></div>
+        </div>
         <div class="sbh-info">
           <div class="sbh-content">
-            <div class="sbh-heading-one">Delightful, Terrific, Radiant!</div>
+            <div>Join us for A Storybook Holiday:</div>
+            <div class="sbh-heading-one">Charlotte’s Garden Party</div>
             <div class="sbh-heading-two">
-              <div>Join us for A Storybook Holiday:</div>
-              <div>Charlotte’s Garden Party, Sunday, April&nbsp;6</div>
+              <div>Sunday, April&nbsp;6</div>
             </div>
             <div class="padding-top-5 padding-bottom-30"><a class="black text-underline" href="storybook-holiday/">Buy Tickets</a></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="checkouts-challenge-container">
-      <div class="checkouts-challenge-wrapper">
-        <div class="checkouts-wrapper">
-          <div class="checkouts-content">
+    <div class="authors-challenge-container">
+      <div class="authors-challenge-wrapper">
+        <div class="authors-wrapper">
+          <div class="authors-content">
             <div><i class="icon-font fa-sharp fa-regular fa-pen-to-square"></i></div>
-            <div class="checkouts-heading-one">Must-See Authors!</div>
-            <div style="font-size: 18px; font-weight: 500;">March&nbsp;1: C.J.&nbsp;Box introduces Battle Mountain</div>
-            <div style="font-size: 18px; font-weight: 500;">April&nbsp;19: Andrew McCarthy presses Rewind on the ‘80s</div>
+            <div class="authors-heading-one">Must-See Authors!</div>
+            <div style="font-size: 18px;">March&nbsp;1: C.J.&nbsp;Box introduces Battle Mountain</div>
+            <div style="font-size: 18px;">April&nbsp;19: Andrew McCarthy presses Rewind on the ‘80s</div>
             <div class="padding-top-5"><a class="black text-underline" href="featured-events/">Buy Tickets</a></div>
           </div>
         </div>
