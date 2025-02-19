@@ -7,7 +7,9 @@
 <title>Kiosk | Douglas County Libraries</title>
 <meta name="robots" content="noindex, nofollow">
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Ubuntu:300,400,500,300italic,400italic,500italic|Open+Sans:300,400,500,600,700,800|Nothing+You+Could+Do|Material+Icons" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?8123">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
@@ -15,8 +17,12 @@
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?81822"></script>
 <style>
 body {
-	background: #fff url("kiosk-background.jpg") center/cover no-repeat;
+	background: #efeeed;
 	height: 100vh;
+	color: #000;
+}
+a:visited, a:hover, a:focus, a:active {
+	text-decoration: none;
 }
 .kiosk-wrapper {
 	display: flex;
@@ -26,7 +32,18 @@ body {
 	max-width: 1920px;
 	margin: 0 auto;
 	height: 100vh;
-	padding: 0 0 80px;
+	padding: 0 0 100px;
+}
+.notice {
+	font-size: 20px;
+	text-align: center;
+	padding-bottom: 50px;
+}
+.kiosk-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
 }
 .search-box-wrapper {
 	display: flex;
@@ -35,29 +52,7 @@ body {
 	max-width: 900px;
 	justify-content: center;
 	align-content: center;
-}
-.kiosk-search {
-	border: 4px solid #4e5253;
-	border-radius: 4px;
-	min-width: 525px;
-}
-.form-control {
-	font-size: 18px;
-	font-weight: 600;
-	height: 50px;
-	border: 0;
-	box-shadow: none;
-}
-.btn.btn-search {
-	font-size: 20px;
-}
-.box-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 auto;
-	max-width: 900px;
-	justify-content: center;
-	align-content: center;
+	padding-bottom: 22px;
 }
 .search-box-wrapper h1 {
 	text-align: center;
@@ -66,41 +61,161 @@ body {
 	font-weight: 500;
 	margin: 0;
 	padding-bottom: 20px;
+	color: #000;
+}
+.kiosk-search {
+	min-width: 525px;
+}
+.form-control {
+	font-size: 18px;
+	font-weight: 500;
+	height: 50px;
+	border: 2px solid #999;
+	box-shadow: none;
+}
+.btn.btn-search {
+	font-size: 20px;
+}
+.h3.box-label {
+	margin-top: 30px;
+	text-align: center;
+}
+.h3.box-label-alt {
+	margin-top: 17px;
+	text-align: center;
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: center;
+	align-content: center;
 }
 .box-item {
-	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 10px 15px;
+	background: #fff;
+	border-radius: 3px;
+	width: 350px;
+	height: 270px;
 }
-.box-item img {
-	margin: 60px;
+.box-item a {
+	height: inherit;
 }
-
-@media (max-width: 600px) {
-.box-item img {
-	padding: 15px;
+.box-item-inner {
+	white-space: nowrap;
 }
+.gray-circle-wrapper {
+	border: 6px solid #fff;
+	border-radius: 50%;
+	box-sizing: border-box;
+	height: 112px;
+	margin: 0 auto;
+	width: 112px;
+}
+.gray-circle {
+	border: 6px solid #e6e4e2;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #4f878c;
+	background-color: #fff;
+	font-size: 42px;
+	height: 100px;
+	line-height: 88px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100px;
+}
+.white-bottom-row {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #efeeed 0%, #efeeed 50%, #ffffff 50%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #efeeed 0%, #efeeed 50%, #ffffff 50%, #ffffff 100%);
+	background: linear-gradient(to bottom, #efeeed 0%, #efeeed 50%, #ffffff 50%, #ffffff 100%);
 }
 </style>
 </head>
 <body>
 <div class="kiosk-wrapper">
-  <div class="search-box-wrapper">
-    <h1>Search the Catalog</h1>
-    <form id="searchForm" class="kiosk-search" action="https://dcl.bibliocommons.com/search">
-      <div class="input-group">
-        <input type="hidden" value="smart" name="t" id="search_param">
-        <input type="text" class="form-control" name="q" autofocus>
-        <span class="input-group-btn">
-        <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
-        </span> </div>
-    </form>
-  </div>
-  <div class="box-wrapper">
-    <div class="box-item"><a href="https://www.dcl.org/whats-new/"><img class="img-responsive" src="seven.png" alt=""></a></div>
-    <div class="box-item"><a href="https://getacard-ssl.dclibraries.app/"><img class="img-responsive" src="two.png" alt=""></a></div>
-    <div class="box-item"><a href="https://www.dcl.org/staff-recommendations/"><img class="img-responsive" src="three.png" alt=""></a></div>
-    <div class="box-item"><a href="https://www.dcl.org/featured-events/"><img class="img-responsive" src="four.png" alt=""></a></div>
-    <div class="box-item"><a href="https://dcl.bibliocommons.com/user/login?"><img class="img-responsive" src="five.png" alt=""></a></div>
-    <div class="box-item"><a href="https://www.dcl.org/reserve-a-space/"><img class="img-responsive" src="six.png" alt=""></a></div>
+  <div class="kiosk-content">
+    <div class="search-box-wrapper">
+      <h1>Search the Catalog</h1>
+      <form id="searchForm" class="kiosk-search" action="https://dcl.bibliocommons.com/search">
+        <div class="input-group">
+          <input type="hidden" value="smart" name="t" id="search_param">
+          <input type="text" class="form-control" name="q" autofocus>
+          <span class="input-group-btn">
+          <button type="submit" value="search" class="btn btn-search"><i class="fas fa-search"></i></button>
+          </span> </div>
+      </form>
+    </div>
+    <div class="notice">Click the <img style="vertical-align: text-top; height: 24px;" src="user-trash-can.png" alt=""> icon above to ensure your privacy when finished.</div>
+    <div class="box-wrapper">
+      <div class="box-item"><a href="https://getacard-ssl.dclibraries.app/">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-regular fa-credit-card"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <div class="h3 box-label">Library Card</div>
+        </div>
+        </a> </div>
+      <div class="box-item"> <a href="https://dcl.bibliocommons.com/user/login?">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-solid fa-user"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <div class="h3 box-label">My Account</div>
+        </div>
+        </a> </div>
+      <div class="box-item"><a href="https://www.dcl.org/reserve-a-space/">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-solid fa-person-chalkboard"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <div class="h3 box-label">Reserve a Space</div>
+        </div>
+        </a> </div>
+    </div>
+    <div class="box-wrapper">
+      <div class="box-item"><a href="https://www.dcl.org/whats-new/">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-regular fa-book-open"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <div class="h3 box-label">What's New</div>
+        </div>
+        </a> </div>
+      <div class="box-item"><a href="https://www.dcl.org/staff-recommendations/">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-regular fa-book-user"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <div class="h3 box-label-alt">Staff<br>
+            Recommendations</div>
+        </div>
+        </a> </div>
+      <div class="box-item"><a href="https://www.dcl.org/featured-events/">
+        <div class="white-bottom-row">
+          <div class="gray-circle-wrapper">
+            <div class="gray-circle"><i class="fa-regular fa-calendar-days"></i></div>
+          </div>
+        </div>
+        <div class="box-item-inner">
+          <div class="h3 box-label">Featured Events</div>
+        </div>
+        </a> </div>
+    </div>
   </div>
 </div>
 </body>
