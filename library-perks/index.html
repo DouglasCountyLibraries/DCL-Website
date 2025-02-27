@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,13 +46,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.box-item-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 1280px;
-	margin: 0 auto;
-}
 .photo-item-wrapper {
 	display: flex;
 	justify-content: center;
@@ -59,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	max-width: 1280px;
 	margin: 0 auto;
 }
-.box-item, .learning-item, .photo-item {
+.learning-item, .photo-item {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
@@ -84,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media (max-width: 1000px) {
-.box-item-wrapper, .learning-wrapper {
+.learning-wrapper {
 	max-width: 830px;
 	margin: 0 auto;
 }
@@ -109,6 +103,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .box-item, .photo-item {
 	flex-basis: 100%;
 }
+}
+.box-container {
+	max-width: 1610px;
+	margin: 0 auto;
+}
+.box-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.box-inner {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.box-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding-bottom: 20px;
+	margin: 15px;
+	min-width: 380px;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -308,34 +324,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </div>
     </div>
   </div>
-  <div id="check-out" class="row padding-bottom-60">
-    <div class="box-item-wrapper">
-      <div id="check-out-colorado" class="box-item">
-        <div><img class="img-responsive" src="check-out-colorado.jpg" alt="Check Out Colorado"></div>
-        <div class="box-content">
-          <div class="h3 text-center"><a href="https://dcl.bibliocommons.com/item/show/1350439114">Check Out Colorado</a></div>
-          <div>A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks. <a href="https://dcl.bibliocommons.com/item/show/1350439114">Check now for availability</a>. </div>
+  <div id="check-out" class="row padding-bottom-40">
+    <div class="box-container">
+      <div class="box-wrapper">
+        <div id="check-out-colorado" class="box-item">
+          <div><img class="img-responsive image-center" src="check-out-colorado.jpg" alt="Check Out Colorado"></div>
+          <div class="box-inner">
+            <div class="h3 text-center"><a href="https://dcl.bibliocommons.com/item/show/1350439114">Check Out Colorado</a></div>
+            <div>A limited number of backpacks containing a pass good for admission to any Colorado State Park are available for checkout from our welcome desks. <a href="https://dcl.bibliocommons.com/item/show/1350439114">Check now for availability</a>. </div>
+          </div>
         </div>
-      </div>
-      <div id="nontraditional-items" class="box-item">
-        <div><img class="img-responsive" src="oculus.jpg" alt="Nontraditional Items"></div>
-        <div class="box-content">
-          <div class="h3 text-center"><a href="https://dcl.bibliocommons.com/v2/search?custom_edit=false&query=formatcode%3A%28EQUIPMENT+%29&searchType=bl&suppress=true">Nontraditional Items</a></div>
-          <div>Looking for something new and exciting to check out? We offer a variety of gadgets, electronics, and learning tools.</div>
+        <div id="nontraditional-items" class="box-item">
+          <div><img class="img-responsive image-center" src="oculus.jpg" alt="Nontraditional Items"></div>
+          <div class="box-inner">
+            <div class="h3 text-center"><a href="https://dcl.bibliocommons.com/v2/search?custom_edit=false&query=formatcode%3A%28EQUIPMENT+%29&searchType=bl&suppress=true">Nontraditional Items</a></div>
+            <div>Looking for something new and exciting to check out? We offer a variety of gadgets, electronics, and learning tools.</div>
+          </div>
         </div>
-      </div>
-      <div class="full-flex-break"></div>
-      <div id="dcl-care-kits" class="box-item">
-        <div><img class="img-responsive" src="care-kits.jpg" alt="DCL Care Kits"></div>
-        <div class="box-content">
-          <div class="h3 text-center"><a href="https://dcl.bibliocommons.com/v2/search?custom_edit=false&query=anywhere%3A(care%20kit)%20%20%20-anywhere%3A(curriculum)&searchType=bl&suppress=true&f_FORMAT=KIT&sort=newly_acquired">DCL Care Kits</a></div>
-          <div>Our specialized, self-contained kits for kids, adults and caregivers contain materials to help those struggling with anxiety, loss related to suicide, and memory issues. Multigenerational and road trip kits also available. Kits check out for three weeks.</div>
-        </div>
-      </div>
-      <div id="adventure-pass" class="box-item">
-        <div><img class="img-responsive" src="adventure-pass.jpg" alt="Adventure Pass"></div>
-        <div class="box-content">
-          <div style="font-color: #555;" class="h3 text-center">Adventure Pass</div><div class="red-text font-weight-500 padding-bottom-5">New chapters ahead! Adventure Pass has been retired&mdash;thank you for your support over the years.</div>
+        <div id="dcl-care-kits" class="box-item">
+          <div><img class="img-responsive image-center" src="care-kits.jpg" alt="DCL Care Kits"></div>
+          <div class="box-inner">
+            <div class="h3 text-center"><a href="https://dcl.bibliocommons.com/v2/search?custom_edit=false&query=anywhere%3A(care%20kit)%20%20%20-anywhere%3A(curriculum)&searchType=bl&suppress=true&f_FORMAT=KIT&sort=newly_acquired">DCL Care Kits</a></div>
+            <div>Our specialized, self-contained kits for kids, adults and caregivers contain materials to help those struggling with anxiety, loss related to suicide, and memory issues. Multigenerational and road trip kits also available. Kits check out for three weeks.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -493,4 +504,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
