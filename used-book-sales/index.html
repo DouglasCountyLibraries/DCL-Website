@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,31 +46,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.item-wrapper {
+.box-container {
+	max-width: 1610px;
+	margin: 0 auto;
+}
+.box-wrapper {
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
 	align-content: center;
-	align-items: center;
+	justify-content: center;
+	padding-bottom: 20px;
 }
-.item {
+.box-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.box-item {
+	display: flex;
+	flex-direction: column;
 	flex: 1;
-	padding: 0 15px;
+	padding-bottom: 20px;
+	margin: 15px;
+	min-width: 380px;
 }
-.item.one {
-	max-width: 330px;
-}
-.item.two {
-	max-width: 500px;
+.price-list {
+	text-align: left;
+	margin: 5px 0;
 }
 
-@media (max-width: 992px) {
-.item-wrapper {
-	flex-direction: column;
+@media (max-width: 819px) {
+.box-content {
 	text-align: center;
-}
-.item.two {
-	padding-top: 15px;
-	max-width: 100%;
 }
 }
 </style>
@@ -261,60 +268,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div id="general-alert" style="display:none;"></div>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-bottom-30 border-top">
-    <div class="container margin-lg-200">
-      <div class="text-center">
-        <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">Used Book Sales</h1>
-        <h4 class="roboto margin-top-5">Looking for gently used books at bargain prices?</h4>
-        <div>Stop by one of our Second Chapter Used Bookstores, visit our <a href="#online-bookstore">online bookstore</a>, or shop a special <a href="#book-sale-events">book sale event</a> to find a great selection of fiction, nonfiction, music and movies for all ages. Proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>. </div>
+  <div class="row border-top padding-bottom-15">
+    <div class="container text-center">
+      <div class="max-width-80">
+        <h1 class="page-heading">Used Book Sales</h1>
+        <h2 class="page-subheading">Looking for gently used books at bargain prices?</h2>
+        <div class="max-width-80">Stop by one of our Second Chapter Used Bookstores, visit our online bookstore, or shop a special book sale event to find a great selection of fiction, nonfiction, music and movies for all ages.</div>
       </div>
     </div>
   </div>
-  <div id="second-chapter-used-bookstore" class="row bg-gray-5 padding-top-20 padding-bottom-60">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="padding-bottom-15">Second Chapter Used Bookstore</h1>
-      </div>
-      <div class="col-md-6 margin-bottom-15"> <img class="img-responsive center-block" alt="Second Chapter Book Sales" src="second-chapter.jpg"> </div>
-      <div class="col-md-6 text-center text-left-md">
-        <div>
-          <h4 class="no-margin-top">Find stores in our <a href="../castle-pines/">Castle Pines</a>, <a href="../castle-rock/">Castle Rock</a>, <a href="../highlands-ranch/">Highlands Ranch</a>, <a href="../lone-tree/">Lone Tree</a>, <a href="../louviers/">Louviers</a>, <a href="../parker/">Parker</a> and <a href="../roxborough/">Roxborough</a> locations.</h4>
-          <ul class="list-unstyled">
-            <li>Hardcover Books, $3</li>
-            <li>Trade Paperbacks, $2</li>
-            <li>Mass Market Paperback, $1</li>
-            <li>Kids/Young Adult Books, $1</li>
-            <li>Children's Books, $0.50</li>
-            <li>All Audio/Audiovisual, $2</li>
-            <li>Book Bags, $1</li>
-          </ul>
+  <div class="row">
+    <div class="box-container">
+      <div class="box-wrapper">
+        <div class="box-item">
+          <div><img alt="Second Chapter Used Bookstore" class="img-responsive image-center" src="second-chapter-used-bookstore.jpg"></div>
+          <div class="box-content">
+            <div class="h3 text-center">Second Chapter Used Bookstore</div>
+            <div>Find stores in all DCL locations excluding Louviers.
+              <ul class="price-list">
+                <li>Hardcover Books, $3</li>
+                <li>Trade Paperbacks, All Audio/Audiovisual, $2</li>
+                <li>Mass Market Paperback, Kids/Young Adult Books, Book Bags, $1</li>
+                <li>Children's Books, $0.50</li>
+              </ul>
+              Sales tax will be added at checkout. </div>
+          </div>
         </div>
-        <div>Sales tax will be added at checkout.</div>
-        <div class="padding-top-15 font-weight-400"><a class="text-uppercase" href="../library-basics/#donate-books-and-more">I have materials to donate &raquo;</a></div>
-      </div>
-    </div>
-  </div>
-  <div id="online-bookstore" class="row bg-teal padding-top-20 padding-bottom-60">
-    <div class="container text-center margin-lg-200">
-      <h1 class="white">Online Bookstore</h1>
-      <div><img class="img-responsive image-center" src="amazon-logo.png" alt="Online Bookstore">
-        <h4 class="white">Visit our online bookstore for more great finds. Your purchase helps to preserve our libraries now and for the future.</h4>
-      </div>
-      <div class="padding-top-15"><a class="btn btn-lg btn-primary" href="https://www.amazon.com/s?marketplaceID=ATVPDKIKX0DER&me=A3DWH3KNEEAD5M&merchant=A3DWH3KNEEAD5M&redirect=true" target="_blank">Shop Now</a></div>
-    </div>
-  </div>
-  <div id="book-sale-events" class="row padding-top-20 padding-bottom-60">
-    <div class="container">
-      <div class="text-center">
-        <h1 class="padding-bottom-15">Book Sale Events</h1>
-      </div>
-      <div class="item-wrapper">
-        <div class="item one"> <img alt="Used Book Sales" src="second-chapter-sale-small.png"> </div>
-        <div class="item two">
-          <h4 class="no-margin-top">In addition to ongoing sales in our stores, we host special sale events several times each year.</h4>
-          <div>Be sure to <a href="../newsletters/">sign up for our monthly newsletter</a> to be notified of special sales. For <a href="../library-basics/#donate-books-and-more">information about donating</a> or purchasing used books, call us at <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span>.</div>
+        <div class="box-item">
+          <div><img alt="Online Bookstore" class="img-responsive image-center" src="online-bookstore.jpg"></div>
+          <div class="box-content">
+            <div class="h3 text-center">Online Bookstore</div>
+            <div>Visit our Amazon Marketplace bookstore for more great finds. Your purchase helps to preserve our libraries now and for the future. </div>
+            <div class="padding-top-20 text-center"> <a href="https://www.amazon.com/s?marketplaceID=ATVPDKIKX0DER&me=A3DWH3KNEEAD5M&merchant=A3DWH3KNEEAD5M&redirect=true" target="_blank" class="btn btn-primary">Shop Now</a></div>
+          </div>
+        </div>
+        <div class="box-item">
+          <div><img alt="Book Sale Events" class="img-responsive image-center" src="book-sale-events.jpg"></div>
+          <div class="box-content">
+            <div class="h3 text-center">Book Sale Events</div>
+            <div>In addition to ongoing sales in our stores, we host special sale events several times each year. Be sure to <a href="../newsletters/">sign up for our monthly newsletter</a> to be notified of special sales. </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row bg-gray-5 padding-top-50 padding-bottom-60">
+    <div class="container text-center">
+      <div class="h5 max-width-80">Douglas County Libraries gratefully accepts donations of new and used books, music&nbsp;CDs, and DVDs.</div>
+      <div class="max-width-70">Before donating, <a href="../library-basics/#donate-books-and-more">please review these guidelines</a>. For more information about donating or purchasing used books, call us at <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span>.</div>
+      <div class="padding-top-5"><i>Proceeds benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>.</i></div>
     </div>
   </div>
   <!-- InstanceEndEditable --> </div>
@@ -379,7 +381,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -438,4 +458,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
