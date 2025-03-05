@@ -120,15 +120,19 @@ ul.branch-hours {
 .flickity-prev-next-button {
 	display: none;
 }
-.item-wrapper {
+	.art-item-wrapper {
 	display: flex;
-	align-items: center;
+	gap: 20px;
+		padding: 0 15px;
+	max-width: 950px;
+	margin: 0 auto;
 }
-.item-wrapper img {
-	padding: 0 15px;
-}
-.art-item {
+.art-item:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	flex-basis: 60%;
+	align-content: center;
 }
 .location-events {
 	padding: 50px 0 40px;
@@ -259,11 +263,10 @@ ul.branch-hours {
 	width: 100%;
 	border-right: 0;
 }
-.art-item-wrapper img {
-	padding-bottom: 15px;
-}
 .art-item {
 	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
 }
 }
 
@@ -594,34 +597,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <div class="max-width-80">Rustle up some fun at The Ranch, where young cowpokes can put their imagination to work tending horses and animals, baling hay, gardening, and more, using play materials and equipment. With a standalone stable, tractor, and mini grain silo, the spirit of the West comes to life in this interactive play space.</div>
     </div>
   </div>
-  <!--<div id="exhibits" class="row padding-top-50">
-    <div class="h2 text-center no-margin padding-bottom-30">Art on Display</div>
-    <div class="container no-padding item-wrapper margin-lg-175 margin-md-100">
-      <div class="art-item text-center"><img class="img-responsive center-block" alt="Sagar Gaikwad" src="sagar-gaikwad.jpg"> </div>
-      <div class="art-item">
-        <div class="margin-left-10 margin-right-10">
-          <div class="h2 no-margin text-uppercase font-weight-400">Sagar Gaikwad</div>
-          <div class="h3 margin-top-5 no-margin-bottom">Paintings</div>
-          <div class="h4 margin-top-5">May 1-June 30</div>
-          <div>Specializing in abstract and realism acrylic painting, Sagar Gaikwad has a passion for creating vibrant works of art that capture the beauty and complexity of life. Through a combination of bold brushstrokes, vivid colors, and intricate details, Sagar's works invite viewers to explore new perspectives and connect with the emotions conveyed in each piece.</div>
+  <div id="exhibits" class="row padding-top-50">
+    
+      <div class="h2 text-center no-margin padding-bottom-30">Art on Display</div>
+      <div class="art-item-wrapper">
+        <div class="art-item"><img class="img-responsive image-center" alt="Katharina Mace Painting" src="katharina-mace.jpg"> </div>
+        <div class="art-item">
+          <div class="h2 no-margin text-uppercase">Katharina Mace</div>
+          <div class="h3 margin-top-5 no-margin-bottom">Painting</div>
+          <div class="h4 margin-top-5">March 1-April 30</div>
+          <div>Katharina Mace, a Colorado-based children's book illustrator, creates whimsical artwork that captures childhood joy. A Rocky Mountain College of Art and Design graduate, she uses traditional media to tell hopeful stories. When not painting imaginative scenes, she explores bookstores and travels, drawing inspiration from life's diverse experiences.</div>
         </div>
       </div>
-    </div>
+    
   </div>
   <div class="row padding-top-30 padding-bottom-60">
     <div class="container text-center">
-      <div class="h5 no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-15" type="button">Exhibit Your Work</button>
+      <div class="h5 no-margin padding-bottom-20 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
+      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
     </div>
-  </div>-->
+  </div>
   
-  <div id="exhibits" class="row padding-top-50 padding-bottom-60">
+  <!--<div id="exhibits" class="row padding-top-50 padding-bottom-60">
     <div class="h2 text-center no-margin padding-bottom-15">Art on Display</div>
     <div class="container text-center max-width-80">
       <div class="h5 no-margin-top">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
       <button data-target="#artModal" data-toggle="modal" class="btn btn-primary margin-top-15" type="button">Exhibit Your Work</button>
     </div>
-  </div>
+  </div>-->
   
   <!-- Modal -->
   <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
