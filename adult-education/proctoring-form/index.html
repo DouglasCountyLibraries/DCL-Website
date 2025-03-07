@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +45,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <style>
 .using-the-library-active {
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
+}
+.guideline-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.left-column, .right-column {
+	width: 47%;
+}
+
+@media (max-width: 700px) {
+.guideline-wrapper {
+	flex-direction: column;
+}
+.left-column, .right-column {
+	width: 100%;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -244,15 +261,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <div class="row padding-bottom-80">
     <div class="container">
       <h1 class="text-center no-margin-top">Guidelines:</h1>
-      <ul>
-        <div class="col-md-6">
+      <ul class="guideline-wrapper">
+        <div class="left-column">
           <li>Proctoring services are provided by appointment only. We do not offer walk-in or same day testing.</li>
           <li>We are unable to provide continuous monitoring of testing. Please check your school or institution's monitoring requirements before completing a proctoring request.</li>
           <li>We must receive written confirmation of acceptance of our guidelines from your school/institution or receive proctor approval from your institution.</li>
           <li>We must receive exam materials 48 hours in advance of a testing appointment.</li>
           <li>The proctor will provide a computer for any online testing. To ensure access to the exam, please bring your login credentials to your appointment.</li>
         </div>
-        <div class="col-md-6">
+        <div class="right-column">
           <li>Secure storage is not available for personal items. Please do not bring a backpack, purse, bag, mobile phone or other smart devices to your testing appointment.</li>
           <li>Please bring a current photo ID to each exam appointment.</li>
           <li>We can scan/email completed exam materials to your school or testing institution. Students are responsible for all costs for returning exams by mail.</li>
@@ -346,4 +363,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
