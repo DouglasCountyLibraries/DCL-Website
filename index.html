@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,52 +52,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
 	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-/* storybook holiday */ 
-.sbh-container {
+/* authors */ 
+.authors-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
 	margin: 0 auto;
 }
-.sbh-wrapper {
+.authors-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
 }
-.sbh-image {
-	background: #f8dbc7 url("pig-spider-large.webp") 57% 100% no-repeat;
+.authors-image {
+	background: #444;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	position: relative;
 }
-.sbh-info {
-	background: #f8dbc7;
+.authors-info {
+	background: #f6c56b url("book-covers.jpg") bottom center no-repeat;
 	color: #000;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
-	padding: 15px;
+	padding: 0;
 	font-size: 22px;
 	text-align: center;
 	justify-content: center;
 }
-.sbh-heading-one {
+.authors-heading-one {
 	color: #000;
 	font-size: 30px;
 	font-weight: 500;
 	line-height: 1;
 	margin: 5px 0 10px;
 }
-.sbh-heading-two {
+.authors-heading-two {
 	font-size: 20px;
 }
-.sbh-content {
+.authors-content {
 	max-width: 680px;
 	margin: 0 auto;
+	padding: 0 15px 80px;
 }
-/* retro reads & top checkouts */
+/* retro reads & gardening */
 	
 .icon-font.fa-sharp.fa-regular.fa-pen-to-square {
 	font-size: 80px;
@@ -106,13 +107,13 @@ width: calc(100% * 0.5);
 	padding-bottom: 30px;
 	color: #000;
 }
-.retro-checkouts-container {
+.retro-gardening-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 400px;
 	margin: 30px auto 0 auto;
 }
-.retro-checkouts-wrapper {
+.retro-gardening-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
@@ -139,7 +140,7 @@ width: calc(100% * 0.5);
 	margin: 0 0 10px;
 	font-weight: 500;
 }
-.checkouts-wrapper {
+.gardening-wrapper {
 	display: flex;
 	background: #a5b696;
 width: calc(100% * 0.5);
@@ -147,27 +148,27 @@ width: calc(100% * 0.5);
 	flex-direction: column;
 	padding: 80px 15px 60px;
 }
-.checkouts-content {
+.gardening-content {
 	margin: 0 auto;
 	color: #000;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 	max-width: 650px;
 }
-.checkouts-heading-one {
+.gardening-heading-one {
 	font-size: 30px;
 	line-height: 1;
 	margin: 0 0 10px;
 	font-weight: 500;
 }
-/* e&h promo & authors */
-.eh-authors-container {
+/* e&h promo & theatre */
+.eh-theatre-container {
 	display: flex;
 	max-width: 1440px;
 	min-height: 640px;
 	margin: 30px auto 0 auto;
 }
-.eh-authors-wrapper {
+.eh-theatre-wrapper {
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
@@ -196,17 +197,17 @@ width: calc(100% * 0.5);
 	margin: 0 0 10px;
 	font-weight: 500;
 }
-.authors-wrapper {
+.theatre-wrapper {
 	background: #8dc6d0;
 width: calc(100% * 0.5);
 	display: flex;
 	flex-direction: column;
 	padding: 80px 15px 30px;
 }
-.authors-wrapper img {
+.theatre-wrapper img {
 	border-radius: 50%;
 }
-.authors-content {
+.theatre-content {
 	margin: 0 auto;
 	color: #000;
 	padding: 30px 0 35px;
@@ -214,104 +215,100 @@ width: calc(100% * 0.5);
 	text-align: center;
 	max-width: 650px;
 }
-.authors-heading-one {
+.theatre-heading-one {
 	font-size: 30px;
 	line-height: 1;
 	margin: 0 0 10px;
 	font-weight: 500;
 }
-#words {
-	font-size: 26px;
-	color: #333;
-	text-align: center;
-	font-style: italic;
-	display: block;
-	max-width: 150px;
+/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
+
+.slideshow-image.main {
+	min-height: 640px;
+}
+#slideshow {
 	position: relative;
-	left: 18%;
-	top: -5%;
-	text-transform: uppercase;
-	font-weight: 500;
-}
-#words:after {
-	content: "";
-	animation: spin 5s linear infinite;
-}
-@keyframes spin {
-0% {
-content:"Delightful!";
-}
-33% {
-content:"Terrific!";
-}
-66% {
-content:"Radiant!";
-}
-100% {
-content:"Delightful!";
-}
-}
-.spider {
-	animation: swing 4s infinite both;
+	overflow: hidden;
+	padding-bottom: 0%;
+	width: 100%;
+} /* (img px height / img px width x 100) = padding-bottom % */
+#slideshow div {
 	position: absolute;
-	top: 0;
-	right: 22%;
+	z-index: 2;
+	width: 105%;
+	height: 105%;
+	top: -5%;
+	left: -5%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+	-webkit-transition: opacity 3s, -webkit-transform 8s;
+	transition: opacity 3s, transform 8s;
 }
-@keyframes swing {
-0%, 100% {
-transform: translateX(0%);
-transform-origin: 50% 50%;
+#slideshow div {
+	transform-origin: top right;
 }
-15% {
-transform: translateX(-15px) rotate(6deg);
+#slideshow div:nth-of-type(2n+1) {
+	transform-origin: top left;
 }
-30% {
-transform: translateX(10px) rotate(-6deg);
+#slideshow div:nth-of-type(3n+1) {
+	transform-origin: top center;
 }
-45% {
-transform: translateX(-10px) rotate(3.6deg);
+#slideshow div:nth-of-type(4n+1) {
+	transform-origin: top right;
 }
-60% {
-transform: translateX(9px) rotate(-2.4deg);
+#slideshow div:nth-of-type(5n+1) {
+	transform-origin: center center;
 }
-75% {
-transform: translateX(-6px) rotate(1.2deg);
+#slideshow div:nth-of-type(6n+1) {
+	transform-origin: center left;
 }
+#slideshow div:nth-of-type(7n+1) {
+	transform-origin: top bottom;
+}
+#slideshow div:nth-of-type(8n+1) {
+	transform-origin: center right;
+}
+#slideshow div:nth-of-type(9n+1) {
+	transform-origin: center center;
+}
+#slideshow div:nth-of-type(10n+1) {
+	transform-origin: top left;
+}
+#slideshow div:nth-of-type(11n+1) {
+	transform-origin: top center;
+}
+#slideshow div:nth-of-type(12n+1) {
+	transform-origin: top left;
+}
+#slideshow .fx, #slideshow .fx1 {
+	transform: scale(1.1) translate(1.5%);
+	opacity: 1
 }
 
 @media (max-width: 950px) {
-.eh-authors-container, .sbh-container, .retro-checkouts-container {
+.eh-theatre-container, .retro-gardening-container, .authors-container, .theatre-container {
 	max-width: 720px;
 }
-.eh-authors-wrapper, .sbh-wrapper, .retro-checkouts-wrapper {
+.eh-theatre-wrapper, .retro-gardening-wrapper, .authors-wrapper, .theatre-wrapper {
 	flex-direction: column;
 }
-.eh-wrapper, .authors-wrapper, .sbh-info, .sbh-image, .sbh-content, .retro-wrapper, .checkouts-wrapper {
+.eh-wrapper, .theatre-wrapper, .retro-wrapper, .gardening-wrapper, .authors-info, .authors-image, .authors-content {
 	width: 100%;
 }
-.sbh-image {
+.authors-image {
 	order: 1;
-	min-height: 600px;
 }
-.sbh-info {
+.authors-info {
 	order: 2;
-	padding: 40px 15px 15px;
+	padding: 40px 0 200px;
 }
-.authors-wrapper, .checkouts-wrapper {
+.theatre-wrapper, .gardening-wrapper {
 	margin-top: 30px;
 }
-.retro-wrapper, .checkouts-wrapper {
+.retro-wrapper, .gardening-wrapper {
 	padding: 60px 15px 80px;
-}
-}
-
-@media (max-width: 550px) {
-.sbh-image {
-	background: #f8dbc7 url("pig-spider-small.webp") 90% 100% no-repeat;
-}
-#words {
-	left: 15%;
-	top: 1%;
 }
 }
 </style>
@@ -504,26 +501,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </div>
   <!-- InstanceBeginEditable name="Content" -->
   <div class="row background-row">
-  <div class="sbh-container">
-    <div class="sbh-wrapper">
-      <div class="sbh-image">
-        <div class="spider"><img src="spider.png" alt=""></div>
-        <div id="words"></div>
-      </div>
-      <div class="sbh-info">
-        <div class="sbh-content">
-          <div>Join us for A Storybook Holiday:</div>
-          <div class="sbh-heading-one">Charlotte’s Garden Party</div>
-          <div class="sbh-heading-two">
-            <div>Sunday, April&nbsp;6</div>
+  <div class="authors-container">
+    <div class="authors-wrapper">
+      <div class="authors-info">
+        <div class="authors-content">
+          <div class="authors-heading-one">Must-See Authors!</div>
+          <div class="authors-heading-two">
+            <div>Revisit an iconic decade: '80s Rewind with <a class="black text-underline text-nowrap" href="featured-events/">Andrew McCarthy, April&nbsp;19</a>.
+              <div>
+                <div style="font-size: 18px; padding: 5px 0 0;">Check out <a class="black text-underline" href="featured-events/#author-events">more author events</a> for exciting book talks and signings!</div>
+              </div>
+            </div>
           </div>
-          <div class="padding-top-5 padding-bottom-30"><a class="black text-underline" href="storybook-holiday/">Get Tickets</a></div>
+        </div>
+      </div>
+      <div class="authors-image">
+        <div id="slideshow" class="slideshow-image main"> 
+          <!-- define each background-image in CSS -->
+          <div class="random-slide" style="background-image: url('one.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(1) -->
+          <div class="random-slide" style="background-image: url('two.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(2) -->
+          
+          <div class="random-slide" style="background-image: url('three.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(3) -->
+          
+          <div class="random-slide" style="background-image: url('four.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(4) -->
+          
+          <div class="random-slide" style="background-image: url('five.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(5) -->
+          
+          <div class="random-slide" style="background-image: url('six.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(6) -->
+          
+          <div class="random-slide" style="background-image: url('seven.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(7) -->
+          
+          <div class="random-slide" style="background-image: url('eight.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(8) -->
+          
+          <div class="random-slide" style="background-image: url('nine.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(9) -->
+          
+          <div class="random-slide" style="background-image: url('ten.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(10) -->
+          <div class="random-slide" style="background-image: url('eleven.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(11) -->
+          <div class="random-slide" style="background-image: url('twelve.jpg')"></div>
+          <!-- #slideshow div:nth-of-type(12) --> 
+          
         </div>
       </div>
     </div>
   </div>
-  <div class="retro-checkouts-container">
-    <div class="retro-checkouts-wrapper">
+  <div class="retro-gardening-container">
+    <div class="retro-gardening-wrapper">
       <div class="retro-wrapper">
         <div class="retro-content">
           <div><i class="icon-font fa-solid fa-computer-classic"></i></div>
@@ -531,17 +564,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <div>Have a blast in the past! <a class="black text-underline" href="https://dcl.bibliocommons.com/list/share/692278051_dcladults/2707627547">Check these out</a>.</div>
         </div>
       </div>
-      <div class="checkouts-wrapper">
-        <div class="checkouts-content">
-          <div><i class="icon-font fa-sharp fa-regular fa-star"></i></div>
-          <div class="checkouts-heading-one">Top Checkouts of 2024</div>
-          <div><a class="black text-underline" href="top-checkouts/">These titles</a> were all the buzz last year.</div>
+      <div class="gardening-wrapper">
+        <div class="gardening-content">
+          <div><i class="icon-font fa-solid fa-trillium"></i></div>
+          <div class="gardening-heading-one">Spring Gardening</div>
+          <div>Expert tips for seed starting, container gardening, attracting pollinators, and more from a CSU Master Gardener. <a class="black text-underline" href="https://go.dcl.org/events?term=spring+gardening&n=3&r=months">Get&nbsp;Growing</a>!</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="eh-authors-container">
-  <div class="eh-authors-wrapper">
+  <div class="eh-theatre-container">
+  <div class="eh-theatre-wrapper">
     <div class="eh-wrapper">
       <div id="eh-box"></div>
       <div class="eh-content">
@@ -550,14 +583,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <div class="padding-top-5"><a class="black text-underline" href="birthday-parties/">Learn More</a></div>
       </div>
     </div>
-    <div class="authors-wrapper">
-      <div id="authors-box"></div>
-      <div class="authors-content">
-        <div class="authors-heading-one">Must-See Authors!</div>
-        <div>Revisit an iconic decade: '80s Rewind with <a class="black text-underline text-nowrap" href="featured-events/">Andrew McCarthy, April 19</a>.
-          <div>
-            <div style="font-size: 18px; padding-top: 5px;">Check out <a class="black text-underline" href="featured-events/#author-events">more author events</a> for exciting book talks and signings!</div>
-          </div>
+    <div class="theatre-wrapper">
+      <div id="theatre-box"></div>
+      <div class="theatre-content">
+        <div class="theatre-heading-one">Readers' Theatre: Charlotte’s Web</div>
+        <div><a class="black text-underline" href="https://go.dcl.org/events?term=readers%27+theatre&n=3&r=months">Join us for a lively performance</a> and themed crafts on the Aloha Plaza East, sponsored by Aloha Fund.
+          <div> </div>
         </div>
       </div>
     </div>
@@ -565,8 +596,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   <script>
     var images = ['eh-one.jpg', 'eh-two.jpg', 'eh-three.jpg', 'eh-four.jpg', 'eh-five.jpg'];
     $('<img alt="Birthday Party" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#eh-box');
-	 var images = ['authors-one.jpg', 'authors-two.jpg', 'authors-three.jpg', 'authors-four.jpg', 'authors-five.jpg'];
-    $('<img alt="Must See Authors" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#authors-box');
+	 var images = ['web-one.jpg', 'web-two.jpg', 'web-three.jpg'];
+    $('<img alt="Theatre Performance" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#theatre-box');
 </script> 
   <!-- InstanceEndEditable --> </div>
 <div class="row no-margin bg-gray-10">
@@ -717,4 +748,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
