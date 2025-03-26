@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -335,7 +336,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="materials-delivery" class="photo-box-item">
         <div id="photo-box-one"></div>
         <div class="h3 text-center"><a href="../materials-request/" target="_blank">Materials Delivery</a></div>
-        <div>Residents in participating communities may request book delivery. DCL also provides homebound delivery for <a class="text-center" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="To find out if you qualify, or to volunteer as a Homebound Delivery driver, call us at (303) 791-7323 and ask for the Volunteer Services Coordinator at your home library.">qualified cardholders</a> who are unable to visit the library due to illness or disability.</div>
+        <div>Residents in participating communities may request book delivery. DCL also provides homebound delivery for <a class="text-center" data-placement="top" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="To find out if you qualify, or to volunteer as a Homebound Delivery driver, call us at (303) 791-7323 and ask for the Volunteer Services Coordinator at your home library." aria-describedby="popover1">qualified cardholders</a>
+          <div id="popover1" class="sr-only" role="tooltip"> Popover: To find out if you qualify, or to volunteer as a Homebound Delivery driver, call us at (303) 791-7323 and ask for the Volunteer Services Coordinator at your home library. </div>
+          who are unable to visit the library due to illness or disability.</div>
       </div>
       <div id="connect" class="photo-box-item">
         <div id="photo-box-two"></div>
@@ -496,9 +499,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="popover"]').on('focus', function () {
+        $(this).popover('show');
+    }).on('blur', function () {
+        $(this).popover('hide');
+    });
+});
  </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
@@ -559,4 +567,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
