@@ -516,7 +516,7 @@ ul.branch-hours {
       <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
       <a href="https://go.dcl.org/events?et=storytime&l=highlands+ranch&r=months&n=1" class="text-uppercase">Highlands Ranch Calendar »</a>
       <div class="widget-wrapper">
-        <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3851&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
+        <iframe id="branch-events" title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3851&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
       </div>
     </div>
     <div id="play-area" class="row bg-gray-5">
@@ -655,23 +655,16 @@ ul.branch-hours {
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-let hasScrolled = false;
-document.addEventListener("DOMContentLoaded", function() {
-    const iframe = document.querySelector('iframe'); 
-    iframe.addEventListener('load', function() {
-        handleHashScroll();
-    });
-    handleHashScroll();
-});
-function handleHashScroll() {
-    if (!hasScrolled && window.location.hash) {
-        const target = document.getElementById(window.location.hash.substring(1));
-        if (target) {
-            target.scrollIntoView();
-            hasScrolled = true;
-        }
+function scrollToAnchor() {
+    let anchor = document.getElementById('play-area');
+    if (anchor) {
+        anchor.scrollIntoView();
     }
 }
+let iframe = document.getElementById('branch-events');
+iframe.onload = function() {
+    scrollToAnchor();
+};
 </script> 
 <script>
 $(function () {
