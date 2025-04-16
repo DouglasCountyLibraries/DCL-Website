@@ -146,7 +146,7 @@ h1.vinila {
 	max-width: 900px;
 	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 40px;/* margin-bottom: 50px; */
+	padding-bottom: 15px;/* margin-bottom: 50px; */
 }
 .details-quotation {
 	font-size: 20px;
@@ -159,7 +159,7 @@ h1.vinila {
 	margin: 0 auto;
 }
 .tickets-item {
-	padding: 15px 0 20px;
+	padding: 15px 0 25px;
 }
 .tickets-item h4 {
 	text-transform: uppercase;
@@ -189,6 +189,45 @@ h1.vinila {
 	box-shadow: 0px 10px 40px rgba(0,0,0, .3);
 	transition: all .4s ease-out;
 	border-radius: 2px;
+}
+.logos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0 15px 20px;
+}
+.logos a {
+    opacity: .6;
+    transition: all .4s ease-out;
+}
+.logos a:hover, .logos a:focus {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all .4s ease-out;
+}
+.sponsors {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    height: 100px;
+    width: 250px;
+    font-size: 24px;
+    text-transform: uppercase;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    line-height: 24px;
+}
+.sponsors a {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+.logos {
+    max-width: 750px;
+    margin: 0 auto;
+}
 }
 
 @media (max-width: 800px) {
@@ -470,12 +509,12 @@ h1.vinila {
                   </div>
                 </div>
               </div>
-              <div class="padding-bottom-5"><i>Event proceeds benefit the <a class="black text-underline" href="../foundation/">Douglas County Libraries Foundation</a>.</i></div>
-              <div><i><a href="#sponsors" class="black text-underline" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</i></div>
+              <div class="padding-bottom-15">Event proceeds benefit the <a class="black text-underline" href="../foundation/">Douglas County Libraries Foundation</a>.</div>
+              <div><i>Special thanks to our presenting sponsor Fransen Pittman. <a href="#sponsors" class="black text-underline" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</i></div>
             </div>
           </div>
         </div>
-      </div>
+      </div><div class="logos"> <a href="https://fransenpittman.com/" target="_blank"><img class="" src="sponsors/fransen-pittman.png" alt="Fransen Pittman Construction"></a> <!--<a href="https://hbstrash.com/" target="_blank"><img class="" src="sponsors/hbs-trash-services-updated.png" alt="HBS Trash Services"></a> <a href="https://www.midwesttape.com/" target="_blank"><img class="" src="sponsors/midwest-tape.png" alt="Midwest Tape"></a><a href="https://www.parksidepromotions.com/" target="_blank"><img class="" src="sponsors/parkside-promotions.png" alt="Midwest Tape"></a><a href="https://sterlingranchcolorado.com/" target="_blank"><img class="" src="sponsors/sterling-ranch.png" alt="Sterling Ranch"></a>--></div>
       <div><img class="center-block img-responsive" src="fete-background-bottom.webp" alt=""></div>
     </div>
   </div>
