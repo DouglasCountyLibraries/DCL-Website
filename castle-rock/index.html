@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,10 +57,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .sponsor-container {
 	background: #f5f5f5;
-	max-width: 1610px;
-	margin: 0 auto;
+	max-width: 1580px;
+	margin: 5px auto 0 auto;
 	padding: 15px;
-	margin-top: 15px;
 }
 .sponsor-wrapper {
 	display: flex;
@@ -71,11 +71,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	margin: 10px 20px;
 	width: 220px;
 }
+.sponsor-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: .9rem;
+}
 .sponsor img {
 	border-radius: 50%;
 	padding: 5px;
-	height: 120px;
-	width: 120px;
+	height: 100px;
+	width: 100px;
 }
 .branch-hours-phone {
 	display: flex;
@@ -96,6 +102,90 @@ ul.branch-hours {
 	text-transform: uppercase;
 	padding: 0 15px;
 	white-space: nowrap;
+}
+/* slideshow */
+	
+.slideshow-container {
+	display: flex;
+	max-width: 1610px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.slideshow-wrapper {
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+}
+.slideshow-image {
+	background: #fff;
+width: calc(100% * 0.65);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.slideshow-info {
+	background: #f5f5f5;
+	color: #000;
+width: calc(100% * 0.35);
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	justify-content: center;
+	margin-left: -40px;
+}
+.slideshow-arrow {
+	background: url("../shared-assets/images/slideshow-arrow-left.png") 100% 48% no-repeat;
+	width: 40px;
+	position: relative;
+	z-index: 100;
+	left: -40px;
+}
+.slideshow-content {
+	padding: 0 30px 20px;
+}
+.slideshow-pic {
+	min-height: 600px;
+	position: relative;
+}
+.pic-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+figure {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	/*animation*/
+	animation: slideShow 54s ease-out infinite 0s;
+}
+.pic-2 {
+	transform-origin: bottom right;
+}
+.pic-3 {
+	transform-origin: top left;
+}
+.pic-4 {
+	transform-origin: top right;
+}
+.pic-5 {
+	transform-origin: bottom left;
+}
+.pic-6 {
+	transform-origin: center center;
+}
+.pic-7 {
+	transform-origin: bottom right;
+}
+.pic-8 {
+	transform-origin: top left;
+}
+.pic-9 {
+	transform-origin: bottom left;
 }
 .flickity-container {
 	max-width: 1610px;
@@ -137,6 +227,9 @@ ul.branch-hours {
 	flex-basis: 60%;
 	align-content: center;
 }
+h2.featured-heading {
+	margin: 0 15px 5px;
+}
 .location-events {
 	padding: 50px 0 40px;
 }
@@ -145,88 +238,26 @@ ul.branch-hours {
 	margin: 0 auto;
 	padding-top: 5px;
 }
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-.slideshow-row {
-	background: #f5f5f5;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 1610px;
-	margin: 0 auto;
+	/* keyframes*/
+@keyframes slideShow {
+0% {
+opacity: 0;
+transform:scale(1);
 }
-.slideshow-content {
-	flex: 1 1 36%;
-	padding: 0 30px;
+2% {
+opacity: 1
 }
-.slideshow-content h4 {
-	font-size: 20px;
-	color: #333;
+15% {
+opacity: 1;
 }
-.slideshow-image.main {
-	min-height: 600px;
+18% {
+opacity: 0;
+transform:scale(1.1);
 }
-#slideshow {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 0%;
-	width: 67%;
-	border-right: 15px solid #fff;
-} /* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-	position: absolute;
-	z-index: 2;
-	width: 105%;
-	height: 105%;
-	top: -5%;
-	left: -5%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 0;
-	-webkit-transition: opacity 3s, -webkit-transform 8s;
-	transition: opacity 3s, transform 8s;
+100% {
+opacity: 0;
+transform:scale(1);
 }
-#slideshow div:nth-of-type(9n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-#slideshow div {
-	-webkit-transform-origin: bottom right;
-	transform-origin: bottom right;
-}
-#slideshow div:nth-of-type(2n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-#slideshow div:nth-of-type(3n+1) {
-	-webkit-transform-origin: bottom left;
-	transform-origin: bottom left;
-}
-#slideshow div:nth-of-type(4n+1) {
-	-webkit-transform-origin: top right;
-	transform-origin: top right;
-}
-#slideshow div:nth-of-type(5n+1) {
-	-webkit-transform-origin: center center;
-	transform-origin: center center;
-}
-#slideshow div:nth-of-type(6n+1) {
-	-webkit-transform-origin: bottom right;
-	transform-origin: bottom right;
-}
-#slideshow div:nth-of-type(7n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-/* slide one */
-#slideshow div:nth-of-type(8n+1) {
-	-webkit-transform-origin: top right;
-	transform-origin: top right;
-}
-#slideshow .fx, #slideshow .fx1 {
-	-webkit-transform: scale(1.1) translate(1.5%);
-	transform: scale(1.1) translate(1.5%);
-	opacity: 1
 }
 
 @media (max-width: 1210px) {
@@ -236,9 +267,6 @@ ul.branch-hours {
 }
 
 @media (max-width: 1150px) {
-.slideshow-image.main {
-	min-height: 400px;
-}
 .page-nav {
 	max-width: 800px;
 	margin: 0 auto;
@@ -255,16 +283,36 @@ ul.branch-hours {
 }
 
 @media (max-width: 925px) {
-.slideshow-row, .art-item-wrapper {
+.slideshow-wrapper, .art-item-wrapper {
 	flex-direction: column;
 }
-.slideshow-content {
-	padding: 30px 20px 40px;
+.slideshow-info {
+	margin: -40px 0 0;
 	text-align: center;
 }
-#slideshow {
+.slideshow-content {
+	padding: 40px 15px 50px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.slideshow-arrow {
+	background: url("../shared-assets/images/slideshow-arrow-top.png") 50% 100% no-repeat;
 	width: 100%;
-	border-right: 0;
+	height: 40px;
+	z-index: 100;
+	top: -40px;
+	position: relative;
+	margin: 0 auto;
+	left: auto;
+}
+.slideshow-image, .slideshow-info {
+	width: 100%;
+}
+.sponsor-container {
+	background: #f5f5f5;
+	max-width: 1580px;
+	margin: 5px auto 0 auto;
+	padding: 40px 15px 50px;
 }
 .art-item {
 	text-align: center;
@@ -281,8 +329,14 @@ ul.branch-hours {
 }
 
 @media (max-width: 575px) {
-.slideshow-image.main {
+.slideshow-pic {
 	min-height: 300px;
+}
+.slideshow-arrow {
+	display: none;
+}
+.slideshow-info {
+	margin: 0;
 }
 .widget-wrapper {
 	width: auto;
@@ -481,174 +535,203 @@ ul.branch-hours {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
-    <div class="container text-center">
-      <h1 class="page-heading">Castle Rock</h1>
-      <div class="h3 text-uppercase no-margin">The Philip & Jerry Miller Library</div>
-      <div class="padding-bottom-15">
-        <div itemscope itemtype="http://schema.org/PostalAddress">
-          <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/3kDTE89mPGw" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></div>
-        </div>
-        <div class="branch-hours-phone">
-          <ul class="branch-hours">
-            <li>Mon-Thu:&nbsp;8AM-8PM</li>
-            <li>Fri:&nbsp;8AM-6PM</li>
-            <li>Sat-Sun:&nbsp;10-4PM</li>
-          </ul>
-          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row padding-bottom-30">
-    <div class="page-nav">
-      <div class="page-nav-item"><a href="../storytime/"><i class="pagenav-icon fas fa-comment fa-flip-horizontal"></i>Storytime</a></div>
-      <div class="page-nav-item"><a href="../reserve-a-space/"><i class="pagenav-icon fas fa-check-square"></i>Reserve a Space</a></div>
-      <div class="page-nav-item"><a href="https://go.dcl.org/events?et=storytime&l=castle+rock&r=months&n=1"><i class="pagenav-icon fas fa-calendar"></i>Castle Rock Calendar</a></div>
-      <div class="page-nav-item"><a href="../used-book-sales/"><i class="pagenav-icon fas fa-book"></i>Used Book Sales</a></div>
-    </div>
-  </div>
-  <div class="row slideshow-row">
-    <div id="slideshow" class="slideshow-image main"> 
-      <!-- define each background-image in CSS -->
-      <div style="background-image: url('slideshow/one.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(1) -->
-      <div class="random-slide" style="background-image: url('slideshow/two.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(2) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/three.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(3) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/four.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(4) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/five.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(5) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/six.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(6) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/seven.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(7) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/eight.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(8) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/nine.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(9) --> 
-    </div>
-    <div class="slideshow-content">
-      <div class="h5 no-margin">Ready, Set, Read!</div>
-      <div class="padding-bottom-10"><a href="https://go.dcl.org/event/13101117">Join us with your little ones</a> Thursday, May&nbsp;15, at&nbsp;9AM for early literacy activities on the Aloha Plaza East, sponsored by Aloha Fund.</div>
-      <div class="padding-bottom-10">This new library houses the DCL <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a>, offering customers specialized help with historical, archival and genealogical projects&mdash;and where you can learn about the library's namesake and benefactors, <a href="https://archives.dcl.org/digital/custom/miller" target="_blank">Philip and Jerry Miller</a>.</div>
-      <div><i>Now offering an all-ages Storytime every Wednesday at 4:30PM at our Castle Rock location.</i></div>
-    </div>
-  </div>
-  <div id ="sponsors" class="row">
-    <div class="sponsor-container">
-      <div class="h2 text-center no-margin">Our Valued Sponsors</div>
+    <div class="row border-top">
       <div class="container text-center">
-        <div class="h5 no-margin">Special thanks to these partnering sponsors.</div>
-        <div class="sponsor-wrapper">
-          <div class="sponsor">
-            <div><img src="aloha-fund-logo.jpg" alt="Aloha Fund"></div>
-            <div>Aloha Fund:<br>
-              Outdoor Plazas East and West</div>
+        <h1 class="page-heading">Castle Rock</h1>
+        <div class="h3 text-uppercase no-margin">The Philip & Jerry Miller Library</div>
+        <div class="padding-bottom-15">
+          <div itemscope itemtype="http://schema.org/PostalAddress">
+            <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/3kDTE89mPGw" target="_blank"><span itemprop="streetAddress">100&nbsp;S.&nbsp;Wilcox&nbsp;Street</span>, <span itemprop="addressLocality">Castle&nbsp;Rock</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80104</span></a></div>
           </div>
-          <div class="sponsor">
-            <div><img src="kiwanis-clubs-logo.jpg" alt="Kiwanis Clubs of Castle Rock"></div>
-            <div>Kiwanis Clubs of Castle Rock:<br>
-              Flagpole</div>
-          </div>
-          <div class="sponsor">
-            <div><img src="rotary-club-logo.jpg" alt="Rotary Club of Castle Rock"></div>
-            <div>Rotary Club of Castle Rock:<br>
-              "The Ranch" Playscape</div>
-          </div>
-          <div class="sponsor">
-            <div><img src="sjostrom-family.jpg" alt="Rotary Club of Castle Rock"></div>
-            <div>The Sjostrom Family:<br>
-              Sjostrom History Lounge reading room</div>
+          <div class="branch-hours-phone">
+            <ul class="branch-hours">
+              <li>Mon-Thu:&nbsp;8AM-8PM</li>
+              <li>Fri:&nbsp;8AM-6PM</li>
+              <li>Sat-Sun:&nbsp;10-4PM</li>
+            </ul>
+            <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div id="events" class="row text-center location-events">
-    <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
-    <a href="https://go.dcl.org/events?et=storytime&l=castle+rock&r=months&n=1" class="text-uppercase">Castle Rock Calendar »</a>
-    <div class="widget-wrapper">
-      <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3829&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
-    </div>
-  </div>
-  <div id="play-area" class="row bg-gray-5">
-    <div class="container padding-top-50 padding-bottom-20 text-center">
-      <div class="h4 no-margin">Kid-friendly Fun:</div>
-      <div class="h2 no-margin">The Ranch</div>
-      <div class="margin-top-5">Sponsored by Rotary Club of Castle Rock</div>
-    </div>
-  </div>
-  <div class="row bg-gray-5">
-    <div class="flickity-container">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+    <div class="row padding-bottom-30">
+      <div class="page-nav">
+        <div class="page-nav-item"><a href="../storytime/"><i class="pagenav-icon fas fa-comment fa-flip-horizontal"></i>Storytime</a></div>
+        <div class="page-nav-item"><a href="../reserve-a-space/"><i class="pagenav-icon fas fa-check-square"></i>Reserve a Space</a></div>
+        <div class="page-nav-item"><a href="https://go.dcl.org/events?et=storytime&l=castle+rock&r=months&n=1"><i class="pagenav-icon fas fa-calendar"></i>Castle Rock Calendar</a></div>
+        <div class="page-nav-item"><a href="../used-book-sales/"><i class="pagenav-icon fas fa-book"></i>Used Book Sales</a></div>
       </div>
     </div>
-  </div>
-  <div class="row bg-gray-5">
-    <div class="container text-center padding-bottom-60">
-      <div class="max-width-80">Rustle up some fun at The Ranch, where young cowpokes can put their imagination to work tending horses and animals, baling hay, gardening, and more, using play materials and equipment. With a standalone stable, tractor, and mini grain silo, the spirit of the West comes to life in this interactive play space.</div>
-    </div>
-  </div>
-  <div id="exhibits" class="row padding-top-50">
-    <div class="h2 text-center no-margin padding-bottom-30">Art on Display</div>
-    <div class="art-item-wrapper">
-      <div class="art-item"><img class="img-responsive image-center" alt="Katharina Mace Painting" src="katharina-mace.jpg"> </div>
-      <div class="art-item">
-        <div class="h2 no-margin text-uppercase">Katharina Mace</div>
-        <div class="h3 margin-top-5 no-margin-bottom">Painting</div>
-        <div class="h4 margin-top-5">March 1-April 30</div>
-        <div>Katharina Mace, a Colorado-based children's book illustrator, creates whimsical artwork that captures childhood joy. A Rocky Mountain College of Art and Design graduate, she uses traditional media to tell hopeful stories. When not painting imaginative scenes, she explores bookstores and travels, drawing inspiration from life's diverse experiences.</div>
+    <section>
+      <div class="row">
+        <div class="slideshow-container">
+          <div class="slideshow-wrapper">
+            <div class="slideshow-image">
+              <div class="slideshow-pic">
+                <div class="pic-wrapper" id="pic-wrapper">
+                  <figure id="fig1"></figure>
+                  <figure id="fig2"></figure>
+                  <figure id="fig3"></figure>
+                  <figure id="fig4"></figure>
+                  <figure id="fig5"></figure>
+                  <figure id="fig6"></figure>
+                  <figure id="fig7"></figure>
+                  <figure id="fig8"></figure>
+                  <figure id="fig9"></figure>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-arrow"></div>
+            <div class="slideshow-info">
+              <div class="slideshow-content">
+                <h2 class="xsm-heading text-dark text-uppercase no-margin">Ready, Set, Read!</h2>
+                <div class="padding-bottom-10"><a href="https://go.dcl.org/event/13101117">Join us with your little ones</a> Thursday, May&nbsp;15, at&nbsp;9AM for early literacy activities on the Aloha Plaza East, sponsored by Aloha Fund.</div>
+                <div class="padding-bottom-10">This new library houses the <a href="https://archives.dcl.org/" target="_blank">DCL Archives & Local History</a>, offering customers specialized help with historical, archival and genealogical projects&mdash;and where you can learn about the library's namesake and benefactors, <a href="https://archives.dcl.org/digital/custom/miller" target="_blank">Philip and Jerry Miller</a>.</div>
+                <div class="padding-bottom-10"><i>Now offering an all-ages Storytime every Wednesday at 4:30PM at our Castle Rock location.</i></div>
+                <div class="h5 text-uppercase no-margin"><a href="../reserve-a-space/#host-your-event">Host It Here</a>!</div>
+                <div>We’ve got a space for your special occasion, with light-filled spaces, main floor event halls, two outdoor plazas, <a href="#" type="text" data-toggle="modal" data-target="#hih-modal">and more</a>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id ="sponsors">
+      <div class="sponsor-container">
+        <div class="h4 text-center no-margin">Our Valued Sponsors</div>
+        <div class="container text-center">
+          <div>Special thanks to these partnering sponsors.</div>
+          <div class="sponsor-wrapper">
+            <div class="sponsor">
+              <div><img src="aloha-fund-logo.jpg" alt="Aloha Fund"></div>
+              <div class="sponsor-title">Aloha Fund:<br>
+                Outdoor Plazas East and West</div>
+            </div>
+            <div class="sponsor">
+              <div><img src="kiwanis-clubs-logo.jpg" alt="Kiwanis Clubs of Castle Rock"></div>
+              <div class="sponsor-title">Kiwanis Clubs of Castle Rock:<br>
+                Flagpole</div>
+            </div>
+            <div class="sponsor">
+              <div><img src="rotary-club-logo.jpg" alt="Rotary Club of Castle Rock"></div>
+              <div class="sponsor-title">Rotary Club of Castle Rock:<br>
+                "The Ranch" Playscape</div>
+            </div>
+            <div class="sponsor">
+              <div><img src="sjostrom-family.jpg" alt="Rotary Club of Castle Rock"></div>
+              <div class="sponsor-title">The Sjostrom Family:<br>
+                Sjostrom History Lounge reading room</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row padding-top-30 padding-bottom-60">
-    <div class="container text-center">
-      <div class="h5 no-margin padding-bottom-20 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
-    </div>
-  </div>
-  
-  <!--<div id="exhibits" class="row padding-top-50 padding-bottom-60">
+    <section>
+      <div id="events" class="row text-center location-events">
+        <h2 class="featured-heading">Featured Branch Events</h2>
+        <a href="https://go.dcl.org/events?et=storytime&l=castle+rock&r=months&n=1" class="text-uppercase">Castle Rock Calendar »</a>
+        <div class="widget-wrapper">
+          <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3829&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="play-area" class="row bg-gray-5">
+        <div class="container padding-top-50 padding-bottom-20 text-center">
+          <div class="h6 text-uppercase no-margin">Kid-friendly Fun:</div>
+          <h2 class="no-margin">The Ranch</h2>
+          <div>Sponsored by Rotary Club of Castle Rock</div>
+        </div>
+      </div>
+      <div class="row bg-gray-5">
+        <div class="flickity-container">
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
+            <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-gray-5">
+        <div class="container text-center padding-bottom-60">
+          <div class="max-width-80">Rustle up some fun at The Ranch, where young cowpokes can put their imagination to work tending horses and animals, baling hay, gardening, and more, using play materials and equipment. With a standalone stable, tractor, and mini grain silo, the spirit of the West comes to life in this interactive play space.</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="exhibits" class="row padding-top-50">
+        <h2 class="text-center no-margin padding-bottom-30">Art on Display</h2>
+        <div class="art-item-wrapper">
+          <div class="art-item"><img class="img-responsive image-center" alt="Katharina Mace Painting" src="katharina-mace.jpg"> </div>
+          <div class="art-item">
+            <div class="h3 no-margin text-uppercase">Katharina Mace</div>
+            <div class="h4 no-margin">Painting</div>
+            <div class="h5 no-margin-top margin-bottom-5">March 1-April 30</div>
+            <div>Katharina Mace, a Colorado-based children's book illustrator, creates whimsical artwork that captures childhood joy. A Rocky Mountain College of Art and Design graduate, she uses traditional media to tell hopeful stories. When not painting imaginative scenes, she explores bookstores and travels, drawing inspiration from life's diverse experiences.</div>
+          </div>
+        </div>
+      </div>
+      <div class="row padding-top-30 padding-bottom-60">
+        <div class="container text-center">
+          <div class="h6 no-margin padding-bottom-20 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
+          <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
+        </div>
+      </div>
+      
+      <!--<div id="exhibits" class="row padding-top-50 padding-bottom-60">
     <div class="h2 text-center no-margin padding-bottom-15">Art on Display</div>
     <div class="container text-center max-width-80">
       <div class="h5 no-margin-top">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
       <button data-target="#artModal" data-toggle="modal" class="btn btn-primary margin-top-15" type="button">Exhibit Your Work</button>
     </div>
-  </div>--> 
-  
-  <!-- Modal -->
-  <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
-    <div role="document" class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-          <div id="artModalLabel" class="h3 modal-title text-center">Interested in Exhibiting Your Work?</div>
-        </div>
-        <div class="modal-body">
-          <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
+  </div>--> </section>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="hih-modal" aria-labelledby="hih-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="h3 no-margin text-center modal-title">Host it Here!</div>
+          </div>
+          <div class="modal-body padding-30">
+            <div class="padding-bottom-5">Our Castle Rock location offers versatile event spaces and popular features like:</div>
+            <ul>
+              <li>Ample natural light</li>
+              <li>Main floor event halls</li>
+              <li>Two outdoor plazas—Aloha Plaza West and Aloha Plaza East</li>
+              <li>Large parking lot</li>
+              <li>Convenient access to I-25</li>
+              <li>Located near downtown Castle Rock</li>
+              <li>Walkable to restaurants, ice cream shops, shopping, and more</li>
+              <li>Proximity to both Denver Tech Center and Colorado Springs</li>
+            </ul>
+            <div><i>Let us help you <a href="../reserve-a-space/#host-your-event">host an event</a> to remember!</i></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- InstanceEndEditable --> </div>
+    
+    <!-- Modal -->
+    <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+            <div id="artModalLabel" class="h3 modal-title text-center">Interested in Exhibiting Your Work?</div>
+          </div>
+          <div class="modal-body">
+            <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -717,31 +800,39 @@ $(function () {
 })
  </script> 
 <script>
-	var cards = $(".random-slide");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+document.addEventListener("DOMContentLoaded", function() {
+    var images = [
+        "slideshow/one.webp", // Fixed first image
+        "slideshow/two.webp",
+		"slideshow/three.webp",
+		"slideshow/four.webp",
+		"slideshow/five.webp",
+		"slideshow/six.webp",
+		"slideshow/seven.webp",
+		"slideshow/eight.webp",
+		"slideshow/nine.webp"
+    ];
+
+    // Separate the first image from the rest
+    var firstImage = images.shift();
+
+    // Shuffle the remaining images
+    for (var i = images.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
+    }
+
+    // Add the first image back to the beginning of the array
+    images.unshift(firstImage);
+
+    // Apply the images as background
+    var figures = document.querySelectorAll("figure");
+    figures.forEach(function(figure, index) {
+        figure.style.background = `url(${images[index]}) center center/cover`;
+        figure.className = `pic-${index + 1}`;
+        figure.style.animationDelay = `${index * 6}s`;
+    });
+});
 </script> 
 <script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
 <script>
@@ -820,4 +911,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
