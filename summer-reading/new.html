@@ -46,12 +46,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.min.css" integrity="sha256-R7F2N1AOmvTM5vdSjlUU+Uij6rwjyLuGezvu4lU+5cI=" crossorigin="anonymous" />
 <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 <style>
 @font-face {
-	font-family: 'Tan Nimbus';
-	src: url('https://www.dcl.org/shared-assets/web-fonts/tan-nimbus-webfont.woff2') format('woff2'), url('https://www.dcl.org/shared-assets/web-fonts/tan-nimbus-webfont.woff') format('woff');
+	font-family: 'Floridian';
+	src: url('https://www.dcl.org/shared-assets/web-fonts/floridian-webfont.woff2') format('woff2'), url('https://www.dcl.org/shared-assets/web-fonts/floridian-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -66,14 +65,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	max-width: 1920px;
 	margin: 0 auto;
 }
-h1.tan-nimbus {
-	font-family: 'Tan Nimbus', serif;
-	font-size: 80px;
+h1.floridian {
+	font-family: 'Floridian', serif;
 	margin: 0;
-	line-height: 91px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+}
+.fl-one {
+	font-size: 6rem;
+	color: #4f964e;
+	line-height: .8;
+}
+.fl-two {
+	font-size: 7rem;
+	text-transform: uppercase;
+	color: #4f964e;
+	white-space: nowrap;
+	line-height: .8;
+}
+.fl-three {
+	font-size: 3.6rem;
+	color: #2a6140;
+	white-space: nowrap;
+	line-height: 1.2;
 }
 .blue-font {
 	color: #134b94;
@@ -107,7 +119,7 @@ h1.tan-nimbus {
 	margin: 0 auto;
 }
 .custom-container.one {
-	padding: 70px 10px 300px;
+	padding: 40px 10px 300px;
 }
 .custom-container.two {
 	max-width: 925px;
@@ -120,19 +132,15 @@ h1.tan-nimbus {
 .custom-container.four {
 	padding: 70px 10px 90px;
 }
-.humming-bird-background {
-	background: url("humming-bird.png") 20% 95% no-repeat;
-}
 .intro-text {
-	padding: 5px 0 0;
 	text-align: center;
-	max-width: 925px;
+	max-width: 850px;
 	margin: 0 auto;
 }
 .link-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 15px 0;
+	padding: 15px 0 17px;
 	text-align: center;
 	font-size: 20px;
 	letter-spacing: 1px;
@@ -304,7 +312,7 @@ h1.tan-nimbus {
 }
 
 @media (max-width: 425px) {
-h1.tan-nimbus {
+h1.floridian {
 	font-size: 68px;
 	line-height: 85px;
 }
@@ -510,20 +518,20 @@ h1.tan-nimbus {
         <div class="background-one">
           <div class="custom-container one">
             <div class="text-center">
-              <div class="flock-heading">
-                <h1 class="tan-nimbus">Don't Bug Me, I'm Reading</h1>
-              </div>
-              <div class="humming-bird-background">
-                <h2>2025 Summer Fun for All Ages</h2>
-                <h3>Saturday, May 31-Thursday, July 31</h3>
-              </div>
+              <h1 class="floridian">
+                <div class="fl-one">Don't</div>
+                <div class="fl-two">Bug Me</div>
+                <div class="fl-three">I'm Reading</div>
+              </h1>
+              <h2 class="sm-heading margin-bottom-5 font-weight-500">2025 Summer Fun for All Ages</h2>
+              <h3 class="xsm-heading no-margin-top">Saturday, May 31-Thursday, July 31</h3>
             </div>
             <div class="intro-text">
-              <div class="large-text margin-bottom-5">Summer reading is abuzz with exciting activities, prizes, and giveaways.</div>
+              <div class="h5 no-margin-top margin-bottom-5 font-weight-500">Summer reading is abuzz with exciting activities, prizes, and giveaways.</div>
               <div>We’ve suggested 1,000 minutes of reading as a worthy goal, but if this challenge isn’t right for you or your family, feel free to create your own challenge. You can increase or decrease the number of minutes or set a goal for the number of books or pages you want to read. </div>
-              <div class="margin-top-5 margin-lg-100">You can also do the supplemental activities we suggest on <a href="#">the reading log</a>. We aren’t set on you reading 1,000 minutes, we just want you to read and have fun while doing it!</div>
+              <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a> </div>
+              <div class="text-center max-width-70">You can also do the supplemental activities we suggest on <a href="#">the reading log</a>. We aren’t set on you reading 1,000 minutes, we just want you to read and have fun while doing it!</div>
             </div>
-            <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a> </div>
             <div class="alt-link-wrapper">
               <div class="alt-link">
                 <div><img src="bird-one.jpg" alt=""></div>
@@ -543,59 +551,64 @@ h1.tan-nimbus {
             </div>
           </div>
         </div>
-        <div id="giveaways" class="background-two">
-          <div class="custom-container two text-center">
-            <h1 class="black text-uppercase parrot-heading">Bug Out of Town Giveaways</h1>
-            <div class="large-text">We’re giving away three $500 Southwest Airlines gift cards to participants who sign up to read. <a class="black text-underline" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register now</a> for Don’t Bug Me, I’m Reading for your chance to win!</div>
-            <div class="padding-top-30 padding-bottom-30"> <img src="southwest-gift-card.png" alt="Southwest Airlines Gift Card"> </div>
-            <div class="margin-lg-100">Everyone registered May 1-July 31 will be entered into the random prize drawings. Drawings will take place in early August. Winners will be notified individually and announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free.</div>
+        <section>
+          <div id="giveaways" class="background-two">
+            <div class="custom-container two text-center">
+              <h1 class="black text-uppercase parrot-heading">Bug Out of Town Giveaways</h1>
+              <div class="large-text">We’re giving away three $500 Southwest Airlines gift cards to participants who sign up to read. <a class="black text-underline" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register now</a> for Don’t Bug Me, I’m Reading for your chance to win!</div>
+              <div class="padding-top-30 padding-bottom-30"> <img src="southwest-gift-card.png" alt="Southwest Airlines Gift Card"> </div>
+              <div class="margin-lg-100">Everyone registered May 1-July 31 will be entered into the random prize drawings. Drawings will take place in early August. Winners will be notified individually and announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free.</div>
+            </div>
           </div>
-        </div>
-        <div id="prizes" class="background-three">
-          <div class="custom-container three">
-            <h1 class="white text-uppercase text-center">Prizes</h1>
-            <div class="large-text white text-center">Prizes available June 2-August 7, or while supplies last.</div>
-            <div class="prize-wrapper">
-              <div class="prize-item">
-                <h4 class="white no-margin-top">Sign-Up Prizes</h4>
-                <div>Visit any DCL location to pick up your Summer Reading sign-up prizes, while supplies last.</div>
-                <ul class="margin-top-10">
-                  <li>Babies 0-3: Bubbles</li>
-                  <li>Kids 4-12: Bug Viewer</li>
-                  <li>Teens & Adults: One Free Item from Second Chapter Bookstore</li>
-                  <li>Registered participants are also eligible for BOGO tickets to select <a class="white text-underline" href="https://rapids.spinzo.com/?group=summer-reading-program--wb7a" target="_blank">Colorado Rapids games</a>.</li>
-                </ul>
-              </div>
-              <div class="prize-item">
-                <h4 class="white no-margin-top">Finishing Prizes</h4>
-                <div>Collect a prize when you complete your challenge, or just for having a fun summer!</div>
-                <ul class="margin-top-10">
-                  <li>Babies & Kids (Ages 0-12): One Free New Book</li>
-                  <li>Teens & Adults: Reusable Canvas Tote</li>
-                </ul>
+        </section>
+        <section>
+          <div id="prizes" class="background-three">
+            <div class="custom-container three">
+              <h1 class="white text-uppercase text-center">Prizes</h1>
+              <div class="large-text white text-center">Prizes available June 2-August 7, or while supplies last.</div>
+              <div class="prize-wrapper">
+                <div class="prize-item">
+                  <h4 class="white no-margin-top">Sign-Up Prizes</h4>
+                  <div>Visit any DCL location to pick up your Summer Reading sign-up prizes, while supplies last.</div>
+                  <ul class="margin-top-10">
+                    <li>Babies 0-3: Bubbles</li>
+                    <li>Kids 4-12: Bug Viewer</li>
+                    <li>Teens & Adults: One Free Item from Second Chapter Bookstore</li>
+                    <li>Registered participants are also eligible for BOGO tickets to select <a class="white text-underline" href="https://rapids.spinzo.com/?group=summer-reading-program--wb7a" target="_blank">Colorado Rapids games</a>.</li>
+                  </ul>
+                </div>
+                <div class="prize-item">
+                  <h4 class="white no-margin-top">Finishing Prizes</h4>
+                  <div>Collect a prize when you complete your challenge, or just for having a fun summer!</div>
+                  <ul class="margin-top-10">
+                    <li>Babies & Kids (Ages 0-12): One Free New Book</li>
+                    <li>Teens & Adults: Reusable Canvas Tote</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div id="goals" class="background-four">
-          <div class="custom-container four">
-            <h1 class="black text-uppercase text-center">Goals</h1>
-            <div class="black large-text text-center">Help us meet our community goal of 10 million minutes read!</div>
-            <div class="goal-wrapper">
-              <div class="goal-item"> 
-                <!-- remove comment on May 31
+        </section>
+        <section>
+          <div id="goals" class="background-four">
+            <div class="custom-container four">
+              <h1 class="black text-uppercase text-center">Goals</h1>
+              <div class="black large-text text-center">Help us meet our community goal of 10 million minutes read!</div>
+              <div class="goal-wrapper">
+                <div class="goal-item"> 
+                  <!-- remove comment on May 31
 
 <h4 class="black no-margin-top"><a class="black text-underline" href="https://dclibraries.beanstack.org/reader365" target="_blank">Add your minutes</a> to help us meet our goal.</h4>
 -->
-                <div>If we meet the community goal, the <a class="black text-underline" href="../foundation/">Douglas County Libraries Foundation </a>will donate $1,000 to the Colorado Agricultural Leadership Foundation (CALF), whose mission is to connect people of all ages and abilities to agriculture through educational programs, community projects, and leadership opportunities. </div>
-              </div>
-              <div class="goal-item">
-                <h6 class="black no-margin-top margin-bottom-10">Help your school earn $500!*</h6>
-                <div>All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school's name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a class="black text-underline" href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>.</div>
-                <div class="padding-top-10">*The leader board will be posted here and updated each Monday through July 31. </div>
-              </div>
-              
-              <!--<div class="goal-item">
+                  <div>If we meet the community goal, the <a class="black text-underline" href="../foundation/">Douglas County Libraries Foundation </a>will donate $1,000 to the Colorado Agricultural Leadership Foundation (CALF), whose mission is to connect people of all ages and abilities to agriculture through educational programs, community projects, and leadership opportunities. </div>
+                </div>
+                <div class="goal-item">
+                  <h6 class="black no-margin-top margin-bottom-10">Help your school earn $500!*</h6>
+                  <div>All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school's name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a class="black text-underline" href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>.</div>
+                  <div class="padding-top-10">*The leader board will be posted here and updated each Monday through July 31. </div>
+                </div>
+                
+                <!--<div class="goal-item">
               <h4 class="black no-margin-top">Who's ahead?*</h4>
               <div>Elementary School:</div>
               <ul class="fa-ul">
@@ -623,13 +636,14 @@ h1.tan-nimbus {
               </ul>
               <div class="">*Leader board will be updated each Monday through July 31.</div>
             </div>--> 
-            </div>
-            <div>
-              <div class="counter">2,348,996</div>
-              <div class="minutes text-center">Minutes Read</div>
+              </div>
+              <div>
+                <div class="counter">2,348,996</div>
+                <div class="minutes text-center">Minutes Read</div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
     
@@ -727,7 +741,6 @@ h1.tan-nimbus {
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js" integrity="sha256-jBJrwTqJhvGprAz9HNZygKWuDspS1FGf5wK3z4XHakM=" crossorigin="anonymous"></script> 
 <script id="rendered-js" >
 const counterUp = window.counterUp.default;
 const callback = entries => {
