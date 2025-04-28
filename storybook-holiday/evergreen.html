@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,40 +49,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .reserve-a-space-active {
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
 }
 .custom-container {
-    max-width: 2200px;
-    margin: 0 auto;
+	max-width: 2200px;
+	margin: 0 auto;
 }
 .intro-container {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 0 15px 30px;
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 0 15px 30px;
+}
+.flickity-container {
+	max-width: 1610px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 .carousel-cell {
-    margin-right: 30px;
-    opacity: .5;
-    filter: blur(1px);
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
 }
-.carousel-cell.is-selected {
-    opacity: 1;
-    filter: blur(0);
+.carousel-cell img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #000;
 }
 .flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
-}
-.flickity-prev-next-button:hover {
-    background: transparent;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-    fill: #fff;
-}
-.flickity-prev-next-button.no-svg {
-    color: #fff;
+	display: none;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -276,15 +279,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row text-center border-top">
-    <div class="intro-container">
-      <h1 class="jumbo-text text-uppercase font-weight-400 no-margin-bottom">A Storybook Holiday</h1>
-      <h4 class="roboto text-center margin-top-5">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature. </h4>
-      <div class="margin-lg-50">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
-      <h4><i>Coming this Winter!</i></h4>
+    <div class="row border-top padding-bottom-20">
+      <div class="container text-center">
+        <h1 class="page-heading">A Storybook Holiday</h1>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature.</h2>
+          <div class="h4 margin-bottom-5 no-margin-top"><i>Coming this Fall!</i></div>
+        </div>
+      </div>
     </div>
-    <div class="custom-container no-padding">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "groupCells": 1, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
         <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
         <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
@@ -303,9 +308,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="carousel-cell"><img src="carousel/sixteen.jpg" alt=""></div>
       </div>
     </div>
-    <div class="container padding-top-30 padding-bottom-60">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</div>
-  </div>
-  <!--<div class="text-center padding-top-40 padding-bottom-50">
+    <div class="container text-center padding-bottom-80">
+      <div class="max-width-80 padding-bottom-10">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
+      <div class="max-width-50">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</div>
+    </div>
+    
+    <!--<div class="text-center padding-top-40 padding-bottom-50">
   <div>
     <h4><i>Coming Spring 2022!</i></h4>
     <div>
@@ -315,7 +323,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       Tickets on sale soon. </div>
   </div>
 </div>--> 
-  <!-- InstanceEndEditable --> </div>
+    <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -446,4 +454,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
