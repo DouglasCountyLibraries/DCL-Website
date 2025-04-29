@@ -209,10 +209,20 @@ h1.floridian {
 .bug-four {
 	margin: 16px 0 -85px 120px;
 }
+	.prize-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 10px;
+	/* align-content: center; */
+	align-items: center;
+	max-width: 950px;
+	margin: 0 auto;
+}
 .prize-wrapper {
 	display: flex;
 	justify-content: center;
 	padding: 30px 10px 0;
+	flex-direction: column;
 }
 .prize-item {
 	max-width: 500px;
@@ -239,7 +249,7 @@ h1.floridian {
 .counter {
 	font-size: 88px;
 	font-weight: 700;
-	color: #000;
+	color: #fff;
 	text-align: center;
 	line-height: 100px;
 }
@@ -247,9 +257,9 @@ h1.floridian {
 	visibility: hidden;
 }
 .minutes {
-	color: #000;
+	color: #fff;
 	font-size: 24px;
-	font-weight: 400;
+	font-weight: 500;
 }
 .leaderboard-wrapper {
 	background: #fff;
@@ -272,18 +282,18 @@ h1.floridian {
 	padding: 20px 30px 40px;
 }
 
-
-	@media (max-width: 620px) {
-				h1.parrot-heading {
+@media (max-width: 620px) {
+h1.parrot-heading {
 	background: none;
 	padding: 70px 0 0;
-margin: 0 0 10px;
+	margin: 0 0 10px;
 }
-		.bot-two {
+.bot-two {
 	position: relative;
 	top: 0;
 }
-	}
+}
+
 @media (max-width: 875px) {
 .prize-wrapper, .goal-wrapper {
 	flex-direction: column;
@@ -300,21 +310,19 @@ margin: 0 0 10px;
 .prize-item:nth-of-type(2) {
 	padding: 30px 150px 40px 30px;
 }
-
 }
-	@media (max-width: 775px) {
-		.background-one {
+
+@media (max-width: 775px) {
+.background-one {
 	background: #fff url("bug-background-small.webp") bottom center no-repeat;
 }
-	}
-
+}
 
 @media (max-width: 425px) {
 h1.floridian {
 	font-size: 68px;
 	line-height: 85px;
 }
-
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -553,7 +561,8 @@ h1.floridian {
               <h1 class="black text-uppercase parrot-heading"><span class="bot-one">Bug Out of</span> <span class="bot-two">Town</span> <span class="bot-three">Giveaways</span></h1>
               <div class="large-text">We’re giving away three $500 Southwest Airlines gift cards to participants who sign up to read. <a class="black text-underline" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register now</a> for Don’t Bug Me, I’m Reading for your chance to win!</div>
               <div class="padding-top-30 padding-bottom-30"> <img src="southwest-gift-card.png" alt="Southwest Airlines Gift Card"> </div>
-              <div class="max-width-80">Everyone registered May 1-July 31 will be entered into the random prize drawings. Drawings will take place in early August. Winners will be notified individually and announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free.</div><div class="bug-four"><img src="bug-four.png" alt=""></div>
+              <div class="max-width-80">Everyone registered May 1-July 31 will be entered into the random prize drawings. Drawings will take place in early August. Winners will be notified individually and announced via DCL’s digital channels (first name, last initial). No purchase necessary and registration is free.</div>
+              <div class="bug-four"><img src="bug-four.png" alt=""></div>
             </div>
           </div>
         </section>
@@ -562,6 +571,7 @@ h1.floridian {
             <div class="custom-container three">
               <h1 class="white text-uppercase text-center">Prizes</h1>
               <div class="large-text white text-center">Prizes available June 2-August 7, or while supplies last.</div>
+             <div class="prize-container"><div class="ladybug-log"><img src="ladybug-log.webp" alt=""></div>
               <div class="prize-wrapper">
                 <div class="prize-item">
                   <h4 class="white no-margin-top">Sign-Up Prizes</h4>
@@ -570,7 +580,7 @@ h1.floridian {
                     <li>Babies 0-3: Bubbles</li>
                     <li>Kids 4-12: Bug Viewer</li>
                     <li>Teens & Adults: One Free Item from Second Chapter Bookstore</li>
-                    <li>Registered participants are also eligible for BOGO tickets to select <a class="white text-underline" href="https://rapids.spinzo.com/?group=summer-reading-program--wb7a" target="_blank">Colorado Rapids games</a>.</li>
+                    <li>Registered participants are also eligible for discounted tickets to select <a class="white text-underline" href="https://rapids.spinzo.com/?group=summer-reading-program--wb7a" target="_blank">Colorado Rapids</a> and <a class="white text-underline" href="https://www.mlb.com/rockies/tickets/specials/douglas-county-library-summer-reading" target="_blank">Colorado Rockies</a> games.</li>
                   </ul>
                 </div>
                 <div class="prize-item">
@@ -581,15 +591,15 @@ h1.floridian {
                     <li>Teens & Adults: Reusable Canvas Tote</li>
                   </ul>
                 </div>
-              </div>
+				</div></div>
             </div>
           </div>
         </section>
         <section>
           <div id="goals" class="background-four">
             <div class="custom-container four">
-              <h1 class="black text-uppercase text-center">Goals</h1>
-              <div class="black large-text text-center">Help us meet our community goal of 10 million minutes read!</div>
+              <h1 class="white text-uppercase text-center">Goals</h1>
+              <div class="white large-text text-center">Help us meet our community goal of 10 million minutes read!</div>
               <div class="goal-wrapper">
                 <div class="goal-item"> 
                   <!-- remove comment on May 31
