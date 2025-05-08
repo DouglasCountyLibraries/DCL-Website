@@ -92,23 +92,37 @@ Push Notifications End - Removed for Now -->
 }
 /* ^^^ Do not remove ^^^ */
 	
-.andrew-wrapper {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 15px;
+@font-face {
+	font-family: 'Buffalo Inline';
+	src: url('../shared-assets/web-fonts/BuffaloInline2.woff2') format('woff2'), url('../shared-assets/web-fonts/BuffaloInline2.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	text-rendering: optimizeLegibility;
 }
-.andrew-item {
-	padding: 30px 15px 50px;
-	background: #f5f5f5;
-	text-align: center;
+.rom-heading-wrapper {
+	background: #000 url("rom-background-large.webp") center center/cover;
+	padding: 165px 15px 200px;
 }
-.andrew-content {
-	max-width: 750px;
-	margin: 0 auto;
+.rom-heading-one {
+	font-family: "Domine", serif;
+	text-transform: uppercase;
+	color: rgb(210, 210, 210);
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	white-space: nowrap;
 }
-.large-mccarthy, .small-mccarthy {
-	display: flex;
-	justify-content: center;
+.rom-heading-two {
+	font-family: "Buffalo Inline", serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 6rem;
+	text-transform: uppercase;
+	color: #eaeae9;
+	letter-spacing: 2px;
+	line-height: .9;
+	text-shadow: 0px 4px 4px #000;
 }
 .featured-author-wrapper {
 	display: flex;
@@ -443,57 +457,10 @@ opacity:0;
 }
 }
 
-@media (max-width: 675px) {
-.author-wrapper {
-	flex-direction: column;
-	background: #fff;
-	margin: 0 auto 50px;
-}
-.author-wrapper.bg-gray-5 {
-	background: #f5f5f5;
-	margin: 0 auto 10px;
-}
-.author-item.two {
-	text-align: center;
-	padding: 20px 0;
-}
-.single-photo.photo {
-	min-width: inherit;
-}
-}
-
-@media (max-width: 795px) {
-.author-item.one {
-	border-right: 0;
-}
-}
-
-@media (min-width: 726px) {
-.image-small {
-	display: none;
-}
-}
-
-@media (max-width: 725px) {
-.image-large {
-	display: none;
-}
-}
-
-@media (max-width: 925px) {
-.featured-author-wrapper {
-	flex-direction: column;
-	background: #fff;
-	margin: 15px auto 40px;
-	max-width: 665px;
-}
-.featured-author-item.one {
-	border-right: 0;
-	text-align: center;
-}
-.featured-author-item.two {
-	text-align: center;
-	padding: 20px 0;
+@media (max-width: 1150px) {
+.page-nav {
+	max-width: 800px;
+	margin: 0 auto;
 }
 }
 
@@ -518,31 +485,66 @@ opacity:0;
 }
 }
 
-@media (max-width: 1150px) {
-.page-nav {
-	max-width: 800px;
-	margin: 0 auto;
-}
-}
-
-@media (min-width: 901px) {
-.cj-small {
-	display: none;
-}
-}
-
-@media (max-width: 900px) {
-.cj-large {
-	display: none;
-}
-}
-
 @media (max-width: 950px) {
 .photo-wrapper {
 	flex-direction: column;
 	align-content: center;
 	max-width: 900px;
 	margin: 0 auto;
+}
+}
+
+@media (max-width: 925px) {
+.featured-author-wrapper {
+	flex-direction: column;
+	background: #fff;
+	margin: 15px auto 40px;
+	max-width: 665px;
+}
+.featured-author-item.one {
+	border-right: 0;
+	text-align: center;
+}
+.featured-author-item.two {
+	text-align: center;
+	padding: 20px 0;
+}
+}
+
+@media (max-width: 795px) {
+.author-item.one {
+	border-right: 0;
+}
+.rom-heading-two {
+	font-size: 4rem;
+}
+.rom-heading-wrapper {
+	background: #000 url("rom-background-small.webp") center center/cover;
+}
+}
+
+@media (max-width: 675px) {
+.author-wrapper {
+	flex-direction: column;
+	background: #fff;
+	margin: 0 auto 50px;
+}
+.author-wrapper.bg-gray-5 {
+	background: #f5f5f5;
+	margin: 0 auto 10px;
+}
+.author-item.two {
+	text-align: center;
+	padding: 20px 0;
+}
+.single-photo.photo {
+	min-width: inherit;
+}
+}
+
+@media (max-width: 550px) {
+.rom-heading-two {
+	font-size: 3.2rem;
 }
 }
 </style>
@@ -758,6 +760,47 @@ opacity:0;
           </ul>
         </div>
         <div class="page-nav-item"><a href="#author-events"><i class="pagenav-icon fa-regular fa-books"></i>Author Events</a></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="photo-wrapper">
+        <div class="photo-item black text-center bg-gray-5">
+          <div class="rom-heading-wrapper">
+            <div class="rom-heading-one">DCL Presents:</div>
+            <div class="rom-heading-two">Epic Romantasy</div>
+          </div>
+          <div class="photo-item-inner">
+            <div class="h6 black">Join us for an unforgettable evening with four sensational bestselling authors who expertly blend heart-pounding fantasy with spicy romance!</div>
+            <div class="margin-top-5"> Meet Mai Corland, <i><a href="https://dcl.bibliocommons.com/v2/record/S114C1809453">Four Ruined Realms</a></i>; Abigail Owen, <i><a href="https://dcl.bibliocommons.com/v2/record/S114C1791861">The Games Gods Play</a></i>; K.A. Linde, <i><a href="https://dcl.bibliocommons.com/v2/record/S114C1813474">The Robin on the Oak Throne</a></i>; and Jade Presley, <i><a href="https://dcl.bibliocommons.com/v2/record/S114C1815411">The Never List</a></i>, and hear all about their books and creative processes.</div>
+            <div class="margin-top-5">Your General Admission ticket includes a seat at the presentation, dessert bites, a specialty mocktail, and a place in the signing line; optional book purchase add-on available. Books will also be sold at the event by Books Are Awesome. Ideal for adults.</div>
+            <div class="margin-top-10">Wednesday, June&nbsp;25,&nbsp;7PM</div>
+            <div><a href="https://maps.app.goo.gl/rQfCuvzdMxQu4AiM6" target="_blank">DCSD Legacy Campus</a>, Lone Tree</div>
+            <div>General Admission Tickets: $15</div>
+          </div>
+          <div class="align-bottom-alt"> 
+            
+            <!-- Noscript content for added SEO -->
+            <noscript>
+            <a href="https://www.eventbrite.com/e/dcl-presents-epic-romantasy-tickets-1353402576539" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+            </noscript>
+            <!-- You can customize this button any way you like -->
+            <button class="btn btn-primary" id="eventbrite-widget-modal-trigger-1353402576539" type="button">Buy Tickets</button>
+            <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+            <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1353402576539',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1353402576539',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+          </div>
+        </div>
       </div>
     </div>
     <div class="row bg-gray-5 margin-top-30 padding-top-40 padding-bottom-80">
