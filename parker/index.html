@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,6 +70,90 @@ ul.branch-hours {
 	padding: 0 15px;
 	white-space: nowrap;
 }
+/* slideshow */
+	
+.slideshow-container {
+	display: flex;
+	max-width: 1610px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.slideshow-wrapper {
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+}
+.slideshow-image {
+	background: #fff;
+width: calc(100% * 0.65);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.slideshow-info {
+	background: #f5f5f5;
+	color: #000;
+width: calc(100% * 0.35);
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	justify-content: center;
+	margin-left: -40px;
+}
+.slideshow-arrow {
+	background: url("../shared-assets/images/slideshow-arrow-left.png") 100% 48% no-repeat;
+	width: 40px;
+	position: relative;
+	z-index: 100;
+	left: -30px;
+}
+.slideshow-content {
+	padding: 0 30px 20px;
+}
+.slideshow-pic {
+	min-height: 600px;
+	position: relative;
+}
+.pic-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+figure {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	/*animation*/
+	animation: slideShow 54s ease-out infinite 0s;
+}
+.pic-2 {
+	transform-origin: bottom right;
+}
+.pic-3 {
+	transform-origin: top left;
+}
+.pic-4 {
+	transform-origin: top right;
+}
+.pic-5 {
+	transform-origin: bottom left;
+}
+.pic-6 {
+	transform-origin: center center;
+}
+.pic-7 {
+	transform-origin: bottom right;
+}
+.pic-8 {
+	transform-origin: top left;
+}
+.pic-9 {
+	transform-origin: bottom left;
+}
 .flickity-container {
 	max-width: 1610px;
 	margin: 0 auto;
@@ -94,6 +179,9 @@ ul.branch-hours {
 }
 .flickity-prev-next-button {
 	display: none;
+}
+h2.featured-heading {
+	margin: 0 15px 5px;
 }
 .art-item-wrapper {
 	display: flex;
@@ -126,94 +214,30 @@ ul.branch-hours {
 .sponsor-logo {
 	padding: 10px 0 0;
 }
-/* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
-.slideshow-row {
-	background: #f5f5f5;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 1610px;
-	margin: 0 auto;
+	
+	/* keyframes*/
+@keyframes slideShow {
+0% {
+opacity: 0;
+transform:scale(1);
 }
-.slideshow-content {
-	flex: 1 1 36%;
-	padding: 0 30px;
+2% {
+opacity: 1
 }
-.slideshow-content h4 {
-	font-size: 20px;
-	color: #333;
+15% {
+opacity: 1;
 }
-.slideshow-image.main {
-	min-height: 600px;
+18% {
+opacity: 0;
+transform:scale(1.1);
 }
-#slideshow {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 0%;
-	width: 67%;
-	border-right: 15px solid #fff;
-} /* (img px height / img px width x 100) = padding-bottom % */
-#slideshow div {
-	position: absolute;
-	z-index: 2;
-	width: 105%;
-	height: 105%;
-	top: -5%;
-	left: -5%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 0;
-	-webkit-transition: opacity 3s, -webkit-transform 8s;
-	transition: opacity 3s, transform 8s;
+100% {
+opacity: 0;
+transform:scale(1);
 }
-#slideshow div:nth-of-type(9n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-#slideshow div {
-	-webkit-transform-origin: bottom right;
-	transform-origin: bottom right;
-}
-#slideshow div:nth-of-type(2n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-#slideshow div:nth-of-type(3n+1) {
-	-webkit-transform-origin: bottom left;
-	transform-origin: bottom left;
-}
-#slideshow div:nth-of-type(4n+1) {
-	-webkit-transform-origin: top right;
-	transform-origin: top right;
-}
-#slideshow div:nth-of-type(5n+1) {
-	-webkit-transform-origin: center center;
-	transform-origin: center center;
-}
-#slideshow div:nth-of-type(6n+1) {
-	-webkit-transform-origin: bottom right;
-	transform-origin: bottom right;
-}
-#slideshow div:nth-of-type(7n+1) {
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-}
-/* slide one */
-#slideshow div:nth-of-type(8n+1) {
-	-webkit-transform-origin: center center;
-	transform-origin: center center;
-}
-#slideshow .fx, #slideshow .fx1 {
-	-webkit-transform: scale(1.1) translate(1.5%);
-	transform: scale(1.1) translate(1.5%);
-	opacity: 1
 }
 
 @media (max-width: 1150px) {
-.slideshow-image.main {
-	min-height: 400px;
-}
 .page-nav {
 	max-width: 800px;
 	margin: 0 auto;
@@ -230,38 +254,47 @@ ul.branch-hours {
 }
 
 @media (max-width: 925px) {
-.slideshow-row, .item-wrapper {
+.slideshow-wrapper, .art-item-wrapper {
 	flex-direction: column;
 }
-.slideshow-content {
-	padding: 30px 20px 40px;
+.slideshow-info {
+	margin: -40px 0 0;
 	text-align: center;
 }
-#slideshow {
-	width: 100%;
-	border-right: 0;
+.slideshow-content {
+	padding: 40px 15px 50px;
+	max-width: 800px;
+	margin: 0 auto;
 }
-.item-wrapper img {
-	padding-bottom: 15px;
+.slideshow-arrow {
+	background: url("../shared-assets/images/slideshow-arrow-top.png") 50% 100% no-repeat;
+	width: 100%;
+	height: 40px;
+	z-index: 100;
+	top: -30px;
+	position: relative;
+	margin: 0 auto;
+	left: auto;
+}
+.slideshow-image, .slideshow-info {
+	width: 100%;
 }
 .art-item {
 	text-align: center;
-}
-#local-alert {
-	text-align: center;
-}
-}
-
-@media (max-width: 569px) {
-.page-nav-item a {
-	text-align: left;
-	padding-left: 15px;
+	max-width: 600px;
+	margin: 0 auto;
 }
 }
 
 @media (max-width: 575px) {
-.slideshow-image.main {
+.slideshow-pic {
 	min-height: 300px;
+}
+.slideshow-arrow {
+	display: none;
+}
+.slideshow-info {
+	margin: 0;
 }
 .widget-wrapper {
 	width: auto;
@@ -460,142 +493,172 @@ ul.branch-hours {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top">
-    <div class="container text-center">
-      <h1 class="page-heading">Parker</h1>
-      <div class="padding-bottom-15">
-        <div itemscope itemtype="http://schema.org/PostalAddress">
-          <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/BN5GzHYJYwB2" target="_blank"><span itemprop="streetAddress">20105&nbsp;East&nbsp;Mainstreet</span>, <span itemprop="addressLocality">Parker</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80138</span></a></div>
-        </div>
-        <div class="branch-hours-phone">
-          <ul class="branch-hours">
-            <li>Mon-Thu:&nbsp;8AM-8PM</li>
-            <li>Fri:&nbsp;8AM-6PM</li>
-            <li>Sat-Sun:&nbsp;10-4PM</li>
-          </ul>
-          <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+    <div class="row border-top">
+      <div class="container text-center">
+        <h1 class="page-heading">Parker</h1>
+        <div class="padding-bottom-15">
+          <div itemscope itemtype="http://schema.org/PostalAddress">
+            <div class="h4 margin-top-5 no-margin-bottom"> <a href="https://goo.gl/maps/BN5GzHYJYwB2" target="_blank"><span itemprop="streetAddress">20105&nbsp;East&nbsp;Mainstreet</span>, <span itemprop="addressLocality">Parker</span>,&nbsp;<span itemprop="addressRegion">CO</span>&nbsp;<span itemprop="postalCode">80138</span></a></div>
+          </div>
+          <div class="branch-hours-phone">
+            <ul class="branch-hours">
+              <li>Mon-Thu:&nbsp;8AM-8PM</li>
+              <li>Fri:&nbsp;8AM-6PM</li>
+              <li>Sat-Sun:&nbsp;10-4PM</li>
+            </ul>
+            <div>Customer Service: <a href="tel:+13037917323" class="margin-left-5">(303) 791-7323</a></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row padding-bottom-30">
-    <div class="page-nav">
-      <div class="page-nav-item"><a href="../storytime/"><i class="pagenav-icon fas fa-comment fa-flip-horizontal"></i>Storytime</a></div>
-      <div class="page-nav-item"><a href="../reserve-a-space/"><i class="pagenav-icon fas fa-check-square"></i>Reserve a Space</a></div>
-      <div class="page-nav-item"><a href="https://go.dcl.org/events?et=storytime&l=parker&r=months&n=1"><i class="pagenav-icon fas fa-calendar"></i>Parker Calendar</a></div>
-      <div class="page-nav-item"><a href="../used-book-sales/"><i class="pagenav-icon fas fa-book"></i>Used Book Sales</a></div>
-    </div>
-  </div>
-  <div class="row slideshow-row">
-    <div id="slideshow" class="slideshow-image main"> 
-      <!-- define each background-image in CSS -->
-      <div class="" style="background-image: url('slideshow/one.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(1) -->
-      <div class="random-slide" style="background-image: url('slideshow/two.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(2) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/three.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(3) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/four.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(4) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/five.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(5) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/six.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(6) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/seven.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(7) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/eight.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(8) -->
-      
-      <div class="random-slide" style="background-image: url('slideshow/nine.jpg')"></div>
-      <!-- #slideshow div:nth-of-type(9) --> 
-    </div>
-    <div class="slideshow-content">
-      <div class="h5 no-margin-top">This library is home to <a href="../reserve-a-space/#recording-studio">The Recording Studio</a>, where customers can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</div>
-      <div>The library also features the <a href="#play-area">Plants & Pollinators</a> children's play space.</div>
-    </div>
-  </div>
-  <div id="events" class="row text-center location-events">
-    <div class="h2 no-margin-top margin-bottom-5">Featured Branch Events</div>
-    <a href="https://go.dcl.org/events?et=storytime&l=parker&r=months&n=1" class="text-uppercase">Parker Calendar »</a>
-    <div class="widget-wrapper">
-      <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3854&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
-    </div>
-  </div>
-  <div id="play-area" class="row bg-gray-5">
-    <div class="container padding-top-50 padding-bottom-20 text-center">
-      <div class="h4 no-margin">Kid-friendly Fun:</div>
-      <div class="h2 no-margin">Plants & Pollinators</div>
-    </div>
-  </div>
-  <div class="row bg-gray-5">
-    <div class="flickity-container">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+    <div class="row padding-bottom-30">
+      <div class="page-nav">
+        <div class="page-nav-item"><a href="../storytime/"><i class="pagenav-icon fas fa-comment fa-flip-horizontal"></i>Storytime</a></div>
+        <div class="page-nav-item"><a href="../reserve-a-space/"><i class="pagenav-icon fas fa-check-square"></i>Reserve a Space</a></div>
+        <div class="page-nav-item"><a href="https://go.dcl.org/events?et=storytime&l=parker&r=months&n=1"><i class="pagenav-icon fas fa-calendar"></i>Parker Calendar</a></div>
+        <div class="page-nav-item"><a href="../used-book-sales/"><i class="pagenav-icon fas fa-book"></i>Used Book Sales</a></div>
       </div>
     </div>
-  </div>
-  <div class="row bg-gray-5">
-    <div class="container text-center padding-bottom-40">
-      <div class="max-width-80">Watch imaginations soar as children learn about the plant-pollinator system through hands-on playtime in the apple play house, featuring a specimen table for insect observation. Busy little ones will have fun exploring the world of bees and playing beekeeper in our realistic beekeeping station, complete with materials for role play and dress up. Crawl through the caterpillar, spin the blossoms, and much more while learning about this fascinating ecosystem.</div>
-      <div class="sponsor-logo"><img src="tagawa-gardens-logo.png" alt="Tagawa Gardens Logo"></div>
-      <div>Sponsored by Tagawa Gardens</div>
-    </div>
-  </div>
-  
-  <!--<div id="exhibits" class="row padding-top-50">
-    <h2 class="text-center no-margin padding-bottom-30">Art on Display</h2>
-    <div class="container no-padding item-wrapper margin-lg-175 margin-md-100">
-      <div class="art-item text-center"><img class="img-responsive center-block" alt="Sagar Gaikwad" src="sagar-gaikwad.jpg"> </div>
-      <div class="art-item">
-        <div class="margin-left-10 margin-right-10">
-          <h2 class="no-margin text-uppercase font-weight-400">Sagar Gaikwad</h2>
-          <h4 class="margin-top-5">November 3-December 30</h4>
-          <div>Specializing in abstract and realism acrylic painting, Sagar Gaikwad has a passion for creating vibrant works of art that capture the beauty and complexity of life. Through a combination of bold brushstrokes, vivid colors, and intricate details, Sagar's works invite viewers to explore new perspectives and connect with the emotions conveyed in each piece.</div>
+    <section>
+      <div class="row">
+        <div class="slideshow-container">
+          <div class="slideshow-wrapper">
+            <div class="slideshow-image">
+              <div class="slideshow-pic">
+                <div class="pic-wrapper" id="pic-wrapper">
+                  <figure id="fig1"></figure>
+                  <figure id="fig2"></figure>
+                  <figure id="fig3"></figure>
+                  <figure id="fig4"></figure>
+                  <figure id="fig5"></figure>
+                  <figure id="fig6"></figure>
+                  <figure id="fig7"></figure>
+                  <figure id="fig8"></figure>
+                  <figure id="fig9"></figure>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-arrow"></div>
+            <div class="slideshow-info">
+              <div class="slideshow-content">
+                <h2 class="xxxsm-heading text-dark no-margin padding-bottom-10">This library is home to <a href="../reserve-a-space/#recording-studio">The Recording Studio</a>, where customers can use state-of-the-art software and equipment to create videos, musical compositions, animations, e-books and more.</h2>
+                <div class="padding-bottom-10">The library also features the <a href="#play-area">Plants &amp; Pollinators</a> children's play space.</div>
+                <div class="h5 text-uppercase no-margin"><a href="../reserve-a-space/#host-your-event">Host It Here</a>!</div>
+                <div>We’ve got a space for your special occasion, with large, light-filled event halls, easy access to DIA, nearby attractions, <a href="#" type="text" data-toggle="modal" data-target="#hih-modal">and more</a>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="events" class="row text-center location-events">
+        <h2 class="featured-heading">Featured Branch Events</h2>
+        <a href="https://go.dcl.org/events?et=storytime&l=parker&r=months&n=1" class="text-uppercase">Parker Calendar »</a>
+        <div class="widget-wrapper">
+          <iframe title="Featured Branch Events" src="https://go.dcl.org/widget?id=21598&style=1588&location=3854&bodyonly=1&postheight=yes" data-widgetid="21598" data-client="dclibraries" scrolling="no" width="100%" marginheight="0" frameborder="0" class="widgetframepreview" onload="resizeIframe(this)"></iframe>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="play-area" class="row bg-gray-5">
+        <div class="container padding-top-50 padding-bottom-20 text-center">
+          <div class="h6 text-uppercase no-margin">Kid-friendly Fun:</div>
+          <h2 class="no-margin">Plants & Pollinators</h2>
+        </div>
+      </div>
+      <div class="row bg-gray-5">
+        <div class="flickity-container">
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
+            <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-gray-5">
+        <div class="container text-center padding-bottom-40">
+          <div class="max-width-80">Watch imaginations soar as children learn about the plant-pollinator system through hands-on playtime in the apple play house, featuring a specimen table for insect observation. Busy little ones will have fun exploring the world of bees and playing beekeeper in our realistic beekeeping station, complete with materials for role play and dress up. Crawl through the caterpillar, spin the blossoms, and much more while learning about this fascinating ecosystem.</div>
+          <div class="sponsor-logo"><img src="tagawa-gardens-logo.png" alt="Tagawa Gardens Logo"></div>
+          <div>Sponsored by Tagawa Gardens</div>
+        </div>
+      </div>
+    </section>
+    <section> 
+      <!--<div id="exhibits" class="row padding-top-50">
+        <h2 class="text-center no-margin padding-bottom-30">Art on Display</h2>
+        <div class="art-item-wrapper">
+      <div class="art-item-wrapper">
+        <div class="art-item"><img class="img-responsive" alt="Marina Barrett Painting" src="marina-barrett.jpg"> </div>
+        <div class="art-item">
+          <div class="h2 no-margin text-uppercase">Marina Barrett</div>
+          <div class="h3 margin-top-5 no-margin-bottom">Wool</div>
+          <div class="h4 margin-top-5">September 1-October 31</div>
+          <div>Awakening to an unexpected creative spirit, Marina Barrett developed a unique wool technique that adds depth and airiness to their art. Each piece is a textural portal to cherished memories, inviting viewers to explore the tangible landscapes of recollection and imagination.</div>
         </div>
       </div>
     </div>
   </div>
   <div class="row padding-top-30 padding-bottom-60">
     <div class="container text-center">
-      <h5 class="no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</h5>
+      <div class="h5 no-margin-top margin-lg-200 margin-md-50">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
       <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-15" type="button">Exhibit Your Work</button>
     </div>
   </div>-->
-  <div id="exhibits" class="row padding-top-50 padding-bottom-60">
-    <div class="h2 text-center no-margin padding-bottom-15">Art on Display</div>
-    <div class="container text-center max-width-80">
-      <div class="h5 no-margin-top">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary margin-top-15" type="button">Exhibit Your Work</button>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
-    <div role="document" class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-          <div id="artModalLabel" class="h3 modal-title text-center">Interested in Exhibiting Your Work?</div>
+      <div id="exhibits" class="row padding-top-50 padding-bottom-60">
+        <h2 class="h2 text-center no-margin">Art on Display</h2>
+        <div class="container text-center">
+          <div class="h6 no-margin padding-bottom-20 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
+          <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
         </div>
-        <div class="modal-body">
-          <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
+      </div>
+    </section>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="hih-modal" aria-labelledby="hih-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="h5 no-margin text-center modal-title">Host it Here!</div>
+          </div>
+          <div class="modal-body padding-30">
+            <div class="padding-bottom-5">Our Parker location offers versatile event spaces and popular features like:</div>
+            <ul>
+              <li>Largest event hall space of our libraries</li>
+              <li>Floor-to-ceiling windows in event halls</li>
+              <li>Beautiful views and natural light</li>
+              <li>Park, splash pad, and ice skating adjacent to the library</li>
+              <li>Walkable to restaurants, ice cream shops, shopping, and more</li>
+              <li>Proximity and access to DIA</li>
+              <li>Proximity to Aurora</li>
+              <li>Popular for social events</li>
+            </ul>
+            <div><i>Let us help you <a href="../reserve-a-space/#host-your-event">host an event</a> to remember!</i></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- InstanceEndEditable --> </div>
+    
+    <!-- Modal -->
+    <div aria-labelledby="artModalLabel" role="dialog" tabindex="-1" id="artModal" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+            <div id="artModalLabel" class="h5 no-margin modal-title text-center">Interested in Exhibiting Your Work?</div>
+          </div>
+          <div class="modal-body">
+            <iframe class="embed-responsive-item" src="https://form.jotform.com/62295606038155" frameborder="0" style="width: 100%;height:715px;border:none;" scrolling="no"> </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -659,31 +722,39 @@ ul.branch-hours {
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
 <script>
-	var cards = $(".random-slide");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<script>
-/* http://cssmojo.com/ken-burns-effect/ */
-function kbSlideshow() { // set .fx1 class on 1st img on page load
-	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
-	var images = document.getElementById('slideshow').getElementsByTagName('div'),
-        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
-	images[0].className = "fx1"; // style 1st img on page load
-	function kenBurns() {
-		if (i==numberOfImages) { i = 0; }
-        	images[i].className = "fx"; // set .fx class on each img
-		// clean up one before last to avoid bounce effect - can't remove .fx from previous
-        	if (i===0) { images[numberOfImages-2].className = ""; }
-        	if (i===1) { images[numberOfImages-1].className = ""; }
-        	if (i>1) { images[i-2].className = ""; }
-        	i++;
-		}
-	}
-setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+document.addEventListener("DOMContentLoaded", function() {
+    var images = [
+        "slideshow/one.webp", // Fixed first image
+        "slideshow/two.webp",
+		"slideshow/three.webp",
+		"slideshow/four.webp",
+		"slideshow/five.webp",
+		"slideshow/six.webp",
+		"slideshow/seven.webp",
+		"slideshow/eight.webp",
+		"slideshow/nine.webp"
+    ];
+
+    // Separate the first image from the rest
+    var firstImage = images.shift();
+
+    // Shuffle the remaining images
+    for (var i = images.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
+    }
+
+    // Add the first image back to the beginning of the array
+    images.unshift(firstImage);
+
+    // Apply the images as background
+    var figures = document.querySelectorAll("figure");
+    figures.forEach(function(figure, index) {
+        figure.style.background = `url(${images[index]}) center center/cover`;
+        figure.className = `pic-${index + 1}`;
+        figure.style.animationDelay = `${index * 6}s`;
+    });
+});
 </script> 
 <script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
 <script>
@@ -762,4 +833,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
