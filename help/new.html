@@ -54,9 +54,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	padding: 0 0 0 10px;
 	margin: 5px 0 8px 5px;
 }
-.padding-bottom-5 {
-	padding-bottom: 5px;
-}
 .custom-container {
 	display: flex;
 	max-width: 1450px;
@@ -66,6 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .policy-contents {
 	padding: 0 15px;
 	margin-left: 12%;
+	width: 100%;
 }
 .table-contents {
 	top: 30px;
@@ -137,13 +135,24 @@ section > div {
 section > div:last-child, section > div:nth-last-child(2) {
 	padding-bottom: 0;
 }
-.padding-bottom-10 {
-	padding-bottom: 10px;
-}
 .sidebar-heading {
-	font-size: 16px;
+	font-size: 1rem;
 	text-transform: uppercase;
 	margin-top: 8px;
+}
+.panel-title, .panel-title a {
+	font-size: 1rem;
+	color: #333;
+	transition: all .4s ease-out;
+}
+.panel-title > a:hover, .panel-title > a:focus {
+	text-decoration: none;
+	background-color: #fff;
+	color: #000;
+	transition: all .4s ease-out;
+}
+.panel-body {
+	padding: 5px 0 8px 10px;
 }
 
 @media (max-width: 1450px) {
@@ -474,10 +483,20 @@ section .h3 {
             </section>
             <section id="using-library">
               <div class="h4">Using the Library</div>
-              <div class="h5 toggle-text" onclick="$('.cq8').toggle(300);">How can I reserve a room?</div>
-              <div class="cq8 text-box" style="display:none"><a href="../reserve-a-space/">Study Rooms</a> can be reserved for one to four people, depending on location, for up to two hours. <a href="../reserve-a-space/">Meeting Rooms</a> can be reserved for larger groups and longer periods of time.</div>
-              <div class="h5 toggle-text" onclick="$('.cq9').toggle(300);">Can I print or copy at the library? What is the price?</div>
-              <div class="cq9 text-box" style="display:none">You can <a href="../library-basics/#print-copy">print and copy</a> during library hours regardless of device, network or location. Prices are listed and subject to change.</div>
+              <div class="panel-group">
+                <div class="panel">
+                  <div class="panel-title"> <a data-toggle="collapse" data-target="#collapse1B" aria-expanded="false" aria-controls="collapse1B">How can I reserve a room?</a> </div>
+                  <div id="collapse1B" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body"><a href="../reserve-a-space/">Study Rooms</a> can be reserved for one to four people, depending on location, for up to two hours. <a href="../reserve-a-space/">Meeting Rooms</a> can be reserved for larger groups and longer periods of time.</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-toggle="collapse" data-target="#collapse2B" aria-expanded="false" aria-controls="collapse2B">Can I print or copy at the library? What is the price?</a> </div>
+                  <div id="collapse2B" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">You can <a href="../library-basics/#print-copy">print and copy</a> during library hours regardless of device, network or location. Prices are listed and subject to change.</div>
+                  </div>
+                </div>
+              </div>
             </section>
           </section>
           
