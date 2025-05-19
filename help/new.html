@@ -102,10 +102,11 @@ background-color: rgba(0,0,0,.5);
 	color: #000;
 }
 section .h3 {
-	margin-top: 0;
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 500;
 	color: #666;
+	padding: 15px 0;
 }
 section .h4 {
 	margin: 0 0 10px;
@@ -127,7 +128,6 @@ section .h5:hover, section .h5:focus {
 }
 section {
 	border-top: 2px solid #ededed;
-	padding-top: 15px;
 }
 section > div {
 	padding-bottom: 10px;
@@ -602,10 +602,20 @@ section .h3 {
             </section>
             <section id="holds">
               <div class="h4">Holds</div>
-              <div class="h5 toggle-text" onclick="$('.ho1').toggle(300);">When signed in to my account, how do I find my holds?</div>
-              <div class="ho1 text-box" style="display:none">Click on your username at the top of the screen. Find <a href="https://dcl.bibliocommons.com/holds">On Hold</a> under My Borrowing. A click displays the holds in your queue in two sections: Ready Now or Not Ready. See your place in line on the right side of each Not Ready listing.</div>
-              <div class="h5 toggle-text" onclick="$('.ho2').toggle(300);">How long is my hold on the hold shelf? </div>
-              <div class="ho2 text-box" style="display:none">Holds stay on the shelf for six days, through closing on the day they expire. If you are unable to pick up your item before the hold expires, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> before the hold expires for an extension.</div>
+              <div class="panel-group">
+                <div class="panel">
+                  <div class="panel-title"> <a data-toggle="collapse" data-target="#collapse1E" aria-expanded="false" aria-controls="collapse1E">When signed in to my account, how do I find my holds?</a> </div>
+                  <div id="collapse1E" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">Click on your username at the top of the screen. Find <a href="https://dcl.bibliocommons.com/holds">On Hold</a> under My Borrowing. A click displays the holds in your queue in two sections: Ready Now or Not Ready. See your place in line on the right side of each Not Ready listing.</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-toggle="collapse" data-target="#collapse2E" aria-expanded="false" aria-controls="collapse2E">How long is my hold on the hold shelf?</a> </div>
+                  <div id="collapse2E" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">Holds stay on the shelf for six days, through closing on the day they expire. If you are unable to pick up your item before the hold expires, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> before the hold expires for an extension.</div>
+                  </div>
+                </div>
+              </div>
             </section>
           </section>
           
@@ -615,11 +625,21 @@ section .h3 {
             <div class="h3">Digital Media</div>
             <section id="download-stream">
               <div class="h4">Download & Stream</div>
-              <div class="h5 toggle-text" onclick="$('.ds1').toggle(300);">How do I download e-books, audiobooks or other media?</div>
-              <div class="ds1 text-box" style="display:none">Get started now by using our <a href="../digital-media/">Digital Media</a> page, or search the catalog and <a href="https://dcl.bibliocommons.com/v2/search?query=all&searchType=catalogue&locked=true&f_CIRC=ONLINE">filter by Format</a>.
-                It's easy to download or stream <a href="../digital-media/#e-books">e-books</a>, <a href="../digital-media/#audiobooks">audiobooks</a>, <a href="../digital-media/#magazines">magazines</a>, <a href="../digital-media/#videos">videos</a> and <a href="../digital-media/#music">music</a> using your library card number and PIN. For assistance, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a>.</div>
-              <div class="h5 toggle-text" onclick="$('.ds3').toggle(300);">How can I get help with my OverDrive, Hoopla, Kanopy or Flipster account or app?</div>
-              <div class="ds3 text-box" style="display:none">Help and Support links for each service can be found on our <a href="../digital-media/">Digital Media</a> page. Contact us at <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> for further assistance.</div>
+              <div class="panel-group">
+                <div class="panel">
+                  <div class="panel-title"> <a data-toggle="collapse" data-target="#collapse1F" aria-expanded="false" aria-controls="collapse1F">How do I download e-books, audiobooks or other media?</a> </div>
+                  <div id="collapse1F" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">Get started now by using our <a href="../digital-media/">Digital Media</a> page, or search the catalog and <a href="https://dcl.bibliocommons.com/v2/search?query=all&searchType=catalogue&locked=true&f_CIRC=ONLINE">filter by Format</a>.
+                      It's easy to download or stream <a href="../digital-media/#e-books">e-books</a>, <a href="../digital-media/#audiobooks">audiobooks</a>, <a href="../digital-media/#magazines">magazines</a>, <a href="../digital-media/#videos">videos</a> and <a href="../digital-media/#music">music</a> using your library card number and PIN. For assistance, call <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a>.</div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-toggle="collapse" data-target="#collapse2F" aria-expanded="false" aria-controls="collapse2F">How can I get help with my OverDrive, Hoopla, Kanopy or Flipster account or app?</a> </div>
+                  <div id="collapse2F" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">Help and Support links for each service can be found on our <a href="../digital-media/">Digital Media</a> page. Contact us at <a class="text-nowrap" href="tel:+13037917323">(303) 791-7323</a> for further assistance.</div>
+                  </div>
+                </div>
+              </div>
             </section>
           </section>
           
