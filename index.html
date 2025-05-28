@@ -47,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
-<!-- pinterest - do not remove --> 
+<!-- pinterest - do not remove -->
 
 <style>
 #general-alert {
@@ -68,30 +68,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	margin: 0 auto;
 	display: flex;
 	width: 100%;
-}
-.video-container {
-	position: relative;
-	overflow: hidden;
-	background: #7864A9;
-width: calc(100% * 0.5);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-video#bgvid {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	transform: translateX(-50%) translateY(-50%);
-	background: #7864A9 url("bugs-video.jpg") center center/cover;
-	background-size: cover;
-}
-video {
-	display: block;
 }
 .srp-info {
 	background: #7864A9;
@@ -250,6 +226,33 @@ h2.fete-heading-one {
 	color: #000;
 }
 
+@media (min-width: 955px) {
+.video-container {
+	position: relative;
+	overflow: hidden;
+	background: #7864A9;
+width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+video#bgvid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translateX(-50%) translateY(-50%);
+	background: #7864A9 url("bugs-video.jpg") center center/cover;
+	background-size: cover;
+}
+video {
+	display: block;
+}
+}
+
 @media (max-width: 950px) {
 .authors-container, .storytime-fete-container, .srp-container, .authors-container, .flood-container {
 	max-width: 720px;
@@ -260,7 +263,7 @@ h2.fete-heading-one {
 .eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .srp-info, .srp-content, .authors-info, .authors-content {
 	width: 100%;
 }
-	.storytime-wrapper, .fete-wrapper {
+.storytime-wrapper, .fete-wrapper {
 	padding: 70px 15px 80px;
 }
 .srp-content {
@@ -274,18 +277,14 @@ h2.fete-heading-one {
 	padding: 120px 15px 325px;
 }
 .video-container {
-	overflow: hidden;
-	display: block;
-	order: 1;
-	width: 100%;
-	max-height: 500px;
+	display: inherit;
 }
-	h1.srp-heading-one {
+h1.srp-heading-one {
 	margin: 0 0 10px;
 }
-	
 video#bgvid {
-	position: inherit;
+	width: 100%!important;
+	height: auto;
 }
 .srp-content img {
 	display: none;
@@ -490,72 +489,72 @@ video#bgvid {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row background-row">
-    <section>
-      <div class="srp-container">
-        <div class="srp-wrapper">
-          <div class="srp-info">
-            <div class="srp-content"><img src="ladybug-flower.jpg" alt="">
-              <h1 class="srp-heading-one">Don’t Bug Me, I’m Reading!</h1>
-              <div class="srp-heading-two">
-                <div>Summer reading registration is open! <a class="white text-underline" href="summer-reading">Sign up today</a>. And drop by May&nbsp;31, 10AM-2PM, for Prize Pickup Kickoff!</div>
+    <div class="row background-row">
+      <section>
+        <div class="srp-container">
+          <div class="srp-wrapper">
+            <div class="srp-info">
+              <div class="srp-content"><img src="ladybug-flower.jpg" alt="">
+                <h1 class="srp-heading-one">Don’t Bug Me, I’m Reading!</h1>
+                <div class="srp-heading-two">
+                  <div>Summer reading registration is open! <a class="white text-underline" href="summer-reading">Sign up today</a>. And drop by May&nbsp;31, 10AM-2PM, for Prize Pickup Kickoff!</div>
+                </div>
+              </div>
+            </div>
+            <div class="video-container">
+              <video autoplay muted playsinline poster="bugs-video.jpg" id="bgvid">
+                <source src="bugs-video.mp4" type="video/mp4" />
+                Your browser does not support the background video tag.
+                <source src="bugs-video.mp4" type="video/webm" />
+                Your browser does not support the background video tag. </video>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="authors-container">
+          <div class="authors-wrapper">
+            <div class="authors-info">
+              <div class="authors-content">
+                <h2 class="authors-heading-one">Meet the Authors!</h2>
+                <div class="authors-heading-two">
+                  <div>Don't miss these <a class="black text-underline" href="featured-events/#author-events">exciting book talks</a> and signings featuring bestselling <a class="black text-underline" href="featured-events/">writers of romantasy</a> and thrillers. </div>
+                </div>
+              </div>
+            </div>
+            <div class="eh-wrapper">
+              <div id="eh-box"></div>
+              <div class="eh-content">
+                <h2 class="eh-heading-one">Host It Here!</h2>
+                <div>We've got a space for every celebration or milestone!</div>
+                <div class="padding-top-5"><a class="black text-underline" href="reserve-a-space/#host-your-event">Learn&nbsp;More</a></div>
               </div>
             </div>
           </div>
-          <div class="video-container">
-            <video autoplay muted playsinline poster="bugs-video.jpg" id="bgvid">
-              <source src="bugs-video.mp4" type="video/mp4" />
-              Your browser does not support the background video tag.
-              <source src="bugs-video.mp4" type="video/webm" />
-              Your browser does not support the background video tag. </video>
-          </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="authors-container">
-        <div class="authors-wrapper">
-          <div class="authors-info">
-            <div class="authors-content">
-              <h2 class="authors-heading-one">Meet the Authors!</h2>
-              <div class="authors-heading-two">
-                <div>Don't miss these <a class="black text-underline" href="featured-events/#author-events">exciting book talks</a> and signings featuring bestselling <a class="black text-underline" href="featured-events/">writers of romantasy</a> and thrillers. </div>
+      </section>
+      <section>
+        <div class="storytime-fete-container">
+          <div class="storytime-fete-wrapper">
+            <div class="storytime-wrapper">
+              <div class="storytime-content">
+                <div><i class="icon-font fa-duotone fa-light fa-child-reaching" style="--fa-secondary-opacity: 0.1;"></i></div>
+                <h2 class="storytime-heading-one">Outdoor Storytime</h2>
+                <div>Coming soon! <a class="black text-underline" href="https://go.dcl.org/events?t=Storytime&el=Virtual&term=Outdoor+Storytime&r=months&n=4">Learn More</a></div>
+              </div>
+            </div>
+            <div class="fete-wrapper">
+              <div class="fete-content">
+                <div><i class="icon-font fa-duotone fa-light fa-champagne-glasses" style="--fa-secondary-opacity: 0.1;"></i></div>
+                <h2 class="fete-heading-one">10th Annual Fête des Fables Gala</h2>
+                <div>Be our guest as we celebrate the timeless tale of Beauty and the Beast. <a class="black text-underline" href="fete-des-fables/">Tickets on sale</a>!</div>
               </div>
             </div>
           </div>
-          <div class="eh-wrapper">
-            <div id="eh-box"></div>
-            <div class="eh-content">
-              <h2 class="eh-heading-one">Host It Here!</h2>
-              <div>We've got a space for every celebration or milestone!</div>
-              <div class="padding-top-5"><a class="black text-underline" href="reserve-a-space/#host-your-event">Learn&nbsp;More</a></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="storytime-fete-container">
-        <div class="storytime-fete-wrapper">
-          <div class="storytime-wrapper">
-            <div class="storytime-content">
-              <div><i class="icon-font fa-duotone fa-light fa-child-reaching" style="--fa-secondary-opacity: 0.1;"></i></div>
-              <h2 class="storytime-heading-one">Outdoor Storytime</h2>
-              <div>Coming soon! <a class="black text-underline" href="https://go.dcl.org/events?t=Storytime&el=Virtual&term=Outdoor+Storytime&r=months&n=4">Learn More</a></div>
-            </div>
-          </div>
-          <div class="fete-wrapper">
-            <div class="fete-content">
-              <div><i class="icon-font fa-duotone fa-light fa-champagne-glasses" style="--fa-secondary-opacity: 0.1;"></i></div>
-              <h2 class="fete-heading-one">10th Annual Fête des Fables Gala</h2>
-              <div>Be our guest as we celebrate the timeless tale of Beauty and the Beast. <a class="black text-underline" href="fete-des-fables/">Tickets on sale</a>!</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
+      </section>
+    </div>
+    <script>
     var images = ['eh-one.jpg', 'eh-two.jpg', 'eh-three.jpg', 'eh-four.jpg', 'eh-five.jpg'];
     $('<img alt="Birthday Party" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#eh-box');
 	 var images = ['flood-one.jpg', 'flood-two.jpg', 'flood-three.jpg'];
@@ -623,8 +622,7 @@ video#bgvid {
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
