@@ -110,7 +110,7 @@ h1.floridian {
 	background: #317138 url("flower-background.webp") center center repeat;
 }
 .background-four {
-	background: #544386;
+	background: #544386 url("bees-background.webp") center center no-repeat;
 	font-weight: 500;
 }
 .custom-container {
@@ -253,8 +253,8 @@ h1.floridian {
 	color: #000;
 }
 .counter-wrapper {
-	background: #544386 url("goals-background-placeholder.webp") 100% 0% no-repeat;
-	padding-bottom: 160px;
+	background: #544386 url("goals-background.webp") 100% 0% no-repeat;
+	padding-bottom: 125px;
 	max-width: 720px;
 	margin: 0 auto;
 }
@@ -265,6 +265,7 @@ h1.floridian {
 	text-align: center;
 	line-height: 1;
 	padding-top: 60px;
+	text-shadow: 0px 0px 35px rgba(255,255,255,.5);
 }
 .counter:not(.is-visible) {
 	visibility: hidden;
@@ -274,6 +275,7 @@ h1.floridian {
 	font-size: 1.2rem;
 	font-weight: 500;
 	margin-top: 10px;
+	text-transform: uppercase;
 }
 .minutes-placeholder {
 	color: #fff;
@@ -332,7 +334,7 @@ h1.floridian {
 	margin: 5px 0;
 }
 .counter-wrapper {
-	background: #544386 url("goals-background-placeholder.webp") 50% 100% no-repeat;
+	background: #544386 url("goals-background.webp") 50% 100% no-repeat;
 	padding-bottom: 295px;
 	max-width: 720px;
 	margin: 0 auto;
@@ -690,9 +692,9 @@ h1.floridian {
             </div>--> 
               </div>
               <div class="counter-wrapper">
-                <div class="minutes-placeholder">Minutes tracking bee-gins May 31!</div>
-                <!--<div class="counter">0</div>
-                <div class="minutes text-center">Minutes Read</div>--> 
+                <!--<div class="minutes-placeholder">Minutes tracking bee-gins May 31!</div>-->
+                <div class="counter">63,959</div>
+                <div class="minutes text-center">Minutes Read</div>
               </div>
             </div>
           </div>
@@ -801,7 +803,7 @@ const callback = entries => {
     const el = entry.target;
     if (entry.isIntersecting && !el.classList.contains('is-visible')) {
       counterUp(el, {
-        duration: 15000,
+        duration: 10000,
         delay: 36 });
 
       el.classList.add('is-visible');
