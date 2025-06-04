@@ -157,6 +157,15 @@ polyline, g {
 .tz-gallery .lightbox img.prizes:hover, .tz-gallery .lightbox img.prizes:focus {
 	transform: scale(1.02) rotate(10deg);
 }
+.tz-gallery .lightbox.lightbox-alt img.prizes {
+	border-radius: 50%;
+	border: 0px;
+	transition: transform .2s ease-in-out;
+}
+.simple-sprite:hover, .simple-sprite:focus {
+	transform: scale(1.02) rotate(10deg);
+	transition: transform .2s ease-in-out;
+}
 .points {
 	font-family: "Larosa Bold", sans-serif;
 	color: #000;
@@ -270,6 +279,24 @@ polyline, g {
 	animation: text-animation 1.2s 0s both;
 	color: #000;
 	text-decoration: none;
+}
+.simple-sprite {
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	background-image: url("hats-small.webp");
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	animation: simple-sprite 10s steps(2) infinite;
+	border: 3px solid #2f2e33;
+	border-radius: 50%;
+	transition: transform .2s ease-in-out;
+}
+@keyframes simple-sprite {
+to {
+background-position: -600px 0;
+}
 }
 .table-condensed > thead > tr > th, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
 	padding: 10px;
@@ -552,10 +579,8 @@ transform: translateX(-8px) translateY(-8px);
                 <div class="points">80 Points:<br>
                   Brew Tour Water Bottle</div>
               </div>
-              <div class="prize-box"> <img class="product-placeholder" src="product-placeholder.jpg" alt=""> 
-                
-                <!--<a class="lightbox" href="dcl-soft-cooler-large.png"> <img class="prizes" src="dcl-soft-cooler-small.jpg" alt="Brew Tour Soft Cooler"></a>-->
-                
+              <div class="prize-box">
+                <div class="simple-sprite"> <a class="lightbox lightbox-alt" href="hats-large.webp"> <img class="prizes" src="hats-href.webp" alt="Choice of Brew Tour Hats"></a> </div>
                 <div class="points">120 Points:<br>
                   Brew Tour Trucker<br>
                   Hat or Sun Hat</div>
