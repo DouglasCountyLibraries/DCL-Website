@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +13,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MV5DM73');</script> 
 <!-- End Google Tag Manager -->
 <!-- InstanceBeginEditable name="title" -->
-<title>Customer Code of Conduct | Douglas County Libraries</title>
-<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
+<title>DCL Playscapers | Douglas County Libraries</title>
+<meta name="keywords" content="Douglas County Libraries, Douglas County Colorado, Playscapes, Play Areas, Library, Events, Event Spaces, Hospitality Services, Meeting Rooms, Study Rooms, Books, Movies, Music, Digital Media, Bestsellers, Staff Picks">
 <meta name="description" content="Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.">
 <!-- InstanceEndEditable -->
 <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
@@ -44,14 +45,264 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .using-the-library-active {
 	background-color: #f5f5f5;
 }
-.custom-container {
-	max-width: 825px;
-	padding: 0 15px 60px;
+.branch-hours-phone {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0 auto;
+	max-width: 500px;
+	justify-content: center;
+}
+ul.branch-hours {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	margin: 3px 0 5px;
+}
+.branch-hours li {
+	text-transform: uppercase;
+	padding: 0 15px;
+	white-space: nowrap;
+}
+/* slideshow */
+	
+.slideshow-container {
+	display: flex;
+	max-width: 1610px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.slideshow-wrapper {
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+}
+.slideshow-image {
+	background: #fff;
+width: calc(100% * 0.65);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.slideshow-info {
+	background: #f5f5f5;
+	color: #000;
+width: calc(100% * 0.35);
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	justify-content: center;
+	margin-left: -40px;
+}
+.slideshow-arrow {
+	background: url("../shared-assets/images/slideshow-arrow-left.png") 100% 48% no-repeat;
+	width: 40px;
+	position: relative;
+	z-index: 100;
+	left: -30px;
+}
+.slideshow-content {
+	padding: 0 30px 20px;
+}
+.slideshow-pic {
+	min-height: 600px;
+	position: relative;
+}
+.pic-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+figure {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	/*animation*/
+	animation: slideShow 54s ease-out infinite 0s;
+}
+.pic-2 {
+	transform-origin: bottom right;
+}
+.pic-3 {
+	transform-origin: top left;
+}
+.pic-4 {
+	transform-origin: top right;
+}
+.pic-5 {
+	transform-origin: bottom left;
+}
+.pic-6 {
+	transform-origin: center center;
+}
+.pic-7 {
+	transform-origin: bottom right;
+}
+.pic-8 {
+	transform-origin: top left;
+}
+.pic-9 {
+	transform-origin: bottom left;
+}
+/* carousel */
+	
+.flickity-container {
+	max-width: 1610px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.carousel-cell {
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
+}
+.carousel-cell img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
+}
+.flickity-page-dots .dot {
+	background-color: #000;
+}
+.flickity-prev-next-button {
+	display: none;
+}
+h2.featured-heading {
+	margin: 0 15px 5px;
+}
+.location-events {
+	padding: 50px 0 40px;
+}
+.widget-wrapper {
+	max-width: 1030px;
+	margin: 0 auto;
+	padding-top: 5px;
+}
+.item-wrapper {
+	display: flex;
+	align-items: center;
+}
+.item-wrapper img {
+	padding: 0 15px;
+}
+.art-item {
+	flex-basis: 60%;
+}
+
+
+/* keyframes*/
+@keyframes slideShow {
+0% {
+opacity: 0;
+transform:scale(1);
+}
+2% {
+opacity: 1
+}
+15% {
+opacity: 1;
+}
+18% {
+opacity: 0;
+transform:scale(1.1);
+}
+100% {
+opacity: 0;
+transform:scale(1);
+}
+}
+
+@media (max-width: 1150px) {
+.page-nav {
+	max-width: 800px;
+	margin: 0 auto;
+}
+}
+
+@media (max-width: 1060px) {
+.widget-wrapper {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	width: 475px;
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-wrapper, .item-wrapper {
+	flex-direction: column;
+}
+.slideshow-info {
+	margin: -40px 0 0;
+	text-align: center;
+}
+.slideshow-content {
+	padding: 40px 15px 50px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.slideshow-arrow {
+	background: url("../shared-assets/images/slideshow-arrow-top.png") 50% 100% no-repeat;
+	width: 100%;
+	height: 40px;
+	z-index: 100;
+	top: -30px;
+	position: relative;
+	margin: 0 auto;
+	left: auto;
+}
+.slideshow-image, .slideshow-info {
+	width: 100%;
+}
+.item-wrapper img {
+	padding-bottom: 15px;
+}
+.art-item {
+	text-align: center;
+}
+}
+
+@media (max-width: 725px) {
+.slideshow-pic {
+	min-height: 400px;
+}
+}
+
+@media (max-width: 569px) {
+.page-nav-item a {
+	text-align: left;
+	padding-left: 15px;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-pic {
+	min-height: 300px;
+}
+.slideshow-arrow {
+	display: none;
+}
+.slideshow-info {
+	margin: 0;
+}
+.widget-wrapper {
+	width: auto;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -246,34 +497,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row padding-bottom-20 border-top">
-    <div class="container text-center">
-      <h1 class="page-heading">DCL Playscapes</h1>
-      <h2 class="page-subheading">Donec a luctus lorem. Vestibulum ac erat quis risus hendrerit vestibulum. Suspendisse ante turpis, semper quis pharetra eu, luctus sit amet nisl.</h2>
-     
+    <div class="row padding-bottom-20 border-top">
+      <div class="container text-center">
+        <h1 class="page-heading">DCL Playscapes</h1>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Six DCL locations include children's play areas we call Playscapes. Find one at a location near you, or visit <a href="../locations/">all our locations</a>.</h2>
+        </div>
+      </div>
     </div>
-  </div>
-	  
     <section>
       <div id="play-area" class="row bg-gray-5">
         <div class="container padding-top-50 padding-bottom-20 text-center">
-          <div class="h6 text-uppercase no-margin">Kid-friendly Fun:</div>
-          <h2 class="no-margin">Little Letters Post Office</h2>
+          <h2 class="text-uppercase no-margin">Castle Pines</h2>
+          <h3 class="no-margin">Little Letters Post Office</h3>
         </div>
       </div>
       <div class="row bg-gray-5">
         <div class="flickity-container">
           <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
-            <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
-            <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/one.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/two.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/three.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/four.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/five.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/six.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/seven.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/eight.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/nine.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="../castle-pines/carousel/ten.jpg" alt=""></div>
           </div>
         </div>
       </div>
@@ -282,9 +533,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="max-width-80">The library’s interactive play space features fun aspects of a real-life post office, including a standalone mail delivery truck. Kids can process and deliver mail using their imaginations and provided play materials, equipment, and devices. They can also dress up in various postal employee uniforms to accept packages and mail, weigh the items, ring them up on the cash register, place them on the conveyor belt, and sort them into mail slots.</div>
         </div>
       </div>
-    </section>	  
-
-  <!-- InstanceEndEditable --> </div>
+    </section>
+    <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -346,7 +596,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -405,4 +665,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
