@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         var head            = document.getElementsByTagName('head')[0];
         var script          = document.createElement('script');
         script.type         = 'text/javascript';
-        script.src          = 'https://dclco.patronpoint.com/media/js/mautic-form.js?vd7457ecf';
+        script.src          = 'https://dclco.patronpoint.com/media/js/mautic-form.js?v8d8d6595';
         script.onload       = function() {
             MauticSDK.onLoad();
         };
@@ -65,6 +65,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         MauticSDK.onLoad();
     }
 </script>
+<script type="text/javascript">
+    
+    
+    if (typeof MauticFormCallback == 'undefined') {
+        var MauticFormCallback = {};
+    }
+    
+    MauticFormCallback['newslettersegmentsignup'] = {
+       onResponseEnd: function (response) {
+           onLoad5b565ee920b5f511ff03a83d4a591993();
+        }
+    };
+    
+    function verifyCallback_5b565ee920b5f511ff03a83d4a591993( response ) {
+        document.getElementById("mauticform_input_newslettersegmentsignup_i_am_not_a_robot").value = response;
+    }
+    function onLoad5b565ee920b5f511ff03a83d4a591993() { 
+        grecaptcha.execute('6LcITXwrAAAAAJRLCqFGE-n8oyXLFisgQz9GBmfA', {action: 'form'}).then(function(token) {
+            verifyCallback_5b565ee920b5f511ff03a83d4a591993(token);
+         }); 
+    }
+</script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
 <style>
 .mauticform-row {
 	margin-bottom: 10px;
@@ -365,14 +389,14 @@ input.mauticform-checkboxgrp-checkbox {
                       <input id="mauticform_input_newslettersegmentsignup_email" name="mauticform[email]" value="" class="mauticform-input form-control" type="email">
                       <span class="mauticform-errormsg" style="display: none;">Please enter a valid email address</span> </div>
                     
-                    <!--maptcha begins-->
+                    <!--maptcha begins
                     
                     <div id="mauticform_newslettersegmentsignup_honeypot" data-validate="honeypot" data-validation-type="captcha" class="mauticform-row mauticform-text mauticform-field-6 mauticform-required">
                       <label id="mauticform_label_newslettersegmentsignup_honeypot" for="mauticform_input_newslettersegmentsignup_honeypot" class="mauticform-label">This form is not for robots:</label>
                       <input id="mauticform_input_newslettersegmentsignup_honeypot" name="mauticform[honeypot]" value="" placeholder="2+3=" class="mauticform-input form-control" type="text">
                       <span class="mauticform-errormsg" style="display: none;">This is required.</span> </div>
                     
-                    <!--maptcha ends--> 
+                    maptcha ends--> 
                     
                   </div>
                   <div id="mauticform_newslettersegmentsignup_newsletter_signup" class="mauticform-row mauticform-checkboxgrp mauticform-field-4">
@@ -393,10 +417,16 @@ input.mauticform-checkboxgrp-checkbox {
                     <div>Be the first to learn about upcoming events and happenings geared for kids and families each month, along with age-appropriate reading recommendations.</div>
                   </div>
                   
-                  <!--<div id="mauticform_newslettersegmentsignup_recaptcha" class="mauticform-row mauticform-div-wrapper mauticform-field-7">
-                  <div class="g-recaptcha" data-sitekey="6Lfy_6ceAAAAADb0B0uCTG09105pcRzqUrDIcUtK" data-callback="verifyCallback_5b565ee920b5f511ff03a83d4a591993"></div>
-                  <input id="mauticform_input_newslettersegmentsignup_recaptcha" name="mauticform[recaptcha]" value="" class="mauticform-input" type="hidden">
-                  <span class="mauticform-errormsg" style="display: none;"></span> </div>-->
+                    <!--recaptcha begins--> 
+                    
+                    
+                  	<div id="mauticform_newslettersegmentsignup_i_am_not_a_robot" class="mauticform-row mauticform-div-wrapper mauticform-field-6">
+        <label id="mauticform_label_newslettersegmentsignup_i_am_not_a_robot" for="mauticform_input_newslettersegmentsignup_i_am_not_a_robot" class="mauticform-label">I am not a robot</label><div class="g-recaptcha" data-sitekey="6LcITXwrAAAAAJRLCqFGE-n8oyXLFisgQz9GBmfA" data-callback="verifyCallback_5b565ee920b5f511ff03a83d4a591993"></div>        <input id="mauticform_input_newslettersegmentsignup_i_am_not_a_robot" name="mauticform[i_am_not_a_robot]" value="" class="mauticform-input" type="hidden">
+        <span class="mauticform-errormsg" style="display: none;"></span>
+    </div>
+                    
+                    
+                    <!--recaptcha ends--> 
                   
                   <div class="inner-wrapper"> </div>
                   <div id="mauticform_newslettersegmentsignup_submit" class="text-center padding-top-20 mauticform-row mauticform-button-wrapper mauticform-field-8">
@@ -404,9 +434,9 @@ input.mauticform-checkboxgrp-checkbox {
                   </div>
                 </div>
               </div>
-              <input type="hidden" name="mauticform[formId]" id="mauticform_newslettersegmentsignup_id" value="4">
-              <input type="hidden" name="mauticform[return]" id="mauticform_newslettersegmentsignup_return" value="">
-              <input type="hidden" name="mauticform[formName]" id="mauticform_newslettersegmentsignup_name" value="newslettersegmentsignup">
+                      <input type="hidden" name="mauticform[formId]" id="mauticform_newslettersegmentsignup_id" value="4">
+        <input type="hidden" name="mauticform[return]" id="mauticform_newslettersegmentsignup_return" value="">
+        <input type="hidden" name="mauticform[formName]" id="mauticform_newslettersegmentsignup_name" value="newslettersegmentsignup">
             </form>
           </div>
         </div>
