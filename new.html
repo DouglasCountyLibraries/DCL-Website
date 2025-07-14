@@ -75,6 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1440px;
     min-height: 640px;
     margin: 0 auto;
+    padding-top: 60px;
 }
 .srp-wrapper {
     margin: 0 auto;
@@ -82,13 +83,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 100%;
 }
 .srp-info {
-    background: #2f7138;
-    color: #fff;
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
+	background: #cb6837;
+	color: #fff;
+	width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	text-align: center;
+	justify-content: center;
 }
 h1.srp-heading-one {
     color: #fff;
@@ -101,10 +103,29 @@ h1.srp-heading-one {
     font-size: 1.25rem;
 }
 .srp-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 80px 15px 65px;
+	max-width: 680px;
+	margin: 0 auto;
+	padding: 0px 30px 50px;
 }
+.video-container {
+	position: relative;
+	overflow: hidden;
+	background: #d6a475;
+	width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+}
+    h1.video-heading-one {
+    color: #000;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 40px;
+}
+
 /* authors & eh */	
 
 .authors-container {
@@ -113,7 +134,7 @@ h1.srp-heading-one {
     min-height: 640px;
     margin: 0 auto;
     color: #000;
-    padding-top: 120px;
+
 }
 .authors-wrapper {
     margin: 0 auto;
@@ -239,30 +260,7 @@ h2.fete-heading-one {
 }
 
 @media (min-width: 955px) {
-.video-container {
-    position: relative;
-    overflow: hidden;
-    background: #7864A9;
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-video#bgvid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    background: #7864A9 url("bee-movie.jpg") center center/cover;
-    background-size: cover;
-}
-video {
-    display: block;
-}
+
 }
 
 @media (max-width: 950px) {
@@ -502,7 +500,31 @@ video#bgvid {
     </div>
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row background-row">
-      <section>
+        
+          <section>
+        <div class="srp-container">
+          <div class="srp-wrapper">
+            <div class="srp-info">
+              <div class="srp-content">
+                <h1 class="srp-heading-one">DCL Is the Place to Bee!</h1>
+                <div class="srp-heading-two">
+                  <div>Curabitur at est et risus vestibulum pharetra. Nulla sed orci risus, vel volutpat dui.</div>
+                </div>
+              </div>
+            </div>
+            <div class="video-container">
+              <h1 class="video-heading-one">Placeholder</h1>
+            </div>
+          </div>
+        </div>
+      </section>    
+        
+        
+
+      <div class="parallax-left"></div>
+
+        
+              <section>
         <div class="authors-container">
           <div class="authors-wrapper">
             <div class="authors-info">
@@ -531,29 +553,7 @@ video#bgvid {
           </div>
         </div>
       </section>
-      <div class="parallax-left"></div>
-      <section>
-        <div class="srp-container">
-          <div class="srp-wrapper">
-            <div class="srp-info">
-              <div class="srp-content"><img src="dragonfly.webp" alt="">
-                <h1 class="srp-heading-one">DCL Is the Place to Bee!</h1>
-                <div class="srp-heading-two">
-                  <div>Check out these <a class="white text-underline" href="featured-events/">buzzworthy events</a> for all ages.</div>
-                  <div class="padding-top-5">And don't miss Summer Reading! <a class="white text-underline" href="summer-reading">Register Now</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="video-container">
-              <video autoplay muted playsinline poster="bee-movie.jpg" id="bgvid">
-                <source src="bee-movie.mp4" type="video/mp4" />
-                Your browser does not support the background video tag.
-                <source src="bugs-movie.webm" type="video/webm" />
-                Your browser does not support the background video tag. </video>
-            </div>
-          </div>
-        </div>
-      </section>
+        
       <div class="parallax-right"></div>
       <section>
         <div class="storytime-fete-container">
