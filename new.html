@@ -108,15 +108,16 @@ h1.srp-heading-one {
     padding: 0px 30px 50px;
 }
 .video-container {
-    position: relative;
-    overflow: hidden;
-    background: #d6a475;
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
+	position: relative;
+	overflow: hidden;
+	background: #d6a475;
+	width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+	min-height: 575px;
 }
 h1.video-heading-one {
     color: #000;
@@ -140,14 +141,17 @@ h1.video-heading-one {
     width: 100%;
 }
 .authors-info {
-    background: #E7D9A7;
-    color: #000;
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
+	background: #E7D9A7;
+	color: #000;
+	width: calc(100% * 0.5);
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	min-height: 575px;
 }
 h2.authors-heading-one {
     color: #000;
@@ -174,11 +178,15 @@ width: calc(100% * 0.5);
     justify-content: center;
 }
 .eh-content {
-    margin: 0 auto;
-    color: #000;
-    font-size: 1.25rem;
-    text-align: center;
-    max-width: 650px;
+	margin: 0 auto;
+	color: #000;
+	font-size: 1.25rem;
+	text-align: center;
+	max-width: 650px;
+	min-height: 675px;
+	display: flex;
+	align-content: center;
+	align-items: center;
 }
 h2.eh-heading-one {
     font-size: 1.875rem;
@@ -258,50 +266,46 @@ h2.fete-heading-one {
 }
 
 @media (min-width: 955px) {
+
 }
 
 @media (max-width: 950px) {
-.authors-container, .storytime-fete-container, .srp-container, .authors-container, .flood-container {
-    max-width: 720px;
+        .srp-container {
+
+	min-height: inherit;
+
 }
+
 .authors-wrapper, .storytime-fete-wrapper, .srp-wrapper, .authors-wrapper, .flood-wrapper {
     flex-direction: column;
 }
-.eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .srp-info, .srp-content, .authors-info, .authors-content {
+.eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .srp-info, .srp-content, .authors-info, .authors-content, .video-container {
     width: 100%;
 }
 .storytime-wrapper, .fete-wrapper {
     padding: 70px 15px 80px;
 }
 .srp-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 70px 15px 85px;
+	max-width: 680px;
+	margin: 0 auto;
+	padding: 70px 15px 85px;
+	min-height: 575px;
+	display: flex;
+	flex-direction: column;
+	/* align-content: center; */
+	/* align-items: center; */
+	justify-content: center;
 }
 .authors-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 120px 15px 325px;
+	max-width: 680px;
+	margin: 0 auto;
+	padding: 0 15px 40px;
 }
-.video-container {
-    display: inherit;
-}
-h1.srp-heading-one {
-    margin: 0 0 5px;
-}
-video#bgvid {
-    width: 100%!important;
-    height: auto;
-}
-.srp-content img {
-    display: none;
-}
-.srp-info {
-    order: 2;
-}
-.eh-wrapper, .fete-wrapper {
-    margin-top: 30px;
-}
+
+
+
+
+
 }
 </style>
 <!-- InstanceEndEditable -->
