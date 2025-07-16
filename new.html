@@ -107,7 +107,6 @@ width: calc(100% * 0.5);
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    text-transform: uppercase;
     min-height: 575px;
 }
 h1.video-heading-one {
@@ -116,6 +115,44 @@ h1.video-heading-one {
     font-weight: 500;
     line-height: 1.2;
     margin: 0 0 40px;
+}
+.simple-sprite {
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 190px;
+    background-image: url("animated-bee.webp");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    animation: simple-sprite .01s steps(2) infinite;
+}
+@keyframes simple-sprite {
+to {
+background-position: -380px 0;
+}
+}
+.bee-move {
+    animation: bee-move 8s linear infinite both;
+}
+@keyframes bee-move {
+0% {
+transform: translate(0);
+}
+20% {
+transform: translate(-4px, 4px) rotate(1deg);
+}
+40% {
+transform: translate(-8px, -4px);
+}
+60% {
+transform: translate(4px, 4px) rotate(1deg);
+}
+80% {
+transform: translate(8px, -4px);
+}
+100% {
+transform: translate(0);
+}
 }
 /* authors & eh */	
 
@@ -132,7 +169,7 @@ h1.video-heading-one {
     width: 100%;
 }
 .authors-info {
-    background: #E7D9A7;
+    background: #f3ebd7;
     color: #000;
 width: calc(100% * 0.5);
     display: flex;
@@ -160,38 +197,18 @@ h2.authors-heading-one {
     margin: 0 auto;
     padding: 0 60px 20px;
 }
-.eh-wrapper {
-    background: #f3ebd7;
+.authors-image {
+    background: #444 url("author-event.webp");
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
-    /* padding: 80px 15px 30px; */
     justify-content: center;
-}
-.eh-content {
-    margin: 0 auto;
-    color: #000;
-    font-size: 1.25rem;
-    text-align: center;
-    max-width: 650px;
-    min-height: 575px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-}
-h2.eh-heading-one {
-    font-size: 1.875rem;
-    line-height: 1.2;
-    margin: 0 0 40px;
-    font-weight: 500;
-    color: #000;
-    text-transform: uppercase
 }
 /* outdoor storytime & fete */
 	
 .icon-font {
     font-size: 140px;
-    padding-bottom: 30px;
+    padding: 50px 0 30px;
     color: #fff;
 }
 .icon-font-alt {
@@ -492,15 +509,18 @@ h2.fete-heading-one {
           <div class="srp-wrapper">
             <div class="srp-info">
               <div class="srp-content">
+                <div class="bee-move">
+                  <div class="simple-sprite"></div>
+                </div>
                 <h1 class="srp-heading-one">DCL Is the Place to Bee!</h1>
                 <div class="srp-heading-two">
-                  <div>Check out these <a class="white text-underline" href="featured-events/">buzzworthy events</a> for all ages.</div>
-                  <div class="padding-top-5">And don't miss Summer Reading! <a class="white text-underline" href="summer-reading">Register Now</a></div>
+                  <div>Join us for <a class="white text-underline" href="featured-events/#highlighted-events">sweet events</a> for all ages.</div>
                 </div>
               </div>
             </div>
             <div class="video-container">
-              <h1 class="video-heading-one">Placeholder</h1>
+              <h2 class="srp-heading-one">Summer Reading</h2>
+              <div class="srp-heading-two">There’s still time to squash your reading goals! Register Now</div>
             </div>
           </div>
         </div>
@@ -508,20 +528,15 @@ h2.fete-heading-one {
       <section>
         <div class="authors-container">
           <div class="authors-wrapper">
-            <div class="eh-wrapper">
-              <div class="eh-content">
-                <h2 class="eh-heading-one">Placeholder</h2>
-              </div>
-            </div>
+            <div class="authors-image"></div>
             <div class="authors-info">
               <div class="authors-content">
-                <h2 class="authors-heading-one">Buzzworthy Authors You Can’t Miss!</h2>
-                <div class="authors-heading-two"> Join us for these page-turning events.<br>
-                  <a class="black text-underline" href="featured-events/">Get Tickets </a> </div>
+                <h2 class="authors-heading-one">Buzzworthy Authors</h2>
+                <div class="authors-heading-two">Don’t miss these bestselling storytellers!<br>
+                  <a class="black text-underline" href="featured-events/">Learn More</a></div>
                 <ul class="text-left">
-                  <li>Epic Romantasy with Jade Presley, Mai Corland, K.A. Linde & Abigail Owen | Wednesday, June 25, 7PM, DCSD Legacy Campus</li>
-                  <li>Karin Slaughter | Saturday, August 16, 7PM, Denver Marriott South Park Meadows</li>
-                  <li>Taylor Jenkins Reid | Friday, October 10, 7PM | On Sale Soon!</li>
+                  <li>Karin Slaughter&nbsp;| August&nbsp;16, 7PM, Denver Marriott South Park Meadows</li>
+                  <li>Taylor Jenkins Reid&nbsp;| October&nbsp;10, 7PM, Hyatt Regency DTC, On Sale Soon!</li>
                   <li>Meet <a class="black text-underline" href="featured-events/#author-events">even more authors</a>!</li>
                 </ul>
               </div>
