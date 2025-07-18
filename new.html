@@ -136,23 +136,23 @@ background-position: -380px 0;
 }
 }
 .bee-move {
-    animation: bee-move 8s linear infinite both;
+    animation: bee-move 20s linear infinite both;
 }
 @keyframes bee-move {
 0% {
 transform: translate(0);
 }
 20% {
-transform: translate(-4px, 4px) rotate(1deg);
+transform: translate(-4px, 4px) rotate(3deg);
 }
 40% {
-transform: translate(-8px, -4px);
+transform: translate(-8px, -4px) scale(.95);
 }
 60% {
 transform: translate(4px, 4px) rotate(1deg);
 }
 80% {
-transform: translate(8px, -4px);
+transform: translate(8px, -4px) scale(.95);
 }
 100% {
 transform: translate(0);
@@ -281,10 +281,19 @@ h2.fete-heading-one {
 
 @media (max-width: 950px) {
 .background-row {
-    background: #fff;
+    background: #7895a6 url("bt-background-medium.webp") 50% 100% fixed no-repeat;
 }
 .bee-srp-container {
     padding-top: 30px;
+}
+.bee-srp-container, .authors-container, .storytime-fete-container {
+    max-width: 720px;
+}
+.bee-srp-container, .authors-container, .storytime-fete-container {
+    padding-bottom: 300px;
+}
+.fete-wrapper {
+    margin-bottom: 300px;
 }
 .authors-wrapper, .storytime-fete-wrapper, .bee-srp-wrapper, .authors-wrapper, .flood-wrapper {
     flex-direction: column;
@@ -295,6 +304,10 @@ h2.fete-heading-one {
 .storytime-wrapper, .fete-wrapper {
     padding: 70px 15px 80px;
 }
+.srp-container, .authors-info {
+    min-height: inherit;
+    padding: 100px 15px 120px;
+}
 .bee-content {
     max-width: 680px;
     margin: 0 auto;
@@ -302,16 +315,21 @@ h2.fete-heading-one {
     min-height: 575px;
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
-	/* align-items: center; */
     justify-content: center;
 }
+.authors-image {
+    min-height: 640px;
+    width: 100%;
+}
 .authors-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 15px 40px;
+    padding: 0;
 }
 }
+@media (max-width: 500px) {
+.background-row {
+    background: #7895a6 url("bt-background-small.webp") 50% 100% fixed no-repeat;
+}
+)
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -531,8 +549,7 @@ h2.fete-heading-one {
             <div class="authors-info">
               <div class="authors-content">
                 <h2 class="authors-heading-one">Buzzworthy Authors</h2>
-                <div class="authors-heading-two">Don’t miss these bestselling storytellers!<br>
-                  <a class="black text-underline" href="featured-events/">Learn More</a></div>
+                <div class="authors-heading-two">Don’t miss these bestselling storytellers! <a class="black text-underline" href="featured-events/">Learn&nbsp;More</a></div>
                 <ul class="text-left">
                   <li>Karin Slaughter&nbsp;| August&nbsp;16, 7PM, Denver Marriott South Park Meadows</li>
                   <li>Taylor Jenkins Reid&nbsp;| October&nbsp;10, 7PM, Hyatt Regency DTC, On Sale Soon!</li>
