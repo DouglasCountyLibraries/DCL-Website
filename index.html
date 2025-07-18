@@ -50,250 +50,288 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 
 <style>
-#general-alert {
-	margin-bottom: 30px;
+.gradient-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+}
+.bee-srp-container, .authors-container, .storytime-fete-container {
+    padding-bottom: 500px;
 }
 .background-row {
-	background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+    background: #7895a6 url("bt-background.webp") 40% 100% fixed no-repeat;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 /* srp & video */
 	
-.srp-container {
-	display: flex;
-	max-width: 1440px;
-	min-height: 640px;
-	margin: 0 auto;
+.bee-srp-container {
+    display: flex;
+    max-width: 1440px;
+    min-height: 640px;
+    margin: 0 auto;
+    padding-top: 100px;
 }
-.srp-wrapper {
-	margin: 0 auto;
-	display: flex;
-	width: 100%;
+.bee-srp-wrapper {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
 }
-.srp-info {
-	background: #2f7138;
-	color: #fff;
+.bee-info {
+    background: #ddba9e url("bee-background.webp") 50% 37% no-repeat;
+    color: #000;
 width: calc(100% * 0.5);
-	display: flex;
-	flex-direction: column;
-	padding: 0;
-	text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
 }
-h1.srp-heading-one {
-	color: #fff;
-	font-size: 1.875rem;
-	font-weight: 500;
-	line-height: 1.2;
-	margin: 30px 0 5px;
+h1.bee-heading-one {
+    color: #000;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 190px 0 0;
 }
-.srp-heading-two {
-	font-size: 1.25rem;
+.bee-heading-two {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
 }
-.srp-content {
-	max-width: 680px;
-	margin: 0 auto;
-	padding: 80px 15px 65px;
+.bee-heading-three {
+    font-size: 1.25rem;
+}
+.bee-content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 50px 0 0;
+}
+.srp-container {
+    background: #444;
+width: calc(100% * 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 575px;
+    font-size: 1.25rem;
+    color: #fff;
+    padding: 0 30px 30px;
+}
+h2.srp-heading-one {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 500;
+    color: #fff;
+}
+.simple-sprite {
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 190px;
+    background-image: url("buzzing-bee.webp");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    animation: simple-sprite .01s steps(2) infinite;
+}
+@keyframes simple-sprite {
+to {
+background-position: -380px 0;
+}
+}
+.bee-move {
+    animation: bee-move 20s linear infinite both;
+}
+@keyframes bee-move {
+0% {
+transform: translate(0);
+}
+20% {
+transform: translate(-4px, 4px) rotate(3deg);
+}
+40% {
+transform: translate(-8px, -4px) scale(.95);
+}
+60% {
+transform: translate(4px, 4px) rotate(1deg);
+}
+80% {
+transform: translate(8px, -4px) scale(.95);
+}
+100% {
+transform: translate(0);
+}
 }
 /* authors & eh */	
 
 .authors-container {
-	display: flex;
-	max-width: 1440px;
-	min-height: 640px;
-	margin: 30px auto 0 auto;
-	color: #000;
+    display: flex;
+    max-width: 1440px;
+    min-height: 640px;
+    margin: 0 auto;
+    color: #000;
 }
 .authors-wrapper {
-	margin: 0 auto;
-	display: flex;
-	width: 100%;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
 }
 .authors-info {
-	background: #f6c56b url("book-covers.webp") bottom center no-repeat;
-	color: #000;
+    background: #f3ebd7;
+    color: #000;
 width: calc(100% * 0.5);
-	display: flex;
-	flex-direction: column;
-	padding: 0;
-	text-align: center;
-	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 575px;
 }
 h2.authors-heading-one {
-	color: #000;
-	font-size: 1.875rem;
-	font-weight: 500;
-	line-height: 1.2;
-	margin: 0 0 5px;
+    color: #000;
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 5px;
 }
 .authors-heading-two {
-	font-size: 1.25rem;
+    font-size: 1.25rem;
+    padding-bottom: 20px;
 }
 .authors-content {
-	max-width: 680px;
-	margin: 0 auto;
-	padding: 0 15px 90px;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 60px 20px;
+    font-size: 1.125rem;
 }
-.eh-wrapper {
-	background: #fb9188;
+.authors-image {
+    background: #444 url("author-event.webp");
 width: calc(100% * 0.5);
-	display: flex;
-	flex-direction: column;
-	padding: 80px 15px 30px;
-}
-.eh-wrapper img {
-	border-radius: 50%;
-}
-.eh-content {
-	margin: 0 auto;
-	color: #000;
-	padding: 30px 0 35px;
-	font-size: 1.25rem;
-	text-align: center;
-	max-width: 650px;
-}
-h2.eh-heading-one {
-	font-size: 1.875rem;
-	line-height: 1.2;
-	margin: 0 0 5px;
-	font-weight: 500;
-	color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 /* outdoor storytime & fete */
 	
 .icon-font {
-	font-size: 100px;
-	padding-bottom: 30px;
-	color: #000;
+    font-size: 140px;
+    padding: 50px 0 30px;
+    color: rgba(255,255,255,.7);
 }
 .icon-font-alt {
-	font-size: 100px;
-	padding: 14px 0 20px;
-	color: #000;
+    font-size: 160px;
+    padding-bottom: 30px;
+    color: rgba(0,0,0,.5);
 }
 .storytime-fete-container {
-	display: flex;
-	max-width: 1440px;
-	min-height: 420px;
-	margin: 30px auto 0 auto;
-	color: #000;
+    display: flex;
+    max-width: 1440px;
+    min-height: 640px;
+    margin: 0 auto;
+    color: #fff;
 }
 .storytime-fete-wrapper {
-	margin: 0 auto;
-	display: flex;
-	width: 100%;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    min-height: 575px;
 }
 .storytime-wrapper {
-	display: flex;
-	background: #c4c28b;
+    display: flex;
+    background: #ddba9e;
 width: calc(100% * 0.5);
-	flex-direction: column;
-	padding: 90px 15px 60px;
+    flex-direction: column;
+    padding: 0 15px 60px;
+    justify-content: center;
 }
 .storytime-content {
-	margin: 0 auto;
-	color: #000;
-	font-size: 1.25rem;
-	text-align: center;
-	max-width: 650px;
+    margin: 0 auto;
+    color: #000;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 650px;
 }
 h2.storytime-heading-one {
-	font-size: 1.875rem;
-	line-height: 1.2;
-	margin: 0 0 5px;
-	font-weight: 500;
-	color: #000;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 500;
+    color: #000;
 }
 .fete-wrapper {
-	display: flex;
-	background: #a5b696;
+    display: flex;
+    background: #825C41;
 width: calc(100% * 0.5);
-	flex-direction: column;
-	padding: 90px 15px 60px;
+    flex-direction: column;
+    padding: 0 15px 60px;
+    justify-content: center;
 }
 .fete-content {
-	margin: 0 auto;
-	color: #000;
-	font-size: 1.25rem;
-	text-align: center;
-	max-width: 650px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 650px;
 }
 h2.fete-heading-one {
-	font-size: 1.875rem;
-	line-height: 1.2;
-	margin: 0 0 5px;
-	font-weight: 500;
-	color: #000;
-}
-
-@media (min-width: 955px) {
-.video-container {
-	position: relative;
-	overflow: hidden;
-	background: #7864A9;
-width: calc(100% * 0.5);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-video#bgvid {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	transform: translateX(-50%) translateY(-50%);
-	background: #7864A9 url("bee-movie.jpg") center center/cover;
-	background-size: cover;
-}
-video {
-	display: block;
-}
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 500;
+    color: #fff;
 }
 
 @media (max-width: 950px) {
-.authors-container, .storytime-fete-container, .srp-container, .authors-container, .flood-container {
-	max-width: 720px;
+.background-row {
+    background: #7895a6 url("bt-background-medium.webp") 50% 100% fixed no-repeat;
 }
-.authors-wrapper, .storytime-fete-wrapper, .srp-wrapper, .authors-wrapper, .flood-wrapper {
-	flex-direction: column;
+.bee-srp-container {
+    padding-top: 30px;
 }
-.eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .srp-info, .srp-content, .authors-info, .authors-content {
-	width: 100%;
+.bee-srp-container, .authors-container, .storytime-fete-container {
+    max-width: 720px;
+}
+.bee-srp-container, .authors-container, .storytime-fete-container {
+    padding-bottom: 300px;
+}
+.fete-wrapper {
+    margin-bottom: 300px;
+}
+.authors-wrapper, .storytime-fete-wrapper, .bee-srp-wrapper, .authors-wrapper, .flood-wrapper {
+    flex-direction: column;
+}
+.eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .bee-info, .bee-content, .authors-info, .authors-content, .srp-container {
+    width: 100%;
 }
 .storytime-wrapper, .fete-wrapper {
-	padding: 70px 15px 80px;
+    padding: 70px 15px 80px;
 }
-.srp-content {
-	max-width: 680px;
-	margin: 0 auto;
-	padding: 70px 15px 85px;
+.srp-container, .authors-info {
+    min-height: inherit;
+    padding: 100px 15px 120px;
+}
+.bee-content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 70px 15px 85px;
+    min-height: 575px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.authors-image {
+    min-height: 640px;
+    width: 100%;
 }
 .authors-content {
-	max-width: 680px;
-	margin: 0 auto;
-	padding: 120px 15px 325px;
-}
-.video-container {
-	display: inherit;
-}
-h1.srp-heading-one {
-	margin: 0 0 5px;
-}
-video#bgvid {
-	width: 100%!important;
-	height: auto;
-}
-.srp-content img {
-	display: none;
-}
-.srp-info {
-	order: 2;
-}
-.eh-wrapper, .fete-wrapper {
-	margin-top: 30px;
+    padding: 0;
 }
 }
+@media (max-width: 500px) {
+.background-row {
+    background: #7895a6 url("bt-background-small.webp") 50% 100% fixed no-repeat;
+}
+)
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -487,77 +525,66 @@ video#bgvid {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row background-row">
-      <section>
-        <div class="srp-container">
-          <div class="srp-wrapper">
-            <div class="srp-info">
-              <div class="srp-content"><img src="dragonfly.webp" alt="">
-                <h1 class="srp-heading-one">DCL Is the Place to Bee!</h1>
-                <div class="srp-heading-two">
-					<div>Check out these <a class="white text-underline" href="featured-events/">buzzworthy events</a> for all ages.</div><div class="padding-top-5">And don't miss Summer Reading! <a class="white text-underline" href="summer-reading">Register Now</a></div>
+    <div class="row gradient-row">
+      <div class="background-row">
+        <section>
+          <div class="bee-srp-container">
+            <div class="bee-srp-wrapper">
+              <div class="bee-info">
+                <div class="bee-content">
+                  <div class="bee-move">
+                    <div class="simple-sprite"></div>
+                  </div>
+                  <h1 class="bee-heading-one">DCL Is the Place to Bee!</h1>
+                </div>
+              </div>
+              <div class="srp-container">
+                <h2 class="srp-heading-one">Join us for <a class="white text-underline" href="featured-events/#highlighted-events">sweet events</a> for all ages.</h2>
+                <div>There’s still time to squash your reading goals! <a class="white text-underline" href="summer-reading/">Register now</a> for Summer Reading.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="authors-container">
+            <div class="authors-wrapper">
+              <div class="authors-image"></div>
+              <div class="authors-info">
+                <div class="authors-content">
+                  <h2 class="authors-heading-one">Buzzworthy Authors</h2>
+                  <div class="authors-heading-two">Don’t miss these bestselling storytellers! <a class="black text-underline" href="featured-events/">Learn&nbsp;More</a></div>
+                  <ul class="text-left">
+                    <li>Karin Slaughter&nbsp;| August&nbsp;16, 7PM, Denver Marriott South Park Meadows</li>
+                    <li>Taylor Jenkins Reid&nbsp;| October&nbsp;10, 7PM, Hyatt Regency DTC, On Sale Soon!</li>
+                    <li>Meet <a class="black text-underline" href="featured-events/#author-events">even more authors</a>!</li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="video-container">
-              <video autoplay muted playsinline poster="bee-movie.jpg" id="bgvid">
-                <source src="bee-movie.mp4" type="video/mp4" />
-                Your browser does not support the background video tag.
-                <source src="bugs-movie.webm" type="video/webm" />
-                Your browser does not support the background video tag. </video>
-            </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="authors-container">
-          <div class="authors-wrapper">
-            <div class="authors-info">
-              <div class="authors-content">
-                <h2 class="authors-heading-one">Meet the Authors!</h2>
-                <div class="authors-heading-two">
-                  <div>Don't miss these <a class="black text-underline" href="featured-events/#author-events">exciting book talks</a> and signings <a class="black text-underline" href="featured-events/">featuring bestselling writers</a> and local voices. </div>
+        </section>
+        <section>
+          <div class="storytime-fete-container">
+            <div class="storytime-fete-wrapper">
+              <div class="fete-wrapper">
+                <div class="fete-content">
+                  <div><i class="icon-font fa-duotone fa-light fa-champagne-glasses" style="--fa-secondary-opacity: 0.6;"></i></div>
+                  <h2 class="fete-heading-one">10th Annual Fête des Fables Gala</h2>
+                  <div>Be our guest as we celebrate the timeless tale of Beauty and the Beast. <a class="white text-underline" href="fete-des-fables/">Tickets On Sale</a>!</div>
+                </div>
+              </div>
+              <div class="storytime-wrapper">
+                <div class="storytime-content">
+                  <div><i class="icon-font-alt fa-duotone fa-light fa-child-reaching" style="--fa-secondary-opacity: 0.1;"></i></div>
+                  <h2 class="storytime-heading-one">Outdoor Storytime</h2>
+                  <div>Join us with your little ones! <a class="black text-underline" href="https://go.dcl.org/events?t=Storytime&el=Virtual&term=Outdoor+Storytime&r=months&n=4">View Calendar</a></div>
                 </div>
               </div>
             </div>
-            <div class="eh-wrapper">
-              <div id="eh-box"></div>
-              <div class="eh-content">
-                <h2 class="eh-heading-one">Host It Here!</h2>
-                <div>We've got a space for every celebration or milestone!</div>
-                <div class="padding-top-5"><a class="black text-underline" href="reserve-a-space/#host-your-event">Learn&nbsp;More</a></div>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="storytime-fete-container">
-          <div class="storytime-fete-wrapper">
-            <div class="storytime-wrapper">
-              <div class="storytime-content">
-                <div><i class="icon-font fa-duotone fa-light fa-child-reaching" style="--fa-secondary-opacity: 0.1;"></i></div>
-                <h2 class="storytime-heading-one">Outdoor Storytime</h2>
-                <div>Join us with your little ones! <a class="black text-underline" href="https://go.dcl.org/events?t=Storytime&el=Virtual&term=Outdoor+Storytime&r=months&n=4">View Calendar</a></div>
-              </div>
-            </div>
-            <div class="fete-wrapper">
-              <div class="fete-content">
-                <div><i class="icon-font fa-duotone fa-light fa-champagne-glasses" style="--fa-secondary-opacity: 0.1;"></i></div>
-                <h2 class="fete-heading-one">10th Annual Fête des Fables Gala</h2>
-                <div>Be our guest as we celebrate the timeless tale of Beauty and the Beast. <a class="black text-underline" href="fete-des-fables/">Tickets on sale</a>!</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-    <script>
-    var images = ['eh-one.jpg', 'eh-two.jpg', 'eh-three.jpg', 'eh-four.jpg', 'eh-five.jpg'];
-    $('<img alt="Birthday Party" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#eh-box');
-	 var images = ['flood-one.jpg', 'flood-two.jpg', 'flood-three.jpg'];
-    $('<img alt="Archive Photo of the 1965 Flood" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#flood-box');
-</script> 
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
