@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 
 <style>
-.srp-container, .authors-container, .storytime-fete-container {
+.bee-srp-container, .authors-container, .storytime-fete-container {
     padding-bottom: 500px;
 }
 .background-row {
@@ -61,62 +61,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 /* srp & video */
 	
-.srp-container {
+.bee-srp-container {
     display: flex;
     max-width: 1440px;
     min-height: 640px;
     margin: 0 auto;
     padding-top: 100px;
 }
-.srp-wrapper {
+.bee-srp-wrapper {
     margin: 0 auto;
     display: flex;
     width: 100%;
 }
-.srp-info {
-    background: #ddba9e;
+.bee-info {
+    background: #ddba9e url("bee-background.webp") 50% 37% no-repeat;
     color: #000;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
     padding: 0;
     text-align: center;
-    justify-content: center;
 }
-h1.srp-heading-one {
+h1.bee-heading-one {
     color: #000;
     font-size: 1.875rem;
     font-weight: 500;
     line-height: 1.2;
-    margin: 30px 0 5px;
+    margin: 190px 0 0;
 }
-.srp-heading-two {
+.bee-heading-two {
     font-size: 1.5rem;
     padding-bottom: 5px;
 }
-.srp-heading-three {
+.bee-heading-three {
     font-size: 1.25rem;
 }
-.srp-content {
+.bee-content {
     max-width: 680px;
     margin: 0 auto;
-    padding: 0px 30px 60px;
+    padding: 50px 0 0;
 }
-.video-container {
-    background: #fff url("srp-background.webp");
+.srp-container {
+    background: #444;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     min-height: 575px;
+    font-size: 1.25rem;
+    color: #fff;
+    padding: 0 30px 30px;
 }
-h1.video-heading-one {
-    color: #000;
+h2.srp-heading-one {
     font-size: 1.875rem;
-    font-weight: 500;
     line-height: 1.2;
-    margin: 0 0 40px;
+    margin: 0 0 5px;
+    font-weight: 500;
+    color: #fff;
 }
 .simple-sprite {
     height: 200px;
@@ -198,6 +200,7 @@ h2.authors-heading-one {
     max-width: 680px;
     margin: 0 auto;
     padding: 0 60px 20px;
+    font-size: 1.125rem;
 }
 .authors-image {
     background: #444 url("author-event.webp");
@@ -276,26 +279,23 @@ h2.fete-heading-one {
     color: #fff;
 }
 
-@media (min-width: 955px) {
-}
-
 @media (max-width: 950px) {
 .background-row {
     background: #fff;
 }
-.srp-container {
+.bee-srp-container {
     padding-top: 30px;
 }
-.authors-wrapper, .storytime-fete-wrapper, .srp-wrapper, .authors-wrapper, .flood-wrapper {
+.authors-wrapper, .storytime-fete-wrapper, .bee-srp-wrapper, .authors-wrapper, .flood-wrapper {
     flex-direction: column;
 }
-.eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .srp-info, .srp-content, .authors-info, .authors-content, .video-container {
+.eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .bee-info, .bee-content, .authors-info, .authors-content, .srp-container {
     width: 100%;
 }
 .storytime-wrapper, .fete-wrapper {
     padding: 70px 15px 80px;
 }
-.srp-content {
+.bee-content {
     max-width: 680px;
     margin: 0 auto;
     padding: 70px 15px 85px;
@@ -507,19 +507,20 @@ h2.fete-heading-one {
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row background-row">
       <section>
-        <div class="srp-container">
-          <div class="srp-wrapper">
-            <div class="srp-info">
-              <div class="srp-content">
+        <div class="bee-srp-container">
+          <div class="bee-srp-wrapper">
+            <div class="bee-info">
+              <div class="bee-content">
                 <div class="bee-move">
                   <div class="simple-sprite"></div>
                 </div>
-                <h1 class="srp-heading-one">DCL Is the Place to Bee!</h1>
-                <div class="srp-heading-two">Join us for <a class="black text-underline" href="featured-events/#highlighted-events">sweet events</a> for all ages.</div>
-                <div class="srp-heading-three">There’s still time to squash your reading goals! <a class="black text-underline" href="summer-reading/">Register now</a> for Summer Reading.</div>
+                <h1 class="bee-heading-one">DCL Is the Place to Bee!</h1>
               </div>
             </div>
-            <div class="video-container"> </div>
+            <div class="srp-container">
+              <h2 class="srp-heading-one">Join us for <a class="white text-underline" href="featured-events/#highlighted-events">sweet events</a> for all ages.</h2>
+              <div>There’s still time to squash your reading goals! <a class="white text-underline" href="summer-reading/">Register now</a> for Summer Reading.</div>
+            </div>
           </div>
         </div>
       </section>
