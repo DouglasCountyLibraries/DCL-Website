@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -45,121 +45,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '323565307821038'); // Insert your pixel ID here.
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
-</noscript>
+<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .kids-teens-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
-.waitlist {
-    margin-top: auto;
+.box-item-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.box-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px;
+}
+.full-flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+.circle-wrapper {
+    border: 6px solid #fff;
+    height: 92px;
+    width: 92px;
+    border-radius: 50%;
+    margin: -50px auto 0 auto;
+}
+.icon-circle-gray {
+    border: 6px solid #42777B;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #42777B;
+    background-color: #fff;
+    font-size: 42px;
+    height: 80px;
+    line-height: 1.5;
+    margin: 0 auto;
     text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-top: 10px;
+    width: 80px;
+    font-weight: 600;
 }
-.waitlist > .red-text {
-	font-size: 18px;
+.carousel-wapper {
+    padding: 60px 15px 70px;
+}
+.comment-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-style: italic;
+}
+.carousel-cell {
+    width: 100%;
+}
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+}
+.flickity-page-dots {
+    bottom: -40px;
+    opacity: .2;
+}
+.flickity-page-dots .dot {
+    background-color: #000;
+}
+.flickity-prev-next-button {
+    display: none;
+}
+.flickity-viewport {
+    transition: height 0.6s;
+}
+.typical-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 15px 60px;
 }
 
-.box-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
-	max-width: 1500px;
-	margin: 0 auto;
-}
-
+@media (max-width: 725px) {
 .box-item {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	background: #fff;
-	max-width: 420px;
-	padding: 0 30px 40px;
-	margin: 10px 15px;
-	border-radius: 3px;
-}
-.box-border {
-	border: 2px solid #ddd;
-	margin-top: 76px;
-}
-.gray-circle > img, .white-circle > img {
-	border-radius: 50%;
-}
-.gray-circle-wrapper {
-	border: 6px solid #fff;
-	border-radius: 50%;
-	box-sizing: border-box;
-	height: 132px;
-	margin: 0 auto;
-	width: 132px;
-}
-.gray-circle {
-	border: 6px solid #e6e4e2;
-	border-radius: 50%;
-	box-sizing: border-box;
-	height: 120px;
-	margin: 0 auto;
-	width: 120px;
-}
-
-.white-circle-wrapper {
-	border: 2px solid #ddd;
-	border-radius: 50%;
-	box-sizing: border-box;
-	height: 124px;
-	margin: 0 auto;
-	width: 124px;
-}
-.white-circle {
-	border: 6px solid #fff;
-	border-radius: 50%;
-	box-sizing: border-box;
-	height: 120px;
-	margin: 0 auto;
-	width: 120px;
-}
-
-.gray-white-bg {
-	background: #ffffff;
-	background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
-	margin-left: -30px;
-	margin-right: -30px;
-}
-.gray-white-border-bg {
-	margin-top: -66px;
-}
-
-@media (max-width: 1100px) {
-.box-wrapper > .box-item:nth-of-type(3) {
-	min-width: fit-content;	
-}	
-.box-wrapper {
-	max-width: 850px;
-	margin: 0 auto;
-}			
-}
-@media (max-width: 750px) {
-.box-item {
-	flex-direction: column;
-    min-width: fit-content;
+    flex-basis: 100%;
 }
 }
-
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -353,105 +323,120 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row border-top padding-bottom-30">
-      <div class="container text-center">
+    <div class="row border-top">
+      <div class="container text-center padding-bottom-15">
         <h1 class="page-heading">Camp DCL</h1>
-        <div class="h3 text-uppercase no-margin">Summer Camps</div>
-        <div class="max-width-90">
-          <div class="h3 margin-top-5">June 2-August 1, 2025 | Ages 5-12</div>
-          <h2 class="page-subheading">Explore, create, and experiment this summer at Camp DCL! Choose from our weeklong half-day camps at six DCL locations or full-day camps at select locations. </h2>
-        </div>
-        <div class="max-width-60">
-          <div class="padding-bottom-15">Materials and snacks are provided for all camps; full-day campers must bring a nut-free lunch daily. Please also bring your own water bottle.</div>
-          <div class="text-uppercase"><a class="font-weight-500" href="#" data-toggle="modal" data-target="#faq">Frequently Asked Questions</a></div>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Camp DCL will return next summer! Registration opens February 1.</h2>
+          <h3 class="no-margin">6 Benefits of Camp for Kids</h3>
         </div>
       </div>
     </div>
-    
-    <!-- ########### --> 
-    
-    <!-- ########### --> 
-    
-    <!-- ########### --> 
-    
-    <!-- ########### -->
-    
-    <div class="row bg-gray-5 padding-top-60 padding-bottom-70">
-      <div class="h1 text-uppercase no-margin-top text-center">Lone Tree</div>
-      <div class="box-wrapper">
-        <div class="box-item">
-          <div class="gray-white-bg">
-            <div class="white-circle-wrapper">
-              <div class="white-circle"><img src="icon-images/sold-out.jpg" alt="" class="img-responsive"></div>
+    <section>
+      <div class="row padding-bottom-60">
+        <div class="box-item-wrapper">
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-one.jpg" alt=""></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">1</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Develops Skills</div>
+              <div>Kids get the right instruction and equipment to develop knowledge and skills at camp. With various camp activities to choose from, children can easily discover what they love and then build their talents and abilities in a learning-friendly environment. </div>
             </div>
           </div>
-          <div class="h3 no-margin-bottom margin-top-10 text-center">Underground Explorers Science Camp</div>
-          <div class="h5 margin-top-5 text-center">July 28-August 1, 1-4PM<br>
-            Ages 5-10, $250</div>
-          <div>Calling all junior archaeologists and paleontologists! Solve real-life mysteries. Learn about archaeology and the techniques scientists use to excavate long-lost cities. Discover ancient civilizations and the tools and artifacts they used in everyday life. Study bone fragments, pottery shards, amber deposits, and fossils to understand what they can tell us about history. Don't miss this chance to uncover the mysteries of ancient civilizations, explore the history of dinosaurs, and dig up the ancient past. Facilitated by professionals from Mad Science. Bring your own water bottle. </div>
-          <div class="waitlist"><span class="red-text">Sold out</span><br>
-            <a href="summer-waitlist-form/" target="_blank">Join the Waitlist</a></div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- ########### --> 
-    
-    <!-- ########### -->
-    
-    <div class="row padding-top-60 padding-bottom-70">
-      <div class="h1 text-uppercase no-margin-top text-center">Roxborough</div>
-      <div class="box-wrapper">
-        <div class="box-item box-border">
-          <div class="gray-white-border-bg">
-            <div class="white-circle-wrapper">
-              <div class="white-circle"><img src="icon-images/sold-out.jpg" alt="" class="img-responsive"></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-two.jpg" alt=""></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">2</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Builds Self-Esteem</div>
+              <div>Children gain self-esteem by participating, contributing, and seeing results. At camp, they have the opportunity to achieve&mdash;whether it’s creating new types of artwork, learning fresh cooking techniques and recipes, building bots, or coding their own games. Those achievements build self-esteem. </div>
             </div>
           </div>
-          <div class="h3 no-margin-bottom margin-top-10 text-center">Through the Galaxy Art Camp</div>
-          <div class="h5 margin-top-5 text-center">July 28-August 1, 9AM-12PM<br>
-            Ages 5-10, $225</div>
-          <div>Art and space travel collide in this adventurous week! Campers will travel our big, beautiful galaxy and discover awe-inspiring sights. Astronauts, space aliens, infinite stars, and planets will come to life during the week. We will explore a variety of art mediums, including watercolors, acrylic paint, collage, clay sculpture, fabric, 3D, and more, to create three projects each day while developing a positive, stick-with-it attitude and problem-solving skills through a unique, fun teaching approach. Facilitated by professionals from KidzArt. Bring your own water bottle.</div>
-          <div class="waitlist"><span class="red-text">Sold out</span><br>
-            <a href="summer-waitlist-form/" target="_blank">Join the Waitlist</a></div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- ########### --> 
-    
-    <!--<div class="row bg-teal padding-top-60 padding-bottom-60">
-    <div class="container">
-      <div class="h5 no-margin white text-center max-width-65">A limited number of Camp DCL scholarships are available from the <a class="white text-underline" href="../foundation/">Douglas County Libraries Foundation</a> for qualified applicants.</div>
-      <div class="text-center"> <a href="scholarship-form/" target="_blank" class="btn btn-primary margin-top-30">Apply Now</a> </div>
-    </div>
-  </div>-->
-    <div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="faq">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <div class="h2 modal-title text-center no-margin" id="myModalLabel">FAQs</div>
+          <div class="full-flex-break"></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-three.jpg" alt=""></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">3</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Continues Education</div>
+              <div>Fun meets education at camp, where learning is more than textbooks and tests. Kids can apply the lessons learned during the school year in a variety of engaging hands-on activities and experiences. They’ll be so busy having fun, they won’t even realize that they’re learning! </div>
+            </div>
           </div>
-          <div class="modal-body padding-30">
-            <div class="padding-bottom-20"><span class="font-weight-400">Please note:</span> Your camper's spot is not fully secured until your payment has been processed by Douglas County Libraries and you have received a payment confirmation email.</div>
-            <div class="margin-bottom-10">
-              <div class="margin-bottom-5"><span class="font-weight-400">Q:</span> Are snacks provided, and what are they?</div>
-              <div><span class="font-weight-400">A:</span> Yes, we provide a drink (usually juice and/or water), fresh fruit (an apple, small orange, etc.), and usually a nut-free prepackaged snack (such as graham crackers, animal crackers, etc.). We will let you know which specific snacks will be offered for your camp in the pre-camp email.</div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-four.jpg" alt=""></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">4</div>
             </div>
-            <div class="margin-bottom-10">
-              <div class="margin-bottom-5"><span class="font-weight-400">Q:</span> Will you provide more information on the camp as the date gets closer?</div>
-              <div><span class="font-weight-400">A:</span> Yes, a pre-camp email will be sent the week prior to your scheduled camp and it will list the dates, times, location, a brief daily description, tips or notes for the week, a contact phone number, and any additional information you'll need to review prior to the start of camp.</div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Encourages Play</div>
+              <div>Kids love to have fun, and camp gives them plenty of opportunities for that while also encouraging creativity and social engagement. Though camp is structured, it is more relaxed than a school setting and offers children time and freedom to explore their imagination through play. </div>
             </div>
-            <div class="padding-bottom-20">
-              <div class="margin-bottom-5"><span class="font-weight-400">Q:</span> What is your cancellation policy?</div>
-              <div><span class="font-weight-400">A:</span> Cancellations & Refunds: Cancellations made up to three business days prior to Camp start will be eligible for a full refund, less a $25 cancellation fee. No refund is given for a cancellation with fewer than three business days' notice. A full refund will be given if DCL cancels a Camp for any reason. In the event of a DCL-initiated cancellation, parents or guardians will be notified by email or phone. Parents wishing to withdraw a child from Camp should provide written notification via email.</div>
+          </div>
+          <div class="full-flex-break"></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-five.jpg" alt=""></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">5</div>
             </div>
-            <div class="padding-bottom-15">Please read our <a href="policies-procedures/">Camp DCL Policies & Procedures</a> for more information.</div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Fosters Growth</div>
+              <div>Camp can take kids out of their comfort zone and push them to try new things, as well as dig into their already established areas of interest. They will grow by developing skills doing favorite activities, and they will develop new skills exploring those activities that are new to them. </div>
+            </div>
+          </div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-six.jpg" alt=""></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">6</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Nurtures Friendships</div>
+              <div>Kids meet other kids with similar interests at camp. Free from the social pressures of school, children can relax and build friendships and memories based on the shared experiences and fun challenges that bring them together. </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="carousel-wapper bg-gray-5">
+          <div class="comment-container">
+            <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "selectedAttraction": 0.04, "friction": 0.30, "autoPlay": 6000 }'>
+              <div class="carousel-cell">
+                <div>"[DCL art camp] was a tremendous camp and my son absolutely loved it. It was a fantastic experience and Ms. Natalie, as well as your staff, did a wonderful job. We were very impressed with how many different types of projects the students were exposed to and the quality of the portfolio by the end of the week."</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"Due to a scholarship from your program, my son was able to attend LEGO Superhero Camp in Castle Rock. In this card, it's not possible to explain our gratitude for this opportunity and how it positively impacted our son and our family."</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My kids loved this camp! They tried new food that they might not have eaten at home. Well organized, and they said the instructors were great. Kudos to the staff for coming in the last day despite the bad weather."</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My daughter LOVED this camp! Everything about it was great—the communication, organization, agenda, age-appropriate, class size, student-to-teacher ratio. Great job!"</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My daughter was sad when the camp ended, she liked it so much!"</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My son told me it was one of his favorite camps ever!"</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="typical-container">
+          <div class="h4 margin-bottom-15"><i><a href="camps/">Read about a typical day</a> at Camp DCL</i></div>
+          <img class="img-responsive image-center" src="camps/be-a-chef.jpg" alt=""/>
+          <div class="padding-top-15">Camp DCL scholarships will be available through the Douglas County Libraries Foundation. <a href="../donate/">You may also donate</a> to the Douglas County Libraries Foundation to help send a child to camp.</div>
+        </div>
+      </div>
+    </section>
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
@@ -514,7 +499,17 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -540,8 +535,7 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView&noscript=1"/>
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.blogs.douglascountylibraries.org",
-		"https:\/\/help.dcl.org/",
+		"https:\/\/www.dclblog.org",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
