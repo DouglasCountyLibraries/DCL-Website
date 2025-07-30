@@ -106,7 +106,7 @@ Push Notifications End - Removed for Now -->
 }
 .ks-heading-wrapper {
     background: #000 url("ks-background.webp") center center/cover;
-    padding: 140px 15px 0;
+    padding: 130px 15px 0;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -134,7 +134,7 @@ Push Notifications End - Removed for Now -->
 }
 .sbh-heading-wrapper {
     background: #000 url("sbh-background.webp") center center/cover;
-    padding: 140px 15px 0;
+    padding: 130px 15px 0;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -163,7 +163,7 @@ Push Notifications End - Removed for Now -->
 }
 .tjr-heading-wrapper {
     background: #000 url("tjr-background.webp") center center/cover;
-    padding: 140px 15px 0;
+    padding: 130px 15px 0;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -187,7 +187,6 @@ Push Notifications End - Removed for Now -->
     color: #fff;
     line-height: .9;
     text-shadow: 0px 4px 4px #f2725b;
-    letter-spacing: 1px;
 }
 .featured-author-wrapper {
     display: flex;
@@ -359,13 +358,6 @@ Push Notifications End - Removed for Now -->
 .gray-circle > img {
     border-radius: 50%;
 }
-.teaser {
-    text-align: center;
-    max-width: 790px;
-    margin: 0 auto;
-    padding: 20px 15px 0;
-    font-style: italic;
-}
 .photo-content {
     background: #fff;
     padding: 30px 15px 40px;
@@ -378,7 +370,7 @@ Push Notifications End - Removed for Now -->
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 15px;
-    max-width: 1600px;
+    max-width: 1825px;
     margin: 0 auto;
 }
 .photo-item {
@@ -386,29 +378,11 @@ Push Notifications End - Removed for Now -->
     flex-direction: column;
     flex: 1;
     margin: 20px 15px 60px;
+    min-width: 500px;
+    max-width: 1000px;
 }
 .photo-item-inner {
     padding: 20px 30px 20px;
-}
-.single-photo-row {
-    max-width: 1300px;
-    margin: 30px auto 80px auto;
-}
-.single-photo-wrapper {
-    display: flex;
-    justify-content: center;
-    background: #f5f5f5;
-    margin: 0 15px;
-}
-.single-photo.photo {
-    min-width: 750px;
-    border-right: 15px solid #fff;
-}
-.single-photo.info {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    padding: 30px;
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 
@@ -526,7 +500,10 @@ opacity:0;
 }
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1589px) {
+.ks-heading-wrapper, .tjr-heading-wrapper, .sbh-heading-wrapper {
+    padding: 175px 15px 0;
+}
 }
 
 @media (max-width: 1150px) {
@@ -535,36 +512,12 @@ opacity:0;
     margin: 0 auto;
 }
 }
-
-@media (max-width: 1100px) {
-.single-photo-wrapper {
-    flex-direction: column;
-    background: #fff;
-    margin: 0 auto;
-}
-.single-photo.photo {
-    min-width: inherit;
-    border-right: none;
-    margin: 0 15px;
-}
-.single-photo.info {
-    padding: 30px 15px;
-    max-width: 700px;
-    text-align: center;
-}
-.single-photo-row {
-    margin: 30px auto 25px auto;
-}
-}
 @media (max-width: 950px) {
 .photo-wrapper {
     flex-direction: column;
     align-content: center;
     max-width: 900px;
     margin: 0 auto;
-}
-.sbh-heading-wrapper, .ks-heading-wrapper {
-    height: inherit;
 }
 @media (max-width: 925px) {
 .featured-author-wrapper {
@@ -603,9 +556,6 @@ margin: 0 auto 10px;
 .author-item.two {
 text-align: center;
 padding: 20px 0;
-}
-.single-photo.photo {
-min-width: inherit;
 }
 }
 @media (max-width: 550px) {
@@ -868,20 +818,6 @@ font-size: 3.2rem;
             </div>
           </div>
           <div class="photo-item black text-center bg-gray-5">
-            <div class="sbh-heading-wrapper">
-              <div class="sbh-heading-one">A Storybook Holiday:</div>
-              <div class="sbh-heading-two">The Wild Rumpus</div>
-            </div>
-            <div class="photo-item-inner">
-              <div class="h6 black">Join us for a monstrously fun Halloween celebration inspired by Where the Wild Things&nbsp;Are.</div>
-              <div class="margin-top-5">Dress in costume and prowl through a magical trick-or-treat trail, enjoy wild crafts and activities, and feast on catered goodies fit for a king&mdash;or queen! Ideal for ages&nbsp;3-13, but all ages are welcome.</div>
-              <div class="margin-top-10">Saturday, October&nbsp;25,&nbsp;6PM, <a href="../castle-rock/">Castle Rock</a></div>
-            </div>
-            <div class="align-bottom-alt"> <a href="../storybook-holiday/">
-              <button class="btn btn-primary" type="button">Get Tickets</button>
-              </a> </div>
-          </div>
-          <div class="photo-item black text-center bg-gray-5">
             <div class="tjr-heading-wrapper">
               <div class="tjr-heading-one">DCL Presents:</div>
               <div class="tjr-heading-two">Taylor Jenkins Reid</div>
@@ -896,6 +832,20 @@ font-size: 3.2rem;
             <div class="align-bottom-alt">
               <button class="btn btn-primary" type="button">Buy Tickets</button>
             </div>
+          </div>
+          <div class="photo-item black text-center bg-gray-5">
+            <div class="sbh-heading-wrapper">
+              <div class="sbh-heading-one">A Storybook Holiday:</div>
+              <div class="sbh-heading-two">The Wild Rumpus</div>
+            </div>
+            <div class="photo-item-inner">
+              <div class="h6 black">Join us for a monstrously fun Halloween celebration inspired by Where the Wild Things&nbsp;Are.</div>
+              <div class="margin-top-5">Dress in costume and prowl through a magical trick-or-treat trail, enjoy wild crafts and activities, and feast on catered goodies fit for a king&mdash;or queen! Ideal for ages&nbsp;3-13, but all ages are welcome.</div>
+              <div class="margin-top-10">Saturday, October&nbsp;25,&nbsp;6PM, <a href="../castle-rock/">Castle Rock</a></div>
+            </div>
+            <div class="align-bottom-alt"> <a href="../storybook-holiday/">
+              <button class="btn btn-primary" type="button">Get Tickets</button>
+              </a> </div>
           </div>
         </div>
       </div>
