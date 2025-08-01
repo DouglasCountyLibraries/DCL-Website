@@ -94,15 +94,7 @@ Push Notifications End - Removed for Now -->
     margin: 0;
 }
 /* ^^^ Do not remove ^^^ */
-	
-@font-face {
-    font-family: 'Buffalo Inline';
-    src: url('../shared-assets/web-fonts/BuffaloInline2.woff2') format('woff2'), url('../shared-assets/web-fonts/BuffaloInline2.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    text-rendering: optimizeLegibility;
-}
+
 @font-face {
     font-family: 'Delightful';
     src: url('../shared-assets/web-fonts/delightfulmonolinesans-regular-webfont.woff2') format('woff2'), url('../shared-assets/web-fonts/delightfulmonolinesans-regular-webfont.woff') format('woff');
@@ -111,40 +103,22 @@ Push Notifications End - Removed for Now -->
     font-display: swap;
     text-rendering: optimizeLegibility;
 }
+.teaser {
+    text-align: center;
+    max-width: 790px;
+    margin: 0 auto;
+    padding: 20px 15px 0;
+    font-style: italic;
+}
 .ks-heading-wrapper {
-    background: #000 url("slaughter-background.webp") center center/cover;
-    padding: 160px 15px 205px;
-    height: 485px;
+    background: #000 url("ks-background.webp") center center/cover;
+    padding: 15px 15px 50px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .ks-heading-one {
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.5rem;
-    text-shadow: 0px 4px 4px #000;
-    white-space: nowrap;
-    letter-spacing: 4px;
-}
-.ks-heading-two {
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 6rem;
-    text-transform: uppercase;
-    color: #fff;
-    line-height: .9;
-    text-shadow: 0px 4px 4px #000;
-    letter-spacing: 7.3px;
-}
-.sbh-heading-wrapper {
-    background: #000 url("sbh-background.webp") center center/cover;
-    padding: 160px 15px 205px;
-    height: 485px
-}
-.sbh-heading-one {
-    /* font-family: "Barlow Condensed", sans-serif; */
     font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
@@ -153,7 +127,35 @@ Push Notifications End - Removed for Now -->
     text-shadow: 0px 4px 4px #000;
     white-space: nowrap;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+}
+.ks-heading-two {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: .9;
+    text-shadow: 0px 4px 4px #000;
+    letter-spacing: 1px;
+}
+.sbh-heading-wrapper {
+    background: #000 url("sbh-background.webp") center center/cover;
+    padding: 15px 15px 50px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sbh-heading-one {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0px 4px 4px #000;
+    white-space: nowrap;
+    letter-spacing: 1px;
 }
 .sbh-heading-two {
     font-family: "Delightful", sans-serif;
@@ -165,7 +167,9 @@ Push Notifications End - Removed for Now -->
     line-height: .9;
     text-shadow: 0px 4px 4px #000;
     letter-spacing: 3px;
+    margin-top: 7px;
 }
+
 .featured-author-wrapper {
     display: flex;
     max-width: 1075px;
@@ -336,13 +340,6 @@ Push Notifications End - Removed for Now -->
 .gray-circle > img {
     border-radius: 50%;
 }
-.teaser {
-    text-align: center;
-    max-width: 790px;
-    margin: 0 auto;
-    padding: 20px 15px 0;
-    font-style: italic;
-}
 .photo-content {
     background: #fff;
     padding: 30px 15px 40px;
@@ -354,8 +351,8 @@ Push Notifications End - Removed for Now -->
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 820px;
-    /* max-width: 1440px; */
+    padding-top: 15px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 .photo-item {
@@ -363,29 +360,11 @@ Push Notifications End - Removed for Now -->
     flex-direction: column;
     flex: 1;
     margin: 20px 15px 60px;
+    min-width: 500px;
+    max-width: 1000px;
 }
 .photo-item-inner {
     padding: 20px 30px 20px;
-}
-.single-photo-row {
-    max-width: 1300px;
-    margin: 30px auto 80px auto;
-}
-.single-photo-wrapper {
-    display: flex;
-    justify-content: center;
-    background: #f5f5f5;
-    margin: 0 15px;
-}
-.single-photo.photo {
-    min-width: 750px;
-    border-right: 15px solid #fff;
-}
-.single-photo.info {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    padding: 30px;
 }
 /* slideshow - adapted from http://cssmojo.com/ken-burns-effect/ */
 
@@ -503,11 +482,7 @@ opacity:0;
 }
 }
 
-@media (max-width: 1530px) {
-.sbh-heading-wrapper, .ks-heading-wrapper {
-    height: 575px;
-}
-}
+
 
 @media (max-width: 1150px) {
 .page-nav {
@@ -516,26 +491,6 @@ opacity:0;
 }
 }
 
-@media (max-width: 1100px) {
-.single-photo-wrapper {
-    flex-direction: column;
-    background: #fff;
-    margin: 0 auto;
-}
-.single-photo.photo {
-    min-width: inherit;
-    border-right: none;
-    margin: 0 15px;
-}
-.single-photo.info {
-    padding: 30px 15px;
-    max-width: 700px;
-    text-align: center;
-}
-.single-photo-row {
-    margin: 30px auto 25px auto;
-}
-}
 @media (max-width: 950px) {
 .photo-wrapper {
     flex-direction: column;
@@ -543,54 +498,60 @@ opacity:0;
     max-width: 900px;
     margin: 0 auto;
 }
-.sbh-heading-wrapper, .ks-heading-wrapper {
-    height: inherit;
 }
+
 @media (max-width: 925px) {
+.photo-item {
+    min-width: inherit;
+}
+.photo-item-inner {
+    padding: 20px 15px 20px;
+}
 .featured-author-wrapper {
-flex-direction: column;
-background: #fff;
-margin: 15px auto 40px;
-max-width: 665px;
+    flex-direction: column;
+    background: #fff;
+    margin: 15px auto 40px;
+    max-width: 665px;
 }
 .featured-author-item.one {
-border-right: 0;
-text-align: center;
+    border-right: 0;
+    text-align: center;
 }
 .featured-author-item.two {
-text-align: center;
-padding: 20px 0;
+    text-align: center;
+    padding: 20px 0;
 }
 }
+
 @media (max-width: 795px) {
 .author-item.one {
-border-right: 0;
+    border-right: 0;
 }
-.sbh-heading-two, .ks-heading-two {
-font-size: 4rem;
+.tjr-heading-two, .ks-heading-two, .sbh-heading-two {
+    font-size: 5rem;
 }
 }
+
 @media (max-width: 675px) {
 .author-wrapper {
-flex-direction: column;
-background: #fff;
-margin: 0 auto 50px;
+    flex-direction: column;
+    background: #fff;
+    margin: 0 auto 50px;
 }
 .author-wrapper.bg-gray-5 {
-background: #f5f5f5;
-margin: 0 auto 10px;
+    background: #f5f5f5;
+    margin: 0 auto 10px;
 }
 .author-item.two {
-text-align: center;
-padding: 20px 0;
+    text-align: center;
+    padding: 20px 0;
 }
-.single-photo.photo {
-min-width: inherit;
+.white-bottom-row {
+    margin-left: -15px;
+    margin-right: -15px;
 }
-}
-@media (max-width: 550px) {
-.ks-heading-two {
-font-size: 3.2rem;
+.box-item {
+    padding: 0 15px;
 }
 }
 </style>
@@ -848,7 +809,7 @@ font-size: 3.2rem;
 </script> 
             </div>
           </div>
-          <!--<div class="photo-item black text-center bg-gray-5">
+          <div class="photo-item black text-center bg-gray-5">
             <div class="sbh-heading-wrapper">
               <div class="sbh-heading-one">A Storybook Holiday:</div>
               <div class="sbh-heading-two">The Wild Rumpus</div>
@@ -861,7 +822,7 @@ font-size: 3.2rem;
             <div class="align-bottom-alt"> <a href="../storybook-holiday/">
               <button class="btn btn-primary" type="button">Get Tickets</button>
               </a> </div>
-          </div>--> 
+          </div>
         </div>
       </div>
     </section>
