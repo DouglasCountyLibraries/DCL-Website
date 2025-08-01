@@ -45,45 +45,133 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
-.reserve-a-space-active {
-	background-color: #f5f5f5;
+#general-alert {
+    margin-bottom: 30px;
+}
+@font-face {
+    font-family: 'Delightful';
+    src: url('../shared-assets/web-fonts/delightfulmonolinesans-regular-webfont.woff2') format('woff2'), url('../shared-assets/web-fonts/delightfulmonolinesans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+.events-active {
+    background-color: #f5f5f5;
+}
+.background-row {
+    background: linear-gradient(to bottom, #fff 0%, #0b2027 45%, #000 70%, #000 100%);
+}
+.book-quote {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 100px 0 30px;
+}
+h1.delightful {
+    font-family: "Delightful", sans-serif;
+    color: #fff;
+    font-style: normal;
+    font-size: 9.4rem;
+    line-height: .9;
+    margin: 0;
+}
+h2.intro-heading {
+    color: #fff;
+    font-style: normal;
+    font-size: 1.75rem;
+    padding: 0 0 15px;
+    margin: 0;
+    line-height: 1.3;
+}
+.intro-text {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding: 15px 0 15px;
 }
 .custom-container {
-	max-width: 2200px;
-	margin: 0 auto;
+    max-width: 1300px;
+    margin: 0 auto;
+    color: #000;
 }
-.intro-container {
-	max-width: 850px;
-	margin: 0 auto;
-	padding: 0 15px 30px;
+.event-wrapper {
+    background: #fff url("sbh-bk-large.webp") top center no-repeat;
+    height: 1125px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
 }
-.flickity-container {
-	max-width: 1610px;
-	margin: 0 auto;
-	padding: 0 15px;
+.details-container {
+    background: #000;
+    max-width: 1920px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 0 15px;
 }
-.carousel-cell {
-	width: 100%;
-	padding: 0 0 50px 0;
-	text-align: center;
+.details-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0 150px;
+    font-weight: 500;
 }
-.carousel-cell img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin: 0 auto;
+.tickets-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 820px;
+    margin: 0 auto;
 }
-.flickity-page-dots {
-	bottom: 20px;
-	opacity: .5;
+.tickets-item {
+    padding: 15px;
 }
-.flickity-page-dots .dot {
-	background-color: #000;
+.tickets-item h4 {
+    text-transform: uppercase;
+    color: #20555b;
+    font-size: 24px;
+    margin: 15px 0 5px;
+    font-weight: 600;
 }
-.flickity-prev-next-button {
-	display: none;
+.tickets-date {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.btn.btn-custom {
+    color: #fff;
+    background: #bc140d;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 60px rgba(255,255,255, .4);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+.btn.btn-custom:hover, .btn.btn-custom:focus {
+    color: #fff;
+    background: #910000;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 60px rgba(255,255,255, .6);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+
+@media (max-width: 500px) {
+.event-wrapper {
+    background: #fff url("sbh-bk-small.webp") top center no-repeat;
+}
+.book-quote {
+    padding: 60px 0 30px;
+}
+h1.delightful {
+    font-size: 7rem;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -278,50 +366,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row border-top padding-bottom-20">
-      <div class="container text-center">
-        <h1 class="page-heading">A Storybook Holiday</h1>
-        <div class="max-width-80">
-          <h2 class="page-subheading">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature.</h2>
-          <div class="h5 margin-bottom-5 no-margin-top"><i>The Wild Rumpus Starts October 25!</i></div>
+    <div class="row background-row">
+      <div class="custom-container">
+        <div class="event-wrapper">
+          <div class="book-quote">"And when he came to the place where the Wild Things are, they roared their terrible roars and gnashed their terrible teeth and rolled their terrible eyes and showed their terrible claws." &mdash;&nbsp;Maurice Sendak</div>
+          <div class="intro-text">A Storybook Holiday:</div>
+          <h1 class="delightful">The Wild Rumpus</h1>
+        </div>
+        <div class="details-container">
+          <div class="details-wrapper">
+            <div class="details">
+              <h2 class="intro-heading">Join us for a monstrously fun family celebration inspired by the children’s classic <i>Where the Wild Things Are</i>. </h2>
+              <div>Dress in costume and prowl through an eerily delightful trick-or-treat trail, dig into wild crafts and creature-sized activities, and feast on an array of catered goodies and drinks fit for a king&mdash;or queen&mdash;of the Wild Things! With festive entertainment and fun for all ages, this is one Halloween event you won’t want to miss. Let the wild rumpus start! </div>
+            </div>
+            <div class="tickets-row">
+              <div class="text-center">
+                <div class="tickets-wrapper">
+                  <div class="tickets-item one">
+                    <div class="tickets-date">Saturday, October&nbsp;25, 6-9PM, <a class="white text-underline" href="../castle-rock/">Castle Rock</a></div>
+                    <div>Tickets: $20 ages&nbsp;3-13; $25 ages&nbsp;14+</div>
+                    <div>(No charge for ages 2 and under.)</div>
+                    <div class="padding-top-30 text-center">
+<!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.com/e/a-storybook-holiday-wild-rumpus-tickets-1549618473569" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+<!-- You can customize this button any way you like -->
+<button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1549618473569" type="button">Buy Tickets</button>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1549618473569',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1549618473569',
+        onOrderComplete: exampleCallback
+    });
+</script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="padding-top-30"><a class="white text-underline" href="../newsletters/"><i>Sign up for our newsletter</i></a><i> to get the inside scoop on DCL events and ticket sales!</i></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="flickity-container">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="carousel/one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/eleven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/twelve.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/thirteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/fourteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/fifteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/sixteen.jpg" alt=""></div>
-      </div>
-    </div>
-    <div class="container text-center padding-bottom-80">
-      <div class="max-width-80 padding-bottom-10">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
-      <div class="max-width-50">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</div>
-    </div>
-    
-    <!--<div class="text-center padding-top-40 padding-bottom-50">
-  <div>
-    <h4><i>Coming Spring 2022!</i></h4>
-    <div>
-      <h3 class="no-margin">A Storybook Holiday Spring:</h3>
-      <h1 class="no-margin-top text-uppercase font-weight-400">That Hungry Little Bug</h1>
-      Sunday, March 27, Parker<br>
-      Tickets on sale soon. </div>
-  </div>
-</div>--> 
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
@@ -384,17 +479,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -420,7 +505,8 @@ for (var i = 0; i < cards.length; i++) {
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.dclblog.org",
+		"https:\/\/www.blogs.douglascountylibraries.org",
+		"https:\/\/help.dcl.org/",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
