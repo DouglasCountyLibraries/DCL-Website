@@ -53,7 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-.bee-srp-container, .authors-container, .storytime-fete-container {
+.bt-container, .authors-container, .storytime-fete-container {
     padding-bottom: 500px;
 }
 .background-row {
@@ -61,104 +61,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1920px;
     margin: 0 auto;
 }
-/* srp & video */
+/* brew tour & video */
 	
-.bee-srp-container {
+.bt-container {
     display: flex;
     max-width: 1440px;
-    min-height: 640px;
+    min-height: 575px;
     margin: 0 auto;
     padding-top: 100px;
 }
-.bee-srp-wrapper {
+.bt-wrapper {
     margin: 0 auto;
     display: flex;
     width: 100%;
 }
-.bee-info {
-    background: #ddba9e url("bee-background.webp") 50% 37% no-repeat;
+.bt-info {
+    background: #ddba9e;
     color: #000;
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
-}
-h1.bee-heading-one {
-    color: #000;
-    font-size: 1.875rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin: 190px 0 0;
-}
-.bee-heading-two {
-    font-size: 1.5rem;
-    padding-bottom: 5px;
-}
-.bee-heading-three {
-    font-size: 1.25rem;
-}
-.bee-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 50px 0 0;
-}
-.srp-container {
-    background: #444;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 30px 50px;
     text-align: center;
-    min-height: 575px;
-    font-size: 1.25rem;
-    color: #fff;
-    padding: 0 30px 30px;
+    height: 574px;
 }
-h2.srp-heading-one {
+h1.bt-heading-one {
+    color: #000;
     font-size: 1.875rem;
-    line-height: 1.2;
-    margin: 0 0 5px;
     font-weight: 500;
-    color: #fff;
+    line-height: 1.2;
+    margin: 30px 0 5px;
 }
-.simple-sprite {
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 190px;
-    background-image: url("buzzing-bee.webp");
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    animation: simple-sprite .2s steps(2) infinite;
+.bt-heading-two {
+    font-size: 1.25rem;
 }
-@keyframes simple-sprite {
-to {
-background-position: -380px 0;
+.bt-content {
+    max-width: 680px;
+    margin: 0 auto;
 }
-}
-.bee-move {
-    animation: bee-move 20s linear infinite both;
-}
-@keyframes bee-move {
-0% {
-transform: translate(0);
-}
-20% {
-transform: translate(-4px, 4px) rotate(3deg);
-}
-40% {
-transform: translate(-8px, -4px) scale(.95);
-}
-60% {
-transform: translate(4px, 4px) rotate(1deg);
-}
-80% {
-transform: translate(8px, -4px) scale(.95);
-}
-100% {
-transform: translate(0);
-}
+.bee-campaign {
+    font-style: italic;
+    padding-top: 10px;
 }
 /* authors & eh */	
 
@@ -218,10 +162,9 @@ width: calc(100% * 0.5);
     padding: 50px 0 30px;
     color: rgba(255,255,255,.7);
 }
-.icon-font-alt {
-    font-size: 160px;
-    padding-bottom: 30px;
-    color: rgba(0,0,0,.5);
+.rumpus {
+    padding: 25px 0 10px;
+    opacity: .6;
 }
 .storytime-fete-container {
     display: flex;
@@ -281,43 +224,58 @@ h2.fete-heading-one {
     color: #fff;
 }
 
+@media (min-width: 955px) {
+.video-container {
+    position: relative;
+    overflow: hidden;
+    background: #7864A9;
+width: calc(100% * 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+video#bgvid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background: #222222 url("video-poster.webm") center center/cover;
+    background-size: cover;
+}
+video {
+    display: block;
+}
+}
+
 @media (max-width: 950px) {
 .background-row {
     background: #7895a6 url("bt-background-medium.webp") 50% 100% fixed no-repeat;
 }
-.bee-srp-container {
-    padding-top: 30px;
-}
-.bee-srp-container, .authors-container, .storytime-fete-container {
+.bt-container, .authors-container, .storytime-fete-container {
     max-width: 720px;
 }
-.bee-srp-container, .authors-container, .storytime-fete-container {
+.bt-container, .authors-container, .storytime-fete-container {
     padding-bottom: 300px;
 }
 .fete-wrapper {
     margin-bottom: 300px;
 }
-.authors-wrapper, .storytime-fete-wrapper, .bee-srp-wrapper, .authors-wrapper, .flood-wrapper {
+.bt-wrapper, .authors-wrapper, .storytime-fete-wrapper, .bee-srp-wrapper, .authors-wrapper, .flood-wrapper {
     flex-direction: column;
 }
-.eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .bee-info, .bee-content, .authors-info, .authors-content, .srp-container {
+.bt-info, .eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .bee-info, .bee-content, .authors-info, .authors-content, .srp-container {
     width: 100%;
 }
 .storytime-wrapper, .fete-wrapper {
     padding: 70px 15px 80px;
 }
-.srp-container, .authors-info {
+.authors-info {
     min-height: inherit;
     padding: 100px 15px 120px;
-}
-.bee-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 70px 15px 85px;
-    min-height: 575px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .authors-image {
     min-height: 640px;
@@ -325,6 +283,21 @@ h2.fete-heading-one {
 }
 .authors-content {
     padding: 0;
+}
+.bt-info {
+    order: 2;
+    padding: 60px 30px 110px;
+    height: inherit;
+}
+.bt-content img {
+    display: none;
+}
+.video-container {
+    display: inherit;
+}
+video#bgvid {
+    width: 100%!important;
+    height: auto;
 }
 }
 @media (max-width: 500px) {
@@ -528,19 +501,38 @@ h2.fete-heading-one {
     <div class="row gradient-row">
       <div class="background-row">
         <section>
-          <div class="bee-srp-container">
-            <div class="bee-srp-wrapper">
-              <div class="bee-info">
-                <div class="bee-content">
-                  <div class="bee-move">
-                    <div class="simple-sprite"></div>
+          <div class="bt-container">
+            <div class="bt-wrapper">
+              <div class="bt-info">
+                <div class="bt-content"><img src="beans-hops.webp" alt="">
+                  <h1 class="bt-heading-one">Tap In&mdash;Brew Tour Is Back!</h1>
+                  <div class="bt-heading-two">
+                    <div><a class="black text-underline" href="brew-tour/">Join our hive</a> for exclusive events, prizes, and cool community partners!</div>
+                    <div class="bee-campaign">DCL Is the Place to Bee!</div>
                   </div>
-                  <h1 class="bee-heading-one">DCL Is the Place to Bee!</h1>
                 </div>
               </div>
-              <div class="srp-container">
-                <h2 class="srp-heading-one">Join us for <a class="white text-underline" href="featured-events/#highlighted-events">sweet events</a> for all ages.</h2>
-                <div>There’s still time to squash your reading goals! <a class="white text-underline" href="summer-reading/">Register now</a> for Summer Reading.</div>
+              <div class="video-container">
+                <video autoplay muted playsinline poster="video-poster.webm" id="bgvid">
+                  <source src="bt-video.mp4" type="video/mp4" />
+                  Your browser does not support the background video tag.
+                  <source src="bt-video.webm" type="video/webm" />
+                  Your browser does not support the background video tag. </video>
+                <script>
+  const video = document.getElementById('bgvid');
+  let playCount = 1;
+
+  video.addEventListener('ended', () => {
+    if (playCount < 3) {
+      video.currentTime = 0;
+      video.play();
+      playCount++;
+    } else {
+      video.pause();
+      video.currentTime = 0; // Optional: reset to beginning
+    }
+  });
+</script> 
               </div>
             </div>
           </div>
@@ -575,9 +567,9 @@ h2.fete-heading-one {
               </div>
               <div class="storytime-wrapper">
                 <div class="storytime-content">
-                  <div><i class="icon-font-alt fa-duotone fa-light fa-child-reaching" style="--fa-secondary-opacity: 0.1;"></i></div>
-                  <h2 class="storytime-heading-one">Outdoor Storytime</h2>
-                  <div>Join us with your little ones! <a class="black text-underline" href="https://go.dcl.org/events?t=Storytime&el=Virtual&term=Outdoor+Storytime&r=months&n=4">View Calendar</a></div>
+                  <div class="rumpus"><img src="rumpus.webp" alt=""></div>
+                  <h2 class="storytime-heading-one">A Storybook Holiday Halloween</h2>
+                  <div>Join us for monstrous fun! The Wild Rumpus starts Saturday, October&nbsp;25. <a class="black text-underline" href="storybook-holiday/">Get Tickets</a></div>
                 </div>
               </div>
             </div>
