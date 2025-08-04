@@ -153,13 +153,80 @@ h2.authors-heading-one {
 }
 .authors-image {
     background: #f3ebd7;
-      background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+/* slideshow */
+	
+
+
+.slideshow-pic {
+    min-height: 600px;
+    position: relative;
+}
+.pic-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*animation*/
+    animation: slideShow 54s ease-out infinite 0s;
+}
+.pic-2 {
+    transform-origin: bottom right;
+}
+.pic-3 {
+    transform-origin: top left;
+}
+.pic-4 {
+    transform-origin: top right;
+}
+.pic-5 {
+    transform-origin: bottom left;
+}
+.pic-6 {
+    transform-origin: center center;
+}
+.pic-7 {
+    transform-origin: bottom right;
+}
+.pic-8 {
+    transform-origin: top left;
+}
+.pic-9 {
+    transform-origin: bottom left;
+}
+	
+/* keyframes*/
+@keyframes slideShow {
+0% {
+opacity: 0;
+transform:scale(1);
+}
+2% {
+opacity: 1
+}
+15% {
+opacity: 1;
+}
+18% {
+opacity: 0;
+transform:scale(1.1);
+}
+100% {
+opacity: 0;
+transform:scale(1);
+}
 }
 /* outdoor storytime & fete */
 	
@@ -264,8 +331,15 @@ video {
 .bt-container, .authors-container, .storytime-fete-container {
     max-width: 720px;
 }
-.bt-container, .authors-container, .storytime-fete-container {
+.bt-container, .authors-container {
     padding-bottom: 300px;
+}
+.storytime-fete-container {
+    padding-bottom: 0;
+    border-bottom: 60px solid #7895a6;
+}
+.bt-container {
+    padding-top: 30px;
 }
 .fete-wrapper {
     margin-bottom: 300px;
@@ -277,15 +351,14 @@ video {
     width: 100%;
 }
 .storytime-wrapper, .fete-wrapper {
-    padding: 70px 15px 80px;
+    padding: 50px 15px 110px;
 }
 .authors-info {
     min-height: inherit;
-    padding: 100px 15px 120px;
+    padding: 80px 15px 90px;
 }
 .authors-image {
-	width: 100%;
-	aspect-ratio: 5/4.5;
+    width: 100%;
 }
 .authors-content {
     padding: 0;
@@ -305,10 +378,18 @@ video#bgvid {
     width: 100%!important;
     height: auto;
 }
+.pic-wrapper, .slideshow-pic {
+    min-height: inherit;
+    height: 575px;
+}
 }
 @media (max-width: 500px) {
 .background-row {
     background: #7895a6 url("bt-background-small.webp") 50% 100% fixed no-repeat;
+}
+.pic-wrapper, .slideshow-pic {
+    min-height: inherit;
+    height: 400px;
 }
 )
 </style>
@@ -546,7 +627,21 @@ video#bgvid {
         <section>
           <div class="authors-container">
             <div class="authors-wrapper">
-              <div id="random-bg" class="authors-image"></div>
+              <div class="authors-image">
+                <div class="slideshow-pic">
+                  <div class="pic-wrapper" id="pic-wrapper">
+                    <figure id="fig1"></figure>
+                    <figure id="fig2"></figure>
+                    <figure id="fig3"></figure>
+                    <figure id="fig4"></figure>
+                    <figure id="fig5"></figure>
+                    <figure id="fig6"></figure>
+                    <figure id="fig7"></figure>
+                    <figure id="fig8"></figure>
+                    <figure id="fig9"></figure>
+                  </div>
+                </div>
+              </div>
               <div class="authors-info">
                 <div class="authors-content">
                   <h2 class="authors-heading-one">Buzzworthy Authors</h2>
@@ -561,28 +656,6 @@ video#bgvid {
             </div>
           </div>
         </section>
-          
-          
-          
-            <script>
-// Array of your background images
-const backgroundImages = [
-  'url("authors-one.webp")',
-  'url("authors-two.webp")',
-    'url("authors-three.webp")',
-    'url("authors-four.webp")'
-];
-
-// Get random image
-const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
-
-// Apply to element
-document.getElementById('random-bg').style.backgroundImage = randomImage;
-  </script>
-          
-          
-          
-          
         <section>
           <div class="storytime-fete-container">
             <div class="storytime-fete-wrapper">
@@ -667,7 +740,35 @@ document.getElementById('random-bg').style.backgroundImage = randomImage;
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var images = [
+        "authors-one.webp",
+        "authors-two.webp",
+		"authors-three.webp",
+		"authors-four.webp",
+		"authors-five.webp",
+		"authors-six.webp",
+		"authors-seven.webp",
+		"authors-eight.webp",
+		"authors-nine.webp"
+    ];
+    // Shuffle images
+    for (var i = images.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
+    }
+    // Apply the images as background
+    var figures = document.querySelectorAll("figure");
+    figures.forEach(function(figure, index) {
+        figure.style.background = `url(${images[index]}) center center/cover`;
+        figure.className = `pic-${index + 1}`;
+        figure.style.animationDelay = `${index * 6}s`;
+    });
+});
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
