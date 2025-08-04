@@ -152,7 +152,10 @@ h2.authors-heading-one {
     margin-bottom: 10px;
 }
 .authors-image {
-    background: #444 url("author-event.webp") center center/cover;
+    background: #f3ebd7;
+      background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
@@ -543,7 +546,7 @@ video#bgvid {
         <section>
           <div class="authors-container">
             <div class="authors-wrapper">
-              <div class="authors-image"></div>
+              <div id="random-bg" class="authors-image"></div>
               <div class="authors-info">
                 <div class="authors-content">
                   <h2 class="authors-heading-one">Buzzworthy Authors</h2>
@@ -558,6 +561,28 @@ video#bgvid {
             </div>
           </div>
         </section>
+          
+          
+          
+            <script>
+// Array of your background images
+const backgroundImages = [
+  'url("authors-one.webp")',
+  'url("authors-two.webp")',
+    'url("authors-three.webp")',
+    'url("authors-four.webp")'
+];
+
+// Get random image
+const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+
+// Apply to element
+document.getElementById('random-bg').style.backgroundImage = randomImage;
+  </script>
+          
+          
+          
+          
         <section>
           <div class="storytime-fete-container">
             <div class="storytime-fete-wrapper">
