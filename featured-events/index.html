@@ -103,20 +103,12 @@ Push Notifications End - Removed for Now -->
     font-display: swap;
     text-rendering: optimizeLegibility;
 }
-.teaser {
-    text-align: center;
-    max-width: 790px;
-    margin: 0 auto;
-    padding: 20px 15px 0;
-    font-style: italic;
-}
 .ks-heading-wrapper {
     background: #000 url("ks-background.webp") center center/cover;
-    padding: 15px 15px 50px;
+    padding: 130px 15px 0;
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .ks-heading-one {
     font-weight: 700;
@@ -141,11 +133,10 @@ Push Notifications End - Removed for Now -->
 }
 .sbh-heading-wrapper {
     background: #000 url("sbh-background.webp") center center/cover;
-    padding: 15px 15px 50px;
+    padding: 130px 15px 0;
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .sbh-heading-one {
     font-weight: 700;
@@ -168,6 +159,33 @@ Push Notifications End - Removed for Now -->
     text-shadow: 0px 4px 4px #000;
     letter-spacing: 3px;
     margin-top: 7px;
+}
+.tjr-heading-wrapper {
+    background: #000 url("tjr-background.webp") center center/cover;
+    padding: 130px 15px 0;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.tjr-heading-one {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0px 4px 4px #f2725b;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+.tjr-heading-two {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 5.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: .9;
+    text-shadow: 0px 4px 4px #f2725b;
 }
 .featured-author-wrapper {
     display: flex;
@@ -351,7 +369,7 @@ Push Notifications End - Removed for Now -->
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 15px;
-    max-width: 1440px;
+    max-width: 1825px;
     margin: 0 auto;
 }
 .photo-item {
@@ -478,6 +496,19 @@ opacity:1;
 }
 100% {
 opacity:0;
+}
+}
+
+@media (max-width: 1589px) {
+.ks-heading-wrapper, .tjr-heading-wrapper, .sbh-heading-wrapper {
+    padding: 175px 15px 0;
+}
+}
+
+@media (max-width: 1534px) {
+.ks-heading-wrapper, .tjr-heading-wrapper, .sbh-heading-wrapper {
+    padding: 0 15px 15px;
+    justify-content: center;
 }
 }
 
@@ -768,7 +799,6 @@ opacity:0;
     </div>
     <section>
       <div id="signature-events" class="row">
-        <div class="teaser">Coming Soon! Taylor Jenkins Reid will dive into her epic new novel, <a href="https://dcl.bibliocommons.com/v2/record/S114C1809485">Atmosphere</a>, Friday, October&nbsp;10. <a href="../newsletters/">Sign up for eNews</a> for early access tickets.</div>
         <div class="photo-wrapper">
           <div class="photo-item black text-center bg-gray-5">
             <div class="ks-heading-wrapper">
@@ -807,13 +837,49 @@ opacity:0;
             </div>
           </div>
           <div class="photo-item black text-center bg-gray-5">
+            <div class="tjr-heading-wrapper">
+              <div class="tjr-heading-one">DCL Presents:</div>
+              <div class="tjr-heading-two">Taylor Jenkins Reid</div>
+            </div>
+            <div class="photo-item-inner">
+              <div class="h6 black">Connect with one of today’s most celebrated storytellers when she joins us to share insights into her new novel, <a href="https://dcl.bibliocommons.com/v2/record/S114C1809485"><i>Atmosphere</i></a>.</div>
+              <div class="margin-top-5">Your General Admission ticket includes a seat for the presentation and a place in the signing line (one book per guest, signature only please). Optional: Skip the Line by ordering a pre-signed hardcover copy of Atmosphere, <a href="https://dcl.bibliocommons.com/v2/record/S114C1528843"><i>Daisy Jones & the Six</i></a>, and/or <i><a href="https://dcl.bibliocommons.com/v2/record/S114C1388582">The Seven Husbands of Evelyn Hugo</a></i> upon registration. You may also enjoy coffee, tea, and dessert bites; cash bar available for ages 21-plus. Book sales at the event provided by Books Are Awesome.</div>
+              <div class="margin-top-10">Friday, October&nbsp;10,&nbsp;7PM</div>
+              <div><a href="https://maps.app.goo.gl/4v46dcGjyTgp2aVe6" target="_blank">Hyatt Regency Denver Tech Center</a></div>
+              <div class="margin-top-10">Tickets: $20 General Admission, Optional Skip the Line Book Purchase: $30</div>
+            </div>
+            <div class="align-bottom-alt"> 
+              
+              <!-- Noscript content for added SEO -->
+              <noscript>
+              <a href="https://www.eventbrite.com/e/an-evening-with-nyt-bestselling-author-taylor-jenkins-reid-tickets-1470161054289" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+              </noscript>
+              <!-- You can customize this button any way you like -->
+              <button class="btn btn-primary" id="eventbrite-widget-modal-trigger-1470161054289" type="button">Buy Tickets</button>
+              <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+              <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1470161054289',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1470161054289',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+            </div>
+          </div>
+          <div class="photo-item black text-center bg-gray-5">
             <div class="sbh-heading-wrapper">
               <div class="sbh-heading-one">A Storybook Holiday:</div>
               <div class="sbh-heading-two">The Wild Rumpus</div>
             </div>
             <div class="photo-item-inner">
               <div class="h6 black">Join us for a monstrously fun Halloween celebration inspired by Where the Wild Things&nbsp;Are.</div>
-              <div class="margin-top-5">Dress in costume and prowl through a magical trick-or-treat trail, enjoy wild crafts and activities, and feast on catered goodies fit for a king&mdash;or queen! Ideal for ages&nbsp;3-8, but all ages are welcome.</div>
+              <div class="margin-top-5">Dress in costume and prowl through a magical trick-or-treat trail, enjoy wild crafts and activities, and feast on catered goodies fit for a king&mdash;or queen! Ideal for ages&nbsp;3-13, but all ages are welcome.</div>
               <div class="margin-top-10">Saturday, October&nbsp;25,&nbsp;6PM, <a href="../castle-rock/">Castle Rock</a></div>
             </div>
             <div class="align-bottom-alt"> <a href="../storybook-holiday/">
@@ -825,20 +891,7 @@ opacity:0;
     </section>
     <section>
       <div id="highlighted-events" class="row bg-gray-5 margin-top-30 padding-top-40 padding-bottom-80">
-        <div class="box-wrapper"> 
-          <!--<div class="box-item">
-            <div class="white-bottom-row">
-              <div class="gray-circle-wrapper circle-alt">
-                <div class="gray-circle circle-alt"><img src="icon-images/writers-workshops.jpg" alt="Writers Workshops" class="img-responsive"></div>
-              </div>
-            </div>
-            <div class="h3 text-center margin-top-10">Writers Workshops</div>
-            <div class="text-center">Elevate your writing with expert guidance and creative insight on various writing topics from author presenters. ADULTS.</div>
-            <div class="align-bottom">
-              <div class="large-text text-center margin-top-5">Various dates & locations</div>
-              <a href="https://go.dcl.org/events?term=writers+workshop&n=3&r=months" class="btn btn-primary margin-top-15">Register Now</a> </div>
-          </div> -->
-          
+        <div class="box-wrapper">
           <div class="box-item">
             <div class="white-bottom-row">
               <div class="gray-circle-wrapper circle-alt">
