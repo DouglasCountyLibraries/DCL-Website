@@ -140,7 +140,6 @@ h2.authors-heading-one {
 }
 .authors-heading-two {
     font-size: 1.25rem;
-    padding-bottom: 20px;
 }
 .authors-content {
     max-width: 680px;
@@ -152,81 +151,8 @@ h2.authors-heading-one {
     margin-bottom: 10px;
 }
 .authors-image {
-    background: #f3ebd7;
+    background: #3c637f url("atmosphere.webp") center center no-repeat;
 width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-/* slideshow */
-	
-
-
-.slideshow-pic {
-    min-height: 600px;
-    position: relative;
-}
-.pic-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-figure {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    /*animation*/
-    animation: slideShow 54s ease-out infinite 0s;
-}
-.pic-2 {
-    transform-origin: bottom right;
-}
-.pic-3 {
-    transform-origin: top left;
-}
-.pic-4 {
-    transform-origin: top right;
-}
-.pic-5 {
-    transform-origin: bottom left;
-}
-.pic-6 {
-    transform-origin: center center;
-}
-.pic-7 {
-    transform-origin: bottom right;
-}
-.pic-8 {
-    transform-origin: top left;
-}
-.pic-9 {
-    transform-origin: bottom left;
-}
-	
-/* keyframes*/
-@keyframes slideShow {
-0% {
-opacity: 0;
-transform:scale(1);
-}
-2% {
-opacity: 1
-}
-15% {
-opacity: 1;
-}
-18% {
-opacity: 0;
-transform:scale(1.1);
-}
-100% {
-opacity: 0;
-transform:scale(1);
-}
 }
 /* outdoor storytime & fete */
 	
@@ -359,6 +285,7 @@ video {
 }
 .authors-image {
     width: 100%;
+    height: 575px;
 }
 .authors-content {
     padding: 0;
@@ -626,30 +553,15 @@ video#bgvid {
         <section>
           <div class="authors-container">
             <div class="authors-wrapper">
-              <div class="authors-image">
-                <div class="slideshow-pic">
-                  <div class="pic-wrapper" id="pic-wrapper">
-                    <figure id="fig1"></figure>
-                    <figure id="fig2"></figure>
-                    <figure id="fig3"></figure>
-                    <figure id="fig4"></figure>
-                    <figure id="fig5"></figure>
-                    <figure id="fig6"></figure>
-                    <figure id="fig7"></figure>
-                    <figure id="fig8"></figure>
-                    <figure id="fig9"></figure>
-                  </div>
-                </div>
-              </div>
+              <div class="authors-image"> </div>
               <div class="authors-info">
                 <div class="authors-content">
-                  <h2 class="authors-heading-one">Buzzworthy Authors</h2>
-                  <div class="authors-heading-two">Don’t miss these bestselling storytellers! <a class="black text-underline" href="featured-events/">Learn&nbsp;More</a></div>
-                  <ul class="text-left">
-                    <li>Karin Slaughter&nbsp;| August&nbsp;16, 7PM, Denver Marriott South Park Meadows</li>
-                    <li>Taylor Jenkins Reid&nbsp;| October&nbsp;10, 7PM, Hyatt Regency DTC</li>
-                    <li>Meet <a class="black text-underline" href="featured-events/#author-events">even more authors</a>!</li>
-                  </ul>
+                  <div class="text-uppercase">DCL Presents:</div>
+                  <h2 class="authors-heading-one">Taylor Jenkins Reid</h2>
+                  <div class="authors-heading-two">Connect with one of today’s most celebrated storytellers!</div>
+                  <div>Friday, October&nbsp;10,&nbsp;7PM, Hyatt Regency DTC</div>
+                  <div><a class="black text-underline" href="featured-events/">Learn More</a></div>
+                  <div class="padding-top-15"><i>Don't miss <a class="black text-underline" href="featured-events/#author-events">these other authors</a>!</i></div>
                 </div>
               </div>
             </div>
