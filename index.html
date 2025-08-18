@@ -139,7 +139,7 @@ h2.authors-heading-one {
     margin: 0 0 5px;
 }
 .authors-heading-two {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .authors-content {
     max-width: 680px;
@@ -151,7 +151,7 @@ h2.authors-heading-one {
     margin-bottom: 10px;
 }
 .authors-image {
-    background: #3c637f url("atmosphere.webp") center center no-repeat;
+    background: #000 url("wild-rumpus.webp") bottom center repeat-x;
 width: calc(100% * 0.5);
 }
 /* outdoor storytime & fete */
@@ -160,6 +160,11 @@ width: calc(100% * 0.5);
     font-size: 140px;
     padding: 50px 0 30px;
     color: rgba(255,255,255,.7);
+}
+.icon-font-alt {
+    font-size: 140px;
+    padding: 50px 0 30px;
+    color: rgba(0,0,0,.7);
 }
 .rumpus {
     padding: 25px 0 10px;
@@ -556,12 +561,9 @@ video#bgvid {
               <div class="authors-image"> </div>
               <div class="authors-info">
                 <div class="authors-content">
-                  <div class="text-uppercase">DCL Presents:</div>
-                  <h2 class="authors-heading-one">Taylor Jenkins Reid</h2>
-                  <div class="authors-heading-two">Connect with one of today’s most celebrated storytellers!</div>
-                  <div>Friday, October&nbsp;10,&nbsp;7PM, Hyatt Regency DTC</div>
-                  <div><a class="black text-underline" href="featured-events/">Learn More</a></div>
-                  <div class="padding-top-15"><i>Don't miss <a class="black text-underline" href="featured-events/#author-events">these other authors</a>!</i></div>
+                  <h2 class="authors-heading-one">A Storybook Holiday Halloween</h2>
+                  <div class="authors-heading-two">Join us for monstrous fun!</div>
+                  <div>The Wild Rumpus starts Saturday, October&nbsp;25. <a class="black text-underline" href="storybook-holiday/">Get Tickets</a></div>
                 </div>
               </div>
             </div>
@@ -572,16 +574,16 @@ video#bgvid {
             <div class="storytime-fete-wrapper">
               <div class="fete-wrapper">
                 <div class="fete-content">
-                  <div><i class="icon-font fa-duotone fa-light fa-football-helmet" style="--fa-secondary-opacity: 0.3;"></i></div>
+                  <div><i class="icon-font fa-sharp-duotone fa-thin fa-football-helmet" style="--fa-secondary-opacity: 0.3;"></i></div>
                   <h2 class="fete-heading-one">From the Archives: A History of Competition</h2>
                   <div>Dive into Douglas County’s sporting history, an exhibit at select libraries. <a class="white text-underline" href="https://archives.dcl.org/" target="_blank">Learn&nbsp;More</a></div>
                 </div>
               </div>
               <div class="storytime-wrapper">
                 <div class="storytime-content">
-                  <div class="rumpus"><img src="rumpus.webp" alt=""></div>
-                  <h2 class="storytime-heading-one">A Storybook Holiday Halloween</h2>
-                  <div>Join us for monstrous fun! The Wild Rumpus starts Saturday, October&nbsp;25. <a class="black text-underline" href="storybook-holiday/">Get Tickets</a></div>
+                  <div><i class="icon-font-alt fa-sharp-duotone fa-thin fa-book-open-reader" style="--fa-secondary-opacity: 0.3;"></i></div>
+                  <h2 class="storytime-heading-one">Meet the Author!</h2>
+                  <div>Discover your next favorite author and hear the stories behind the stories. <a class="black text-underline" href="featured-events/#author-events">Learn More</a></div>
                 </div>
               </div>
             </div>
@@ -652,33 +654,6 @@ video#bgvid {
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var images = [
-        "authors-one.webp",
-        "authors-two.webp",
-		"authors-three.webp",
-		"authors-four.webp",
-		"authors-five.webp",
-		"authors-six.webp",
-		"authors-seven.webp",
-		"authors-eight.webp",
-		"authors-nine.webp"
-    ];
-    // Shuffle images
-    for (var i = images.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        [images[i], images[j]] = [images[j], images[i]];
-    }
-    // Apply the images as background
-    var figures = document.querySelectorAll("figure");
-    figures.forEach(function(figure, index) {
-        figure.style.background = `url(${images[index]}) center center/cover`;
-        figure.className = `pic-${index + 1}`;
-        figure.style.animationDelay = `${index * 6}s`;
-    });
-});
-</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
