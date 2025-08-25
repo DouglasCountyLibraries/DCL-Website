@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,57 +45,166 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .reserve-a-space-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
-.flickity-container {
-	max-width: 1920px;
-	margin: 0 auto;
-	padding: 0 15px;
+.teal-check .fa-check {
+    color: #42777B;
 }
-.carousel-cell {
-	width: 100%;
-	padding: 0;
-	text-align: center;
+.fa-ul.teal-check li {
+    margin-bottom: 15px;
 }
-.carousel-cell img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin: 0 auto;
+/* slideshow */
+	
+.slideshow-container {
+    display: flex;
+    max-width: 1610px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-.flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
+.slideshow-wrapper {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
 }
-.flickity-prev-next-button:hover {
-	background: transparent;
+.slideshow-image {
+    background: #fff;
+width: calc(100% * 0.65);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.flickity-prev-next-button .arrow {
-	fill: #efeeed;
+.slideshow-info {
+    background: #f5f5f5;
+    color: #000;
+width: calc(100% * 0.35);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    margin-left: -40px;
 }
-.flickity-prev-next-button.no-svg {
-	color: #efeeed;
+.slideshow-arrow {
+    background: url("../shared-assets/images/slideshow-arrow-left.png") 100% 48% no-repeat;
+    width: 40px;
+    position: relative;
+    z-index: 100;
+    left: -30px;
 }
-.concierge .fa-check {
-	color: #d36a50;
+.slideshow-content {
+    padding: 0 30px;
 }
-.fa-ul > li {
-	position: inherit;
-	padding: 3px 0;
+.slideshow-pic {
+    min-height: 600px;
+    position: relative;
 }
-.fa-ul {
-	margin-left: 0;
+.pic-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-.fa-li {
-	left: 0;
-	position: inherit;
-	text-align: left;
-	top: 0;
-	width: 30px;
+figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*animation*/
+    animation: slideShow 54s ease-out infinite 0s;
+}
+.pic-2 {
+    transform-origin: bottom right;
+}
+.pic-3 {
+    transform-origin: top left;
+}
+.pic-4 {
+    transform-origin: top right;
+}
+.pic-5 {
+    transform-origin: bottom left;
+}
+.pic-6 {
+    transform-origin: center center;
+}
+.pic-7 {
+    transform-origin: bottom right;
+}
+.pic-8 {
+    transform-origin: top left;
+}
+.pic-9 {
+    transform-origin: bottom left;
+}
+	
+/* keyframes*/
+@keyframes slideShow {
+0% {
+opacity: 0;
+transform:scale(1);
+}
+2% {
+opacity: 1
+}
+15% {
+opacity: 1;
+}
+18% {
+opacity: 0;
+transform:scale(1.1);
+}
+100% {
+opacity: 0;
+transform:scale(1);
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-wrapper {
+    flex-direction: column;
+}
+.slideshow-info {
+    margin: -40px 0 0;
+}
+.slideshow-content {
+    padding: 40px 15px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.slideshow-arrow {
+    background: url("../shared-assets/images/slideshow-arrow-top.png") 50% 100% no-repeat;
+    width: 100%;
+    height: 40px;
+    z-index: 100;
+    top: -30px;
+    position: relative;
+    margin: 0 auto;
+    left: auto;
+}
+.slideshow-image, .slideshow-info {
+    width: 100%;
+}
+}
+
+@media (max-width: 725px) {
+.slideshow-pic {
+    min-height: 400px;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-pic {
+    min-height: 300px;
+}
+.slideshow-arrow {
+    display: none;
+}
+.slideshow-info {
+    margin: 0;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -289,63 +399,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-30">
-    <div class="container text-center">
-      <h1 class="page-heading">Birthday Parties</h1>
-      <div class="h1 text-uppercase no-margin">at DCL</div>
-      <div class="max-width-80">
-        <h2 class="page-subheading">Celebrate your child's birthday at Douglas County Libraries!</h2>
-        <div>$225 for up to 12 children (the birthday girl/boy + 11 friends); add $15 for each additional child. Birthday party <a href="terms-conditions-faqs/">terms and conditions </a>apply. Find answers to some common <a href="terms-conditions-faqs/#faq">birthday party questions</a>.</div>
+    <div class="row border-top padding-bottom-30">
+      <div class="container text-center">
+        <h1 class="page-heading">Birthday Parties</h1>
+        <div class="h1 text-uppercase no-margin">at DCL</div>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Celebrate your child's birthday at Douglas County Libraries!</h2>
+          <div>$225 for up to 12 children (the birthday girl/boy + 11 friends); add $15 for each additional child. Birthday party <a href="terms-conditions-faqs/">terms and conditions </a>apply. Find answers to some common <a href="terms-conditions-faqs/#faq">birthday party questions</a>.</div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="flickity-container">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="images/birthday-one.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-two.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-three.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-four.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-five.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-six.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-seven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-eight.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-nine.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-ten.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-eleven.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-twelve.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-thirteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-fourteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-fifteen.jpg" alt=""></div>
-        <div class="carousel-cell"><img src="images/birthday-sixteen.jpg" alt=""></div>
+    <section>
+      <div class="row padding-bottom-30">
+        <div class="slideshow-container">
+          <div class="slideshow-wrapper">
+            <div class="slideshow-image">
+              <div class="slideshow-pic">
+                <div class="pic-wrapper" id="pic-wrapper">
+                  <figure id="fig1"></figure>
+                  <figure id="fig2"></figure>
+                  <figure id="fig3"></figure>
+                  <figure id="fig4"></figure>
+                  <figure id="fig5"></figure>
+                  <figure id="fig6"></figure>
+                  <figure id="fig7"></figure>
+                  <figure id="fig8"></figure>
+                  <figure id="fig9"></figure>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-arrow"></div>
+            <div class="slideshow-info">
+              <div class="slideshow-content">
+                <h2 class="xxsm-heading no-margin-top margin-bottom-5">Our customized parties are for kids ages 2-7.</h2>
+                <h3 class="xxsm-heading no-margin-top">Each party package includes:</h3>
+                <ul class="fa-ul teal-check">
+                  <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>Setup, cleanup and a dedicated party coordinator</li>
+                  <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>A fun themed invitation that you may email to your guests</li>
+                  <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>Age-appropriate activities (1.5 hours)</li>
+                  <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>A free book for the birthday boy/girl</li>
+                  <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>A lollipop bouquet</li>
+                  <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>Twelve (12) age-appropriate goody bags</li>
+                  <li><i class="fa-li fa fa-check fa-lg" aria-hidden="true"></i>Twelve (12) thank-you notes for the birthday boy/girl's use after the party</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row padding-bottom-60 padding-top-30">
-    <div class="container max-width-80">
-      <div class="padding-bottom-30 large-text text-center">Our customized parties are for kids ages 2-7. Each party package includes:</div>
-      <img class="img-responsive pull-left padding-right-30 padding-bottom-15" src="birthday-parties.png" alt="Birthday Parties at DCL">
-      <div>
-        <ul class="fa-ul concierge">
-          <li><i class="fa-li fa fa-check fa-lg"></i>Setup, cleanup and a dedicated party coordinator</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>A fun themed invitation that you may email to your guests</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Age-appropriate activities (1.5 hours)</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>A free book for the birthday boy/girl</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>A lollipop bouquet</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Twelve (12) age-appropriate goody bags</li>
-          <li><i class="fa-li fa fa-check fa-lg"></i>Twelve (12) thank-you notes for the birthday boy/girl's use after the party</li>
-        </ul>
+    </section>
+    <section>
+      <div class="row padding-bottom-80">
+        <div class="max-width-80">
+          <div class="text-center">
+            <div class="h4 no-margin-top">Request a Reservation:</div>
+            <div>Birthday parties are available Saturdays 2-4 p.m. and Sundays 10:30 a.m.-12:30 p.m. and 2-4 p.m., subject to availability. Reservation requests must be made at least 15 weekdays in advance. Your reservation is not guaranteed until your request has been reviewed and approved.</div>
+          </div>
+          <div class="text-center padding-top-15"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a>
+            <div class="padding-top-20">Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+          </div>
+        </div>
       </div>
-      <div class="clearfix text-center">
-        <div class="h4">Request a Reservation:</div>
-        <div>Birthday parties are available Saturdays 2-4 p.m. and Sundays 10:30 a.m.-12:30 p.m. and 2-4 p.m., subject to availability. Reservation requests must be made at least 15 weekdays in advance. Your reservation is not guaranteed until your request has been reviewed and approved.</div>
-      </div>
-      <div class="text-center padding-top-15"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a>
-        <div class="padding-top-20">Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      </div>
-    </div>
-  </div>
-  <!-- InstanceEndEditable --> </div>
+    </section>
+    <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -408,20 +524,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
 <script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<script type="text/javascript">
-$(document).ready(function() {
-  if(window.location.href.indexOf('#restrictions') != -1) {
-    $('#restrictions').modal('show')
-  }
+document.addEventListener("DOMContentLoaded", function() {
+    var images = [
+        "slideshow/one.webp",
+        "slideshow/two.webp",
+		"slideshow/three.webp",
+		"slideshow/four.webp",
+		"slideshow/five.webp",
+		"slideshow/six.webp",
+		"slideshow/seven.webp",
+		"slideshow/eight.webp",
+		"slideshow/nine.webp"
+    ];
+    // Shuffle images
+    for (var i = images.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
+    }
+    // Apply the images as background
+    var figures = document.querySelectorAll("figure");
+    figures.forEach(function(figure, index) {
+        figure.style.background = `url(${images[index]}) center center/cover`;
+        figure.className = `pic-${index + 1}`;
+        figure.style.animationDelay = `${index * 6}s`;
+    });
 });
 </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
@@ -483,4 +610,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
