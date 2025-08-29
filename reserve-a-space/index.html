@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -145,9 +146,18 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
 	max-width: 1580px;
 	margin: 30px auto 80px auto;
 }
+.slideshow-arrow {
+	background: url("../shared-assets/images/slideshow-arrow-left-white.png") 100% 100% no-repeat;
+	width: 42px;
+	position: relative;
+	z-index: 100;
+	left: -30px;
+	height: 80px;
+	bottom: 15px;
+}
 .slideshow-content {
-    flex: 1 1 36%;
-    padding: 0 30px 20px;
+	flex: 1 1 36%;
+	padding: 0 30px 20px 0;
 }
 .slideshow-image.main {
     min-height: 600px;
@@ -157,7 +167,6 @@ src="https://www.facebook.com/tr?id=323565307821038&ev=PageView
     overflow: hidden;
     padding-bottom: 0%;
     width: 67%;
-    border-right: 15px solid #f5f5f5;
 }
 #slideshow div {
     position: absolute;
@@ -307,12 +316,22 @@ opacity:0;
     flex-direction: column;
 }
 .slideshow-content {
-    padding: 30px 20px 40px;
-    text-align: center;
+	padding: 0 20px 50px;
+	text-align: center;
 }
 #slideshow {
     width: 100%;
     border-right: 0;
+}
+.slideshow-arrow {
+    background: url("../shared-assets/images/slideshow-arrow-top-white.png") 50% 100% no-repeat;
+    width: 100%;
+    height: 40px;
+    z-index: 100;
+    top: -30px;
+    position: relative;
+    margin: 0 auto;
+    left: auto;
 }
 }
     
@@ -331,6 +350,13 @@ opacity:0;
 	line-height: 48px;
     padding: 0 15px;
 }   
+.slideshow-arrow {
+    display: none;
+}
+.slideshow-content {
+	padding: 40px 15px 50px;
+	text-align: center;
+}
 }
 @media (max-width: 500px) {
 .box-item {
@@ -646,6 +672,7 @@ opacity:0;
             <div></div>
             <!-- #slideshow div:nth-of-type(11) --> 
             <span>Private Parties</span> </div>
+          <div class="slideshow-arrow"></div>
           <div class="slideshow-content">
             <div class="padding-bottom-15">Take advantage of our modern, versatile event spaces by hosting your next <a href="../birthday-parties/">birthday party</a>, celebration, <a href="../say-i-do/">wedding</a>, fundraising event, <a href="../showers/">baby or wedding shower</a>, or private party at one of our convenient locations.</div>
             <div class="padding-bottom-15">Our friendly staff offer full-service planning and management of all details of your special event or meeting. From small groups to large events, our affordable venues accommodate it all.</div>
@@ -919,4 +946,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
