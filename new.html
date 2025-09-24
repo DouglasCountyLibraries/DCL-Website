@@ -54,11 +54,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
+.no-gutter-wrapper {
+    margin: 0 -15px;
+}
 .container-wrapper {
     position: relative;
     overflow: hidden;
     max-width: 2300px;
-    margin: auto -15px;
+    margin: 0 auto;
 }
 .content-container {
     min-height: 100vh;
@@ -189,6 +192,12 @@ h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
 }
 .content-container {
     padding: 90px 0 100px;
+}
+}
+
+@media (max-width: 759px) {
+.box-item:nth-of-type(1), .box-item:nth-of-type(2) {
+    margin-bottom: 100px;
 }
 }
 </style>
@@ -385,45 +394,47 @@ h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
     </div>
     <!-- InstanceBeginEditable name="Content" -->
     <div class="gradient-row">
-      <div class="container-wrapper">
-        <div class="row content-container">
-          <video autoplay muted playsinline poster="autumn-video-poster.webp" id="bgvid">
-            <source src="background-autumn-video.mp4" type="video/mp4" />
-            Your browser does not support the background video tag.
-            <source src="background-autumn-video.webm" type="video/webm" />
-            Your browser does not support the background video tag. </video>
-          <video autoplay muted playsinline poster="autumn-video-poster-small.webp" id="bgvid-small">
-            <source src="background-autumn-video-small.mp4" type="video/mp4" />
-            Your browser does not support the background video tag.
-            <source src="background-autumn-video-small.webm" type="video/webm" />
-            Your browser does not support the background video tag. </video>
-          <section>
-            <div class="box-container">
-              <div class="box-wrapper">
-                <div class="box-item">
-                  <div><i class="icon-font fa-sharp fa-light fa-ornament"></i></div>
-                  <div class="one-heading-two">A Storybook Holiday: </div>
-                  <h2 class="one-heading-one">Guess Who?</h2>
-                  <div class="one-heading-three">Celebrate with us&mdash;<a class="black text-underline" href="#">get tickets now</a>! Enjoy holiday entertainment, festive activities, delicious food and drinks, and Santa.</div>
-                  <div>Saturday, Dec.&nbsp;6 & Sunday, Dec.&nbsp;7</div>
-                </div>
-                <div class="box-item">
-                  <div><i class="icon-font fa-sharp fa-light fa-book-open"></i></div>
-                  <h2 class="two-heading-one">Take the Reading Challenge!</h2>
-                  <div>There is still time to <a class="black text-underline" href="reading-challenge/">sign&nbsp;up</a>.</div>
-                </div>
-                <div class="box-item">
-                  <div><i class="icon-font fa-sharp fa-light fa-wreath"></i></div>
-                  <h2 class="three-heading-one">Booked for the Holidays</h2>
-                  <div>Mark your calendar for a season of festive family fun, Nov. 15-Jan. 4. <a class="black text-underline" href="#">Learn&nbsp;More</a></div>
+      <div class="no-gutter-wrapper">
+        <div class="container-wrapper">
+          <div class="row content-container">
+            <video autoplay muted playsinline poster="autumn-video-poster.webp" id="bgvid">
+              <source src="background-autumn-video.mp4" type="video/mp4" />
+              Your browser does not support the background video tag.
+              <source src="background-autumn-video.webm" type="video/webm" />
+              Your browser does not support the background video tag. </video>
+            <video autoplay muted playsinline poster="autumn-video-poster-small.webp" id="bgvid-small">
+              <source src="background-autumn-video-small.mp4" type="video/mp4" />
+              Your browser does not support the background video tag.
+              <source src="background-autumn-video-small.webm" type="video/webm" />
+              Your browser does not support the background video tag. </video>
+            <section>
+              <div class="box-container">
+                <div class="box-wrapper">
+                  <div class="box-item">
+                    <div><i class="icon-font fa-sharp fa-light fa-ornament"></i></div>
+                    <div class="one-heading-two">A Storybook Holiday: </div>
+                    <h2 class="one-heading-one">Guess Who?</h2>
+                    <div class="one-heading-three">Celebrate with us&mdash;<a class="black text-underline" href="#">get tickets now</a>! Enjoy holiday entertainment, festive activities, delicious food and drinks, and Santa.</div>
+                    <div>Saturday, Dec.&nbsp;6 & Sunday, Dec.&nbsp;7</div>
+                  </div>
+                  <div class="box-item">
+                    <div><i class="icon-font fa-sharp fa-light fa-book-open"></i></div>
+                    <h2 class="two-heading-one">Take the Reading Challenge!</h2>
+                    <div>There is still time to <a class="black text-underline" href="reading-challenge/">sign&nbsp;up</a>.</div>
+                  </div>
+                  <div class="box-item">
+                    <div><i class="icon-font fa-sharp fa-light fa-wreath"></i></div>
+                    <h2 class="three-heading-one">Booked for the Holidays</h2>
+                    <div>Mark your calendar for a season of festive family fun, Nov. 15-Jan. 4. <a class="black text-underline" href="#">Learn&nbsp;More</a></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="playpause">
-              <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
-              <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
-            </div>
-          </section>
+              <div class="playpause">
+                <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
