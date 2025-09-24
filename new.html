@@ -61,11 +61,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: auto -15px;
 }
 .content-container {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-bottom: 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 50px;
 }
 video#bgvid {
     position: absolute;
@@ -82,15 +82,30 @@ video#bgvid {
     background: #fff url(autumn-video-poster.webp) center center no-repeat;
     background-size: cover;
 }
+video#bgvid-small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff url(autumn-video-poster-small.webp) center center no-repeat;
+    background-size: cover;
+}
 video {
     display: block;
 }
 .box-container {
-	display: flex;
-	max-width: 1440px;
-	margin: 0 auto;
-	color: #fff;
-	position: relative;
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
 }
 .box-wrapper {
     display: flex;
@@ -104,26 +119,24 @@ video {
     margin: 0 auto;
 }
 .box-item {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin: 10px;
-	min-width: 360px;
-	background: #fbdcad;
-	padding: 70px 30px 90px;
-	border-radius: 5px;
-	color: #000;
-	font-size: 1.25rem;
-	text-align: center;
-	max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+    min-width: 360px;
+    background: #fbdcad;
+    padding: 70px 30px 90px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 600px;
 }
 .icon-font {
-	font-size: 90px;
-	padding: 0 0 30px;
-	color: #444;
+    font-size: 90px;
+    padding: 0 0 30px;
+    color: #444;
 }
-
-
 h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
     font-size: 1.875rem;
     line-height: 1.2;
@@ -164,7 +177,19 @@ h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
     color: #fff;
 }
 
-@media (max-width: 1220px) {
+@media (min-width: 926px) {
+#bgvid-small {
+    display: none;
+}
+}
+
+@media (max-width: 925px) {
+#bgvid {
+    display: none;
+}
+.content-container {
+    padding: 90px 0 100px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -367,32 +392,31 @@ h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
             Your browser does not support the background video tag.
             <source src="background-autumn-video.webm" type="video/webm" />
             Your browser does not support the background video tag. </video>
+          <video autoplay muted playsinline poster="autumn-video-poster-small.webp" id="bgvid-small">
+            <source src="background-autumn-video-small.mp4" type="video/mp4" />
+            Your browser does not support the background video tag.
+            <source src="background-autumn-video-small.webm" type="video/webm" />
+            Your browser does not support the background video tag. </video>
           <section>
             <div class="box-container">
               <div class="box-wrapper">
                 <div class="box-item">
-                  
-                    <div><i class="icon-font fa-sharp fa-light fa-ornament"></i></div>
-                    <div class="one-heading-two">A Storybook Holiday: </div>
-                    <h2 class="one-heading-one">Guess Who?</h2>
-                    <div class="one-heading-three">Celebrate with us&mdash;<a class="black text-underline" href="#">get tickets now</a>! Enjoy holiday entertainment, festive activities, delicious food and drinks, and Santa.</div>
-                    <div>Saturday, Dec.&nbsp;6 & Sunday, Dec.&nbsp;7</div>
-              
+                  <div><i class="icon-font fa-sharp fa-light fa-ornament"></i></div>
+                  <div class="one-heading-two">A Storybook Holiday: </div>
+                  <h2 class="one-heading-one">Guess Who?</h2>
+                  <div class="one-heading-three">Celebrate with us&mdash;<a class="black text-underline" href="#">get tickets now</a>! Enjoy holiday entertainment, festive activities, delicious food and drinks, and Santa.</div>
+                  <div>Saturday, Dec.&nbsp;6 & Sunday, Dec.&nbsp;7</div>
                 </div>
                 <div class="box-item">
-                 
-                    <div><i class="icon-font fa-sharp fa-light fa-book-open"></i></div>
-                    <h2 class="two-heading-one">Take the Reading Challenge!</h2>
-                    <div>There is still time to <a class="black text-underline" href="reading-challenge/">sign&nbsp;up</a>.</div>
-                
+                  <div><i class="icon-font fa-sharp fa-light fa-book-open"></i></div>
+                  <h2 class="two-heading-one">Take the Reading Challenge!</h2>
+                  <div>There is still time to <a class="black text-underline" href="reading-challenge/">sign&nbsp;up</a>.</div>
                 </div>
                 <div class="box-item">
-                 
-                    <div><i class="icon-font fa-sharp fa-light fa-wreath"></i></div>
-                    <h2 class="three-heading-one">Booked for the Holidays</h2>
-                    <div>Mark your calendar for a season of festive family fun, Nov. 15-Jan. 4. <a class="black text-underline" href="#">Learn&nbsp;More</a></div>
-                  </div>
-               
+                  <div><i class="icon-font fa-sharp fa-light fa-wreath"></i></div>
+                  <h2 class="three-heading-one">Booked for the Holidays</h2>
+                  <div>Mark your calendar for a season of festive family fun, Nov. 15-Jan. 4. <a class="black text-underline" href="#">Learn&nbsp;More</a></div>
+                </div>
               </div>
             </div>
             <div class="playpause">
