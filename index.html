@@ -53,191 +53,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-.bt-container, .authors-container, .storytime-fete-container {
-    padding-bottom: 500px;
+.no-gutter-wrapper {
+    margin: 0 -15px;
 }
-.background-row {
-    background: #7895a6 url("bt-background.webp") 40% 100% fixed no-repeat;
-    max-width: 1920px;
-    margin: 0 auto;
-}
-/* brew tour & video */
-	
-.bt-container {
-    display: flex;
-    max-width: 1440px;
-    min-height: 575px;
-    margin: 0 auto;
-    padding-top: 100px;
-}
-.bt-wrapper {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-}
-.bt-info {
-    background: #ddba9e;
-    color: #000;
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 30px 50px;
-    text-align: center;
-    height: 574px;
-}
-h1.bt-heading-one {
-    color: #000;
-    font-size: 1.875rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin: 30px 0 5px;
-}
-.bt-heading-two {
-    font-size: 1.25rem;
-}
-.bt-content {
-    max-width: 680px;
-    margin: 0 auto;
-}
-.bee-campaign {
-    font-style: italic;
-    padding-top: 10px;
-}
-/* authors & eh */	
-
-.authors-container {
-    display: flex;
-    max-width: 1440px;
-    min-height: 640px;
-    margin: 0 auto;
-    color: #000;
-}
-.authors-wrapper {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-}
-.authors-info {
-    background: #f3ebd7;
-    color: #000;
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    min-height: 575px;
-}
-h2.authors-heading-one {
-    color: #000;
-    font-size: 1.875rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin: 0 0 5px;
-}
-.authors-heading-two {
-    font-size: 1.125rem;
-    text-transform: uppercase;
-}
-.authors-content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 60px 20px;
-    font-size: 1.125rem;
-}
-.authors-content li {
-    margin-bottom: 10px;
-}
-.authors-image {
-    background: #000 url("author-event.webp") bottom center no-repeat;
-width: calc(100% * 0.5);
-}
-/* outdoor storytime & fete */
-	
-.icon-font {
-    font-size: 140px;
-    padding: 50px 0 30px;
-    color: rgba(255,255,255,.7);
-}
-.icon-font-alt {
-    font-size: 140px;
-    padding: 50px 0 30px;
-    color: rgba(0,0,0,.7);
-}
-.rumpus {
-    padding: 25px 0 10px;
-    opacity: .6;
-}
-.storytime-fete-container {
-    display: flex;
-    max-width: 1440px;
-    min-height: 640px;
-    margin: 0 auto;
-    color: #fff;
-}
-.storytime-fete-wrapper {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-    min-height: 575px;
-}
-.storytime-wrapper {
-	display: flex;
-	background: #ddba9e;
-	width: calc(100% * 0.5);
-	flex-direction: column;
-	padding: 15px 15px 40px;
-	justify-content: center;
-}
-.storytime-content {
-    margin: 0 auto;
-    color: #000;
-    font-size: 1.25rem;
-    text-align: center;
-    max-width: 650px;
-}
-h2.storytime-heading-one {
-    font-size: 1.875rem;
-    line-height: 1.2;
-    margin: 0 0 5px;
-    font-weight: 500;
-    color: #000;
-}
-.fete-wrapper {
-    display: flex;
-    background: #825C41;
-width: calc(100% * 0.5);
-    flex-direction: column;
-    padding: 15px 15px 40px;
-    justify-content: center;
-}
-.fete-content {
-    margin: 0 auto;
-    color: #fff;
-    font-size: 1.25rem;
-    text-align: center;
-    max-width: 650px;
-}
-h2.fete-heading-one {
-    font-size: 1.875rem;
-    line-height: 1.2;
-    margin: 0 0 5px;
-    font-weight: 500;
-    color: #fff;
-}
-
-@media (min-width: 955px) {
-.video-container {
+.container-wrapper {
     position: relative;
     overflow: hidden;
-    background: #7864A9;
-width: calc(100% * 0.5);
+    max-width: 2300px;
+    margin: 0 auto;
+}
+.content-container {
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 0 0 50px;
 }
 video#bgvid {
     position: absolute;
@@ -247,87 +77,128 @@ video#bgvid {
     min-height: 100%;
     width: auto;
     height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: #222222 url("video-poster.webm") center center/cover;
+    background: #fff url(autumn-video-poster.webp) center center no-repeat;
+    background-size: cover;
+}
+video#bgvid-small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff url(autumn-video-poster-small.webp) center center no-repeat;
     background-size: cover;
 }
 video {
     display: block;
 }
+.box-container {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
 }
-
-@media (max-width: 950px) {
-.background-row {
-    background: #7895a6 url("bt-background-medium.webp") 50% 100% fixed no-repeat;
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 0 15px;
 }
-.bt-container, .authors-container, .storytime-fete-container {
-    max-width: 720px;
+.box-inner {
+    max-width: 800px;
+    margin: 0 auto;
 }
-.bt-container, .authors-container {
-    padding-bottom: 300px;
-}
-.storytime-fete-container {
-    padding-bottom: 0;
-}
-.bt-container {
-    padding-top: 0;
-}
-.fete-wrapper {
-    margin-bottom: 30px;
-    order: 2;
-}
-.bt-wrapper, .authors-wrapper, .storytime-fete-wrapper, .bee-srp-wrapper, .authors-wrapper, .flood-wrapper {
+.box-item {
+    display: flex;
     flex-direction: column;
+    flex: 1;
+    margin: 10px;
+    min-width: 360px;
+    background: #fbdcad;
+    padding: 70px 30px 90px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 600px;
 }
-.bt-info, .eh-wrapper, .flood-wrapper, .storytime-wrapper, .fete-wrapper, .bee-info, .bee-content, .authors-info, .authors-content, .srp-container {
-    width: 100%;
+.icon-font {
+    font-size: 90px;
+    padding: 0 0 30px;
+    color: #444;
 }
-.storytime-wrapper, .fete-wrapper {
-    padding: 50px 15px 60px;
+h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 500;
+    color: #000;
 }
-.storytime-wrapper {
-    order: 1;
+.one-heading-two {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: .9;
 }
-.authors-info {
-    min-height: inherit;
-    padding: 80px 15px 90px;
+.one-heading-three {
+    font-size: 1rem;
 }
-.authors-image {
-    width: 100%;
-    height: 575px;
+.playpause, .playpause-small {
+    position: relative;
+    padding: 10px 15px 0;
+    text-align: center;
 }
-.authors-content {
+.play, .pause {
+    color: #fbdcad;
+    font-size: 38px;
+    margin: 0 5px;
+    border: 0;
+    background: 0;
+    transition-duration: 0.4s;
     padding: 0;
 }
-.bt-info {
-    order: 2;
-    padding: 60px 30px 110px;
-    height: inherit;
+.play:hover, .play:focus, .pause:hover, .pause:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 0.4s;
 }
-.bt-content img {
+.play:active, .play:focus {
+    color: #fff;
+}
+
+@media (min-width: 926px) {
+#bgvid-small, .playpause-small {
     display: none;
 }
-.video-container {
-    display: inherit;
 }
-video#bgvid {
-    width: 100%!important;
-    height: auto;
+
+@media (max-width: 925px) {
+#bgvid, .playpause {
+    display: none;
 }
-.pic-wrapper, .slideshow-pic {
-    min-height: inherit;
-    height: 575px;
+.content-container {
+    padding: 90px 0 100px;
 }
 }
-@media (max-width: 500px) {
-.background-row {
-    background: #7895a6 url("bt-background-small.webp") 50% 100% fixed no-repeat;
+
+@media (max-width: 759px) {
+.box-item:nth-of-type(1), .box-item:nth-of-type(2) {
+    margin-bottom: 100px;
 }
-.pic-wrapper, .slideshow-pic {
-    min-height: inherit;
-    height: 400px;
 }
-)
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -521,74 +392,53 @@ video#bgvid {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row gradient-row">
-      <div class="background-row">
-        <section>
-          <div class="bt-container">
-            <div class="bt-wrapper">
-              <div class="bt-info">
-                <div class="bt-content"><img src="beans-hops.webp" alt="">
-                  <h1 class="bt-heading-one">Tap In&mdash;Brew Tour Is Back!</h1>
-                  <div class="bt-heading-two">
-                    <div>Exclusive events, prizes, and cool community partners. <a class="black text-underline" href="brew-tour/">Join&nbsp;Us</a>!</div>
+    <div class="gradient-row">
+      <div class="no-gutter-wrapper">
+        <div class="container-wrapper">
+          <div class="row content-container">
+            <video autoplay muted playsinline poster="autumn-video-poster.webp" id="bgvid">
+              <source src="background-autumn-video.mp4" type="video/mp4" />
+              Your browser does not support the background video tag.
+              <source src="background-autumn-video.webm" type="video/webm" />
+              Your browser does not support the background video tag. </video>
+            <video autoplay muted playsinline poster="autumn-video-poster-small.webp" id="bgvid-small">
+              <source src="background-autumn-video-small.mp4" type="video/mp4" />
+              Your browser does not support the background video tag.
+              <source src="background-autumn-video-small.webm" type="video/webm" />
+              Your browser does not support the background video tag. </video>
+            <section>
+              <div class="box-container">
+                <div class="box-wrapper">
+                  <div class="box-item">
+                    <div><i class="icon-font fa-sharp fa-light fa-ornament"></i></div>
+                    <div class="one-heading-two">A Storybook Holiday: </div>
+                    <h2 class="one-heading-one">Guess Who?</h2>
+                    <div class="one-heading-three">Fall is here but the holidays are coming! <a class="black text-underline" href="storybook-holiday/">Celebrate with us</a> and enjoy live entertainment, festive activities, delicious food and drinks, and Santa.</div>
+                    <div>Saturday, Dec.&nbsp;6 & Sunday, Dec.&nbsp;7</div>
+                  </div>
+                  <div class="box-item">
+                    <div><i class="icon-font fa-sharp fa-light fa-book-open"></i></div>
+                    <h2 class="two-heading-one">Take the Reading Challenge!</h2>
+                    <div>There is still time to <a class="black text-underline" href="reading-challenge/">sign&nbsp;up</a>.</div>
+                  </div>
+                  <div class="box-item">
+                    <div><i class="icon-font fa-sharp fa-light fa-wreath"></i></div>
+                    <h2 class="three-heading-one">Booked for the Holidays</h2>
+                    <div>Mark your calendar for a season of festive family fun, Nov. 15-Jan. 4. <a class="black text-underline" href="booked-for-the-holidays/">Learn&nbsp;More</a></div>
                   </div>
                 </div>
               </div>
-              <div class="video-container">
-                <video autoplay muted playsinline poster="video-poster.webm" id="bgvid">
-                  <source src="bt-video.mp4" type="video/mp4" />
-                  Your browser does not support the background video tag.
-                  <source src="bt-video.webm" type="video/webm" />
-                  Your browser does not support the background video tag. </video>
-                <script>
-  const video = document.getElementById('bgvid');
-  let playCount = 1;
-
-  video.addEventListener('ended', () => {
-    if (playCount < 3) {
-      video.currentTime = 0;
-      video.play();
-      playCount++;
-    } else {
-      video.pause();
-      video.currentTime = 0; // Optional: reset to beginning
-    }
-  });
-</script> 
+              <div class="playpause">
+                <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
               </div>
-            </div>
+              <div class="playpause-small">
+                <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid-small').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid-small').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+              </div>
+            </section>
           </div>
-        </section>
-        <section>
-          <div class="authors-container">
-            <div class="authors-wrapper">
-              <div class="authors-image"> </div>
-              <div class="authors-info">
-                <div class="authors-content">
-                  <h2 class="authors-heading-one">Meet the Author!</h2>
-                  <div>Discover your next favorite author and hear the stories behind the stories. <a class="black text-underline" href="featured-events/#author-events">Learn&nbsp;More</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="storytime-fete-container">
-            <div class="storytime-fete-wrapper">
-              <div class="fete-wrapper">
-                <div class="fete-content">
-                  <h2 class="fete-heading-one">Take the Reading Challenge!</h2>
-                  <div>There is still time to <a class="white text-underline" href="reading-challenge/">sign&nbsp;up</a>.</div>
-                </div>
-              </div>
-              <div class="storytime-wrapper">
-                <div class="storytime-content">
-                  <div><img class="img-responsive" src="reading-challenge.webp" alt="Reading Challenge Logo"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
