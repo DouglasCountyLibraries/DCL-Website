@@ -45,126 +45,144 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="https://use.typekit.net/vsp7dsy.css">
 <style>
-#general-alert {
-    margin-bottom: 30px;
-}
-@font-face {
-    font-family: 'Delightful';
-    src: url('../shared-assets/web-fonts/delightfulmonolinesans-regular-webfont.woff2') format('woff2'), url('../shared-assets/web-fonts/delightfulmonolinesans-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    text-rendering: optimizeLegibility;
-}
 .events-active {
     background-color: #f5f5f5;
 }
+.gradient-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+}
 .background-row {
-    background: linear-gradient(to bottom, #fff 0%, #0b2027 45%, #000 70%, #000 100%);
+    background: #fff url("guess-who-background.webp") top center repeat;
+    max-width: 1900px;
+    margin: 30px auto;
+    padding: 100px;
 }
-.book-quote {
-    max-width: 1000px;
+.container-wrapper {
+    max-width: 1700px;
     margin: 0 auto;
-    font-style: italic;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #fff;
-    padding: 100px 0 30px;
 }
-h1.delightful {
-    font-family: "Delightful", sans-serif;
-    color: #fff;
-    font-style: normal;
+.custom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1000px;
+    padding: 60px 0 80px 30px;
+}
+.image-wrapper-large {
+    min-width: 600px;
+}
+.image-wrapper-small {
+    margin: 0 auto;
+}
+h1.greycliff {
+    color: #016938;
     font-size: 9.4rem;
     line-height: .9;
     margin: 0;
+    font-family: "greycliff-cf", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
 }
 h2.intro-heading {
-    color: #fff;
+    color: #016938;
     font-style: normal;
     font-size: 1.75rem;
-    padding: 0 0 15px;
+    padding: 15px 0 10px;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.2;
+}
+    .details {
+	max-width: 825px;
+	margin: 0 auto;
 }
 .intro-text {
-    font-size: 1.75rem;
+    color: #016938;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
-    color: #fff;
-    padding: 15px 0 15px;
-}
-.custom-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    color: #000;
-}
-.event-wrapper {
-    background: #fff url("sbh-bk-large.webp") top center no-repeat;
-    height: 1125px;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 0 15px;
-}
-.details-container {
-    background: #000;
-    max-width: 1920px;
-    margin: 0 auto;
-    color: #fff;
-    padding: 0 15px;
-}
-.details-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 60px 0 150px;
-    font-weight: 500;
 }
 .tickets-wrapper {
-    display: flex;
-    justify-content: center;
-    max-width: 820px;
-    margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 .tickets-item {
-    padding: 15px;
+	padding: 15px;
+	white-space: nowrap;
 }
-.tickets-item h4 {
+.tickets-item .h4 {
     text-transform: uppercase;
-    color: #20555b;
-    font-size: 24px;
-    margin: 15px 0 5px;
+    margin: 15px 0 0;
     font-weight: 600;
 }
 .tickets-date {
-    font-size: 18px;
-    padding-bottom: 5px;
+    font-size: 1.125rem;
+    padding: 5px 0;
 }
 .btn.btn-custom {
     color: #fff;
-    background: #bc140d;
+    background: #016938;
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0px 0px 60px rgba(255,255,255, .4);
+    box-shadow: 0px 3px 3px rgba(0,0,0, .4);
     transition: all .4s ease-out;
-    border-radius: 2px;
+    border-radius: 6px;
 }
 .btn.btn-custom:hover, .btn.btn-custom:focus {
-    cursor: not-allowed;
+    color: #fff;
+    background: #014625;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 6px 12px rgba(0,0,0, .4);
+    transition: all .4s ease-out;
+    border-radius: 6px;
 }
 
-@media (max-width: 500px) {
-.event-wrapper {
-    background: #fff url("sbh-bk-small.webp") top center no-repeat;
+@media (max-width: 1500px) {
+.tickets-wrapper {
+    flex-direction: column;
 }
-.book-quote {
-    padding: 60px 0 30px;
 }
-h1.delightful {
-    font-size: 7rem;
+
+@media (max-width: 1300px) {
+.background-row {
+    padding: 100px 25px;
+}
+}
+
+@media (min-width: 1176px) {
+.image-wrapper-small {
+    display: none;
+}
+}
+
+@media (max-width: 1175px) {
+.custom-container {
+    flex-direction: column;
+    max-width: 800px;
+}
+.content-wrapper {
+    padding: 60px 15px 80px;
+}
+.image-wrapper-large {
+    display: none;
+}
+}
+
+@media (max-width: 600px) {
+h1.greycliff {
+    font-size: 6rem;
 }
 }
 </style>
@@ -360,34 +378,120 @@ h1.delightful {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row background-row">
-      <div class="custom-container">
-        <div class="event-wrapper">
-          <div class="book-quote">"And when he came to the place where the Wild Things are, they roared their terrible roars and gnashed their terrible teeth and rolled their terrible eyes and showed their terrible claws." &mdash;&nbsp;Maurice Sendak</div>
-          <div class="intro-text">A Storybook Holiday:</div>
-          <h1 class="delightful">The Wild Rumpus</h1>
-        </div>
-        <div class="details-container">
-          <div class="details-wrapper">
-            <div class="details">
-              <h2 class="intro-heading">Join us for a monstrously fun family celebration inspired by the children’s classic <i>Where the Wild Things Are</i>. </h2>
-              <div>Dress in costume and prowl through an eerily delightful trick-or-treat trail, dig into wild crafts and creature-sized activities, and feast on an array of catered goodies and drinks fit for a king&mdash;or queen&mdash;of the Wild Things! With festive entertainment and fun for all ages, this is one Halloween event you won’t want to miss. Let the wild rumpus start! </div>
-            </div>
-            <div class="tickets-row">
-              <div class="text-center">
-                <div class="tickets-wrapper">
-                  <div class="tickets-item one">
-                    <div class="tickets-date">Saturday, October&nbsp;25, 6-9PM, <a class="white text-underline" href="../castle-rock/">Castle Rock</a></div>
-                    <div>Tickets: $20 ages&nbsp;3-13; $25 ages&nbsp;14+</div>
-                    <div>(No charge for ages 2 and under.)</div>
-                    <div class="padding-top-30 text-center">
-                      <button class="btn btn-custom" type="button">Sold Out</button>
+    <div class="row gradient-row">
+      <div class="row background-row">
+        <div class="container-wrapper">
+          <div class="custom-container">
+            <div class="content-wrapper">
+              <div class="intro-text">A Storybook Holiday:</div>
+              <h1 class="greycliff">Guess<br>
+                Who?</h1>
+              <div class="image-wrapper-small"><img class="img-responsive" src="grouch-small.webp" alt="Grouch hand holding a Christmas Ornament"></div>
+              <div class="details">
+                <h2 class="intro-heading">Join us for a heartwarming holiday celebration full of magic, mischief and memories.</h2>
+                <div>Step into the whimsical world of our favorite green grouch! Families can enjoy festive entertainment, hands-on crafts and make-and-takes, delightful photo ops, and a special visit with Santa. Savor a menu of delicious food, drinks and tasty treats, sip from our playful naughty and nice hot cocoa bar, and soak in the holiday cheer.</div>
+              </div>
+              <div class="tickets-row">
+                <div class="text-center">
+                  <div class="tickets-wrapper">
+                    <div class="tickets-item">
+                      <div class="h4">Dinner Edition</div>
+                      <div class="tickets-date">Saturday, December&nbsp;6, 5PM</div>
+                      <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                      <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
+                      <div>(No charge for ages 2 and under)</div>
+                      <div class="padding-top-30 text-center"> 
+                        
+                        <!-- Noscript content for added SEO -->
+                        <noscript>
+                        <a href="https://www.eventbrite.com/e/a-storybook-holiday-guess-who-dinner-edition-tickets-1636428153659" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                        </noscript>
+                        <!-- You can customize this button any way you like -->
+                        <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1636428153659" type="button">Buy Tickets</button>
+                        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                        <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1636428153659',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1636428153659',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h4">Brunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;7, 8AM</div>
+                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center"> 
+                          <!-- Noscript content for added SEO -->
+                          <noscript>
+                          <a href="https://www.eventbrite.com/e/a-storybook-holiday-guess-who-brunch-edition-tickets-1755019222739" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                          </noscript>
+                          <!-- You can customize this button any way you like -->
+                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1755019222739" type="button">Buy Tickets</button>
+                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                          <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1755019222739',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1755019222739',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h4">Lunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;7, 12PM</div>
+                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center"> 
+                          <!-- Noscript content for added SEO -->
+                          <noscript>
+                          <a href="https://www.eventbrite.com/e/a-storybook-holiday-guess-who-lunch-edition-tickets-1755032953809" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                          </noscript>
+                          <!-- You can customize this button any way you like -->
+                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1755032953809" type="button">Buy Tickets</button>
+                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                          <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1755032953809',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1755032953809',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <div class="padding-top-30"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
                 </div>
               </div>
-              <div class="padding-top-30"><a class="white text-underline" href="../newsletters/"><i>Sign up for our newsletter</i></a><i> to get the inside scoop on DCL events and ticket sales!</i></div>
             </div>
+            <div class="image-wrapper-large"><img class="img-responsive" src="grouch-large.webp" alt="Grouch hand holding a Christmas Ornament"></div>
           </div>
         </div>
       </div>
