@@ -81,16 +81,55 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/5d38b3ff1cf36d3d75508561.css?v=3.3.65991"/>
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_feature.css?3.3.65991" />
 <style type="text/css">
+@font-face {
+    font-family: 'Pop Clink Fill';
+    src: url('../../../shared-assets/web-fonts/subset-PopClink-Fill.woff2') format('woff2'), url('../../../shared-assets/web-fonts/subset-PopClink-Fill.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Bulgary';
+    src: url('../../../shared-assets/web-fonts/subset-BulgaryRegular.woff2') format('woff2'), url('../../../shared-assets/web-fonts/subset-BulgaryRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.h1.pop-clink {
+    font-family: 'Pop Clink Fill', serif;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 68px;
+    margin: 0;
+}
+.h1.bulgary {
+    font-family: 'Bulgary', serif;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 90px;
+    margin: 0;
+    line-height: .7;
+}
 .custom-container {
     text-align: center;
-    padding: 40px 10px 100px;
-}
-.intro {
-    max-width: 600px;
+    padding: 0 10px 100px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 15px 0 20px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+}
+.intro-wrapper {
+    background: #000 url("../heading-background.webp") bottom right no-repeat;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 429px;
+}
+.heading-wrapper {
+    padding: 46px 10px 0;
+}
+.intro-heading {
+    padding-bottom: 15px;
 }
 .form-section {
     padding: 0;
@@ -142,7 +181,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
     background: transparent !important;
 }
 .form-all .form-buttons-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 20px!important;
 }
 [data-type="control_phone"] .form-sub-label-container:first-child {
     width: 100%;
@@ -178,10 +217,26 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
 .form-line[data-type="control_phone"] .form-input-wide > .form-sub-label-container {
     width: inherit;
 }
+.form-line[data-type="control_phone"] .form-input > div, .form-line[data-type="control_phone"] .form-input-wide > div {
+    display: inherit;
+}
 </style>
 </head>
 <body>
 <div class="custom-container">
+  <div class="intro-wrapper">
+    <div class="heading-wrapper"><img src="../dcl-white-logo.webp" alt="DCL Logo">
+      <div class="h1 pop-clink">FOrEST</div>
+      <div class="h1 bulgary">of</div>
+      <div class="h1 pop-clink">STORIeS</div>
+    </div>
+  </div>
+  <div class="intro-heading">
+    <h1 class="sm-heading no-margin-top">Tree of the Week Contest</h1>
+    <h2 class="xxsm-heading">Enter for a chance to win!</h2>
+    <div>By submitting this form you agree to the contest <a href="#" target="_blank">terms & conditions.</a></div>
+    <div></div>
+  </div>
   <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/252804766401153" method="post" enctype="multipart/form-data" name="form_252804766401153" id="252804766401153" accept-charset="utf-8" autocomplete="on">
     <input type="hidden" name="formID" value="252804766401153" />
     <input type="hidden" id="JWTContainer" value="" />
