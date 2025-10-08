@@ -94,21 +94,63 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
 }
 .qq-uploader {
     position: relative;
-    width: 200px;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 0 0;
 }
-    .qq-upload-button {
-	border-radius: 2px;
-	text-transform: uppercase;
+.form-all .qq-upload-button {
+    border-radius: 2px;
+    text-transform: uppercase;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ccc !important;
+    color: #333 !important;
+}
+.qq-upload-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    width: 100%;
+    /* display: flex; */
+    flex-direction: row;
+}
+.qq-upload-list li {
+    position: relative;
+    font-size: 16px;
+    margin: 8px 0;
+    color: #5E5B5B;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 2px;
+    white-space: normal;
+    border: 1px solid #ccc;
+}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    font-size: inherit;
+    line-height: inherit;
+}
+.qq-upload-delete {
+    width: 40px;
+}
+    .form-error-message {
+	display: none !important;
+}
+    .form-all .form-buttons-wrapper {
+
+	margin-bottom: 20px;
 }
 [data-type="control_phone"] .form-sub-label-container:first-child {
     width: 100%;
     margin-right: 2.5%;
     margin-left: 0;
+}
+#sublabel_9 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding-top: 5px;
 }
 .form-label-left {
     width: 20px;
