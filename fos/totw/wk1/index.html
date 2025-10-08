@@ -92,6 +92,9 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
     font-size: 1.5rem;
     text-transform: uppercase;
 }
+.form-section {
+    padding: 0;
+}
 .qq-uploader {
     position: relative;
     width: 100%;
@@ -134,12 +137,12 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
 .qq-upload-delete {
     width: 40px;
 }
-    .form-error-message {
-	display: none !important;
+.form-error-message {
+    /* display: none !important; */
+    background: transparent !important;
 }
-    .form-all .form-buttons-wrapper {
-
-	margin-bottom: 20px;
+.form-all .form-buttons-wrapper {
+    margin-bottom: 20px;
 }
 [data-type="control_phone"] .form-sub-label-container:first-child {
     width: 100%;
@@ -147,10 +150,11 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
     margin-left: 0;
 }
 #sublabel_9 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     color: #333;
     padding-top: 5px;
+    text-transform: uppercase;
 }
 .form-label-left {
     width: 20px;
@@ -170,6 +174,9 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SEND
 }
 .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header {
     color: false;
+}
+.form-line[data-type="control_phone"] .form-input-wide > .form-sub-label-container {
+    width: inherit;
 }
 </style>
 </head>
