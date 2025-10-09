@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tree of the Week Contest | Douglas County Libraries</title>
+<title>Thank You | Douglas County Libraries</title>
 <link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.png">
@@ -36,24 +36,130 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <meta name="robots" content="noindex, nofollow">
+
 <style type="text/css">
+@font-face {
+    font-family: 'Pop Clink Fill';
+    src: url('../../../shared-assets/web-fonts/subset-PopClink-Fill.woff2') format('woff2'), url('../../../shared-assets/web-fonts/subset-PopClink-Fill.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Bulgary';
+    src: url('../../../shared-assets/web-fonts/subset-BulgaryRegular.woff2') format('woff2'), url('../../../shared-assets/web-fonts/subset-BulgaryRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.h1.pop-clink {
+    font-family: 'Pop Clink Fill', serif;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 68px;
+    margin: 0;
+}
+.h1.bulgary {
+    font-family: 'Bulgary', serif;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 90px;
+    margin: 0;
+    line-height: .7;
+}
 .custom-container {
     text-align: center;
-    padding: 40px 10px 100px;
-}
-.intro {
-    max-width: 600px;
+    padding: 0 10px 100px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 15px 0 20px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
 }
-
+.intro-wrapper {
+    background: #000 url("../heading-background.webp") bottom right no-repeat;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 429px;
+}
+.heading-wrapper {
+    padding: 46px 10px 0;
+}
+.intro-heading {
+    padding-bottom: 15px;
+}
+svg {
+	width: 100px;
+	display: block;
+	margin: 30px auto;
+}
+.path {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+}
+.path.circle {
+	-webkit-animation: dash 0.9s ease-in-out;
+	animation: dash 0.9s ease-in-out;
+}
+.path.check {
+	stroke-dashoffset: -100;
+	-webkit-animation: dash-check 1s 1s ease-in-out forwards;
+	animation: dash-check 1s 1s ease-in-out forwards;
+}
+@-webkit-keyframes dash {
+0% {
+stroke-dashoffset: 1000;
+}
+100% {
+stroke-dashoffset: 0;
+}
+}
+@keyframes dash {
+0% {
+stroke-dashoffset: 1000;
+}
+100% {
+stroke-dashoffset: 0;
+}
+}
+@-webkit-keyframes dash-check {
+0% {
+stroke-dashoffset: -100;
+}
+100% {
+stroke-dashoffset: 900;
+}
+}
+@keyframes dash-check {
+0% {
+stroke-dashoffset: -100;
+}
+100% {
+stroke-dashoffset: 900;
+}
+}
 </style>
 </head>
 <body>
 <div class="custom-container">
-Thank You
+  <div class="intro-wrapper">
+    <div class="heading-wrapper"><img src="../dcl-white-logo.webp" alt="DCL Logo">
+      <div class="h1 pop-clink">FOrEST</div>
+      <div class="h1 bulgary">of</div>
+      <div class="h1 pop-clink">STORIeS</div>
+    </div>
+  </div>
+  <div class="intro-heading">
+    <h1 class="sm-heading no-margin-top">Tree of the Week Contest</h1>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+        <circle class="path circle" fill="none" stroke="#1c3b05" stroke-width="5" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+        <polyline class="path check" fill="none" stroke="#1c3b05" stroke-width="15" stroke-linecap="square" stroke-miterlimit="15" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+      </svg>
+    <h2 class="xxsm-heading">Thank you for your submission!</h2>
+    <div>By submitting this form you agree to the contest <a href="#" target="_blank">terms & conditions</a>.</div>
+    <div></div>
+  </div>
+  
 </div>
 </body>
 </html>
