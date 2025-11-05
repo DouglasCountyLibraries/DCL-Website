@@ -83,6 +83,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-direction: column;
     gap: 0;
 }
+    .wedding-showers {
+        padding-bottom: 50px;
+    }
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -287,6 +290,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section>
       <div class="row showers-row">
         <div id="wedding-showers" class="wedding-showers">
+          <div id="wedding-shower-photo"></div>
           <h3>Wedding Showers</h3>
           <div>Wedding showers are $295 for up to 18 guests (guest of honor + 17 guests); add $15 per additional guest.</div>
           <h4 class="xsm-heading">Wedding Shower Package Includes:</h4>
@@ -305,6 +309,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="align-bottom"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
         </div>
         <div id="baby-showers" class="baby-showers">
+          <div id="baby-shower-photo"></div>
           <h3>Baby Showers</h3>
           <div>Baby showers are $295 for up to 20 guests (guest of honor + 19 guests); add $15 per additional guest.</div>
           <h4 class="xsm-heading">Baby Shower Package Includes:</h4>
@@ -319,7 +324,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
           <h4 class="xxsm-heading no-margin-top">Optional add-on package for an additional $200:</h4>
           <div class="check-list">
-            <ul class="fa-ul concierge">
+            <ul class="fa-ul">
               <li><i class="fa-li fa fa-check fa-lg"></i>Photobooth with access to digital gallery</li>
               <li><i class="fa-li fa fa-check fa-lg"></i>One standard craft</li>
               <li><i class="fa-li fa fa-check fa-lg"></i>Three standard activities</li>
@@ -329,6 +334,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </section>
+    <script>
+    
+	
+	var images = ['wedding-shower-one.webp', 'wedding-shower-two.webp', 'wedding-shower-three.webp','wedding-shower-four.webp', 'wedding-shower-five.webp', 'wedding-shower-six.webp','wedding-shower-seven.webp', 'wedding-shower-eight.webp', 'wedding-shower-nine.webp'];
+    $('<img alt="Wedding Shower Photo" class="img-responsive image-center" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#wedding-shower-photo');
+              
+              var images = ['baby-shower-one.webp', 'baby-shower-two.webp', 'baby-shower-three.webp', 'baby-shower-four.webp', 'baby-shower-five.webp'];
+    $('<img alt="Baby Shower Photo" class="img-responsive image-center" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#baby-shower-photo');
+	
+
+</script>
     <section>
       <div class="row padding-bottom-60 padding-top-30">
         <div class="container text-center">
