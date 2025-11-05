@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,47 +48,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .reserve-a-space-active {
-	background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
-.flickity-container {
-	max-width: 1920px;
-	margin: 0 auto;
-	padding: 0 15px;
+.row.showers-row {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
-.carousel-cell {
-	width: 100%;
-	padding: 0;
-	text-align: center;
+.showers-row h3 {
+    text-align: center;
 }
-.carousel-cell img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin: 0 auto;
+.wedding-showers, .baby-showers {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
-.flickity-prev-next-button {
-	width: 50px;
-	height: 50px;
-	background: transparent;
+.align-bottom {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 25px;
 }
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-.flickity-prev-next-button .arrow {
-	fill: #efeeed;
-}
-.flickity-prev-next-button.no-svg {
-	color: #efeeed;
-}
-.check-list {
-	max-width: 550px;
-	margin: 0 auto;
-}
-.concierge .fa-check {
-	color: #42777B;
+.fa-li.fa.fa-check.fa-lg {
+    color: #42777B;
 }
 .fa-ul > li {
-	margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+.row.showers-row {
+    flex-direction: column;
+    gap: 0;
+}
+    .wedding-showers {
+        padding-bottom: 50px;
+    }
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -282,76 +279,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-30">
-    <div class="container text-center">
-      <h1 class="page-heading">Showers at DCL</h1>
-      <h2 class="page-subheading">Celebrate your wedding or baby shower at Douglas County Libraries!</h2>
-      <div class="max-width-60">$295 for up to 18 guests (guest of honor + 17 guests); add $15 per additional guest. <a href="#" data-toggle="modal" data-target="#restrictions">Some restrictions apply.</a></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="flickity-container">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="images/baby-shower-one.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/baby-shower-two.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/baby-shower-three.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/baby-shower-four.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/baby-shower-five.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-one.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-two.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-three.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-four.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-five.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-six.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-seven.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-nine.webp" alt=""></div>
-        <div class="carousel-cell"><img src="images/bridal-shower-ten.webp" alt=""></div>
+    <div class="row border-top padding-bottom-30">
+      <div class="container text-center">
+        <h1 class="page-heading">Showers at DCL</h1>
+        <h2 class="page-subheading">Celebrate your <a href="#wedding-showers">wedding</a> or <a href="#baby-showers">baby shower</a> at Douglas County Libraries!</h2>
+        <div class="max-width-80">Showers are available Saturday and Sunday, 2-4 p.m., subject to availability. Reservations must be made at least 15 business days before the requested event date. For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</div>
       </div>
     </div>
-  </div>
-  <div class="padding-top-15 padding-bottom-30">
-    <div class="h4 text-center">Shower Package Includes:</div>
-    <div class="check-list">
-      <ul class="fa-ul concierge">
-        <li><i class="fa-li fa fa-check fa-lg"></i>Event setup, cleanup, and a dedicated party coordinator</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Three standard activities</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Two standard crafts</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>18 party favors for you and your guests</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Photobooth with access to digital gallery</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Water service and sparkling cider</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Small charcuterie board (nut-free and gluten-free options available)</li>
-        <li><i class="fa-li fa fa-check fa-lg"></i>Room reservation/booking service</li>
-      </ul>
-    </div>
-    <div class="text-center padding-top-20"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
-  </div>
-  <div class="row padding-bottom-60">
-    <div class="container text-center">
-      <div class="max-width-80">
-        <div>Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="restrictions" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <div class="h4 text-center modal-title">Restrictions:</div>
+    <section>
+      <div class="row showers-row">
+        <div id="wedding-showers" class="wedding-showers">
+          <div id="wedding-shower-photo"></div>
+          <h3>Wedding Showers</h3>
+          <div>$295 for up to 18 guests (guest of honor + 17 guests); add $15 per additional guest.</div>
+          <h4 class="xsm-heading">Wedding Shower Package Includes:</h4>
+          <div class="check-list">
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check fa-lg"></i>Event setup, cleanup, and a dedicated party coordinator</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Three standard activities</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Two standard crafts</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>18 party favors for you and your guests</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Photobooth with access to digital gallery</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Water service and sparkling cider</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Charcuterie board (nut-free and gluten-free options available)</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Room reservation/booking service</li>
+            </ul>
+          </div>
+          <div class="align-bottom"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
         </div>
-        <div class="padding-30">
-          <ul>
-            <li>Reservations must be made at least 15 business days before the requested event date.</li>
-            <li>For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</li>
-            <li>Showers are available Saturday and Sunday, 2-4 p.m., subject to availability.</li>
-          </ul>
+        <div id="baby-showers" class="baby-showers">
+          <div id="baby-shower-photo"></div>
+          <h3>Baby Showers</h3>
+          <div>$295 for up to 20 guests (guest of honor + 19 guests); add $15 per additional guest.</div>
+          <h4 class="xsm-heading">Baby Shower Package Includes:</h4>
+          <div class="check-list">
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check fa-lg"></i>Event setup, cleanup, and a dedicated party coordinator</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>20 party favors for you and your guests</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Water service and sparkling cider</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Charcuterie board (nut-free and gluten-free options available)</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Room reservation/booking service</li>
+            </ul>
+          </div>
+          <h4 class="xxsm-heading no-margin-top">Optional add-on package for an additional $200:</h4>
+          <div class="check-list">
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check fa-lg"></i>Photobooth with access to digital gallery</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>One standard craft</li>
+              <li><i class="fa-li fa fa-check fa-lg"></i>Three standard activities</li>
+            </ul>
+          </div>
+          <div class="align-bottom"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
         </div>
       </div>
+    </section>
+    <script>
+    
+	
+	var images = ['wedding-shower-one.webp', 'wedding-shower-two.webp', 'wedding-shower-three.webp','wedding-shower-four.webp', 'wedding-shower-five.webp', 'wedding-shower-six.webp','wedding-shower-seven.webp', 'wedding-shower-eight.webp', 'wedding-shower-nine.webp'];
+    $('<img alt="Wedding Shower Photo" class="img-responsive image-center" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#wedding-shower-photo');
+              
+              var images = ['baby-shower-one.webp', 'baby-shower-two.webp', 'baby-shower-three.webp', 'baby-shower-four.webp', 'baby-shower-five.webp'];
+    $('<img alt="Baby Shower Photo" class="img-responsive image-center" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#baby-shower-photo');
+	
+
+</script>
+    <section>
+      <div class="row padding-bottom-60 padding-top-30">
+        <div class="container text-center">
+          <div class="max-width-80">
+            <div>Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="restrictions" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="h4 text-center modal-title">Restrictions:</div>
+          </div>
+          <div class="padding-30">
+            <ul>
+              <li>Reservations must be made at least 15 business days before the requested event date.</li>
+              <li>For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</li>
+              <li>Showers are available Saturday and Sunday, 2-4 p.m., subject to availability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- InstanceEndEditable --> </div>
+    <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -413,24 +433,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<script type="text/javascript">
-$(document).ready(function() {
-  if(window.location.href.indexOf('#restrictions') != -1) {
-    $('#restrictions').modal('show')
-  }
-});
-</script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -489,4 +492,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
