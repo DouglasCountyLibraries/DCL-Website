@@ -54,15 +54,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .row.showers-row {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
-.check-list {
+.showers-row h3 {
+    text-align: center;
 }
-.concierge .fa-check {
+.wedding-showers, .baby-showers {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.align-bottom {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 25px;
+}
+.fa-li.fa.fa-check.fa-lg {
     color: #42777B;
 }
 .fa-ul > li {
     margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+.row.showers-row {
+    flex-direction: column;
+    gap: 0;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -260,18 +280,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="row border-top padding-bottom-30">
       <div class="container text-center">
         <h1 class="page-heading">Showers at DCL</h1>
-        <h2 class="page-subheading">Celebrate your wedding or baby shower at Douglas County Libraries!</h2>
+        <h2 class="page-subheading">Celebrate your <a href="#wedding-showers">wedding</a> or <a href="#baby-showers">baby shower</a> at Douglas County Libraries!</h2>
         <div class="max-width-80">Showers are available Saturday and Sunday, 2-4 p.m., subject to availability. Reservations must be made at least 15 business days before the requested event date. For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</div>
       </div>
     </div>
     <section>
       <div class="row showers-row">
-        <div id="wedding-showers" class="showers wedding-showers">
+        <div id="wedding-showers" class="wedding-showers">
           <h3>Wedding Showers</h3>
           <div>Wedding showers are $295 for up to 18 guests (guest of honor + 17 guests); add $15 per additional guest.</div>
           <h4 class="xsm-heading">Wedding Shower Package Includes:</h4>
           <div class="check-list">
-            <ul class="fa-ul concierge">
+            <ul class="fa-ul">
               <li><i class="fa-li fa fa-check fa-lg"></i>Event setup, cleanup, and a dedicated party coordinator</li>
               <li><i class="fa-li fa fa-check fa-lg"></i>Three standard activities</li>
               <li><i class="fa-li fa fa-check fa-lg"></i>Two standard crafts</li>
@@ -282,14 +302,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><i class="fa-li fa fa-check fa-lg"></i>Room reservation/booking service</li>
             </ul>
           </div>
-          <div class="text-center padding-top-20"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
+          <div class="align-bottom"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
         </div>
-        <div id="baby-showers" class="showers baby-showers">
+        <div id="baby-showers" class="baby-showers">
           <h3>Baby Showers</h3>
           <div>Baby showers are $295 for up to 20 guests (guest of honor + 19 guests); add $15 per additional guest.</div>
           <h4 class="xsm-heading">Baby Shower Package Includes:</h4>
           <div class="check-list">
-            <ul class="fa-ul concierge">
+            <ul class="fa-ul">
               <li><i class="fa-li fa fa-check fa-lg"></i>Event setup, cleanup, and a dedicated party coordinator</li>
               <li><i class="fa-li fa fa-check fa-lg"></i>20 party favors for you and your guests</li>
               <li><i class="fa-li fa fa-check fa-lg"></i>Water service and sparkling cider</li>
@@ -297,7 +317,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><i class="fa-li fa fa-check fa-lg"></i>Room reservation/booking service</li>
             </ul>
           </div>
-          <h4 class="xxsm-heading">Optional add-on package for an additional $200:</h4>
+          <h4 class="xxsm-heading no-margin-top">Optional add-on package for an additional $200:</h4>
           <div class="check-list">
             <ul class="fa-ul concierge">
               <li><i class="fa-li fa fa-check fa-lg"></i>Photobooth with access to digital gallery</li>
@@ -305,12 +325,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <li><i class="fa-li fa fa-check fa-lg"></i>Three standard activities</li>
             </ul>
           </div>
-          <div class="text-center padding-top-20"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
+          <div class="align-bottom"> <a href="form/" target="_blank" class="btn btn-primary">Get Started</a> </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="row padding-bottom-60">
+      <div class="row padding-bottom-60 padding-top-30">
         <div class="container text-center">
           <div class="max-width-80">
             <div>Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
@@ -398,8 +418,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
