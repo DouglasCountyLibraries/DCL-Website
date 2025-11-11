@@ -65,9 +65,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #fff;
     border-radius: 3px;
     max-width: 500px;
-    min-width: 300px;
+    min-width: 370px;
 }
 .box-item-inner {
+    padding: 0px 30px 50px;
+}
+.box-wrapper-alt {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.box-item-alt {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px 15px;
+    background: #fff;
+    border-radius: 3px;
+    max-width: 700px;
+    min-width: 300px;
+}
+.box-item-inner-alt {
     padding: 0px 30px 75px;
 }
 .gray-circle-wrapper {
@@ -131,21 +152,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .printer-list {
     padding-left: 0;
     list-style: none;
-    line-height: 1.6;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+.email-printer-list {
+    padding: 0;
+    list-style: none;
+    line-height: 2.2;
+}
+.bw-icon {
+    background: url("black-white.png") left center no-repeat;
+    padding-left: 24px;
+}
+.color-icon {
+    background: url("color.png") left center no-repeat;
+    padding-left: 24px;
+    margin-left: 10px;
 }
 .text-alerts li {
     padding-bottom: 5px;
-}
-
-@media (max-width: 1525px) {
-.box-wrapper {
-}
-}
-
-@media (max-width: 659px) {
-.box-item-inner {
-    text-align: center;
-}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -351,11 +376,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="row padding-bottom-40">
       <div class="page-nav">
         <div class="page-nav-item"><a href="../help/"><i class="pagenav-icon fas fa-question-circle"></i>Help & FAQs</a></div>
-        <div class="page-nav-item"><a href="../customer-code-of-conduct/"><i class="pagenav-icon fas fa-clipboard-check"></i>Customer Code of Conduct</a></div>
+        <div class="page-nav-item"><a href="#print-copy"><i class="pagenav-icon fas fa-box-heart"></i>Print & Copy</a></div>
         <div class="page-nav-item"><a href="#donate-books-and-more"><i class="pagenav-icon fas fa-box-heart"></i>Donate Books & More</a></div>
+        <div class="page-nav-item"><a href="../customer-code-of-conduct/"><i class="pagenav-icon fas fa-clipboard-check"></i>Customer Code of Conduct</a></div>
       </div>
     </div>
-    <div class="row bg-gray-5 padding-top-40 padding-bottom-80">
+    <div class="row bg-gray-5 padding-top-40 padding-bottom-60">
       <div class="box-wrapper">
         <div id="library-card" class="box-item">
           <div class="white-bottom-row">
@@ -426,11 +452,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </div>
-    <div id="borrowing" class="row white bg-teal padding-top-40 padding-bottom-80">
-      <div class="container text-center max-width-80">
-        <div class="h1 white">Borrowing & Fees</div>
-        <div>Most materials check out for three weeks. Magazines and DVDs under 200 minutes check out for one week, and each customer may have up to 200 physical items checked out at any one time. Fees are assessed for lost items or special requests.</div>
-        <div class="text-center margin-top-30"> <a href="https://dcl.bibliocommons.com/fines" target="_blank" class="btn btn-lg btn-primary">Pay Fees</a> <a href="../borrowing/" class="white margin-left-10 text-uppercase font-weight-400">Learn More &raquo;</a></div>
+    <div id="borrowing-technology" class="row padding-top-60 padding-bottom-60">
+      <div class="box-container-alt">
+        <div class="box-wrapper-alt">
+          <div id="borrowing-fees" class="box-item-alt">
+            <div><img class="img-responsive image-center" src="borrowing.webp" alt="Borrowing & Fees"></div>
+            <div class="box-inner-alt">
+              <div class="h3 text-center">Borrowing & Fees</div>
+              <div>Most materials check out for three weeks. Magazines and DVDs under 200 minutes check out for one week, and each customer may have up to 200 physical items checked out at any one time. Fees are assessed for lost items or special requests. <a href="../borrowing/">Learn more</a> about borrowing and fees.</div>
+              <div class="text-center margin-top-20"> <a href="https://dcl.bibliocommons.com/fines" target="_blank" class="btn btn-lg btn-primary">Pay Fees</a></div>
+            </div>
+          </div>
+          <div id="technology-access" class="box-item-alt">
+            <div><img class="img-responsive image-center" src="technology.webp" alt="Technology Access"></div>
+            <div class="box-inner-alt">
+              <div class="h3 text-center">Technology Access</div>
+              <div>We offer free public Wi-Fi, public computers, and in-library laptop borrowing (library card required; unavailable in Louviers). Wide-screen Creation Stations with Adobe Creative Cloud are at all locations except Castle Pines and Louviers. <a href="../reserve-a-space/#recording-studio">A Recording Studio</a> equipped with current, high-quality software and equipment is available in Parker.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="print-copy" class="row bg-gray-5 padding-top-30">
@@ -471,20 +511,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="h3 text-center margin-top-10">Email to Printer</div>
             <div class="text-left">
               <div>Choose to print the email contents, attachment, or both, in black and white or color, at the library print release station.</div>
-              <div class="h5 margin-bottom-5">Choose a Location and <span class="text-nowrap">BW/C:</span></div>
-              <ul class="printer-list">
-                <li><a target="_blank" href="mailto:castlepines-bw@ewprints.com">Castle Pines B&W</a></li>
-                <li><a target="_blank" href="mailto:castlepines-color@ewprints.com">Castle Pines Color</a></li>
-                <li><a target="_blank" href="mailto:castlerock-bw@ewprints.com">Castle Rock B&W</a></li>
-                <li><a target="_blank" href="mailto:castlerock-color@ewprints.com">Castle Rock Color</a></li>
-                <li><a target="_blank" href="mailto:highlandsranch-bw@ewprints.com">Highlands Ranch B&W</a></li>
-                <li><a target="_blank" href="mailto:highlandsranch-color@ewprints.com">Highlands Ranch Color</a></li>
-                <li><a target="_blank" href="mailto:lonetree-bw@ewprints.com">Lone Tree B&W</a></li>
-                <li><a target="_blank" href="mailto:lonetree-color@ewprints.com">Lone Tree Color</a></li>
-                <li><a target="_blank" href="mailto:parker-bw@ewprints.com">Parker B&W</a></li>
-                <li><a target="_blank" href="mailto:parker-color@ewprints.com">Parker Color</a></li>
-                <li><a target="_blank" href="mailto:roxborough-bw@ewprints.com">Roxborough B&W</a></li>
-                <li><a target="_blank" href="mailto:roxborough-color@ewprints.com">Roxborough Color</a></li>
+              <div class="h5 margin-bottom-5">Choose a Location:</div>
+              <ul class="email-printer-list">
+                <li><span class="text-uppercase">Castle Pines:</span> <a class="bw-icon" target="_blank" href="mailto:castlepines-bw@ewprints.com">B&W</a><a class="color-icon" target="_blank" href="mailto:castlepines-color@ewprints.com">Color</a></li>
+                <li><span class="text-uppercase">Castle Rock:</span> <a class="bw-icon" target="_blank" href="mailto:castlerock-bw@ewprints.com">B&W</a><a class="color-icon" target="_blank" href="mailto:castlerock-color@ewprints.com">Color</a></li>
+                <li><span class="text-uppercase">Highlands Ranch:</span> <a class="bw-icon" target="_blank" href="mailto:highlandsranch-bw@ewprints.com">B&W</a><a class="color-icon" target="_blank" href="mailto:highlandsranch-color@ewprints.com">Color</a></li>
+                <li><span class="text-uppercase">Lone Tree:</span> <a class="bw-icon" target="_blank" href="mailto:lonetree-bw@ewprints.com">B&W</a><a class="color-icon" target="_blank" href="mailto:lonetree-color@ewprints.com">Color</a></li>
+                <li><span class="text-uppercase">Parker:</span> <a class="bw-icon" target="_blank" href="mailto:parker-bw@ewprints.com">B&W</a><a class="color-icon" target="_blank" href="mailto:parker-color@ewprints.com">Color</a></li>
+                <li><span class="text-uppercase">Roxborough:</span> <a class="bw-icon" target="_blank" href="mailto:roxborough-bw@ewprints.com">B&W</a><a class="color-icon" target="_blank" href="mailto:roxborough-color@ewprints.com">Color</a></li>
               </ul>
             </div>
           </div>
@@ -498,21 +532,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="box-item-inner">
             <div class="h3 text-center margin-top-10">Prices</div>
             <div class="text-left">
-              <div class="h5 margin-bottom-5">Print: Letter Size Only</div>
+              <div class="h6 margin-bottom-5">Print: Letter Size Only</div>
               <ul>
                 <li>Black & white: 10 cents per page; 20 cents per double-sided page</li>
                 <li>Color: 25 cents per page; no double-sided color printing</li>
               </ul>
             </div>
             <div class="text-left">
-              <h5 class="margin-bottom-5">Copy: Letter & Legal Size</h5>
+              <div class="h6 margin-bottom-5">Copy: Letter & Legal Size</div>
               <ul>
                 <li>Black & white: 10 cents per page; 20 cents per double-sided page</li>
                 <li>Color: 25 cents per page; 50 cents per double-sided page</li>
               </ul>
             </div>
             <div class="text-left">
-              <div class="h5 margin-bottom-5">Copy: 11-inch by 17-inch</div>
+              <div class="h6 margin-bottom-5">Copy: 11-inch by 17-inch</div>
               <ul>
                 <li>Black & white: 20 cents per page; 40 cents per double-sided page</li>
                 <li>Color: 50 cents per page; $1 per double-sided page</li>
@@ -527,13 +561,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="text-center padding-top-15 margin-bottom-10 max-width-80">Please be advised that any print job not picked up at the print release station within two hours of being sent will be deleted. See a DCL staff member to pay with your Visa or MasterCard ($1&nbsp;minimum).</div>
       </div>
     </div>
-    <div id="donate-books-and-more" class="row bg-teal white padding-top-40 padding-bottom-90">
+    <div id="donate-books-and-more" class="row padding-top-40 padding-bottom-70">
       <div class="container">
+        <div class="h1 no-margin text-center padding-bottom-15">Donate Books & More</div>
         <div class="max-width-80">
-          <div class="h1 white text-center">Donate Books & More</div>
-          <div class="text-center margin-bottom-10">Douglas County Libraries accepts donations of new and used books, music CDs and DVDs for ongoing and special book sales, or for further donation to organizations that distribute materials to underserved populations. Book sales benefit the <a class="white text-underline" href="../foundation/">Douglas County Libraries Foundation</a>. </div>
+          <div><img class="img-responsive image-center" src="donate.webp" alt="Donate Books & More"></div>
+          <div class="text-center padding-top-20 margin-bottom-5">Douglas County Libraries accepts donations of new and used books, music CDs and DVDs for ongoing and special book sales, or for further donation to organizations that distribute materials to underserved populations. Book sales benefit the <a href="../foundation/">Douglas County Libraries Foundation</a>. </div>
           <div class="">
-            <div class="margin-bottom-10 text-center">Book donations of up to two boxes are accepted during regular business hours at all locations, excluding Louvers. If your donation fills more than two boxes, please contact us to <a class="white text-underline" href="#schedule" data-toggle="modal" data-target="#schedule">schedule a donation</a>.</div>
+            <div class="margin-bottom-10 text-center">Book donations of up to two boxes are accepted during regular business hours at all locations, excluding Louvers. If your donation fills more than two boxes, please contact us to <a href="#schedule" data-toggle="modal" data-target="#schedule">schedule a donation</a>.</div>
             <div class="exceptions">
               <ul>
                 <li class="alt-listitem">Please do not donate:</li>
