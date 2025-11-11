@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,9 +102,9 @@ h2.intro-heading {
     margin: 0;
     line-height: 1.2;
 }
-    .details {
-	max-width: 825px;
-	margin: 0 auto;
+.details {
+    max-width: 825px;
+    margin: 0 auto;
 }
 .intro-text {
     color: #016938;
@@ -112,13 +113,13 @@ h2.intro-heading {
     font-weight: 600;
 }
 .tickets-wrapper {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .tickets-item {
-	padding: 15px;
-	white-space: nowrap;
+    padding: 15px;
+    white-space: nowrap;
 }
 .tickets-item .h4 {
     text-transform: uppercase;
@@ -146,6 +147,11 @@ h2.intro-heading {
     box-shadow: 0px 6px 12px rgba(0,0,0, .4);
     transition: all .4s ease-out;
     border-radius: 6px;
+}
+.btn.btn-custom.btn-soldout, .btn.btn-custom.btn-soldout:hover, .btn.btn-custom.btn-soldout:focus {
+    box-shadow: none;
+    cursor: not-allowed;
+    background: #016938;
 }
 
 @media (max-width: 1500px) {
@@ -399,28 +405,8 @@ h1.greycliff {
                       <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
                       <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
                       <div>(No charge for ages 2 and under)</div>
-                      <div class="padding-top-30 text-center"> 
-                        
-                        <!-- Noscript content for added SEO -->
-                        <noscript>
-                        <a href="https://www.eventbrite.com/e/a-storybook-holiday-guess-who-dinner-edition-tickets-1636428153659" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
-                        </noscript>
-                        <!-- You can customize this button any way you like -->
-                        <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1636428153659" type="button">Buy Tickets</button>
-                        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
-                        <script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '1636428153659',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1636428153659',
-        onOrderComplete: exampleCallback
-    });
-</script> 
+                      <div class="padding-top-30 text-center">
+                        <button class="btn btn-custom btn-soldout">Sold Out</button>
                       </div>
                     </div>
                     <div class="tickets-wrapper">
@@ -430,27 +416,8 @@ h1.greycliff {
                         <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
                         <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
                         <div>(No charge for ages 2 and under)</div>
-                        <div class="padding-top-30 text-center"> 
-                          <!-- Noscript content for added SEO -->
-                          <noscript>
-                          <a href="https://www.eventbrite.com/e/a-storybook-holiday-guess-who-brunch-edition-tickets-1755019222739" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
-                          </noscript>
-                          <!-- You can customize this button any way you like -->
-                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1755019222739" type="button">Buy Tickets</button>
-                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
-                          <script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '1755019222739',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1755019222739',
-        onOrderComplete: exampleCallback
-    });
-</script> 
+                        <div class="padding-top-30 text-center">
+                          <button class="btn btn-custom btn-soldout">Sold Out</button>
                         </div>
                       </div>
                     </div>
@@ -617,4 +584,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
