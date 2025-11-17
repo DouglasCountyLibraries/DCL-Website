@@ -55,10 +55,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
 .background-wrapper {
-    background: #000;
+    background: #000 url("forest-of-stories/tree-book-backround.webp") 100% 41% no-repeat;
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 15px;
+
 }
 .custom-container {
     max-width: 1380px;
@@ -69,10 +69,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1000px;
     margin: 0 auto;
     border-radius: 3px;
-    padding: 50px 0 0;
+    padding: 50px 15px 0;
 }
 .white-one-container {
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px);
     border-radius: 3px;
     padding: 0 0 253px;
 }
@@ -81,26 +82,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1000px;
     margin: 0 auto;
     border-radius: 3px;
-    padding: 0 0 50px;
+    padding: 0 15px 50px;
 }
 .white-two-container {
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px);
     border-radius: 3px;
     padding: 255px 0 0;
     margin: -255px 0 0;
 }
 .carousel-row {
-    margin-top: -253px;
+	margin-top: -253px;
+	position: relative;
+	z-index: 100;
 }
 .custom-container {
     max-width: 1380px;
     margin: 0 auto;
 }
 .white-one-content {
-    padding: 30px;
+    padding: 50px 30px 30px;
+    text-align: center;
+    color: #000;
+}
+.white-one-content h1 {
+    color: #000;
+    font-weight: 600;
+}
+.white-one-content h2 {
+    color: #000;
 }
 .white-two-content {
-    padding: 60px 30px 30px;
+    padding: 50px 30px 100px;
+    text-align: center;
+    color: #000;
+}
+.white-two-content h2, .white-two-content h4 {
+    color: #000;
+}
+.white-two-content h3 {
+	color: #000;
+	font-weight: 600;
+	margin: 25px 0 5px;
 }
 .carousel-cell {
     margin-left: 40px;
@@ -311,28 +334,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row gradient-row">
       <div class="background-wrapper">
-        <div class="white-one-wrapper">
-          <div class="white-one-container">
-            <div class="white-one-content">content goes here</div>
-          </div>
-        </div>
-        <div class="carousel-row">
-          <div class="custom-container no-padding">
-            <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": true, "wrapAround": true, "autoPlay": 4000 }'>
-              <div class="carousel-cell"><img src="seven.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="eight.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="nine.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="ten.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="eleven.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="twelve.jpg" alt=""></div>
+        <section>
+          <div class="white-one-wrapper">
+            <div class="white-one-container">
+              <div class="white-one-content">
+                <h1>Forest of Stories Is Back!</h1>
+                <h2 class="xxsm-heading">Celebrate the season with imagination and wonder, free at all DCL locations through January 4!<br>
+                  <a class="black text-underline" href="forest-of-stories/">Learn&nbsp;More</a>.</h2>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="white-two-wrapper">
-          <div class="white-two-container">
-            <div class="white-two-content">content goes here</div>
+        </section>
+        <section>
+          <div class="carousel-row">
+            <div class="custom-container no-padding">
+              <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": true, "wrapAround": true, "autoPlay": 4000 }'>
+                <div class="carousel-cell"><img src="seven.jpg" alt=""></div>
+                <div class="carousel-cell"><img src="eight.jpg" alt=""></div>
+                <div class="carousel-cell"><img src="nine.jpg" alt=""></div>
+                <div class="carousel-cell"><img src="ten.jpg" alt=""></div>
+                <div class="carousel-cell"><img src="eleven.jpg" alt=""></div>
+                <div class="carousel-cell"><img src="twelve.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+        <section>
+          <div class="white-two-wrapper">
+            <div class="white-two-container">
+              <div class="white-two-content">
+                <h2 class="xxsm-heading"><a class="black text-underline" href="forest-of-stories/#contest"><i>Find the Tree of the Week</i></a><i> for a chance to win prizes!</i></h2>
+                <h3>Colorado Gives Day is December&nbsp;9</h3>
+                <h4 class="xxsm-heading">But you don't have to wait to give! <a class="black text-underline" href="donate/">Donate&nbsp;now</a> to support the DCL Foundation. </h4>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
