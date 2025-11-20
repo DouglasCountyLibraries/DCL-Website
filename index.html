@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -120,7 +121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .white-two-content h3 {
     color: #000;
     font-weight: 600;
-    margin: 25px 0 5px;
+    margin: 50px 0 5px;
 }
 .carousel-cell {
     margin-left: 40px;
@@ -135,6 +136,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .flickity-prev-next-button {
     display: none;
+}
+.animated-progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(78, 59, 89, 0.2);
+}
+.animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgba(255, 255, 255, 0);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+}
+.progress-blue span {
+    background-color: rgb(78, 59, 89);
+}
+.custom-progress-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.progress-bar-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1px 0 20px;
+}
+.progress-percentage {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #333;
 }
 
 @media (max-width: 450px) {
@@ -352,7 +392,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="carousel-row">
             <div class="custom-container no-padding">
               <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": true, "wrapAround": true, "autoPlay": 4000 }'>
-                  <div class="carousel-cell"><img src="one.webp" alt=""></div>
+                <div class="carousel-cell"><img src="one.webp" alt=""></div>
                 <div class="carousel-cell"><img src="two.webp" alt=""></div>
                 <div class="carousel-cell"><img src="three.webp" alt=""></div>
                 <div class="carousel-cell"><img src="four.webp" alt=""></div>
@@ -375,6 +415,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <h2 class="xxsm-heading"><a class="black text-underline" href="forest-of-stories/#contest"><i>Find the Tree of the Week</i></a><i> for a chance to win prizes!</i></h2>
                 <h3>Colorado Gives Day is December&nbsp;9</h3>
                 <h4 class="xxsm-heading">But you don't have to wait to give! <a class="black text-underline" href="donate/">Donate&nbsp;now</a> to support the DCL Foundation. </h4>
+                <div class="progress-bar-wrapper">
+                  <div class="custom-progress-bar">
+                    <div class="animated-progress progress-blue"> <span data-progress="4"></span> </div>
+                    <div class="progress-percentage">
+                      <div>Complete: 4%</div>
+                      <div>Goal: $75,000</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -451,7 +500,16 @@ for (var i = 0; i < cards.length; i++) {
   var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
   cards.eq(target1).before(cards.eq(target2));
 }
- </script> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+ </script> 
+<script>$(".animated-progress span").each(function () {
+  $(this).animate(
+    {
+      width: $(this).attr("data-progress") + "%",
+    },
+    2000
+  );
+  $(this).text($(this).attr("data-progress") + "%");
+});</script><!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -510,4 +568,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
