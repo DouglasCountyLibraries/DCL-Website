@@ -288,9 +288,9 @@ Push Notifications End - Removed for Now -->
     align-content: center;
     justify-content: center;
     /* max-width: 945px; */
-    max-width: 1030px;
+    /* max-width: 1030px; */
     /* max-width: 1200px; */
-    /* max-width: 1300px; */
+    max-width: 1300px;
     /* max-width: 1350px; */
 	/* max-width: 1700px; */
     margin: 0 auto;
@@ -385,6 +385,150 @@ Push Notifications End - Removed for Now -->
 .photo-item-inner {
     padding: 20px 30px 20px;
 }
+.photo-icon {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    font-size: 9rem;
+}
+/* slideshow */
+.slideshow-wrapper {
+    margin: 0 15px;
+}
+.slideshow-row {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1580px;
+    margin: 30px auto 80px auto;
+}
+.slideshow-arrow {
+    background: url("../shared-assets/images/slideshow-arrow-left.png") 100% 100% no-repeat;
+    width: 42px;
+    position: relative;
+    z-index: 100;
+    left: -30px;
+    height: 80px;
+    bottom: 15px;
+}
+.slideshow-content {
+    flex: 1 1 36%;
+    padding: 0 30px 20px 0;
+}
+.slideshow-image.main {
+    min-height: 600px;
+}
+#slideshow {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0%;
+    width: 67%;
+}
+#slideshow div {
+    position: absolute;
+    z-index: 2;
+    width: 105%;
+    height: 105%;
+    top: -5%;
+    left: -5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 3s, transform 8s;
+}
+/* slide two */
+#slideshow div {
+    transform-origin: bottom left;
+}
+/* slide three */
+#slideshow div:nth-of-type(2n+1) {
+    transform-origin: top right;
+}
+/* slide four */
+#slideshow div:nth-of-type(3n+1) {
+    transform-origin: top right;
+}
+/* slide five */
+#slideshow div:nth-of-type(4n+1) {
+    transform-origin: top left;
+}
+/* slide six */
+#slideshow div:nth-of-type(5n+1) {
+    transform-origin: bottom right;
+}
+/* slide one */
+#slideshow div:nth-of-type(11n+1) {
+    transform-origin: center center;
+}
+#slideshow .fx:first-child + span + div ~ div, #slideshow .fx1 {
+    z-index: 1
+}
+#slideshow .fx, #slideshow .fx1 {
+    transform: scale(1.1) translate(1.5%);
+    opacity: 1
+}
+#slideshow div:nth-of-type(1) {
+    background-image: url("slideshow/santa-visit.webp");
+}
+#slideshow div:nth-of-type(2) {
+    background-image: url("slideshow/forest-of-stories.webp");
+}
+#slideshow div:nth-of-type(3) {
+    background-image: url("slideshow/photo-ops.webp");
+}
+#slideshow div:nth-of-type(4) {
+    background-image: url("slideshow/make-and-take.webp");
+}
+#slideshow div:nth-of-type(5) {
+    background-image: url("slideshow/sing-along.webp");
+}
+#slideshow div:nth-of-type(6) {
+    background-image: url("slideshow/delicious-menus.webp");
+}
+/* captions */
+ 
+#slideshow span {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 48%;
+    left: 50%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 60px;
+    color: transparent;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 60px;
+    font-weight: 700;
+}
+#slideshow .fx:first-child + span + div ~ div + span, #slideshow .fx1 + span {
+    z-index: 1
+}
+#slideshow .fx + span, #slideshow .fx1 + span {
+    color: #fff;
+    animation: caption 5s 1s both;
+    text-shadow: 0 6px 20px #000;
+    hyphens: manual;
+}
+@keyframes caption {
+0% {
+opacity:0;
+}
+20% {
+opacity:1;
+}
+90% {
+opacity:1;
+}
+100% {
+opacity:0;
+}
+}
 
 @media (max-width: 1534px) {
 .ks-heading-wrapper, .tjr-heading-wrapper, .sbh-heading-wrapper {
@@ -461,6 +605,64 @@ Push Notifications End - Removed for Now -->
 }
 .box-item {
     padding: 0 15px;
+}
+.photo-icon {
+    font-size: 6rem;
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-row {
+    flex-direction: column;
+}
+.slideshow-content {
+    padding: 0 20px 50px;
+    text-align: center;
+}
+#slideshow {
+    width: 100%;
+    border-right: 0;
+}
+.slideshow-arrow {
+    background: url("../shared-assets/images/slideshow-arrow-top.png") 50% 100% no-repeat;
+    width: 100%;
+    height: 40px;
+    z-index: 100;
+    top: -30px;
+    position: relative;
+    margin: 0 auto;
+    left: auto;
+}
+}
+
+@media (max-width: 819px) {
+.box-inner {
+    text-align: center;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-image.main {
+    min-height: 475px;
+}
+#slideshow span {
+    font-size: 48px;
+    line-height: 48px;
+    padding: 0 15px;
+}
+.slideshow-arrow {
+    display: none;
+}
+.slideshow-content {
+    padding: 40px 15px 50px;
+    text-align: center;
+}
+}
+
+@media (max-width: 500px) {
+.box-item {
+    min-width: 100%;
+    padding: 15px;
 }
 }
 </style>
@@ -679,19 +881,36 @@ Push Notifications End - Removed for Now -->
       </div>
     </div>
     <section>
-      <div id="signature-events" class="row">
-        <div class="photo-wrapper">
-          <div class="photo-item black text-center bg-gray-5">
-            <div class="sbhw-heading-wrapper">
-              <div class="sbhw-heading-one">A Storybook Holiday:</div>
-              <div class="sbhw-heading-two">Guess Who?</div>
+      <div class="row">
+        <div class="slideshow-wrapper">
+          <div class="slideshow-row">
+            <div id="slideshow" class="slideshow-image main"> 
+              <!-- define each background-image in CSS -->
+              <div></div>
+              
+              <!-- #slideshow div:nth-of-type(1) --> 
+              <span><i class="fa-regular fa-sleigh photo-icon"></i>A Visit with Santa</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(2) --> 
+              <span><i class="fa-regular fa-tree photo-icon"></i>Forest of Stories</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(3) --> 
+              <span><i class="fa-regular fa-image-polaroid-user photo-icon"></i>Festive Photo Ops</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(4) --> 
+              <span><i class="fa-regular fa-box-open-full photo-icon"></i>Workshops and Crafts</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(5) --> 
+              <span><i class="fa-regular fa-guitars photo-icon"></i>Jingle Jam Sing-Alongs</span>
+              <div></div>
+              <!-- #slideshow div:nth-of-type(6) --> 
+              <span><i class="fa-regular fa-gingerbread-man photo-icon"></i>Holiday Treats</span></div>
+            <div class="slideshow-arrow"></div>
+            <div class="slideshow-content">
+              <h2 class="no-margin-top">Booked for the Holidays</h2>
+              <div>Your hub for holiday cheer! Explore twinkling trees in our <a href="../forest-of-stories/">Forest of Stories</a> and join the <a href="../forest-of-stories/#contest">Tree of the Week contest</a>, belt it out at a Jingle Jam Sing-Along, visit with Santa, and more.</div>
+              <div class="padding-top-20"><a href="../booked-for-the-holidays/" class="btn btn-primary">Learn More</a></div>
             </div>
-            <div class="photo-item-inner">
-              <div class="h6 black">Step into the whimsical world of everyone’s favorite green grouch for a touch of holiday magic, mischief and memories!</div>
-              <div class="margin-top-5">Enjoy festive crafts, activities and make-and-takes, delicious food and drinks, live performances, entertainment, our signature naughty and nice hot cocoa bar, and more. Also included: a visit with Santa himself! Ideal for ages 3-13, but all ages are welcome.</div>
-              <div class="margin-top-10">Saturday, December&nbsp;6 & Sunday, December 7, <a href="../lone-tree/">Lone Tree</a></div>
-            </div>
-            <div class="align-bottom-alt"> <a class="btn btn-null">Sold Out</a> </div>
           </div>
         </div>
       </div>
@@ -699,6 +918,19 @@ Push Notifications End - Removed for Now -->
     <section>
       <div id="highlighted-events" class="row bg-gray-5 margin-top-30 padding-top-40 padding-bottom-80">
         <div class="box-wrapper">
+          <div class="box-item">
+            <div class="white-bottom-row">
+              <div class="gray-circle-wrapper circle-alt">
+                <div class="gray-circle circle-alt"><img src="icon-images/storybook-holiday.webp" alt="A Storybook Holiday" class="img-responsive"></div>
+              </div>
+            </div>
+            <div class="text-center small font-weight-500 text-uppercase margin-top-5">A Storybook Holiday:</div>
+            <div class="h3 text-center no-margin-top">Guess Who?</div>
+            <div class="text-center">Create lasting memories with us!</div>
+            <div class="align-bottom">
+              <div class="large-text text-center margin-top-5">Saturday, December&nbsp;6 & Sunday, December&nbsp;7, <a href="../lone-tree/">Lone&nbsp;Tree</a></div>
+              <a class="btn btn-null margin-top-15">Sold Out</a></div>
+          </div>
           <div class="box-item">
             <div class="white-bottom-row">
               <div class="gray-circle-wrapper circle-alt">
@@ -827,7 +1059,27 @@ Push Notifications End - Removed for Now -->
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+/* http://cssmojo.com/ken-burns-effect/ */
+function kbSlideshow() { // set .fx1 class on 1st img on page load
+	window.setInterval(kenBurns, 6000); // calls kenBurns() function every 4 secs
+	var images = document.getElementById('slideshow').getElementsByTagName('div'),
+        numberOfImages = images.length, i = 1; // track loop - 1 (not 0) as 1st img is styled on page load
+	images[0].className = "fx1"; // style 1st img on page load
+	function kenBurns() {
+		if (i==numberOfImages) { i = 0; }
+        	images[i].className = "fx"; // set .fx class on each img
+		// clean up one before last to avoid bounce effect - can't remove .fx from previous
+        	if (i===0) { images[numberOfImages-2].className = ""; }
+        	if (i===1) { images[numberOfImages-1].className = ""; }
+        	if (i>1) { images[i-2].className = ""; }
+        	i++;
+		}
+	}
+setTimeout(kbSlideshow, 1); // short delay so CSS transforms work on 1st img
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
