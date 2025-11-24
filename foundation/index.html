@@ -534,7 +534,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="page-nav">
         <div class="page-nav-item"><a href="../donate/"><i class="pagenav-icon fa-solid fa-heart"></i>Donate Now</a></div>
         <div class="page-nav-item"><a href="../ways-to-give/"><i class="pagenav-icon fa-solid fa-gift"></i>Other Ways to Give</a></div>
-        <div class="page-nav-item"><a href="#" type="button" data-toggle="modal" data-target="#contact-modal"><i class="pagenav-icon fa-solid fa-envelope"></i>Get in Touch</a></div>
+        <div class="page-nav-item"><a href="#" type="button" data-toggle="modal" data-target="#contact-us"><i class="pagenav-icon fa-solid fa-envelope"></i>Get in Touch</a></div>
       </div>
     </div>
     <section>
@@ -561,7 +561,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div id="box-one"></div>
               <div class="item-inner">
                 <h3 class="text-center">Scholarships & Support</h3>
-                <div>The Foundation provides scholarships and financial support for customers attending various DCL programs, such as <a href="../camp-dcl/">Camp&nbsp;DCL</a> for kids and <a href="../adult-education/#tutoring-and-proctoring">high school equivalency</a> testing for adults. Thanks to these scholarships, kids in families facing financial hardship get the chance to play and learn at our day camps, and adults are able to achieve their high school graduation goals. <a href="#" type="text" data-toggle="modal" data-target="#contact-modal">Contact us</a> for more information on accessing support for a fee-based program or service.</div>
+                <div>The Foundation provides scholarships and financial support for customers attending various DCL programs, such as <a href="../camp-dcl/">Camp&nbsp;DCL</a> for kids and <a href="../adult-education/#tutoring-and-proctoring">high school equivalency</a> testing for adults. Thanks to these scholarships, kids in families facing financial hardship get the chance to play and learn at our day camps, and adults are able to achieve their high school graduation goals. <a href="#" type="text" data-toggle="modal" data-target="#contact-us">Contact us</a> for more information on accessing support for a fee-based program or service.</div>
               </div>
             </div>
             <div class="item">
@@ -658,7 +658,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="row padding-top-40 padding-bottom-40">
         <div class="container text-center">
           <div class="h5 no-margin">Questions about the Foundation or Endowment?</div>
-          <div class="padding-top-20 padding-bottom-20"><a href="#" type="button" class="btn btn-lg text-uppercase btn-primary" data-toggle="modal" data-target="#contact-modal">Contact Us</a></div>
+          <div class="padding-top-20 padding-bottom-20"><a href="#" type="button" class="btn btn-lg text-uppercase btn-primary" data-toggle="modal" data-target="#contact-us">Contact Us</a></div>
           <div>or call <a href="tel:+13037643311" class="text-nowrap">(303) 764-3311</a></div>
         </div>
       </div>
@@ -685,7 +685,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     
     <!-- Modal -->
-    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="contact-us" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -771,7 +771,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     2000
   );
   $(this).text($(this).attr("data-progress") + "%");
-});</script> 
+});</script>
+    <!-- open contact-us modal on page load --> 
+
+<script type="text/javascript">
+$(document).ready(function() {
+  if(window.location.href.indexOf('#contact-us') != -1) {
+    $('#contact-us').modal('show')
+  }
+});
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
