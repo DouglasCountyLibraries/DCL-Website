@@ -44,6 +44,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 <style>
 iframe {
     width: 1px;
@@ -300,7 +301,7 @@ iframe {
             <div class="custom-progress-bar">
               <div class="animated-progress progress-blue"> <span data-progress="14"></span> </div>
               <div class="progress-percentage">
-                <div>Complete: 14%</div>
+                <div class="counter">Complete: 14%</div>
                 <div>Goal: $75,000</div>
               </div>
             </div>
@@ -417,10 +418,19 @@ iframe {
     {
       width: $(this).attr("data-progress") + "%",
     },
-    2000
+    5000
   );
   $(this).text($(this).attr("data-progress") + "%");
-});</script> 
+});</script>
+<script id="rendered-js">
+const counterUp = window.counterUp.default;
+// Directly run counterUp on the element
+const el = document.querySelector('.counter');
+counterUp(el, {
+  duration: 2700,
+  delay: 10
+});
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
