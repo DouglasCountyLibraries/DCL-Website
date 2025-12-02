@@ -520,7 +520,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="custom-progress-bar">
             <div class="animated-progress progress-blue"> <span data-progress="40"></span> </div>
             <div class="progress-percentage">
-              <div class="counter">Complete: 40%</div>
+              <div>Complete: 40%</div>
               <div>Goal: $75,000</div>
             </div>
           </div>
@@ -769,19 +769,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {
       width: $(this).attr("data-progress") + "%",
     },
-    5000
+    2000
   );
   $(this).text($(this).attr("data-progress") + "%");
 });</script>
-<script id="rendered-js">
-const counterUp = window.counterUp.default;
-// Directly run counterUp on the element
-const el = document.querySelector('.counter');
-counterUp(el, {
-  duration: 2700,
-  delay: 10
-});
-</script> 
+
     <!-- open contact-us modal on page load --> 
 
 <script type="text/javascript">
