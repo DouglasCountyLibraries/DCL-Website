@@ -44,150 +44,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="https://use.typekit.net/vsp7dsy.css">
+<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
-.events-active {
-    background-color: #f5f5f5;
-}
-.gradient-row {
-    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
-}
-.background-row {
-	background: #fff url("guess-who-background.webp") top center repeat;
-	max-width: 1900px;
-	margin: 5px auto 30px auto;
-	padding: 100px;
-}
-.container-wrapper {
-    max-width: 1700px;
-    margin: 0 auto;
+.reserve-a-space-active {
+	background-color: #f5f5f5;
 }
 .custom-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-    border-radius: 50px;
-    margin: 0 auto;
+	max-width: 2200px;
+	margin: 0 auto;
 }
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 1000px;
-    padding: 60px 0 80px 30px;
+.intro-container {
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 0 15px 30px;
 }
-.image-wrapper-large {
-    min-width: 600px;
+.flickity-container {
+	max-width: 1610px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
-.image-wrapper-small {
-    margin: 0 auto;
+.carousel-cell {
+	width: 100%;
+	padding: 0 0 50px 0;
+	text-align: center;
 }
-h1.greycliff {
-    color: #016938;
-    font-size: 9.4rem;
-    line-height: .9;
-    margin: 0;
-    font-family: "greycliff-cf", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    text-transform: uppercase;
+.carousel-cell img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
 }
-h2.intro-heading {
-    color: #016938;
-    font-style: normal;
-    font-size: 1.75rem;
-    padding: 15px 0 10px;
-    margin: 0;
-    line-height: 1.2;
+.flickity-page-dots {
+	bottom: 20px;
+	opacity: .5;
 }
-.details {
-    max-width: 825px;
-    margin: 0 auto;
+.flickity-page-dots .dot {
+	background-color: #000;
 }
-.intro-text {
-    color: #016938;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-.tickets-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.tickets-item {
-    padding: 15px;
-    white-space: nowrap;
-}
-.tickets-item .h4 {
-    text-transform: uppercase;
-    margin: 15px 0 0;
-    font-weight: 600;
-}
-.tickets-date {
-    font-size: 1.125rem;
-    padding: 5px 0;
-}
-.btn.btn-custom {
-    color: #fff;
-    background: #016938;
-    text-transform: uppercase;
-    font-weight: 600;
-    box-shadow: 0px 3px 3px rgba(0,0,0, .4);
-    transition: all .4s ease-out;
-    border-radius: 6px;
-}
-.btn.btn-custom:hover, .btn.btn-custom:focus {
-    color: #fff;
-    background: #014625;
-    text-transform: uppercase;
-    font-weight: 600;
-    box-shadow: 0px 6px 12px rgba(0,0,0, .4);
-    transition: all .4s ease-out;
-    border-radius: 6px;
-}
-.btn.btn-custom.btn-soldout, .btn.btn-custom.btn-soldout:hover, .btn.btn-custom.btn-soldout:focus {
-    box-shadow: none;
-    cursor: not-allowed;
-    background: #016938;
-}
-
-@media (max-width: 1500px) {
-.tickets-wrapper {
-    flex-direction: column;
-}
-}
-
-@media (max-width: 1300px) {
-.background-row {
-    padding: 100px 25px;
-}
-}
-
-@media (min-width: 1176px) {
-.image-wrapper-small {
-    display: none;
-}
-}
-
-@media (max-width: 1175px) {
-.custom-container {
-    flex-direction: column;
-    max-width: 800px;
-}
-.content-wrapper {
-    padding: 60px 15px 80px;
-}
-.image-wrapper-large {
-    display: none;
-}
-}
-
-@media (max-width: 600px) {
-h1.greycliff {
-    font-size: 6rem;
-}
+.flickity-prev-next-button {
+	display: none;
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -382,66 +277,50 @@ h1.greycliff {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row gradient-row">
-      <div class="row background-row">
-        <div class="container-wrapper">
-          <div class="custom-container">
-            <div class="content-wrapper">
-              <div class="intro-text">A Storybook Holiday:</div>
-              <h1 class="greycliff">Guess<br>
-                Who?</h1>
-              <div class="image-wrapper-small"><img class="img-responsive" src="grouch-small.webp" alt="Grouch hand holding a Christmas Ornament"></div>
-              <div class="details">
-                <h2 class="intro-heading">Join us for a heartwarming holiday celebration full of magic, mischief and memories.</h2>
-                <div>Step into the whimsical world of our favorite green grouch! Families can enjoy festive entertainment, hands-on crafts and make-and-takes, delightful photo ops, and a special visit with Santa. Savor a menu of delicious food, drinks and tasty treats, sip from our playful naughty and nice hot cocoa bar, and soak in the holiday cheer.</div>
-              </div>
-              <div class="tickets-row">
-                <div class="text-center">
-                  <div class="tickets-wrapper">
-                    <div class="tickets-item">
-                      <div class="h4">Dinner Edition</div>
-                      <div class="tickets-date">Saturday, December&nbsp;6, 5PM</div>
-                      <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
-                      <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
-                      <div>(No charge for ages 2 and under)</div>
-                      <div class="padding-top-30 text-center">
-                        <button class="btn btn-custom btn-soldout">Sold Out</button>
-                      </div>
-                    </div>
-                    <div class="tickets-wrapper">
-                      <div class="tickets-item">
-                        <div class="h4">Brunch Edition</div>
-                        <div class="tickets-date">Sunday, December&nbsp;7, 8AM</div>
-                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
-                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
-                        <div>(No charge for ages 2 and under)</div>
-                        <div class="padding-top-30 text-center">
-                          <button class="btn btn-custom btn-soldout">Sold Out</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tickets-wrapper">
-                      <div class="tickets-item">
-                        <div class="h4">Lunch Edition</div>
-                        <div class="tickets-date">Sunday, December&nbsp;7, 12PM</div>
-                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
-                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
-                        <div>(No charge for ages 2 and under)</div>
-                        <div class="padding-top-30 text-center"> 
-                         <button class="btn btn-custom btn-soldout">Sold Out</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="padding-top-30"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
-                </div>
-              </div>
-            </div>
-            <div class="image-wrapper-large"><img class="img-responsive" src="grouch-large.webp" alt="Grouch hand holding a Christmas Ornament"></div>
-          </div>
+    <div class="row border-top padding-bottom-20">
+      <div class="container text-center">
+        <h1 class="page-heading">A Storybook Holiday</h1>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature.</h2>
+          <div class="h4 margin-bottom-5 no-margin-top"><i>Coming this Spring!</i></div>
         </div>
       </div>
     </div>
+    <div class="flickity-container">
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
+        <div class="carousel-cell"><img src="carousel/one.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/two.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/three.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/four.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/five.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/six.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/seven.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eight.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/nine.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/ten.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/eleven.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/twelve.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/thirteen.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/fourteen.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/fifteen.webp" alt=""></div>
+        <div class="carousel-cell"><img src="carousel/sixteen.webp" alt=""></div>
+      </div>
+    </div>
+    <div class="container text-center padding-bottom-80">
+      <div class="max-width-80 padding-bottom-10">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
+      <div class="max-width-50">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</div>
+    </div>
+    
+    <!--<div class="text-center padding-top-40 padding-bottom-50">
+  <div>
+    <h4><i>Coming Spring 2022!</i></h4>
+    <div>
+      <h3 class="no-margin">A Storybook Holiday Spring:</h3>
+      <h1 class="no-margin-top text-uppercase font-weight-400">That Hungry Little Bug</h1>
+      Sunday, March 27, Parker<br>
+      Tickets on sale soon. </div>
+  </div>
+</div>--> 
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
@@ -506,7 +385,17 @@ h1.greycliff {
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -532,8 +421,7 @@ h1.greycliff {
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.blogs.douglascountylibraries.org",
-		"https:\/\/help.dcl.org/",
+		"https:\/\/www.dclblog.org",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
