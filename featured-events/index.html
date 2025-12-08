@@ -288,9 +288,9 @@ Push Notifications End - Removed for Now -->
     align-content: center;
     justify-content: center;
     /* max-width: 945px; */
-    /* max-width: 1030px; */
+    max-width: 1030px;
     /* max-width: 1200px; */
-    max-width: 1300px;
+    /* max-width: 1300px; */
     /* max-width: 1350px; */
 	/* max-width: 1700px; */
     margin: 0 auto;
@@ -370,7 +370,7 @@ Push Notifications End - Removed for Now -->
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1300px;
+    max-width: 1030px;
     margin: 0 auto;
 }
 .photo-item {
@@ -889,7 +889,7 @@ opacity:0;
         <div class="page-nav-item"><a href="#author-events"><i class="pagenav-icon fa-regular fa-books"></i>Author Events</a></div>
       </div>
     </div>
-    <!--<section>
+    <section>
       <div class="row">
         <div class="photo-wrapper">
           <div class="photo-item black text-center bg-gray-5">
@@ -906,43 +906,27 @@ opacity:0;
               <div class="h5 no-margin-bottom">Sunday, February&nbsp;22, 4PM, <a href="https://maps.app.goo.gl/xyRnvSPeB1q5vZEZ9" target="_blank">DCSD Legacy Campus</a></div>
               <div class="h6 no-margin-bottom margin-top-5">Tickets: $35 General Admission | $20 Companion </div>
               <div class="padding-top-20">
-                <button class="btn btn-primary" type="button">Buy Tickets</button>
+                <!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.com/e/an-afternoon-with-nyt-bestselling-author-cj-box-tickets-1975052165193" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+<!-- You can customize this button any way you like -->
+<button class="btn btn-primary" id="eventbrite-widget-modal-trigger-1975052165193" type="button">Buy Tickets</button>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1975052165193',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1975052165193',
+        onOrderComplete: exampleCallback
+    });
+</script>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>-->
-    <section>
-      <div class="row">
-        <div class="slideshow-wrapper">
-          <div class="slideshow-row">
-            <div id="slideshow" class="slideshow-image main"> 
-              <!-- define each background-image in CSS -->
-              <div></div>
-              
-              <!-- #slideshow div:nth-of-type(1) --> 
-              <span><i class="fa-regular fa-sleigh photo-icon"></i>A Visit with Santa</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(2) --> 
-              <span><i class="fa-regular fa-tree photo-icon"></i>Forest of Stories</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(3) --> 
-              <span><i class="fa-regular fa-image-polaroid-user photo-icon"></i>Festive Photo Ops</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(4) --> 
-              <span><i class="fa-regular fa-box-open-full photo-icon"></i>Workshops and Crafts</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(5) --> 
-              <span><i class="fa-regular fa-guitars photo-icon"></i>Jingle Jam Sing-Alongs</span>
-              <div></div>
-              <!-- #slideshow div:nth-of-type(6) --> 
-              <span><i class="fa-regular fa-gingerbread-man photo-icon"></i>Holiday Treats</span></div>
-            <div class="slideshow-arrow"></div>
-            <div class="slideshow-content">
-              <h2 class="no-margin-top">Booked for the Holidays</h2>
-              <div>Your hub for holiday cheer! Explore twinkling trees in our <a href="../forest-of-stories/">Forest of Stories</a> and join the <a href="../forest-of-stories/#contest">Tree of the Week contest</a>, belt it out at a Jingle Jam Sing-Along, visit with Santa, and more.</div>
-              <div class="padding-top-20"><a href="../booked-for-the-holidays/" class="btn btn-primary">Learn More</a></div>
             </div>
           </div>
         </div>
@@ -952,7 +936,7 @@ opacity:0;
       <div id="highlighted-events" class="row bg-gray-5 margin-top-30 padding-top-40 padding-bottom-80">
         <div class="box-wrapper"> 
           
-          <!--<div class="box-item">
+          <div class="box-item">
             <div class="white-bottom-row">
               <div class="gray-circle-wrapper circle-alt">
                 <div class="gray-circle circle-alt"><img src="icon-images/booked.webp" alt="Booked for the Holidays" class="img-responsive"></div>
@@ -963,8 +947,7 @@ opacity:0;
             <div class="align-bottom">
               <div class="large-text text-center margin-top-5">Various dates & locations</div>
               <a href="../booked-for-the-holidays/" class="btn btn-primary margin-top-15">Learn More</a> </div>
-          </div>-->
-          
+          </div>
           <div class="box-item">
             <div class="white-bottom-row">
               <div class="gray-circle-wrapper circle-alt">
