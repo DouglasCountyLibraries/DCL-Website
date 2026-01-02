@@ -123,14 +123,6 @@ width: calc(100% * 0.5);
 .authors-one {
     animation: clippy 2s linear both;
 }
-@keyframes clippy {
-0% {
-clip-path: ellipse(10% 14% at 52% 33%);
-}
-100% {
-clip-path: ellipse(80% 90% at 20% 50%);
-}
-}
 .authors-container {
     animation: greenie-one 2.5s linear both;
 }
@@ -202,6 +194,42 @@ background: #a2bcbd;
 @media (max-width: 1530px) {
 .bottom-wrapper {
     max-width: 1000px;
+}
+}
+
+@media (min-width: 1001px) {
+@keyframes clippy {
+0% {
+clip-path: ellipse(10% 14% at 52% 33%);
+}
+100% {
+clip-path: ellipse(80% 90% at 20% 50%);
+}
+}
+}
+
+@media (max-width: 1000px) {
+.authors-wrapper {
+    flex-direction: column;
+}
+.authors-content {
+    padding: 30px 15px 65px;
+}
+.authors-two {
+    width: 100%;
+}
+.authors-one {
+    background: #4F7B7D url("author-audience.webp") 54% 100% no-repeat;
+    width: 100%;
+    min-height: 640px;
+}
+@keyframes clippy {
+0% {
+clip-path: ellipse(10% 14% at 52% 33%);
+}
+100% {
+clip-path: ellipse(150% 99% at 50% 0%);
+}
 }
 }
 </style>
@@ -428,7 +456,7 @@ background: #a2bcbd;
               <div class="boxtwo-wrapper">
                 <div id="boxtwo"></div>
                 <div class="boxtwo-content">
-                  <div class='ftb'>Fairy Tale Ball:</div>
+                  <div class="ftb">Fairy Tale Ball:</div>
                   <h2>Snow White</h2>
                   <div><a class="black text-underline" href="https://go.dcl.org/events?term=fairy+tale+ball&n=3&r=months">Join us for a royal treat</a>! Enchanting Crafts, Favorite Characters, Fun Activities, Snacks and Treats, Feb&nbsp;7-March&nbsp;7.</div>
                 </div>
