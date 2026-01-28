@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 /* authors */ 
 .authors-container {
-    background: #dc4e58 url("bull-large-background.webp") 100% 100% no-repeat;
+    background: #dc4e58 url("bull-large-background.webp") 0% 100% no-repeat;
     display: flex;
     max-width: 1750px;
     min-height: 640px;
@@ -71,7 +71,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: 100%;
 }
 .authors-one {
-    
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
@@ -81,7 +80,6 @@ width: calc(100% * 0.5);
     justify-content: center;
 }
 .authors-two {
-    
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
@@ -99,25 +97,25 @@ width: calc(100% * 0.5);
 .authors-two h1 {
     color: #fff;
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: .9;
     margin-bottom: 25px;
+    letter-spacing: -2px;
 }
 .authors-two h2 {
     color: #fff;
     font-size: 1.3rem;
     line-height: 1.5;
+    font-weight: 500;
 }
 .authors-two h3 {
     color: #fff;
     font-size: 1.4rem;
 }
 .authors-content {
-    max-width: 680px;
-    margin: 0 auto;
+    max-width: 730px;
     padding: 0 15px 60px;
 }
-
 /* bottom container */
 .bottom-container {
     background: #2d3338;
@@ -130,7 +128,7 @@ width: calc(100% * 0.5);
     margin: 0 auto;
     display: flex;
     width: 100%;
-    padding: 70px 40px 80px;
+    padding: 100px 40px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -146,7 +144,10 @@ width: calc(100% * 0.5);
     align-items: center;
 }
 .boxone-wrapper img, .boxtwo-wrapper img, .boxthree-wrapper img, .boxfour-wrapper img {
+    border: 6px solid #91a370;
     border-radius: 50%;
+    height: 150px;
+    width: 150px;
 }
 .boxone-content, .boxtwo-content, .boxthree-content, .boxfour-content {
     margin: 0 auto;
@@ -172,17 +173,6 @@ width: calc(100% * 0.5);
 }
 }
 
-@media (min-width: 1001px) {
-@keyframes clippy {
-0% {
-clip-path: ellipse(10% 14% at 52% 33%);
-}
-100% {
-clip-path: ellipse(80% 90% at 20% 50%);
-}
-}
-}
-
 @media (max-width: 1000px) {
 .authors-wrapper {
     flex-direction: column;
@@ -197,14 +187,6 @@ clip-path: ellipse(80% 90% at 20% 50%);
     background: #4F7B7D url("author-audience.webp") 54% 100% no-repeat;
     width: 100%;
     min-height: 640px;
-}
-@keyframes clippy {
-0% {
-clip-path: ellipse(10% 14% at 52% 33%);
-}
-100% {
-clip-path: ellipse(150% 99% at 50% 0%);
-}
 }
 }
 </style>
@@ -409,8 +391,9 @@ clip-path: ellipse(150% 99% at 50% 0%);
               <div class="authors-two">
                 <div class="authors-content">
                   <div class="presents">A Storybook Holday:</div>
-                  <h1>Ferdinand's Frolic</h1>
-                  <h2>Step into a springtime celebration inspired by The Story of Ferdinand, Sunday, March&nbsp;29. <a class="white text-underline" href="featured-events/">Buy&nbsp;Tickets</a></h2>
+                  <h1>Ferdinand's<br>
+                    Frolic</h1>
+                  <h2>Step into a springtime celebration inspired by The Story of Ferdinand, Sunday, March&nbsp;29. <a class="white text-underline" href="storybook-holiday/">Buy&nbsp;Tickets</a></h2>
                 </div>
               </div>
             </div>
@@ -427,16 +410,16 @@ clip-path: ellipse(150% 99% at 50% 0%);
                   <div><a class="white text-underline" href="top-checkouts/">These&nbsp;titles</a> were tops in 2025.</div>
                 </div>
               </div>
-              <div class="boxtwo-wrapper">
-                <div id="boxtwo"><img src="flower-one.webp" alt=""></div>
+              <!--<div class="boxtwo-wrapper">
+                <div id="boxtwo"><img src="flower-two.webp" alt=""></div>
                 <div class="boxtwo-content">
                   <div class="ftb">Fairy Tale Ball:</div>
                   <h2>Snow White</h2>
                   <div><a class="white text-underline" href="https://go.dcl.org/events?term=fairy+tale+ball&n=3&r=months">Join us for a royal treat</a>! Enchanting Crafts, Favorite Characters, Fun Activities, Snacks and Treats, Feb&nbsp;7-March&nbsp;7.</div>
                 </div>
-              </div>
+              </div>-->
               <div class="boxthree-wrapper">
-                <div id="boxthree"><img src="flower-one.webp" alt=""></div>
+                <div id="boxthree"><img src="flower-three.webp" alt=""></div>
                 <div class="boxthree-content">
                   <h2>Reading<br>
                     Challenge</h2>
@@ -444,7 +427,7 @@ clip-path: ellipse(150% 99% at 50% 0%);
                 </div>
               </div>
               <div class="boxfour-wrapper">
-                <div id="boxfour"><img src="flower-one.webp" alt=""></div>
+                <div id="boxfour"><img src="flower-four.webp" alt=""></div>
                 <div class="boxfour-content">
                   <h2>Summer Camps<br>
                     Sneak Peek</h2>
@@ -454,7 +437,6 @@ clip-path: ellipse(150% 99% at 50% 0%);
             </div>
           </div>
         </section>
-
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
