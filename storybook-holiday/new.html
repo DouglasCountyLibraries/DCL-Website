@@ -61,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
 .top-row {
-    background: #dc4e58 url("bull-large-background.webp") bottom right no-repeat;
+    background: transparent url("bull-large-background.webp") bottom right no-repeat;
     max-width: 1800px;
     margin: 0 auto;
     color: #fff;
@@ -81,6 +81,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 0 30px 185px;
     font-size: 1.25rem;
     font-weight: 500;
+}
+.flower-one {
+    position: relative;
+    background: transparent url("flower-one.webp") center center repeat;
+    animation: fall 2s linear infinite;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.flower-two {
+    position: relative;
+    background: transparent url("flower-two.webp") center center repeat;
+    animation: fall 3s linear infinite;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.flower-three {
+    position: relative;
+    background: transparent url("flower-three.webp") center center repeat;
+    animation: fall 4s linear infinite;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.red-row {
+    background: #dc4e58;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 .dcl-presents {
     color: #fff;
@@ -170,32 +196,40 @@ h1.midcent {
     height: inherit;
 }
 .top-container {
-	padding: 0 15px;
-	align-self: auto;
-	justify-content: flex-end;
-	padding-top: 79%;
+    padding: 0 15px;
+    align-self: auto;
+    justify-content: flex-end;
+    padding-top: 79%;
 }
 .bottom-container {
     padding: 30px 0 100px;
     margin: 0 auto;
 }
 }
-    @media (max-width: 650px) {
+
+@media (max-width: 650px) {
 h1.midcent {
     font-size: 4.8rem;
 }
-        .top-container {
+.top-container {
+    padding-top: 85%;
+}
+}
 
-	padding-top: 85%;
-}
-}
-        @media (max-width: 450px) {
+@media (max-width: 450px) {
 h1.midcent {
     font-size: 3.8rem;
 }
-        .top-container {
-
-	padding-top: 85%;
+.top-container {
+    padding-top: 85%;
+}
+}
+@keyframes fall {
+from {
+background-position: 0 -700px;
+}
+to {
+background-position: 0 0;
 }
 }
 </style>
@@ -392,29 +426,37 @@ h1.midcent {
     </div>
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row gradient-row">
-      <div class="top-row">
-        <div class="top-wrapper">
-          <div class="top-container">
-            <div class="dcl-presents">A Storybook Holiday:</div>
-            <h1 class="midcent">Ferdinand<span class="space-fix">’</span>s<br>
-              Frolic</h1>
-            <div><i>"He liked to sit just quietly and smell the flowers."<br>
-              &mdash; The Story of Ferdinand</i></div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-row">
-        <div class="bottom-wrapper">
-          <div class="bottom-container">
-            <div class="bottom-heading">Step into a springtime celebration inspired by The Story of Ferdinand.</div>
-            <div>Enjoy a cheerful day filled with playful activities, Spanish-themed crafts, a delicious brunch, and moments of gentle wonder. And don’t forget to sit quietly and smell the flowers. With story-inspired experiences designed especially for ages 2-7, this sweet celebration is a perfect way to welcome the new season for all ages. Costumes are encouraged.</div>
-            <div class="h5 white">Saturday, March&nbsp;29, 8:30-11:30AM, <a class="white text-underline" href="../highlands-ranch/">Highlands Ranch</a></div>
-            <div>Tickets: $25 ages&nbsp;3-13, $30 ages&nbsp;14+</div>
-            <div>(Ages 2 and under free with paying adult)</div>
-            <div class="padding-top-30 text-center">
-              <button class="btn btn-custom">On Sale Feb 1</button>
+      <div class="red-row">
+        <div class="flower-one">
+          <div class="flower-two">
+            <div class="flower-three">
+              <div class="top-row">
+                <div class="top-wrapper">
+                  <div class="top-container">
+                    <div class="dcl-presents">A Storybook Holiday:</div>
+                    <h1 class="midcent">Ferdinand<span class="space-fix">’</span>s<br>
+                      Frolic</h1>
+                    <div><i>"He liked to sit just quietly and smell the flowers."<br>
+                      &mdash; The Story of Ferdinand</i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-row">
+                <div class="bottom-wrapper">
+                  <div class="bottom-container">
+                    <div class="bottom-heading">Step into a springtime celebration inspired by The Story of Ferdinand.</div>
+                    <div>Enjoy a cheerful day filled with playful activities, Spanish-themed crafts, a delicious brunch, and moments of gentle wonder. And don’t forget to sit quietly and smell the flowers. With story-inspired experiences designed especially for ages 2-7, this sweet celebration is a perfect way to welcome the new season for all ages. Costumes are encouraged.</div>
+                    <div class="h5 white">Saturday, March&nbsp;29, 8:30-11:30AM, <a class="white text-underline" href="../highlands-ranch/">Highlands Ranch</a></div>
+                    <div>Tickets: $25 ages&nbsp;3-13, $30 ages&nbsp;14+</div>
+                    <div>(Ages 2 and under free with paying adult)</div>
+                    <div class="padding-top-30 text-center">
+                      <button class="btn btn-custom">On Sale Feb 1</button>
+                    </div>
+                    <div class="padding-top-30"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="padding-top-30"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
           </div>
         </div>
       </div>
