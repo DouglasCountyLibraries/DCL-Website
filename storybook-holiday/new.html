@@ -85,21 +85,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .flower-one {
     position: relative;
     background: transparent url("flower-one.webp") center center repeat;
-    animation: fall 2s linear infinite;
+    animation: fall 1.5s linear infinite;
     max-width: 1800px;
     margin: 0 auto;
 }
 .flower-two {
     position: relative;
     background: transparent url("flower-two.webp") center center repeat;
-    animation: fall 3s linear infinite;
+    animation: fall 2s linear infinite;
     max-width: 1800px;
     margin: 0 auto;
 }
 .flower-three {
     position: relative;
     background: transparent url("flower-three.webp") center center repeat;
-    animation: fall 4s linear infinite;
+    animation: fall 2.5s linear infinite;
     max-width: 1800px;
     margin: 0 auto;
 }
@@ -174,13 +174,21 @@ h1.midcent {
     cursor: not-allowed;
     background: #fff;
 }
+@keyframes fall {
+from {
+background-position: 0 -700px;
+}
+to {
+background-position: 0 0;
+}
+}
 
 @media (max-width: 1500px) {
 h1.midcent {
     font-size: 7rem;
 }
 .top-row {
-    background: #dc4e58 url("bull-medium-background.webp") 100% 100% no-repeat;
+    background: transparent url("bull-medium-background.webp") 100% 100% no-repeat;
 }
 .top-container {
     padding: 0 15px 185px;
@@ -189,7 +197,7 @@ h1.midcent {
 
 @media (max-width: 1200px) {
 .top-row {
-    background: #dc4e58 url("bull-small-background.webp") top center/cover;
+    background: transparent url("bull-small-background.webp") top center/cover;
 }
 .top-wrapper {
     justify-content: center;
@@ -204,6 +212,29 @@ h1.midcent {
 .bottom-container {
     padding: 30px 0 100px;
     margin: 0 auto;
+}
+}
+
+@media (max-width: 900px) {
+.flower-one {
+    background: transparent url("flower-one-small.webp") center center repeat;
+    animation: fall 1.8s linear infinite;
+}
+.flower-two {
+    background: transparent url("flower-two-small.webp") center center repeat;
+    animation: fall 2s linear infinite;
+}
+.flower-three {
+    background: transparent url("flower-three-small.webp") center center repeat;
+    animation: fall 2.5s linear infinite;
+}
+@keyframes fall {
+from {
+background-position: 0 -389px;
+}
+to {
+background-position: 0 0;
+}
 }
 }
 
@@ -222,14 +253,6 @@ h1.midcent {
 }
 .top-container {
     padding-top: 85%;
-}
-}
-@keyframes fall {
-from {
-background-position: 0 -700px;
-}
-to {
-background-position: 0 0;
 }
 }
 </style>
