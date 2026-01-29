@@ -989,6 +989,26 @@ function concatValues( obj ) {
   return value;
 }
 </script> 
+<script>
+  //read the url hash on page load and apply it:
+var $grid = $('.grid').isotope({
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+
+// read hash on load
+var hash = window.location.hash.replace('#', '');
+
+if (hash) {
+  $grid.isotope({ filter: '.' + hash });
+}
+
+// update filter when hash changes
+$(window).on('hashchange', function () {
+  var newHash = window.location.hash.replace('#', '');
+  $grid.isotope({ filter: '.' + newHash });
+});  
+    </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
