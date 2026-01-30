@@ -122,7 +122,6 @@ width: calc(100% * 0.5);
     background: #2d3338;
     display: flex;
     max-width: 1750px;
-    min-height: 640px;
     margin: 0 auto;
 }
 .bottom-wrapper {
@@ -175,6 +174,8 @@ width: calc(100% * 0.5);
 
 /* responsive rules */
     
+
+    
 @media (max-width: 1530px) {
 .bottom-wrapper {
     max-width: 1000px;
@@ -187,9 +188,23 @@ width: calc(100% * 0.5);
 }
 }
 
+@media (max-width: 1300px) {
+.authors-container {
+    background: #dc4e58 url("bull-background-large.webp") 20% 100% no-repeat;
+}
+}
+
 @media (max-width: 1000px) {
 .authors-wrapper {
     flex-direction: column;
+}
+.authors-two {
+    width: 100%;
+    background: #2d3338;
+    align-items: center;
+}
+.authors-container {
+    background: #dc4e58;
 }
 .authors-content {
     padding: 30px 15px 65px;
@@ -198,11 +213,16 @@ width: calc(100% * 0.5);
     width: 100%;
 }
 .authors-one {
-    background: #4F7B7D url("bull-background-large.webp") 54% 100% no-repeat;
+    background: #dc4e58 url("storybook-holiday/bull-small-background.webp") top center/cover;
     width: 100%;
-    min-height: 640px;
+    padding-top: 85%;
 }
 }
+    @media (max-width: 500px) {.authors-two h1 {
+
+	font-size: 3.85rem;
+
+}}
 </style>
 <!-- InstanceEndEditable -->
 </head>
