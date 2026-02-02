@@ -56,21 +56,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-/* authors */ 
-.authors-container {
-    background: #4F7B7D;
+/* sbh */ 
+.sbh-container {
+    background: #dc4e58 url("bull-background-large.webp") 0% 100% no-repeat;
     display: flex;
     max-width: 1750px;
     min-height: 640px;
     margin: 0 auto;
 }
-.authors-wrapper {
+.sbh-wrapper {
     margin: 0 auto;
     display: flex;
     width: 100%;
 }
-.authors-one {
-    background: #4F7B7D url("author-audience.webp") 58% 100% no-repeat;
+.sbh-one {
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
@@ -79,7 +78,7 @@ width: calc(100% * 0.5);
     text-align: center;
     justify-content: center;
 }
-.authors-two {
+.sbh-two {
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
@@ -87,71 +86,48 @@ width: calc(100% * 0.5);
     text-align: center;
     color: #fff;
 }
-.authors-two .presents {
+.sbh-two .presents {
     font-size: 1.25rem;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
     margin: 0;
 }
-.authors-two h1 {
+.sbh-two h1 {
     color: #fff;
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: .9;
     margin-bottom: 25px;
+    letter-spacing: -2px;
 }
-.authors-two h2 {
+.sbh-two h2 {
     color: #fff;
     font-size: 1.3rem;
     line-height: 1.5;
+    font-weight: 500;
 }
-.authors-two h3 {
+.sbh-two h3 {
     color: #fff;
     font-size: 1.4rem;
 }
-.authors-content {
-    max-width: 680px;
-    margin: 0 auto;
+.sbh-content {
+    background: url("content-background.webp") center center no-repeat;
+    max-width: 730px;
     padding: 0 15px 60px;
-}
-.authors-one {
-    animation: clippy 2s linear both;
-}
-.authors-container {
-    animation: greenie-one 2.5s linear both;
-}
-@keyframes greenie-one {
-0% {
-background: #a2bcbd;
-}
-100% {
-background: #4F7B7D;
-}
-}
-.bottom-container {
-    animation: greenie-two 2.5s linear both;
-}
-@keyframes greenie-two {
-0% {
-background: #4F7B7D;
-}
-100% {
-background: #a2bcbd;
-}
 }
 /* bottom container */
 .bottom-container {
+    background: #2d3338;
     display: flex;
     max-width: 1750px;
-    min-height: 640px;
     margin: 0 auto;
 }
 .bottom-wrapper {
     margin: 0 auto;
     display: flex;
     width: 100%;
-    padding: 70px 40px 80px;
+    padding: 20px 15px 140px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -159,72 +135,90 @@ background: #a2bcbd;
     display: flex;
     flex: 1;
     flex-direction: column;
-    background: #fff;
+    background: #2d3338;
     min-width: 330px;
-    max-width: 440px;
-    padding: 60px 20px 30px;
-    margin: 15px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px 0;
+    max-width: 460px;
+    padding: 30px 30px 45px;
+    /* margin: 15px; */
+    align-items: center;
 }
 .boxone-wrapper img, .boxtwo-wrapper img, .boxthree-wrapper img, .boxfour-wrapper img {
+    border: 3px solid #fff;
     border-radius: 50%;
+    height: 120px;
+    width: 120px;
 }
 .boxone-content, .boxtwo-content, .boxthree-content, .boxfour-content {
     margin: 0 auto;
-    color: #000;
-    padding: 30px 0 35px;
-    font-size: 1.13rem;
+    color: #fff;
+    padding: 20px 0 30px;
+    font-size: 1.125rem;
     text-align: center;
-    max-width: 650px;
 }
 .boxone-content h2, .boxtwo-content h2, .boxthree-content h2, .boxfour-content h2 {
     font-size: 2rem;
     line-height: 1.1;
     margin: 0 0 10px;
     font-weight: 500;
+    color: #fff;
+}
+#boxone, #boxtwo, #boxthree, #boxfour {
+    border: 6px solid #91a370;
+    border-radius: 50%;
+}
+.presents {
+    font-size: 1.35rem;
 }
 
 /* responsive rules */
-    
-@media (max-width: 1530px) {
-.bottom-wrapper {
-    max-width: 1000px;
+
+@media (max-width: 1475px) {
+.sbh-content {
+    background: none;
 }
 }
 
-@media (min-width: 1001px) {
-@keyframes clippy {
-0% {
-clip-path: ellipse(10% 14% at 52% 33%);
-}
-100% {
-clip-path: ellipse(80% 90% at 20% 50%);
-}
+@media (max-width: 1300px) {
+.sbh-container {
+    background: #dc4e58 url("bull-background-large.webp") 20% 100% no-repeat;
 }
 }
 
 @media (max-width: 1000px) {
-.authors-wrapper {
+.sbh-wrapper {
     flex-direction: column;
 }
-.authors-content {
+.sbh-two {
+    width: 100%;
+    background: #2d3338;
+    align-items: center;
+}
+.sbh-container {
+    background: #dc4e58;
+}
+.sbh-content {
     padding: 30px 15px 65px;
 }
-.authors-two {
+.sbh-two {
     width: 100%;
 }
-.authors-one {
-    background: #4F7B7D url("author-audience.webp") 54% 100% no-repeat;
+.sbh-one {
+    background: #dc4e58 url("storybook-holiday/bull-small-background.webp") top center/cover;
     width: 100%;
-    min-height: 640px;
+    padding-top: 85%;
 }
-@keyframes clippy {
-0% {
-clip-path: ellipse(10% 14% at 52% 33%);
 }
-100% {
-clip-path: ellipse(150% 99% at 50% 0%);
+
+@media (max-width: 685px) {
+.boxone-wrapper, .boxtwo-wrapper, .boxthree-wrapper, .boxfour-wrapper {
+    max-width: 600px;
+    padding: 30px 0px 45px;
 }
+}
+
+@media (max-width: 500px) {
+.sbh-two h1 {
+    font-size: 3.85rem;
 }
 }
 </style>
@@ -423,15 +417,15 @@ clip-path: ellipse(150% 99% at 50% 0%);
     <div class="row gradient-row">
       <div class="background-wrapper">
         <section>
-          <div class="authors-container">
-            <div class="authors-wrapper">
-              <div class="authors-one"></div>
-              <div class="authors-two">
-                <div class="authors-content">
-                  <div class="presents">DCL Presents:</div>
-                  <h1>C.J. Box</h1>
-                  <h2>Meet the author and dive into The Crossroads, Sunday, February&nbsp;22. <a class="white text-underline" href="featured-events/">Buy&nbsp;Tickets</a></h2>
-                  <h3><i>More can't-miss <a class="white text-underline" href="featured-events/#author-events">author events!</a></i></h3>
+          <div class="sbh-container">
+            <div class="sbh-wrapper">
+              <div class="sbh-one"></div>
+              <div class="sbh-two">
+                <div class="sbh-content">
+                  <div class="presents">A Storybook Holiday:</div>
+                  <h1>Ferdinand's<br>
+                    Frolic</h1>
+                  <h2>Celebrate spring with playful activities, gentle wonder, and flowers&mdash;Sunday, March 29. <a class="white text-underline" href="storybook-holiday/">Buy&nbsp;Tickets</a></h2>
                 </div>
               </div>
             </div>
@@ -440,51 +434,33 @@ clip-path: ellipse(150% 99% at 50% 0%);
         <section>
           <div class="bottom-container">
             <div class="bottom-wrapper">
-              <div class="boxone-wrapper">
-                <div id="boxone"></div>
-                <div class="boxone-content">
-                  <h2>Top<br>
-                    Checkouts</h2>
-                  <div><a class="black text-underline" href="top-checkouts/">These&nbsp;titles</a> were tops in 2025.</div>
-                </div>
-              </div>
-              <div class="boxtwo-wrapper">
-                <div id="boxtwo"></div>
-                <div class="boxtwo-content">
-                  <div class="ftb">Fairy Tale Ball:</div>
-                  <h2>Snow White</h2>
-                  <div><a class="black text-underline" href="https://go.dcl.org/events?term=fairy+tale+ball&n=3&r=months">Join us for a royal treat</a>! Enchanting Crafts, Favorite Characters, Fun Activities, Snacks and Treats, Feb&nbsp;7-March&nbsp;7.</div>
-                </div>
-              </div>
               <div class="boxthree-wrapper">
-                <div id="boxthree"></div>
+                <div id="boxthree"><img src="flower-three.webp" alt=""></div>
                 <div class="boxthree-content">
-                  <h2>Reading<br>
-                    Challenge</h2>
-                  <div>Turn the page to our 2026 challenge! <a class="black text-underline" href="reading-challenge/">Sign&nbsp;Up</a></div>
+                  <div class="presents">DCL Presents:</div>
+                  <h2>C.J. Box</h2>
+                  <div><a class="white text-underline" href="featured-events/">Meet the author</a> and get swept up in The Crossroads, Sunday, February&nbsp;22. More can’t-miss <a class="white text-underline" href="featured-events/#author-events">author events</a>!</div>
                 </div>
               </div>
               <div class="boxfour-wrapper">
-                <div id="boxfour"></div>
+                <div id="boxfour"><img src="flower-four.webp" alt=""></div>
                 <div class="boxfour-content">
-                  <h2>Summer Camps<br>
-                    Sneak Peek</h2>
-                  <div><a class="black text-underline" href="camp-dcl/">Check out the exciting lineup</a> before registration opens February 2.</div>
+                  <div class="presents">Camp DCL:</div>
+                  <h2>A Summer to Love</h2>
+                  <div>June 8-August 7. <a class="white text-underline" href="camp-dcl/">Register Now</a>.</div>
+                </div>
+              </div>
+              <div class="boxtwo-wrapper">
+                <div id="boxtwo"><img src="flower-two.webp" alt=""></div>
+                <div class="boxtwo-content">
+                  <div class="presents">Fairy Tale Ball:</div>
+                  <h2>Snow White</h2>
+                  <div><a class="white text-underline" href="https://go.dcl.org/events?term=fairy+tale+ball&n=3&r=months">Join us for a royal treat</a>! Enchanting Crafts, Favorite Characters, Fun Activities, Snacks and Treats, February&nbsp;7-March&nbsp;7.</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <script>
-    var images = ['tc-one.webp', 'tc-two.webp', 'tc-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxone');
-    var images = ['ftb-one.webp', 'ftb-two.webp', 'ftb-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxtwo');
-    var images = ['rc-one.webp', 'rc-two.webp', 'rc-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxthree');
-    var images = ['cdcl-one.webp', 'cdcl-two.webp', 'cdcl-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxfour');
-</script> 
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
