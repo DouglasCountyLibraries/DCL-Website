@@ -98,26 +98,33 @@ h1.rubra {
     max-width: 1600px;
     margin: 0 auto;
     color: #fff;
-    padding: 100px 15px 180px;
     text-align: center;
 }
+.background-one {
+    background: url("bling-background-one.webp") top right no-repeat;
+}
+.background-two {
+    background: url("bling-background-two.webp") bottom left no-repeat;
+}
 .event-wrapper {
-    padding: 0 0 40px;
+    padding: 100px 15px 40px;
 }
 .details-wrapper {
     margin: 0 auto;
     font-size: 1.125rem;
     font-weight: 500;
+    padding: 0 15px 280px;
 }
 .details-container {
-    max-width: 750px;
-    color: #000;
-    margin: 0 auto;
-    text-align: center;
-    padding: 90px 60px 140px;
-    background: rgba(255,255,255,.6);
-    border-radius: 8px;
-    backdrop-filter: blur(12px);
+	max-width: 750px;
+	color: #000;
+	margin: 0 auto;
+	text-align: center;
+	padding: 90px 60px 140px;
+	background: rgba(255,255,255,.6);
+	border-radius: 8px;
+	backdrop-filter: blur(12px);
+	box-shadow: 7px 20px 40px rgba(0,0,0,.4);
 }
 .details-container .h4, .details-container .h6 {
     color: #000;
@@ -148,7 +155,7 @@ h1.rubra {
 }
 .btn.btn-custom {
     color: #fff;
-    background: #741900;
+    background: #621e21;
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: 0px 10px 40px rgba(0,0,0, .1);
@@ -157,7 +164,7 @@ h1.rubra {
 }
 .btn.btn-custom:hover, .btn.btn-custom:focus {
     color: #fff;
-    background: #530000;
+    background: #481618;
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: 0px 10px 40px rgba(0,0,0, .3);
@@ -166,7 +173,7 @@ h1.rubra {
 }
 .btn.btn-custom.btn-custom-null:hover, .btn.btn-custom.btn-custom-null:focus {
     color: #fff;
-    background: #741900;
+    background: #621e21;
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: 0px 10px 40px rgba(0,0,0, .1);
@@ -208,6 +215,12 @@ h1.rubra {
     display: flex;
     align-items: center;
     font-weight: 600;
+}
+
+@media (max-width: 700px) {
+.background-one, .background-two {
+    background-size: 65%;
+}
 }
 
 @media (max-width: 600px) {
@@ -433,37 +446,39 @@ h1.rubra {
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row background-row">
       <div class="custom-container">
-        <div class="event-wrapper">
-          <div class="intro-text times-font">11th Annual</div>
-          <div class="times-font">Fête des Fables Gala</div>
-          <h1 class="rubra">Snow
-            <div class="font-shift"><img class="apple" src="apple-background.webp">White</div>
-          </h1>
-          <div class="h6 white max-width-80 padding-top-30 font-weight-500"><i>"Over the seven jeweled hills, beyond the seventh wall, in the cottage of the seven dwarfs, dwells Snow White, fairest one of all."<br>
-            &mdash;Snow White</i></div>
-        </div>
-        <div class="details-wrapper">
-          <div class="details-container">
-            <div class="details">
-              <div class="h4">Step beyond the familiar fairy tale and into the shadowed forest of our most dramatic gala yet.</div>
-              <div>Join the Douglas County Libraries Foundation for an evening of exquisite dining, immersive entertainment, and moments of enchantment inspired by the timeless tale of beauty, envy and power. Your evening in the velvet-dark wood features a custom-crafted cocktail, sumptuous meal, striking entertainment, and a tempting silent auction, where hidden treasures await those bold enough to claim them.</div>
+        <div class="background-one">
+          <div class="background-two">
+            <div class="event-wrapper">
+              <div class="intro-text times-font">11th Annual</div>
+              <div class="times-font">Fête des Fables Gala</div>
+              <h1 class="rubra">Snow
+                <div class="font-shift"><img class="apple" src="apple-background.webp">White</div>
+              </h1>
+              <div class="h6 white max-width-80 padding-top-30 font-weight-500"><i>"Over the seven jeweled hills, beyond the seventh wall, in the cottage of the seven dwarfs, dwells Snow White, fairest one of all."<br>
+                &mdash;Snow White</i></div>
             </div>
-            <div class="tickets-row">
-              <div class="text-center">
-                <div class="tickets-wrapper">
-                  <div class="tickets-item">
-                    <div class="tickets-date">Friday,&nbsp;September&nbsp;25, <a class="black font-weight-500 text-underline" href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank">Highlands Ranch Mansion</a></div>
-                    <div>Tickets: $175</div>
-                    <div class="padding-top-20 text-center"> 
-                      
-                      <!-- Noscript content for added SEO -->
-                      <noscript>
-                      <a href="https://www.eventbrite.com/e/fete-des-fables-snow-white-tickets-1981895764583" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
-                      </noscript>
-                      <!-- You can customize this button any way you like -->
-                      <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1981895764583" type="button">Buy Tickets</button>
-                      <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
-                      <script type="text/javascript">
+            <div class="details-wrapper">
+              <div class="details-container">
+                <div class="details">
+                  <div class="h4">Step beyond the familiar fairy tale and into the shadowed forest of our most dramatic gala yet.</div>
+                  <div>Join the Douglas County Libraries Foundation for an evening of exquisite dining, immersive entertainment, and moments of enchantment inspired by the timeless tale of beauty, envy and power. Your evening in the velvet-dark wood features a custom-crafted cocktail, sumptuous meal, striking entertainment, and a tempting silent auction, where hidden treasures await those bold enough to claim them.</div>
+                </div>
+                <div class="tickets-row">
+                  <div class="text-center">
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="tickets-date">Friday,&nbsp;September&nbsp;25, <a class="black font-weight-500 text-underline" href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank">Highlands Ranch Mansion</a></div>
+                        <div>Tickets: $175</div>
+                        <div class="padding-top-20 text-center"> 
+                          
+                          <!-- Noscript content for added SEO -->
+                          <noscript>
+                          <a href="https://www.eventbrite.com/e/fete-des-fables-snow-white-tickets-1981895764583" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                          </noscript>
+                          <!-- You can customize this button any way you like -->
+                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1981895764583" type="button">Buy Tickets</button>
+                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                          <script type="text/javascript">
     var exampleCallback = function() {
         console.log('Order complete!');
     };
@@ -476,32 +491,34 @@ h1.rubra {
         onOrderComplete: exampleCallback
     });
 </script> 
+                        </div>
+                      </div>
                     </div>
+                    <div>Event proceeds benefit the <a class="black font-weight-500 text-underline" href="../foundation/">Douglas County Libraries Foundation</a>.<!-- Special thanks to our sponsors.--></div>
                   </div>
                 </div>
-                <div>Event proceeds benefit the <a class="black font-weight-500 text-underline" href="../foundation/">Douglas County Libraries Foundation</a>.<!-- Special thanks to our sponsors.--></div>
+                <div class="logos-content"> 
+                  <!--<div class="logos"><a href="https://fransenpittman.com/" target="_blank"><img class="" src="sponsors/fransen-pittman.png" alt="Fransen Pittman Construction logo"></a> <a href="https://www.midwesttape.com/" target="_blank"><img class="" src="sponsors/midwest-tape-hoopla.png" alt="Midwest Tape/Hoopla logo"></a><a href="https://sterlingranchcolorado.com/" target="_blank"><img class="" src="sponsors/sterling-ranch.png" alt="Sterling Ranch logo"></a><a href="https://www.cegrlaw.com/" target="_blank"><img class="" src="sponsors/cegr-law.png" alt="CEGR Law logo"></a></div>-->
+                  <div class="padding-top-10"><i><a href="#sponsors" class="black font-weight-500 text-underline" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</i></div>
+                </div>
               </div>
-            </div>
-            <div class="logos-content"> 
-              <!--<div class="logos"><a href="https://fransenpittman.com/" target="_blank"><img class="" src="sponsors/fransen-pittman.png" alt="Fransen Pittman Construction logo"></a> <a href="https://www.midwesttape.com/" target="_blank"><img class="" src="sponsors/midwest-tape-hoopla.png" alt="Midwest Tape/Hoopla logo"></a><a href="https://sterlingranchcolorado.com/" target="_blank"><img class="" src="sponsors/sterling-ranch.png" alt="Sterling Ranch logo"></a><a href="https://www.cegrlaw.com/" target="_blank"><img class="" src="sponsors/cegr-law.png" alt="CEGR Law logo"></a></div>-->
-              <div class="padding-top-10"><i><a href="#sponsors" class="black font-weight-500 text-underline" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</i></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="sponsor-modal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <h4 class="text-center modal-title">Sponsorship Packages</h4>
-          </div>
-          <div class="modal-body padding-30">
-            <div>Please contact us at <a class="text-nowrap" href="tel:+13037643311">303-764-3311</a> to select from a range of sponsorship packages.</div>
-            <div class="padding-top-10 padding-bottom-15">Your generous sponsorship will support us in creating a truly enchanting evening and will also contribute to funding vital library programs that reach young people, adults, and families in Douglas County and throughout Colorado.</div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="sponsor-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="text-center modal-title">Sponsorship Packages</h4>
+            </div>
+            <div class="modal-body padding-30">
+              <div>Please contact us at <a class="text-nowrap" href="tel:+13037643311">303-764-3311</a> to select from a range of sponsorship packages.</div>
+              <div class="padding-top-10 padding-bottom-15">Your generous sponsorship will support us in creating a truly enchanting evening and will also contribute to funding vital library programs that reach young people, adults, and families in Douglas County and throughout Colorado.</div>
+            </div>
           </div>
         </div>
       </div>
