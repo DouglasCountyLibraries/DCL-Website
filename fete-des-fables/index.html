@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,43 +45,183 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
+@font-face {
+    font-family: 'Rubra';
+    src: url('../shared-assets/web-fonts/rubra_costa-webfont.woff2') format('woff2'), url('../shared-assets/web-fonts/rubra_costa-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+#general-alert {
+    margin-bottom: 30px;
+}
 .events-active {
     background-color: #f5f5f5;
 }
-h1.page-heading {
-    margin: 0 !important;
+.background-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 95%, #efeeed 100%);
 }
-.flickity-container {
-    max-width: 1920px;
+.times-font {
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    line-height: 32px;
+}
+h1.rubra {
+    font-family: "Rubra", Georgia;
+    color: #fff;
+    font-style: normal;
+    font-size: 9rem;
+    margin: 0 7% 0 0;
+    line-height: 1;
+    padding: 10px 0 0;
+    text-shadow: 2px 6px 20px #000;
+}
+.font-shift {
+    margin: -15px 0 0 195px;
+}
+.intro-text {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+.custom-container {
+    background: #000 url("large-background.webp") top center fixed;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 15px;
-}
-.carousel-cell {
-    width: 100%;
-    padding: 0;
+    color: #fff;
+    padding: 100px 15px 180px;
     text-align: center;
 }
-.carousel-cell img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.event-wrapper {
+    padding: 0 0 40px;
+}
+.details-wrapper {
+    margin: 0 auto;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.details-container {
+    max-width: 750px;
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding: 90px 60px 140px;
+    background: rgba(255,255,255,.8);
+    border-radius: 8px;
+}
+.details-container .h4, .details-container .h6 {
+    color: #000;
+    font-weight: 500;
+}
+.details-quotation {
+    font-size: 20px;
+}
+.tickets-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 820px;
     margin: 0 auto;
 }
-.flickity-prev-next-button {
-    width: 50px;
-    height: 50px;
-    background: transparent;
+.tickets-item {
+    padding: 15px 0 25px;
 }
-.flickity-prev-next-button:hover {
-    background: transparent;
+.tickets-item h4 {
+    text-transform: uppercase;
+    color: #20555b;
+    font-size: 24px;
+    margin: 15px 0 5px;
+    font-weight: 600;
 }
-.flickity-prev-next-button .arrow {
-    fill: #efeeed;
+.tickets-date {
+    font-size: 18px;
+    padding-bottom: 5px;
 }
-.flickity-prev-next-button.no-svg {
-    color: #efeeed;
+.btn.btn-custom {
+    color: #fff;
+    background: #741900;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .1);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+.btn.btn-custom:hover, .btn.btn-custom:focus {
+    color: #fff;
+    background: #530000;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .3);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+.btn.btn-custom.btn-custom-null:hover, .btn.btn-custom.btn-custom-null:focus {
+    color: #fff;
+    background: #741900;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .1);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+    cursor: not-allowed;
+}
+.logos-content {
+    text-align: center;
+}
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 15px;
+}
+.logos a {
+    opacity: .6;
+    transition: all .4s ease-out;
+}
+.logos a:hover, .logos a:focus {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all .4s ease-out;
+}
+.sponsors {
+    font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+    height: 100px;
+    width: 250px;
+    font-size: 24px;
+    text-transform: uppercase;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    line-height: 24px;
+}
+.sponsors a {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+h1.rubra {
+    font-size: 7rem;
+    margin: 0 75px 0 0;
+}
+.font-shift {
+    margin: -15px 0 0 137px;
+}
+.details-container {
+    max-width: 750px;
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 15px 100px;
+    background: rgba(255,255,255,.8);
+    border-radius: 8px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -275,35 +416,79 @@ h1.page-heading {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row border-top">
-      <div class="container text-center padding-bottom-15">
-        <div class="h3 text-uppercase no-margin padding-top-20">Eleventh Annual</div>
-        <h1 class="page-heading no-margin-top">Fête des Fables Gala</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="flickity-container">
-        <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": false, "wrapAround": true, "autoPlay": 4000 }'>
-          <div class="carousel-cell"><img src="images/one.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/two.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/three.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/four.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/five.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/six.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/seven.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/eight.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/nine.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/ten.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/eleven.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/twelve.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/thirteen.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/fourteen.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/fifteen.jpg" alt=""></div>
-          <div class="carousel-cell"><img src="images/sixteen.jpg" alt=""></div>
+    <div class="row background-row">
+      <div class="custom-container">
+        <div class="event-wrapper">
+          <div class="intro-text times-font">11th Annual</div>
+          <div class="times-font">Fête des Fables Gala</div>
+          <h1 class="rubra">Snow
+            <div class="font-shift">White</div>
+          </h1>
+          <div class="h6 white max-width-80 padding-top-30 font-weight-500"><i>"Over the seven jeweled hills, beyond the seventh wall, in the cottage of the seven dwarfs, dwells Snow White, fairest one of all."<br>
+            &mdash;Snow White</i></div>
+        </div>
+        <div class="details-wrapper">
+          <div class="details-container">
+            <div class="details">
+              <div class="h4">Step beyond the familiar fairy tale and into the shadowed forest of our most dramatic gala yet.</div>
+              <div>Join the Douglas County Libraries Foundation for an evening of exquisite dining, immersive entertainment, and moments of enchantment inspired by the timeless tale of beauty, envy and power. Your evening in the velvet-dark wood features a custom-crafted cocktail, sumptuous meal, striking entertainment, and a tempting silent auction, where hidden treasures await those bold enough to claim them.</div>
+            </div>
+            <div class="tickets-row">
+              <div class="text-center">
+                <div class="tickets-wrapper">
+                  <div class="tickets-item">
+                    <div class="tickets-date">Friday,&nbsp;September&nbsp;25, <a class="black font-weight-500 text-underline" href="https://maps.app.goo.gl/ox8YrYJgsMqbgoDG6" target="_blank">Highlands Ranch Mansion</a></div>
+                    <div>Tickets: $175</div>
+                    <div class="padding-top-20 text-center"> 
+                      
+                      <!-- Noscript content for added SEO -->
+                      <noscript>
+                      <a href="https://www.eventbrite.com/e/fete-des-fables-snow-white-tickets-1981895764583" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                      </noscript>
+                      <!-- You can customize this button any way you like -->
+                      <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1981895764583" type="button">Buy Tickets</button>
+                      <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                      <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1981895764583',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1981895764583',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                    </div>
+                  </div>
+                </div>
+                <div>Event proceeds benefit the <a class="black font-weight-500 text-underline" href="../foundation/">Douglas County Libraries Foundation</a>.<!-- Special thanks to our sponsors.--></div>
+              </div>
+            </div>
+            <div class="logos-content"> 
+              <!--<div class="logos"><a href="https://fransenpittman.com/" target="_blank"><img class="" src="sponsors/fransen-pittman.png" alt="Fransen Pittman Construction logo"></a> <a href="https://www.midwesttape.com/" target="_blank"><img class="" src="sponsors/midwest-tape-hoopla.png" alt="Midwest Tape/Hoopla logo"></a><a href="https://sterlingranchcolorado.com/" target="_blank"><img class="" src="sponsors/sterling-ranch.png" alt="Sterling Ranch logo"></a><a href="https://www.cegrlaw.com/" target="_blank"><img class="" src="sponsors/cegr-law.png" alt="CEGR Law logo"></a></div>-->
+              <div class="padding-top-10"><i><a href="#sponsors" class="black font-weight-500 text-underline" data-toggle="modal" data-target="#sponsor-modal">Add your name</a> to our list of sponsors!</i></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="padding-top-20 padding-bottom-60 text-center">
-        <div class="h4"><i>Details coming soon!</i></div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="sponsor-modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="text-center modal-title">Sponsorship Packages</h4>
+          </div>
+          <div class="modal-body padding-30">
+            <div>Please contact us at <a class="text-nowrap" href="tel:+13037643311">303-764-3311</a> to select from a range of sponsorship packages.</div>
+            <div class="padding-top-10 padding-bottom-15">Your generous sponsorship will support us in creating a truly enchanting evening and will also contribute to funding vital library programs that reach young people, adults, and families in Douglas County and throughout Colorado.</div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
@@ -369,17 +554,7 @@ h1.page-heading {
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -438,4 +613,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
