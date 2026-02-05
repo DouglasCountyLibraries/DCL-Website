@@ -38,7 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?11725">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?2526">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
@@ -341,7 +341,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
-      <li class="research-active"><a href="../research/">Research</a></li>
+      <li class="dropdown research-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="dropdown-menu research-menu">
+          <li><a href="../research/">Research Databases</a></li>
+          <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
+        </ul>
+      </li>
     </ul>
   </div>
 </nav>
@@ -407,7 +412,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
-              <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
+              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#research">Research <i class="fa-solid fa-chevron-down"></i> </a>
+                <ul id="research" class="nav mobile-nav-list collapse">
+                  <li><a href="../research/">Research Databases</a></li>
+                  <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
