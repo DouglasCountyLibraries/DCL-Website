@@ -60,12 +60,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex: 1;
     margin: 15px 15px 30px;
 }
-.esl-item-wrapper {
+.numbers-item-wrapper {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1280px;
+    max-width: 1640px;
     margin: 0 auto;
+    color: #fff;
+}
+.numbers-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 30px 15px;
+    font-weight: 500;
+}
+.stats-item {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
 }
 .align-bottom {
     margin-top: auto;
@@ -78,7 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 10px 0;
     overflow: hidden;
     position: relative;
-    background: rgba(78, 59, 89, 0.2);
+    background: rgba(255, 255, 255, 0.5);
 }
 .animated-progress span {
     height: 100%;
@@ -90,8 +104,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-align: end;
     padding-right: 5px;
 }
-.progress-blue span {
-    background-color: rgb(78, 59, 89);
+.progress-white span {
+    background-color: rgb(255, 255, 255, 0.6);
 }
 .custom-progress-bar {
     max-width: 600px;
@@ -105,10 +119,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .progress-percentage {
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
     text-transform: uppercase;
-    color: #333;
+    color: #fff;
+}
+.counter-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+.counter-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px 30px;
+    color: #fff;
+    font-weight: 500;
+}
+.counter {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+
+@media (max-width: 1000px) {
+.box-item-wrapper, .esl-item-wrapper {
+    max-width: 830px;
+    margin: 0 auto;
+}
+.box-item:first-child {
+    width: 100%;
+}
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+}
+
+@media (max-width: 825px) {
+.box-wrapper {
+    flex-direction: column;
+}
+}
+}
+
+@media (max-width: 725px) {
+.box-item, .photo-item {
+    flex-basis: 100%;
+}
+.slideshow-pic {
+    min-height: 400px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -327,11 +393,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
     <section>
-      <div class="row bg-teal padding-top-30 padding-bottom-50">
+      <div class="row bg-teal padding-top-60 padding-bottom-50">
         <div class="container text-center">
           <div class="max-width-80">
-            <div class="h1 white no-margin-top">Our Vision</div>
-            <div class="h4 white no-margin-bottom">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
+            <div class="h4 white no-margin">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
+          </div>
+          <div class="numbers-item-wrapper">
+            <div class="numbers-item">
+              <div class="stats-item">7</div>
+              <div class="padding-top-15">Library locations serving Douglas County</div>
+            </div>
+            <div class="numbers-item">
+              <div class="stats-item">70%</div>
+              <div class="padding-top-15">Of all DCSD elementary schools participate in Battle of the Books</div>
+            </div>
+            <div class="numbers-item">
+              <div class="stats-item">17K+</div>
+              <div class="padding-top-15">Summer Reading participants in 2025</div>
+            </div>
           </div>
         </div>
       </div>
@@ -359,13 +438,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </section>
     <section>
-      <div id="nps" class="row bg-gray-5 text-center padding-top-60 padding-bottom-70">
-        <div class="h2 no-margin-top margin-bottom-5">Net Promoter Score: 90.19</div>
-        <div>Measuring customer loyalty through recommendations</div>
+      <div id="nps" class="row bg-teal white font-weight-500 text-center padding-top-60 padding-bottom-80">
+        <div class="h2 white no-margin-top margin-bottom-5">Net Promoter Score: 90.19</div>
+        <div class="h5 white no-margin">October-December 2025</div>
         <div>
           <div class="progress-bar-wrapper">
             <div class="custom-progress-bar">
-              <div class="animated-progress progress-blue"> <span data-progress="96"></span> </div>
+              <div class="animated-progress progress-white"> <span data-progress="96"></span> </div>
               <div class="progress-percentage">
                 <div>-100</div>
                 <div>0</div>
@@ -373,7 +452,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </div>
-          <div class="h6 no-margin">October-December 2025</div>
+          <div>Measuring customer loyalty through recommendations</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row padding-top-60 padding-bottom-50">
+        <div class="box-item-wrapper">
+          <div class="box-item">
+            <div><img class="img-responsive" src="https://picsum.photos/id/355/800/500" alt=""></div>
+            <div class="h3 text-center">Grow Together</div>
+            <div>Families and children have a place to grow at our libraries. From beloved Storytimes and interactive playscapes to Dolly Parton’s Imagination Library, we support early literacy and joyful learning from the very beginning. Each summer, we host weeklong camps for ages 5-12 and a two-month Summer Reading celebration for all ages filled with exciting events, challenges, prizes, and community partnerships.</div>
+          </div>
+          <div class="flex-break"></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="https://picsum.photos/id/253/800/500" alt=""></div>
+            <div class="h3 text-center">Connect & Create</div>
+            <div>Our libraries are gathering places. We offer free public computers and Wi-Fi, large community meeting rooms, and smaller study and collaboration spaces. Throughout the year, customers can enjoy book clubs, creative workshops, hands-on science programs, cultural events, and opportunities to connect with neighbors, colleagues and friends.</div>
+          </div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="https://picsum.photos/id/782/800/500" alt=""></div>
+            <div class="h3 text-center">Build Skills & Opportunity</div>
+            <div>Our library supports learning at every stage of life, with programs and services such as Bark for Books, English as a Second Language (ESL), High School Equivalency (HSE) test prep, technology literacy, small business and entrepreneur support, current affairs discussions, and skill-building workshops for teens, adults and seniors.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row bg-teal padding-top-60 padding-bottom-60">
+        <div class="container text-center">
+          <div class="counter-wrapper">
+            <div class="counter-content">
+              <div class="counter" data-duration="4000" data-delay="20">195,895</div>
+              <div class="padding-top-15">Kids and families served at DCL events in 2025</div>
+            </div>
+            <div class="counter-content">
+              <div class="counter" data-duration="4000" data-delay="20">590,772</div>
+              <div class="padding-top-15">Holds filled in 2025</div>
+            </div>
+            <div class="counter-content">
+              <div class="counter" data-duration="4000" data-delay="20">4,000+</div>
+              <div class="padding-top-15">Alums of Dolly Parton’s Imagination Library</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -467,17 +588,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script> 
 <script>
-       $(".animated-progress span").each(function () {
-  $(this).animate(
-    {
-      width: $(this).attr("data-progress") + "%",
-    },
-    2000
-  );
-  $(this).text($(this).attr("data-progress") + "%");
+document.addEventListener("DOMContentLoaded", () => {
+  const counterUp = window.counterUp.default;
+  const counters = document.querySelectorAll(".counter");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+
+        if (!el.classList.contains("counted")) {
+          // Read custom speeds or fall back to defaults
+          const duration = parseInt(el.dataset.duration) || 8000;
+          const delay = parseInt(el.dataset.delay) || 30;
+
+          counterUp(el, {
+            duration: duration,
+            delay: delay
+          });
+
+          el.classList.add("counted");
+        }
+
+        obs.unobserve(el);
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  counters.forEach(counter => observer.observe(counter));
 });
-    </script> 
+</script> 
+<script>
+$(document).ready(function () {
+  function isInViewport(el) {
+    const elementTop = $(el).offset().top;
+    const elementBottom = elementTop + $(el).outerHeight();
+
+    const viewportTop = $(window).scrollTop();
+    const viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  }
+
+  function animateVisibleBars() {
+    $(".animated-progress span").each(function () {
+      const $this = $(this);
+
+      // Skip if already animated
+      if ($this.data("animated")) return;
+
+      if (isInViewport($this)) {
+        const progress = $this.attr("data-progress");
+
+        $this.animate(
+          { width: progress + "%" },
+          6000
+        );
+
+        $this.text(progress + "%");
+        $this.data("animated", true);
+      }
+    });
+  }
+
+  // Run on load and on scroll/resize
+  $(window).on("load scroll resize", animateVisibleBars);
+});
+</script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
