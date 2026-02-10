@@ -47,6 +47,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
 <style>
+.vision-container {
+    text-align: center;
+    padding: 0 15px;
+}
+.numbers-item-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.numbers-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 20px 15px;
+    font-size: 1.125rem;
+    min-width: 300px;
+}
+.gray-circle {
+    border: 6px solid #e6e4e2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #42777B;
+    background-color: #fff;
+    font-size: 42px;
+    height: 100px;
+    line-height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    font-weight: 500;
+}
+.gray-circle-wrapper {
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 112px;
+    margin: 0 auto;
+    width: 112px;
+}
 .box-item-wrapper {
     display: flex;
     justify-content: center;
@@ -59,27 +100,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-direction: column;
     flex: 1;
     margin: 15px 15px 30px;
+    background: #fff;
 }
-.numbers-item-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1640px;
-    margin: 0 auto;
-    color: #fff;
-}
-.numbers-item {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin: 30px 15px;
-    font-weight: 500;
-}
-.stats-item {
-    color: #fff;
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 1;
+.item-content {
+    padding: 0 30px 40px;
 }
 .align-bottom {
     margin-top: auto;
@@ -382,8 +406,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="row border-top padding-bottom-15">
       <div class="container text-center">
         <h1 class="page-heading">Who We Are</h1>
-        <h2 class="page-subheading">Welcome to your library</h2>
-        <div class="max-width-80">No matter your age, interests or goals, Douglas County Libraries is a place where <a href="#modalone" data-toggle="modal" data-target="#modalone">everyone is welcome</a>. We invite you to explore, connect, and discover all the ways we support learning and community, today and for years to come.</div>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Welcome to your library. No matter your age, interests or goals, Douglas County Libraries is a place where <a href="#modalone" data-toggle="modal" data-target="#modalone">everyone is welcome</a>.</h2>
+          <div class="max-width-60">We invite you to explore, connect, and discover all the ways we support learning and community, today and for years to come.</div>
+        </div>
       </div>
     </div>
     <div class="row padding-bottom-30">
@@ -393,46 +419,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
     <section>
-      <div class="row bg-teal padding-top-60 padding-bottom-50">
-        <div class="container text-center">
+      <div class="row bg-gray-5 padding-top-50">
+        <div class="vision-container">
           <div class="max-width-80">
-            <div class="h4 white no-margin">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
+            <div class="h1 no-margin-top margin-bottom-5">Our Vision</div>
+            <div class="h5 no-margin">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
           </div>
           <div class="numbers-item-wrapper">
             <div class="numbers-item">
-              <div class="stats-item">7</div>
-              <div class="padding-top-15">Library locations serving Douglas County</div>
+              <div class="gray-circle-wrapper">
+                <div class="gray-circle">7</div>
+              </div>
+              <div class="padding-top-15"><a href="../locations/">Library locations</a> serving Douglas County</div>
             </div>
             <div class="numbers-item">
-              <div class="stats-item">70%</div>
-              <div class="padding-top-15">Of all DCSD elementary schools participate in Battle of the Books</div>
+              <div class="gray-circle-wrapper">
+                <div class="gray-circle">70</div>
+              </div>
+              <div class="padding-top-15">Percent of all DCSD elementary schools participate in <a href="../botb/">Battle of the Books</a></div>
             </div>
             <div class="numbers-item">
-              <div class="stats-item">17K+</div>
-              <div class="padding-top-15">Summer Reading participants in 2025</div>
+              <div class="gray-circle-wrapper">
+                <div class="gray-circle">17</div>
+              </div>
+              <div class="padding-top-15">Thousand&nbsp;+ <a href="../summer-reading/">Summer Reading</a> participants in 2025</div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="row padding-top-60 padding-bottom-50">
+      <div class="row bg-gray-5 padding-bottom-50">
         <div class="box-item-wrapper">
           <div class="box-item">
             <div><img class="img-responsive" src="https://picsum.photos/id/217/800/500" alt=""></div>
-            <div class="h3 text-center">What We Offer</div>
-            <div>Douglas County Libraries is a vibrant network of seven modern locations. Designed as inviting community hubs, <a href="../locations/">our libraries</a> are places where people of all ages can gather, explore, escape, learn and grow.</div>
+            <div class="item-content">
+              <div class="h3 text-center">What We Offer</div>
+              <div>Douglas County Libraries is a vibrant network of seven modern locations. Designed as inviting community hubs, our libraries are places where people of all ages can gather, explore, escape, learn and grow.</div>
+            </div>
           </div>
           <div class="flex-break"></div>
           <div class="box-item">
             <div><img class="img-responsive" src="https://picsum.photos/id/137/800/500" alt=""></div>
-            <div class="h3 text-center">Heading Goes Here</div>
-            <div>Our spaces reflect a commitment to thoughtful design and sustainability, offering warm, welcoming environments that support connection, creativity, and lifelong learning. Whether you’re visiting for literary pursuits, a lively program, or a shared community experience, Douglas County Libraries is here for you.</div>
+            <div class="item-content">
+              <div class="h3 text-center">Heading Goes Here</div>
+              <div>Our spaces reflect a commitment to thoughtful design and sustainability, offering warm, welcoming environments that support connection, creativity, and lifelong learning. Whether you’re visiting for literary pursuits, a lively program, or a shared community experience, Douglas County Libraries is here for you.</div>
+            </div>
           </div>
           <div class="box-item">
             <div><img class="img-responsive" src="https://picsum.photos/id/337/800/500" alt=""></div>
-            <div class="h3 text-center">Discover & Learn</div>
-            <div>We provide access to a wide range of materials and resources. Our knowledgeable staff offer personalized reader’s advisory and reference support&mdash;helping customers discover what to read next, find reliable information, or explore new interests. That focus on service is reflected in our <a href="#nps">Net Promoter Score</a>, which consistently shows high levels of customer satisfaction, loyalty and trust.</div>
+            <div class="item-content">
+              <div class="h3 text-center">Discover & Learn</div>
+              <div>We provide access to a wide range of materials and resources. Our knowledgeable staff offer personalized reader’s advisory and reference support&mdash;helping customers discover what to read next, find reliable information, or explore new interests. That focus on service is reflected in our <a href="#nps">Net Promoter Score</a>, which consistently shows high levels of customer satisfaction, loyalty and trust.</div>
+            </div>
           </div>
         </div>
       </div>
