@@ -49,22 +49,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 .vision-container {
     text-align: center;
-    padding: 0 15px;
-}
-.numbers-item-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: 0 15px 25px;
 }
 .numbers-item {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    margin: 20px 15px;
-    font-size: 1.125rem;
-    min-width: 300px;
+    font-size: 1.25rem;
 }
 .gray-circle {
     border: 6px solid #e6e4e2;
@@ -93,7 +83,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1640px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
+    padding-bottom: 30px;
 }
 .box-item {
     display: flex;
@@ -103,11 +94,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #fff;
 }
 .item-content {
-    padding: 0 30px 40px;
+    padding: 0 30px 10px;
+    background: #fff;
 }
 .align-bottom {
     margin-top: auto;
     text-align: center;
+    background: linear-gradient(to top, #f5f5f5 0%, #f5f5f5 64%, #fff 50%, #fff 100%);
+}
+.vision-stats {
+    padding: 10px 0 20px;
+    height: 50px;
 }
 .animated-progress {
     width: 100%;
@@ -171,10 +168,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height: 1;
 }
 
-@media (max-width: 1000px) {
-.box-item-wrapper, .esl-item-wrapper {
+@media (max-width: 1100px) {
+.box-item-wrapper {
     max-width: 830px;
-    margin: 0 auto;
 }
 .box-item:first-child {
     width: 100%;
@@ -189,15 +185,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .box-wrapper {
     flex-direction: column;
 }
-}
-}
-
-@media (max-width: 725px) {
 .box-item, .photo-item {
     flex-basis: 100%;
 }
-.slideshow-pic {
-    min-height: 400px;
+.box-item-wrapper {
+    margin: 0 auto;
 }
 }
 </style>
@@ -421,65 +413,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <section>
       <div class="row bg-gray-5 padding-top-50">
         <div class="vision-container">
-          <div class="max-width-80">
+          <div class="max-width-60">
             <div class="h1 no-margin-top margin-bottom-5">Our Vision</div>
-            <div class="h5 no-margin">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
-          </div>
-          <div class="numbers-item-wrapper">
-            <div class="numbers-item">
-              <div class="gray-circle-wrapper">
-                <div class="gray-circle">7</div>
-              </div>
-              <div class="padding-top-15"><a href="../locations/">Library locations</a> serving Douglas County</div>
-            </div>
-            <div class="numbers-item">
-              <div class="gray-circle-wrapper">
-                <div class="gray-circle">70</div>
-              </div>
-              <div class="padding-top-15">Percent of all DCSD elementary schools participate in <a href="../botb/">Battle of the Books</a></div>
-            </div>
-            <div class="numbers-item">
-              <div class="gray-circle-wrapper">
-                <div class="gray-circle">17</div>
-              </div>
-              <div class="padding-top-15">Thousand&nbsp;+ <a href="../summer-reading/">Summer Reading</a> participants in 2025</div>
-            </div>
+            <div class="h6 no-margin">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
           </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="row bg-gray-5 padding-bottom-50">
+      <div class="row bg-gray-5">
         <div class="box-item-wrapper">
           <div class="box-item">
-            <div><img class="img-responsive" src="https://picsum.photos/id/217/800/500" alt=""></div>
+            <div><img class="img-responsive" src="images/vision-one.webp" alt=""></div>
             <div class="item-content">
               <div class="h3 text-center">What We Offer</div>
               <div>Douglas County Libraries is a vibrant network of seven modern locations. Designed as inviting community hubs, our libraries are places where people of all ages can gather, explore, escape, learn and grow.</div>
             </div>
+            <div class="align-bottom">
+              <div class="numbers-item">
+                <div class="gray-circle-wrapper">
+                  <div class="gray-circle">7</div>
+                </div>
+                <div class="vision-stats"><a href="../locations/">Library locations</a> serving Douglas County</div>
+              </div>
+            </div>
           </div>
           <div class="flex-break"></div>
           <div class="box-item">
-            <div><img class="img-responsive" src="https://picsum.photos/id/137/800/500" alt=""></div>
+            <div><img class="img-responsive" src="images/vision-two.webp" alt=""></div>
             <div class="item-content">
               <div class="h3 text-center">Heading Goes Here</div>
               <div>Our spaces reflect a commitment to thoughtful design and sustainability, offering warm, welcoming environments that support connection, creativity, and lifelong learning. Whether you’re visiting for literary pursuits, a lively program, or a shared community experience, Douglas County Libraries is here for you.</div>
             </div>
+            <div class="align-bottom">
+              <div class="numbers-item">
+                <div class="gray-circle-wrapper">
+                  <div class="gray-circle">70</div>
+                </div>
+                <div class="vision-stats">Percent of all DCSD elementary schools participate in <a href="../botb/">Battle of the Books</a></div>
+              </div>
+            </div>
           </div>
           <div class="box-item">
-            <div><img class="img-responsive" src="https://picsum.photos/id/337/800/500" alt=""></div>
+            <div><img class="img-responsive" src="images/vision-three.webp" alt=""></div>
             <div class="item-content">
               <div class="h3 text-center">Discover & Learn</div>
               <div>We provide access to a wide range of materials and resources. Our knowledgeable staff offer personalized reader’s advisory and reference support&mdash;helping customers discover what to read next, find reliable information, or explore new interests. That focus on service is reflected in our <a href="#nps">Net Promoter Score</a>, which consistently shows high levels of customer satisfaction, loyalty and trust.</div>
             </div>
+            <div class="align-bottom">
+              <div class="numbers-item">
+                <div class="gray-circle-wrapper">
+                  <div class="gray-circle">17</div>
+                </div>
+                <div class="vision-stats">Thousand+ <a href="../summer-reading/">Summer Reading</a> participants in 2025</div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="numbers-item-wrapper"> </div>
       </div>
     </section>
     <section>
       <div id="nps" class="row bg-teal white font-weight-500 text-center padding-top-60 padding-bottom-80">
-        <div class="h1 white no-margin-top margin-bottom-5">Net Promoter Score: 90.19</div>
-        <div class="h5 white no-margin">October-December 2025</div>
+        <div class="h2 white no-margin-top margin-bottom-5">Net Promoter Score</div>
+        <div class="h5 white no-margin">October-December 2025: 90.19</div>
         <div>
           <div class="progress-bar-wrapper">
             <div class="custom-progress-bar">
