@@ -46,6 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .vision-container {
     text-align: center;
@@ -54,7 +55,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .numbers-item {
     display: flex;
     flex-direction: column;
-    font-size: 1.25rem;
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #444;
 }
 .gray-circle {
     border: 6px solid #e6e4e2;
@@ -146,11 +150,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #fff;
 }
 .box-item-wrapper-two {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 1640px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    margin: 0 auto;
 }
 .box-item-two {
     display: flex;
@@ -160,25 +164,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #fff;
 }
 .counter-wrapper {
-	margin-top: auto;
-	font-size: 1.25rem;
-	text-align: center;
-	padding: 15px 0;
+    margin-top: auto;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #444;
 }
-
 .counter {
     font-size: 2.625rem;
     font-weight: 500;
-color: #42777B;
+    color: #42777B;
     text-align: center;
     line-height: 1;
 }
+.carousel-cell {
+    width: 100%;
+}
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+}
+.carousel-cell > div {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+.flickity-page-dots {
+    bottom: -30px;
+    opacity: .5;
+}
+.flickity-page-dots .dot {
+    background-color: #fff;
+}
+.flickity-prev-next-button {
+    display: none;
+}
+.flickity-viewport {
+    transition: height 0.6s;
+}
+.box-item-wrapper-three {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+.box-item-three {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px 15px 30px;
+    background: #fff;
+}
 
 @media (max-width: 1100px) {
-.box-item-wrapper-one {
+.box-item-wrapper-one, .box-item-wrapper-two, .box-item-wrapper-three {
     max-width: 830px;
 }
-.box-item-one:first-child {
+.box-item-one:first-child, .box-item-two:first-child, .box-item-three:first-child {
     width: 100%;
 }
 .flex-break {
@@ -188,13 +234,10 @@ color: #42777B;
 }
 
 @media (max-width: 825px) {
-.box-wrapper-one {
-    flex-direction: column;
-}
-.box-item-one {
+.box-item-one, .box-item-two, .box-item-three {
     flex-basis: 100%;
 }
-.box-item-wrapper-one {
+.box-item-wrapper-one, .box-item-wrapper-two, .box-item-wrapper-three {
     margin: 0 auto;
 }
 }
@@ -481,8 +524,8 @@ color: #42777B;
     </section>
     <section>
       <div id="nps" class="row bg-teal white font-weight-500 text-center padding-top-60 padding-bottom-80">
-        <div class="h2 white no-margin-top margin-bottom-5">Net Promoter Score</div>
-        <div class="h5 white no-margin">October-December 2025: 90.19</div>
+        <div class="h1 white no-margin-top">Net Promoter Score</div>
+        <div class="h5 white no-margin text-uppercase">October-December 2025: 90.19</div>
         <div>
           <div class="progress-bar-wrapper">
             <div class="custom-progress-bar">
@@ -504,38 +547,91 @@ color: #42777B;
           <div class="box-item-two">
             <div><img class="img-responsive" src="images/community-one.webp" alt=""></div>
             <div class="h3 text-center">Grow Together</div>
-            <div>Families and children have a place to grow at our libraries. From <a href="../storytime/">beloved Storytimes</a> and <a href="../playscapes/">interactive playscapes</a> to Dolly Parton's Imagination Library, we support early literacy and joyful learning from the very beginning. Each summer, we host weeklong camps for ages 5-12 and a two-month Summer Reading celebration for all ages filled with exciting events, challenges, prizes, and community partnerships.</div><div class="counter-wrapper"><div class="counter" data-duration="4000" data-delay="20">195,895</div>
-              <div class="padding-top-10">Kids and families served at DCL events in 2025</div></div>
+            <div>Families and children have a place to grow at our libraries. From <a href="../storytime/">beloved Storytimes</a> and <a href="../playscapes/">interactive playscapes</a> to Dolly Parton's Imagination Library, we support early literacy and joyful learning from the very beginning. Each summer, we host weeklong camps for ages 5-12 and a two-month Summer Reading celebration for all ages filled with exciting events, challenges, prizes, and community partnerships.</div>
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">195,895</div>
+              <div class="padding-top-10">Kids and families served at DCL events in 2025</div>
+            </div>
           </div>
           <div class="flex-break"></div>
           <div class="box-item-two">
             <div><img class="img-responsive" src="images/community-two.webp" alt=""></div>
             <div class="h3 text-center">Connect & Create</div>
-            <div>Our libraries are gathering places. We offer free public computers and Wi-Fi, large community meeting rooms, and smaller study and collaboration spaces. Throughout the year, customers can enjoy <a href="../book-clubs/">book clubs</a>, creative workshops, hands-on science programs, cultural events, and opportunities to connect with neighbors, colleagues and friends.</div><div class="counter-wrapper"><div class="counter" data-duration="4000" data-delay="20">590,772</div>
-              <div class="padding-top-10">Holds filled in 2025</div></div>
+            <div>Our libraries are gathering places. We offer free public computers and Wi-Fi, large community meeting rooms, and smaller study and collaboration spaces. Throughout the year, customers can enjoy <a href="../book-clubs/">book clubs</a>, creative workshops, hands-on science programs, cultural events, and opportunities to connect with neighbors, colleagues and friends.</div>
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">590,772</div>
+              <div class="padding-top-10">Holds filled in 2025</div>
+            </div>
           </div>
           <div class="box-item-two">
             <div><img class="img-responsive" src="images/community-three.webp" alt=""></div>
             <div class="h3 text-center">Build Skills & Opportunity</div>
-            <div>Our library supports learning at every stage of life, with programs and services such as Bark for Books, English as a Second Language (ESL), High School Equivalency (HSE) test prep, technology literacy, <a href="../business/">small business and entrepreneur support</a>, current affairs discussions, and skill-building workshops for teens, adults and seniors.</div><div class="counter-wrapper"><div class="counter" data-duration="4000" data-delay="20">4,000+</div>
-              <div class="padding-top-10">Alums of <a href="../imagination-library/">Dolly Parton's Imagination Library</a></div></div>
+            <div>Our library supports learning at every stage of life, with programs and services such as Bark for Books, English as a Second Language (ESL), High School Equivalency (HSE) test prep, technology literacy, <a href="../business/">small business and entrepreneur support</a>, current affairs discussions, and skill-building workshops for teens, adults and seniors.</div>
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">4,000+</div>
+              <div class="padding-top-10">Alums of <a href="../imagination-library/">Dolly Parton's Imagination Library</a></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="row bg-teal padding-top-60 padding-bottom-60">
+      <div class="row bg-teal white padding-top-60 padding-bottom-90">
         <div class="container text-center">
-          <div class="counter-wrapper">
-            <div class="counter-content">
-              
+          <div class="h1 white no-margin-top">Fun Facts</div>
+          <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000 }'>
+            <div class="carousel-cell">
+              <div>Romance is the top-circulating genre in Libby.</div>
             </div>
-            <div class="counter-content">
-              
+            <div class="carousel-cell">
+              <div>Customers picked up 590,772 holds in 2025, 3.4% more than in 2024.</div>
             </div>
-            <div class="counter-content">
-              
+            <div class="carousel-cell">
+              <div>Mondays are the busiest day for checkouts (around 11 a.m.).</div>
             </div>
+            <div class="carousel-cell">
+              <div>Digital checkouts are highest on Mondays around 4 p.m.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>July was the top reading month in 2025, with 346,799 checkouts.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>Hoopla offers materials in 128 languages; after English, the most borrowed are in French, Spanish and German.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>More than 4,000 children have graduated from Dolly Parton’s Imagination Library since the DCL program launched in 2023. </div>
+            </div>
+            <div class="carousel-cell">
+              <div>The DCL Foundation granted 28 Camp DCL scholarships in 2025. </div>
+            </div>
+            <div class="carousel-cell">
+              <div>More than 70,000 people experienced DCL through outreach events in our community.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>Volunteers donated 30,426 hours of service to DCL in 2025. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row padding-top-90 padding-bottom-50">
+        <div class="box-item-wrapper-three">
+          <div class="box-item-three">
+            <div><img class="img-responsive" src="images/events-one.webp" alt=""></div>
+            <div class="h3 text-center">Events & Experiences</div>
+            <div>We host signature events that bring stories to life&mdash;welcoming popular authors, celebrating literature, and creating memory-making traditions for families. These events strengthen community connections and foster a shared love of reading and learning.</div>
+          </div>
+          <div class="flex-break"></div>
+          <div class="box-item-three">
+            <div><img class="img-responsive" src="images/events-two.webp" alt=""></div>
+            <div class="h3 text-center">Archives & Local History</div>
+            <div>DCL <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a> collects, preserves, and shares the history of Douglas County, providing valuable resources for historical research and helping our community stay connected to its past.</div>
+          </div>
+          <div class="box-item-three">
+            <div><img class="img-responsive" src="images/events-three.webp" alt=""></div>
+            <div class="h3 text-center">Spaces for Celebrating</div>
+            <div>In addition to <a href="../library-basics/">everyday library services</a>, we offer premium spaces and services for customer-focused events. From themed <a href="../birthday-parties/">birthday parties</a> for children ages 2-7 to <a href="../showers/">baby and wedding showers</a> and <a href="../say-i-do/">weddings</a>, our Events & Hospitality team works directly with customers to create memorable experiences in beautiful library settings.</div>
           </div>
         </div>
       </div>
@@ -701,6 +797,15 @@ $(document).ready(function () {
   $(window).on("load scroll resize", animateVisibleBars);
 });
 </script> 
+<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
 <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
