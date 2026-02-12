@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,46 +45,224 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
-.item-wrapper {
-	display: flex;
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 15px;
+.vision-container {
+    text-align: center;
+    padding: 0 15px 25px;
 }
-.item-left {
-	display: flex;
-	width: 75%;
+.numbers-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #444;
 }
-.item-left img {
-	position: relative;
-	top: 15px;
+.gray-circle {
+    border: 6px solid #e6e4e2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #42777B;
+    background-color: #fff;
+    font-size: 42px;
+    height: 100px;
+    line-height: 90px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    font-weight: 500;
 }
-.item-right {
-	width: 25%;
+.gray-circle-wrapper {
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 112px;
+    margin: 0 auto;
+    width: 112px;
 }
-.goal-wrapper {
-	padding: 0 30px 0 15px;
+.box-item-wrapper-one {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    margin: 0 auto 30px auto;
+    padding-bottom: 30px;
+}
+.box-item-one {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px 15px 30px;
+    background: #fff;
+}
+.item-content {
+    padding: 0 30px 10px;
+    background: #fff;
+}
+.align-bottom {
+    margin-top: auto;
+    text-align: center;
+    background: linear-gradient(to top, #f5f5f5 0%, #f5f5f5 64%, #fff 50%, #fff 100%);
+}
+.vision-stats {
+    padding: 10px 0 20px;
+    height: 50px;
+}
+.animated-progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    margin: 10px 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+}
+.animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgba(255, 255, 255, 0);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+}
+.progress-white span {
+    background-color: rgb(255, 255, 255, 0.6);
+}
+.custom-progress-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.progress-bar-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.progress-percentage {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+.box-item-wrapper-two {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+.box-item-two {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px 15px 30px;
+    background: #fff;
+}
+.nps-wrapper {
+    padding: 0 15px;
+}
+.facts-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 15px;
+}
+.counter-container {
+    display: flex;
+    justify-content: space-between;
+}
+.counter-wrapper {
+    margin-top: auto;
+    text-align: center;
+    padding: 15px 30px;
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    min-height: 135px;
+}
+.counter {
+    font-size: 2.625rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+.carousel-cell {
+    width: 100%;
+}
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+}
+.carousel-cell > div {
+    font-size: 1.375rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.flickity-page-dots {
+    bottom: -30px;
+    opacity: .5;
+}
+.flickity-page-dots .dot {
+    background-color: #fff;
+}
+.flickity-prev-next-button {
+    display: none;
+}
+.flickity-viewport {
+    transition: height 0.6s;
+}
+.box-item-wrapper-three {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    margin: 0 auto;
+}
+.box-item-three {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px 15px 30px;
+    background: #fff;
 }
 
-@media (max-width: 650px) {
-.item-wrapper {
-	flex-flow: column;
-	max-width: 500px;
+@media (max-width: 1100px) {
+.box-item-wrapper-one, .box-item-wrapper-two, .box-item-wrapper-three {
+    max-width: 830px;
 }
-.item-left {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.box-item-one:first-child, .box-item-two:first-child, .box-item-three:first-child {
+    width: 100%;
 }
-.item-left, .item-right {
-	width: 100%;
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
 }
-.goal-wrapper {
-	padding: 0;
 }
-.item-left img {
-	top: 0;
+
+@media (max-width: 825px) {
+.box-item-one, .box-item-two, .box-item-three {
+    flex-basis: 100%;
+}
+.box-item-wrapper-one, .box-item-wrapper-two, .box-item-wrapper-three {
+    margin: 0 auto;
+}
+.counter-container {
+    padding: 5px 15px 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.counter-wrapper {
+    min-height: auto;
 }
 }
 </style>
@@ -289,155 +468,223 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-  <div class="row border-top padding-bottom-15">
-    <div class="container text-center">
-      <h1 class="page-heading">Who We Are</h1>
-      <h2 class="page-subheading">Douglas County Libraries welcomes everyone.</h2>
-      <div class="max-width-80">We will offer our community exceptional care, supporting their freedom and self-determination. We will inform customer choice impartially, without interference or improper influence. <a class="font-weight-500 small text-uppercase" href="#modalone" data-toggle="modal" data-target="#modalone">Learn More &raquo;</a></div>
-    </div>
-  </div>
-  <div class="row padding-bottom-30">
-    <div class="page-nav">
-      <div class="page-nav-item"><a href="../leadership/"><i class="pagenav-icon fas fa-flag fa-flip-horizontal"></i>Leadership</a></div>
-      <div class="page-nav-item"><a href="../board/"><i class="pagenav-icon fas fa-university"></i>Board of Trustees</a></div>
-    </div>
-  </div>
-  <div class="row bg-teal padding-top-30 padding-bottom-50">
-    <div class="container text-center">
-      <div class="max-width-80">
-        <div class="h1 white no-margin-top">Our Vision</div>
-        <div class="h4 white no-margin-bottom">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
-      </div>
-    </div>
-  </div>
-  <div id="goals-responses" class="row padding-top-50">
-    <div class="h2 no-margin text-center padding-bottom-15">Goals & Responses</div>
-  </div>
-  <div class="row">
-    <div class="item-wrapper">
-      <div class="item-left">
-        <div><img src="vibrant-libraries.jpg" alt="Vibrant Libraries"></div>
-        <div class="goal-wrapper">
-          <div class="h4 text-nowrap">Vibrant Libraries</div>
-          <div>This strategy will bring customers back to our libraries, for experiences with and through our services, collections, spaces, events and exhibits.</div>
-        </div>
-      </div>
-      <div class="item-right">
-        <div class="h5">Key Responses</div>
-        <ul>
-          <li>Interactive Exhibits</li>
-          <li>Active Playscapes</li>
-          <li>Meeting Spaces</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="item-wrapper">
-      <div class="item-left">
-        <div><img src="beyond-our-walls.jpg" alt="Beyond our Walls"></div>
-        <div class="goal-wrapper">
-          <div class="h4 text-nowrap">Beyond our Walls</div>
-          <div>This strategy will create opportunities for customers to sample library services and experience DCL at county locations outside of our libraries.</div>
-        </div>
-      </div>
-      <div class="item-right">
-        <div class="h5">Key Responses</div>
-        <ul>
-          <li>Community Sponsorships</li>
-          <li>Brew Tour</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="item-wrapper">
-      <div class="item-left">
-        <div><img src="community-service.jpg" alt="Community Service"></div>
-        <div class="goal-wrapper">
-          <div class="h4 text-nowrap">Community Service</div>
-          <div>This strategy will support initiatives that help our community thrive, and grow connections among, and services for special populations in our county.</div>
-        </div>
-      </div>
-      <div class="item-right">
-        <div class="h5">Key Responses</div>
-        <ul>
-          <li>Mental Health</li>
-          <li>Seniors</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="row padding-bottom-60">
-    <div class="item-wrapper">
-      <div class="item-left">
-        <div><img src="fortify-infrastructure.jpg" alt="Fortify Infrastucture"></div>
-        <div class="goal-wrapper">
-          <div class="h4 text-nowrap">Fortify Infrastructure</div>
-          <div>This strategy will improve our practices and guidelines for information storage, flexible work environments, data-driven decision making, building safety, and environmentally sustainable facility maintenance.</div>
-        </div>
-      </div>
-      <div class="item-right">
-        <div class="h5">Key Responses</div>
-        <ul>
-          <li>Information Storage</li>
-          <li>Remote Work</li>
-          <li>Green Buildings</li>
-          <li>Organizational Data</li>
-          <li><a href="#modaltwo" data-toggle="modal" data-target="#modaltwo">Safety Practices</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modalone" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <div class="h4 modal-title text-center" id="myModalLabel">Welcome to DCL</div>
-        </div>
-        <div class="modal-body padding-left-30 padding-right-30 padding-bottom-40">
-          <div>Our commitment to welcoming requires that our decisions and practices are free from discrimination and individual content preferences. We will not discriminate on the basis of:</div>
-          <ul class="margin-top-5">
-            <li>Identity: Age, race, gender, sexual orientation, color, religion, national origin, military status, disability, or genetic history.</li>
-            <li>Beliefs or Associations: Politics, social stances, faith positions, and more.</li>
-            <li>Background or Personal Histories: Poverty, wealth, marital status, education, and more.</li>
-          </ul>
-          <div>Our commitment to welcoming and nondiscrimination applies to all facets of our work.</div>
-          <ul class="margin-top-5">
-            <li>Talent: Staff and contractor selection, including authors, performers, speakers, and more.</li>
-            <li>Facilities: Access to spaces, services, and amenities.</li>
-            <li>Content: Selection of print works, digital sources, displays, events, and activities.</li>
-          </ul>
+    <div class="row border-top padding-bottom-15">
+      <div class="container text-center">
+        <h1 class="page-heading">Who We Are</h1>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Welcome to your library. No matter your age, interests or goals, Douglas County Libraries is a place where <a href="#modalone" data-toggle="modal" data-target="#modalone">everyone is welcome</a>.</h2>
+          <div class="max-width-60">We invite you to explore, connect, and discover all the ways we support learning and community, today and for years to come.</div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="modaltwo" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title text-center" id="ModalLabel">Safety & Security</h4>
+    <div class="row padding-bottom-30">
+      <div class="page-nav">
+        <div class="page-nav-item"><a href="../leadership/"><i class="pagenav-icon fas fa-flag fa-flip-horizontal"></i>Leadership</a></div>
+        <div class="page-nav-item"><a href="../board/"><i class="pagenav-icon fas fa-university"></i>Board of Trustees</a></div>
+      </div>
+    </div>
+    <section>
+      <div class="row bg-gray-5 padding-top-50">
+        <div class="vision-container">
+          <div class="max-width-60">
+            <div class="h1 no-margin-top margin-bottom-5">Our Vision</div>
+            <div class="h6 no-margin">Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection.</div>
+          </div>
         </div>
-        <div class="modal-body padding-left-30 padding-right-30 padding-bottom-40">
-          <div>Douglas County Libraries elevates our community by inspiring a love of reading, discovery and connection. Our safety and security philosophy complements and supports our vision by committing resources and expertise to provide a safe and welcoming work environment. Douglas County Libraries values the trust our community places in us and is dedicated to upholding premium standards of safety and security. </div>
-          <div class="padding-top-5">We do this by prioritizing:  </div>
-          <ul class="margin-top-10">
-            <li>Safe facilities</li>
-            <li>Safe practices, including proactive prevention</li>
-            <li>Effective training, responsiveness, and clear procedures</li>
-            <li>Confident and competent staff</li>
-            <li>Community partnerships and collaboration</li>
-          </ul>
+      </div>
+    </section>
+    <section>
+      <div class="row bg-gray-5">
+        <div class="box-item-wrapper-one">
+          <div class="box-item-one">
+            <div><img class="img-responsive" src="images/vision-one.webp" alt=""></div>
+            <div class="item-content">
+              <div class="h3 margin-top-20 text-center">What We Offer</div>
+              <div>Douglas County Libraries is a vibrant network of seven modern locations. Designed as inviting community hubs, our libraries are places where people of all ages can gather, explore, escape, learn and grow.</div>
+            </div>
+            <div class="align-bottom">
+              <div class="numbers-item">
+                <div class="gray-circle-wrapper">
+                  <div class="gray-circle">7</div>
+                </div>
+                <div class="vision-stats"><a href="../locations/">Library locations</a> serving Douglas County</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-break"></div>
+          <div class="box-item-one">
+            <div><img class="img-responsive" src="images/vision-two.webp" alt=""></div>
+            <div class="item-content">
+              <div class="h3 margin-top-20 text-center">A Community Hub</div>
+              <div>Our spaces reflect a commitment to thoughtful design and sustainability, offering warm, welcoming environments that support connection, creativity, and lifelong learning. Whether you’re visiting for literary pursuits, <a href="../featured-events/">a lively event</a>, or a shared community experience, Douglas County Libraries is here for you.</div>
+            </div>
+            <div class="align-bottom">
+              <div class="numbers-item">
+                <div class="gray-circle-wrapper">
+                  <div class="gray-circle">70</div>
+                </div>
+                <div class="vision-stats">Percent of all DCSD elementary schools participate in <a href="../botb/">Battle of the Books</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="box-item-one">
+            <div><img class="img-responsive" src="images/vision-three.webp" alt=""></div>
+            <div class="item-content">
+              <div class="h3 margin-top-20 text-center">Discover & Learn</div>
+              <div>We provide access to a wide range of materials and resources. Our knowledgeable staff offer personalized reader’s advisory and reference support&mdash;helping customers discover what to read next, find reliable information, or explore new interests. That focus on service is reflected in our <a href="#nps">Net Promoter Score</a>, which consistently shows high levels of customer satisfaction, loyalty and trust.</div>
+            </div>
+            <div class="align-bottom">
+              <div class="numbers-item">
+                <div class="gray-circle-wrapper">
+                  <div class="gray-circle">17</div>
+                </div>
+                <div class="vision-stats">Thousand+ <a href="../summer-reading/">Summer Reading</a> participants in 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="numbers-item-wrapper"> </div>
+      </div>
+    </section>
+    <section>
+      <div id="nps" class="row bg-teal white font-weight-500 text-center padding-top-70 padding-bottom-90">
+        <div class="nps-wrapper">
+          <div class="h1 white no-margin-top">Net Promoter Score</div>
+          <div class="h5 white no-margin text-uppercase">October-December 2025: 90.19</div>
+          <div>
+            <div class="progress-bar-wrapper">
+              <div class="custom-progress-bar">
+                <div class="animated-progress progress-white"> <span data-progress="95"></span> </div>
+                <div class="progress-percentage">
+                  <div>-100</div>
+                  <div>0</div>
+                  <div>+100</div>
+                </div>
+              </div>
+            </div>
+            <div>Measuring customer loyalty through recommendations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row padding-top-90 padding-bottom-50">
+        <div class="box-item-wrapper-two">
+          <div class="box-item-two">
+            <div><img class="img-responsive" src="images/community-one.webp" alt=""></div>
+            <div class="h3 margin-top-20 text-center">Grow Together</div>
+            <div>Families and children have a place to grow at our libraries. From <a href="../storytime/">beloved Storytimes</a> and <a href="../playscapes/">interactive playscapes</a> to <a href="../imagination-library/">Dolly Parton's Imagination Library</a>, we support early literacy and joyful learning from the very beginning. Each summer, we host weeklong camps for ages 5-12 and a two-month Summer Reading celebration for all ages filled with exciting events, challenges, prizes, and community partnerships.</div>
+          </div>
+          <div class="flex-break"></div>
+          <div class="box-item-two">
+            <div><img class="img-responsive" src="images/community-two.webp" alt=""></div>
+            <div class="h3 margin-top-20 text-center">Connect & Create</div>
+            <div>Our libraries are gathering places. We offer free public computers and Wi-Fi, large community meeting rooms, and smaller study and collaboration spaces. Throughout the year, customers can enjoy <a href="../book-clubs/">book clubs</a>, creative workshops, hands-on science programs, cultural events, and opportunities to connect with neighbors, colleagues and friends.</div>
+          </div>
+          <div class="box-item-two">
+            <div><img class="img-responsive" src="images/community-three.webp" alt=""></div>
+            <div class="h3 margin-top-20 text-center">Build Skills & Opportunity</div>
+            <div>Our library supports learning at every stage of life, with programs and services such as Bark for Books, English as a Second Language (ESL), High School Equivalency (HSE) test prep, technology literacy, <a href="../business/">small business and entrepreneur support</a>, current affairs discussions, and skill-building workshops for teens, adults and seniors.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row bg-teal white padding-top-60 padding-bottom-90">
+        <div class="facts-container">
+          <div class="h1 white no-margin">Facts & Stats</div>
+          <div class="counter-container">
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">195,895</div>
+              <div class="padding-top-10">Kids and families served at DCL events in 2025</div>
+            </div>
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">590,772</div>
+              <div class="padding-top-10">Holds filled in 2025</div>
+            </div>
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">4,000+</div>
+              <div class="padding-top-10">Alums of Dolly Parton's Imagination Library</div>
+            </div>
+          </div>
+          <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000 }'>
+            <div class="carousel-cell">
+              <div>Romance is the top-circulating genre in Libby.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>Mondays are the busiest day for checkouts (around 11&nbsp;a.m.).</div>
+            </div>
+            <div class="carousel-cell">
+              <div>Digital checkouts are highest on Mondays around 4&nbsp;p.m.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>July was the top reading month in 2025, with 346,799 checkouts.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>Hoopla offers materials in 128 languages; after English, the most borrowed are in French, Spanish and German.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>The DCL Foundation granted 28 Camp DCL scholarships in 2025. </div>
+            </div>
+            <div class="carousel-cell">
+              <div>More than 70,000 people experienced DCL through outreach events in our community.</div>
+            </div>
+            <div class="carousel-cell">
+              <div>Volunteers donated 30,426 hours of service to DCL in 2025. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row padding-top-90 padding-bottom-60">
+        <div class="box-item-wrapper-three">
+          <div class="box-item-three">
+            <div><img class="img-responsive" src="images/events-one.webp" alt=""></div>
+            <div class="h3 margin-top-20 text-center">Events & Experiences</div>
+            <div>We host signature events that bring stories to life&mdash;welcoming popular authors, celebrating literature, and creating memory-making traditions for families. These events strengthen community connections and foster a shared love of reading and learning.</div>
+          </div>
+          <div class="flex-break"></div>
+          <div class="box-item-three">
+            <div><img class="img-responsive" src="images/events-two.webp" alt=""></div>
+            <div class="h3 margin-top-20 text-center">Archives & Local History</div>
+            <div>DCL <a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a> collects, preserves, and shares the history of Douglas County, providing valuable resources for historical research and helping our community stay connected to its past.</div>
+          </div>
+          <div class="box-item-three">
+            <div><img class="img-responsive" src="images/events-three.webp" alt=""></div>
+            <div class="h3 margin-top-20 text-center">Spaces for Celebrating</div>
+            <div>In addition to <a href="../library-basics/">everyday library services</a>, we offer premium spaces and services for customer-focused events. From themed <a href="../birthday-parties/">birthday parties</a> for children ages 2-7 to <a href="../showers/">baby and wedding showers</a> and <a href="../say-i-do/">weddings</a>, our Events & Hospitality team works directly with customers to create memorable experiences in beautiful library settings.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalone" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="h4 modal-title text-center" id="myModalLabel">Welcome to DCL</div>
+          </div>
+          <div class="modal-body padding-left-30 padding-right-30 padding-bottom-40">
+            <div>Our commitment to welcoming requires that our decisions and practices are free from discrimination and individual content preferences. We will not discriminate on the basis of:</div>
+            <ul class="margin-top-5">
+              <li>Identity: Age, race, gender, sexual orientation, color, religion, national origin, military status, disability, or genetic history.</li>
+              <li>Beliefs or Associations: Politics, social stances, faith positions, and more.</li>
+              <li>Background or Personal Histories: Poverty, wealth, marital status, education, and more.</li>
+            </ul>
+            <div>Our commitment to welcoming and nondiscrimination applies to all facets of our work.</div>
+            <ul class="margin-top-5">
+              <li>Talent: Staff and contractor selection, including authors, performers, speakers, and more.</li>
+              <li>Facilities: Access to spaces, services, and amenities.</li>
+              <li>Content: Selection of print works, digital sources, displays, events, and activities.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- InstanceEndEditable --> </div>
+    <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
   <div class="container">
@@ -500,7 +747,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script> 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counterUp = window.counterUp.default;
+  const counters = document.querySelectorAll(".counter");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+
+        if (!el.classList.contains("counted")) {
+          // Read custom speeds or fall back to defaults
+          const duration = parseInt(el.dataset.duration) || 8000;
+          const delay = parseInt(el.dataset.delay) || 30;
+
+          counterUp(el, {
+            duration: duration,
+            delay: delay
+          });
+
+          el.classList.add("counted");
+        }
+
+        obs.unobserve(el);
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  counters.forEach(counter => observer.observe(counter));
+});
+</script> 
+<script>
+$(document).ready(function () {
+  function isInViewport(el) {
+    const elementTop = $(el).offset().top;
+    const elementBottom = elementTop + $(el).outerHeight();
+
+    const viewportTop = $(window).scrollTop();
+    const viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  }
+
+  function animateVisibleBars() {
+    $(".animated-progress span").each(function () {
+      const $this = $(this);
+
+      // Skip if already animated
+      if ($this.data("animated")) return;
+
+      if (isInViewport($this)) {
+        const progress = $this.attr("data-progress");
+
+        $this.animate(
+          { width: progress + "%" },
+          6000
+        );
+
+        $this.text(progress + "%");
+        $this.data("animated", true);
+      }
+    });
+  }
+
+  // Run on load and on scroll/resize
+  $(window).on("load scroll resize", animateVisibleBars);
+});
+</script> 
+<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -559,4 +887,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
