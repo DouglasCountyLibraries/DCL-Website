@@ -166,19 +166,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .nps-wrapper {
     padding: 0 15px;
 }
+.facts-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 15px;
+}
+.counter-container {
+    display: flex;
+    padding: 0 0 10px;
+    justify-content: space-between;
+}
 .counter-wrapper {
     margin-top: auto;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 30px;
     font-size: 1.0625rem;
     text-transform: uppercase;
     font-weight: 500;
-    color: #444;
+    color: #fff;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    min-height: 135px;
 }
 .counter {
     font-size: 2.625rem;
     font-weight: 500;
-    color: #42777B;
+    color: #fff;
     text-align: center;
     line-height: 1;
 }
@@ -242,6 +257,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .box-item-wrapper-one, .box-item-wrapper-two, .box-item-wrapper-three {
     margin: 0 auto;
+}
+.counter-container {
+    padding: 5px 15px 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.counter-wrapper {
+    min-height: auto;
 }
 }
 </style>
@@ -494,8 +518,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="box-item-one">
             <div><img class="img-responsive" src="images/vision-two.webp" alt=""></div>
             <div class="item-content">
-              <div class="h3 text-center">Heading Goes Here</div>
-              <div>Our spaces reflect a commitment to thoughtful design and sustainability, offering warm, welcoming environments that support connection, creativity, and lifelong learning. Whether you’re visiting for literary pursuits, <a href="../featured-events/">a lively program</a>, or a shared community experience, Douglas County Libraries is here for you.</div>
+              <div class="h3 text-center">A Community Hub</div>
+              <div>Our spaces reflect a commitment to thoughtful design and sustainability, offering warm, welcoming environments that support connection, creativity, and lifelong learning. Whether you’re visiting for literary pursuits, <a href="../featured-events/">a lively event</a>, or a shared community experience, Douglas County Libraries is here for you.</div>
             </div>
             <div class="align-bottom">
               <div class="numbers-item">
@@ -533,7 +557,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div>
             <div class="progress-bar-wrapper">
               <div class="custom-progress-bar">
-                <div class="animated-progress progress-white"> <span data-progress="96"></span> </div>
+                <div class="animated-progress progress-white"> <span data-progress="95"></span> </div>
                 <div class="progress-percentage">
                   <div>-100</div>
                   <div>0</div>
@@ -553,37 +577,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div><img class="img-responsive" src="images/community-one.webp" alt=""></div>
             <div class="h3 text-center">Grow Together</div>
             <div>Families and children have a place to grow at our libraries. From <a href="../storytime/">beloved Storytimes</a> and <a href="../playscapes/">interactive playscapes</a> to Dolly Parton's Imagination Library, we support early literacy and joyful learning from the very beginning. Each summer, we host weeklong camps for ages 5-12 and a two-month Summer Reading celebration for all ages filled with exciting events, challenges, prizes, and community partnerships.</div>
-            <div class="counter-wrapper">
-              <div class="counter" data-duration="4000" data-delay="20">195,895</div>
-              <div class="padding-top-10">Kids and families served at DCL events in 2025</div>
-            </div>
           </div>
           <div class="flex-break"></div>
           <div class="box-item-two">
             <div><img class="img-responsive" src="images/community-two.webp" alt=""></div>
             <div class="h3 text-center">Connect & Create</div>
             <div>Our libraries are gathering places. We offer free public computers and Wi-Fi, large community meeting rooms, and smaller study and collaboration spaces. Throughout the year, customers can enjoy <a href="../book-clubs/">book clubs</a>, creative workshops, hands-on science programs, cultural events, and opportunities to connect with neighbors, colleagues and friends.</div>
-            <div class="counter-wrapper">
-              <div class="counter" data-duration="4000" data-delay="20">590,772</div>
-              <div class="padding-top-10">Holds filled in 2025</div>
-            </div>
           </div>
           <div class="box-item-two">
             <div><img class="img-responsive" src="images/community-three.webp" alt=""></div>
             <div class="h3 text-center">Build Skills & Opportunity</div>
             <div>Our library supports learning at every stage of life, with programs and services such as Bark for Books, English as a Second Language (ESL), High School Equivalency (HSE) test prep, technology literacy, <a href="../business/">small business and entrepreneur support</a>, current affairs discussions, and skill-building workshops for teens, adults and seniors.</div>
-            <div class="counter-wrapper">
-              <div class="counter" data-duration="4000" data-delay="20">4,000+</div>
-              <div class="padding-top-10">Alums of <a href="../imagination-library/">Dolly Parton's Imagination Library</a></div>
-            </div>
           </div>
         </div>
       </div>
     </section>
     <section>
       <div class="row bg-teal white padding-top-60 padding-bottom-90">
-        <div class="container text-center">
-          <div class="h1 white no-margin-top">Fun Facts</div>
+        <div class="facts-container">
+          <div class="h1 white no-margin">Fun Facts</div>
+          <div class="counter-container">
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">195,895</div>
+              <div class="padding-top-10">Kids and families served at DCL events in 2025</div>
+            </div>
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">590,772</div>
+              <div class="padding-top-10">Holds filled in 2025</div>
+            </div>
+            <div class="counter-wrapper">
+              <div class="counter" data-duration="4000" data-delay="20">4,000+</div>
+              <div class="padding-top-10">Alums of <a class="white text-underline" href="../imagination-library/">Dolly Parton's Imagination Library</a></div>
+            </div>
+          </div>
           <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000 }'>
             <div class="carousel-cell">
               <div>Romance is the top-circulating genre in Libby.</div>
