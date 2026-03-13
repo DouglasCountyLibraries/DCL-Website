@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,60 +49,106 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .kids-teens-active {
     background-color: #f5f5f5;
 }
-.location-wrapper {
+.winner-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    max-width: 1165px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+}
+.winner-photo {
+    padding: 5px;
+    text-align: center;
+}
+/* slideshow */
+    
+.row.slideshow-row {
+    max-width: 1135px;
     margin: 0 auto;
 }
-.book-list-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.book-list {
+.slideshow-image {
     background: #fff;
-    text-align: center;
-    padding: 15px 15px 30px;
-    margin: 15px;
 }
-.listen, .pause {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 14px;
+.slideshow-pic {
+    min-height: 600px;
+    position: relative;
 }
-.pause {
-    margin-left: 6px;
+.pic-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-.listen:hover, .listen:focus, .pause:hover, .pause:focus {
-    cursor: pointer;
-    text-decoration: none;
-    color: #d36a50;
+figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*animation*/
+    animation: slideShow 54s ease-out infinite 0s;
 }
-.listen:active, .listen:focus {
-    color: #d36a50;
+.pic-2 {
+    transform-origin: bottom right;
 }
-.fa-sharp.fa-solid.fa-play {
-    margin-left: 7px;
+.pic-3 {
+    transform-origin: top left;
 }
-.author-wrapper {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 15px 0;
+.pic-4 {
+    transform-origin: top right;
 }
-.author-item {
-    width: 480px;
-    padding: 0 15px;
+.pic-5 {
+    transform-origin: bottom left;
 }
-.author-item > .list-unstyled > li {
-    padding-bottom: 8px;
+.pic-6 {
+    transform-origin: center center;
+}
+.pic-7 {
+    transform-origin: bottom right;
+}
+.pic-8 {
+    transform-origin: top left;
+}
+.pic-9 {
+    transform-origin: bottom left;
+}
+	
+/* keyframes*/
+@keyframes slideShow {
+0% {
+opacity: 0;
+transform:scale(1);
+}
+2% {
+opacity: 1
+}
+15% {
+opacity: 1;
+}
+18% {
+opacity: 0;
+transform:scale(1.1);
+}
+100% {
+opacity: 0;
+transform:scale(1);
+}
 }
 
-@media (max-width: 1300px) {
-.location-wrapper {
-    max-width: 900px;
+@media (max-width: 575px) {
+.slideshow-pic {
+    min-height: 400px;
+}
+}
+
+@media (max-width: 768px) {
+.winner-wrapper {
+    flex-wrap: wrap;
+    padding: 0 15px 0;
+}
+.winner-photo {
+    padding: 0 0 30px;
 }
 }
 </style>
@@ -307,194 +354,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row border-top padding-bottom-30">
+    <div class="row border-top padding-bottom-20">
       <div class="container text-center">
         <h1 class="page-heading">Battle of the Books</h1>
-        <div class="h1 text-uppercase no-margin-top">2025-2026</div>
         <div class="max-width-80">
           <h2 class="page-subheading">Battle of the Books is a bowl-style trivia tournament that's all about books, engaging hundreds of young minds every year.</h2>
           <div class="max-width-70">Dozens of teams in grades 3-6 compete against each other in interschool battles and finals tournaments to determine a districtwide champion for all of Douglas County.</div>
+          <div class="h4 no-margin-bottom">Congratulations to the 2025-26 winners!</div>
         </div>
       </div>
     </div>
     <section>
-      <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
-        <div class="container">
-          <div class="h2 text-center">Teams, Schedules, Scores, and Standings</div>
-          <div class="text-center max-width-80 padding-bottom-5">Battle of the Books is active at Douglas County Libraries' Castle Pines, Castle Rock, Highlands Ranch, Lone Tree and Parker locations. Choose a location to get started.</div>
-        </div>
-        <div class="location-wrapper">
-          <div class="text-center padding-30"><img class="image-center img-circle" src="castle-pines.webp" alt="Battle of the Books, Castle Pines">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclcastlepines" target="_blank">Castle Pines</a></h4>
-          </div>
-          <div class="text-center padding-30"><img class="image-center img-circle" src="castle-rock.webp" alt="Battle of the Books, Castle Rock">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank">Castle Rock</a></h4>
-          </div>
-          <div class="text-center padding-30"><img class="image-center img-circle" src="highlands-ranch.webp" alt="Battle of the Books, Highlands Ranch">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank">Highlands Ranch</a></h4>
-          </div>
-          <div class="text-center padding-30"><img class="image-center img-circle" src="lone-tree.webp" alt="Battle of the Books, Lone Tree">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank">Lone Tree</a></h4>
-          </div>
-          <div class="text-center padding-30"><img class="image-center img-circle" src="parker.webp" alt="Battle of the Books, Parker">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank">Parker</a></h4>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
       <div class="row">
-        <div id="book-lists" class="padding-top-30 padding-bottom-30">
-          <div class="h2 text-center no-margin-top">Book Lists</div>
-          <div class="max-width-80 text-center padding-bottom-20">Get ready to battle! These are the books that this year's trivia battle questions will be based upon. All of these titles will be available as "Your Lucky Day" books at your local DCL branch.</div>
-          <div class="book-list-wrapper">
-            <div class="book-list"><img class="img-responsive booklist" src="3-4-grade-booklist.webp" alt="3rd-4th Grade Books">
-              <div class="h4 margin-top-15">3rd-4th Grade Books</div>
-              <div><a class="text-uppercase font-weight-500" href="https://dcl.bibliocommons.com/v2/list/display/692283576/2838492057">See Entire List »</a></div>
-            </div>
-            <div class="book-list"><img class="img-responsive booklist" src="5-6-grade-booklist.webp" alt="5th-6th Grade Books">
-              <div class="h4 margin-top-15">5th-6th Grade Books</div>
-              <div><a class="text-uppercase font-weight-500" href="https://dcl.bibliocommons.com/v2/list/display/692283576/2838515367">See Entire List »</a></div>
-            </div>
+        <div class="winner-wrapper">
+          <div class="winner-photo"><img class="img-responsive" src="eldorado-elementary.webp" alt="Eldorado Elementary">
+            <h5>3rd-4th Grade: Eldorado Elementary</h5>
+            <div></div>
+          </div>
+          <div class="winner-photo"><img class="img-responsive" src="redstone-elementary.webp" alt="Redstone Elementary">
+            <h5>5th-6th Grade: Redstone Elementary</h5>
+            <div></div>
           </div>
         </div>
       </div>
-    </section>
-    <section>
-      <div id="pronunciations" class="row bg-gray-5 padding-top-40 padding-bottom-60">
-        <div class="h2 text-center">Title and Author Pronunciation List</div>
-        <div class="author-wrapper">
-          <div class="author-item">
-            <ul class="list-unstyled">
-              <div class="h4">3rd &amp; 4th Grade</div>
-              <li><i>The Adventures of a Girl Called Bicycle</i> by Christina Uss<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play1">
-                  <source src="audio/adventures.mp3" type="audio/mp3">
-                  <source src="audio/adventures.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play1').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play1').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Always, Clementine</i> by Carlie Sorosiak<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play2">
-                  <source src="audio/always.mp3" type="audio/mp3">
-                  <source src="audio/always.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play2').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play2').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>A Boy Called Bat</i> by Elana K. Arnold<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play3">
-                  <source src="audio/boy.mp3" type="audio/mp3">
-                  <source src="audio/boy.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play3').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play3').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>I Survived the Bombing of Pearl Harbor, 1941</i> by Lauren Tarshis<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play4">
-                  <source src="audio/survived.mp3" type="audio/mp3">
-                  <source src="audio/survived.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play4').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play4').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Meesh the Bad Demon</i> by Michelle Lam<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play5">
-                  <source src="audio/meesh.mp3" type="audio/mp3">
-                  <source src="audio/meesh.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play5').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play5').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Odder</i> by Katherine Applegate<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play6">
-                  <source src="audio/odder.mp3" type="audio/mp3">
-                  <source src="audio/odder.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play6').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play6').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Sideways Stories from Wayside School</i> by Louis Sachar<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play7">
-                  <source src="audio/sideways.mp3" type="audio/mp3">
-                  <source src="audio/sideways.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play7').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play7').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>The Terrible Two</i> by Mac Barnett & Jory John<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play8">
-                  <source src="audio/terrible.mp3" type="audio/mp3">
-                  <source src="audio/terrible.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play8').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play8').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>A Week in the Woods</i> by Andrew Clements<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play9">
-                  <source src="audio/week.mp3" type="audio/mp3">
-                  <source src="audio/week.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play9').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play9').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Woof</i> by Spencer Quinn<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play10">
-                  <source src="audio/woof.mp3" type="audio/mp3">
-                  <source src="audio/woof.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play10').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play10').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-            </ul>
-          </div>
-          <div class="author-item">
-            <ul class="list-unstyled">
-              <div class="h4">5th &amp; 6th Grade</div>
-              <li><i>15 Secrets to Survival</i> by Natalie D. Richards<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play11">
-                  <source src="audio/fifteen.mp3" type="audio/mp3">
-                  <source src="audio/fifteen.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play11').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play11').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>The Bad Beginning</i> by Lemony Snicket<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play12">
-                  <source src="audio/bad.mp3" type="audio/mp3">
-                  <source src="audio/bad.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play12').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play12').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Deep Water</i> by Jamie Sumner<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play13">
-                  <source src="audio/deep.mp3" type="audio/mp3">
-                  <source src="audio/deep.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play13').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play13').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Ella Enchanted</i> by Gail Carson Levine<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play14">
-                  <source src="audio/ella.mp3" type="audio/mp3">
-                  <source src="audio/ella.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play14').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play14').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Escape from Mr. Lemoncello's Library</i> by Chris Grabenstein<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play15">
-                  <source src="audio/escape.mp3" type="audio/mp3">
-                  <source src="audio/escape.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play15').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play15').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>The Eyes and the Impossible</i> by Dave Eggers<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play16">
-                  <source src="audio/eyes.mp3" type="audio/mp3">
-                  <source src="audio/eyes.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play16').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play16').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Hamra and the Jungle of Memories</i> by Hanna Alkaf<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play17">
-                  <source src="audio/hamra.mp3" type="audio/mp3">
-                  <source src="audio/hamra.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play17').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play17').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>The Phantom Tollbooth</i> by Norton Juster<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play18">
-                  <source src="audio/phantom.mp3" type="audio/mp3">
-                  <source src="audio/phantom.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play18').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play18').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Princess Academy</i> by Shannon Hale<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play19">
-                  <source src="audio/princess.mp3" type="audio/mp3">
-                  <source src="audio/phantom.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play19').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play19').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-              <li><i>Unplugged</i> by Gordon Korman<span class="text-nowrap">&nbsp;|&nbsp;
-                <audio id="play20">
-                  <source src="audio/unplugged.mp3" type="audio/mp3">
-                  <source src="audio/unplugged.ogg" type="audio/ogg">
-                </audio>
-                <a class="listen" onclick="document.getElementById('play20').play()">Listen<i class="fa-sharp fa-solid fa-play"></i></a><a class="pause" onclick="document.getElementById('play20').pause()"><i class="fa-sharp fa-solid fa-pause"></i></a></span></li>
-            </ul>
+      <div class="row slideshow-row">
+        <div class="slideshow-image">
+          <div class="slideshow-pic">
+            <div class="pic-wrapper" id="pic-wrapper">
+              <figure id="fig1"></figure>
+              <figure id="fig2"></figure>
+              <figure id="fig3"></figure>
+              <figure id="fig4"></figure>
+              <figure id="fig5"></figure>
+              <figure id="fig6"></figure>
+              <figure id="fig7"></figure>
+              <figure id="fig8"></figure>
+              <figure id="fig9"></figure>
+            </div>
           </div>
         </div>
+        <h4 class="text-center padding-top-15 padding-bottom-60">Battles will return for the 2026-27 school year!</h4>
       </div>
     </section>
     <!-- InstanceEndEditable --> </div>
@@ -560,7 +459,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var images = [
+        "slideshow/one.webp",
+        "slideshow/two.webp",
+		"slideshow/three.webp",
+		"slideshow/four.webp",
+		"slideshow/five.webp",
+		"slideshow/six.webp",
+		"slideshow/seven.webp",
+		"slideshow/eight.webp",
+		"slideshow/nine.webp"
+    ];
+    // Shuffle images
+    for (var i = images.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
+    }
+    // Apply the images as background
+    var figures = document.querySelectorAll("figure");
+    figures.forEach(function(figure, index) {
+        figure.style.background = `url(${images[index]}) center center/cover`;
+        figure.className = `pic-${index + 1}`;
+        figure.style.animationDelay = `${index * 6}s`;
+    });
+});
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -620,4 +547,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
