@@ -150,7 +150,7 @@ label {
 .width-wrapper {
     max-width: 500px;
     margin: 0 auto;
-    padding: 0 15px 200px;
+    padding: 40px 15px 200px;
 }
 .lunch-wrapper {
     max-width: 600px;
@@ -194,7 +194,8 @@ opacity: 1;
     background: rgba(249, 159, 28, .03);
 }
 #id_12 {
-    padding: 0 10px;
+    padding: 0 15px;
+    text-align: center;
 }
 #label_input_10_0 {
     font-size: 22px;
@@ -221,10 +222,26 @@ opacity: 1;
 }
 .lunch-item {
     border: 1px solid #999;
-    padding: 20px;
-    margin: 0 0 20px 0;
+    padding: 10px;
+    margin: 0 0 10px 0;
 }
-.lunch-item:hover {
+.lunch-item:last-of-type {
+    margin: 0;
+}
+.gluten-item {
+    padding: 20px;
+    border: 4px solid #f99f1c;
+    border-radius: 3px;
+    margin: -8px 0 0 0;
+    background: rgba(249, 159, 28, .03);
+    text-align: center;
+}
+#label_20, #label_21 {
+    text-align: center;
+    font-size: 1.25rem;
+    padding-bottom: 12px;
+}
+.lunch-item:hover, .gluten-item:hover {
     background: #fff;
     cursor: pointer;
 }
@@ -451,50 +468,54 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT
                     <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                       <input type="radio" class="form-radio validate[required]" id="input_18_1" name="q18_lunchOptions" required="" value="Vegetarian Chopped Salad Box Lunch with Tofu" />
                       <label id="label_input_18_1" for="input_18_1">Vegetarian Chopped Salad Box Lunch with Tofu</label>
-                      </span><div class="lunch-detail">Cabbage, cherry tomato, garbanzo beans, radish, salami, parsley, and fennel. Apple cider vinaigrette and Ranch dressing options can be added on-site.</div></div>
+                      </span>
+                      <div class="lunch-detail">Cabbage, cherry tomato, garbanzo beans, radish, salami, parsley, and fennel. Apple cider vinaigrette and Ranch dressing options can be added on-site.</div>
+                    </div>
                     <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                       <input type="radio" class="form-radio validate[required]" id="input_18_2" name="q18_lunchOptions" required="" value="Grilled Vegetable Sandwich" />
                       <label id="label_input_18_2" for="input_18_2">Grilled Vegetable Sandwich</label>
-                      </span><div class="lunch-detail">Grilled portobello mushroom, zucchini, eggplant, roasted red bell peppers, provolone, and basil pesto aioli on ciabatta.</div></div>
+                      </span>
+                      <div class="lunch-detail">Grilled portobello mushroom, zucchini, eggplant, roasted red bell peppers, provolone, and basil pesto aioli on ciabatta.</div>
+                    </div>
                     <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                       <input type="radio" class="form-radio validate[required]" id="input_18_3" name="q18_lunchOptions" required="" value="Ham &amp; Swiss Sandwich" />
                       <label id="label_input_18_3" for="input_18_3">Ham &amp; Swiss Sandwich</label>
-                      </span><div class="lunch-detail">Lettuce, tomatoes, herbed mayonnaise, and Dijon mustard on ciabatta.</div></div>
+                      </span>
+                      <div class="lunch-detail">Lettuce, tomatoes, herbed mayonnaise, and Dijon mustard on ciabatta.</div>
+                    </div>
                     <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                       <input type="radio" class="form-radio validate[required]" id="input_18_4" name="q18_lunchOptions" required="" value="Southwestern Club Sandwich" />
                       <label id="label_input_18_4" for="input_18_4">Southwestern Club Sandwich</label>
-                      </span><div class="lunch-detail">Smoked turkey, bacon, cheddar, avocado, lettuce, tomatoes, and herbed mayonnaise on ciabatta.</div></div>
+                      </span>
+                      <div class="lunch-detail">Smoked turkey, bacon, cheddar, avocado, lettuce, tomatoes, and herbed mayonnaise on ciabatta.</div>
+                    </div>
                   </div>
                 </div>
               </li>
-              
-                <li class="gluten-item form-line always-hidden jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_20">
-                  <label class="form-label form-label-top form-label-auto" id="label_20" aria-hidden="true"> Regular or Gluten-free:<span class="form-required">*</span> </label>
-                  <div id="cid_20" class="form-input-wide always-hidden jf-required" data-layout="full">
-                    <div class="form-single-column" role="radiogroup" aria-labelledby="label_20" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                      <input type="radio" class="form-radio validate[required]" id="input_20_0" name="q20_regularGlutenfree" required="" value="Regular" />
-                      <label id="label_input_20_0" for="input_20_0">Regular</label>
-                      </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                      <input type="radio" class="form-radio validate[required]" id="input_20_1" name="q20_regularGlutenfree" required="" value="Gluten-free" />
-                      <label id="label_input_20_1" for="input_20_1">Gluten-free</label>
-                      </span></div>
-                  </div>
-                </li>
-            
-              
-                <li class="gluten-item form-line always-hidden jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_21">
-                  <label class="form-label form-label-top form-label-auto" id="label_21" aria-hidden="true"> Regular or Gluten-free Brownie:<span class="form-required">*</span> </label>
-                  <div id="cid_21" class="form-input-wide always-hidden jf-required" data-layout="full">
-                    <div class="form-single-column" role="radiogroup" aria-labelledby="label_21" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                      <input type="radio" class="form-radio validate[required]" id="input_21_0" name="q21_regularGlutenfreeBrownie" required="" value="Regular" />
-                      <label id="label_input_21_0" for="input_21_0">Regular</label>
-                      </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                      <input type="radio" class="form-radio validate[required]" id="input_21_1" name="q21_regularGlutenfreeBrownie" required="" value="Gluten-free" />
-                      <label id="label_input_21_1" for="input_21_1">Gluten-free</label>
-                      </span></div>
-                  </div>
-                </li>
-            
+              <li class="gluten-item form-line always-hidden jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_20">
+                <label class="form-label form-label-top form-label-auto" id="label_20" aria-hidden="true"> Regular or Gluten-free:<span class="form-required">*</span> </label>
+                <div id="cid_20" class="form-input-wide always-hidden jf-required" data-layout="full">
+                  <div class="form-single-column" role="radiogroup" aria-labelledby="label_20" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                    <input type="radio" class="form-radio validate[required]" id="input_20_0" name="q20_regularGlutenfree" required="" value="Regular" />
+                    <label id="label_input_20_0" for="input_20_0">Regular</label>
+                    </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                    <input type="radio" class="form-radio validate[required]" id="input_20_1" name="q20_regularGlutenfree" required="" value="Gluten-free" />
+                    <label id="label_input_20_1" for="input_20_1">Gluten-free</label>
+                    </span></div>
+                </div>
+              </li>
+              <li class="gluten-item form-line always-hidden jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_21">
+                <label class="form-label form-label-top form-label-auto" id="label_21" aria-hidden="true"> Regular or Gluten-free Brownie:<span class="form-required">*</span> </label>
+                <div id="cid_21" class="form-input-wide always-hidden jf-required" data-layout="full">
+                  <div class="form-single-column" role="radiogroup" aria-labelledby="label_21" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                    <input type="radio" class="form-radio validate[required]" id="input_21_0" name="q21_regularGlutenfreeBrownie" required="" value="Regular" />
+                    <label id="label_input_21_0" for="input_21_0">Regular</label>
+                    </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                    <input type="radio" class="form-radio validate[required]" id="input_21_1" name="q21_regularGlutenfreeBrownie" required="" value="Gluten-free" />
+                    <label id="label_input_21_1" for="input_21_1">Gluten-free</label>
+                    </span></div>
+                </div>
+              </li>
             </div>
           </div>
           <div class="width-wrapper">
