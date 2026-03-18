@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    max-width: 1220px;
+    max-width: 980px;
     margin: 0 auto;
 }
 .session-container {
@@ -96,10 +96,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 30px 30px 45px;
     border: 4px solid #f99f1c;
     border-radius: 3px;
-    max-width: 700px;
     min-width: 400px;
     background: rgba(249, 159, 28, .03);
     text-align: center;
+}
+.session-box:last-of-type {
+    max-width: 100%;
 }
 .session-box h4 {
     margin: 0;
@@ -134,7 +136,6 @@ label {
     font-weight: 400;
     text-align: left;
 }
-
 .form-error-message > img {
     display: none;
 }
@@ -146,7 +147,7 @@ label {
     display: none;
 }
 .width-wrapper {
-    max-width: 500px;
+    max-width: 633px;
     margin: 0 auto;
     padding: 40px 15px 200px;
 }
@@ -247,6 +248,12 @@ opacity: 1;
 } */
 .lunch-detail {
     margin: 10px 20px 0 20px;
+}
+
+@media (max-width: 760px) {
+.session-box {
+    margin: 10px 0;
+}
 }
 
 @media (max-width: 500px) {
@@ -351,8 +358,8 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT
 </div>
 <div class="row no-margin">
   <div class="bottom-container">
-    <div class="text-center">
-      <h3 class="black no-margin-top">Breakout Session Registration</h3>
+    <div class="text-center padding-left-15 padding-right-15">
+      <h3 class="black no-margin-top">Breakout Session Registration & Lunch Options</h3>
       <div><i>Please note: Submissions are final. You will not be able to change your choices.</i></div>
     </div>
     <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/260756059461159" method="post" name="form_260756059461159" id="260756059461159" accept-charset="utf-8" autocomplete="off">
