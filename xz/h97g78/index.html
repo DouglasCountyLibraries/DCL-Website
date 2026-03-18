@@ -134,8 +134,8 @@ label {
     font-weight: 400;
     text-align: left;
 }
-    .checklist label {
-	color: #000;
+.checklist label {
+    color: #000;
 }
 .form-error-message > img {
     display: none;
@@ -152,7 +152,7 @@ label {
     margin: 0 auto;
     padding: 0 15px 200px;
 }
-    .lunch-wrapper {
+.lunch-wrapper {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 15px;
@@ -206,7 +206,7 @@ opacity: 1;
     color: #333;
     vertical-align: middle;
 }
-#label_input_13_0:hover {
+#label_input_13_0:hover, #label_input_18_0:hover, #label_input_18_1:hover, #label_input_18_2 :hover, #label_input_18_3:hover, #label_input_18_4:hover {
     cursor: pointer;
 }
 .form-required {
@@ -218,6 +218,15 @@ opacity: 1;
 }
 .form-button-error {
     display: none;
+}
+.lunch-item {
+    border: 1px solid #999;
+    padding: 10px;
+    margin: 20px 0;
+}
+.lunch-item:hover {
+    background: #fff;
+    cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -253,7 +262,7 @@ opacity: 1;
 	JotForm.activeRedirect = "thankurl";
 	JotForm.uploadServerURL = "https://upload.jotform.com/upload";
 
-   JotForm.setConditions([{"action":[{"id":"action_1773845136690","visibility":"Show","isError":false,"field":"21"},{"id":"action_0_1773845123122","visibility":"Show","isError":false,"field":"19"}],"id":"1773778528637","index":"0","link":"Any","priority":"0","terms":[{"id":"term_0_1773845123122","field":"18","operator":"equals","value":"Chopped Salad Box Lunch","isError":false}],"type":"field"},{"action":[{"id":"action_0_1773845080197","visibility":"Show","isError":false,"field":"20"}],"id":"1773779717261","index":"1","link":"Any","priority":"1","terms":[{"id":"term_0_1773845080197","field":"18","operator":"equals","value":"Southwestern Club Sandwich","isError":false},{"id":"term_1_1773845080197","field":"18","operator":"equals","value":"Ham & Swiss Sandwich","isError":false},{"id":"term_2_1773845080197","field":"18","operator":"equals","value":"Grilled Vegetable Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_1773845302214","visibility":"Hide","isError":false,"field":"18"},{"id":"action_0_1773845295654","visibility":"Hide","isError":false,"field":"3"},{"id":"action_1_1773845295654","visibility":"Show","isError":false,"field":"12"}],"id":"1629212103183","index":"4","isError":"1","link":"Any","priority":"4","terms":[{"id":"term_0_1773845295654","field":"13","operator":"equals","value":"I am not able to attend Staff Day","isError":false}],"type":"field"}]);	JotForm.clearFieldOnHide="disable";
+   JotForm.setConditions([{"action":[{"id":"action_1773859423877","visibility":"Show","isError":false,"field":"20"}],"id":"1773859442400","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1773859423877","field":"18","operator":"equals","value":"Southwestern Club Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_0_1773860740598","visibility":"Show","isError":false,"field":"20"}],"id":"1773859416247","index":"1","link":"Any","priority":"1","terms":[{"id":"term_0_1773860740598","field":"18","operator":"equals","value":"Ham & Swiss Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_1773859365158","visibility":"Show","isError":false,"field":"20"}],"id":"1773859385048","index":"2","link":"Any","priority":"2","terms":[{"id":"term_1773859365158","field":"18","operator":"equals","value":"Grilled Vegetable Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_1773859191986","visibility":"Show","isError":false,"field":"21"}],"id":"1773859214231","index":"3","link":"Any","priority":"3","terms":[{"id":"term_1773859191986","field":"18","operator":"equals","value":"Vegetarian Chopped Salad Box Lunch with Tofu","isError":false}],"type":"field"},{"action":[{"id":"action_1773859115025","visibility":"Show","isError":false,"field":"21"}],"id":"1773859150749","index":"4","link":"Any","priority":"4","terms":[{"id":"term_1773859115025","field":"18","operator":"equals","value":"Regular Chopped Salad Box Lunch with Chicken","isError":false}],"type":"field"},{"action":[{"id":"action_1773845302214","visibility":"Hide","isError":false,"field":"18"},{"id":"action_0_1773845295654","visibility":"Hide","isError":false,"field":"3"},{"id":"action_1_1773845295654","visibility":"Show","isError":false,"field":"12"}],"id":"1629212103183","index":"7","isError":"1","link":"Any","priority":"7","terms":[{"id":"term_0_1773845295654","field":"13","operator":"equals","value":"I am not able to attend Staff Day","isError":false}],"type":"field"}]);	JotForm.clearFieldOnHide="disable";
 	JotForm.submitError="jumpToFirstError";
 	JotForm.isFullSource = true;
 
@@ -420,111 +429,92 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT
               </li>
             </div>
           </div>
-            
-            <div class="item-wrapper"><div class="item">
-            
-          <li class="form-line jf-required" data-type="control_radio" id="id_18">
-            <label class="form-label form-label-top form-label-auto" id="label_18" aria-hidden="true"> Lunch Options:<span class="form-required">*</span> </label>
-            <div id="cid_18" class="form-input-wide jf-required" data-layout="full">
-              <div class="form-single-column" role="radiogroup" aria-labelledby="label_18" data-component="radio">
-                  
-                  <div class="lunch-item">  
-                  <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                  
-                  
-                
-                <input type="radio" class="form-radio validate[required]" id="input_18_0" name="q18_lunchOptions" required="" value="Chopped Salad Box Lunch" />
-                <label id="label_input_18_0" for="input_18_0">Chopped Salad Box Lunch</label><div>Vegetarian chopped salad with tofu, or regular chopped salad with chicken.</div><div>Description: Cabbage, cherry tomato, garbanzo beans, radish, salami, parsley, and fennel. Apple cider vinaigrette and Ranch dressing options can be added on-site.</div>
-                  
-                  
-                  
-                  
-                </span></div><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_18_1" name="q18_lunchOptions" required="" value="Grilled Vegetable Sandwich" />
-                <label id="label_input_18_1" for="input_18_1">Grilled Vegetable Sandwich</label>
-                </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_18_2" name="q18_lunchOptions" required="" value="Ham &amp; Swiss Sandwich" />
-                <label id="label_input_18_2" for="input_18_2">Ham &amp; Swiss Sandwich</label>
-                </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_18_3" name="q18_lunchOptions" required="" value="Southwestern Club Sandwich" />
-                <label id="label_input_18_3" for="input_18_3">Southwestern Club Sandwich</label>
-                </span></div>
-            </div>
-          </li>
-          <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_19">
-            <label class="form-label form-label-top form-label-auto" id="label_19" aria-hidden="true"> Chopped Salad<span class="form-required">*</span> </label>
-            <div id="cid_19" class="form-input-wide jf-required" data-layout="full">
-              <div class="form-single-column" role="radiogroup" aria-labelledby="label_19" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_19_0" name="q19_choppedSalad" required="" value="Regular" />
-                <label id="label_input_19_0" for="input_19_0">Regular</label>
-                </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_19_1" name="q19_choppedSalad" required="" value="Vegetarian" />
-                <label id="label_input_19_1" for="input_19_1">Vegetarian</label>
-                </span></div>
-            </div>
-          </li>
-          <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_20">
-            <label class="form-label form-label-top form-label-auto" id="label_20" aria-hidden="true"> Regular or Gluten-free:<span class="form-required">*</span> </label>
-            <div id="cid_20" class="form-input-wide jf-required" data-layout="full">
-              <div class="form-single-column" role="radiogroup" aria-labelledby="label_20" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_20_0" name="q20_regularGlutenfree" required="" value="Regular" />
-                <label id="label_input_20_0" for="input_20_0">Regular</label>
-                </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_20_1" name="q20_regularGlutenfree" required="" value="Gluten-free" />
-                <label id="label_input_20_1" for="input_20_1">Gluten-free</label>
-                </span></div>
-            </div>
-          </li>
-          <li class="form-line jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_21">
-            <label class="form-label form-label-top form-label-auto" id="label_21" aria-hidden="true"> Regular or Gluten-free Brownie:<span class="form-required">*</span> </label>
-            <div id="cid_21" class="form-input-wide jf-required" data-layout="full">
-              <div class="form-single-column" role="radiogroup" aria-labelledby="label_21" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_21_0" name="q21_regularGlutenfreeBrownie" required="" value="Regular" />
-                <label id="label_input_21_0" for="input_21_0">Regular</label>
-                </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
-                <input type="radio" class="form-radio validate[required]" id="input_21_1" name="q21_regularGlutenfreeBrownie" required="" value="Gluten-free" />
-                <label id="label_input_21_1" for="input_21_1">Gluten-free</label>
-                </span></div>
-            </div>
-              
-              
-              
-              
-              
-              
-              
-            </li></div></div>
-            
-            
-            
-            
-            
-            <div class="width-wrapper">
-          <li class="form-line jf-required" data-type="control_textbox" id="id_8">
-            <label class="form-label form-label-top form-label-auto" id="label_8" for="input_8" aria-hidden="false"> First Name:<span class="form-required">*</span> </label>
-            <div id="cid_8" class="form-input-wide jf-required" data-layout="half">
-              <input type="text" id="input_8" name="q8_firstName8" data-type="input-textbox" class="form-control form-textbox validate[required]" data-defaultvalue="" autoComplete="off" placeholder="First Name" data-component="textbox" aria-labelledby="label_8" required="" value="" />
-            </div>
-          </li>
-          <li class="form-line jf-required" data-type="control_textbox" id="id_9">
-            <label class="form-label form-label-top form-label-auto" id="label_9" for="input_9" aria-hidden="false"> Last Name:<span class="form-required">*</span> </label>
-            <div id="cid_9" class="form-input-wide jf-required" data-layout="half">
-              <input type="text" id="input_9" name="q9_lastName9" data-type="input-textbox" class="form-control form-textbox validate[required]" data-defaultvalue="" autoComplete="off" placeholder="Last Name" data-component="textbox" aria-labelledby="label_9" required="" value="" />
-            </div>
-          </li>
-          <li class="form-line jf-required" data-type="control_email" id="id_7">
-            <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7" aria-hidden="false"> Email:<span class="form-required">*</span> </label>
-            <div id="cid_7" class="form-input-wide jf-required" data-layout="half">
-              <input type="email" id="input_7" name="q7_email7" class="form-control form-textbox validate[required, Email, disallowFree]" data-defaultvalue="@dclibraries.org" autoComplete="off" data-component="email" aria-labelledby="label_7" required="" value="@dclibraries.org" />
-            </div>
-          </li>
-          <li class="form-line" data-type="control_button" id="id_2">
-            <div id="cid_2" class="form-input-wide" data-layout="full">
-              <div data-align="auto" class="text-center form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-                <button id="input_2" type="submit" class="margin-top-10 btn btn-primary form-submit-button submit-button jf-form-buttons jsTest-submitField legacy-submit" data-component="button" data-content="">SUBMIT</button>
+          <div class="item-wrapper">
+            <div class="item">
+              <li class="form-line jf-required" data-type="control_radio" id="id_18">
+                <label class="form-label form-label-top form-label-auto" id="label_18" aria-hidden="true"> Lunch Options:<span class="form-required">*</span> </label>
+                <div id="cid_18" class="form-input-wide jf-required" data-layout="full">
+                  <div class="form-single-column" role="radiogroup" aria-labelledby="label_18" data-component="radio">
+                    <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_18_0" name="q18_lunchOptions" required="" value="Regular Chopped Salad Box Lunch with Chicken" />
+                      <label id="label_input_18_0" for="input_18_0">Regular Chopped Salad Box Lunch with Chicken</label>
+                      </span></div>
+                    <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_18_1" name="q18_lunchOptions" required="" value="Vegetarian Chopped Salad Box Lunch with Tofu" />
+                      <label id="label_input_18_1" for="input_18_1">Vegetarian Chopped Salad Box Lunch with Tofu</label>
+                      </span> </div>
+                    <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_18_2" name="q18_lunchOptions" required="" value="Grilled Vegetable Sandwich" />
+                      <label id="label_input_18_2" for="input_18_2">Grilled Vegetable Sandwich</label>
+                      </span></div>
+                    <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_18_3" name="q18_lunchOptions" required="" value="Ham &amp; Swiss Sandwich" />
+                      <label id="label_input_18_3" for="input_18_3">Ham &amp; Swiss Sandwich</label>
+                      </span></div>
+                    <div class="lunch-item"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_18_4" name="q18_lunchOptions" required="" value="Southwestern Club Sandwich" />
+                      <label id="label_input_18_4" for="input_18_4">Southwestern Club Sandwich</label>
+                      </span></div>
+                  </div>
+                </div>
+              </li>
+              <div class="lunch-item">
+                <li class="form-line always-hidden jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_20">
+                  <label class="form-label form-label-top form-label-auto" id="label_20" aria-hidden="true"> Regular or Gluten-free:<span class="form-required">*</span> </label>
+                  <div id="cid_20" class="form-input-wide always-hidden jf-required" data-layout="full">
+                    <div class="form-single-column" role="radiogroup" aria-labelledby="label_20" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_20_0" name="q20_regularGlutenfree" required="" value="Regular" />
+                      <label id="label_input_20_0" for="input_20_0">Regular</label>
+                      </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_20_1" name="q20_regularGlutenfree" required="" value="Gluten-free" />
+                      <label id="label_input_20_1" for="input_20_1">Gluten-free</label>
+                      </span></div>
+                  </div>
+                </li>
+              </div>
+              <div class="lunch-item">
+                <li class="form-line always-hidden jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_21">
+                  <label class="form-label form-label-top form-label-auto" id="label_21" aria-hidden="true"> Regular or Gluten-free Brownie:<span class="form-required">*</span> </label>
+                  <div id="cid_21" class="form-input-wide always-hidden jf-required" data-layout="full">
+                    <div class="form-single-column" role="radiogroup" aria-labelledby="label_21" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_21_0" name="q21_regularGlutenfreeBrownie" required="" value="Regular" />
+                      <label id="label_input_21_0" for="input_21_0">Regular</label>
+                      </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                      <input type="radio" class="form-radio validate[required]" id="input_21_1" name="q21_regularGlutenfreeBrownie" required="" value="Gluten-free" />
+                      <label id="label_input_21_1" for="input_21_1">Gluten-free</label>
+                      </span></div>
+                  </div>
+                </li>
               </div>
             </div>
-            </li></div>
+          </div>
+          <div class="width-wrapper">
+            <li class="form-line jf-required" data-type="control_textbox" id="id_8">
+              <label class="form-label form-label-top form-label-auto" id="label_8" for="input_8" aria-hidden="false"> First Name:<span class="form-required">*</span> </label>
+              <div id="cid_8" class="form-input-wide jf-required" data-layout="half">
+                <input type="text" id="input_8" name="q8_firstName8" data-type="input-textbox" class="form-control form-textbox validate[required]" data-defaultvalue="" autoComplete="off" placeholder="First Name" data-component="textbox" aria-labelledby="label_8" required="" value="" />
+              </div>
+            </li>
+            <li class="form-line jf-required" data-type="control_textbox" id="id_9">
+              <label class="form-label form-label-top form-label-auto" id="label_9" for="input_9" aria-hidden="false"> Last Name:<span class="form-required">*</span> </label>
+              <div id="cid_9" class="form-input-wide jf-required" data-layout="half">
+                <input type="text" id="input_9" name="q9_lastName9" data-type="input-textbox" class="form-control form-textbox validate[required]" data-defaultvalue="" autoComplete="off" placeholder="Last Name" data-component="textbox" aria-labelledby="label_9" required="" value="" />
+              </div>
+            </li>
+            <li class="form-line jf-required" data-type="control_email" id="id_7">
+              <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7" aria-hidden="false"> Email:<span class="form-required">*</span> </label>
+              <div id="cid_7" class="form-input-wide jf-required" data-layout="half">
+                <input type="email" id="input_7" name="q7_email7" class="form-control form-textbox validate[required, Email, disallowFree]" data-defaultvalue="@dclibraries.org" autoComplete="off" data-component="email" aria-labelledby="label_7" required="" value="@dclibraries.org" />
+              </div>
+            </li>
+            <li class="form-line" data-type="control_button" id="id_2">
+              <div id="cid_2" class="form-input-wide" data-layout="full">
+                <div data-align="auto" class="text-center form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+                  <button id="input_2" type="submit" class="margin-top-10 btn btn-primary form-submit-button submit-button jf-form-buttons jsTest-submitField legacy-submit" data-component="button" data-content="">SUBMIT</button>
+                </div>
+              </div>
+            </li>
+          </div>
           <li style="display:none">Should be Empty:
             <input type="text" name="website" value="" type="hidden" />
           </li>
