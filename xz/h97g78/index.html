@@ -56,19 +56,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     flex-wrap: wrap;
     text-align: center;
 }
-    .heading-wrapper img {
-	max-width: 400px;
+.heading-wrapper img {
+    max-width: 400px;
 }
 .heading-container {
     color: #000;
     padding: 0 15px;
 }
 .large-custom-heading {
-	font-size: 3rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	line-height: 1;
-	margin-top: 30px;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 30px;
 }
 .medium-custom-heading {
     font-size: 1.7rem;
@@ -232,7 +232,6 @@ opacity: 1;
     padding: 20px;
     border: 4px solid #f99f1c;
     border-radius: 3px;
-    margin: -8px 0 0 0;
     background: rgba(249, 159, 28, .03);
     text-align: center;
 }
@@ -252,6 +251,12 @@ opacity: 1;
 .lunch-detail {
     margin: 10px 20px 0 20px;
 }
+    .why-detail {
+    margin: 10px 20px 0 20px;
+}
+    .why-detail label {
+        line-height: 2;
+    }
 
 @media (max-width: 760px) {
 .session-box {
@@ -292,20 +297,21 @@ opacity: 1;
 	JotForm.activeRedirect = "thankurl";
 	JotForm.uploadServerURL = "https://upload.jotform.com/upload";
 
-   JotForm.setConditions([{"action":[{"id":"action_1773859423877","visibility":"Show","isError":false,"field":"20"}],"id":"1773859442400","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1773859423877","field":"18","operator":"equals","value":"Southwestern Club Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_0_1773860740598","visibility":"Show","isError":false,"field":"20"}],"id":"1773859416247","index":"1","link":"Any","priority":"1","terms":[{"id":"term_0_1773860740598","field":"18","operator":"equals","value":"Ham & Swiss Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_1773859365158","visibility":"Show","isError":false,"field":"20"}],"id":"1773859385048","index":"2","link":"Any","priority":"2","terms":[{"id":"term_1773859365158","field":"18","operator":"equals","value":"Grilled Vegetable Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_1773859191986","visibility":"Show","isError":false,"field":"21"}],"id":"1773859214231","index":"3","link":"Any","priority":"3","terms":[{"id":"term_1773859191986","field":"18","operator":"equals","value":"Vegetarian Chopped Salad Box Lunch with Tofu","isError":false}],"type":"field"},{"action":[{"id":"action_1773859115025","visibility":"Show","isError":false,"field":"21"}],"id":"1773859150749","index":"4","link":"Any","priority":"4","terms":[{"id":"term_1773859115025","field":"18","operator":"equals","value":"Regular Chopped Salad Box Lunch with Chicken","isError":false}],"type":"field"},{"action":[{"id":"action_1773845302214","visibility":"Hide","isError":false,"field":"18"},{"id":"action_0_1773845295654","visibility":"Hide","isError":false,"field":"3"},{"id":"action_1_1773845295654","visibility":"Show","isError":false,"field":"12"}],"id":"1629212103183","index":"7","isError":"1","link":"Any","priority":"7","terms":[{"id":"term_0_1773845295654","field":"13","operator":"equals","value":"I am not able to attend Staff Day","isError":false}],"type":"field"}]);	JotForm.clearFieldOnHide="disable";
+   JotForm.setConditions([{"action":[{"id":"action_1773859423877","visibility":"Show","isError":false,"field":"20"}],"disabled":"1","id":"1773859442400","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1773859423877","field":"18","operator":"equals","value":"Southwestern Club Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_0_1773860740598","visibility":"Show","isError":false,"field":"20"}],"disabled":"1","id":"1773859416247","index":"1","link":"Any","priority":"1","terms":[{"id":"term_0_1773860740598","field":"18","operator":"equals","value":"Ham & Swiss Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_1773859365158","visibility":"Show","isError":false,"field":"20"}],"disabled":"1","id":"1773859385048","index":"2","link":"Any","priority":"2","terms":[{"id":"term_1773859365158","field":"18","operator":"equals","value":"Grilled Vegetable Sandwich","isError":false}],"type":"field"},{"action":[{"id":"action_1773932782170","visibility":"Hide","isError":false,"field":"20"},{"id":"action_0_1773932778253","visibility":"Show","isError":false,"field":"21"}],"id":"1773859214231","index":"3","link":"Any","priority":"3","terms":[{"id":"term_0_1773932778253","field":"18","operator":"equals","value":"Vegetarian Chopped Salad Box Lunch with Tofu","isError":false}],"type":"field"},{"action":[{"id":"action_1773932804669","visibility":"Hide","isError":false,"field":"20"},{"id":"action_0_1773932802313","visibility":"Show","isError":false,"field":"21"}],"id":"1773859150749","index":"4","link":"Any","priority":"4","terms":[{"id":"term_0_1773932802313","field":"18","operator":"equals","value":"Regular Chopped Salad Box Lunch with Chicken","isError":false}],"type":"field"},{"action":[{"id":"action_1773845302214","visibility":"Hide","isError":false,"field":"18"},{"id":"action_0_1773845295654","visibility":"Hide","isError":false,"field":"3"},{"id":"action_1_1773845295654","visibility":"Show","isError":false,"field":"12"}],"id":"1629212103183","index":"7","isError":"1","link":"Any","priority":"7","terms":[{"id":"term_0_1773845295654","field":"13","operator":"equals","value":"I am not able to attend Staff Day","isError":false}],"type":"field"}]);	JotForm.clearFieldOnHide="disable";
 	JotForm.submitError="jumpToFirstError";
 	JotForm.isFullSource = true;
 
 	JotForm.init(function(){
 	/*INIT-START*/
+if (window.JotForm && JotForm.accessible) $('input_28').setAttribute('tabindex',0);
 if (window.JotForm && JotForm.accessible) $('input_8').setAttribute('tabindex',0);
 if (window.JotForm && JotForm.accessible) $('input_9').setAttribute('tabindex',0);
       JotForm.alterTexts({"ageVerificationError":"You must be older than {minAge} years old to submit this form.","alphabetic":"This field can only contain letters","alphanumeric":"This field can only contain letters and numbers.","appointmentSelected":"You’ve selected {time} on {date}","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccInvalidNumber":"Credit Card Number is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingDonation":"Please enter numeric values for donation amount.","ccMissingProduct":"Please select at least one product.","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","chooseAFile_infoMessage":"Choose a file","confirmClearForm":"Are you sure you want to clear the form","confirmEmail":"E-mail does not match","confirmSelection":"Confirm Selection","currency":"This field can only contain currency values.","cyrillic":"This field can only contain cyrillic characters","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","dateLimited":"This date is unavailable.","disallowDecimals":"Please enter a whole number.","doneButton":"Done","doneMessage":"Well done! All errors are fixed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","email":"Please enter a valid DCL e-mail address","error":"Error","fieldError":"field has an error.","fillMask":"Field value must fill mask.","formerSelectedTime":"Former Time","freeEmailError":"Free email accounts are not allowed","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoNotAvailableTitle":"Position Unavailable","geoPermissionDesc":"Check your browser's privacy settings.","geoPermissionTitle":"Permission Denied","geoTimeoutDesc":"Please check your internet connection and try again.","geoTimeoutTitle":"Timeout","gradingScoreError":"Score total should only be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","invalidTime":"Enter a valid time","justSoldOut":"Just Sold Out","lessThan":"Your score should be less than or equal to","maxCharactersError":"The number of characters should not be more than the maximum value:","maxDigitsError":"The maximum digits allowed is","maxFileSize_infoMessage":"Max. file size","maxSelectionsError":"The maximum number of selections allowed is ","minCharactersError":"The number of characters should not be less than the minimum value:","minSelectionsError":"The minimum required number of selections is ","multipleError":"There are {count} errors on this page. Please correct them before moving on.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","nextButtonText":"Next","noSlotsAvailable":"No slots available","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"This field can only contain numeric values","oneError":"There is {count} error on this page. Please correct it before moving on.","pastDatesDisallowed":"Date must not be in the past.","pleaseWait":"Please wait...","prevButtonText":"Previous","progressMiddleText":"of","required":"This field is required.","requiredLegend":"All fields marked with * are required and must be filled.","requireEveryCell":"Every cell is required.","requireEveryRow":"Every row is required.","requireOne":"At least one field required.","restrictedDomain":"This domain is not allowed","reviewBackText":"Back to Form","reviewSubmitText":"Review and Submit","seeAllText":"See All","seeErrorsButton":"See Errors","selectedTime":"Selected Time","selectionSoldOut":"Selection Sold Out","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","soldOut":"Sold Out","startButtonText":"START","submissionLimit":"Sorry! Only one entry is allowed. &lt;br&gt; Multiple submissions are disabled for this form.","submitButtonText":"Submit","subProductItemsLeft":"({count} items left)","uploadExtensions":"You can only upload following files:","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","url":"This field can only contain a valid URL","validateEmail":"You need to validate this e-mail","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is"});
 	/*INIT-END*/
 	});
 
-   setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT","type":"control_button"},{"name":"breakoutSessions","qid":"3","text":"Breakout Sessions: 1-1:45PM","type":"control_widget"},null,null,null,{"description":"","name":"email7","qid":"7","subLabel":"","text":"Email:","type":"control_email"},{"description":"","name":"firstName8","qid":"8","subLabel":"","text":"First Name:","type":"control_textbox"},{"description":"","name":"lastName9","qid":"9","subLabel":"","text":"Last Name:","type":"control_textbox"},null,null,{"name":"input12","qid":"12","text":"Please submit your name and email address so we can reconcile our breakout session count.","type":"control_text"},{"description":"","name":"typeA","qid":"13","text":"","type":"control_checkbox"},null,null,null,null,{"description":"","name":"lunchOptions","qid":"18","text":"Lunch Options:","type":"control_radio"},{"description":"","name":"choppedSalad","qid":"19","text":"Chopped Salad","type":"control_radio"},{"description":"","name":"regularGlutenfree","qid":"20","text":"Regular or Gluten-free:","type":"control_radio"},{"description":"","name":"regularGlutenfreeBrownie","qid":"21","text":"Regular or Gluten-free Brownie:","type":"control_radio"}]);}, 20); 
+setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT","type":"control_button"},{"name":"breakoutSessions","qid":"3","text":"Breakout Sessions:","type":"control_widget"},null,null,null,{"description":"","name":"email7","qid":"7","subLabel":"","text":"Email:","type":"control_email"},{"description":"","name":"firstName8","qid":"8","subLabel":"","text":"First Name:","type":"control_textbox"},{"description":"","name":"lastName9","qid":"9","subLabel":"","text":"Last Name:","type":"control_textbox"},null,null,{"name":"input12","qid":"12","text":"Please submit your name and email address so we can reconcile our breakout session count.","type":"control_text"},{"description":"","name":"typeA","qid":"13","text":"Attending:","type":"control_checkbox"},null,null,null,null,{"description":"","name":"regularOr","qid":"18","text":"Regular or Gluten-free Lunch Options:","type":"control_radio"},null,{"description":"","name":"regularGlutenfree","qid":"20","text":"Regular or Gluten-free:","type":"control_radio"},{"description":"","name":"regularGlutenfreeBrownie","qid":"21","text":"Regular or Gluten-free Brownie:","type":"control_radio"},null,null,null,null,null,null,{"description":"","mde":"No","name":"typeA28","qid":"28","subLabel":"","text":"Additional Comments (optional):","type":"control_textarea","wysiwyg":"Disable"},{"description":"","name":"typeA29","qid":"29","text":"Why did you choose this lunch option?","type":"control_radio"}]);}, 20); 
 </script>
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/stylebuilder/static/form-common.css?v=b6337a3
 "/>
@@ -461,7 +467,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT
           </div>
           <div class="item-wrapper">
             <div class="item">
-              <li class="form-line jf-required" data-type="control_radio" id="id_18">
+              <li class="jf-required" data-type="control_radio" id="id_18">
                 <label class="form-label form-label-top form-label-auto" id="label_18" aria-hidden="true">Regular or Gluten-free Lunch Options:<span class="form-required">*</span> </label>
                 <div id="cid_18" class="form-input-wide jf-required" data-layout="full">
                   <div class="form-single-column" role="radiogroup" aria-labelledby="label_18" data-component="radio">
@@ -498,13 +504,44 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT
                   </div>
                 </div>
               </li>
+              <div class="lunch-item">
+                <li class="jf-required" data-type="control_radio" id="id_29">
+                  <label class="form-label form-label-top form-label-auto" id="label_29" aria-hidden="true"> Why did you choose this lunch option?<span class="form-required">*</span> </label>
+                  <div id="cid_29" class="form-input-wide jf-required" data-layout="full">
+                    <div class="form-single-column" role="radiogroup" aria-labelledby="label_29" data-component="radio">
+                      <div class="why-detail"> <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                        <input type="radio" class="form-radio validate[required]" id="input_29_0" name="q29_typeA29" required="" value="I’m vibing with the vegan and/or dairy-free options." />
+                        <label id="label_input_29_0" for="input_29_0">I’m vibing with the vegan and/or dairy-free options.</label>
+                        </span><br>
+                        <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                        <input type="radio" class="form-radio validate[required]" id="input_29_1" name="q29_typeA29" required="" value="Veggie life for me!" />
+                        <label id="label_input_29_1" for="input_29_1">Veggie life for me!</label>
+                        </span><br>
+                        <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                        <input type="radio" class="form-radio validate[required]" id="input_29_2" name="q29_typeA29" required="" value="Gluten-free for me, please and thank you!" />
+                        <label id="label_input_29_2" for="input_29_2">Gluten-free for me, please and thank you!</label>
+                        </span><br>
+                        <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                        <input type="radio" class="form-radio validate[required]" id="input_29_3" name="q29_typeA29" required="" value="This sounded too tasty to pass up." />
+                        <label id="label_input_29_3" for="input_29_3">This sounded too tasty to pass up.</label>
+                        </span></div>
+                    </div>
+                  </div>
+                </li>
+              </div><div class="lunch-item">
+              <li class="form-line" data-type="control_textarea" id="id_28">
+                <label class="form-label form-label-top form-label-auto" id="label_28" for="input_28" aria-hidden="false"> Additional Comments (optional): </label>
+                <div id="cid_28" class="form-input-wide" data-layout="full">
+                  <textarea id="input_28" class="form-textarea" name="q28_typeA28" style="width:100%;height:60px" data-component="textarea" aria-labelledby="label_28"></textarea>
+                </div>
+              </li></div>
               <li class="gluten-item form-line always-hidden jf-required form-field-hidden" style="display:none;" data-type="control_radio" id="id_20">
                 <label class="form-label form-label-top form-label-auto" id="label_20" aria-hidden="true"> Regular or Gluten-free:<span class="form-required">*</span> </label>
                 <div id="cid_20" class="form-input-wide always-hidden jf-required" data-layout="full">
                   <div class="form-single-column" role="radiogroup" aria-labelledby="label_20" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                     <input type="radio" class="form-radio validate[required]" id="input_20_0" name="q20_regularGlutenfree" required="" value="Regular" />
-                    <label id="label_input_20_0" for="input_20_0">Regular</label>&nbsp;&nbsp;&nbsp;
-                    </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                    <label id="label_input_20_0" for="input_20_0">Regular</label>
+                    &nbsp;&nbsp;&nbsp; </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                     <input type="radio" class="form-radio validate[required]" id="input_20_1" name="q20_regularGlutenfree" required="" value="Gluten-free" />
                     <label id="label_input_20_1" for="input_20_1">Gluten-free</label>
                     </span></div>
@@ -515,8 +552,8 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"send","qid":"2","text":"SUBMIT
                 <div id="cid_21" class="form-input-wide always-hidden jf-required" data-layout="full">
                   <div class="form-single-column" role="radiogroup" aria-labelledby="label_21" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                     <input type="radio" class="form-radio validate[required]" id="input_21_0" name="q21_regularGlutenfreeBrownie" required="" value="Regular" />
-                    <label id="label_input_21_0" for="input_21_0">Regular</label>&nbsp;&nbsp;&nbsp;
-                    </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                    <label id="label_input_21_0" for="input_21_0">Regular</label>
+                    &nbsp;&nbsp;&nbsp; </span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
                     <input type="radio" class="form-radio validate[required]" id="input_21_1" name="q21_regularGlutenfreeBrownie" required="" value="Gluten-free" />
                     <label id="label_input_21_1" for="input_21_1">Gluten-free</label>
                     </span></div>
