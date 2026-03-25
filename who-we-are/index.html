@@ -55,7 +55,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     flex-direction: column;
     font-size: 1.0625rem;
-    text-transform: uppercase;
     font-weight: 500;
     color: #444;
 }
@@ -108,6 +107,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .vision-stats {
     padding: 10px 0 20px;
     height: 50px;
+    max-width: 325px;
+    margin: 0 auto;
 }
 .animated-progress {
     width: 100%;
@@ -145,7 +146,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     justify-content: space-between;
     font-size: 1rem;
     font-weight: 500;
-    text-transform: uppercase;
     color: #fff;
 }
 .box-item-wrapper-two {
@@ -174,26 +174,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .counter-container {
     display: flex;
     justify-content: space-between;
+    padding: 30px 0;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .counter-wrapper {
     margin-top: auto;
     text-align: center;
     padding: 15px 30px;
     font-size: 1.0625rem;
-    text-transform: uppercase;
     font-weight: 500;
     color: #fff;
-    max-width: 400px;
+    max-width: 345px;
     display: flex;
     flex-direction: column;
-    min-height: 135px;
+    min-height: 290px;
+    /* justify-content: center; */
+    align-content: center;
+    align-items: center;
 }
 .counter {
-    font-size: 2.625rem;
+    font-size: 2.125rem;
     font-weight: 500;
     color: #fff;
     text-align: center;
     line-height: 1;
+    border: 6px solid rgba(255,255,255,.8);
+    height: 180px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 .carousel-cell {
     width: 100%;
@@ -511,7 +523,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="gray-circle-wrapper">
                   <div class="gray-circle">7</div>
                 </div>
-                <div class="vision-stats"><a href="../locations/">Library locations</a> serving Douglas County</div>
+                <div class="vision-stats"><a href="../locations/"><i>Library locations</i></a><i> serving Douglas County</i></div>
               </div>
             </div>
           </div>
@@ -531,7 +543,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="gray-circle-wrapper">
                   <div class="gray-circle">70</div>
                 </div>
-                <div class="vision-stats">Percent of all DCSD elementary schools participate in <a href="../botb/">Battle of the Books</a></div>
+                <div class="vision-stats"><i>Percent of all DCSD elementary schools participate in <a href="../botb/">Battle of the Books</a></i></div>
               </div>
             </div>
           </div>
@@ -550,7 +562,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="gray-circle-wrapper">
                   <div class="gray-circle">17</div>
                 </div>
-                <div class="vision-stats">Thousand+ <a href="../summer-reading/">Summer Reading</a> participants in 2025</div>
+                <div class="vision-stats"><i>Thousand+ <a href="../summer-reading/">Summer Reading</a> participants in 2025</i></div>
               </div>
             </div>
           </div>
@@ -562,7 +574,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="nps" class="row bg-teal white font-weight-500 text-center padding-top-70 padding-bottom-90">
         <div class="nps-wrapper">
           <div class="h1 white no-margin-top">Net Promoter Score</div>
-          <div class="h5 white no-margin text-uppercase">October-December 2025: 90.19</div>
+          <div class="h5 white no-margin">October-December 2025: 90.19</div>
           <div>
             <div class="progress-bar-wrapper">
               <div class="custom-progress-bar">
@@ -583,18 +595,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="row padding-top-90 padding-bottom-50">
         <div class="box-item-wrapper-two">
           <div class="box-item-two">
-            <div><img class="img-responsive" src="images/grow-one.webp" alt=""></div>
+            <div id="box-four"></div>
             <div class="h3 margin-top-20 text-center">Grow Together</div>
             <div>Families and children have a place to grow at our libraries. From <a href="../storytime/">beloved Storytimes</a> and <a href="../playscapes/">interactive playscapes</a> to <a href="../imagination-library/">Dolly Parton's Imagination Library</a>, we support early literacy and joyful learning from the very beginning. Each summer, we host weeklong camps for ages 5-12 and a two-month Summer Reading celebration for all ages filled with exciting events, challenges, prizes, and community partnerships.</div>
           </div>
+          <script>
+     var images = ['grow-one.webp', 'grow-two.webp', 'grow-three.webp', 'grow-four.webp'];
+    $('<img alt="Families grow and learn at the library" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-four');  
+    </script>
           <div class="flex-break"></div>
           <div class="box-item-two">
-            <div><img class="img-responsive" src="images/community-two.webp" alt=""></div>
+            <div id="box-five"></div>
             <div class="h3 margin-top-20 text-center">Connect & Create</div>
             <div>Our libraries are gathering places. We offer free public computers and Wi-Fi, large community meeting rooms, and smaller study and collaboration spaces. Throughout the year, customers can enjoy <a href="../book-clubs/">book clubs</a>, creative workshops, hands-on science programs, cultural events, and opportunities to connect with neighbors, colleagues and friends.</div>
           </div>
+          <script>
+     var images = ['connect-one.webp', 'connect-two.webp', 'connect-three.webp', 'connect-four.webp'];
+    $('<img alt="Our libraries are gathering places" class="img-responsive image-center" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#box-five');  
+    </script>
           <div class="box-item-two">
-            <div><img class="img-responsive" src="images/community-three.webp" alt=""></div>
+            <div><img class="img-responsive" src="images/skills-one.webp" alt=""></div>
             <div class="h3 margin-top-20 text-center">Build Skills & Opportunity</div>
             <div>Our library supports learning at every stage of life, with programs and services such as Bark for Books, English as a Second Language (ESL), High School Equivalency (HSE) test prep, technology literacy, <a href="../business/">small business and entrepreneur support</a>, current affairs discussions, and skill-building workshops for teens, adults and seniors.</div>
           </div>
@@ -608,15 +628,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="counter-container">
             <div class="counter-wrapper">
               <div class="counter" data-duration="4000" data-delay="20">195,895</div>
-              <div class="padding-top-10">Kids and families served at DCL events in 2025</div>
+              <div class="padding-top-10"><i>Kids and families served at DCL events in 2025</i></div>
             </div>
             <div class="counter-wrapper">
               <div class="counter" data-duration="4000" data-delay="20">590,772</div>
-              <div class="padding-top-10">Holds filled in 2025</div>
+              <div class="padding-top-10"><i>Holds filled in 2025</i></div>
             </div>
             <div class="counter-wrapper">
               <div class="counter" data-duration="4000" data-delay="20">4,000+</div>
-              <div class="padding-top-10">Alums of Dolly Parton's Imagination Library</div>
+              <div class="padding-top-10"><i>Alums of Dolly Parton's Imagination Library</i></div>
             </div>
           </div>
           <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000 }'>
