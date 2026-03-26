@@ -141,18 +141,18 @@ width: calc(100% * 0.5);
     margin-left: auto;
     margin-right: auto;
     width: 320px;
-    background-image: url("book-sprite.webp");
+    background-image: url("book-sprite-alt.webp");
     background-repeat: no-repeat;
     background-position: 0 50%;
-    animation: complex-sprite 10s steps(3) infinite;
+    animation: complex-sprite 10s steps(2) infinite;
 }
 @keyframes complex-sprite {
 to {
-background-position: -960px 0;
+background-position: -640px 0;
 }
 }
 
-@media (max-width: 995px) {
+@media (max-width: 640px) {
 .flower {
     display: none;
 }
@@ -414,7 +414,7 @@ background-position: -960px 0;
                   <ul class="author-list">
                     <li>May 1: Alka Joshi, Six Days in Bombay</li>
                     <li>May 16: Jack Carr, The Fourth Option</li>
-                    <li>June 16: Brad Thor, Choke Point</li>
+                    <!--<li>June 16: Brad Thor, Choke Point</li>-->
                   </ul>
                 </div>
                 <div class="row-one-more-authors"><i>Hear from <a class="black text-underline" href="featured-events/#author-events">more great authors</a>.</i></div>
@@ -430,15 +430,23 @@ background-position: -960px 0;
               <div id="row-two-box-one-image"></div>
               <div class="row-two-box-one-content">
                 <h2 class="row-two-heading-one">Shop, Gift, Give Back</h2>
-                <div>Our Kendra Scott jewelry shopping event returns May 2-3, benefiting the DCL Foundation. Details coming soon.<!--<a class="black text-underline" href="foundation/">Get&nbsp;Details</a>.--></div>
+                <div>Our Kendra Scott jewelry shopping event returns May&nbsp;2-3, benefiting the DCL Foundation. Details coming soon.<!--<a class="black text-underline" href="foundation/">Get&nbsp;Details</a>.--></div>
               </div>
             </div>
-            <div class="row-two-box-two-wrapper">
+            <!--<div class="row-two-box-two-wrapper">
               <div id="row-two-box-two-image"></div>
               <div class="row-two-box-two-content">
                 <div class="text-uppercase row-two-from-archives">From the Archives:</div>
                 <h2 class="row-two-heading-one">Stars, Stripes & Summit Views</h2>
                 <div>Explore Douglas County’s place in the American story through this special ALH exhibit. <a class="black text-underline" href="https://archives.dcl.org/" target="_blank">Learn&nbsp;More</a>.</div>
+              </div>
+            </div>-->
+            
+            <div class="row-two-box-two-wrapper">
+              <div id="row-two-box-two-image"></div>
+              <div class="row-two-box-two-content">
+                <h2 class="row-two-heading-one">Spring Gardening Series</h2>
+                <div><a class="black text-underline" href="https://go.dcl.org/events?term=spring+into+gardening&n=3&r=months">Get garden-ready</a> with expert guidance and tips from Master Gardener pros.</div>
               </div>
             </div>
           </div>
@@ -448,8 +456,8 @@ background-position: -960px 0;
     <script>
     var images = ['kendra-scott-one.webp', 'kendra-scott-two.webp'];
     $('<img alt="Kendra Scott Event" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#row-two-box-one-image');
-	 var images = ['alh-one.webp', 'alh-one.webp'];
-    $('<img alt="Archives & Local History Exhibit" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#row-two-box-two-image');
+	 var images = ['gardening-one.webp', 'gardening-two.webp'];
+    $('<img alt="Spring Gardening" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#row-two-box-two-image');
 </script> 
     <!-- InstanceEndEditable --> </div>
 </main>
