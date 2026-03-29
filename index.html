@@ -48,177 +48,150 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
-<link rel="stylesheet" href="shared-assets/css/flickity.min.css">
 <style>
-#general-alert {
-    margin-bottom: 30px;
+.background-row {
+    background: url("flower-pattern.webp") center center fixed;
+    padding: 80px 0 100px;
 }
-.gradient-row {
-    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+.row-one-section {
+    padding: 0 15px;
+    margin: 0 auto;
 }
-/* sbh */ 
-.sbh-container {
-    background: #dc4e58 url("bull-background-large.webp") 0% 100% no-repeat;
+.row-one-container {
+    background: #fef7ec;
     display: flex;
-    max-width: 1750px;
+    max-width: 1410px;
     min-height: 640px;
     margin: 0 auto;
+    color: #000;
+    box-shadow: 0px 8px 20px rgba(0,0,0,.3);
+    padding: 0 15px;
 }
-.sbh-wrapper {
+.row-one-wrapper {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 18px 15px 0 15px;
+}
+.row-one-image {
+    display: flex;
+    flex-direction: row;
+}
+.flower img {
+    position: relative;
+    bottom: 18px;
+}
+.row-one-content {
+    margin: 0 0 20px 30px;
+    color: #000;
+    font-size: 1.25rem;
+    max-width: 650px;
+}
+h2.row-one-heading-one, h2.row-two-heading-one {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 500;
+    color: #000;
+}
+.row-one-more-authors, .row-two-from-archives {
+    font-size: 1.125rem;
+}
+.row-two-container {
+    display: flex;
+    max-width: 1440px;
+    min-height: 640px;
+    margin: 50px auto 0 auto;
+    padding: 0 15px;
+}
+.row-two-wrapper {
     margin: 0 auto;
     display: flex;
     width: 100%;
+    box-shadow: 0px 8px 20px rgba(0,0,0,.3);
 }
-.sbh-one {
+.row-two-box-one-wrapper {
+    background: #c77934;
 width: calc(100% * 0.5);
     display: flex;
     flex-direction: column;
-    padding: 0;
-    font-size: 22px;
-    text-align: center;
-    justify-content: center;
+    padding: 80px 15px 30px;
 }
-.sbh-two {
-width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+.row-two-box-one-wrapper img, .row-two-box-two-wrapper img {
+    border-radius: 50%;
 }
-.sbh-two .presents {
+.row-two-box-one-content, .row-two-box-two-content {
+    margin: 0 auto;
+    color: #000;
+    padding: 30px 0 35px;
     font-size: 1.25rem;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
+    text-align: center;
+    max-width: 530px;
+}
+.row-two-box-two-wrapper {
+    background: #769b67;
+width: calc(100% * 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15px 30px;
+}
+.complex-sprite {
+    height: 485px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    background-image: url("book-sprite-alt.webp");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    animation: complex-sprite 10s steps(2) infinite;
+}
+@keyframes complex-sprite {
+to {
+background-position: -640px 0;
+}
+}
+
+@media (max-width: 640px) {
+.flower {
+    display: none;
+}
+.row-one-wrapper {
+    padding: 0;
+}
+}
+
+@media (max-width: 950px) {
+.row-one-section, .row-two-container {
+    max-width: 720px;
+}
+.row-one-container {
+    padding: 70px 15px 80px;
+    text-align: center;
+}
+.row-one-content {
     margin: 0;
 }
-.sbh-two h1 {
-    color: #fff;
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: .9;
-    margin-bottom: 25px;
-    letter-spacing: -2px;
+.author-list {
+    padding-left: 0;
+    list-style: none;
 }
-.sbh-two h2 {
-    color: #fff;
-    font-size: 1.3rem;
-    line-height: 1.5;
-    font-weight: 500;
+.row-one-image {
+    padding-bottom: 30px;
 }
-.sbh-two h3 {
-    color: #fff;
-    font-size: 1.4rem;
-}
-.sbh-content {
-    background: url("content-background.webp") center center no-repeat;
-    max-width: 730px;
-    padding: 0 15px 60px;
-}
-/* bottom container */
-.bottom-container {
-    background: #2d3338;
-    display: flex;
-    max-width: 1750px;
-    margin: 0 auto;
-}
-.bottom-wrapper {
-    margin: 0 auto;
-    display: flex;
-    width: 100%;
-    padding: 20px 15px 140px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.boxone-wrapper, .boxtwo-wrapper, .boxthree-wrapper, .boxfour-wrapper {
-    display: flex;
-    flex: 1;
+.row-one-wrapper, .row-two-wrapper {
     flex-direction: column;
-    background: #2d3338;
-    min-width: 330px;
-    max-width: 460px;
-    padding: 30px 30px 45px;
-    /* margin: 15px; */
-    align-items: center;
+    padding: 0;
 }
-.boxone-wrapper img, .boxtwo-wrapper img, .boxthree-wrapper img, .boxfour-wrapper img {
-    border: 3px solid #fff;
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
+.row-two-wrapper {
+    box-shadow: none;
 }
-.boxone-content, .boxtwo-content, .boxthree-content, .boxfour-content {
-    margin: 0 auto;
-    color: #fff;
-    padding: 20px 0 30px;
-    font-size: 1.125rem;
-    text-align: center;
-}
-.boxone-content h2, .boxtwo-content h2, .boxthree-content h2, .boxfour-content h2 {
-    font-size: 2rem;
-    line-height: 1.1;
-    margin: 0 0 10px;
-    font-weight: 500;
-    color: #fff;
-}
-#boxone, #boxtwo, #boxthree, #boxfour {
-    border: 6px solid #91a370;
-    border-radius: 50%;
-}
-.presents {
-    font-size: 1.35rem;
-}
-
-/* responsive rules */
-
-@media (max-width: 1475px) {
-.sbh-content {
-    background: none;
-}
-}
-
-@media (max-width: 1300px) {
-.sbh-container {
-    background: #dc4e58 url("bull-background-large.webp") 20% 100% no-repeat;
-}
-}
-
-@media (max-width: 1000px) {
-.sbh-wrapper {
-    flex-direction: column;
-}
-.sbh-two {
+.row-two-box-one-wrapper, .row-two-box-two-wrapper {
     width: 100%;
-    background: #2d3338;
-    align-items: center;
+    padding: 70px 15px 80px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,.3);
 }
-.sbh-container {
-    background: #dc4e58;
-}
-.sbh-content {
-    padding: 30px 15px 65px;
-}
-.sbh-two {
-    width: 100%;
-}
-.sbh-one {
-    background: #dc4e58 url("storybook-holiday/bull-small-background.webp") top center/cover;
-    width: 100%;
-    padding-top: 85%;
-}
-}
-
-@media (max-width: 685px) {
-.boxone-wrapper, .boxtwo-wrapper, .boxthree-wrapper, .boxfour-wrapper {
-    max-width: 600px;
-    padding: 30px 0px 45px;
-}
-}
-
-@media (max-width: 500px) {
-.sbh-two h1 {
-    font-size: 3.85rem;
+.row-two-box-two-wrapper {
+    margin-top: 50px;
 }
 }
 </style>
@@ -424,54 +397,67 @@ width: calc(100% * 0.5);
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row gradient-row">
-      <div class="background-wrapper">
-        <section>
-          <div class="sbh-container">
-            <div class="sbh-wrapper">
-              <div class="sbh-one"></div>
-              <div class="sbh-two">
-                <div class="sbh-content">
-                  <div class="presents">A Storybook Holiday:</div>
-                  <h1>Ferdinand's<br>
-                    Frolic</h1>
-                  <h2>Celebrate spring with playful activities, gentle wonder, and flowers&mdash;Sunday, March 29. <a class="white text-underline" href="storybook-holiday/">Buy&nbsp;Tickets</a></h2>
+    <div class="row background-row">
+      <section>
+        <div class="row-one-section">
+          <div class="row-one-container">
+            <div class="row-one-wrapper">
+              <div class="row-one-image">
+                <div class="flower"><img src="flower-design.webp" alt=""></div>
+                <div class="complex-sprite"></div>
+              </div>
+              <div class="row-one-content">
+                <h2 class="row-one-heading-one">Meet the Authors</h2>
+                <div>Get up-close with these bestselling writers. <a class="black text-underline" href="featured-events/">Buy&nbsp;Tickets</a>.</div>
+                <div>
+                  <ul class="author-list">
+                    <li>May 1: Alka Joshi, Six Days in Bombay</li>
+                    <li>May 16: Jack Carr, The Fourth Option</li>
+                    <!--<li>June 16: Brad Thor, Choke Point</li>-->
+                  </ul>
                 </div>
+                <div class="row-one-more-authors"><i>Hear from <a class="black text-underline" href="featured-events/#author-events">more great authors</a>.</i></div>
               </div>
             </div>
           </div>
-        </section>
-        <section>
-          <div class="bottom-container">
-            <div class="bottom-wrapper">
-              <div class="boxtwo-wrapper">
-                <div id="boxtwo"><img src="flower-two.webp" alt=""></div>
-                <div class="boxtwo-content">
-                    <h2>Join the Conversation</h2><div>Book clubs for all ages are here. <a class="white text-underline" href="book-clubs/">Get connected</a>.</div>
-                </div>
+        </div>
+      </section>
+      <section>
+        <div class="row-two-container">
+          <div class="row-two-wrapper">
+            <div class="row-two-box-one-wrapper">
+              <div id="row-two-box-one-image"></div>
+              <div class="row-two-box-one-content">
+                <h2 class="row-two-heading-one">Shop, Gift, Give Back</h2>
+                <div>Our Kendra Scott jewelry shopping event returns May&nbsp;2-3, benefiting the DCL Foundation. <a class="black text-underline" href="foundation/#kendra-scott">Get&nbsp;Details</a>.</div>
               </div>
-              <div class="boxfour-wrapper">
-                <div id="boxfour"><img src="flower-four.webp" alt=""></div>
-                <div class="boxfour-content">
-                  <h2>Meet the Authors!</h2>
-                  <div>May 1: Alka Joshi discusses Six Days in Bombay</div>
-                  <div>May 16: Jack Carr introduces The Fourth Option</div>
-                  <div><a class="white text-underline" href="featured-events/">Buy Tickets</a></div>
-                  <div class="padding-top-5"><i>Join us for <a class="white text-underline" href="featured-events/#author-events">even more authors</a>!</i></div>
-                </div>
+            </div>
+            <!--<div class="row-two-box-two-wrapper">
+              <div id="row-two-box-two-image"></div>
+              <div class="row-two-box-two-content">
+                <div class="text-uppercase row-two-from-archives">From the Archives:</div>
+                <h2 class="row-two-heading-one">Stars, Stripes & Summit Views</h2>
+                <div>Explore Douglas County’s place in the American story through this special ALH exhibit. <a class="black text-underline" href="https://archives.dcl.org/" target="_blank">Learn&nbsp;More</a>.</div>
               </div>
-              <div class="boxthree-wrapper">
-                <div id="boxthree"><img src="flower-three.webp" alt=""></div>
-                <div class="boxfour-content">
-                  <h2>Award Season Reads</h2>
-                  <div>Check out these <a class="white text-underline" href="https://dcl.bibliocommons.com/v2/list/display/692278051/2959353957">literary winners</a>!</div>
-                </div>
+            </div>-->
+            
+            <div class="row-two-box-two-wrapper">
+              <div id="row-two-box-two-image"></div>
+              <div class="row-two-box-two-content">
+                <h2 class="row-two-heading-one">Spring Gardening Series</h2>
+                <div><a class="black text-underline" href="https://go.dcl.org/events?term=spring+into+gardening&n=3&r=months">Get garden-ready</a> with expert guidance and tips from Master Gardener pros.</div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
+    <script>
+    var images = ['kendra-scott-one.webp', 'kendra-scott-two.webp'];
+    $('<img alt="Kendra Scott Event" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#row-two-box-one-image');
+	 var images = ['gardening-one.webp', 'gardening-two.webp'];
+    $('<img alt="Spring Gardening" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#row-two-box-two-image');
+</script> 
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
