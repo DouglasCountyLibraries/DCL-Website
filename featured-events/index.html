@@ -277,7 +277,7 @@ Push Notifications End - Removed for Now -->
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1350px;
+    max-width: 1650px;
     margin: 0 auto;
 }
 .photo-item {
@@ -880,7 +880,7 @@ opacity:0;
             </div>
           </div>
           
-          <!--<div class="photo-item black text-center bg-gray-5">
+          <div class="photo-item black text-center bg-gray-5">
             <div> <img class="img-responsive" src="brad-thor.webp" alt="Brad Thor, Author"></div>
             <div class="photo-item-inner">
               <div class="max-width-80">
@@ -895,11 +895,30 @@ opacity:0;
               <div class="h6 no-margin-bottom margin-top-5">Tickets: $33 General Admission | $7 Companion</div>
               <div class="padding-top-20"> 
               
-                <button class="btn btn-primary">Buy Tickets</button>
+                <!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.com/e/an-evening-with-nyt-bestselling-author-brad-thor-tickets-1984566198924" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+<!-- You can customize this button any way you like -->
+<button class="btn btn-primary" id="eventbrite-widget-modal-trigger-1984566198924" type="button">Buy Tickets</button>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1984566198924',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1984566198924',
+        onOrderComplete: exampleCallback
+    });
+</script>
                 
               </div>
             </div>
-          </div>--> 
+          </div>
           
         </div>
       </div>
