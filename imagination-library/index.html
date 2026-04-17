@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,6 +50,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 .kids-teens-active {
     background-color: #f5f5f5;
+}
+.dolly-background {
+    padding: 35px 15px 0;
+}
+.dolly-container {
+    display: flex;
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: right;
+}
+.dolly-checklist > li {
+    padding: 2px 0;
+}
+.dolly-checklist {
+    margin: 0;
+}
+.dolly-item-two {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 462px;
+    margin: -20px 0 0 5px;
+}
+.fa-li.fa-right {
+    position: revert;
+    margin-right: 5px;
 }
 h1.page-heading {
     margin: 0 !important;
@@ -109,18 +135,19 @@ h1.page-heading {
     border-right: 45px solid #fff;
     padding-bottom: 85px;
 }
-.wdw-info {
-    padding: 30px 30px 0 30px;
-}
-.dolly-checklist {
-    padding-top: 10px;
-}
-.dolly-checklist > li {
-    padding: 4px 0;
+
+@media (max-width: 1075px) {
+.dolly-container {
+    max-width: 800px;
+    flex-direction: column;
+    text-align: center;
 }
 .dolly-item-two {
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    min-width: inherit;
+    margin-top: 0;
+}
 }
 
 @media (max-width: 1050px) {
@@ -362,16 +389,35 @@ h1.page-heading {
         <div class="max-width-90">
           <h2 class="page-subheading">We're sending books to children in our community in partnership with Dolly Parton's Imagination Library.</h2>
         </div>
-        <div><img src="imagination-library-logo.jpg" alt="Dolly Parton's Imagination Library"></div>
       </div>
     </div>
-    <div class="row padding-bottom-50">
-      <div class="container custom-container">
-        <div class="h4 text-center no-margin-top margin-bottom-5">Where's Dolly Wednesday</div>
-        <div class="text-center"><i>Exclusive sponsorship opportunity</i>&mdash;bring Dolly to your business's doorstep! Support early literacy programs like Dolly Parton's Imagination Library by partnering with Douglas County Libraries for a special library pop-up at your business, Where's Dolly Wednesday, increasing foot traffic and visibility.
-          <div class="margin-top-5"><a href="#" data-toggle="modal" data-target="#dolly-modal"><i>Contact us</i></a><i> or call <a class="text-nowrap" href="tel:+13037643311">(303) 764-3311</a> to get started!</i></div>
+    <div id="wdw" class="row bg-gray-5">
+      <div class="dolly-background">
+        <div class="dolly-wrapper">
+          <div class="text-center no-margin h2">Where's Dolly Wednesday?</div>
+          <div class="h5 margin-top-5 text-center margin-bottom-20">Partner with DCL and Bring Dolly to Your Business's Doorstep</div>
+          <div class="dolly-container">
+            <div class="dolly-item-one">
+              <div class="padding-bottom-10">Take advantage of a fun and meaningful sponsorship opportunity: host our Dolly Parton cutout and DCL outreach team on an assigned Wednesday, and we’ll send customers your way.</div>
+              <div>Your Where's Dolly Wednesday sponsorship benefits the <a href="../foundation/">DCL Foundation</a> and supports community literacy programs like <a href="#dpil">Dolly Parton's Imagination Library</a>.</div>
+              <div class="h6 no-margin-bottom">As a host partner, you'll enjoy:</div>
+              <div class="checklist-wrapper">
+                <ul class="fa-ul dolly-checklist">
+                  <li><span class="fa-li fa-right"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Increased visibility through DCL’s website, e-newsletters, and social media</li>
+                  <li><span class="fa-li fa-right"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Increased foot traffic from library customers and families</li>
+                  <li><span class="fa-li fa-right"><i class="fa-solid fa-check" aria-hidden="true"></i></span>A feel-good way to invest in your community</li>
+                </ul>
+                <div class="h6 margin-top-10"><a href="#" data-toggle="modal" data-target="#dolly-modal"><i>Contact us</i></a><i> or call <a class="text-nowrap" href="tel:+13037643311">(303) 764-3311</a> to get started!</i></div>
+              </div>
+            </div>
+            <div class="dolly-item-two"><img class="img-responsive" src="../business/dolly-background.webp" alt=""></div>
+          </div>
         </div>
-        <div class="margin-top-10 margin-bottom-30 text-center"><a href="#" type="button" class="btn btn-primary" data-toggle="modal" data-target="#wdw-modal">Learn More</a></div>
+      </div>
+    </div>
+    <div id="dpil" class="row padding-bottom-50">
+      <div class="container custom-container">
+        <div class="text-center padding-top-40 padding-bottom-20"><img src="imagination-library-logo.jpg" alt="Dolly Parton's Imagination Library"></div>
         <div class="padding-bottom-5">Through Dolly Parton's Imagination Library, children ages 0-5 receive and get to keep a free high-quality, age-appropriate book each month, sent straight to their home. We're excited to help create more opportunities to read together, build strong literacy foundations, encourage a love of reading, and increase the potential for school success.</div>
         <div class="padding-bottom-15">It's easy and free! Register each child from birth to age five individually; every child in your Douglas County family may receive their own books. Let's inspire a love of reading together!</div>
         <div class="padding-bottom-30"><i>*Allow 6-8 weeks for delivery of your first book from Tennessee, after which books are delivered every month. </i></div>
@@ -431,38 +477,10 @@ h1.page-heading {
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="h3 text-center modal-title">Where's Dolly Wednesday</div>
+            <div class="h3 text-center modal-title">Where's Dolly Wednesday?</div>
           </div>
           <div class="modal-body padding-bottom-50"> 
             <script type="text/javascript" src="https://form.jotform.com/jsform/260394920124150"></script> 
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="wdw-modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="h3 text-center modal-title">Where's Dolly Wednesday</div>
-          </div>
-          <div class="modal-body-alt">
-            <div class="wdw-info">
-              <div class="h6 no-margin-top">Host our Dolly Parton cutout and DCL outreach team on an assigned Wednesday, and we’ll send customers your way.</div>
-              <div class="dolly-item-one">
-                <div class="h6 no-margin">As a host partner, you'll enjoy:</div>
-                <div class="checklist-wrapper">
-                  <ul class="fa-ul dolly-checklist">
-                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Increased visibility through DCL’s website, e-newsletters, and social media</li>
-                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Increased foot traffic from library customers and families</li>
-                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>A feel-good way to invest in your community</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="dolly-item-two"><img class="img-responsive" src="dolly-image.webp" alt=""></div>
           </div>
         </div>
       </div>
@@ -598,4 +616,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
