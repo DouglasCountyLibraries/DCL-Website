@@ -49,8 +49,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 <style>
 @font-face {
-    font-family: 'Floridian';
-    src: url('https://www.dcl.org/shared-assets/web-fonts/floridian-webfont.woff2') format('woff2'), url('https://www.dcl.org/shared-assets/web-fonts/floridian-webfont.woff') format('woff');
+    font-family: 'Bigboi';
+    src: url('https://www.dcl.org/shared-assets/web-fonts/BigboiStomse-Regular.woff2') format('woff2'), url('https://www.dcl.org/shared-assets/web-fonts/BigboiStomse-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -65,39 +65,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1920px;
     margin: 0 auto;
 }
-h1.floridian {
-    font-family: 'Floridian', serif;
+h1.Bigboi {
+    font-family: 'Bigboi', serif;
     margin: 0;
 }
 .fl-one {
     font-size: 4rem;
-    color: #333;
+    color: #601f11;
 }
 .fl-two {
-    font-size: 7rem;
-    text-transform: uppercase;
-    color: #4f964e;
-    white-space: nowrap;
+    font-size: 6rem;
+    color: #601f11;
     line-height: .8;
 }
-.fl-three {
-    font-size: 3.6rem;
-    color: #2a6140;
-    white-space: nowrap;
-    line-height: 1.2;
-}
 .background-one {
-    background: #fff url("bug-background.webp") bottom center no-repeat;
+    background: url("bug-background.webp") bottom center no-repeat;
 }
 .background-two {
-    background: #ddd;
+    background: #ecc893;
     color: #000;
 }
 .background-three {
-    background: #666;
+    background: #a8683b url("skull-background.webp");
 }
 .background-four {
-    background: #999;
+    background: #28649d;
     font-weight: 500;
 }
 .custom-container {
@@ -138,7 +130,7 @@ h1.floridian {
 }
 .link, .link:visited, .link:active {
     width: 260px;
-    background: #0f543e;
+    background: #874429;
     color: #fff;
     margin: 10px;
     padding: 20px 0;
@@ -148,21 +140,22 @@ h1.floridian {
     line-height: inherit;
     border-radius: 3px;
     transition-duration: 0.4s;
+    border: 6px solid #b53627;
 }
 .link:hover {
     color: #fff;
-    background: #398439;
+    background: #562313;
     letter-spacing: 2px;
     text-decoration: none;
     transition-duration: 0.4s;
 }
-.alt-link-wrapper {
+.barrel-link-wrapper {
     display: flex;
     justify-content: center;
     padding: 15px 0;
     flex-wrap: wrap;
 }
-.alt-link {
+.barrel-link {
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -171,20 +164,29 @@ h1.floridian {
     text-align: center;
     line-height: 20px;
     margin: 15px;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
 }
-.alt-link a {
-    color: #666;
+.barrel-link a {
+    color: #fff;
     font-weight: 700;
     transition-duration: 0.4s;
 }
-.alt-link a:hover {
-    color: #000;
+.barrel-link a:hover {
+    color: #fff;
     text-decoration: underline;
     transition-duration: 0.4s;
     letter-spacing: .5px;
 }
-.alt-link img {
-    margin: 5px 15px;
+.barrel-link.link-one {
+    background: url("barrel-background-one.webp") no-repeat;
+}
+.barrel-link.link-two {
+    background: url("barrel-background-two.webp") no-repeat;
+}
+.barrel-link.link-three {
+    background: url("barrel-background-three.webp") no-repeat;
 }
 .bug-heading {
     /* background: transparent url("bookworm-one.png") 52% 10px no-repeat; */
@@ -229,8 +231,8 @@ h1.floridian {
     color: #000;
 }
 .counter-wrapper {
-    background: #999;
-    /* padding-bottom: 125px; */
+    /* background: #999; */
+	/* padding-bottom: 125px; */
     max-width: 720px;
     margin: 0 auto;
 }
@@ -528,10 +530,9 @@ h1.floridian {
         <div class="background-one">
           <div class="custom-container one">
             <div class="text-center">
-              <h1 class="floridian">
-                <div class="fl-one">Howdy, Partner&mdash;Let's Read!</div>
-                <div class="fl-two"></div>
-                <div class="fl-three"></div>
+              <h1 class="Bigboi">
+                <div class="fl-one">Howdy, Partner</div>
+                <div class="fl-two">Let's Read!</div>
               </h1>
               <h2 class="sm-heading margin-bottom-5 font-weight-500">2026 Summer Fun for All Ages</h2>
               <h3 class="xsm-heading no-margin-top">Saturday, June&nbsp;6-Friday, July&nbsp;31</h3>
@@ -542,23 +543,17 @@ h1.floridian {
               <div class="link-wrapper"> <a class="link" href="https://dclibraries.beanstack.org/reader365" target="_blank">Register Now</a><a class="link" href="https://dclibraries.beanstack.org/users/sign_in" target="_blank">Sign In</a> </div>
               <div class="text-center max-width-70">You can also do the supplemental activities we suggest on <a href="2025-summer-reading-log.pdf" target="_blank">the reading log</a>. We aren’t set on you reading 1,000 minutes, we just want you to read and have barrels of fun while doing it!</div>
             </div>
-            <div class="alt-link-wrapper">
-              <div class="alt-link">
-                <div><img src="bug-two.jpg" alt=""></div>
-                <div>Prize Pickup Kickoff</div>
-              </div>
-              <div class="alt-link">
-                <div><img src="bug-four.jpg" alt=""></div>
-                <div>Summer Events Roundup</div>
-              </div>
-              <div class="alt-link">
-                <div><img src="bug-one.jpg" alt=""></div>
-                <div><a href="#prizes">Prize Pickup</a></div>
-              </div>
-              <div class="alt-link">
-                <div><img src="bug-three.jpg" alt=""></div>
-                <div>Wild West Jokes & Facts</div>
-              </div>
+            <div class="barrel-link-wrapper">
+              <div class="barrel-link link-one"> <a href="#">Prize<br>
+                Pickup<br>
+                Kickoff</a> </div>
+              <div class="barrel-link link-two"> <a href="#">Summer<br>
+                Events<br>
+                Roundup</a> </div>
+              <div class="barrel-link link-three"> <a href="#">Wild&nbsp;West<br>
+                Jokes<br>
+                &<br>
+                Facts</a> </div>
             </div>
           </div>
         </div>
