@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 h1.Bigboi {
     font-family: 'Bigboi', serif;
-    margin: 0;
+    line-height: .9;
 }
 .fl-one {
     font-size: 6rem;
@@ -75,8 +75,12 @@ h1.Bigboi {
 }
 .fl-two {
     font-size: 4.6rem;
+    margin: 10px 0 0;
     color: #601f11;
-    line-height: .85;
+}
+.heading-wrapper {
+    background: url("heading-background.webp") bottom center no-repeat;
+    text-align: center;
 }
 .background-one {
     background: url("ranch-background-large.webp") bottom center no-repeat;
@@ -296,6 +300,21 @@ h1.Bigboi {
 }
 }
 
+@media (max-width: 1200px) {
+.background-one {
+    background: url("ranch-background-medium.webp") 75% 100% no-repeat;
+}
+.custom-container.one {
+    padding: 20px 10px 300px;
+}
+}
+
+@media (max-width: 1100px) {
+.heading-wrapper {
+    background: none;
+}
+}
+
 @media (min-width: 976px) {
 .cowboys-two {
     display: none;
@@ -333,21 +352,13 @@ h1.Bigboi {
 .counter-wrapper {
 }
 .counter {
+    font-size: 3.5rem;
 }
 }
 
 @media (max-width: 700px) {
 .giveaway-wrapper {
     flex-wrap: wrap;
-}
-}
-
-@media (max-width: 425px) {
-.fl-one {
-    font-size: 5rem;
-}
-.fl-two {
-    font-size: 5.8rem;
 }
 }
 </style>
@@ -547,13 +558,13 @@ h1.Bigboi {
       <div class="row-wrapper">
         <div class="background-one">
           <div class="custom-container one">
-            <div class="text-center">
+            <div class="heading-wrapper">
               <h1 class="Bigboi">
                 <div class="fl-one">Howdy, Partner</div>
                 <div class="fl-two">Let's Read!</div>
               </h1>
               <h2 class="sm-heading margin-bottom-5 font-weight-500">2026 Summer Fun for All Ages</h2>
-              <h3 class="xsm-heading no-margin-top text-dark">Saturday, June&nbsp;6-Friday, July&nbsp;31</h3>
+              <h3 class="xsm-heading no-margin-top text-dark font-weight-500">Saturday, June&nbsp;6-Friday, July&nbsp;31</h3>
             </div>
             <div class="intro-text">
               <div class="h5 no-margin-top margin-bottom-5 font-weight-500">Saddle up for a summer of exciting activities, challenges, prizes, and giveaways!</div>
