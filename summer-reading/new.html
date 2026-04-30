@@ -106,11 +106,15 @@ h1.Bigboi {
     font-weight: 500;
 }
 .custom-container.three {
-    padding: 70px 10px 80px;
+    padding: 70px 10px 100px;
     font-weight: 500;
 }
 .custom-container.four {
-    padding: 70px 10px 90px;
+    padding: 80px 10px 0;
+}
+.four-wrapper {
+    background: #4db54e;
+    padding: 30px 0 50px;
 }
 .intro-text {
     text-align: center;
@@ -220,7 +224,7 @@ h1.Bigboi {
 }
 .prize-item {
     max-width: 850px;
-    background: rgba(255,255,255,.1);
+    background: rgba(86,35,19,.6);
     padding: 30px 30px 40px;
     margin: 5px;
     border-radius: 3px;
@@ -249,48 +253,59 @@ h1.Bigboi {
 .counter {
     font-size: 4.2rem;
     font-weight: 600;
-    color: #fff;
+    color: #000;
     text-align: center;
     line-height: 1;
-    padding-top: 60px;
+    padding-top: 30px;
     text-shadow: 0px 0px 35px rgba(255,255,255,.5);
 }
 .counter:not(.is-visible) {
     visibility: hidden;
 }
 .minutes {
-    color: #fff;
+    color: #000;
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 10px;
     text-transform: uppercase;
 }
 .minutes-placeholder {
-    color: #fff;
+    color: #000;
     font-size: 1.3rem;
     font-weight: 500;
     padding-top: 60px;
     text-align: center;
 }
-.leaderboard-wrapper {
-    background: #fff;
-    max-width: 850px;
-    margin: 0 auto;
+.cowboys-one {
+    margin: -170px 0 0;
+    display: flex;
+    justify-content: center;
 }
-.leaderboard-wrapper > .table-responsive > .table {
-    margin: 0;
-}
-.leaderboard-wrapper > .table-responsive > .table > thead > tr > th {
-    border-bottom-width: 0px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-.smaller {
-    font-size: 16px;
-    text-transform: uppercase;
+.cowboys-two {
+    margin: -30px 0 0;
+    display: flex;
+    justify-content: center;
 }
 .modal-body {
     padding: 20px 30px 40px;
+}
+
+@media (max-width: 1450px) {
+.cowboys-one {
+    margin: -60px 0 0;
+}
+}
+
+@media (min-width: 976px) {
+.cowboys-two {
+    display: none;
+}
+}
+
+@media (max-width: 975px) {
+.cowboys-one {
+    display: none;
+}
 }
 
 @media (max-width: 875px) {
@@ -316,21 +331,14 @@ h1.Bigboi {
     margin: 5px 0;
 }
 .counter-wrapper {
-    background: #544386 url("goals-background.webp") 50% 100% no-repeat;
-    padding-bottom: 295px;
-    max-width: 720px;
-    margin: 0 auto;
 }
 .counter {
-    padding-top: 20px;
 }
 }
 
-@media (max-width: 620px) {
-.bug-heading {
-    /* background: transparent url("bookworm-one.png") 52% 10px no-repeat; */
-	/* padding: 70px 0 40px; */
-    margin: 0;
+@media (max-width: 700px) {
+.giveaway-wrapper {
+    flex-wrap: wrap;
 }
 }
 
@@ -607,7 +615,7 @@ h1.Bigboi {
               <h2 class="lg-heading white text-uppercase text-center font-weight-500">Prizes</h2>
               <div class="large-text white text-center padding-left-10 padding-right-10">Prizes available June 6-August 7, while supplies last.</div>
               <div class="prize-container">
-                <div class="ladybug-log"><img class="img-responsive" src="ladybug-log.webp" alt=""></div>
+                <div class="ladybug-log"><img class="img-responsive" src="cactus-cowboy.webp" alt=""></div>
                 <div class="prize-wrapper">
                   <div class="prize-item">
                     <h3 class="sm-heading white no-margin-top">Sign-Up Prizes</h3>
@@ -635,51 +643,55 @@ h1.Bigboi {
         <section>
           <div id="goals" class="background-four">
             <div class="custom-container four">
-              <h2 class="lg-heading white text-uppercase text-center font-weight-500">Goals</h2>
-              <div class="white large-text text-center">Help us meet our community goal of 10.5 million minutes read!</div>
-              <div class="goal-wrapper">
-                <div class="goal-item">
-                  <h4 class="black margin-bottom-5 no-margin-top"><a class="black text-underline" href="https://dclibraries.beanstack.org/reader365" target="_blank">Add your minutes</a> to help us meet our goal.</h4>
-                  <div>If we meet the community goal, the <a class="black text-underline font-weight-500" href="../foundation/">Douglas County Libraries Foundation </a>will donate $1,000 to the Douglas County&nbsp;4-H Youth Council, which works to organize and lead events and activities in support of Douglas County&nbsp;4-H.</div>
-                  <h4 class="sm-heading margin-bottom-5 black">Help your school earn $500!*</h4>
-                  <div>All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school's name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a class="black text-underline font-weight-500" href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>.</div>
-                  <div class="padding-top-10">*The leader board will be posted here and updated each Monday through July 31. </div>
+              <div class="four-wrapper">
+                <h2 class="lg-heading black text-uppercase text-center font-weight-500">Goals</h2>
+                <div class="black large-text text-center">Help us meet our community goal of 10.5 million minutes read!</div>
+                <div class="goal-wrapper">
+                  <div class="goal-item">
+                    <h4 class="black margin-bottom-5 no-margin-top"><a class="black text-underline" href="https://dclibraries.beanstack.org/reader365" target="_blank">Add your minutes</a> to help us meet our goal.</h4>
+                    <div>If we meet the community goal, the <a class="black text-underline font-weight-500" href="../foundation/">Douglas County Libraries Foundation </a>will donate $1,000 to the Douglas County&nbsp;4-H Youth Council, which works to organize and lead events and activities in support of Douglas County&nbsp;4-H.</div>
+                    <h4 class="sm-heading margin-bottom-5 black">Help your school earn $500!*</h4>
+                    <div>All you have to do is sign up (and remind your friends and classmates to sign up, too!), making sure you include your school's name and your grade when you register. The school with the most sign-ups by July 31 will be awarded $500. Award recipients announced in August. See <a class="black text-underline font-weight-500" href="#" data-toggle="modal" data-target="#modalrules">contest rules and restrictions</a>.</div>
+                    <div class="padding-top-10">*The leader board will be posted here and updated each Monday through July 31. </div>
+                  </div>
+                  <div class="goal-item">
+                    <h4 class="black margin-bottom-5 no-margin-top">Who's ahead?*</h4>
+                    <div>Elementary School:</div>
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa-regular fa-circle-1"></i>Roxborough Elementary</li>
+                      <li><i class="fa-li fa-regular fa-circle-2"></i>Northridge Elementary</li>
+                      <li><i class="fa-li fa-regular fa-circle-3"></i>Bear Canyon Elementary</li>
+                    </ul>
+                    <div>Middle School:</div>
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa-regular fa-circle-1"></i>Mountain Ridge Middle School</li>
+                      <li><i class="fa-li fa-regular fa-circle-2"></i>Mesa Middle School</li>
+                      <li><i class="fa-li fa-regular fa-circle-3"></i>Ranch View Middle School</li>
+                    </ul>
+                    <div>High School:</div>
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa-regular fa-circle-1"></i>Thunderridge High School</li>
+                      <li><i class="fa-li fa-regular fa-circle-2"></i>Douglas County High School</li>
+                      <li><i class="fa-li fa-regular fa-circle-3"></i>Rock Canyon High School</li>
+                    </ul>
+                    <div>Other (Charter/K-12):</div>
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa-regular fa-circle-1"></i>Renaissance Elementary Magnet School</li>
+                      <li><i class="fa-li fa-regular fa-circle-2"></i>DC Montessori Charter School</li>
+                      <li><i class="fa-li fa-regular fa-circle-3"></i>Ben Franklin Academy</li>
+                    </ul>
+                    <div class="">*Leader board will be updated each Monday through July 31.</div>
+                  </div>
                 </div>
-                <div class="goal-item">
-                  <h4 class="black margin-bottom-5 no-margin-top">Who's ahead?*</h4>
-                  <div>Elementary School:</div>
-                  <ul class="fa-ul">
-                    <li><i class="fa-li fa-regular fa-circle-1"></i>Roxborough Elementary</li>
-                    <li><i class="fa-li fa-regular fa-circle-2"></i>Northridge Elementary</li>
-                    <li><i class="fa-li fa-regular fa-circle-3"></i>Bear Canyon Elementary</li>
-                  </ul>
-                  <div>Middle School:</div>
-                  <ul class="fa-ul">
-                    <li><i class="fa-li fa-regular fa-circle-1"></i>Mountain Ridge Middle School</li>
-                    <li><i class="fa-li fa-regular fa-circle-2"></i>Mesa Middle School</li>
-                    <li><i class="fa-li fa-regular fa-circle-3"></i>Ranch View Middle School</li>
-                  </ul>
-                  <div>High School:</div>
-                  <ul class="fa-ul">
-                    <li><i class="fa-li fa-regular fa-circle-1"></i>Thunderridge High School</li>
-                    <li><i class="fa-li fa-regular fa-circle-2"></i>Douglas County High School</li>
-                    <li><i class="fa-li fa-regular fa-circle-3"></i>Rock Canyon High School</li>
-                  </ul>
-                  <div>Other (Charter/K-12):</div>
-                  <ul class="fa-ul">
-                    <li><i class="fa-li fa-regular fa-circle-1"></i>Renaissance Elementary Magnet School</li>
-                    <li><i class="fa-li fa-regular fa-circle-2"></i>DC Montessori Charter School</li>
-                    <li><i class="fa-li fa-regular fa-circle-3"></i>Ben Franklin Academy</li>
-                  </ul>
-                  <div class="">*Leader board will be updated each Monday through July 31.</div>
+                <div class="counter-wrapper"> 
+                  <!--<div class="minutes-placeholder">Minutes tracking bee-gins May 31!</div>-->
+                  <div class="counter">1,398,276</div>
+                  <div class="minutes text-center">Minutes Read</div>
                 </div>
-              </div>
-              <div class="counter-wrapper"> 
-                <!--<div class="minutes-placeholder">Minutes tracking bee-gins May 31!</div>-->
-                <div class="counter">1,398,276</div>
-                <div class="minutes text-center">Minutes Read</div>
               </div>
             </div>
+            <div class="cowboys-one"><img class="img-responsive" src="cowboys-large.webp"></div>
+            <div class="cowboys-two"><img class="img-responsive" src="cowboys-small.webp"></div>
           </div>
         </section>
       </div>
@@ -709,8 +721,8 @@ h1.Bigboi {
             <div id="modalruleslabel" class="h5 no-margin modal-title text-center">Contest Rules and Restrictions</div>
           </div>
           <div class="modal-body">
-            <div>Contest applies only to K-12 students in schools located in Douglas County and accredited by the Colorado Department of Education. Awards will be given to one school at each level: elementary, middle, high, and other (e.g., charter, K-12). </div>
-            <div class="padding-top-15">Sign-ups are tallied through Beanstack online registration. The school in each category with the most sign-ups as a percentage of 2024-2025 enrollment earns the award.</div>
+            <div>Contest applies only to K-12 students in schools located in Douglas County and accredited by the Colorado Department of Education. Awards will be given to one school at each level: elementary, middle, high, and other (e.g., charter, K-12).</div>
+            <div class="padding-top-15">Sign-ups are tallied through Beanstack online registration. The school in each category with the most sign-ups as a percentage of 2025-2026 enrollment earns the award.</div>
             <div class="padding-top-15">Contest runs May 1-July 31. Prizes courtesy of <a href="../foundation/">Douglas County Libraries Foundation</a>. Award recipients will be notified in August 2026.</div>
           </div>
         </div>
