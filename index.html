@@ -296,7 +296,7 @@ background-position: -960px 0;
     transition-duration: 0.3s;
 }
 .slide {
-    animation: slide 15s cubic-bezier(0, 0, 0, 0) 5s both;
+    animation: slide 10s cubic-bezier(0, 0, 0, 0) 5s both;
 }
 @keyframes slide {
 0% {
@@ -308,11 +308,11 @@ transform: translateX(102vw);
 }
 .bubble {
     position: relative;
-    left: 240px;
-    bottom: -20px;
+    left: 230px;
+    bottom: -60px;
     height: 164px;
     width: 239px;
-    animation: bubble 10s cubic-bezier(0, 0, 0, 0) 6s both;
+    animation: bubble 10s cubic-bezier(0, 0, 0, 0) 5s both;
 }
 @keyframes bubble {
 0% {
@@ -339,8 +339,14 @@ transform: rotate(720deg);
 }
 }
 .tumbleweed {
-    animation: rotation 4s linear infinite;
+    animation: rotation 3s linear infinite;
 }
+    @media (max-width: 1920px) {
+        .slide {
+            animation: slide 8s cubic-bezier(0, 0, 0, 0) 5s both;
+        }
+    }
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
