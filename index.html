@@ -277,6 +277,77 @@ background-position: -960px 0;
     margin-top: 50px;
 }
 }
+/* 
+    ################
+    summer reading tumbleweed
+    ################
+*/
+    
+.slide:hover, .slide:focus {
+    bottom: 55px;
+    transition-duration: 0.2s;
+}
+.slide {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 464px;
+    transition-duration: 0.3s;
+}
+.slide {
+    animation: slide 15s cubic-bezier(0, 0, 0, 0) 5s both;
+}
+@keyframes slide {
+0% {
+transform: translateX(-300px);
+}
+100% {
+transform: translateX(102vw);
+}
+}
+.bubble {
+    position: relative;
+    left: 240px;
+    bottom: -20px;
+    height: 164px;
+    width: 239px;
+    animation: bubble 10s cubic-bezier(0, 0, 0, 0) 6s both;
+}
+@keyframes bubble {
+0% {
+opacity: 0;
+}
+1% {
+opacity: 1;
+}
+100% {
+opacity: 1;
+}
+}
+.tumbleweed {
+    width: 300px;
+    height: 300px;
+    background: url('tumbleweed.webp') left center;
+}
+@keyframes rotation {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(720deg);
+}
+}
+.tumbleweed {
+    animation: rotation 4s linear infinite;
+}
+
+@media (max-width: 992px) {
+.bubble {
+}
+.slide {
+}
+}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -560,6 +631,9 @@ background-position: -960px 0;
         </div>
       </div>
     </div>
+    <div class="slide"><a href="summer-reading/"><img class="bubble" src="talk-bubble.webp" alt="Register for Summer Reading">
+      <div class="tumbleweed"></div>
+      </a> </div>
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
