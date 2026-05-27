@@ -28,7 +28,7 @@ function createAllPageTitle(title)
       '<h1 class="page-heading">What&#39;s New</h1>',
    ' </div>',
      '<h2 class="margin-bottom-5">' + title + '</h2>',
-      '<div><a class="text-uppercase font-weight-400" href="../whats-new">« Return to Categories</a></div>'     
+      '<div><a class="text-uppercase font-weight-500" href="../whats-new">« Return to Categories</a></div>'     
 	 ].join('\n');
       
     return x;
@@ -41,7 +41,7 @@ function createPreShelf(title, keyName, seq)
  
   ' <div id="covers-' + seq + '" class ="shelf-container text-center"> ',
     ' <h2 class="no-margin-bottom"><a href="all.html?key=' + keyName + '&title=' + title + '">' +decodedTitle+ '</a></h2> ',
-		' <div><a class="text-uppercase font-weight-400" href="all.html?key=' + keyName + '&title=' + title + '">See Entire List &raquo;</a></div></div> '
+		' <div><a class="text-uppercase font-weight-500" href="all.html?key=' + keyName + '&title=' + title + '">See Entire List &raquo;</a></div></div> '
 	].join('\n');
     return x;
 }
