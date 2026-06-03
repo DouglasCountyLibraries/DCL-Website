@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,6 +86,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 1.25rem;
     max-width: 650px;
 }
+.row-one-heading-one {
+    margin-top: 0;
+    color: #000;
+}
+.cowboy-cactus {
+    padding-bottom: 30px;
+}
 h2.row-two-heading-one {
     font-size: 1.875rem;
     line-height: 1.2;
@@ -149,7 +157,6 @@ width: calc(100% * 0.5);
     padding: 80px 15px 30px;
 }
 
-
 @media (max-width: 950px) {
 .row-one-section, .row-two-container {
     max-width: 720px;
@@ -161,15 +168,10 @@ width: calc(100% * 0.5);
 .row-one-content {
     margin: 0;
 }
-    
-    .flower img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
-
-.row-one-image {
-    padding-bottom: 30px;
+.cowboy-cactus img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .row-one-wrapper, .row-two-wrapper {
     flex-direction: column;
@@ -187,7 +189,6 @@ width: calc(100% * 0.5);
     margin-top: 50px;
 }
 }
-
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -397,8 +398,7 @@ width: calc(100% * 0.5);
           <div class="row-one-container">
             <div class="row-one-wrapper">
               <div class="row-one-image">
-                <div class="flower"><img src="cactus-cowboy.webp" alt=""></div>
-                
+                <div class="cowboy-cactus"><img src="cactus-cowboy.webp" alt=""></div>
               </div>
               <div class="row-one-content">
                 <h2 class="row-one-heading-one">Howdy, Partner&nbsp;- Let's Read!</h2>
@@ -413,30 +413,24 @@ width: calc(100% * 0.5);
         <div class="row-two-container">
           <div class="row-two-wrapper">
             <div class="row-two-box-one-wrapper">
-              <div id="row-two-box-one-image"></div>
+              <div id="row-two-box-one-image"><img class="img-responsive image-center" src="brad-thor-alt.webp" alt="Brad Thor"></div>
               <div class="row-two-box-one-content">
                 <h2 class="row-two-heading-one">DCL Presents: Brad Thor</h2>
                 <div><a class="white text-underline" href="featured-events/">Buy&nbsp;tickets&nbsp;now</a> for an evening with the New York Times bestselling author. <i>Hear from <a class="white text-underline" href="featured-events/#author-events">more great authors</a>.</i></div>
               </div>
             </div>
             <div class="row-two-box-two-wrapper">
-              <div id="row-two-box-two-image"></div>
+              <div id="row-two-box-two-image"><img class="img-responsive image-center" src="liane-moriarty.webp" alt="Liane Moriarty"></div>
               <div class="row-two-box-two-content">
                 <h2 class="row-two-heading-two">Big Little News&#8230</h2>
-                <div>Get first dibs on Liane Moriarty tickets!<br><a class="white text-underline" href="newsletters/">Subscribe to DCL eNews</a>.</div>
+                <div>Get first dibs on Liane Moriarty tickets!<br>
+                  <a class="white text-underline" href="newsletters/">Subscribe to DCL eNews</a>.</div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </div>
-    <script>
-    var images = ['summer-reading-one.webp', 'summer-reading-two.webp', 'summer-reading-three.webp'];
-    $('<img alt="Summer Reading" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#row-two-box-one-image');
-	 var images = ['liane-moriarty.webp', 'liane-moriarty.webp'];
-    $('<img alt="Liane Moriarty" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#row-two-box-two-image');
-</script>
-
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
@@ -559,4 +553,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
