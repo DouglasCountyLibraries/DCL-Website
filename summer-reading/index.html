@@ -44,6 +44,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
+<!--<script>
+async function loadGoalTally() {
+    const url = "https://dclibraries.beanstack.org/reader365";
+
+    // Fetch the HTML as text
+    const response = await fetch(url, { mode: "cors" });
+    const html = await response.text();
+
+    // Parse the HTML into a DOM
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+
+    // Select the div
+    const div = doc.querySelector("div.statistics--goal-tally");
+
+    if (div) {
+        const raw = div.textContent.trim();
+        const number = raw.replace(/,/g, ""); // remove commas
+
+        // Put it into your page
+        document.getElementById("myCounter").textContent = raw;
+    }
+}
+
+loadGoalTally();
+</script>--> 
 <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 <style>
 @font-face {
@@ -769,6 +795,10 @@ h1.Bigboi {
         </section>
       </div>
     </div>
+    
+    <!-- fetch scraped data <div>
+    My counter: <span id="myCounter">Loading…</span>
+</div>--> 
     
     <!-- Modal -->
     <div class="modal fade" id="kickoff" tabindex="-1" role="dialog" aria-labelledby="kickoff">
