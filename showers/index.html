@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,30 +44,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .reserve-a-space-active {
     background-color: #f5f5f5;
-}
-.row.showers-row {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-.showers-row h3 {
-    text-align: center;
-}
-.wedding-showers, .baby-showers {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-.align-bottom {
-    margin-top: auto;
-    text-align: center;
-    padding-top: 25px;
 }
 .fa-li > .fa-solid.fa-check {
     color: #90ad63;
@@ -75,14 +55,155 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .checklist > li {
     padding: 4px 0;
 }
-
-@media (max-width: 800px) {
-.row.showers-row {
-    flex-direction: column;
-    gap: 0;
+/* slideshow */
+	
+.slideshow-container {
+    display: flex;
+    max-width: 1610px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-.wedding-showers {
-    padding-bottom: 30px;
+.slideshow-wrapper {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+.slideshow-image {
+    background: #fff;
+width: calc(100% * 0.60);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slideshow-info {
+    background: #f5f5f5;
+    color: #000;
+width: calc(100% * 0.40);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    margin-left: -40px;
+}
+.slideshow-arrow {
+    background: url("../shared-assets/images/slideshow-arrow-left.png") 100% 48% no-repeat;
+    width: 40px;
+    position: relative;
+    z-index: 100;
+    left: -30px;
+}
+.slideshow-content {
+    padding: 0 30px;
+}
+.slideshow-pic {
+    min-height: 600px;
+    position: relative;
+}
+.pic-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*animation*/
+    animation: slideShow 54s ease-out infinite 0s;
+}
+.pic-2 {
+    transform-origin: bottom right;
+}
+.pic-3 {
+    transform-origin: top left;
+}
+.pic-4 {
+    transform-origin: top right;
+}
+.pic-5 {
+    transform-origin: bottom left;
+}
+.pic-6 {
+    transform-origin: center center;
+}
+.pic-7 {
+    transform-origin: bottom right;
+}
+.pic-8 {
+    transform-origin: top left;
+}
+.pic-9 {
+    transform-origin: bottom left;
+}
+	
+/* keyframes*/
+@keyframes slideShow {
+0% {
+opacity: 0;
+transform:scale(1);
+}
+2% {
+opacity: 1
+}
+15% {
+opacity: 1;
+}
+18% {
+opacity: 0;
+transform:scale(1.1);
+}
+100% {
+opacity: 0;
+transform:scale(1);
+}
+}
+
+@media (max-width: 925px) {
+.slideshow-wrapper {
+    flex-direction: column;
+}
+.slideshow-info {
+    margin: -40px 0 0;
+}
+.slideshow-content {
+    padding: 40px 15px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.slideshow-arrow {
+    background: url("../shared-assets/images/slideshow-arrow-top.png") 50% 100% no-repeat;
+    width: 100%;
+    height: 40px;
+    z-index: 100;
+    top: -30px;
+    position: relative;
+    margin: 0 auto;
+    left: auto;
+}
+.slideshow-image, .slideshow-info {
+    width: 100%;
+}
+}
+
+@media (max-width: 725px) {
+.slideshow-pic {
+    min-height: 400px;
+}
+}
+
+@media (max-width: 575px) {
+.slideshow-pic {
+    min-height: 300px;
+}
+.slideshow-arrow {
+    display: none;
+}
+.slideshow-info {
+    margin: 0;
 }
 }
 </style>
@@ -290,94 +411,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row border-top padding-bottom-30">
       <div class="container text-center">
-        <h1 class="page-heading">Showers at DCL</h1>
-        <h2 class="page-subheading">Celebrate your <a href="#wedding-showers">wedding</a> or <a href="#baby-showers">baby shower</a> at Douglas County Libraries!</h2>
-        <div class="max-width-80">Showers are available Saturday and Sunday, 2-4 p.m., subject to availability. Reservations must be made at least 15 business days before the requested event date. For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</div>
+        <h1 class="page-heading">Baby Showers</h1>
+        <div class="h1 text-uppercase no-margin">at DCL</div>
+        <div class="max-width-80">
+          <h2 class="page-subheading">Celebrate at Douglas County Libraries!</h2>
+          <div>Showers are available Saturday and Sunday, 2-4 p.m., subject to availability. Reservations must be made at least 15&nbsp;business days before the requested event date. For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</div>
+        </div>
       </div>
     </div>
     <section>
-      <div class="row showers-row">
-        <div id="wedding-showers" class="wedding-showers">
-          <div id="wedding-shower-photo"></div>
-          <h3>Wedding Showers</h3>
-          <div>$295 for up to 18 guests (guest of honor + 17 guests); add $15 per additional guest.</div>
-          <h4 class="xsm-heading">Wedding Shower Package Includes:</h4>
-          <div>
-            <ul class="fa-ul checklist">
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Event setup, cleanup, and a dedicated party coordinator</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Three standard activities</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Two standard crafts</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>18 party favors for you and your guests</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Photobooth with access to digital gallery</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Water service and sparkling cider</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Charcuterie board (nut-free and gluten-free options available)</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Room reservation/booking service</li>
-            </ul>
-          </div>
-        </div>
-        <div id="baby-showers" class="baby-showers">
-          <div id="baby-shower-photo"></div>
-          <h3>Baby Showers</h3>
-          <div>$295 for up to 20 guests (guest of honor + 19 guests); add $15 per additional guest.</div>
-          <h4 class="xsm-heading">Baby Shower Package Includes:</h4>
-          <div>
-            <ul class="fa-ul checklist">
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Event setup, cleanup, and a dedicated party coordinator</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>20 party favors for you and your guests</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Water service and sparkling cider</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Charcuterie board (nut-free and gluten-free options available)</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Room reservation/booking service</li>
-            </ul>
-          </div>
-          <h4 class="xxsm-heading no-margin-top">Optional add-on package for an additional $200:</h4>
-          <div>
-            <ul class="fa-ul checklist">
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Photobooth with access to digital gallery</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>One standard craft</li>
-              <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Three standard activities</li>
-            </ul>
+      <div class="row padding-bottom-40">
+        <div class="slideshow-container">
+          <div class="slideshow-wrapper">
+            <div class="slideshow-image">
+              <div class="slideshow-pic">
+                <div class="pic-wrapper" id="pic-wrapper">
+                  <figure id="fig1"></figure>
+                  <figure id="fig2"></figure>
+                  <figure id="fig3"></figure>
+                  <figure id="fig4"></figure>
+                  <figure id="fig5"></figure>
+                  <figure id="fig6"></figure>
+                  <figure id="fig7"></figure>
+                  <figure id="fig8"></figure>
+                  <figure id="fig9"></figure>
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-arrow"></div>
+            <div class="slideshow-info">
+              <div class="slideshow-content">
+                <h3 class="xxsm-heading no-margin-top margin-bottom-10">Baby Showers are $295 for up to 20 guests (guest of honor +&nbsp;19 guests); add $15 per additional guest. Each package includes:</h3>
+                <div>
+                  <ul class="fa-ul checklist">
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Event setup, cleanup, and a dedicated party coordinator</li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>20 party favors for you and your guests</li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Water service and sparkling cider</li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Charcuterie board (nut-free and gluten-free options available)</li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Room reservation/booking service</li>
+                  </ul>
+                </div>
+                <h4 class="xxsm-heading no-margin-top">Optional add-on package for an additional $200:</h4>
+                <div>
+                  <ul class="fa-ul checklist">
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Photobooth with access to digital gallery</li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>One standard craft</li>
+                    <li><span class="fa-li"><i class="fa-solid fa-check" aria-hidden="true"></i></span>Three standard activities</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <script>
-    
-	
-	var images = ['wedding-shower-one.webp', 'wedding-shower-two.webp', 'wedding-shower-three.webp','wedding-shower-four.webp', 'wedding-shower-five.webp', 'wedding-shower-six.webp','wedding-shower-seven.webp', 'wedding-shower-eight.webp', 'wedding-shower-nine.webp'];
-    $('<img alt="Wedding Shower Photo" class="img-responsive image-center" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#wedding-shower-photo');
-              
-              var images = ['baby-shower-one.webp', 'baby-shower-two.webp', 'baby-shower-three.webp', 'baby-shower-four.webp', 'baby-shower-five.webp'];
-    $('<img alt="Baby Shower Photo" class="img-responsive image-center" src="photos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#baby-shower-photo');
-	
-
-</script>
     <section>
-      <div class="row padding-bottom-60 padding-top-20">
-        <div class="container text-center">
-          <div class="max-width-80"><div> <a href="https://go.dcl.org/reserve?bookingType=1732" target="_blank" class="btn btn-primary">Get Started</a> </div>
+      <div class="row padding-bottom-80">
+        <div class="max-width-80">
+          <div class="text-center"> <a href="https://go.dcl.org/reserve?bookingType=1732" class="btn btn-primary">Get Started</a>
             <div class="padding-top-20">Have questions? Call Event + Hospitality Services at <span class="text-nowrap"><a href="tel:303-688-7605">(303) 688-7605</a></span>.</div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Modal -->
-    <div class="modal fade" id="restrictions" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <div class="h4 text-center modal-title">Restrictions:</div>
-          </div>
-          <div class="padding-30">
-            <ul>
-              <li>Reservations must be made at least 15 business days before the requested event date.</li>
-              <li>For additional décor, food and beverage, <a href="../meeting-room-guidelines/">standard room terms and conditions</a> apply.</li>
-              <li>Showers are available Saturday and Sunday, 2-4 p.m., subject to availability.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
@@ -441,7 +537,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var images = [
+        "slideshow/shower-one.webp",
+        "slideshow/shower-two.webp",
+		"slideshow/shower-three.webp",
+		"slideshow/shower-four.webp",
+		"slideshow/shower-five.webp",
+		"slideshow/shower-six.webp",
+		"slideshow/shower-seven.webp",
+		"slideshow/shower-eight.webp",
+		"slideshow/shower-nine.webp"
+    ];
+    // Shuffle images
+    for (var i = images.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
+    }
+    // Apply the images as background
+    var figures = document.querySelectorAll("figure");
+    figures.forEach(function(figure, index) {
+        figure.style.background = `url(${images[index]}) center center/cover`;
+        figure.className = `pic-${index + 1}`;
+        figure.style.animationDelay = `${index * 6}s`;
+    });
+});
+</script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -500,4 +624,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
