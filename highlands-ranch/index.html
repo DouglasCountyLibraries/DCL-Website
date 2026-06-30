@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -181,25 +182,27 @@ figure {
 h2.featured-heading {
     margin: 0 15px 5px;
 }
+.exhibit-wrapper {
+    padding: 50px 15px 80px;
+}
 .art-item-wrapper {
     display: flex;
-    gap: 20px;
-    max-width: 875px;
+    gap: 15px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 15px 0 15px;
 }
-.art-item-wrapper img {
-    padding: 15px;
-}
-.art-item {
+.art-item-one, .art-item-two {
     display: flex;
     justify-content: center;
 }
-.art-item:last-of-type {
+.art-item-two {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 60%;
     align-content: center;
+    background: #f5f5f5;
+    padding: 30px 30px 35px;
 }
 .location-events {
     padding: 50px 0 40px;
@@ -276,10 +279,15 @@ transform:scale(1);
 .slideshow-image, .slideshow-info {
     width: 100%;
 }
-.art-item {
+.art-item-two {
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+    background: #fff;
+    padding: 0;
+}
+.art-item-one img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 }
 
@@ -598,7 +606,7 @@ transform:scale(1);
         </div>
       </div>
       <div class="row bg-gray-5">
-        <div class="container text-center padding-bottom-60">
+        <div class="text-center padding-left-15 padding-right-15 padding-bottom-60">
           <div class="max-width-80">
             <div>Explore the fascinating world of veterinary care for animals in this hands-on pet clinic and spa! Kids can don pint-size lab coats and stethoscopes to check in pet patients, complete examinations using play instruments, diagnose patients at the X-ray station and light box, and give pets a bath. They can use their artistic flair to repair the tortoise's shell using magnetic tiles, check in adorable stuffies at the kennel, interact with reptile and bird plushies, practice horse hair grooming, and more!</div>
           </div>
@@ -608,32 +616,23 @@ transform:scale(1);
         </div>
       </div>
     </section>
-    <section> 
-      <!--<div id="exhibits" class="row padding-top-50">
-        <h2 class="text-center no-margin padding-bottom-30">Art on Display</h2>
-        <div class="art-item-wrapper">
-      <div class="art-item-wrapper">
-        <div class="art-item"><img class="img-responsive" alt="Marina Barrett Painting" src="marina-barrett.jpg"> </div>
-        <div class="art-item">
-          <div class="h2 no-margin text-uppercase">Marina Barrett</div>
-          <div class="h3 margin-top-5 no-margin-bottom">Wool</div>
-          <div class="h4 margin-top-5">September 1-October 31</div>
-          <div>Awakening to an unexpected creative spirit, Marina Barrett developed a unique wool technique that adds depth and airiness to their art. Each piece is a textural portal to cherished memories, inviting viewers to explore the tangible landscapes of recollection and imagination.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row padding-top-30 padding-bottom-60">
-    <div class="container text-center">
-      <div class="h6 no-margin padding-bottom-20 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
-      <button data-target="#artModal" data-toggle="modal" class="btn btn-primary btn-lg text-uppercase margin-top-15" type="button">Exhibit Your Work</button>
-    </div>
-  </div>-->
-      <div id="exhibits" class="row padding-top-50 padding-bottom-60">
-        <h2 class="h2 text-center no-margin">Art on Display</h2>
-        <div class="container text-center">
-          <div class="h6 no-margin padding-bottom-20 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
-          <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
+    <section>
+      <div id="exhibits" class="row">
+        <div class="exhibit-wrapper">
+          <h2 class="text-center no-margin-top">Art on Display</h2>
+          <!--<div class="art-item-wrapper">
+            <div class="art-item-one"><img alt="Marina Barrett Painting" src="marina-barrett.jpg"> </div>
+            <div class="art-item-two">
+              <div class="h3 no-margin">Marina Barrett</div>
+              <div class="h4 margin-top-5 no-margin-bottom">Wool</div>
+              <div class="h5 margin-top-5">September 1-October 31</div>
+              <div>Awakening to an unexpected creative spirit, Marina Barrett developed a unique wool technique that adds depth and airiness to their art. Each piece is a textural portal to cherished memories, inviting viewers to explore the tangible landscapes of recollection and imagination.</div>
+            </div>
+          </div>-->
+          <div class="text-center">
+            <div class="h6 no-margin padding-bottom-30 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
+            <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
+          </div>
         </div>
       </div>
     </section>
@@ -872,4 +871,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
