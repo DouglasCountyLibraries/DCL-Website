@@ -7,7 +7,7 @@
 <script>
     async function loadGoalTally() {
         const url = "https://dclibraries.beanstack.org/reader365";
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+        const proxyUrl = `https://beanstack-proxy.djarrett.workers.dev//?url=${encodeURIComponent(url)}`;
 
         console.log("Fetching from:", proxyUrl);
         document.getElementById("myCounter").textContent = "Loading...";
@@ -30,7 +30,6 @@
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, "text/html");
 
-            // Try multiple selectors to find the element
             const selectors = [
                 "div.statistics--goal-tally",
                 "div.statistics-goal-tally",
@@ -50,13 +49,7 @@
                 console.log("Found content:", raw);
                 document.getElementById("myCounter").textContent = raw || "Empty div";
             } else {
-                console.warn("No goal tally div found - printing all divs with 'statistics' in class:");
-                const allStatsDivs = doc.querySelectorAll("[class*='statistics']");
-                console.log("Found", allStatsDivs.length, "stat divs");
-                allStatsDivs.forEach((d, i) => {
-                    console.log(i + ":", d.className, "-", d.textContent?.substring(0, 100));
-                });
-                
+                console.warn("No goal tally div found");
                 document.getElementById("myCounter").textContent = "Selector not found";
             }
         } catch (err) {
