@@ -7,9 +7,10 @@
 <script>
 async function loadGoalTally() {
     const url = "https://dclibraries.beanstack.org/reader365";
+    const proxyUrl = "https://api.allorigins.win/raw?url=" + encodeURIComponent(url);
 
     try {
-        const response = await fetch(url, { mode: "cors" });
+        const response = await fetch(proxyUrl);
         const html = await response.text();
 
         const parser = new DOMParser();
@@ -28,14 +29,7 @@ async function loadGoalTally() {
     }
 }
 
-//
-// Run immediately
-//
 loadGoalTally();
-
-//
-// Run every hour
-//
 setInterval(loadGoalTally, 3600000);
 </script>
 
