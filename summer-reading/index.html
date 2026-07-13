@@ -44,33 +44,89 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<!--<script>
-async function loadGoalTally() {
-    const url = "https://dclibraries.beanstack.org/reader365";
+<script>
+    let animationTriggered = false;
 
-    // Fetch the HTML as text
-    const response = await fetch(url, { mode: "cors" });
-    const html = await response.text();
+    function animateCounter(element, endValue, duration) {
+        const steps = 100;
+        const increment = endValue / steps;
+        const stepTime = duration / steps;
+        let current = 0;
+        let stepCount = 0;
 
-    // Parse the HTML into a DOM
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, "text/html");
-
-    // Select the div
-    const div = doc.querySelector("div.statistics--goal-tally");
-
-    if (div) {
-        const raw = div.textContent.trim();
-        const number = raw.replace(/,/g, ""); // remove commas
-
-        // Put it into your page
-        document.getElementById("myCounter").textContent = raw;
+        const interval = setInterval(() => {
+            stepCount++;
+            current = Math.round(increment * stepCount);
+            if (stepCount >= steps) {
+                current = endValue;
+                clearInterval(interval);
+            }
+            element.text(current.toLocaleString());
+        }, stepTime);
     }
-}
 
-loadGoalTally();
-</script>--> 
-<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    async function loadGoalTally() {
+        const url = "https://dclibraries.beanstack.org/reader365";
+        const proxyUrl = `https://beanstack-proxy.djarrett.workers.dev/?url=${encodeURIComponent(url)}`;
+
+        try {
+            const response = await fetch(proxyUrl);
+            const html = await response.text();
+            const doc = new DOMParser().parseFromString(html, "text/html");
+
+            const selectors = [
+                "div.statistics--goal-tally",
+                "div.statistics-goal-tally",
+                "[class*='goal-tally']",
+                "[class*='statistics']"
+            ];
+
+            let div = null;
+            for (let sel of selectors) {
+                div = doc.querySelector(sel);
+                if (div) break;
+            }
+
+            if (div) {
+                const text = div.textContent.trim();
+                const endValue = parseInt(text.replace(/[^0-9]/g, ''), 10);
+                
+                if (!isNaN(endValue) && endValue > 0) {
+                    $('#myCounter').data('targetValue', endValue);
+                    
+                    if (animationTriggered) {
+                        animateCounter($('#myCounter'), endValue, 6000);
+                    }
+                } else {
+                    $('#myCounter').text(text || "0");
+                }
+            } else {
+                $('#myCounter').text("Not found");
+            }
+        } catch (err) {
+            $('#myCounter').text("Error");
+        }
+    }
+
+    $(document).ready(function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animationTriggered) {
+                    animationTriggered = true;
+                    const targetValue = $('#myCounter').data('targetValue');
+                    if (targetValue) {
+                        animateCounter($('#myCounter'), targetValue, 6000);
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(document.getElementById('myCounter'));
+
+        loadGoalTally();
+        setInterval(loadGoalTally, 3600000);
+    });
+</script>
 <style>
 @font-face {
     font-family: 'Bigboi';
@@ -309,9 +365,6 @@ h1.Bigboi {
     line-height: 1;
     padding-top: 30px;
     text-shadow: 0px 0px 35px rgba(255,255,255,.5);
-}
-.counter:not(.is-visible) {
-    visibility: hidden;
 }
 .minutes {
     color: #000;
@@ -792,7 +845,7 @@ h1.Bigboi {
                   </div>
                 </div>
                 <div class="counter-wrapper">
-                  <div class="counter">6,515,456</div>
+                  <div class="counter"><span id="myCounter">0</span></div>
                   <div class="minutes text-center">Minutes Read</div>
                 </div>
               </div>
@@ -903,27 +956,7 @@ h1.Bigboi {
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script id="rendered-js" >
-const counterUp = window.counterUp.default;
-const callback = entries => {
-  entries.forEach(entry => {
-    const el = entry.target;
-    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
-      counterUp(el, {
-        duration: 4500,
-        delay: 36 });
-
-      el.classList.add('is-visible');
-    }
-  });
-};
-const IO = new IntersectionObserver(callback, { threshold: 1 });
-const el = document.querySelector('.counter');
-IO.observe(el);
-//# sourceURL=pen.js
-    </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
