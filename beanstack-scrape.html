@@ -1,58 +1,85 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Summer Reading Goal</title>
-    <meta name="robots" content="noindex, nofollow">
-    <script>
-        async function loadGoalTally() {
-            const url = "https://dclibraries.beanstack.org/reader365";
-            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+<meta charset="utf-8">
+<title>Summer Reading Goal</title>
+<meta name="robots" content="noindex, nofollow">
+<script>
+    async function loadGoalTally() {
+        const url = "https://dclibraries.beanstack.org/reader365";
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
 
-            try {
-                const response = await fetch(proxyUrl, { mode: "cors" });
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const html = await response.text();
+        console.log("Fetching from:", proxyUrl);
+        document.getElementById("myCounter").textContent = "Loading...";
 
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, "text/html");
-
-                const div = doc.querySelector("div.statistics--goal-tally");
-
-                if (div) {
-                    const raw = div.textContent.trim();
-                    document.getElementById("myCounter").textContent = raw;
-                } else {
-                    console.warn("Goal tally div not found in proxied content");
-                    document.getElementById("myCounter").textContent = "Not found";
-                }
-            } catch (err) {
-                console.error("Error loading tally:", err);
-                document.getElementById("myCounter").textContent = "Error";
+        try {
+            const response = await fetch(proxyUrl, { 
+                mode: "cors",
+                cache: "no-cache"
+            });
+            
+            console.log("Response status:", response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
-        }
+            
+            const html = await response.text();
+            console.log("HTML length:", html.length);
 
-        // Run immediately
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+
+            // Try multiple selectors to find the element
+            const selectors = [
+                "div.statistics--goal-tally",
+                "div.statistics-goal-tally",
+                "[class*='goal-tally']",
+                "[class*='statistics']"
+            ];
+
+            let div = null;
+            for (let sel of selectors) {
+                div = doc.querySelector(sel);
+                console.log(`Trying selector "${sel}":`, div ? "FOUND" : "NOT FOUND");
+                if (div) break;
+            }
+
+            if (div) {
+                const raw = div.textContent.trim();
+                console.log("Found content:", raw);
+                document.getElementById("myCounter").textContent = raw || "Empty div";
+            } else {
+                console.warn("No goal tally div found - printing all divs with 'statistics' in class:");
+                const allStatsDivs = doc.querySelectorAll("[class*='statistics']");
+                console.log("Found", allStatsDivs.length, "stat divs");
+                allStatsDivs.forEach((d, i) => {
+                    console.log(i + ":", d.className, "-", d.textContent?.substring(0, 100));
+                });
+                
+                document.getElementById("myCounter").textContent = "Selector not found";
+            }
+        } catch (err) {
+            console.error("Error loading tally:", err);
+            document.getElementById("myCounter").textContent = "Error: " + err.message;
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
         loadGoalTally();
-
-        // Run every hour
         setInterval(loadGoalTally, 3600000);
-    </script>
-
-    <style>
-        .counter {
-            font-size: 2rem;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    });
+</script>
+<style>
+.counter {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
-    <div class="counter">Minutes Read: <span id="myCounter">Loading...</span></div>
+<div class="counter">Minutes Read: <span id="myCounter">Loading...</span></div>
 </body>
 </html>
