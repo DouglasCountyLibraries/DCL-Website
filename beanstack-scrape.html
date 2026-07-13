@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Summer Reading Goal</title>
+<meta name="robots" content="noindex, nofollow">
+<script>
+async function loadGoalTally() {
+    const url = "https://dclibraries.beanstack.org/reader365";
+
+    try {
+        const response = await fetch(url, { mode: "cors" });
+        const html = await response.text();
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        const div = doc.querySelector("div.statistics--goal-tally");
+
+        if (div) {
+            const raw = div.textContent.trim();
+            document.getElementById("myCounter").textContent = raw;
+        } else {
+            console.warn("Goal tally div not found");
+        }
+    } catch (err) {
+        console.error("Error loading tally:", err);
+    }
+}
+
+//
+// Run immediately
+//
+loadGoalTally();
+
+//
+// Run every hour
+//
+setInterval(loadGoalTally, 3600000);
+</script>
+
+<style>
+.counter {
+    font-size: 2rem;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+<div class="counter">Minutes Read: <span id="myCounter"></span></div>
+</body>
+</html>
