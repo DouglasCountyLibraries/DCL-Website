@@ -52,27 +52,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #fff;
     z-index: -1;
 }
-/*.gradient-row {
+#general-alert, #local-alert {
+    margin-left: 0;
+    margin-right: 0;
+}
+.gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
-}*/
+}
 .container-wrapper {
     position: relative;
     overflow: hidden;
     max-width: 1920px;
     margin: 0 auto;
- 
 }
 .content-container {
-    background: #24525b;
+    background: #164852;
     min-height: 500px;
 }
-    .video-container {
-	position: relative;
-	overflow: hidden;
-min-height: 375px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.video-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 video#bgvid {
     position: absolute;
@@ -92,15 +95,14 @@ video#bgvid {
 video {
     display: block;
 }
-
 .playpause {
-	position: relative;
-	padding: 0 15px 20px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	min-height: 375px;
+    position: relative;
+    padding: 0 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 375px;
 }
 .play, .pause {
     color: #eee;
@@ -323,29 +325,22 @@ video {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    
+    <div class="gradient-row">
       <div class="container-wrapper">
         <div class="content-container">Content goes here</div>
-            <div class="video-container">
-            
+        <div class="video-container">
           <video autoplay loop muted playsinline poster="waves-poster.webp" id="bgvid">
             <source src="waves-large.mp4" type="video/mp4" />
             Your browser does not support the background video tag.
             <source src="waves-large.webm" type="video/webm" />
             Your browser does not support the background video tag. </video>
-        
-
-            <div class="playpause">
-              <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
-              <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
-            </div>
-         
-            
-            
-            
+          <div class="playpause">
+            <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+            <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+          </div>
         </div>
       </div>
-    
+    </div>
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
