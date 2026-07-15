@@ -59,15 +59,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-.container-wrapper {
-    position: relative;
-    overflow: hidden;
-    max-width: 1920px;
-    margin: 0 auto;
+    .container-wrapper {
+	max-width: 1920px;
+	margin: 0 auto;
 }
+
 .content-container {
     background: #164852;
-    min-height: 500px;
+}
+.content-wrapper {
+	display: flex;
+	margin: 0 auto -80px auto;
+	padding: 0 15px;
+	max-width: 1400px;
+	z-index: 5;
+	position: relative;
+}
+.item-one, .item-two {
+    display: flex;
+    justify-content: center;
+}
+.item-two {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.item-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 .video-container {
     position: relative;
@@ -327,16 +348,27 @@ video {
     <!-- InstanceBeginEditable name="Content" -->
     <div class="gradient-row">
       <div class="container-wrapper">
-        <div class="content-container">Content goes here</div>
-        <div class="video-container">
-          <video autoplay loop muted playsinline poster="waves-poster.webp" id="bgvid">
-            <source src="waves-large.mp4" type="video/mp4" />
-            Your browser does not support the background video tag.
-            <source src="waves-large.webm" type="video/webm" />
-            Your browser does not support the background video tag. </video>
-          <div class="playpause">
-            <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
-            <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+        <div class="content-container">
+          <div class="content-wrapper">
+            <div class="item-one"><img class="img-responsive" src="big-little-books.webp" alt="Big Little Lies and Big Little Truth Book Covers"></div>
+            <div class="item-two">
+              <div>DCL Presents:</div>
+              <h1 class="white">Liane Moriarty</h1>
+              <div>Meet the acclaimed author and hear the story behind her Big Little new novel.</div>
+              <div>Friday, September&nbsp;11, 7PM, Hyatt Regency DTC</div>
+              <div>Learn More</div>
+            </div>
+          </div>
+          <div class="video-container">
+            <video autoplay loop muted playsinline poster="waves-poster.webp" id="bgvid">
+              <source src="waves-large.mp4" type="video/mp4" />
+              Your browser does not support the background video tag.
+              <source src="waves-large.webm" type="video/webm" />
+              Your browser does not support the background video tag. </video>
+            <div class="playpause">
+              <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+              <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+            </div>
           </div>
         </div>
       </div>
