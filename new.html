@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,6 +45,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
+<meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
+<!-- pinterest - do not remove -->
+    <script>
+async function loadGoalTally() {
+    const url = "https://dclibraries.beanstack.org/reader365";
+    const proxyUrl = `https://beanstack-proxy.djarrett.workers.dev/?url=${encodeURIComponent(url)}`;
+
+    try {
+        const response = await fetch(proxyUrl);
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+
+        const selectors = [
+            "div.statistics--goal-tally",
+            "div.statistics-goal-tally",
+            "[class*='goal-tally']",
+            "[class*='statistics']"
+        ];
+
+        let div = null;
+        for (const sel of selectors) {
+            div = doc.querySelector(sel);
+            if (div) break;
+        }
+
+        if (!div) {
+            $('#myCounter').text("Not found");
+            return;
+        }
+
+        const rawText = div.textContent.trim();
+        const numericValue = parseInt(rawText.replace(/[^0-9]/g, ""), 10);
+
+        if (!isNaN(numericValue) && numericValue > 0) {
+            $('#myCounter').text(numericValue.toLocaleString());
+        } else {
+            $('#myCounter').text(rawText || "0");
+        }
+
+    } catch (err) {
+        $('#myCounter').text("Error");
+    }
+}
+
+$(document).ready(function () {
+    loadGoalTally();
+    setInterval(loadGoalTally, 3600000); // refresh every hour
+});
+
+</script>
+    
+    
 <style>
 .container-fluid {
     padding: 0;
@@ -468,7 +519,7 @@ width: calc(100% * 0.3333333);
               <div class="box-icon"><i class="fa-sharp fa-solid fa-stopwatch"></i></div>
               <div class="box-one-content">
                 <h2 class="heading-one">Summer Reading</h2>
-                <div>We’re up to XXX minutes read! Help us reach 10.5&nbsp;million. <a class="white text-underline" href="summer-reading/">Register Now</a></div>
+                <div>We’re up to <span id="myCounter">0</span> minutes read! Help us reach 10.5&nbsp;million. <a class="white text-underline" href="summer-reading/">Register Now</a></div>
               </div>
             </div>
             <div class="box-two-wrapper">
@@ -612,5 +663,4 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>
