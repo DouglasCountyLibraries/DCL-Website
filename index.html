@@ -45,94 +45,211 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
 <!-- pinterest - do not remove -->
+<meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
+<!-- pinterest - do not remove --> 
+<script>
+async function loadGoalTally() {
+    const url = "https://dclibraries.beanstack.org/reader365";
+    const proxyUrl = `https://beanstack-proxy.djarrett.workers.dev/?url=${encodeURIComponent(url)}`;
 
+    try {
+        const response = await fetch(proxyUrl);
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+
+        const selectors = [
+            "div.statistics--goal-tally",
+            "div.statistics-goal-tally",
+            "[class*='goal-tally']",
+            "[class*='statistics']"
+        ];
+
+        let div = null;
+        for (const sel of selectors) {
+            div = doc.querySelector(sel);
+            if (div) break;
+        }
+
+        if (!div) {
+            $('#myCounter').text("Not found");
+            return;
+        }
+
+        const rawText = div.textContent.trim();
+        const numericValue = parseInt(rawText.replace(/[^0-9]/g, ""), 10);
+
+        if (!isNaN(numericValue) && numericValue > 0) {
+            $('#myCounter').text(numericValue.toLocaleString());
+        } else {
+            $('#myCounter').text(rawText || "0");
+        }
+
+    } catch (err) {
+        $('#myCounter').text("Error");
+    }
+}
+
+$(document).ready(function () {
+    loadGoalTally();
+    setInterval(loadGoalTally, 3600000); // refresh every hour
+});
+
+</script>
 <style>
-.alert-wrapper {
+.container-fluid {
+    padding: 0;
+    background: #fff;
+    z-index: -1;
+}
+#general-alert, #local-alert {
+    margin-left: 0;
+    margin-right: 0;
+}
+.gradient-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
+}
+.container-wrapper {
+    max-width: 1920px;
     margin: 0 auto;
-    max-width: 100%;
 }
-.background-row {
-    background: #37598f url("cowboy-background.webp") center center fixed;
-    padding: 80px 0 100px;
-}
-.row-one-section {
-    padding: 0 15px;
-    margin: 0 auto;
-}
-.row-one-container {
-    background: #ddbf89;
+.content-wrapper {
     display: flex;
-    max-width: 1410px;
-    min-height: 640px;
     margin: 0 auto;
-    color: #000;
-    box-shadow: 0px 8px 20px rgba(0,0,0,.3);
-    padding: 0 15px;
+    padding: 0 15px 150px;
+    max-width: 1360px;
+    z-index: 5;
+    position: relative;
 }
-.row-one-wrapper {
-    margin: 0 auto;
+.item-one, .item-two {
     display: flex;
-    align-items: center;
-    padding: 18px 15px 0 15px;
+    justify-content: center;
+    color: #fff;
 }
-.row-one-image {
+.item-two {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 555px;
+    margin: 0 15px;
 }
-.row-one-content {
-    margin: 0 0 20px 30px;
-    color: #000;
-    font-size: 1.25rem;
-    max-width: 650px;
+.video-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.row-one-heading-one {
-    margin-top: 0;
-    color: #000;
+video#bgvid {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    background: #fff url(waves-poster1920.webp) bottom center no-repeat;
+    background-size: cover;
 }
-.cowboy-cactus {
-    padding-bottom: 30px;
+video#bgvid-sm {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    background: #fff url(waves-poster950.webp) bottom center no-repeat;
+    background-size: cover;
 }
-h2.row-two-heading-one {
+video {
+    display: block;
+}
+.playpause {
+    position: relative;
+    padding: 0 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.play, .pause {
+    color: #eee;
+    font-size: 38px;
+    margin: 0 5px;
+    border: 0;
+    background: 0;
+    transition-duration: 0.4s;
+    padding: 0;
+}
+.play:hover, .play:focus, .pause:hover, .pause:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 0.4s;
+}
+.play:active, .play:focus {
+    color: #fff;
+}
+.box-icon {
+    color: rgba(255,255,255,.7);
+    font-size: 100px;
+    text-align: center;
+}
+h2.heading-one {
     font-size: 1.875rem;
     line-height: 1.2;
     margin: 0 0 5px;
     font-weight: 500;
     color: #fff;
 }
-h2.row-two-heading-two {
-    font-size: 1.875rem;
-    line-height: 1.2;
-    margin: 0 0 5px;
-    font-weight: 500;
-    color: #fff;
-}
-.row-one-more-authors, .row-two-from-archives {
-    font-size: 1.125rem;
-}
-.row-two-container {
+.row-container {
     display: flex;
-    max-width: 1440px;
-    min-height: 640px;
-    margin: 50px auto 0 auto;
-    padding: 0 15px;
+    max-width: 1920px;
+    margin: 0 auto;
 }
-.row-two-wrapper {
+.row-wrapper {
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    box-shadow: 0px 8px 20px rgba(0,0,0,.3);
 }
-.row-two-box-one-wrapper {
-    background: #bc4c24;
-width: calc(100% * 0.5);
+.box-one-wrapper {
+    background: #a72864;
+width: calc(100% * 0.3333333);
     display: flex;
     flex-direction: column;
-    padding: 80px 15px 30px;
+    padding: 80px 15px 120px;
 }
-.row-two-box-one-wrapper img, .row-two-box-two-wrapper img {
-    border-radius: 50%;
+.box-two-wrapper {
+    background: #517a7f;
+width: calc(100% * 0.3333333);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15px 120px;
 }
-.row-two-box-one-content {
+.box-three-wrapper {
+    background: #69326d;
+width: calc(100% * 0.3333333);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15px 120px;
+}
+.box-one-content {
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 530px;
+}
+.box-two-content {
     margin: 0 auto;
     color: #fff;
     padding: 30px 0 35px;
@@ -140,7 +257,7 @@ width: calc(100% * 0.5);
     text-align: center;
     max-width: 530px;
 }
-.row-two-box-two-content {
+.box-three-content {
     margin: 0 auto;
     color: #fff;
     padding: 30px 0 35px;
@@ -148,44 +265,45 @@ width: calc(100% * 0.5);
     text-align: center;
     max-width: 530px;
 }
-.row-two-box-two-wrapper {
-    background: #4d5a2c;
+.box-three-small-content {
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+@media (max-width: 1200px) {
+.content-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 300px;
+}
+.box-one-wrapper {
+    width: 100%;
+}
+.box-two-wrapper, .box-three-wrapper {
 width: calc(100% * 0.5);
-    display: flex;
-    flex-direction: column;
-    padding: 80px 15px 30px;
+}
+}
+
+@media (min-width: 951px) {
+.small-video {
+    display: none;
+}
 }
 
 @media (max-width: 950px) {
-.row-one-section, .row-two-container {
-    max-width: 720px;
+.large-video {
+    display: none;
 }
-.row-one-container {
-    padding: 70px 15px 80px;
-    text-align: center;
-}
-.row-one-content {
-    margin: 0;
-}
-.cowboy-cactus img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-.row-one-wrapper, .row-two-wrapper {
-    flex-direction: column;
-    padding: 0;
-}
-.row-two-wrapper {
-    box-shadow: none;
-}
-.row-two-box-one-wrapper, .row-two-box-two-wrapper {
+.box-one-wrapper, .box-two-wrapper, .box-three-wrapper {
     width: 100%;
-    padding: 70px 15px 80px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,.3);
 }
-.row-two-box-two-wrapper {
-    margin-top: 50px;
+}
+
+@media (max-width: 750px) {
+.content-wrapper {
+    padding: 0 0 200px;
 }
 }
 </style>
@@ -391,37 +509,70 @@ width: calc(100% * 0.5);
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row background-row">
+    <div class="gradient-row">
       <section>
-        <div class="row-one-section">
-          <div class="row-one-container">
-            <div class="row-one-wrapper">
-              <div class="row-one-image">
-                <div class="cowboy-cactus"><img src="cactus-cowboy.webp" alt=""></div>
+        <div class="container-wrapper">
+          <div class="content-container">
+            <div class="video-container">
+              <div class="content-wrapper">
+                <div class="item-one"><img class="img-responsive" src="big-little-books.webp" alt="Big Little Lies and Big Little Truth Book Covers"></div>
+                <div class="item-two">
+                  <div class="text-uppercase">DCL Presents:</div>
+                  <h1 class="white">Liane Moriarty</h1>
+                  <h2 class="white xxsm-heading margin-bottom-10">Meet the acclaimed author and hear the story behind her Big Little new novel.</h2>
+                  <h3 class="white xxsm-heading no-margin-top">Friday, September&nbsp;11, 7PM, Hyatt Regency DTC</h3>
+                  <div class="h4"><a class="white text-underline" href="featured-events/">Learn More</a></div>
+                </div>
               </div>
-              <div class="row-one-content">
-                <h2 class="row-one-heading-one">Howdy, Partner&nbsp;- Let's Read!</h2>
-                <div class="margin-bottom-15">Saddle up for summer reading activities, prizes, and fun for all! <a class="black text-underline" href="summer-reading/">Sign&nbsp;Up&nbsp;Now</a></div>
+              <div class="large-video">
+                <video autoplay loop muted playsinline poster="waves-poster1920.webp" id="bgvid">
+                  <source src="waves1920.mp4" type="video/mp4" />
+                  Your browser does not support the background video tag.
+                  <source src="waves1920.webm" type="video/webm" />
+                  Your browser does not support the background video tag. </video>
+                <div class="playpause">
+                  <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                  <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+                </div>
+              </div>
+              <div class="small-video">
+                <video autoplay loop muted playsinline poster="waves-poster950.webp" id="bgvid-sm">
+                  <source src="waves950.mp4" type="video/mp4" />
+                  Your browser does not support the background video tag.
+                  <source src="waves950.webm" type="video/webm" />
+                  Your browser does not support the background video tag. </video>
+                <div class="playpause">
+                  <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                  <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section>
-        <div class="row-two-container">
-          <div class="row-two-wrapper">
-            <div class="row-two-box-one-wrapper">
-              <div id="row-two-box-one-image"><img class="img-responsive image-center" src="cara-black.webp" alt="Cara Black"></div>
-              <div class="row-two-box-one-content">
-                <h2 class="row-two-heading-one">Local Authors, Up Close</h2>
-                <div>Bestselling writers, engaging conversations, and book signings. There's an <a class="white text-underline" href="featured-events/#author-events">author event</a> for you!</div>
+        <div class="row-container">
+          <div class="row-wrapper">
+            <div class="box-one-wrapper">
+              <div class="box-icon"><i class="fa-sharp fa-solid fa-stopwatch"></i></div>
+              <div class="box-one-content">
+                <h2 class="heading-one">Summer Reading</h2>
+                <div>We’re up to <span id="myCounter">0</span> minutes read! Help us reach 10.5&nbsp;million. <a class="white text-underline" href="summer-reading/">Register Now</a></div>
               </div>
             </div>
-            <div class="row-two-box-two-wrapper">
-              <div id="row-two-box-two-image"><img class="img-responsive image-center" src="liane-moriarty.webp" alt="Liane Moriarty"></div>
-              <div class="row-two-box-two-content">
-                <h2 class="row-two-heading-two">DCL Presents: Liane Moriarty</h2>
-                <div><a class="white text-underline" href="featured-events/">Get tickets now</a> for an unforgettable evening with the bestselling author!</div>
+            <div class="box-two-wrapper">
+              <div class="box-icon"><i class="fa-sharp fa-solid fa-glass"></i></div>
+              <div class="box-two-content">
+                <h2 class="heading-one">Good Times on Tap</h2>
+                <div>Connect with your community and score prizes&mdash;the Brew Tour is back! <a class="white text-underline" href="brew-tour/">Sign Up</a></div>
+              </div>
+            </div>
+            <div class="box-three-wrapper">
+              <div class="box-icon"><i class="fa-sharp fa-solid fa-apple-whole"></i></div>
+              <div class="box-three-content">
+                <h2 class="heading-one">Fête des Fables Gala</h2>
+                <div>Indulge in the shadowy enchantment of Snow White and support the DCL Foundation. <a class="white text-underline" href="brew-tour/">Join Us</a></div>
+                <div class="box-three-small-content">Friday, September 25, 6PM, Highlands Ranch Mansion</div>
               </div>
             </div>
           </div>
