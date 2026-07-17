@@ -59,21 +59,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-    .container-wrapper {
-	max-width: 1920px;
-	margin: 0 auto;
+.container-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
 }
-
 .content-container {
     background: #164852;
 }
 .content-wrapper {
-	display: flex;
-	margin: 0 auto -80px auto;
-	padding: 0 15px;
-	max-width: 1400px;
-	z-index: 5;
-	position: relative;
+    display: flex;
+    margin: 0 auto -80px auto;
+    padding: 0 15px;
+    max-width: 1400px;
+    z-index: 5;
+    position: relative;
 }
 .item-one, .item-two {
     display: flex;
@@ -142,6 +141,88 @@ video {
 }
 .play:active, .play:focus {
     color: #fff;
+}
+h2.row-two-heading-two {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 500;
+    color: #fff;
+}
+.row-container {
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.row-wrapper {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+.box-one-wrapper {
+    background: #bc4c24;
+width: calc(100% * 0.3333333);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15px 30px;
+}
+.box-two-wrapper {
+    background: #ddd;
+width: calc(100% * 0.3333333);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15px 30px;
+}
+.box-three-wrapper {
+    background: #ccc;
+width: calc(100% * 0.3333333);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15px 30px;
+}
+.box-one-content {
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0 35px;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 530px;
+}
+.box-two-content {
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0 35px;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 530px;
+}
+.box-three-content {
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0 35px;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 530px;
+}
+
+@media (max-width: 950px) {
+.row-one-section, .row-two-container {
+    max-width: 720px;
+}
+.row-one-wrapper, .row-two-wrapper {
+    flex-direction: column;
+    padding: 0;
+}
+.row-two-wrapper {
+    box-shadow: none;
+}
+.box-one-wrapper, .box-two-wrapper, .box-three-wrapper {
+    width: 100%;
+    padding: 70px 15px 80px;
+}
+.row-two-box-two-wrapper {
+    margin-top: 50px;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -347,31 +428,60 @@ video {
     </div>
     <!-- InstanceBeginEditable name="Content" -->
     <div class="gradient-row">
-      <div class="container-wrapper">
-        <div class="content-container">
-          <div class="content-wrapper">
-            <div class="item-one"><img class="img-responsive" src="big-little-books.webp" alt="Big Little Lies and Big Little Truth Book Covers"></div>
-            <div class="item-two">
-              <div>DCL Presents:</div>
-              <h1 class="white">Liane Moriarty</h1>
-              <div>Meet the acclaimed author and hear the story behind her Big Little new novel.</div>
-              <div>Friday, September&nbsp;11, 7PM, Hyatt Regency DTC</div>
-              <div>Learn More</div>
+      <section>
+        <div class="container-wrapper">
+          <div class="content-container">
+            <div class="content-wrapper">
+              <div class="item-one"><img class="img-responsive" src="big-little-books.webp" alt="Big Little Lies and Big Little Truth Book Covers"></div>
+              <div class="item-two">
+                <div>DCL Presents:</div>
+                <h1 class="white">Liane Moriarty</h1>
+                <div>Meet the acclaimed author and hear the story behind her Big Little new novel.</div>
+                <div>Friday, September&nbsp;11, 7PM, Hyatt Regency DTC</div>
+                <div>Learn More</div>
+              </div>
             </div>
-          </div>
-          <div class="video-container">
-            <video autoplay loop muted playsinline poster="waves-poster.webp" id="bgvid">
-              <source src="waves-large.mp4" type="video/mp4" />
-              Your browser does not support the background video tag.
-              <source src="waves-large.webm" type="video/webm" />
-              Your browser does not support the background video tag. </video>
-            <div class="playpause">
-              <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
-              <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+            <div class="video-container">
+              <video autoplay loop muted playsinline poster="waves-poster.webp" id="bgvid">
+                <source src="waves-large.mp4" type="video/mp4" />
+                Your browser does not support the background video tag.
+                <source src="waves-large.webm" type="video/webm" />
+                Your browser does not support the background video tag. </video>
+              <div class="playpause">
+                <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section>
+        <div class="row-container">
+          <div class="row-wrapper">
+            <div class="box-one-wrapper">
+              <div class="box-icon"><i class="fa-solid fa-search"></i></div>
+              <div class="box-one-content">
+                <h2 class="row-two-heading-one">Local Authors, Up Close</h2>
+                <div>Bestselling writers, engaging conversations, and book signings. There's an <a class="white text-underline" href="featured-events/#author-events">author event</a> for you!</div>
+              </div>
+            </div>
+            <div class="box-two-wrapper">
+              <div class="box-icon"><i class="fa-solid fa-search"></i></div>
+              <div class="box-two-content">
+                <h2 class="row-two-heading-two">DCL Presents: Liane Moriarty</h2>
+                <div><a class="white text-underline" href="featured-events/">Get tickets now</a> for an unforgettable evening with the bestselling author!</div>
+              </div>
+            </div>
+            <div class="box-three-wrapper">
+              <div class="box-icon"><i class="fa-solid fa-search"></i></div>
+              <div class="box-three-content">
+                <h2 class="row-two-heading-two">DCL Presents: Liane Moriarty</h2>
+                <div><a class="white text-underline" href="featured-events/">Get tickets now</a> for an unforgettable evening with the bestselling author!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- InstanceEndEditable --> </div>
 </main>
