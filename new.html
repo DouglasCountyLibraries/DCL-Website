@@ -113,16 +113,13 @@ $(document).ready(function () {
     max-width: 1920px;
     margin: 0 auto;
 }
-.content-container {
-    background: #164852;
-}
 .content-wrapper {
-    display: flex;
-    margin: 0 auto -120px auto;
-    padding: 0 15px;
-    max-width: 1360px;
-    z-index: 5;
-    position: relative;
+	display: flex;
+	margin: 0 auto;
+	padding: 0 15px 150px;
+	max-width: 1360px;
+	z-index: 5;
+	position: relative;
 }
 .item-one, .item-two {
     display: flex;
@@ -158,6 +155,21 @@ video#bgvid {
     background: #fff url(waves-poster1920.webp) bottom center no-repeat;
     background-size: cover;
 }
+video#bgvid-sm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff url(waves-poster950.webp) bottom center no-repeat;
+    background-size: cover;
+}
 video {
     display: block;
 }
@@ -168,7 +180,6 @@ video {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 375px;
 }
 .play, .pause {
     color: #eee;
@@ -208,6 +219,7 @@ h2.heading-one {
 .row-wrapper {
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 .box-one-wrapper {
@@ -215,21 +227,21 @@ h2.heading-one {
 width: calc(100% * 0.3333333);
     display: flex;
     flex-direction: column;
-    padding: 80px 15px 135px;
+    padding: 80px 15px 100px;
 }
 .box-two-wrapper {
     background: #517a7f;
 width: calc(100% * 0.3333333);
     display: flex;
     flex-direction: column;
-    padding: 80px 15px 135px;
+    padding: 80px 15px 100px;
 }
 .box-three-wrapper {
     background: #69326d;
 width: calc(100% * 0.3333333);
     display: flex;
     flex-direction: column;
-    padding: 80px 15px 135px;
+    padding: 80px 15px 100px;
 }
 .box-one-content {
     margin: 0 auto;
@@ -260,23 +272,35 @@ width: calc(100% * 0.3333333);
     padding-top: 10px;
 }
 
+@media (max-width: 1200px) {
+.content-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 100px;
+}
+.box-one-wrapper {
+    width: 100%;
+}
+.box-two-wrapper, .box-three-wrapper {
+width: calc(100% * 0.5);
+}
+}
+
+@media (min-width: 951px) {
+.small-video {
+    display: none;
+}
+}
+
 @media (max-width: 950px) {
-.row-one-section, .row-two-container {
-    max-width: 720px;
+.large-video {
+    display: none;
 }
-.row-one-wrapper, .row-two-wrapper {
-    flex-direction: column;
-    padding: 0;
-}
-.row-two-wrapper {
-    box-shadow: none;
-}
+
 .box-one-wrapper, .box-two-wrapper, .box-three-wrapper {
     width: 100%;
-    padding: 70px 15px 80px;
-}
-.row-two-box-two-wrapper {
-    margin-top: 50px;
 }
 }
 </style>
@@ -497,14 +521,27 @@ width: calc(100% * 0.3333333);
                   <div class="h4"><a class="white text-underline" href="featured-events/">Learn More</a></div>
                 </div>
               </div>
-              <video autoplay loop muted playsinline poster="waves-poster1920.webp" id="bgvid">
-                <source src="waves1920.mp4" type="video/mp4" />
-                Your browser does not support the background video tag.
-                <source src="waves1920.webm" type="video/webm" />
-                Your browser does not support the background video tag. </video>
-              <div class="playpause">
-                <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
-                <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+              <div class="large-video">
+                <video autoplay loop muted playsinline poster="waves-poster1920.webp" id="bgvid">
+                  <source src="waves1920.mp4" type="video/mp4" />
+                  Your browser does not support the background video tag.
+                  <source src="waves1920.webm" type="video/webm" />
+                  Your browser does not support the background video tag. </video>
+                <div class="playpause">
+                  <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                  <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+                </div>
+              </div>
+              <div class="small-video">
+                <video autoplay loop muted playsinline poster="waves-poster950.webp" id="bgvid-sm">
+                  <source src="waves950.mp4" type="video/mp4" />
+                  Your browser does not support the background video tag.
+                  <source src="waves950.webm" type="video/webm" />
+                  Your browser does not support the background video tag. </video>
+                <div class="playpause">
+                  <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
+                  <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+                </div>
               </div>
             </div>
           </div>
