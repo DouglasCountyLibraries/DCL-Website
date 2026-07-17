@@ -70,17 +70,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     margin: 0 auto -80px auto;
     padding: 0 15px;
-    max-width: 1400px;
+    max-width: 1360px;
     z-index: 5;
     position: relative;
 }
 .item-one, .item-two {
     display: flex;
     justify-content: center;
-}
-.item-two {
-    display: flex;
-    flex-direction: column;
     color: #fff;
 }
 .item-two {
@@ -88,6 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    max-width: 555px;
 }
 .video-container {
     position: relative;
@@ -142,7 +139,12 @@ video {
 .play:active, .play:focus {
     color: #fff;
 }
-h2.row-two-heading-two {
+.box-icon {
+    color: rgba(255,255,255,.7);
+    font-size: 100px;
+    text-align: center;
+}
+h2.heading-one {
     font-size: 1.875rem;
     line-height: 1.2;
     margin: 0 0 5px;
@@ -160,30 +162,30 @@ h2.row-two-heading-two {
     width: 100%;
 }
 .box-one-wrapper {
-    background: #bc4c24;
+    background: #a72864;
 width: calc(100% * 0.3333333);
     display: flex;
     flex-direction: column;
-    padding: 80px 15px 30px;
+    padding: 80px 15px 135px;
 }
 .box-two-wrapper {
-    background: #ddd;
+    background: #517a7f;
 width: calc(100% * 0.3333333);
     display: flex;
     flex-direction: column;
-    padding: 80px 15px 30px;
+    padding: 80px 15px 135px;
 }
 .box-three-wrapper {
-    background: #ccc;
+    background: #69326d;
 width: calc(100% * 0.3333333);
     display: flex;
     flex-direction: column;
-    padding: 80px 15px 30px;
+    padding: 80px 15px 135px;
 }
 .box-one-content {
     margin: 0 auto;
     color: #fff;
-    padding: 30px 0 35px;
+    padding: 30px 0;
     font-size: 1.25rem;
     text-align: center;
     max-width: 530px;
@@ -203,6 +205,10 @@ width: calc(100% * 0.3333333);
     font-size: 1.25rem;
     text-align: center;
     max-width: 530px;
+}
+.box-three-small-content {
+    font-size: 1rem;
+    padding-top: 10px;
 }
 
 @media (max-width: 950px) {
@@ -434,11 +440,11 @@ width: calc(100% * 0.3333333);
             <div class="content-wrapper">
               <div class="item-one"><img class="img-responsive" src="big-little-books.webp" alt="Big Little Lies and Big Little Truth Book Covers"></div>
               <div class="item-two">
-                <div>DCL Presents:</div>
+                <div class="text-uppercase">DCL Presents:</div>
                 <h1 class="white">Liane Moriarty</h1>
-                <div>Meet the acclaimed author and hear the story behind her Big Little new novel.</div>
-                <div>Friday, September&nbsp;11, 7PM, Hyatt Regency DTC</div>
-                <div>Learn More</div>
+                <h2 class="white xxsm-heading margin-bottom-10">Meet the acclaimed author and hear the story behind her Big Little new novel.</h2>
+                <h3 class="white xxsm-heading no-margin-top">Friday, September&nbsp;11, 7PM, Hyatt Regency DTC</h3>
+                <div class="h4"><a class="white text-underline" href="featured-events/">Learn More</a></div>
               </div>
             </div>
             <div class="video-container">
@@ -459,24 +465,25 @@ width: calc(100% * 0.3333333);
         <div class="row-container">
           <div class="row-wrapper">
             <div class="box-one-wrapper">
-              <div class="box-icon"><i class="fa-solid fa-search"></i></div>
+              <div class="box-icon"><i class="fa-sharp fa-solid fa-stopwatch"></i></div>
               <div class="box-one-content">
-                <h2 class="row-two-heading-one">Local Authors, Up Close</h2>
-                <div>Bestselling writers, engaging conversations, and book signings. There's an <a class="white text-underline" href="featured-events/#author-events">author event</a> for you!</div>
+                <h2 class="heading-one">Summer Reading</h2>
+                <div>We’re up to XXX minutes read! Help us reach 10.5&nbsp;million. <a class="white text-underline" href="summer-reading/">Register Now</a></div>
               </div>
             </div>
             <div class="box-two-wrapper">
-              <div class="box-icon"><i class="fa-solid fa-search"></i></div>
+              <div class="box-icon"><i class="fa-sharp fa-solid fa-glass"></i></div>
               <div class="box-two-content">
-                <h2 class="row-two-heading-two">DCL Presents: Liane Moriarty</h2>
-                <div><a class="white text-underline" href="featured-events/">Get tickets now</a> for an unforgettable evening with the bestselling author!</div>
+                <h2 class="heading-one">Good Times on Tap</h2>
+                <div>Connect with your community and score prizes&mdash;the Brew Tour is back! <a class="white text-underline" href="brew-tour/">Sign Up</a></div>
               </div>
             </div>
             <div class="box-three-wrapper">
-              <div class="box-icon"><i class="fa-solid fa-search"></i></div>
+              <div class="box-icon"><i class="fa-sharp fa-solid fa-apple-whole"></i></div>
               <div class="box-three-content">
-                <h2 class="row-two-heading-two">DCL Presents: Liane Moriarty</h2>
-                <div><a class="white text-underline" href="featured-events/">Get tickets now</a> for an unforgettable evening with the bestselling author!</div>
+                <h2 class="heading-one">Fête des Fables Gala</h2>
+                <div>Indulge in the shadowy enchantment of Snow White and support the DCL Foundation. <a class="white text-underline" href="brew-tour/">Join Us</a></div>
+                <div class="box-three-small-content">Friday, September 25, 6PM, Highlands Ranch Mansion</div>
               </div>
             </div>
           </div>
