@@ -535,7 +535,7 @@ transform:scale(1);
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var images = [
-        "slideshow/one.webp",
+        "slideshow/one.webp", // Fixed first image
         "slideshow/two.webp",
 		"slideshow/three.webp",
 		"slideshow/four.webp",
@@ -545,11 +545,19 @@ document.addEventListener("DOMContentLoaded", function() {
 		"slideshow/eight.webp",
 		"slideshow/nine.webp"
     ];
-    // Shuffle images
+
+    // Separate the first image from the rest
+    var firstImage = images.shift();
+
+    // Shuffle the remaining images
     for (var i = images.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         [images[i], images[j]] = [images[j], images[i]];
     }
+
+    // Add the first image back to the beginning of the array
+    images.unshift(firstImage);
+
     // Apply the images as background
     var figures = document.querySelectorAll("figure");
     figures.forEach(function(figure, index) {
