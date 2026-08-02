@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
@@ -43,95 +43,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
 .kids-teens-active {
     background-color: #f5f5f5;
 }
-.waitlist {
-    margin-top: auto;
-    text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-top: 10px;
-}
-.waitlist > .red-text {
-    font-size: 18px;
-}
-.box-wrapper {
+.box-item-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
     justify-content: center;
-    max-width: 1500px;
+    flex-wrap: wrap;
+    max-width: 1280px;
     margin: 0 auto;
-}
-.box-wrapper.box-wrapper-alt {
-    max-width: 1150px;
 }
 .box-item {
     display: flex;
-    flex: 1;
     flex-direction: column;
-    background: #fff;
-    max-width: 500px;
-    min-width: 380px;
-    padding: 0 30px 40px;
-    margin: 10px 15px;
-    border-radius: 3px;
+    flex: 1;
+    margin: 15px;
 }
-.box-border {
-    border: 2px solid #ddd;
-    margin-top: 76px;
+.full-flex-break {
+    flex-basis: 100%;
+    height: 0;
 }
-.gray-circle > img, .white-circle > img {
-    border-radius: 50%;
-}
-.gray-circle-wrapper {
+.circle-wrapper {
     border: 6px solid #fff;
+    height: 92px;
+    width: 92px;
+    border-radius: 50%;
+    margin: -50px auto 0 auto;
+}
+.icon-circle-gray {
+    border: 6px solid #42777B;
     border-radius: 50%;
     box-sizing: border-box;
-    height: 132px;
+    color: #42777B;
+    background-color: #fff;
+    font-size: 42px;
+    height: 80px;
+    line-height: 1.5;
     margin: 0 auto;
-    width: 132px;
+    text-align: center;
+    width: 80px;
+    font-weight: 600;
 }
-.gray-circle {
-    border: 6px solid #e6e4e2;
-    border-radius: 50%;
-    box-sizing: border-box;
-    height: 120px;
+.carousel-wapper {
+    padding: 70px 15px 90px;
+}
+.comment-container {
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
     margin: 0 auto;
-    width: 120px;
+    font-size: 1.125rem;
+    font-style: italic;
 }
-.white-circle-wrapper {
-    border: 2px solid #ddd;
-    border-radius: 50%;
-    box-sizing: border-box;
-    height: 124px;
-    margin: 0 auto;
-    width: 124px;
+.carousel-cell {
+    width: 100%;
 }
-.white-circle {
-    border: 6px solid #fff;
-    border-radius: 50%;
-    box-sizing: border-box;
-    height: 120px;
-    margin: 0 auto;
-    width: 120px;
+.carousel-cell:before {
+    display: block;
+    text-align: center;
 }
-.gray-white-bg {
-    background: #ffffff;
-    background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
-    margin-left: -30px;
-    margin-right: -30px;
+.flickity-page-dots {
+    bottom: -40px;
+    opacity: .2;
 }
-.gray-white-border-bg {
-    margin-top: -66px;
+.flickity-page-dots .dot {
+    background-color: #fff;
+}
+.flickity-prev-next-button {
+    display: none;
+}
+.flickity-viewport {
+    transition: height 0.6s;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 725px) {
 .box-item {
-    flex-direction: column;
-    min-width: fit-content;
+    flex-basis: 100%;
 }
 }
 </style>
@@ -337,106 +326,112 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row border-top padding-bottom-30">
-      <div class="container text-center">
+    <div class="row border-top">
+      <div class="container text-center padding-bottom-15">
         <h1 class="page-heading">Camp DCL</h1>
-        <div class="h3 text-uppercase no-margin">Summer Camps</div>
-        <div class="max-width-90">
-          <div class="h4 margin-top-5">June 8-August 7, 2026 | Ages 5-12</div>
-          <h2 class="page-subheading">Explore, create, and experiment this summer at Camp DCL! Choose from our weeklong half-day camps at six DCL locations or full-day camps at select locations.</h2>
-        </div>
         <div class="max-width-80">
-          <div>Materials and snacks are provided for all camps; full-day campers must bring a nut-free lunch daily. Please also bring your own water bottle. <a href="policies-procedures/">Camp DCL policies & procedures</a> apply. Your camper's spot is not fully secured until your payment has been processed and you have received a payment confirmation email.</div>
-          <div class="h6">Find answers to some common <a href="policies-procedures/#faq">Camp DCL questions</a>.</div>
+          <h2 class="page-subheading">Camp DCL will return next summer!<!-- Registration opens February 2.--></h2>
+          <div>Camp DCL scholarships will be available through the <a href="../foundation/">Douglas County Libraries Foundation</a>. You<a href="../donate/"> may also donate</a> to the Douglas County Libraries Foundation to help send a child to camp.</div>
+          <h3 class="no-margin-bottom">6 Benefits of Camp for Kids</h3>
         </div>
       </div>
     </div>
-    
-    <!-- ########### --> 
-    
-    <!-- ########### -->
-    
-    <!-- ########### -->
-    
-    <!-- ########### -->
-    
-    <div id="lone-tree" class="row bg-gray-5 padding-top-60 padding-bottom-70">
-      <div class="h1 text-uppercase no-margin-top text-center">Lone Tree</div>
-      <div class="box-wrapper">
-        <div class="box-item">
-          <div class="gray-white-bg">
-            <div class="gray-circle-wrapper">
-              <div class="gray-circle"><img src="icon-images/sold-out.webp" alt="" class="img-responsive"></div>
+    <section>
+      <div class="row padding-bottom-60">
+        <div class="box-item-wrapper">
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-one.webp" alt="Children and adults participating in activities in a bright community space"></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">1</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Develops Skills</div>
+              <div>Kids get the right instruction and equipment to develop knowledge and skills at camp. With various camp activities to choose from, children can easily discover what they love and then build their talents and abilities in a learning-friendly environment. </div>
             </div>
           </div>
-          <div class="h3 no-margin-bottom margin-top-10 text-center">Basic Training Cooking Boot Camp</div>
-          <div class="h5 margin-top-5 text-center">August 3-7, 1-4PM<br>
-            Ages 5-10, $250</div>
-          <div>Attention, young chefs! Report to camp for a week of culinary basic training, where we’ll sharpen skills, build confidence, and master the fundamentals every young chef needs to know. From measuring to mixing to seasoning, each day is packed with hands-on practice and delicious results! Facilitated by professionals from Sticky Fingers. Bring your own water bottle.</div>
-          <div class="waitlist"><span class="red-text">Sold out</span><br>
-            <a href="summer-waitlist-form/" target="_blank">Join the Waitlist</a></div>
-        </div>
-      </div>
-      <!--<div class="h5 text-center padding-top-30"><i>On sale Monday, February 2!</i></div>--> 
-      
-      <!--<div class="text-center padding-top-30"><a href="summer-registration/lone-tree/" target="_blank" class="btn btn-primary">Register Now</a></div>--> 
-    </div>
-    
-    <!-- ########### -->
-    
-    <div id="parker" class="row padding-top-60 padding-bottom-70">
-      <div class="h1 text-uppercase no-margin-top text-center">Parker</div>
-      <div class="box-wrapper">
-        <div class="box-item box-border">
-          <div class="gray-white-border-bg">
-            <div class="white-circle-wrapper">
-              <div class="white-circle"><img src="icon-images/sold-out.webp" alt="" class="img-responsive"></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-two.webp" alt="Volunteers assisting children with hands-on learning activities"></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">2</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Builds Self-Esteem</div>
+              <div>Children gain self-esteem by participating, contributing, and seeing results. At camp, they have the opportunity to achieve&mdash;whether it’s creating new types of artwork, learning fresh cooking techniques and recipes, building bots, or coding their own games. Those achievements build self-esteem. </div>
             </div>
           </div>
-          <div class="h3 no-margin-bottom margin-top-10 text-center">Escape Room STEM Camp</div>
-          <div class="h5 margin-top-5 text-center">August 3-7, 9AM-12PM<br>
-            Ages 8-12, $250</div>
-          <div>Escape summer boredom and have a ton of fun! During this week, campers will experience all things escape room: codes and ciphers, escape challenges, tricky puzzles, scavenger hunts, and more. Kids will work together to solve mysteries with a time limit, and then create mini escape rooms for other campers to solve. Will they escape from a forgotten pyramid, find the hidden treasure room, or unearth the secrets of an angry mummy? It's up to them! Facilitated by professionals from Inspire to Learn and Imagine. Bring your own water bottle.</div>
-          <div class="waitlist"><span class="red-text">Sold out</span><br>
-          <a href="summer-waitlist-form/" target="_blank">Join the Waitlist</a></div>
-        </div>
-      </div>
-      <!--<div class="h5 text-center padding-top-30"><i>On sale Monday, February 2!</i></div>-->
-      
-      <!--<div class="text-center padding-top-30"><a href="summer-registration/parker/" target="_blank" class="btn btn-primary">Register Now</a></div>-->
-    </div>
-    <!-- ########### -->
-    
-    <div id="roxborough" class="row bg-gray-5 padding-top-60 padding-bottom-90">
-      <div class="h1 text-uppercase no-margin-top text-center">Roxborough</div>
-      <div class="box-wrapper">
-        <div class="box-item">
-          <div class="gray-white-bg">
-            <div class="gray-circle-wrapper">
-              <div class="gray-circle"><img src="icon-images/sold-out.webp" alt="" class="img-responsive"></div>
+          <div class="full-flex-break"></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-three.webp" alt="Smiling child at a table with educational materials and supplies"></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">3</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Continues Education</div>
+              <div>Fun meets education at camp, where learning is more than textbooks and tests. Kids can apply the lessons learned during the school year in a variety of engaging hands-on activities and experiences. They’ll be so busy having fun, they won’t even realize that they’re learning! </div>
             </div>
           </div>
-          <div class="h3 no-margin-bottom margin-top-10 text-center">Destination Art Camp</div>
-          <div class="h5 margin-top-5 text-center">August 3-7, 9AM-12PM<br>
-            Ages 5-10, $225</div>
-          <div>National parks, native creatures, and historical landmarks come to life in this week of road-trip art! Campers will explore our beautiful country and awe-inspiring vacation destinations through fun projects&mdash;three per day&mdash;using a variety of mediums, including watercolor, acrylic paint, collage, clay sculpture, fabric, 3D and more. They will also develop a positive, stick-with-it attitude and problem-solving skills through our unique teaching approach. Facilitated by professionals from KidzArt. Bring your own water bottle.</div>
-          <div class="waitlist"><span class="red-text">Sold out</span><br>
-            <a href="summer-waitlist-form/" target="_blank">Join the Waitlist</a></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-four.webp" alt="Smiling children working on a craft activity at a colorful table"></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">4</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Encourages Play</div>
+              <div>Kids love to have fun, and camp gives them plenty of opportunities for that while also encouraging creativity and social engagement. Though camp is structured, it is more relaxed than a school setting and offers children time and freedom to explore their imagination through play. </div>
+            </div>
+          </div>
+          <div class="full-flex-break"></div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-five.webp" alt="Children working on art projects at a table with an adult supervisor"></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">5</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Fosters Growth</div>
+              <div>Camp can take kids out of their comfort zone and push them to try new things, as well as dig into their already established areas of interest. They will grow by developing skills doing favorite activities, and they will develop new skills exploring those activities that are new to them. </div>
+            </div>
+          </div>
+          <div class="box-item">
+            <div><img class="img-responsive" src="images/box-six.webp" alt="Friends working together on a craft project with art supplies"></div>
+            <div class="circle-wrapper">
+              <div class="icon-circle-gray">6</div>
+            </div>
+            <div class="box-content">
+              <div class="h3 text-center no-margin-top">Nurtures Friendships</div>
+              <div>Kids meet other kids with similar interests at camp. Free from the social pressures of school, children can relax and build friendships and memories based on the shared experiences and fun challenges that bring them together. </div>
+            </div>
+          </div>
         </div>
       </div>
-      <!--<div class="h5 text-center padding-top-30"><i>On sale Monday, February 2!</i></div>--> 
-      
-      <!--<div class="text-center padding-top-30"><a href="summer-registration/roxborough/" target="_blank" class="btn btn-primary">Register Now</a></div>--> 
-    </div>
-    
-    <!-- ########### --> 
-    
-    <!--<div class="row bg-teal padding-top-60 padding-bottom-60">
-      <div class="container">
-        <div class="h5 no-margin white text-center max-width-65">A limited number of Camp DCL scholarships are available from the <a class="white text-underline" href="../foundation/">Douglas County Libraries Foundation</a> for qualified applicants.</div>
-        <div class="text-center"> <a href="scholarship-form/" target="_blank" class="btn btn-primary margin-top-30">Apply Now</a> </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="carousel-wapper bg-teal">
+          <div class="comment-container">
+            <div class="carousel" data-flickity='{ "adaptiveHeight": true, "wrapAround": true, "autoPlay": 7000 }'>
+              <div class="carousel-cell">
+                <div>"[DCL art camp] was a tremendous camp and my son absolutely loved it. It was a fantastic experience and Ms. Natalie, as well as your staff, did a wonderful job. We were very impressed with how many different types of projects the students were exposed to and the quality of the portfolio by the end of the week."</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"Due to a scholarship from your program, my son was able to attend LEGO Superhero Camp in Castle Rock. In this card, it's not possible to explain our gratitude for this opportunity and how it positively impacted our son and our family."</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My kids loved this camp! They tried new food that they might not have eaten at home. Well organized, and they said the instructors were great. Kudos to the staff for coming in the last day despite the bad weather."</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My daughter LOVED this camp! Everything about it was great—the communication, organization, agenda, age-appropriate, class size, student-to-teacher ratio. Great job!"</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My daughter was sad when the camp ended, she liked it so much!"</div>
+              </div>
+              <div class="carousel-cell">
+                <div>"My son told me it was one of his favorite camps ever!"</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>--> 
+    </section>
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
@@ -500,7 +495,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> 
+<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
+<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -526,8 +531,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.blogs.douglascountylibraries.org",
-		"https:\/\/help.dcl.org/",
+		"https:\/\/www.dclblog.org",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
