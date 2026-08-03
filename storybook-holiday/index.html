@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,45 +44,141 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" href="../shared-assets/css/flickity.min.css">
 <style>
-.reserve-a-space-active {
-	background-color: #f5f5f5;
+@font-face {
+    font-family: 'Coffee';
+    src: url('../shared-assets/web-fonts/Lets-Coffee.woff2') format('woff2'), url('../shared-assets/web-fonts/Lets-Coffee.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.events-active {
+    background-color: #f5f5f5;
+}
+h1.coffee {
+    font-family: "Coffee", Georgia;
+    color: #e28531;
+    font-style: normal;
+    font-size: 5.5rem;
+    margin: 0 0 10px;
+    text-shadow: 6px 6px 6px #000;
+}
+.h2.coffee {
+    font-family: "Coffee", Georgia;
+    color: #e28531;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 6px 6px 6px #000;
+}
+.spin-heading {
+    /* font-family: "Coffee", Georgia; */
+    color: #fff;
+    /* font-style: normal; */
+    font-size: 1.5rem;
+    padding: 0 0 10px;
+    margin: 0;/* line-height: 1; *//* text-shadow: 6px 6px 6px #000; */
+}
+.intro-text {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    padding: 60px 0 17px;
+    line-height: 1;
 }
 .custom-container {
-	max-width: 2200px;
-	margin: 0 auto;
+    max-width: 1920px;
+    margin: 0 auto;
+    color: #fff;
 }
-.intro-container {
-	max-width: 850px;
-	margin: 0 auto;
-	padding: 0 15px 30px;
+.event-wrapper {
+    background: #264284 url("pumpkin-background-large.webp") center bottom no-repeat;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
 }
-.flickity-container {
-	max-width: 1610px;
-	margin: 0 auto;
-	padding: 0 15px;
+.details-container {
+    color: #fff;
+    padding: 10px 0 475px;
+    max-width: 720px;
+    margin: 0 auto;
 }
-.carousel-cell {
-	width: 100%;
-	padding: 0 0 50px 0;
-	text-align: center;
+.tickets-wrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    max-width: 820px;
+    margin: 0 auto;
 }
-.carousel-cell img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin: 0 auto;
+.tickets-item {
+    padding: 15px;
 }
-.flickity-page-dots {
-	bottom: 20px;
-	opacity: .5;
+.tickets-item h4 {
+    text-transform: uppercase;
+    color: #20555b;
+    font-size: 24px;
+    margin: 15px 0 5px;
+    font-weight: 600;
 }
-.flickity-page-dots .dot {
-	background-color: #000;
+.tickets-date {
+    font-size: 18px;
+    padding-bottom: 5px;
 }
-.flickity-prev-next-button {
-	display: none;
+.btn.btn-custom {
+    color: #000;
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 15px rgba(255,255,255,.8);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+.btn.btn-custom:hover, .btn.btn-custom:focus {
+    color: #000;
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 25px rgba(255,255,255,1);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+
+@media (max-width: 1300px) {
+.event-wrapper {
+    background: #264284;
+}
+.details-container {
+    padding: 10px 0 20px;
+}
+}
+
+@media (min-width: 1301px) {
+.pumpkin-small {
+    display: none;
+}
+}
+
+@media (max-width: 750px) {
+.spin-heading {
+    font-size: 1.25rem;
+}
+.details-container {
+    padding: 10px 0 20px;
+}
+}
+
+@media (max-width: 600px) {
+h1.coffee {
+    font-size: 4.25rem;
+}
+.h2.coffee {
+    font-size: 2.5rem;
+}
 }
 </style>
 <!-- InstanceEndEditable -->
@@ -286,50 +383,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row border-top padding-bottom-20">
-      <div class="container text-center">
-        <h1 class="page-heading">A Storybook Holiday</h1>
-        <div class="max-width-80">
-          <h2 class="page-subheading">Our Storybook Holiday events are a delight for the whole family, celebrating beloved stories and timeless characters in classic literature.</h2>
-          <div class="h4 margin-bottom-5 no-margin-top"><i>Coming this Fall!</i></div>
+    <div class="row background-row">
+      <div class="custom-container">
+        <div class="event-wrapper">
+          <div class="intro-text">A Storybook Holiday:</div>
+          <div class="h2 coffee">The</div>
+          <h1 class="coffee">Great Pumpkin</h1>
+          <div><i>"And then on Halloween night, the 'Great Pumpkin' rises up out of the pumpkin patch…" – Charles M. Schulz</i></div>
+          <div class="details-container">
+            <div class="details-wrapper">
+              <div class="details">
+                <div class="spin-heading">Gather your little pumpkins and celebrate the magic of fall!</div>
+                <div>Join us for a Halloween event the whole family will enjoy, featuring tasty food, treats and drinks, Peanuts-inspired crafts and activities, a trick-or-treat scavenger hunt for the kids, a take-and-make to continue the party at home, and photo booth fun for capturing all the memories. There’s something for everyone! But will you catch a glimpse of the Great Pumpkin?</div>
+              </div>
+              <div class="tickets-row">
+                <div class="text-center">
+                  <div class="tickets-wrapper">
+                    <div class="tickets-item one">
+                      <div class="h5 white">Saturday, October&nbsp;24, 6-9PM, <a class="white text-underline" href="../parker/">Parker</a></div>
+                      <div>Tickets: $25&nbsp;Ages&nbsp;3-13;&nbsp;$30&nbsp;Ages&nbsp;14+</div>
+                      <div>(No charge for ages 2 and under)</div>
+                      <div class="padding-top-30 text-center"> 
+                        <!-- Noscript content for added SEO -->
+                        <noscript>
+                        <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-great-pumpkin-tickets-1993616218777" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                        </noscript>
+                        <!-- You can customize this button any way you like -->
+                        <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1993616218777" type="button">Buy Tickets</button>
+                        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                        <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1993616218777',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1993616218777',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="max-width-40 padding-top-10">This event is ideal for ages 3-8, but all ages are welcome and costumes are encouraged.</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="pumpkin-small"><img class="center-block img-responsive" src="pumpkin-small.webp" alt=""></div>
       </div>
     </div>
-    <div class="flickity-container">
-      <div class="carousel" data-flickity='{ "imagesLoaded": true, "wrapAround": true, "autoPlay": 4000 }'>
-        <div class="carousel-cell"><img src="carousel/one.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/two.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/three.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/four.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/five.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/six.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/seven.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/eight.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/nine.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/ten.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/eleven.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/twelve.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/thirteen.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/fourteen.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/fifteen.webp" alt=""></div>
-        <div class="carousel-cell"><img src="carousel/sixteen.webp" alt=""></div>
-      </div>
-    </div>
-    <div class="container text-center padding-bottom-80">
-      <div class="max-width-80 padding-bottom-10">Join us for whimsical crafts and activities, catered food and drinks, music, entertainment, and more as we bring favorite stories to life throughout the year. Costumes are always encouraged!</div>
-      <div class="max-width-50">Sign up for our <a class="text-underline" href="../newsletters/">eNewsletter</a> to get the inside scoop on DCL events and ticket sales!</div>
-    </div>
-    
-    <!--<div class="text-center padding-top-40 padding-bottom-50">
-  <div>
-    <h4><i>Coming Spring 2022!</i></h4>
-    <div>
-      <h3 class="no-margin">A Storybook Holiday Spring:</h3>
-      <h1 class="no-margin-top text-uppercase font-weight-400">That Hungry Little Bug</h1>
-      Sunday, March 27, Parker<br>
-      Tickets on sale soon. </div>
-  </div>
-</div>--> 
     <!-- InstanceEndEditable --> </div>
 </main>
 <div class="row no-margin bg-gray-10">
@@ -393,17 +499,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<script src="../shared-assets/js/flickity.pkgd.min.js"></script> 
-<script>
-	var cards = $(".carousel-cell");
-for (var i = 0; i < cards.length; i++) {
-  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
-  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
-  cards.eq(target1).before(cards.eq(target2));
-}
- </script> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -429,7 +525,8 @@ for (var i = 0; i < cards.length; i++) {
 		"query-input": "required name=search_term_string"
 	},
 	"sameAs": ["https:\/\/dcl.bibliocommons.com",
-		"https:\/\/www.dclblog.org",
+		"https:\/\/www.blogs.douglascountylibraries.org",
+		"https:\/\/help.dcl.org/",
 		"https:\/\/www.douglascountylibraries.org/",
 		"https:\/\/www.facebook.com\/DouglasCountyLibrariesColorado",
 		"https:\/\/www.instagram.com\/dclcolorado",
@@ -462,4 +559,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
