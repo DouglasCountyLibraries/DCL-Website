@@ -45,7 +45,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <!-- InstanceBeginEditable name="head" -->
-<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+<link rel="stylesheet" href="../../shared-assets/css/flickity.min.css">
 <style>
 .white-top-row {
     background: #ffffff;
@@ -245,6 +245,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-align: center;
     color: #fff;
     padding: 0 15px;
+}
+.carousel-wapper {
+    padding: 70px 15px 70px;
+}
+.comment-container {
+    color: #fff;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    font-style: italic;
+}
+.carousel-cell {
+    width: 100%;
+}
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+}
+.flickity-page-dots {
+    bottom: -30px;
+    opacity: .2;
+}
+.flickity-page-dots .dot {
+    background-color: #fff;
+}
+.flickity-prev-next-button {
+    display: none;
+}
+.flickity-viewport {
+    transition: height 0.6s;
+}
+blockquote {
+    font-size: 1.063rem;
+}
+blockquote small {
+    color: #fff;
+    padding-top: 5px;
+    font-style: normal;
 }
 #endowment-modal > .modal-dialog > .modal-content > .modal-body > ul {
     padding: 15px 30px 30px;
@@ -520,7 +558,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div> <img class="img-responsive" src="https://lipsum.app/970x600/" alt=""></div>
             <div class="photo-item-inner">
               <div class="max-width-80">
-                <div class="h2 no-margin-top">Content Goes Here</div>
+                <div class="h3 no-margin-top">Your Support Makes a Lasting Difference</div>
                 <div>Our endowment fund, managed by the Rose Community Foundation, strengthens the library's ability to support and serve our community well into the future. Endowment funds provide financial stability that goes beyond annual taxpayer funding. Your legacy gift to the Douglas County Libraries Foundation Fund is tax-deductible.</div>
               </div>
             </div>
@@ -529,7 +567,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </section>
     <section>
-      <div class="row bg-gray-5 padding-top-15 padding-bottom-80">
+      <div class="row bg-gray-5 padding-top-30 padding-bottom-70">
         <div class="support-wrapper">
           <div class="support-item">
             <div class="support-bottom-row">
@@ -579,7 +617,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </section>
-    
+    <section>
+      <div class="row">
+        <div class="carousel-wapper bg-teal">
+          <div class="comment-container">
+            <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 7000 }'>
+              <div class="carousel-cell">
+                <blockquote>"I have lived in this county for 34 years and have seen so many changes. Our libraries continue to grow and serve magnificently, and I choose to be a part of that!"<small>Elaine McCain, DCLF Board Member</small></blockquote>
+              </div>
+              <div class="carousel-cell">
+                <blockquote>"We've established a fund that will have an expertly managed investment portfolio, will grow our endowment, and keep it protected for future DCL use. The fund is important to provide long-term stability for our libraries in the face of unforeseeable changes and to fund the important goals of the foundation."<small>Rochelle Logan, DCLF Board Member</small></blockquote>
+              </div>
+              <div class="carousel-cell">
+                <blockquote>"The library is a vital part of my life and community. It is a testament to how much learning is valued in Douglas County."<small>An Anonymous Donor</small></blockquote>
+              </div>
+              <div class="carousel-cell">
+                <blockquote>"Donating is the least I can do! I love the library! Libraries have always been my happy place since I was a little girl. Reading brings me so much joy."<small>An Anonymous Donor</small></blockquote>
+              </div>
+              <div class="carousel-cell">
+                <blockquote>"I love to spend time there. I love to watch the kids play and listen to stories. I love that there are so many resources at our fingertips. I truly appreciate all that you and your foundation do to keep the library at its best. Thank you for what you do."<small>An Anonymous Donor</small></blockquote>
+              </div>
+              <div class="carousel-cell">
+                <blockquote>"We hope we are able to support our public libraries and librarians throughout our lives! We want to do our part so that you know how much we treasure our libraries and all their offerings! And we want those offerings to be free and readily available for generations to come!" <small>An Anonymous Donor</small></blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--
       
     <section>
@@ -758,15 +823,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 <!-- InstanceBeginEditable name="scripts" --> 
-<script>$(".animated-progress span").each(function () {
-  $(this).animate(
-    {
-      width: $(this).attr("data-progress") + "%",
-    },
-    2000
-  );
-  $(this).text($(this).attr("data-progress") + "%");
-});</script> 
+<script src="../../shared-assets/js/flickity.pkgd.min.js"></script> 
+<script>
+	var cards = $(".carousel-cell");
+for (var i = 0; i < cards.length; i++) {
+  var target1 = Math.floor(Math.random() * cards.length - 1) + 1;
+  var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+  cards.eq(target1).before(cards.eq(target2));
+}
+ </script> 
 
 <!-- open contact-us modal on page load --> 
 
