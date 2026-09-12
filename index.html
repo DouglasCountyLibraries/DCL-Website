@@ -48,221 +48,101 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
 <style>
-.container-fluid {
-    padding: 0;
-    background: #fff;
-    z-index: -1;
-}
-#general-alert, #local-alert {
-    margin-left: 0;
-    margin-right: 0;
-}
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-.container-wrapper {
+.feature-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #5D8193;
     max-width: 1920px;
-    margin: 0 auto;
 }
-.content-wrapper {
+.row-wrapper-one {
+    background: #5D8193 url("feature-background-top.webp") top center no-repeat;
+    width: 1920px;
     display: flex;
-    margin: 0 auto;
-    padding: 0 15px 150px;
-    max-width: 1360px;
-    z-index: 5;
-    position: relative;
+    flex-direction: row;
+    padding: 200px 30px 0;
 }
-.item-one, .item-two {
+.row-wrapper-two {
+    background: #5D8193 url("feature-background-bottom.webp") bottom center no-repeat;
+    width: 1920px;
     display: flex;
-    justify-content: center;
-    color: #fff;
-}
-.item-two {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    max-width: 555px;
-    margin: 0 15px;
-}
-.video-container {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-video#bgvid {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    object-position: bottom;
-    background: #fff url(waves-poster1920.webp) bottom center no-repeat;
-    background-size: cover;
-}
-video#bgvid-sm {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    object-position: bottom;
-    background: #fff url(waves-poster950.webp) bottom center no-repeat;
-    background-size: cover;
-}
-video {
-    display: block;
-}
-.playpause {
-    position: relative;
-    padding: 0 15px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-.play, .pause {
-    color: #eee;
-    font-size: 38px;
-    margin: 0 5px;
-    border: 0;
-    background: 0;
-    transition-duration: 0.4s;
-    padding: 0;
-}
-.play:hover, .play:focus, .pause:hover, .pause:focus {
-    cursor: pointer;
-    text-decoration: none;
-    color: #fff;
-    transition-duration: 0.4s;
-}
-.play:active, .play:focus {
-    color: #fff;
-}
-.box-icon {
-    color: rgba(255,255,255,.7);
-    font-size: 100px;
-    text-align: center;
-    line-height: .9;
-}
-h2.heading-one {
-    font-size: 1.875rem;
-    line-height: 1.2;
-    margin: 0 0 5px;
-    font-weight: 500;
-    color: #fff;
+    flex-direction: row;
+    padding: 0 30px 260px;
 }
 .row-container {
     display: flex;
-    max-width: 1920px;
+    max-width: 1400px;
     margin: 0 auto;
 }
-.row-wrapper {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+.boxone-wrapper {
+    background: #ece4d0;
 }
-.box-one-wrapper {
-    background: #a72864;
-width: calc(100% * 0.3333333);
+.boxtwo-wrapper {
+    background: #59511f;
+}
+.boxthree-wrapper {
+    background: #2c495b;
+}
+.boxfour-wrapper {
+    background: #5b1f1f;
+}
+.boxone-wrapper, .boxtwo-wrapper, .boxthree-wrapper, .boxfour-wrapper {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    padding: 100px 15px 110px;
-}
-.box-two-wrapper {
-    background: #517a7f;
-width: calc(100% * 0.3333333);
-    display: flex;
-    flex-direction: column;
-    padding: 100px 15px 110px;
-}
-.box-three-wrapper {
-    background: #69326d;
-width: calc(100% * 0.3333333);
-    display: flex;
-    flex-direction: column;
-    padding: 100px 15px 110px;
-}
-.box-one-content {
-    margin: 0 auto;
-    color: #fff;
-    padding: 30px 0;
-    font-size: 1.25rem;
-    text-align: center;
-    max-width: 530px;
-}
-.box-one-small-content {
-    font-size: 1rem;
-}
-.box-two-content {
-    margin: 0 auto;
-    color: #fff;
-    padding: 30px 0 35px;
-    font-size: 1.25rem;
-    text-align: center;
-    max-width: 530px;
-}
-.box-three-content {
-    margin: 0 auto;
-    color: #fff;
-    padding: 30px 0 35px;
-    font-size: 1.25rem;
-    text-align: center;
-    max-width: 530px;
-}
-.box-three-small-content {
-    font-size: 1rem;
-    padding-top: 10px;
-}
-
-@media (max-width: 1200px) {
-.content-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0 300px;
-}
-.box-one-wrapper {
-    width: 100%;
-}
-.box-two-wrapper, .box-three-wrapper {
 width: calc(100% * 0.5);
+    padding: 100px 15px 110px;
 }
+.boxone-wrapper img, .boxtwo-wrapper img, .boxthree-wrapper img, .boxfour-wrapper img {
+    border-radius: 50%;
 }
-
-@media (min-width: 951px) {
-.small-video {
-    display: none;
+.boxone-content {
+    color: #000;
+    text-align: center;
 }
+.boxone-content h2 {
+    color: #000;
+    text-align: center;
+}
+.boxtwo-content, .boxthree-content, .boxfour-content {
+    color: #fff;
+}
+.boxtwo-content h2, .boxthree-content h2, .boxfour-content h2 {
+    color: #fff;
+}
+.boxone-content, .boxtwo-content, .boxthree-content, .boxfour-content {
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 1.13rem;
+    text-align: center;
+    max-width: 650px;
+}
+.boxtwo-content h2, .boxthree-content h2, .boxfour-content h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin: 0 0 10px;
+    font-weight: 500;
 }
 
 @media (max-width: 950px) {
-.large-video {
-    display: none;
+.row-wrapper-one {
+    background: #5D8193 url("feature-background-top-small.webp") top center no-repeat;
+    padding: 150px 15px 0;
 }
-.box-one-wrapper, .box-two-wrapper, .box-three-wrapper {
+.row-wrapper-two {
+    background: #5D8193 url("feature-background-bottom-small.webp") bottom center no-repeat;
+    padding: 0 15px 150px;
+}
+.row-container {
+    flex-direction: column;
+}
+.boxone-wrapper, .boxtwo-wrapper, .boxthree-wrapper, .boxfour-wrapper {
     width: 100%;
-}
-}
-
-@media (max-width: 750px) {
-.content-wrapper {
-    padding: 0 0 200px;
-}
-.box-one-wrapper, .box-two-wrapper, .box-three-wrapper {
-    padding: 65px 15px;
+    margin-bottom: 40px;
 }
 }
 </style>
@@ -468,77 +348,63 @@ width: calc(100% * 0.5);
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="gradient-row">
-      <section>
-        <div class="container-wrapper">
-          <div class="content-container">
-            <div class="video-container">
-              <div class="content-wrapper">
-                <div class="item-one"><img class="img-responsive" src="big-little-books.webp" alt="Big Little Lies and Big Little Truth Book Covers"></div>
-                <div class="item-two">
-                  <div class="text-uppercase">DCL Presents:</div>
-                  <h1 class="white">Liane Moriarty</h1>
-                  <h2 class="white xxsm-heading margin-bottom-10">Meet the acclaimed author and hear the story behind her Big Little new novel.</h2>
-                  <h3 class="white xxsm-heading no-margin-top">Friday, September&nbsp;11, 7PM, Hyatt Regency DTC</h3>
-                  <div class="h4"><a class="white text-underline" href="featured-events/">Learn More</a></div>
+    <div class="row gradient-row">
+      <div class="background-wrapper">
+        <section>
+          <div class="feature-wrapper">
+            <div class="row-wrapper-one">
+              <div class="row-container">
+                <div class="boxone-wrapper">
+                  <div id="boxone"></div>
+                  <div class="boxone-content">
+                    <h2>Cheers to the Brew Tour</h2>
+                    <div>There's still time to sip and connect, support local brewers, and win prizes along the way. Tap in before it ends!<br>
+                      <a class="black text-underline" href="brew-tour/">Sign Up</a>.</div>
+                  </div>
+                </div>
+                <div class="boxtwo-wrapper">
+                  <div id="boxtwo"></div>
+                  <div class="boxtwo-content">
+                    <h2>Host It Here!</h2>
+                    <div>Our spaces are ready when you are. From meetings and events to birthday parties and baby showers, we can help you huddle and celebrate.<br>
+                      <a class="white text-underline" href="reserve-a-space/#host-your-event">Check out our spaces</a>.</div>
+                  </div>
                 </div>
               </div>
-              <div class="large-video">
-                <video autoplay loop muted playsinline preload="none" poster="waves-poster1920.webp" id="bgvid">
-                  <source src="waves1920.mp4" type="video/mp4" />
-                  Your browser does not support the background video tag.
-                  <source src="waves1920.webm" type="video/webm" />
-                  Your browser does not support the background video tag. </video>
-                <div class="playpause">
-                  <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
-                  <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+            </div>
+            <div class="row-wrapper-two">
+              <div class="row-container">
+                <div class="boxthree-wrapper">
+                  <div id="boxthree"></div>
+                  <div class="boxthree-content">
+                    <h2>Take the Reading Challenge</h2>
+                    <div>For kids and adults. There's still time to make your reading count and be entered into our year-end prize drawing.<br>
+                      <a class="white text-underline" href="reading-challenge/">Learn More</a>.</div>
+                  </div>
                 </div>
-              </div>
-              <div class="small-video">
-                <video autoplay loop muted playsinline preload="none" poster="waves-poster950.webp" id="bgvid-sm">
-                  <source src="waves950.mp4" type="video/mp4" />
-                  Your browser does not support the background video tag.
-                  <source src="waves950.webm" type="video/webm" />
-                  Your browser does not support the background video tag. </video>
-                <div class="playpause">
-                  <button class="play" aria-label="Play background video" onclick="document.getElementById('bgvid').play()"><i class="fa-sharp fa-solid fa-play"></i></button>
-                  <button class="pause" aria-label="Pause background video" onclick="document.getElementById('bgvid').pause()"><i class="fa-sharp fa-solid fa-pause"></i></button>
+                <div class="boxfour-wrapper">
+                  <div id="boxfour"></div>
+                  <div class="boxfour-content">
+                    <h2>DCL Book Clubs</h2>
+                    <div>Turn pages and talk about it! Beginning bookworm or lifelong reader, we've got a book club for you.<br>
+                      <a class="white text-underline" href="book-clubs/">Check it out</a>.</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="row-container">
-          <div class="row-wrapper">
-            <div class="box-one-wrapper">
-              <div class="box-icon"><i class="fa-sharp fa-solid fa-buildings"></i></div>
-              <div class="box-one-content">
-                <h2 class="heading-one">Host It Here!</h2>
-                <div>Our spaces are ready when you are. From meetings and events to birthday parties and baby showers, we can help you huddle and celebrate.<br>
-                  <a class="white text-underline" href="reserve-a-space/#host-your-event">Check out our spaces</a>.</div>
-              </div>
-            </div>
-            <div class="box-two-wrapper">
-              <div class="box-icon"><i class="fa-sharp fa-solid fa-glass"></i></div>
-              <div class="box-two-content">
-                <h2 class="heading-one">Cheers to the Brew Tour</h2>
-                <div>There's still time to sip and connect, support local brewers, and win prizes along the way.<br>
-                  Tap in before it ends! <a class="white text-underline" href="brew-tour/">Sign Up</a>.</div>
-              </div>
-            </div>
-            <div class="box-three-wrapper">
-              <div class="box-icon"><i class="fa-sharp fa-solid fa-books"></i></div>
-              <div class="box-three-content">
-                <h2 class="heading-one">DCL Book Clubs</h2>
-                <div>Turn pages and talk about it! Beginning bookworm or lifelong reader, we've got a book club for you.<br>
-                  <a class="white text-underline" href="book-clubs/">Check it out</a>.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+        <script>
+    var images = ['bt-one.webp', 'bt-two.webp', 'bt-three.webp'];
+    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxone');
+    var images = ['hih-one.webp', 'hih-two.webp', 'hih-three.webp'];
+    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxtwo');
+    var images = ['rc-one.webp', 'rc-two.webp', 'rc-three.webp'];
+    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxthree');
+    var images = ['bc-one.webp', 'bc-two.webp', 'bc-three.webp'];
+    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxfour');
+</script> 
+      </div>
     </div>
     <!-- InstanceEndEditable --> </div>
 </main>
