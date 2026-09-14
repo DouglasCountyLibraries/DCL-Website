@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Staff Only | Douglas County Libraries</title>
+<title>RSVP | Douglas County Libraries</title>
 <link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.png">
@@ -33,79 +33,84 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
 <script src="https://www.dcl.org/shared-assets/js/dcl.js?32725"></script>
 <meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 <style>
+.custom-wrapper {
+    background: #fff url("pdcg-background.webp") top center/cover;
+}
+.star-row {
+    background: url("pdcg-stars.webp") center center repeat-x;
+    height: 83px;
+}
 .custom-container {
     text-align: center;
-    padding: 40px 10px 100px;
+    padding: 0 15px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 .intro {
     max-width: 600px;
     margin: 0 auto;
-    padding: 15px 0 20px;
+    padding: 15px 0 0;
+}
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.intro-one {
+	text-transform: uppercase;
+	font-size: 5rem;
+	color: #22408f;
+	font-weight: 500;
+	line-height: 1;
+	border-top: 5px solid #ef374b;
+	border-bottom: 5px solid #ef374b;
+	padding: 12px 0 17px;
+}
+.intro-two {
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	color: #22408f;
+	font-weight: 200;
+	line-height: 1;
+	padding: 15px 0 15px;
+}
+.intro-three {
     font-size: 1.5rem;
 }
-svg {
-    width: 100px;
-    display: block;
-    margin: 30px auto;
+.intro-six {
+	font-size: 3rem;
+	color: #ef374b;
+	font-weight: 500;
+	line-height: .9;
+	padding: 45px 0 30px;
 }
-.path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 0;
-}
-.path.circle {
-    -webkit-animation: dash 0.9s ease-in-out;
-    animation: dash 0.9s ease-in-out;
-}
-.path.check {
-    stroke-dashoffset: -100;
-    -webkit-animation: dash-check 1s 1s ease-in-out forwards;
-    animation: dash-check 1s 1s ease-in-out forwards;
-}
-@-webkit-keyframes dash {
-0% {
-stroke-dashoffset: 1000;
-}
-100% {
-stroke-dashoffset: 0;
-}
-}
-@keyframes dash {
-0% {
-stroke-dashoffset: 1000;
-}
-100% {
-stroke-dashoffset: 0;
-}
-}
-@-webkit-keyframes dash-check {
-0% {
-stroke-dashoffset: -100;
-}
-100% {
-stroke-dashoffset: 900;
-}
-}
-@keyframes dash-check {
-0% {
-stroke-dashoffset: -100;
-}
-100% {
-stroke-dashoffset: 900;
-}
+.pdcg-logo-row {
+    max-width: 425px;
+    margin: 0 auto;
+    padding: 30px 0 15px;
 }
 </style>
 </head>
 <body>
-<div class="custom-container">
-  <div><img class="img-responsive center-block" src="../../dcl-logo.png" alt="Douglas County Libraries"></div>
-  <div>
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-      <circle class="path circle" fill="none" stroke="#90ad63" stroke-width="5" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-      <polyline class="path check" fill="none" stroke="#90ad63 " stroke-width="15" stroke-linecap="square" stroke-miterlimit="15" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
-    </svg>
+<div class="custom-wrapper">
+  <div class="star-row"></div>
+  <div class="custom-container">
+    <div class="intro">
+      <div class="intro-one oswald">United in Service</div>
+      <div class="intro-two">A Celebration of Community</div>
+      <div class="intro-three">Monday, November&nbsp;9, 6-8PM</div>
+      <div class="intro-four">Douglas County Libraries in Castle Rock</div>
+      <div class="intro-five">Philip & Jerry Miller Library<br>
+        <a class="black text-underline" href="https://maps.app.goo.gl/rGSQBzbTRabNE7399" target="_blank">100 S Wilcox St</a></div>
+      <div class="intro-six oswald">Thank you for your response.</div>
+    </div>
+    <div class="pdcg-logo-row"><img class="img-responsive center-block" src="pdcg-logo.webp" alt=""></div>
   </div>
-  <div class="intro">Thanks for your submission!</div>
+  <div class="star-row"></div>
 </div>
 </body>
 </html>
