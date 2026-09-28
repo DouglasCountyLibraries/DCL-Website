@@ -61,23 +61,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
 .container-row {
-    background: transparent url("blue-background-large.webp") top center no-repeat;
+    background: #06071b url("blue-background-large.webp") top center no-repeat;
     max-width: 1920px;
     margin: 0 auto;
     color: #fff;
     font-weight: 500;
 }
 .transistion-row {
-    height: 100px;
+    height: 160px;
     background: linear-gradient(transparent, #06071b);
-    margin-top: -70px;
+    margin-top: -180px;
 }
 .top-wrapper {
-    /* margin: 0 15px; */
-    display: flex;/* height: 1125px; *//* justify-content: flex-end; *//* flex-direction: row; *//* border: 10px solid #fff; *//* margin: 50px; */
-	/* position: relative; */
-	/* top: 50px; */
-	/* left: 50px; */
+    display: flex;
 }
 .border-wrapper {
     border: 10px solid #cfcfd1;
@@ -87,14 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .top-container {
     text-align: center;
     display: flex;
-    /* flex-direction: column; */
-	/* align-self: center; */
-	/* padding: 0 30px 185px; */
-	/* max-width: 600px; */
     width: 100%;
-    justify-content: center;
-    /* border: 3px solid #fff; */
-    margin: 50px;
     justify-content: space-between;
     max-width: 1280px;
     margin: 0 auto;
@@ -197,39 +186,36 @@ h1.midcent {
     text-transform: uppercase;
     margin: 15px 0 0;
     font-weight: 400;
+    color: #f1e78b;
 }
 .tickets-date {
     font-size: 1.125rem;
     padding: 5px 0;
 }
 .btn.btn-custom {
-    color: #fff;
-    background: #016938;
+    color: #000;
+    background: linear-gradient(310deg, #c09b24, #f1e78b, #c09b24);
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0px 3px 3px rgba(0,0,0, .4);
+    box-shadow: 0px 0px 30px rgba(241,231,139, 0.3);
     transition: all .4s ease-out;
-    border-radius: 6px;
+    border-radius: 2px;
 }
 .btn.btn-custom:hover, .btn.btn-custom:focus {
-    color: #fff;
-    background: #014625;
+    color: #000;
+    background: linear-gradient(50deg, #c09b24, #f1e78b, #c09b24);
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0px 6px 12px rgba(0,0,0, .4);
+    box-shadow: 0px 0px 40px rgba(241,231,139, 0.9);
     transition: all .4s ease-out;
-    border-radius: 6px;
+    border-radius: 2px;
 }
 .btn.btn-custom.btn-soldout, .btn.btn-custom.btn-soldout:hover, .btn.btn-custom.btn-soldout:focus {
     box-shadow: none;
     cursor: not-allowed;
-    background: #016938;
 }
 
 @media (max-width: 1500px) {
-.tickets-wrapper {
-    flex-direction: column;
-}
 }
 @keyframes fall {
 from {
@@ -240,26 +226,57 @@ background-position: 0 0;
 }
 }
 
-@media (max-width: 900px) {
-.flakes-one {
-    background: transparent url("flakes-one-small.webp") center center repeat;
-    animation: fall 1.8s linear infinite;
+@media (max-width: 1200px) {
+.border-wrapper {
+    margin: 140px 15px;
 }
-.flakes-two {
-    background: transparent url("flakes-two-small.webp") center center repeat;
-    animation: fall 2s linear infinite;
 }
-.flakes-three {
-    background: transparent url("flakes-three-small.webp") center center repeat;
-    animation: fall 2.5s linear infinite;
+
+@media (max-width: 1050px) {
+.top-container {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 100px 0 110px;
+    flex-direction: column;
+    align-items: center;
 }
-@keyframes fall {
-from {
-background-position: 0 -389px;
+.transistion-row {
+    display: none;
 }
-to {
-background-position: 0 0;
+.border-wrapper {
+    margin: 140px 15px 45px;
 }
+}
+
+@media (max-width: 650px) {
+.train-ticket-container {
+    background: transparent url("train-ticket-background.webp") center center/cover;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(0deg);
+    width: 100%;
+    margin: 0 auto;/* align-content: center; */
+}
+.top-container {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 100px 0 75px;
+    flex-direction: column;
+    align-items: center;
+}
+h1.midcent {
+    color: #080b25;
+    font-size: 2.75rem;
+    line-height: 1.1;
+    margin: 5px 0 5px 0;
+    font-family: "Midcent", serif;
+    font-style: normal;
+}
+.border-wrapper {
+    border: 5px solid #cfcfd1;
+    margin: 140px 5px 50px;
 }
 }
 </style>
@@ -585,47 +602,6 @@ background-position: 0 0;
                   </div>
                   <div class="padding-top-30"><i>Optional alcohol ticket available for an additional $15 for adults ages 21-plus.</i></div>
                 </div>
-              </div>
-            </div>
-            <div class="tickets-row">
-              <div class="text-center">
-                <div class="tickets-wrapper">
-                  <div class="tickets-item">
-                    <div class="h4">Dinner Edition</div>
-                    <div class="tickets-date">Saturday, December&nbsp;6, 5PM</div>
-                    <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
-                    <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
-                    <div>(No charge for ages 2 and under)</div>
-                    <div class="padding-top-30 text-center">
-                      <button class="btn btn-custom btn-soldout">Sold Out</button>
-                    </div>
-                  </div>
-                  <div class="tickets-wrapper">
-                    <div class="tickets-item">
-                      <div class="h4">Brunch Edition</div>
-                      <div class="tickets-date">Sunday, December&nbsp;7, 8AM</div>
-                      <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
-                      <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
-                      <div>(No charge for ages 2 and under)</div>
-                      <div class="padding-top-30 text-center">
-                        <button class="btn btn-custom btn-soldout">Sold Out</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tickets-wrapper">
-                    <div class="tickets-item">
-                      <div class="h4">Lunch Edition</div>
-                      <div class="tickets-date">Sunday, December&nbsp;7, 12PM</div>
-                      <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
-                      <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
-                      <div>(No charge for ages 2 and under)</div>
-                      <div class="padding-top-30 text-center">
-                        <button class="btn btn-custom btn-soldout">Sold Out</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="padding-top-30"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
               </div>
             </div>
           </div>
