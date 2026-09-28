@@ -124,7 +124,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-direction: column;
     justify-content: center;
     transform: rotate(-8deg);
-    max-width: 600px;
+    width: 600px;
 }
 .chris-quote {
     padding: 50px 0 0;
@@ -194,28 +194,52 @@ h1.midcent {
     max-width: 650px;
     margin: 0 auto;
 }
+.tickets-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tickets-item {
+    padding: 15px;
+    white-space: nowrap;
+}
+.tickets-item .h4 {
+    text-transform: uppercase;
+    margin: 15px 0 0;
+    font-weight: 600;
+}
+.tickets-date {
+    font-size: 1.125rem;
+    padding: 5px 0;
+}
 .btn.btn-custom {
-    color: #000;
-    background: #fff;
+    color: #fff;
+    background: #016938;
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0px 0px 15px rgba(255,255,255,.8);
+    box-shadow: 0px 3px 3px rgba(0,0,0, .4);
     transition: all .4s ease-out;
-    border-radius: 2px;
+    border-radius: 6px;
 }
 .btn.btn-custom:hover, .btn.btn-custom:focus {
-    color: #000;
-    background: #fff;
+    color: #fff;
+    background: #014625;
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0px 0px 25px rgba(255,255,255,1);
+    box-shadow: 0px 6px 12px rgba(0,0,0, .4);
     transition: all .4s ease-out;
-    border-radius: 2px;
+    border-radius: 6px;
 }
 .btn.btn-custom.btn-soldout, .btn.btn-custom.btn-soldout:hover, .btn.btn-custom.btn-soldout:focus {
     box-shadow: none;
     cursor: not-allowed;
-    background: #fff;
+    background: #016938;
+}
+
+@media (max-width: 1500px) {
+.tickets-wrapper {
+    flex-direction: column;
+}
 }
 @keyframes fall {
 from {
@@ -250,23 +274,7 @@ background-position: 0 0;
 }
 }
 
-@media (max-width: 650px) {
-h1.midcent {
-    font-size: 4.8rem;
-}
-.top-container {
-    padding-top: 85%;
-}
-}
 
-@media (max-width: 450px) {
-h1.midcent {
-    font-size: 3.8rem;
-}
-.top-container {
-    padding-top: 85%;
-}
-}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -488,19 +496,101 @@ h1.midcent {
                 <div class="bottom-container">
                   <div class="bottom-heading">All aboard for holiday magic and wonder!</div>
                   <div>Join us for a fun-filled celebration of the beloved story “The Polar Express.” Enjoy family-friendly entertainment including live music and dance performances, delightful crafts, make-and-take cocoa gifts, festive photo ops, and a visit with Santa. Indulge in a delicious menu of food and drinks, oh-so-sweet treats, our signature hot cocoa bar, and local snack favorite Bob’s Roasted Nuts. Catch the holiday spirit here!</div>
-                  <!--<div class="h5 white">Sunday, March&nbsp;29, 8:30-11:30AM, <a class="white text-underline" href="../highlands-ranch/">Highlands Ranch</a></div>
-                    <div>Tickets: $25 ages&nbsp;3-13, $30 ages&nbsp;14+</div>
-                    <div>(Ages 2 and under free with paying adult)</div>
-                    <div class="padding-top-30 text-center">
-
-<button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1978184833087" type="button">Buy Tickets</button>
-
-
-                    </div>-->
+                  <div class="tickets-row">
+                <div class="text-center">
+                  <div class="tickets-wrapper">
+                    <div class="tickets-item">
+                      <div class="h4">Dinner Edition</div>
+                      <div class="tickets-date">Saturday, December&nbsp;6, 5PM</div>
+                      <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                      <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
+                      <div>(No charge for ages 2 and under)</div>
+                      <div class="padding-top-30 text-center">
+                        <button class="btn btn-custom btn-soldout">Sold Out</button>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h4">Brunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;7, 8AM</div>
+                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center">
+                          <button class="btn btn-custom btn-soldout">Sold Out</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h4">Lunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;7, 12PM</div>
+                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center"> 
+                         <button class="btn btn-custom btn-soldout">Sold Out</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>  
                   <div class="padding-top-30"><i>Optional alcohol ticket available for an additional $15 for adults ages 21-plus.</i></div>
                 </div>
               </div>
             </div>
+              
+              
+              
+              
+                    <div class="tickets-row">
+                <div class="text-center">
+                  <div class="tickets-wrapper">
+                    <div class="tickets-item">
+                      <div class="h4">Dinner Edition</div>
+                      <div class="tickets-date">Saturday, December&nbsp;6, 5PM</div>
+                      <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                      <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
+                      <div>(No charge for ages 2 and under)</div>
+                      <div class="padding-top-30 text-center">
+                        <button class="btn btn-custom btn-soldout">Sold Out</button>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h4">Brunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;7, 8AM</div>
+                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center">
+                          <button class="btn btn-custom btn-soldout">Sold Out</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h4">Lunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;7, 12PM</div>
+                        <div>Douglas County Libraries in <a href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $30 ages&nbsp;12+, $25 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center"> 
+                         <button class="btn btn-custom btn-soldout">Sold Out</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="padding-top-30"><i>An additional alcohol beverage ticket is $15 for adults 21-plus.</i></div>
+                </div>
+              </div>        
+              
+              
+              
+              
+              
           </div>
         </div>
       </div>
