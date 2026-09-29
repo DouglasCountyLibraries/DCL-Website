@@ -61,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
 .container-row {
-    background: #06071b url("blue-background-large.webp") top center no-repeat;
+    background: #06071b url("blue-background-large.webp") top left no-repeat;
     max-width: 1920px;
     margin: 0 auto;
     color: #fff;
@@ -104,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: -100px 0 0 0;
 }
 .train-ticket-container {
-    background: transparent url("train-ticket-background.webp") center center/cover;
+    background: transparent url("train-ticket-background-large.webp") center center/cover;
     height: 275px;
     display: flex;
     flex-direction: column;
@@ -155,7 +155,7 @@ h1.midcent {
     font-size: 2rem;
 }
 .bottom-row {
-    background: #06071b;
+    background: linear-gradient(#06071b, #203a5f);
     max-width: 1920px;
     margin: 0 auto;
     color: #fff;
@@ -169,7 +169,6 @@ h1.midcent {
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* max-width: 830px; */
     margin: 0 auto;
     padding: 0 0 130px;
 }
@@ -183,14 +182,16 @@ h1.midcent {
     white-space: nowrap;
 }
 .tickets-item .h4 {
+    font-family: "Midcent", serif;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
     margin: 15px 0 0;
     font-weight: 400;
     color: #f1e78b;
 }
 .tickets-date {
-    font-size: 1.125rem;
-    padding: 5px 0;
+    font-size: 1.25rem;
+    padding: 0 0 10px;
 }
 .btn.btn-custom {
     color: #000;
@@ -214,12 +215,9 @@ h1.midcent {
     box-shadow: none;
     cursor: not-allowed;
 }
-
-@media (max-width: 1500px) {
-}
 @keyframes fall {
 from {
-background-position: 0 -700px;
+background-position: 0 -500px;
 }
 to {
 background-position: 0 0;
@@ -231,8 +229,10 @@ background-position: 0 0;
     margin: 140px 15px;
 }
 }
-
 @media (max-width: 1050px) {
+.container-row {
+    background: #06071b url("blue-background-small.webp") bottom center/cover;
+}
 .top-container {
     justify-content: center;
     margin: 0 auto;
@@ -240,43 +240,75 @@ background-position: 0 0;
     flex-direction: column;
     align-items: center;
 }
-.transistion-row {
-    display: none;
-}
 .border-wrapper {
     margin: 140px 15px 45px;
 }
+.train-wrapper {
+    padding: 100px 30px 0;
 }
-
+.train-ticket-wrapper {
+    margin: -20px 0 0 0;
+}
+.flakes-one {
+    background: transparent url("flakes-one-small.webp") center center repeat;
+}
+.flakes-two {
+    background: transparent url("flakes-two-small.webp") center center repeat;
+}
+.flakes-three {
+    background: transparent url("flakes-three-small.webp") center center repeat;
+}
+@keyframes fall {
+from {
+background-position: 0 -300px;
+}
+to {
+background-position: 0 0;
+}
+}
 @media (max-width: 650px) {
 .train-ticket-container {
-    background: transparent url("train-ticket-background.webp") center center/cover;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: rotate(0deg);
-    width: 100%;
-    margin: 0 auto;/* align-content: center; */
+height: 180px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 400px;
+margin: 0 auto;
 }
 .top-container {
-    justify-content: center;
-    margin: 0 auto;
-    padding: 100px 0 75px;
-    flex-direction: column;
-    align-items: center;
+justify-content: center;
+margin: 0 auto;
+padding: 100px 0 75px;
+flex-direction: column;
+align-items: center;
 }
 h1.midcent {
-    color: #080b25;
-    font-size: 2.75rem;
-    line-height: 1.1;
-    margin: 5px 0 5px 0;
-    font-family: "Midcent", serif;
-    font-style: normal;
+color: #080b25;
+font-size: 2.75rem;
+line-height: 1.1;
+margin: 5px 0 5px 0;
+font-family: "Midcent", serif;
+font-style: normal;
 }
 .border-wrapper {
-    border: 5px solid #cfcfd1;
-    margin: 140px 5px 50px;
+border: 5px solid #cfcfd1;
+margin: 140px 5px 50px;
+}
+.bottom-container {
+padding: 0 0 100px;
+}
+}
+@media (max-width: 425px) {
+.train-ticket-container {
+background: transparent url("train-ticket-background-small.webp") center center/cover;
+height: 154px;
+width: 340px;
+}
+h1.midcent {
+font-size: 2rem;
+}
+.midcent-small {
+font-size: 1.5rem;
 }
 }
 </style>
@@ -480,7 +512,7 @@ h1.midcent {
               <div class="top-wrapper">
                 <div class="border-wrapper">
                   <div class="top-container">
-                    <div class="train-wrapper"> <img class="img-responsive" src="train.webp" alt="Illustration of a train"> </div>
+                    <div class="train-wrapper"> <img class="img-responsive" src="train-large.webp" alt="Illustration of a train"> </div>
                     <div class="train-ticket-wrapper">
                       <div class="train-ticket-container">
                         <div class="dcl-presents">A Storybook Holiday:</div>
@@ -535,22 +567,23 @@ h1.midcent {
 </script> 
                           </div>
                         </div>
-                        <div class="tickets-wrapper">
-                          <div class="tickets-item">
-                            <div class="h4 white">Brunch Edition</div>
-                            <div class="tickets-date">Sunday, December&nbsp;6, 8-11AM</div>
-                            <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
-                            <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
-                            <div>(No charge for ages 2 and under)</div>
-                            <div class="padding-top-30 text-center"> 
-                              <!-- Noscript content for added SEO -->
-                              <noscript>
-                              <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-brunch-edition-tickets-1999395838776" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
-                              </noscript>
-                              <!-- You can customize this button any way you like -->
-                              <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999395838776" type="button">Buy Tickets</button>
-                              <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
-                              <script type="text/javascript">
+                      </div>
+                      <div class="tickets-wrapper">
+                        <div class="tickets-item">
+                          <div class="h4 white">Brunch Edition</div>
+                          <div class="tickets-date">Sunday, December&nbsp;6, 8-11AM</div>
+                          <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
+                          <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
+                          <div>(No charge for ages 2 and under)</div>
+                          <div class="padding-top-30 text-center"> 
+                            <!-- Noscript content for added SEO -->
+                            <noscript>
+                            <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-brunch-edition-tickets-1999395838776" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                            </noscript>
+                            <!-- You can customize this button any way you like -->
+                            <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999395838776" type="button">Buy Tickets</button>
+                            <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                            <script type="text/javascript">
     var exampleCallback = function() {
         console.log('Order complete!');
     };
@@ -563,25 +596,25 @@ h1.midcent {
         onOrderComplete: exampleCallback
     });
 </script> 
-                            </div>
                           </div>
                         </div>
-                        <div class="tickets-wrapper">
-                          <div class="tickets-item">
-                            <div class="h4 white">Lunch Edition</div>
-                            <div class="tickets-date">Sunday, December&nbsp;6, 12-3PM</div>
-                            <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
-                            <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
-                            <div>(No charge for ages 2 and under)</div>
-                            <div class="padding-top-30 text-center"> 
-                              <!-- Noscript content for added SEO -->
-                              <noscript>
-                              <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-lunch-edition-tickets-1999396490726" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
-                              </noscript>
-                              <!-- You can customize this button any way you like -->
-                              <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999396490726" type="button">Buy Tickets</button>
-                              <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
-                              <script type="text/javascript">
+                      </div>
+                      <div class="tickets-wrapper">
+                        <div class="tickets-item">
+                          <div class="h4 white">Lunch Edition</div>
+                          <div class="tickets-date">Sunday, December&nbsp;6, 12-3PM</div>
+                          <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
+                          <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
+                          <div>(No charge for ages 2 and under)</div>
+                          <div class="padding-top-30 text-center"> 
+                            <!-- Noscript content for added SEO -->
+                            <noscript>
+                            <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-lunch-edition-tickets-1999396490726" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                            </noscript>
+                            <!-- You can customize this button any way you like -->
+                            <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999396490726" type="button">Buy Tickets</button>
+                            <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                            <script type="text/javascript">
     var exampleCallback = function() {
         console.log('Order complete!');
     };
@@ -594,7 +627,6 @@ h1.midcent {
         onOrderComplete: exampleCallback
     });
 </script> 
-                            </div>
                           </div>
                         </div>
                       </div>
