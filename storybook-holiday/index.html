@@ -35,10 +35,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#007b83">
 <meta name="theme-color" content="#ffffff">
 <link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/bootstrap-custom-min.css?41825">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Material+Icons" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Open+Sans:wght@300..800&family=Material+Icons&display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?81026">
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="https://www.dcl.org/shared-assets/css/dcl.css?11725">
 <script src="https://kit.fontawesome.com/5a49a17030.js" crossorigin="anonymous"></script> 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
@@ -46,8 +47,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- InstanceBeginEditable name="head" -->
 <style>
 @font-face {
-    font-family: 'Coffee';
-    src: url('../shared-assets/web-fonts/Lets-Coffee.woff2') format('woff2'), url('../shared-assets/web-fonts/Lets-Coffee.woff') format('woff');
+    font-family: 'Midcent';
+    src: url('../shared-assets/web-fonts/BohemianSoul-Regular.woff2') format('woff2'), url('../shared-assets/web-fonts/BohemianSoul-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -55,133 +56,266 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .events-active {
     background-color: #f5f5f5;
 }
-h1.coffee {
-    font-family: "Coffee", Georgia;
-    color: #e28531;
-    font-style: normal;
-    font-size: 5.5rem;
-    margin: 0 0 10px;
-    text-shadow: 6px 6px 6px #000;
+.gradient-row {
+    background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-.h2.coffee {
-    font-family: "Coffee", Georgia;
-    color: #e28531;
-    text-transform: uppercase;
-    font-style: normal;
-    font-size: 3rem;
-    margin: 0;
-    line-height: 1;
-    text-shadow: 6px 6px 6px #000;
-}
-.spin-heading {
-    /* font-family: "Coffee", Georgia; */
-    color: #fff;
-    /* font-style: normal; */
-    font-size: 1.5rem;
-    padding: 0 0 10px;
-    margin: 0;/* line-height: 1; *//* text-shadow: 6px 6px 6px #000; */
-}
-.intro-text {
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #fff;
-    padding: 60px 0 17px;
-    line-height: 1;
-}
-.custom-container {
+.container-row {
+    background: #06071b url("blue-background-large.webp") top left no-repeat;
     max-width: 1920px;
     margin: 0 auto;
     color: #fff;
+    font-weight: 500;
 }
-.event-wrapper {
-    background: #264284 url("pumpkin-background-large.webp") center bottom no-repeat;
+.transistion-row {
+    height: 160px;
+    background: linear-gradient(transparent, #06071b);
+    margin-top: -180px;
+}
+.top-wrapper {
+    display: flex;
+}
+.border-wrapper {
+    border: 10px solid #cfcfd1;
+    width: 100%;
+    margin: 140px 50px;
+}
+.top-container {
     text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 100px 0 0;
+}
+.train-wrapper {
+    display: flex;
+    margin: -280px 0 -120px 0;
+    padding: 100px 0 0;
+    max-height: 1000px;
+}
+.train-ticket-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 0 15px;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: -100px 0 0 0;
 }
-.details-container {
-    color: #fff;
-    padding: 10px 0 475px;
-    max-width: 720px;
+.train-ticket-container {
+    background: transparent url("train-ticket-background-large.webp") center center/cover;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(-8deg);
+    width: 600px;
+}
+.chris-quote {
+    padding: 50px 0 0;
+    max-width: 600px;
+}
+.flakes-one {
+    position: relative;
+    background: transparent url("flakes-one.webp") center center repeat;
+    animation: fall 1.5s linear infinite;
+    max-width: 1920px;
     margin: 0 auto;
+}
+.flakes-two {
+    position: relative;
+    background: transparent url("flakes-two.webp") center center repeat;
+    animation: fall 2s linear infinite;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.flakes-three {
+    position: relative;
+    background: transparent url("flakes-three.webp") center center repeat;
+    animation: fall 2.5s linear infinite;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.dcl-presents {
+    color: #080b25;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+h1.midcent {
+    color: #080b25;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 5px 0 5px 0;
+    font-family: "Midcent", serif;
+    font-style: normal;
+}
+.midcent-small {
+    font-size: 2rem;
+}
+.bottom-row {
+    background: linear-gradient(#06071b, #203a5f);
+    max-width: 1920px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 500;
+}
+.bottom-wrapper {
+    display: flex;
+    margin: 0 15px;
+}
+.bottom-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 0 130px;
+}
+.tickets-row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 .tickets-wrapper {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
-    max-width: 820px;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 .tickets-item {
     padding: 15px;
+    white-space: nowrap;
 }
-.tickets-item h4 {
+.tickets-item .h5 {
+    font-family: "Midcent", serif;
     text-transform: uppercase;
-    color: #20555b;
-    font-size: 24px;
-    margin: 15px 0 5px;
-    font-weight: 600;
+    letter-spacing: 1.8px;
+    margin: 15px 0 0;
+    font-weight: 400;
+    color: #f1e78b;
 }
 .tickets-date {
-    font-size: 18px;
-    padding-bottom: 5px;
+	font-size: 1.25rem;
+	padding: 0 0 8px;
+	font-weight: 400;
 }
 .btn.btn-custom {
     color: #000;
-    background: #fff;
+    background: linear-gradient(310deg, #c09b24, #f1e78b, #c09b24);
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0px 0px 15px rgba(255,255,255,.8);
+    box-shadow: 0px 0px 30px rgba(241,231,139, 0.3);
     transition: all .4s ease-out;
     border-radius: 2px;
 }
 .btn.btn-custom:hover, .btn.btn-custom:focus {
     color: #000;
-    background: #fff;
+    background: linear-gradient(50deg, #c09b24, #f1e78b, #c09b24);
     text-transform: uppercase;
     font-weight: 600;
+    box-shadow: 0px 0px 40px rgba(241,231,139, 0.9);
+    transition: all .4s ease-out;
+    border-radius: 2px;
+}
+.btn.btn-custom.btn-soldout, .btn.btn-custom.btn-soldout:hover, .btn.btn-custom.btn-soldout:focus {
+    box-shadow: none;
     cursor: not-allowed;
 }
-
-@media (max-width: 1400px) {
-.event-wrapper {
-    background: #264284 url("pumpkin-background-small.webp") center bottom no-repeat;
+@keyframes fall {
+from {
+background-position: 0 -500px;
+}
+to {
+background-position: 0 0;
 }
 }
 
-@media (max-width: 1300px) {
-.event-wrapper {
-    background: #264284;
-}
-.details-container {
-    padding: 10px 0 20px;
+@media (max-width: 1200px) {
+.border-wrapper {
+    margin: 140px 15px;
 }
 }
-
-@media (min-width: 1301px) {
-.pumpkin-small {
-    display: none;
+@media (max-width: 1050px) {
+.container-row {
+    background: #06071b url("blue-background-small.webp") bottom center/cover;
+}
+.top-container {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 100px 0 110px;
+    flex-direction: column;
+    align-items: center;
+}
+.border-wrapper {
+    margin: 140px 15px 45px;
+}
+.train-wrapper {
+    padding: 100px 30px 0;
+}
+.train-ticket-wrapper {
+    margin: -20px 0 0 0;
+}
+.flakes-one {
+    background: transparent url("flakes-one-small.webp") center center repeat;
+}
+.flakes-two {
+    background: transparent url("flakes-two-small.webp") center center repeat;
+}
+.flakes-three {
+    background: transparent url("flakes-three-small.webp") center center repeat;
+}
+@keyframes fall {
+from {
+background-position: 0 -300px;
+}
+to {
+background-position: 0 0;
 }
 }
-
-@media (max-width: 750px) {
-.spin-heading {
-    font-size: 1.25rem;
+@media (max-width: 650px) {
+.train-ticket-container {
+height: 180px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 400px;
+margin: 0 auto;
 }
-.details-container {
-    padding: 10px 0 20px;
+.top-container {
+justify-content: center;
+margin: 0 auto;
+padding: 100px 0 75px;
+flex-direction: column;
+align-items: center;
+}
+h1.midcent {
+color: #080b25;
+font-size: 2.75rem;
+line-height: 1.1;
+margin: 5px 0 5px 0;
+font-family: "Midcent", serif;
+font-style: normal;
+}
+.border-wrapper {
+border: 5px solid #cfcfd1;
+margin: 140px 5px 50px;
+}
+.bottom-container {
+padding: 0 0 100px;
 }
 }
-
-@media (max-width: 600px) {
-h1.coffee {
-    font-size: 4.25rem;
+@media (max-width: 425px) {
+.train-ticket-container {
+background: transparent url("train-ticket-background-small.webp") center center/cover;
+height: 154px;
+width: 340px;
 }
-.h2.coffee {
-    font-size: 2.5rem;
+h1.midcent {
+font-size: 2rem;
+}
+.midcent-small {
+font-size: 1.5rem;
 }
 }
 </style>
@@ -283,12 +417,7 @@ h1.coffee {
           <li><a href="https://go.dcl.org/myevents">My Events</a></li>
         </ul>
       </li>
-      <li class="dropdown research-active"> <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research <i class="fa-solid fa-chevron-down"></i></a>
-        <ul class="dropdown-menu research-menu">
-          <li><a href="../research/">Research Databases</a></li>
-          <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-        </ul>
-      </li>
+      <li class="research-active"><a href="../research/">Research</a></li>
     </ul>
   </div>
 </nav>
@@ -354,12 +483,7 @@ h1.coffee {
                   <li><a href="https://go.dcl.org/myevents">My Events</a></li>
                 </ul>
               </li>
-              <li class="mobile-nav-heading"> <a href="#" data-toggle="collapse" data-target="#research">Research <i class="fa-solid fa-chevron-down"></i> </a>
-                <ul id="research" class="nav mobile-nav-list collapse">
-                  <li><a href="../research/">Research Databases</a></li>
-                  <li><a href="https://archives.dcl.org/" target="_blank">Archives & Local History</a></li>
-                </ul>
-              </li>
+              <li class="research-active mobile-nav-heading"><a href="../research/">Research</a> </li>
             </ul>
           </div>
         </div>
@@ -387,38 +511,138 @@ h1.coffee {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="row background-row">
-      <div class="custom-container">
-        <div class="event-wrapper">
-          <div class="intro-text">A Storybook Holiday:</div>
-          <div class="h2 coffee">The</div>
-          <h1 class="coffee">Great Pumpkin</h1>
-          <div><i>"And then on Halloween night, the 'Great Pumpkin' rises up out of the pumpkin patch…" – Charles M. Schulz</i></div>
-          <div class="details-container">
-            <div class="details-wrapper">
-              <div class="details">
-                <div class="spin-heading">Gather your little pumpkins and celebrate the magic of fall!</div>
-                <div>Join us for a Halloween event the whole family will enjoy, featuring tasty food, treats and drinks, Peanuts-inspired crafts and activities, a trick-or-treat scavenger hunt for the kids, a take-and-make to continue the party at home, and photo booth fun for capturing all the memories. There’s something for everyone! But will you catch a glimpse of the Great Pumpkin?</div>
+    <div class="row gradient-row">
+      <div class="container-row">
+        <div class="flakes-one">
+          <div class="flakes-two">
+            <div class="flakes-three">
+              <div class="top-wrapper">
+                <div class="border-wrapper">
+                  <div class="top-container">
+                    <div class="train-wrapper"> <img class="img-responsive" src="train-large.webp" alt="Illustration of a train"> </div>
+                    <div class="train-ticket-wrapper">
+                      <div class="train-ticket-container">
+                        <div class="dcl-presents">A Storybook Holiday:</div>
+                        <h1 class="midcent">
+                          <div class="midcent-small">The</div>
+                          North Pole<br>
+                          EXPRESS</h1>
+                      </div>
+                      <div class="chris-quote"><i>"We climbed mountains so high it seemed as if we would scrape the moon. But the Polar Express never slowed down."<br>
+                        &mdash; Chris Van Allsburg, The Polar Express</i></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="tickets-row">
-                <div class="text-center">
-                  <div class="tickets-wrapper">
-                    <div class="tickets-item one">
-                      <div class="h5 white">Saturday, October&nbsp;24, 6-9PM, <a class="white text-underline" href="../parker/">Parker</a></div>
-                      <div>Tickets: $25&nbsp;Ages&nbsp;3-13;&nbsp;$30&nbsp;Ages&nbsp;14+</div>
-                      <div>(No charge for ages 2 and under)</div>
-                      <div class="padding-top-30 text-center">
-                        <button class="btn btn-custom btn-null" type="button">Sold Out</button>
+              <div class="transistion-row"></div>
+            </div>
+            <div class="bottom-row">
+              <div class="bottom-wrapper">
+                <div class="bottom-container">
+                  <div class="h3 no-margin white">All aboard for holiday magic and wonder!</div>
+                  <div class="h5 white margin-bottom-5">Join us for a fun-filled celebration of the beloved story "The Polar Express."</div>
+                  <div class="max-width-80">Enjoy family-friendly entertainment including live music and dance performances, delightful crafts, make-and-take cocoa gifts, festive photo ops, and a visit with Santa. Indulge in a delicious menu of food and drinks, oh-so-sweet treats, our signature hot cocoa bar, and local snack favorite Bob’s Roasted Nuts. Catch the holiday spirit here!</div>
+                  <div class="tickets-row">
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h5">Dinner Edition</div>
+                        <div class="tickets-date">Saturday, December&nbsp;5, 5-8:30PM</div>
+                        <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $38 ages&nbsp;12+, $32 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center"> 
+                          <!-- Noscript content for added SEO -->
+                          <noscript>
+                          <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-dinner-edition-tickets-1999395415510" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                          </noscript>
+                          <!-- You can customize this button any way you like -->
+                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999395415510" type="button">Buy Tickets</button>
+                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                          <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1999395415510',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1999395415510',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h5">Brunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;6, 8-11AM</div>
+                        <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center"> 
+                          <!-- Noscript content for added SEO -->
+                          <noscript>
+                          <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-brunch-edition-tickets-1999395838776" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                          </noscript>
+                          <!-- You can customize this button any way you like -->
+                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999395838776" type="button">Buy Tickets</button>
+                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                          <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1999395838776',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1999395838776',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <div class="tickets-item">
+                        <div class="h5">Lunch Edition</div>
+                        <div class="tickets-date">Sunday, December&nbsp;6, 12-3PM</div>
+                        <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
+                        <div>Tickets: $35 ages&nbsp;12+, $30 ages&nbsp;3-11</div>
+                        <div>(No charge for ages 2 and under)</div>
+                        <div class="padding-top-30 text-center"> 
+                          <!-- Noscript content for added SEO -->
+                          <noscript>
+                          <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-lunch-edition-tickets-1999396490726" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+                          </noscript>
+                          <!-- You can customize this button any way you like -->
+                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999396490726" type="button">Buy Tickets</button>
+                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
+                          <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '1999396490726',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1999396490726',
+        onOrderComplete: exampleCallback
+    });
+</script> 
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="max-width-40 padding-top-10">This event is ideal for ages 3-8, but all ages are welcome and costumes are encouraged.</div>
+                  <div class="padding-top-30"><i>Optional alcohol ticket available for an additional $15 for adults ages 21-plus.</i></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="pumpkin-small"><img class="center-block img-responsive" src="pumpkin-small.webp" alt=""></div>
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
@@ -427,8 +651,7 @@ h1.coffee {
   <div class="container">
     <div class="social-footer">
       <div class="social-left">
-        <div class="h5 margin-top-10 no-margin-bottom">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></div>
-        <div class="h5 margin-top-5 margin-bottom-10"><a href="../build/">We're Growing!</a></div>
+        <div class="h5 margin-top-10 margin-bottom-10">Customer Service: <span class="text-nowrap"><a href="tel:+13037917323">(303) 791-7323</a></span></div>
       </div>
       <div class="social-right">
         <div class="social-links-wrapper"> <a class="margin-right-5" aria-label="Friend us on Facebook" href="https://www.facebook.com/DCLColorado" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a> <a class="margin-right-5" aria-label="Follow us on Twitter" href="https://twitter.com/DCLcolorado" target="_blank"> <i class="fa-brands fa-x-twitter fa-2x"></i></a> <a class="margin-right-5" aria-label="Follow us on Instagram" href="https://www.instagram.com/dclcolorado/" target="_blank"> <i class="fa-brands fa-instagram fa-2x"></i></a> <a class="margin-right-5" aria-label="Check us out on Pinterest" href="https://pinterest.com/dougcolibraries/" target="_blank"><i class="fa-brands fa-pinterest fa-2x"></i></a> <a class="margin-right-5" aria-label="Check out our Youtube Channel" href="https://www.youtube.com/user/dclwebteam" target="_blank"> <i class="fa-brands fa-youtube fa-2x"></i></a> <a aria-label="Visit us on Flickr" href="https://www.flickr.com/photos/douglascountylibraries/albums" target="_blank"> <i class="fa-brands fa-flickr fa-2x"></i></a> </div>
@@ -442,9 +665,9 @@ h1.coffee {
       <div class="footer-column">
         <div class="h5">About</div>
         <ul>
-          <li><a href="../join-our-team/">Join Our Team</a></li>
           <li><a href="../who-we-are/">Who We Are</a></li>
           <li><a href="../foundation/">Our Foundation</a></li>
+          <li><a href="../join-our-team/">Join Our Team</a></li>
           <li><a href="../press-kit/">Press Kit</a></li>
         </ul>
       </div>
