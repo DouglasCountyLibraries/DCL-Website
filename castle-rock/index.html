@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -211,22 +212,39 @@ figure {
 .flickity-prev-next-button {
     display: none;
 }
-.art-item-wrapper {
-    display: flex;
-    gap: 20px;
-    padding: 0 15px;
-    max-width: 950px;
+h2.featured-heading {
+    margin: 0 15px 5px;
+}
+.exhibit-wrapper {
+    padding: 50px 15px 80px;
+}
+.exhibit-container {
+    text-align: center;
+    max-width: 640px;
     margin: 0 auto;
 }
-.art-item:last-of-type {
+.exhibit-content {
+    padding: 0 0 30px;
+    margin: 0;
+}
+.art-item-wrapper {
+    display: flex;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0 30px;
+}
+.art-item-one, .art-item-two {
+    display: flex;
+    justify-content: center;
+}
+.art-item-two {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 60%;
     align-content: center;
-}
-h2.featured-heading {
-    margin: 0 15px 5px;
+    background: #f5f5f5;
+    padding: 30px 30px 35px;
 }
 .location-events {
     padding: 50px 0 40px;
@@ -312,10 +330,18 @@ transform:scale(1);
     margin: 5px auto 0 auto;
     padding: 40px 15px 50px;
 }
-.art-item {
+.art-item-wrapper {
+    padding: 15px 0 10px;
+}
+.art-item-two {
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+    background: #fff;
+    padding: 0;
+}
+.art-item-one img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 }
 
@@ -673,31 +699,23 @@ transform:scale(1);
         </div>
       </div>
     </section>
-    <section> 
-      <!--<div id="exhibits" class="row padding-top-50">
-        <h2 class="text-center no-margin padding-bottom-30">Art on Display</h2>
-        <div class="art-item-wrapper">
-          <div class="art-item"><img class="img-responsive image-center" alt="Katharina Mace Painting" src="katharina-mace.jpg"> </div>
-          <div class="art-item">
-            <div class="h3 no-margin text-uppercase">Katharina Mace</div>
-            <div class="h4 no-margin">Painting</div>
-            <div class="h5 no-margin-top margin-bottom-5">March 1-April 30</div>
-            <div>Katharina Mace, a Colorado-based children's book illustrator, creates whimsical artwork that captures childhood joy. A Rocky Mountain College of Art and Design graduate, she uses traditional media to tell hopeful stories. When not painting imaginative scenes, she explores bookstores and travels, drawing inspiration from life's diverse experiences.</div>
+    <section>
+      <div id="exhibits" class="row">
+        <div class="exhibit-wrapper">
+          <h2 class="text-center no-margin-top">Art on Display</h2>
+          <div class="art-item-wrapper">
+            <div class="art-item-one"><img alt="Kay Picard Mixed Media" src="kay-picard.webp"> </div>
+            <div class="art-item-two">
+              <div class="h3 no-margin">Kay Picard</div>
+              <div class="h4 margin-top-5 no-margin-bottom">Mixed Media</div>
+              <div class="h5 margin-top-5">November 1-December 31</div>
+              <div>This Colorado Springs native works in a wide variety of mediums and has exhibited in public and private galleries across Colorado.</div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="row padding-top-30 padding-bottom-60">
-        <div class="container text-center">
-          <div class="h6 no-margin padding-bottom-20 max-width-80">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
-          <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
-        </div>
-      </div>-->
-      
-      <div id="exhibits" class="row padding-top-50 padding-bottom-60">
-        <h2 class="text-center no-margin padding-bottom-15">Art on Display</h2>
-        <div class="container text-center max-width-80">
-          <div class="h6 no-margin-top">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
-          <button data-target="#artModal" data-toggle="modal" class="btn btn-primary margin-top-15" type="button">Exhibit Your Work</button>
+          <div class="exhibit-container">
+            <div class="h6 exhibit-content">Douglas County Libraries supports the arts by featuring stunning public art and donating display space at select branches for local artists.</div>
+            <button data-target="#artModal" data-toggle="modal" class="btn btn-primary" type="button">Exhibit Your Work</button>
+          </div>
         </div>
       </div>
     </section>
@@ -935,4 +953,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
