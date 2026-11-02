@@ -53,22 +53,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-.no-gutter-wrapper {
-    margin: 0 -15px;
-}
-.container-wrapper {
-    position: relative;
-    overflow: hidden;
-    max-width: 1920px;
-    margin: 0 auto;
-}
 .content-container {
     background: #fff url("photo-background.webp") top center/cover;
+    max-width: 1920px;
+    margin: 0 auto;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0 50px;
+    padding: 60px 0 100px;
 }
 .box-container {
     display: flex;
@@ -94,13 +87,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex: 1;
     margin: 10px;
     min-width: 360px;
-    background: #fbdbc1;
-    padding: 90px 30px 130px;
+    padding: 70px 30px 110px;
     border-radius: 5px;
-    color: #000;
+    color: #fff;
     font-size: 1.25rem;
     text-align: center;
     max-width: 600px;
+}
+.box-item img {
+    border-radius: 50%;
+}
+.box-item.item-one {
+    background: #8b4a23;
+}
+.box-item.item-two {
+    background: #5b5f39;
+}
+.box-item.item-three {
+    background: #68242c;
 }
 .icon-font {
     font-size: 90px;
@@ -112,7 +116,8 @@ h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
     line-height: 1.2;
     margin: 0 0 5px;
     font-weight: 500;
-    color: #000;
+    color: #fff;
+    padding-top: 30px;
 }
 .one-heading-two {
     font-size: 1rem;
@@ -123,12 +128,6 @@ h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
 .one-heading-three {
     font-size: 1.1rem;
     padding-bottom: 5px;
-}
-
-@media (min-width: 926px) {
-.content-container {
-    padding: 90px 0 100px;
-}
 }
 
 @media (max-width: 759px) {
@@ -339,33 +338,29 @@ h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
       <div id="general-alert" style="display:none;"></div>
     </div>
     <!-- InstanceBeginEditable name="Content" -->
-    <div class="gradient-row">
-      <div class="no-gutter-wrapper">
-        <div class="container-wrapper">
-          <div class="row content-container">
-            <section>
-              <div class="box-container">
-                <div class="box-wrapper">
-                  <div class="box-item item-one">
-                    <div><i class="icon-font fa-sharp fa-light fa-ornament"></i></div>
-                    <h2 class="one-heading-one">Leaves are Falling, Holidays are Calling</h2>
-                    <div>It’s not too early to book your festive fun! Join us for A Storybook Holiday: The North Pole Express, Dec.&nbsp;5&6, Lone Tree. <a href="storybook-holiday/">Buy Tickets</a></div>
-                  </div>
-                  <div class="box-item item-two">
-                    <div><i class="icon-font fa-sharp fa-light fa-wreath"></i></div>
-                    <h2 class="two-heading-one">Forest of Stories</h2>
-                    <div>190 trees all dressed up in stories! Explore our twinkling forest for free at all DCL locations, Nov.&nbsp;14-Jan.&nbsp;3. <a href="forest-of-stories/">Learn More</a></div>
-                  </div>
-                  <div class="box-item item-three">
-                    <div><i class="icon-font fa-sharp fa-light fa-heart"></i></div>
-                    <h2 class="three-heading-one">Colorado Gives Day is December&nbsp;8</h2>
-                    <div>Early giving is open! <a href="donate/">Donate now</a> to support your libraries and the DCL Foundation.</div>
-                  </div>
-                </div>
+    <div class="row gradient-row">
+      <div class="content-container">
+        <section>
+          <div class="box-container">
+            <div class="box-wrapper">
+              <div class="box-item item-one">
+                <div><img alt="" class="img-responsive image-center" src="https://lipsum.app/300x300/"></div>
+                <h2 class="one-heading-one">Leaves are Falling, Holidays are Calling</h2>
+                <div>It’s not too early to book your festive fun! Join us for A Storybook Holiday: The North Pole Express, Dec.&nbsp;5&6, Lone Tree. <a class="white text-underline" href="storybook-holiday/">Buy Tickets</a></div>
               </div>
-            </section>
+              <div class="box-item item-two">
+                <div><img alt="" class="img-responsive image-center" src="https://lipsum.app/300x300/"></div>
+                <h2 class="two-heading-one">Forest of Stories</h2>
+                <div>190 trees all dressed up in stories! Explore our twinkling forest for free at all DCL locations, Nov.&nbsp;14-Jan.&nbsp;3. <a class="white text-underline" href="forest-of-stories/">Learn More</a></div>
+              </div>
+              <div class="box-item item-three">
+                <div><img alt="" class="img-responsive image-center" src="https://lipsum.app/300x300/"></div>
+                <h2 class="three-heading-one">Colorado Gives Day is December&nbsp;8</h2>
+                <div>Early giving is open! <a class="white text-underline" href="donate/">Donate now</a> to support your libraries and the DCL Foundation.</div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
