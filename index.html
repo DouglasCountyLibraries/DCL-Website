@@ -46,105 +46,90 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- pinterest - do not remove -->
 <meta name="p:domain_verify" content="555e6e72efd395725f489e2ca0d49b94"/>
 <!-- pinterest - do not remove -->
+
 <style>
 .gradient-row {
     background: linear-gradient(to bottom, #fff 0%, #fff 25%, #efeeed 65%, #efeeed 100%);
 }
-.feature-wrapper {
+.content-container {
+	background: #fff url("landscape-background.webp") top center/cover;
+	max-width: 1920px;
 	margin: 0 auto;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
-	background: #ece4d0;
-	max-width: 1920px;
+	align-items: center;
+	padding: 80px 0 140px;
 }
-.row-wrapper-one {
-    background: #ece4d0 url("winter-background-top.webp") top center no-repeat;
-    width: 1920px;
-    display: flex;
-    flex-direction: row;
-    padding: 200px 30px 0;
+.box-container {
+	display: flex;
+	max-width: 1620px;
+	margin: 0 auto;
+	color: #fff;
+	position: relative;
 }
-.row-wrapper-two {
-    background: #ece4d0 url("winter-background-bottom.webp") bottom center no-repeat;
-    width: 1920px;
+.box-wrapper {
     display: flex;
-    flex-direction: row;
-    padding: 0 30px 260px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
-.row-container {
-    display: flex;
-    max-width: 1400px;
+.box-inner {
+    max-width: 800px;
     margin: 0 auto;
 }
-.boxone-wrapper {
-    background: #477472;
-}
-.boxtwo-wrapper {
-    background: #38283f;
-}
-.boxthree-wrapper {
-    background: #16293f;
-}
-.boxfour-wrapper {
-    background: #a02e3c;
-}
-.boxone-wrapper, .boxtwo-wrapper, .boxthree-wrapper, .boxfour-wrapper {
+.box-item {
     display: flex;
-    flex: 1;
     flex-direction: column;
-width: calc(100% * 0.5);
-    padding: 100px 15px 110px;
+    flex: 1;
+    margin: 10px;
+    min-width: 360px;
+    padding: 70px 30px 110px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 600px;
 }
-.boxone-wrapper img, .boxtwo-wrapper img, .boxthree-wrapper img, .boxfour-wrapper img {
+.box-item img {
     border-radius: 50%;
 }
-.boxone-content {
-    color: #fff;
-    text-align: center;
+.box-item.item-one {
+    background: #8b4a23;
 }
-.boxone-content h2 {
-    color: #fff;
-    text-align: center;
+.box-item.item-two {
+    background: #5b5f39;
 }
-.boxtwo-content, .boxthree-content, .boxfour-content {
-    color: #fff;
+.box-item.item-three {
+    background: #68242c;
 }
-.boxtwo-content h2, .boxthree-content h2, .boxfour-content h2 {
-    color: #fff;
+.icon-font {
+    font-size: 90px;
+    padding: 0 0 30px;
+    color: #444;
 }
-.boxone-content, .boxtwo-content, .boxthree-content, .boxfour-content {
-    margin: 0 auto;
-    padding: 30px 40px 0;
-    font-size: 1.13rem;
-    text-align: center;
-    max-width: 650px;
-}
-.boxtwo-content h2, .boxthree-content h2, .boxfour-content h2 {
-    font-size: 2rem;
-    line-height: 1.1;
-    margin: 0 0 10px;
+h2.one-heading-one, h2.two-heading-one, h2.three-heading-one {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin: 0 0 5px;
     font-weight: 500;
+    color: #fff;
+    padding-top: 30px;
+}
+.one-heading-two {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: .9;
+}
+.one-heading-three {
+    font-size: 1.1rem;
+    padding-bottom: 5px;
 }
 
-@media (max-width: 950px) {
-.row-wrapper-one {
-    background: #ece4d0 url("winter-background-top-small.webp") top center no-repeat;
-    padding: 150px 15px 0;
-}
-.row-wrapper-two {
-    background: #ece4d0 url("winter-background-bottom-small.webp") bottom center no-repeat;
-    padding: 0 15px 150px;
-}
-.row-container {
-    flex-direction: column;
-}
-.boxone-wrapper, .boxtwo-wrapper, .boxthree-wrapper, .boxfour-wrapper {
-    width: 100%;
-    margin-bottom: 40px;
-}
-.boxone-content, .boxtwo-content, .boxthree-content, .boxfour-content {
-    padding: 30px 0;
+@media (max-width: 759px) {
+.box-item:nth-of-type(1), .box-item:nth-of-type(2) {
+    margin-bottom: 100px;
 }
 }
 </style>
@@ -351,61 +336,28 @@ width: calc(100% * 0.5);
     </div>
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row gradient-row">
-      <div class="background-wrapper">
+      <div class="content-container">
         <section>
-          <div class="feature-wrapper">
-            <div class="row-wrapper-one">
-              <div class="row-container">
-                <div class="boxone-wrapper">
-                  <div id="boxone"></div>
-                  <div class="boxone-content">
-                    <h2>Plan Ahead for Holiday Magic</h2>
-                    <div>All aboard for A Storybook Holiday: The North Pole Express! Join us for a little extra sparkle this season. Dec.&nbsp;5&6, Lone Tree.<br>
-                      <a class="white text-underline text-uppercase" href="storybook-holiday/">Get Tickets</a></div>
-                  </div>
-                </div>
-                <div class="boxtwo-wrapper">
-                  <div id="boxtwo"></div>
-                  <div class="boxtwo-content">
-                    <h2>Host It Here!</h2>
-                    <div>Our spaces are ready when you are. From meetings and events to birthday parties and baby showers, we can help you huddle and celebrate.<br>
-                      <a class="white text-underline text-uppercase" href="reserve-a-space/#host-your-event">Check out our spaces</a></div>
-                  </div>
-                </div>
+          <div class="box-container">
+            <div class="box-wrapper">
+              <div class="box-item item-one">
+                <div><img alt="" class="img-responsive image-center" src="sbh-three.webp"></div>
+                <h2 class="one-heading-one">Leaves are Falling, Holidays are Calling</h2>
+                <div>It’s not too early to book your festive fun! Join us for A Storybook Holiday: The North Pole Express, Dec.&nbsp;5&6, Lone Tree. <a class="white text-underline" href="storybook-holiday/">Buy Tickets</a></div>
               </div>
-            </div>
-            <div class="row-wrapper-two">
-              <div class="row-container">
-                <div class="boxthree-wrapper">
-                  <div id="boxthree"></div>
-                  <div class="boxthree-content">
-                    <h2>Take the Reading Challenge</h2>
-                    <div>For kids and adults. There's still time to make your reading count and be entered into our year-end prize drawing.<br>
-                      <a class="white text-underline text-uppercase" href="reading-challenge/">Learn More</a></div>
-                  </div>
-                </div>
-                <div class="boxfour-wrapper">
-                  <div id="boxfour"></div>
-                  <div class="boxfour-content">
-                    <h2>DCL Book Clubs</h2>
-                    <div>Turn pages and talk about it! Beginning bookworm or lifelong reader, we've got a book club for you.<br>
-                      <a class="white text-underline text-uppercase" href="book-clubs/">Check it out</a></div>
-                  </div>
-                </div>
+              <div class="box-item item-two">
+                <div><img alt="" class="img-responsive image-center" src="fos-one.webp"></div>
+                <h2 class="two-heading-one">Forest of Stories</h2>
+                <div>190 trees all dressed up in stories! Explore our twinkling forest for free at all DCL locations, Nov.&nbsp;14-Jan.&nbsp;3. <a class="white text-underline" href="forest-of-stories/">Learn More</a></div>
+              </div>
+              <div class="box-item item-three">
+                <div><img alt="" class="img-responsive image-center" src="rc-one.webp"></div>
+                <h2 class="three-heading-one">Colorado Gives Day is December&nbsp;8</h2>
+                <div>Early giving is open! <a class="white text-underline" href="donate/">Donate now</a> to support your libraries and the DCL Foundation.</div>
               </div>
             </div>
           </div>
         </section>
-        <script>
-    var images = ['sbh-four.webp', 'sbh-two.webp', 'sbh-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxone');
-    var images = ['hih-one.webp', 'hih-two.webp', 'hih-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxtwo');
-    var images = ['rc-one.webp', 'rc-two.webp', 'rc-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxthree');
-    var images = ['bc-one.webp', 'bc-two.webp', 'bc-three.webp'];
-    $('<img alt="" class="img-responsive image-center" src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#boxfour');
-</script> 
       </div>
     </div>
     <!-- InstanceEndEditable --> </div>
