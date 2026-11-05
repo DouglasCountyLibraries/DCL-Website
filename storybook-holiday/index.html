@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -194,9 +195,9 @@ h1.midcent {
     color: #f1e78b;
 }
 .tickets-date {
-	font-size: 1.25rem;
-	padding: 0 0 8px;
-	font-weight: 400;
+    font-size: 1.25rem;
+    padding: 0 0 8px;
+    font-weight: 400;
 }
 .btn.btn-custom {
     color: #000;
@@ -216,8 +217,14 @@ h1.midcent {
     transition: all .4s ease-out;
     border-radius: 2px;
 }
-.btn.btn-custom.btn-soldout, .btn.btn-custom.btn-soldout:hover, .btn.btn-custom.btn-soldout:focus {
-    box-shadow: none;
+.btn.btn-soldout, .btn.btn-soldout:hover, .btn.btn-soldout:focus {
+    color: #000;
+    background: linear-gradient(310deg, #c09b24, #f1e78b, #c09b24);
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 0px 30px rgba(241,231,139, 0.3);
+    transition: all .4s ease-out;
+    border-radius: 2px;
     cursor: not-allowed;
 }
 @keyframes fall {
@@ -558,27 +565,8 @@ font-size: 1.5rem;
                         <div>Douglas County Libraries in <a class="white text-underline" href="../lone-tree/">Lone Tree</a></div>
                         <div>Tickets: $38 ages&nbsp;12+, $32 ages&nbsp;3-11</div>
                         <div>(No charge for ages 2 and under)</div>
-                        <div class="padding-top-30 text-center"> 
-                          <!-- Noscript content for added SEO -->
-                          <noscript>
-                          <a href="https://www.eventbrite.com/e/a-storybook-holiday-the-north-pole-express-dinner-edition-tickets-1999395415510" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
-                          </noscript>
-                          <!-- You can customize this button any way you like -->
-                          <button class="btn btn-custom" id="eventbrite-widget-modal-trigger-1999395415510" type="button">Buy Tickets</button>
-                          <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script> 
-                          <script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '1999395415510',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-1999395415510',
-        onOrderComplete: exampleCallback
-    });
-</script> 
+                        <div class="padding-top-30 text-center">
+                          <button class="btn btn-soldout" type="button">Sold Out</button>
                         </div>
                       </div>
                     </div>
@@ -776,4 +764,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
