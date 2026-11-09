@@ -104,18 +104,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .background-row {
     background: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #efeeed 65%, #efeeed 100%);
 }
-.tree-book-row {
-    background: #271f08 url("tree-book-backround.jpg") center top no-repeat;
+.tree-background-row {
+    background: #063e37 url("tree-background-large.webp") bottom center no-repeat;
     max-width: 1920px;
     margin: 0 auto;
-}
-.tree-book-row a {
-    position: relative;
-    z-index: 1000;
 }
 .ornaments {
     margin: 0 auto;
     max-width: 1200px;
+    position: relative;
+    z-index: 100;
 }
 .white-one-wrapper {
     color: #000;
@@ -129,10 +127,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 400;
 }
 .white-one {
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.85);
     margin: -275px 15px 0 15px;
-    padding: 60px 45px 535px 115px;
-    border-radius: 3px;
+    padding: 60px 45px 540px 115px;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    border-bottom: 0;
+    position: relative;
 }
 .white-two-wrapper {
     color: #000;
@@ -147,10 +149,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 400;
 }
 .white-two {
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.85);
     margin: -8px 15px 0 15px;
     padding: 80px 45px 110px;
-    border-radius: 3px;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    border-top: 0;
+    position: relative;
 }
 .contest {
     max-width: 740px;
@@ -177,101 +183,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .list-one, .list-two {
     padding: 0 15px;
 }
-/**********************************************/
-	
-	
-.sparkle-row-top {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    max-width: 1920px;
-    width: 100%;
-}
-.sparkle-rotate:nth-of-type(1) {
-    animation: sparkle-rotate 15s .3s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(2) {
-    animation: sparkle-rotate 18s .9s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(3) {
-    animation: sparkle-rotate 10s 1s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(4) {
-    animation: sparkle-rotate 16s .5s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(5) {
-    animation: sparkle-rotate 14s .2s linear infinite both;
-}
-.sparkle-rotate:nth-of-type(6) {
-    animation: sparkle-rotate 18s .1s linear infinite both;
-}
-@keyframes sparkle-rotate {
-0% {
-transform: rotateZ(0);
-}
-50% {
-opacity: 0;
-transform: rotateZ(180deg);
-}
-100% {
-transform: rotateZ(360deg);
-}
-}
-.sparkle-fall:nth-of-type(1) {
-    animation: sparkle-fall 14s .2s linear infinite both;
-}
-.sparkle-fall:nth-of-type(2) {
-    animation: sparkle-fall 20s .9s linear infinite both;
-}
-.sparkle-fall:nth-of-type(3) {
-    animation: sparkle-fall 15s .1s linear infinite both;
-}
-.sparkle-fall:nth-of-type(4) {
-    animation: sparkle-fall 20s .8s linear infinite both;
-}
-.sparkle-fall:nth-of-type(5) {
-    animation: sparkle-fall 15s .3s linear infinite both;
-}
-.sparkle-fall:nth-of-type(6) {
-    animation: sparkle-fall 12s 1.5s linear infinite both;
-}
-@keyframes sparkle-fall {
-0% {
-transform: translateY(0%);
-opacity: 0;
-}
-25% {
-opacity: 1;
-}
-50% {
-opacity: 0;
-}
-75% {
-opacity: 1;
-}
-100% {
-transform: translateY(100%);
-opacity: 0;
-}
-}
-
-@media (max-width: 1050px) {
-.sparkle-fall:nth-of-type(5), .sparkle-fall:nth-of-type(6), .sparkle-rotate:nth-of-type(1), .sparkle-rotate:nth-of-type(2), .sparkle-rotate:nth-of-type(3), .sparkle-rotate:nth-of-type(4), .sparkle-rotate:nth-of-type(5), .sparkle-rotate:nth-of-type(6) {
-    display: none;
-}
-}
-
-@media (max-width: 850px) {
-.sparkle-fall {
-    height: 200px;
-}
-}
 .carousel-row {
     margin-top: -500px;
 }
 .custom-container {
     max-width: 1380px;
     margin: 0 auto;
+    position: relative;
+    z-index: 100;
 }
 .carousel-cell {
     margin-left: 40px;
@@ -294,48 +213,65 @@ opacity: 0;
     justify-content: flex-end;
     padding-right: 20%;
 }
-.info-wrapper {
-    padding: 40px 0 35px;
-}
 .h1.pop-clink {
     line-height: 20px;
 }
 .white-one {
-    padding: 60px 45px 500px 115px;
+    padding: 60px 45px 540px 45px;
 }
-.sparkle-fall:nth-of-type(5) {
-    display: none;
+.heading-wrapper {
+    max-width: 780px;
+}
+.info-wrapper {
+    padding: 45px 0 0;
 }
 }
 
 @media (max-width: 950px) {
 .ornaments {
-    padding-right: 0;
+    padding-right: 18%;
+}
+}
+
+@media (max-width: 870px) {
+.ornaments {
+    padding-right: 5%;
+}
+}
+
+@media (max-width: 740px) {
+.ornaments {
+    padding-right: 2%;
 }
 }
 
 @media (max-width: 675px) {
 .ornaments {
-    opacity: 0;
-}
-.h1.pop-clink {
-    font-size: 60px;
+    display: none;
 }
 .h1.bulgary {
     margin: -20px 0;
     font-size: 84px;
 }
+.heading-wrapper {
+    text-align: center;
+}
 .white-one {
-    padding: 45px 15px 500px 15px;
+    padding: 30px 25px 540px 25px;
+    margin: 0 15px;
 }
 .white-two {
-    padding: 80px 15px 110px;
+    padding: 80px 25px 110px;
+}
+.white-one-wrapper {
+    padding-top: 30px;
 }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
 .h1.pop-clink {
     line-height: 65px;
+    font-size: 62px;
 }
 .h1.bulgary {
     margin: 0;
@@ -549,68 +485,74 @@ opacity: 0;
     </div>
     <!-- InstanceBeginEditable name="Content" -->
     <div class="row background-row">
-      <div class="tree-book-row">
-        <div class="sparkle-row-top"><img class="img-responsive sparkle-fall" src="s1.png" alt=""><img class="img-responsive sparkle-rotate" src="s3.png" alt=""><img class="img-responsive sparkle-fall" src="s5.png" alt=""><img class="img-responsive sparkle-rotate" src="s6.png" alt=""><img class="img-responsive sparkle-fall" src="s2.png" alt=""><img class="img-responsive sparkle-fall" src="s4.png" alt=""></div>
-        <div class="ornaments"><img src="ornaments.png" alt=""></div>
-        <div class="white-one-wrapper">
-          <div class="white-one">
-            <div class="heading-wrapper">
-              <div class="h1 pop-clink">FOrEST</div>
-              <div class="h1 bulgary">of</div>
-              <div class="h1 pop-clink">STORIeS</div>
-            </div>
-            <div class="info-wrapper">
-              <div class="h4 no-margin-top">November&nbsp;14,&nbsp;2026-January&nbsp;3,&nbsp;2027</div>
-              <div>
-                <div class="padding-bottom-15">Enjoy a free, wonder-filled holiday experience for the whole family! Our Forest of Stories exhibit displays 190&nbsp;decorated trees, all dressed up in stories&mdash;from favorite children's tales and classic literature, to crime thrillers, mysteries and more.</div>
-                <div class="h4 no-margin-top margin-bottom-5">Prize Giveaway!</div>
-                <div class="padding-bottom-15">Enter our random prize drawing for a chance to win a Family Membership to the Denver Museum of Nature and Science. Simply complete the <a href="#contest-contact" type="button" data-toggle="modal" data-target="#contest-contact">Forest of Stories Giveaway form</a>, one entry per person. Winner will be randomly drawn in early January and notified individually. No purchase necessary and entry is free.</div>
+      <div class="tree-background-row">
+        <div class="ornaments"><img src="ornaments.webp" alt=""></div>
+        <section>
+          <div class="white-one-wrapper">
+            <div class="white-one">
+              <div class="heading-wrapper">
+                <div class="h1 pop-clink">FOrEST</div>
+                <div class="h1 bulgary">of</div>
+                <div class="h1 pop-clink">STORIeS</div>
+              </div>
+              <div class="info-wrapper">
+                <div class="h4 no-margin-top">November&nbsp;14,&nbsp;2026-January&nbsp;3,&nbsp;2027</div>
+                <div>
+                  <div class="padding-bottom-15">Enjoy a free, wonder-filled holiday experience for the whole family! Our Forest of Stories exhibit displays 190&nbsp;decorated trees, all dressed up in stories&mdash;from favorite children's tales and classic literature, to crime thrillers, mysteries and more.</div>
+                  <div class="h4 no-margin-top margin-bottom-5">Prize Giveaway!</div>
+                  <div class="padding-bottom-15">Enter our random prize drawing for a chance to win a Family Membership to the Denver Museum of Nature and Science. Simply complete the <a class="black text-underline" href="#contest-contact" type="button" data-toggle="modal" data-target="#contest-contact">Forest of Stories Giveaway form</a>, one entry per person. Winner will be randomly drawn in early January and notified individually. No purchase necessary and entry is free.</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="carousel-row">
-          <div class="custom-container no-padding">
-            <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": true, "wrapAround": true, "autoPlay": 4000 }'>
-              <div class="carousel-cell"><img src="carousel/seven.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="carousel/eight.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="carousel/nine.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="carousel/ten.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="carousel/eleven.jpg" alt=""></div>
-              <div class="carousel-cell"><img src="carousel/twelve.jpg" alt=""></div>
+        </section>
+        <section>
+          <div class="carousel-row">
+            <div class="custom-container no-padding">
+              <div class="carousel" data-flickity='{ "imagesLoaded": true, "pageDots": true, "wrapAround": true, "autoPlay": 4000 }'>
+                <div class="carousel-cell"><img src="carousel/seven.webp" alt=""></div>
+                <div class="carousel-cell"><img src="carousel/eight.webp" alt=""></div>
+                <div class="carousel-cell"><img src="carousel/nine.webp" alt=""></div>
+                <div class="carousel-cell"><img src="carousel/ten.webp" alt=""></div>
+                <div class="carousel-cell"><img src="carousel/eleven.webp" alt=""></div>
+                <div class="carousel-cell"><img src="carousel/twelve.webp" alt=""></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="white-two-wrapper">
-          <div id="contest" class="white-two">
-            <div class="contest">
-              <div class="h4 no-margin-top margin-bottom-5">Forest of Stories Kids Scavenger Hunt</div>
-              <div class="padding-bottom-10"><i>Perfect for Storytime Guests!</i></div>
-              <div class="padding-bottom-5">How to Play:</div>
-              <ol class="contest-details">
-                <li>Pick up your clues! Visit the Welcome Desk at each library location to get that location's scavenger hunt form.</li>
-                <li>Explore and discover! Follow the clues to find the featured trees.</li>
-                <li>Show your completed form to a staff member to receive a special prize.</li>
-                <li>A chance to win! Scan the code and enter our grand prize drawing for a family membership to the Denver Museum of Nature and Science. Two grand prize winners will be drawn.</li>
-              </ol>
-              <div class="padding-bottom-5">Bonus Entry:</div>
-              <div class="padding-bottom-5">Share a photo of your favorite Forest of Stories tree or your scavenger hunt adventure on Instagram or Facebook using #dclforest to earn a bonus entry into the grand prize drawing!</div>
-              <div>Contest <a class="font-weight-500" href="contest-terms-conditions/">Terms & Conditions</a>.</div>
-            </div>
-            <div class="seven-wrapper"><img src="single-tree.png" alt="">
-              <div class="h2 times-font">7&nbsp;weeks<br>
-                7&nbsp;locations<br>
-                Unlimited<br>
-                Wonder!</div>
-            </div>
-            <div class="text-center">
-              <div class="h4">Visit <a class="font-weight-500" href="../locations/">all seven locations</a> and discover the joy of stories.</div>
-              <div><i>Presented by <a class="font-weight-500" href="../foundation/">Douglas County Libraries Foundation</a></i></div>
+        </section>
+        <section>
+          <div class="white-two-wrapper">
+            <div id="contest" class="white-two">
+              <div class="contest">
+                <div class="h4 no-margin-top margin-bottom-5">Forest of Stories Kids Scavenger Hunt</div>
+                <div class="padding-bottom-10"><i>Perfect for Storytime Guests!</i></div>
+                <div class="padding-bottom-5">How to Play:</div>
+                <ol class="contest-details">
+                  <li>Pick up your clues! Visit the Welcome Desk at each library location to get that location's scavenger hunt form.</li>
+                  <li>Explore and discover! Follow the clues to find the featured trees.</li>
+                  <li>Show your completed form to a staff member to receive a special prize.</li>
+                  <li>A chance to win! Scan the code and enter our grand prize drawing for a family membership to the Denver Museum of Nature and Science. Two grand prize winners will be drawn.</li>
+                </ol>
+                <div class="padding-bottom-5">Bonus Entry:</div>
+                <div class="padding-bottom-5">Share a photo of your favorite Forest of Stories tree or your scavenger hunt adventure on Instagram or Facebook using #dclforest to earn a bonus entry into the grand prize drawing!</div>
+                <div>Contest <a class="black text-underline" href="contest-terms-conditions/">Terms & Conditions</a>.</div>
+              </div>
+              <div class="seven-wrapper"><img src="tree-bling.webp" alt="">
+                <div class="h2 times-font">7&nbsp;weeks<br>
+                  7&nbsp;locations<br>
+                  Unlimited<br>
+                  Wonder!</div>
+              </div>
+              <div class="text-center">
+                <div class="h4">Visit <a class="black text-underline" href="../locations/">all seven locations</a> and discover the joy of stories.</div>
+                <div><i>Presented by <a class="black text-underline" href="../foundation/">Douglas County Libraries Foundation</a></i></div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
+    
     <!-- Modal -->
     <div class="modal fade" id="tree-modal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg" role="document">
@@ -847,7 +789,7 @@ opacity: 0;
               <div class="h4 no-margin-top">Enter for a chance to win!</div>
               <div>By submitting this form you agree to the contest <a href="contest-terms-conditions/" target="_blank">terms &amp; conditions</a>.</div>
             </div>
-            <script type="text/javascript" src="https://form.jotform.com/jsform/263086542593161"></script>
+            <script type="text/javascript" src="https://form.jotform.com/jsform/263086542593161"></script> 
           </div>
         </div>
       </div>
