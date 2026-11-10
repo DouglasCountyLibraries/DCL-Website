@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="en">
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,6 +65,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 15px 15px 30px;
     margin: 15px;
 }
+.finals-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+.finals-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.finals-item {
+    flex: 1;
+    margin: 15px;
+}
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.leaderboard-table th, .leaderboard-table td {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    text-align: left;
+}
+.leaderboard-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+.leaderboard-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+.leaderboard-table thead th {
+    background-color: #eee;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
 .listen, .pause {
     text-transform: uppercase;
     font-weight: 500;
@@ -99,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media (max-width: 1300px) {
-.location-wrapper {
+.location-wrapper, .finals-wrapper {
     max-width: 900px;
 }
 }
@@ -316,34 +352,136 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </div>
-    <!--<section>
-      <div class="row bg-gray-5 padding-top-30 padding-bottom-30">
+    <section>
+      <div class="row bg-gray-5 padding-top-40 padding-bottom-40">
         <div class="container">
           <div class="h2 text-center">Teams, Schedules, Scores, and Standings</div>
           <div class="text-center max-width-80 padding-bottom-5">Battle of the Books is active at Douglas County Libraries' Castle Pines, Castle Rock, Highlands Ranch, Lone Tree and Parker locations. Choose a location to get started.</div>
         </div>
         <div class="location-wrapper">
           <div class="text-center padding-30"><img class="image-center img-circle" src="castle-pines.webp" alt="Battle of the Books, Castle Pines">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclcastlepines" target="_blank">Castle Pines</a></h4>
+            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/castle-pines" target="_blank">Castle Pines</a></h4>
           </div>
           <div class="text-center padding-30"><img class="image-center img-circle" src="castle-rock.webp" alt="Battle of the Books, Castle Rock">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclcastlerock" target="_blank">Castle Rock</a></h4>
+            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/castle-rock" target="_blank">Castle Rock</a></h4>
           </div>
           <div class="text-center padding-30"><img class="image-center img-circle" src="highlands-ranch.webp" alt="Battle of the Books, Highlands Ranch">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclhighlandsranch" target="_blank">Highlands Ranch</a></h4>
+            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/highlands-ranch" target="_blank">Highlands Ranch</a></h4>
           </div>
           <div class="text-center padding-30"><img class="image-center img-circle" src="lone-tree.webp" alt="Battle of the Books, Lone Tree">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dcllonetree" target="_blank">Lone Tree</a></h4>
+            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/lone-tree" target="_blank">Lone Tree</a></h4>
           </div>
           <div class="text-center padding-30"><img class="image-center img-circle" src="parker.webp" alt="Battle of the Books, Parker">
-            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/dclparker" target="_blank">Parker</a></h4>
+            <h4 class="margin-top-15 no-margin-bottom"><a href="https://www.tournifyapp.com/live/parker" target="_blank">Parker</a></h4>
           </div>
         </div>
       </div>
-    </section>-->
+    </section>
+    <section>
+      <div class="row padding-top-40 padding-bottom-60">
+        <div class="container">
+          <div class="h2 text-center">District Finals Leaderboard</div>
+          <div class="text-center max-width-80">District Battles begin Wednesday, March 10, 2027 at the <a href="https://maps.app.goo.gl/sY2hh7zbQpG1QgYg8" target="_blank">DCSD Legacy Campus</a>.</div>
+        </div>
+        <div class="finals-wrapper">
+          <div class="finals-content">
+            <div class="finals-item">
+              <div class="h4">3rd-4th Grade</div>
+              <table class="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">School</th>
+                    <th scope="col">Point Diff</th>
+                    <th scope="col">Branch</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Castle Pines</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Castle Rock</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Lone Tree</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Highlands Ranch</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Parker</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="finals-item">
+              <div class="h4">5rd-6th Grade</div>
+              <table class="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">School</th>
+                    <th scope="col">Point Diff</th>
+                    <th scope="col">Branch</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Castle Pines</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Castle Rock</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Lone Tree</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Highlands Ranch</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>TBD</td>
+                    <td>0</td>
+                    <td>Parker</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section>
       <div class="row bg-gray-5">
-        <div id="book-lists" class="padding-top-40 padding-bottom-50">
+        <div id="book-lists" class="padding-top-50 padding-bottom-60">
           <div class="h2 text-center no-margin-top">Book Lists</div>
           <div class="max-width-80 text-center padding-bottom-20">Get ready to battle! These are the books that this year's trivia battle questions will be based upon. All of these titles will be available as "Your Lucky Day" books at your local DCL branch.</div>
           <div class="book-list-wrapper">
@@ -360,7 +498,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </section>
     <section>
-      <div id="pronunciations" class="row padding-top-40 padding-bottom-60">
+      <div id="pronunciations" class="row padding-top-50 padding-bottom-60">
         <div class="h2 text-center">Title and Author Pronunciation List</div>
         <div class="author-wrapper">
           <div class="author-item">
@@ -559,8 +697,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
-<!-- InstanceBeginEditable name="scripts" --> 
-<!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
+<!-- InstanceBeginEditable name="scripts" --> <!-- InstanceEndEditable --> <!-- InstanceBeginEditable name="structured data" --> 
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
@@ -620,4 +757,5 @@ e.async=true;var t=document.getElementsByTagName("script")[0];t.parentNode.inser
 </script> 
 <!-- End Patron Point -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+</html>
